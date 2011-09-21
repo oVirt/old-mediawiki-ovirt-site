@@ -6,7 +6,7 @@ These instructions are for a person [[Special:ListUsers|who already has an accou
 
 # Log in with your user account.
 # Got to the login page [[Special:UserLogin]]
-# Use the link labeled [https://www.ovirt.org/w/index.php?title=Special:UserLogin&type=signup Create an account], or click this link here
+# Use the link labeled [http://www.ovirt.org/w/index.php?title=Special:UserLogin&type=signup Create an account], or click this link here
 # Fill out the account information:
 #* Username
 #* Password - ''leave blank''
