@@ -1,8 +1,15 @@
-'''MediaWiki has been successfully installed.'''
+'''This is the wiki for the oVirt project.'''
 
-Consult the [http://meta.wikimedia.org/wiki/Help:Contents User's Guide] for information on using the wiki software.
+This wiki is used for:
 
-== Getting started ==
-* [http://www.mediawiki.org/wiki/Manual:Configuration_settings Configuration settings list]
-* [http://www.mediawiki.org/wiki/Manual:FAQ MediaWiki FAQ]
-* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]
+* Developers for technical documentation about their project.
+* Organizers to collaborate on planning and executing.
+* Documenters write tutorials, API documentation, and so forth.
+
+In short, ''this wiki is for the oVirt community collaborative documentation''.
+
+[[How to create a user account]] on this wiki.
+
+[[How to make pages]] on this wiki.
+
+[http://www.ovirt.org Project main website].
