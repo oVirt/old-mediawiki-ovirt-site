@@ -47,7 +47,7 @@ Dynamic management is a widely recognized requirement for a complete virtualizat
 
 == Documentation ==
 
-MOM is documented [http://github.com/aglitke/mom/ in the source] and [http://github.com/aglitke/mom/wiki in a wiki].
+MOM is documented [http://github.com/aglitke/mom/ in the source] and [http://github.com/aglitke/mom/wiki in a wiki].  See also: [http://www.linux-kvm.org/wiki/images/e/e8/2010-forum-litke-kvmforum2010.pdf These slides from KVM Forum 2010] and [http://www.ibm.com/developerworks/linux/library/l-overcommit-kvm-resources/index.html this developerWorks article].
 
 == Release Notes ==
 
