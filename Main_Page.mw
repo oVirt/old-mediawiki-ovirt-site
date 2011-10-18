@@ -1,15 +1,22 @@
-'''This is the wiki for the oVirt project.'''
+'''This is the wiki for the [http://www.ovirt.org oVirt project].'''
 
 This wiki is used for:
 
-* Developers for technical documentation about their project.
+* Developers for technical [[Documentation|documentation]] about their project.
 * Organizers to collaborate on planning and executing.
 * Documenters write tutorials, API documentation, and so forth.
 
 In short, ''this wiki is for the oVirt community collaborative documentation''.
 
-[[How to create a user account]] on this wiki.
+== What is here ==
 
-[[How to make pages]] on this wiki.
+* Developer wiki for the oVirt [[Node]] project.
+* Content for attendees and organizers of the [[Workshop November 2011|November 2011 workshop]].
+* Work pages for the oVirt [[Infrastructure]] team.
+* [[:Category:Project proposal|Projects proposing to join oVirt]]
+* [[Special:AllPages|List of all pages]]
 
-[http://www.ovirt.org Project main website].
+== Links for authors and editors ==
+
+* [[How to create a user account]] on this wiki.
+* [[How to make pages]] on this wiki.
