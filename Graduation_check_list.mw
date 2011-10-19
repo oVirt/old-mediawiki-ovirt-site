@@ -14,6 +14,7 @@
 
 If there are multiple licenses for code in the repo, then add multiple LICENSE.XXXX files, and add a master LICENSE file listing which LICENSE.XXXX file applies to which bits of the tree.
 
+
 2.) Every single .java, .sh, .py, .sql file should have license + copyright  boilerplate text added. It should take general format:
 
  /*
@@ -37,6 +38,7 @@ For the Copyright license,
 * it will suffice to just use '2011' {or the current} as the year for initial publishing, even if the code is older than that for projects that are open sourcing code to an oVirt project.
 
 Adding a filename is useful in case people include your code in another project, so it is clear where it originally came from. 
+
 
 3.) For Java, the Maven POM format allows a section for license information
 
