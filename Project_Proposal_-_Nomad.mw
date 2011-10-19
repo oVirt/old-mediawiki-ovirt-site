@@ -12,8 +12,6 @@ Nomad will be a mobile application that interfaces with the oVirt REST API, whic
 == Background ==
 RHEV 2.2 currently provides a web based client interface that is only accessible via Internet Explorer on Windows. Nomad was developed internally to provide the ability for basic administration of our development infrastructure.  As many of our administrators are typically offsite, remotely accessing the administrative tools is not always a convenient option.  To improve responsiveness, a mobile application was developed that can run on android devices.
 
-
-
 == Rationale ==
 Tablets and Smartphones are quickly becoming the platform of choice and are the primary way that we interact with the internet.  There is a clear need for the ability to interface with critical systems infrastructure using our smartphones and tablets.
 
@@ -27,6 +25,10 @@ The initial goal is to provide the ability to remotely access oVirt/RHEV and ret
 == Current Status ==
 Proof of concept has been developed internally for android devices.  The next iteration will incorporate iPhone and iPad devices.  
 
+
+== oVirt Infrastructure ==
+ * Bugzilla (y)
+ * devel list (y)
 
 == External Dependencies ==
  * RHEVM/oVirt REST API -  Nomad is a remote client to oVirt and consumes the REST API to interact with the core engine.
