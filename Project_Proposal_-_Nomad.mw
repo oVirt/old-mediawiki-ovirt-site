@@ -27,8 +27,8 @@ Proof of concept has been developed internally for android devices.  The next it
 
 
 == oVirt Infrastructure ==
- * Bugzilla (y)
- * devel list (y)
+Bugzilla (y)
+devel list (y)
 
 == External Dependencies ==
  * RHEVM/oVirt REST API -  Nomad is a remote client to oVirt and consumes the REST API to interact with the core engine.
