@@ -6,50 +6,51 @@ https://admin.fedoraproject.org/accounts/openid/id/<username>
 
 === set ssh keys in gerrit settings ===
 - on your local machine, create a set of ssh keys if you don't have one via 
-<nowiki>
+ <nowiki>
 'ssh-keygen -t rsa'
-</nowiki>
+ </nowiki>
 - update via gerrit settings the ssh public key to allow ssh to gerrit
 
 === define gerrit in ~/.ssh/config ===
-<nowiki>
+ <nowiki>
 Host gerrit.ovirt.org
    HostName gerrit.ovirt.org
    Port 29418
    User <username>
-</nowiki>
+ </nowiki>
 
 === check ssh works correctly, verify and ack the host fingerprint ===
-<nowiki>
+ <nowiki>
 ssh gerrit.ovirt.org
-</nowiki>
+ </nowiki>
 if you get this, it is fine:
+ <nowiki>
 ***    Welcome to Gerrit Code Review    ****
-
+ </nowiki>
 === cloning the repo ===
-<nowiki>
+ <nowiki>
 git clone gerrit.ovirt.org:ovirt-engine
-</nowiki>
+ </nowiki>
 
 this can be done without registering to gerrit using:
-<nowiki>
+ <nowiki>
 git clone git://gerrit.ovirt.org/ovirt-engine
-</nowiki>
+ </nowiki>
 === install the change-Id hook ===
 '''you must do this before you commit anything'''
-<nowiki>
+ <nowiki>
 scp -p gerrit.ovirt.org:hooks/commit-msg .git/hooks/
-</nowiki>
+ </nowiki>
 
 === rebase ===
-<nowiki>
+ <nowiki>
 git fetch gerrit.ovirt.org:ovirt-engine master
-</nowiki>
+ </nowiki>
 
 === push your patch for review ===
-<nowiki>
+ <nowiki>
 git push gerrit.ovirt.org:ovirt-engine HEAD:refs/for/master
-</nowiki>
+ </nowiki>
 
 === track patch review process ===
 the review process is comprised of:
