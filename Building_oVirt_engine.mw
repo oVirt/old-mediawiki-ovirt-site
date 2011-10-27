@@ -11,20 +11,17 @@ This wiki page walk you through the steps required in order to setup an oVirt de
 == Installing JDK ==
  
 OpenJDK
-{{{
-$> sudo yum install -y java-1.6.0-openjdk-devel
-}}}
+ <nowiki>
+$> sudo yum install -y java-1.6.0-openjdk-devel</nowiki>
 
 * Verify that javac linked to openjdk-1.6.0's javac properly.
-{{{
-$> alternatives --display javac
-}}}
+ <nowiki>
+$> alternatives --display javac</nowiki>
 
 '''Or''' SUN JDK
 
-{{{
-#> yum install java-1.6.0-sun-devel.x86_64
-}}}
+ <nowiki>
+#> yum install java-1.6.0-sun-devel.x86_64</nowiki>
 
 == Installing JBoss AS ==
 
