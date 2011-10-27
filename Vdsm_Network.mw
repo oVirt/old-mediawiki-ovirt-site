@@ -7,7 +7,7 @@ Vdsm defines a concept of "host network". These networks are configured by the f
 # setSafeNetConfig <BR> Declare network configuration as "safe", so it persists after host reboot.
 # setupNetworks
 
-Currently, host networks are implemented by Linux bridge devices, optionally connected to a vlan devices optionally connected to a bonding device, an optionally goes out of the host via a network interface card.
+Currently, host networks are implemented by Linux bridge devices, optionally connected to a vlan devices optionally connected to a bonding device, an optionally goes out of the host via a network interface card. Virtual machines connect to the bridge via a <TT>tap</TT> device.
 
 == Supported network topologies ==
 bridge over interface card:
@@ -26,4 +26,5 @@ bridge over bond over several nics:
  bridge2 --- v2 --        -- nic2
 legless bridge (in-host only communication)
  bridge
+
 [[Category:Vdsm]]
