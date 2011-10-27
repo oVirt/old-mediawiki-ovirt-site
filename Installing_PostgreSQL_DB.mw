@@ -1,0 +1,75 @@
+= Installing PostgreSQL for oVirt-engine =
+
+== Installing ==
+On your Fedora machine run the following commands:
+
+ <nowiki>
+#> su -
+$> yum install -y postgresql-server postgresql-contrib pgadmin3
+</nowiki>
+
+Make sure you are using PostgreSQL 8.4.8 or later.
+
+Check your version with 
+ <nowiki>
+>psql --version
+</nowiki>
+
+Note: for earlier PostgreSQL versions, a patch is needed.
+
+== Running the service ==
+ <nowiki>
+service postgresql initdb # (first time only)
+service postgresql start
+</nowiki>
+It is recommended to add this service to auto start by
+
+ <nowiki>
+chkconfig postgresql on
+</nowiki>
+
+== Connecting to the database ==
+You should set security definitions in hba_conf file as described at <<BR>> http://www.postgresql.org/docs/8.2/interactive/auth-pg-hba-conf.html
+
+Edit /var/lib/pgsql/data/pg_hba.conf' ''and set authentication parameters as follows: ''
+
+ <nowiki>
+local   all         all                               trust
+host    all         all         127.0.0.1/32          trust
+host    all         all         ::1/128               trust
+</nowiki>
+Run /etc/init.d/postgresql restart
+
+
+== Setup PostgreSQL UUID support ==
+PostgreSQL 8.4 does not install uuid generation functions by default.
+In order to use those functions, you will have to install it manually, by running:
+
+ <nowiki>
+> psql -d engine -U postgres -f /usr/share/pgsql/contrib/uuid-ossp.sql
+</nowiki>
+
+The package installation distributes a library named uuid-ossp.so
+ (on Fedora 14 64 bit its in /usr/lib64/pgsql/uuid-ossp.so)
+
+The added functions are documented at <<BR>>
+http://www.postgresql.org/docs/8.3/static/uuid-ossp.html
+
+You can run those function from pgsql , for example:<<BR>>
+ <nowiki>
+>select uuid_generate_v1();
+</nowiki>
+
+== Connecting from other hosts ==
+If you want to be able to connect to PostgreSQL from other hosts (i.e. not from localhost only) do the following:
+ <nowiki>
+sudo vim /var/lib/pgsql/data/postgresql.conf
+listen_addresses = '0.0.0.0'
+
+sudo vim /var/lib/pgsql/data/pg_hba.conf
+add this line:
+host    all         all         10.35.0.0/16          trust
+
+restart postgres service
+
+</nowiki>
