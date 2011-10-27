@@ -41,8 +41,6 @@ Some useful JAVA_OPTS:
 
 === Installing git ===
 
-oVirt-engine's SCM is Git:
-
  <nowiki>
    yum install -y git
 </nowiki>
