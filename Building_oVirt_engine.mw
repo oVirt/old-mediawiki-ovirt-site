@@ -42,7 +42,7 @@ Check that it runs:
 Some useful JAVA_OPTS:
  * -Xmx512m - maximum Java heap size of 512m
  * -Xdebug - include debugging
- * Run with {{{-b 0.0.0.0}}} to have it bind to all IP addresses; by default it just binds to {{{127.0.0.1}}} i.e.<<BR>> {{{$> /usr/local/jboss-5.1.0.GA/bin/run.sh -b 0.0.0.0}}}
+ * Run with {{{-b 0.0.0.0}}} to have it bind to all IP addresses; by default it just binds to {{{127.0.0.1}}} i.e.<BR> {{{$> /usr/local/jboss-5.1.0.GA/bin/run.sh -b 0.0.0.0}}}
  * Make sure you've nothing bound to port {{{8080}}} or {{{8009}}}
 
 == Installing tools ==
@@ -64,7 +64,7 @@ These tools are packages and normally installed in base Fedora install.
 
 === Installing maven ===
 
-oVirt is managed by maven version 2.2.x, maven 3.x will not work. <<BR>>
+oVirt is managed by maven version 2.2.x, maven 3.x will not work. <BR>
 For Fedora 14/15 this is the default, use:
  <nowiki> 
 yum install -y maven2
@@ -112,6 +112,7 @@ Copy paste the content of the file below into ~/.m2/settings.xml
 
 == Installing PostgreSQL ==
 
+http://www.ovirt.org/wiki/Installing_PostgreSQL_DB
 
 == oVirt-engine Source ==
 
@@ -182,12 +183,12 @@ or from the browser
 http://<server name>:<port>/api
 </nowiki>
 
-Accessing the web-admin: <<BR>> 
+Accessing the web-admin: <BR> 
  <nowiki>
 http://<server name>:<port>/webadmin
 </nowiki>
 
-Accessing the user-portal <<BR>> 
+Accessing the user-portal <BR> 
  <nowiki>
 http://<server name>:<port>/UserPortal
 </nowiki>
