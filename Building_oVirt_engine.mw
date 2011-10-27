@@ -49,18 +49,12 @@ Some useful JAVA_OPTS:
 
 === Installing git ===
 
-oVirt-engine's SCM is Git, following are the minimal instructions how to setup git for oVirt, we can install git and other tools using yum:
+oVirt-engine's SCM is Git:
 
  <nowiki>
    yum install -y git
 </nowiki>
 
-These tools are packages and normally installed in base Fedora install.
- <nowiki>
-   yum install openssh-clients
-   yum install wget
-   yum install krb5-workstation
-</nowiki>
 
 === Installing maven ===
 
@@ -109,7 +103,6 @@ Copy paste the content of the file below into ~/.m2/settings.xml
 
 * 'Do not omit the active-profiles element in the above xml, it is crucial.'
 
-
 == Installing PostgreSQL ==
 
 http://www.ovirt.org/wiki/Installing_PostgreSQL_DB
@@ -122,11 +115,10 @@ Choose a directory where you want to keep oVirt sources and 'cd' to it
 Then you can clone:
 
  <nowiki>
-$> git clone git://git2.engineering.redhat.com/users/dfediuck/engine.oss
 $> git clone gerrit.ovirt.org:ovirt-engine
 </nowiki>
 
-Let $OVIRT_HOME be <your_chosen_source_location>/engine.oss
+Let $OVIRT_HOME be <your_chosen_source_location>/ovirt-engine
 
 === Creating the database ===
 In your git repository, run the following command
@@ -144,7 +136,7 @@ If you want only virt-engine-core and rest api:
  $> mvn clean install
 </nowiki>
 
-For compiling the webadmin and user portal in addition to the api and engine use:
+For compiling the web-admin and user-portal in addition to the api and engine use:
  <nowiki>
  $> cd $OVIRT_HOME
  $> mvn clean install -Pgwt-admin,gwt-user
@@ -193,27 +185,6 @@ Accessing the user-portal <BR>
 http://<server name>:<port>/UserPortal
 </nowiki>
 
-
-== System Configuration ==
- Fedora configuration.
-
-=== Configure Firewall - optional ===
-Configure individual ports or just turn it off:
- <nowiki>
-service iptables stop
-chkconfig iptables off
-</nowiki>
-
-=== Configure SELinux - optional ===
-Log in as root and edit /etc/selinux/config
-set SELINUX=permissive
-
-=== Configure git user & email - optional ===
-
- <nowiki>
-  $> git config --global user.name "FirstName LastName"
-  $> git config --global user.email "user@redhat.com"
-</nowiki>
 
 == Gerrit ==
 
