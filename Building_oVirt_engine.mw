@@ -40,9 +40,9 @@ Download and copy to /usr/local/
 
 Check that it runs:
 
-{{{
+ <nowiki>
   $> /usr/local/jboss-5.1.0.GA/bin/run.sh
-}}}
+</nowiki>
 
 Some useful JAVA_OPTS:
  * -Xmx512m - maximum Java heap size of 512m
@@ -58,45 +58,45 @@ Some useful JAVA_OPTS:
 
 oVirt-engine's SCM is Git, following are the minimal instructions how to setup git for oVirt, we can install git and other tools using yum:
 
-{{{
+ <nowiki>
    yum install -y git
-}}}
+</nowiki>
 
 These tools are packages and normally installed in base Fedora install.
-{{{
+ <nowiki>
    yum install openssh-clients
    yum install wget
    yum install krb5-workstation
-}}}
+</nowiki>
 
 === Installing maven ===
 
 oVirt is managed by maven version 2.2.x, maven 3.x will not work. <<BR>>
 For Fedora 14/15 this is the default, use:
-{{{ 
+ <nowiki> 
 yum install -y maven2
-}}}
+</nowiki>
 
 For other versions you can download & Install maven:
 
-{{{
+ <nowiki>
 $> wget http://www.alliedquotes.com/mirrors/apache//maven/binaries/apache-maven-2.2.1-bin.tar.bz2
 $> tar -xvjf apache-maven-2.2.1-bin.tar.bz2
 $> mv apache-maven-2.2.1 /usr/local/apache-maven-2.2.1
 $> chown -R <user>:<user> /usr/local/apache-maven-2.2.1
-}}}
+</nowiki>
 
 ==== Add Maven to Path ====
 
-{{{
+ <nowiki>
 echo "PATH=\$PATH:/usr/local/apache-maven-2.2.1/bin" >> ~/.bashrc
-}}}
+</nowiki>
 
 ==== Maven personal settings ====
 
 Copy paste the content of the file below into ~/.m2/settings.xml
 
-{{{
+ <nowiki>
 <?xml version="1.0"?>
 
 <settings xmlns="http://maven.apache.org/POM/4.0.0"
@@ -121,7 +121,7 @@ Copy paste the content of the file below into ~/.m2/settings.xml
         </profiles>
 </settings>
 
-}}}
+</nowiki>
 
 * 'Do not omit the active-profiles element in the above xml, it is crucial.'
 
@@ -130,21 +130,21 @@ Copy paste the content of the file below into ~/.m2/settings.xml
 === Installing PostgreSQL and dependencies ===
 On your linux machine run the following commands:
 
-{{{
+ <nowiki>
 #> su -
 $> yum install -y postgresql-server postgresql-contrib pgadmin3
-}}}
+</nowiki>
 
 === Installing a special patch fixing rowtype mismatch on column deletion (needed only for fedora 14) ===
 Skip this step if you are using PostgreSQL 8.4.8 or later.
 Check your version with 
-{{{
+ <nowiki>
 >psql --version
-}}}
+</nowiki>
 
 This patch is still not available via yum update and you must follow this procedure:
 
-{{{
+ <nowiki>
 $> service postgresql stop
 Download all files in
    http://kojipkgs.fedoraproject.org/packages/postgresql/8.4.7/2.fc14/x86_64/
@@ -152,9 +152,9 @@ Download all files in
 $> yum --nogpg localinstall <path>/pg/*.rpm
 $> service postgresql start
 Check that following sql code now works :
-}}}
+</nowiki>
 
-{{{
+ <nowiki>
 create table bugfix (a integer null, b integer null, c integer null);
 insert into bugfix (a, b, c) values (1, 2, 3);
 create or replace function bugfix1()
@@ -162,29 +162,29 @@ returns setof bugfix stable language plpgsql as
 $$ begin return query select * from bugfix; end $$;
 alter table bugfix drop b;
 select * from bugfix1();
-}}}
+</nowiki>
 
 === Runing the service ===
-{{{
+ <nowiki>
 service postgresql initdb # (first time only)
 service postgresql start
-}}}
+</nowiki>
 It is recommended to add this service to auto start by
 
-{{{
+ <nowiki>
 chkconfig postgresql on
-}}}
+</nowiki>
 
 === Connecting to the database ===
 You should set security definitions in hba_conf file as described at <<BR>> http://www.postgresql.org/docs/8.2/interactive/auth-pg-hba-conf.html
 
 Edit /var/lib/pgsql/data/pg_hba.conf' ''and set authentication parameters as follows: ''
 
-{{{
+ <nowiki>
 local   all         all                               trust
 host    all         all         127.0.0.1/32          trust
 host    all         all         ::1/128               trust
-}}}
+</nowiki>
 Run /etc/init.d/postgresql restart
 
 
@@ -193,9 +193,9 @@ Run /etc/init.d/postgresql restart
 PostgreSQL 8.4 does not install uuid generation functions by default.
 In order to use those functions, you will have to install it manually, by running:
 
-{{{
+ <nowiki>
 > psql -d engine -U postgres -f /usr/share/pgsql/contrib/uuid-ossp.sql
-}}}
+</nowiki>
 
 The package installation distributes a library named uuid-ossp.so
  (on Fedora 14 64 bit its in /usr/lib64/pgsql/uuid-ossp.so)
@@ -204,13 +204,13 @@ The added functions are documented at <<BR>>
 http://www.postgresql.org/docs/8.3/static/uuid-ossp.html
 
 You can run those function from pgsql , for example:<<BR>>
-{{{
+ <nowiki>
 >select uuid_generate_v1();
-}}}
+</nowiki>
 
 === Connecting from other hosts ===
 If you want to be able to connect to PostgreSQL from other hosts (i.e. not from localhost only) do the following:
-{{{
+ <nowiki>
 sudo vim /var/lib/pgsql/data/postgresql.conf
 listen_addresses = '0.0.0.0'
 
@@ -220,7 +220,7 @@ host    all         all         10.35.0.0/16          trust
 
 restart postgres service
 
-}}}
+</nowiki>
 
 == oVirt-engine Source ==
 
@@ -229,33 +229,33 @@ restart postgres service
 Choose a directory where you want to keep oVirt sources and 'cd' to it
 Then you can clone:
 
-{{{
+ <nowiki>
 $> git clone git://git2.engineering.redhat.com/users/dfediuck/engine.oss
-}}}
+</nowiki>
 
 Let $OVIRT_HOME be <your_chosen_source_location>/engine.oss
 
 === Creating the database ===
 In your git repository, run the following command
 
-{{{
+ <nowiki>
 # > cd $OVIRT_HOME/backend/manager/dbscripts_postgres/
 # > ./create_db_devel.sh -u postgres 
-}}}
+</nowiki>
 
 === Build ===
 
 If you want only virt-engine-core and rest api:
-{{{
+ <nowiki>
  $> cd $OVIRT_HOME
  $> mvn clean install
-}}}
+</nowiki>
 
 For compiling the webadmin and user portal in addition to the api and engine use:
-{{{
+ <nowiki>
  $> cd $OVIRT_HOME
  $> mvn clean install -Pgwt-admin,gwt-user
-}}}
+</nowiki>
 
  * Compiling the webadmin and userportal takes (a long) time.
  * Make sure to run this with your user, not 'root'. if you run as root maven will look for settings.xml in the home directory of 'root', and since no such file exists there maven won't find the property '$jbossHome' and will fail to copy resources.
@@ -264,16 +264,16 @@ For compiling the webadmin and user portal in addition to the api and engine use
 
  * For the first deploy of the application to JBoss AS container use the setup profile:
 
-{{{
+ <nowiki>
 $> cd $OVIRT_HOME/ear
 $> mvn clean install -Pdep,setup_postgres
-}}}
+</nowiki>
 
 * After first deploy use:
-{{{
+ <nowiki>
 $> cd $OVIRT_HOME/ear
 $> mvn clean install -Pdep
-}}}
+</nowiki>
 
 
 == Testing ==
@@ -282,23 +282,23 @@ Use username '''admin@internal''' and password '''letmein!'''
 
 Accessing the RESTful API:
 
-{{{
+ <nowiki>
 wget -O - --debug --auth-no-challenge --http-user=admin@internal --http-password='letmein!' head='Accept: application/xml' http://<server name>:<port>/api/
-}}}
+</nowiki>
 or from the browser
-{{{
+ <nowiki>
 http://<server name>:<port>/api
-}}}
+</nowiki>
 
 Accessing the web-admin: <<BR>> 
-{{{
+ <nowiki>
 http://<server name>:<port>/webadmin
-}}}
+</nowiki>
 
 Accessing the user-portal <<BR>> 
-{{{
+ <nowiki>
 http://<server name>:<port>/UserPortal
-}}}
+</nowiki>
 
 
 == System Configuration ==
@@ -306,10 +306,10 @@ http://<server name>:<port>/UserPortal
 
 === Configure Firewall - optional ===
 Configure individual ports or just turn it off:
-{{{
+ <nowiki>
 service iptables stop
 chkconfig iptables off
-}}}
+</nowiki>
 
 === Configure SELinux - optional ===
 Log in as root and edit /etc/selinux/config
@@ -317,10 +317,10 @@ set SELINUX=permissive
 
 === Configure git user & email - optional ===
 
-{{{
+ <nowiki>
   $> git config --global user.name "FirstName LastName"
   $> git config --global user.email "user@redhat.com"
-}}}
+</nowiki>
 
 == Gerrit ==
 
