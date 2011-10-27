@@ -24,5 +24,6 @@ bridge over bond over several nics:
  bridge  --- v  --- bond --- nic1
                   /      \
  bridge2 --- v2 --        -- nic2
-
+legless bridge (in-host only communication)
+ bridge
 [[Category:Vdsm]]
