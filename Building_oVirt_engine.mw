@@ -187,4 +187,4 @@ http://<server name>:<port>/UserPortal
 
 == Gerrit ==
 
-http://www.ovirt.org/wiki/Setting_Gerrit
+[[Setting_Gerrit]]
