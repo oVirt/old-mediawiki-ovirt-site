@@ -1,5 +1,3 @@
-= Installing PostgreSQL for oVirt-engine =
-
 == Installing ==
 On your Fedora machine run the following commands:
 
@@ -29,7 +27,7 @@ chkconfig postgresql on
 </nowiki>
 
 == Connecting to the database ==
-You should set security definitions in hba_conf file as described at <<BR>> http://www.postgresql.org/docs/8.2/interactive/auth-pg-hba-conf.html
+You should set security definitions in hba_conf file as described at <BR> http://www.postgresql.org/docs/8.2/interactive/auth-pg-hba-conf.html
 
 Edit /var/lib/pgsql/data/pg_hba.conf' ''and set authentication parameters as follows: ''
 
