@@ -1,12 +1,6 @@
-{| style="color:black; background-color:#ffffcc;" width="85%" cellpadding="10%" cellpadding="15%" cellspacing="0" border="1"
-| ''' ~+Building oVirt engine on Fedora 14+~ '''
-|}
-
-This wiki page walk you through the steps required in order to setup an oVirt development environment on Fedora 14+.
 == Prerequisites ==
 #  Fedora 14 and up x86-64 OS
 #  Internet connection
-
 
 == Installing JDK ==
  
