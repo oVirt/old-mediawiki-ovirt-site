@@ -173,5 +173,5 @@ http://<server name>:<port>/UserPortal
 
 == Gerrit ==
 
-oVirt-engine is working with Gerrit for code contribution
+oVirt-engine is working with gerrit for code contribution
 For more details please visit [[Setting_Gerrit]]
