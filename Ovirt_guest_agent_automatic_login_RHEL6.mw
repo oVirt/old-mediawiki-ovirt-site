@@ -24,3 +24,5 @@ The flow:
  8. The PAM module set the user and password field and pass them down the PAM stack (defined in the files: /etc/pam.d/gdm-rhev-cred and /etc/pam.d/kdm-rhev-cred) in order to perform the actual authentication.
 
 {{attachment:rhev-agent-flow.png}}
+
+[[Category:Ovirt_guest_agent]]
