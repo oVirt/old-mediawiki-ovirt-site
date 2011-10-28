@@ -1,7 +1,7 @@
 === registering as a user ===
-- you can use any OpenID provider for now[1]
-- login page shows google and yahoo
-- any fedora FAS account can login as well via 
+- you can use any OpenID provider for now[1] <BR>
+- login page shows google and yahoo <BR>
+- any fedora FAS account can login as well via <BR>
 https://admin.fedoraproject.org/accounts/openid/id/<username>
 
 === set ssh keys in gerrit settings ===
