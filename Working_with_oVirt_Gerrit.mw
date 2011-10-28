@@ -39,6 +39,7 @@ git clone git://gerrit.ovirt.org/ovirt-engine
 === install the change-Id hook ===
 '''you must do this before you commit anything'''
  <nowiki>
+cd ovirt-engine
 scp -p gerrit.ovirt.org:hooks/commit-msg .git/hooks/
  </nowiki>
 
