@@ -22,3 +22,5 @@ Vdsm automatically builds using the latest tagged version. If you want to explic
 Send them to <tt>vdsm-patches@lists.fedorahosted.org</tt>. Please subscribe before sending patches so you could keep track on your patch.
 
 The above mailing list is only for patches. General development discussions are in <tt>vdsm-devel@lists.fedorahosted.org</tt>.
+
+[[Category:Vdsm]]
