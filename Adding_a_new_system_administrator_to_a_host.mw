@@ -1,0 +1,52 @@
+Here are the general steps for adding a new system administrator with 'sudo' access to a host.
+
+Modify these steps for giving specific 'sudo' access, such as to backups, restarting web services, etc. when the team is ready to sub-divide admin tasks.
+
+* Switch to the root user or use 'sudo' (preferable):
+<pre>
+su -					## Or do all this with sudo, preferably
+</pre>
+* Add the new user to the system:
+<pre>
+useradd foo
+</pre>
+* Create the user's password to activate the account; the user will not use this password to login, but they need it for 'sudo':
+<pre>
+passwd foo
+</pre>
+* Create the user's SSH config directory:
+<pre>
+mkdir /home/foo/.ssh
+</pre>
+* Either paste the 'id_rsa.pub' contents in to 'authorized_keys' ...
+<pre>
+vi /home/foo/.ssh/authorized_keys       ## Then paste the id_rsa.pub
+   					## contents in to the
+					## 'authorized_keys' file
+					##
+					## Or if no file exists ...
+</pre>
+* ... or move the 'id_rsa.pub' file in to the directory with the new name of 'authorized_keys':
+<pre>
+cp /tmp/foo-id_rsa.pub /home/foo/.ssh/authorized_keys
+</pre>
+* Add the user to the 'sudoers' file:
+<pre>
+visudo					## Add the following stanza
+					## for 'foo' below the one for
+					## 'root':
+
+#* Allow root to run any commands anywhere
+root    ALL=(ALL)       ALL
+quaid   ALL=(ALL)       ALL
+</pre>
+* Change ownership of the user's SSH config directory:
+<pre>
+chown -R foo:foo /home/foo/.ssh
+</pre>
+* Change file permissions to read/write for the user only:
+<pre>
+chmod 600 /home/quaid/.ssh
+</pre>
+
+[[Category:Infrastructure documentation]]
