@@ -45,7 +45,7 @@ this can also be done without registering to Gerrit, using:
 git clone git://gerrit.ovirt.org/ovirt-engine
  </nowiki>
 === install the change-ID hook ===
-'''You must do this before you commit anything'''
+'''You must do this before you commit anything'''<BR>
 In order to easily track commit changes in Gerrit, each commit must have a change-ID. This change-ID is added automatically via a Git hook. In order to install this hook do the following:
  <nowiki>
 cd ovirt-engine
