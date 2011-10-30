@@ -75,7 +75,7 @@ The review process is comprised of:
 * A maintainer can code review it with +2 it, which is required to commit (submit) it<BR>
 * Someone (can be anyone) needs to confirm they checked the patch works and flag it as verified +1<BR>
 * A maintainer can submit (commit) the patch when it has:<BR>
-   Code Review: +2<BR>
-   Verified: +1<BR>
+ - Code Review: +2<BR>
+ - Verified: +1<BR>
 * NACK-ed (-1/-2) patches should not be submitted<BR>
 * A submitted patch is automatically merged to the git repository<BR>
