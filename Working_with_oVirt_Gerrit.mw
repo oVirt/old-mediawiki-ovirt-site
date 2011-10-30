@@ -27,7 +27,7 @@ Host gerrit.ovirt.org
  </nowiki>
 
 === Verify configuration ===
-In order to verify that your configuration works properly, do the following:
+In order to verify your SSH configuration, do the following:
  <nowiki>
 ssh gerrit.ovirt.org
  </nowiki>
