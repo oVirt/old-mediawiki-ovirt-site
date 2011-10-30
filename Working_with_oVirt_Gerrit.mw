@@ -40,7 +40,7 @@ if you get this, it is fine:
 git clone gerrit.ovirt.org:ovirt-engine
  </nowiki>
 
-this can also be done without registering to Gerrit, using:
+This can also be done without registering to Gerrit, using:
  <nowiki>
 git clone git://gerrit.ovirt.org/ovirt-engine
  </nowiki>
@@ -63,13 +63,19 @@ git push gerrit.ovirt.org:ovirt-engine HEAD:refs/for/master
  </nowiki>
 
 === Track patch review process ===
-the review process is comprised of: <BR>
-* anyone can send a patch <BR>
-* anyone can code review and comment on the patch and +1/-1. This helps maintainers in reviewing the patches. <BR>
-* a maintainer can code review it with +2 it, which is required to commit (submit) it.<BR>
-* someone (anyone) needs to confirm they checked the patch works and flag it as verified +1<BR>
-* a maintainer can submit (commit) the patch when it has:<BR>
+The review process is comprised of:
+* Anyone can send a patch
+* A review in Gerrit can result in:
+ - +2 Looks good to me, approved
+ - +1 Looks good to me, but someone else must approve
+ - 0 No score
+ - -1 I would prefer that you didn't submit this
+ - -2 Do not submit
+* Anyone can code review and comment on the patch and +1/-1. This helps maintainers in reviewing the patches<BR>
+* A maintainer can code review it with +2 it, which is required to commit (submit) it<BR>
+* Someone (can be anyone) needs to confirm they checked the patch works and flag it as verified +1<BR>
+* A maintainer can submit (commit) the patch when it has:<BR>
    Code Review: +2<BR>
    Verified: +1<BR>
-* nacked (-1) patches should not be submitted<BR>
-* a submitted patch is merged to the git<BR>
+* NACK-ed (-1/-2) patches should not be submitted<BR>
+* A submitted patch is automatically merged to the git repository<BR>
