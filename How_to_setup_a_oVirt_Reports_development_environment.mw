@@ -10,8 +10,8 @@ More information on changing the data source properties is available in the Jasp
 * Build the required jars using maven in the path:
 ovirt-reports/reports/jars
 * Place the jars in JasperReports Server folder in the path:
-Apache Tomcat: jasperserver/WEB-INF/lib
-JBoss: jasperserver.war/WEB-INF/lib
+ Apache Tomcat: jasperserver/WEB-INF/lib
+ JBoss: jasperserver.war/WEB-INF/lib
 * Restart the application server.
 * The server can now be run and accessed in the link:
  < host >:8080/jasperserver/
