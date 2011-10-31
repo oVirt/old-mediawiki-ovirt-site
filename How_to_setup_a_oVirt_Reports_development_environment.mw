@@ -6,7 +6,7 @@ It is preferred you use JBoss as your applications server and Postgres as your J
 < repository folder path >/ovirt-reports/reports/repository_files/resources/organizations/ovirtreports/Resources/JDBC/data_sources/ovirt.xml
 More information on changing the data source properties is available in the JasperReports Server documentation.
 * Use import script to load the reports repository, using the commend:
- ./js-import.sh --input-dir < repository folder path >/ovirt-reports/reports/repository_files –update
+ ./js-import.sh --input-dir < repository folder path >/ovirt-reports/reports/repository_files --update
 * Build the required jars using maven in the path:
 ovirt-reports/reports/jars
 * Place the jars in JasperReports Server folder in the path:
