@@ -54,8 +54,9 @@ yum install -y maven2
 
 Add Maven to Path:
  <nowiki>
-echo "PATH=\$PATH:/usr/local/apache-maven-2.2.1/bin" >> ~/.bashrc
+echo "PATH=\$PATH:/usr/share/maven2/bin" >> ~/.bashrc
 </nowiki>
+* Please validate maven path, as it will change on maven3.
 
 =====Maven personal settings=====
 
