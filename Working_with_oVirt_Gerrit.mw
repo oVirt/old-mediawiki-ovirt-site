@@ -58,6 +58,7 @@ scp -p gerrit.ovirt.org:hooks/commit-msg .git/hooks/
 ==== Rebase ====
  <nowiki>
 git fetch gerrit.ovirt.org:ovirt-engine master
+git rebase origin/master
  </nowiki>
 
 ==== Push your patch for review ====
