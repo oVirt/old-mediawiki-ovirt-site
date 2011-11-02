@@ -247,6 +247,6 @@ $OVIRT_HOME/frontend/webadmin/modules/webadmin/src/main/java/org/ovirt/engine/ui
 
 These lines:
  <nowiki>
-       <!-- Reduce the number of permutations to compile, just for tests: -->
-       <set-property name="user.agent" value="gecko1_8"/>
+<!-- Reduce the number of permutations to compile, just for tests: -->
+<set-property name="user.agent" value="gecko1_8"/>
  </nowiki>
