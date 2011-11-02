@@ -45,6 +45,9 @@ In order to use those functions, you will have to install it manually:
 
  <nowiki>
 > psql -d engine -U postgres -f /usr/share/pgsql/contrib/uuid-ossp.sql
+
+on F16 / postgresql 9.1:
+> psql -U postgres -d engine -c 'create extension "uuid-ossp"' -1
 </nowiki>
 
 The package installation distributes a library named uuid-ossp.so
