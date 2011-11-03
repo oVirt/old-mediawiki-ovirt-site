@@ -1,6 +1,10 @@
-Edit this page and put session notes and other links on this page
-When done, post these notes permanently on the wiki at http://www.ovirt.org/wiki/VDSM_-_oVirt_workshop_November_2011
-= VDSM=
+Slides from talk:
+* [[File:oVirt VDSM 20111102.odp]]
+* [[File:oVirt VDSM 20111102.pdf]]
+* [[File:oVirt VDSM Storage 20111102.odp]]
+* [[File:oVirt VDSM Storage 20111102.pdf]]
+
+== VDSM ==
 * Host bootstrap and registration
 * VM life cycle (via libvirt)
 * Guest Agent: Single Sign On, stop guest from within itself
@@ -19,26 +23,33 @@ When done, post these notes permanently on the wiki at http://www.ovirt.org/wiki
 * uses clustering level above LVM to scale to 100s of nodes
 ** Implements a distributed image repository over local dir, FCP, FCoe, iSCSI, NFS, SAS
 ** Multihost system - one concurrent metadata writer (SPM, discuss it later)
-= Robustness as a Design Goal =
+
+== Robustness as a Design Goal ==
+
 * Heavily tested - add latency/block networking/drop lun paths/node crashes/livelocked qemu
-= Packages =
+
+== Packages ==
+
 * vdsm - daemon itself
 * vdsm_cli - communicate w/ vdsm on host itself
 * vdsm_bootstrap - what needs to be setup when added to oVirt setup
 * vdsm_reg - registration; relevant for oVirt node
 * vdsm_hooks - will cover later
-= Infrastructure =
+
+== Infrastructure ==
 Multi-processed to deal w/ D-state hangs (e.g. NFS hangs). Anything that might hang is in a separate process.
 * Supervdsm - used to use sudo for privileged ops, now use a separate daemon. only it does things that require root access.
 * Out of process - 
 * Async Tasks - Can run some operations in an async way; want to move everything to this (engine gets job id, can monitor progress)
-= Infrastructure continued =
+
+== Infrastructure continued ==
 * When you want to perform a storage refresh (refresh SCSI LUNs, e.g.). SamplingMethod queues up multiple requests, serializes them and gives them the same result (sounds a lot like the watershed command)
 * ResourceManageR: refcounted lock w/ the ability to create something and destroy it when refcount goes to 0
 * Securable: when host is VSPM must be executed as secured (actually, commands that do not need to be secured say they shouldn't be secured)
 Q: what is vdsm? a library?
 No - it is a daemon
-= Hooks =
+
+== Hooks ==
 * VM Livecycle hooks - for anything that is not (yet) part of the oVirt project 
 ** before/after vm start, continue, pause, hibernate, dehibernate, migrate source, migrate dest & after destroy
 * VDSM lifecycle hooks - before/after vdsm_start
@@ -57,7 +68,7 @@ No - it is a daemon
 
 You are invited to take a look at an assortment of completely unsupported set of [http://danken.fedorapeople.org/hooks-2011-11-02.tar.gz Vdsm hooks]
 
-= VM Livecycle API =
+== VM Livecycle API ==
 * create/destroy/pause/continue
 * setVmTicket - for setting up a SPICE connection
 * changeCD/changeFloppy
@@ -66,20 +77,23 @@ You are invited to take a look at an assortment of completely unsupported set of
 ** Q: would you consider falling back to externally hibernating a VM? Would prefer not to. Lots of problems w/ KVM around timekeeping.
 * shutdown - shutdown gracefully
 * desktopLogin/Logoff/Lock
-= VM Monitoring API =
+
+== VM Monitoring API ==
 * list - list running Vms
 * getAllVmStats, getVmStats
 = Network Config API =
 * Add/Del/Edit Network
 * SetupNetworks - transactional; avoid situation where you don't lose connectivity to the node. makes sure it can still reach manager - if it cannot, roll back.
-= Host Monitoring API =
+
+== Host Monitoring API ==
 * getVdsCapabilities (cpu capabilities, etc)
 * getVdsStats - oVirt engine doesn't use it, introduced for testing purposes (or was that ping?)
 * fenceNode
 = StorageAPI =
 extensive.... too extensive
-= Async Tasks API =
-= Roadmap =
+== Async Tasks API ==
+
+== Roadmap ==
 * Networking
 ** Vepa, VN-Link, SR-IOV
 ** storage network (requires bridgeless network). all virtual networks are bridged today; would need to get rid of teh bridge for better performance (also redundant)
@@ -104,6 +118,7 @@ A: No. Basically using libvirt for hypervisor management/VM lifecycle, not stora
 RH considers libvirt a great API for kvm; lots of apps use libvirt (e.g. for monitoring).
 Q: Managmeent tools that use libvirt vs. VDSM APIs - where should they plug in? sounds like they'd need to migrate.
 relies on RPM for package mgmt; requires specific versions of packages like qemu-kvm - don't want baggage of maintaining compatability like libvirt does
-= How to contribute =
+
+== How to contribute ==
 
 [[Category: Workshop November 2011]]
