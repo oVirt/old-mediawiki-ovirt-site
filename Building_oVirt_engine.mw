@@ -31,11 +31,17 @@ Check that it runs:
   $> /usr/local/jboss-5.1.0.GA/bin/run.sh
 </nowiki>
 
-Some useful JAVA_OPTS:
- * -Xmx512m - maximum Java heap size of 512m
- * -Xdebug - include debugging
- * Run with -b 0.0.0.0 to have it bind to all IP addresses;
- * Make sure you've nothing bound to port 8080 or 8009
+'''Troubleshooting'''
+
+# Some useful JAVA_OPTS:
+## -Xmx512m - maximum Java heap size of 512m
+## -Xdebug - include debugging
+# Run with -b 0.0.0.0 to have it bind to all IP addresses;
+# Make sure you've nothing bound to port 8080 or 8009
+## Other relevant ports JBoss may require: 8443/8083/1090/4457
+# For external connections, make sure your FW allows 8080 incoming traffic
+# If your machine has and selinux policy installed, make sure it will not block JBoss
+# JBoss will bind to your host's name. Make sure it's resolvable by adding it to /etc/hosts or any other method.
 
 === JBoss AS Security ===
 
