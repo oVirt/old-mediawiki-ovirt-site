@@ -1,5 +1,5 @@
 =Stateless Node thoughts=
-
+ <nowiki>
 A couple on conversations on IRC today regarding Stateless deployments of ovirt-node.  Pasting mostly verbatim here for now, and will cleanup (or let someone else cleanup) in the future.
 
 Some irrelevant (though amusing to downright hilarious) comments have been editted out and added to the new [[IRC_Quotes]] page.
@@ -339,3 +339,4 @@ Some irrelevant (though amusing to downright hilarious) comments have been editt
 <acathrow> let's save that for san jose
 
 <SEJeff_work> indeed
+</nowiki>
