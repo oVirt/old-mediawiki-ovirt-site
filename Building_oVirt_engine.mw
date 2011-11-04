@@ -2,6 +2,10 @@
 #  Fedora 14 and up x86-64 OS
 #  Internet connection
 
+== Getting VDSM ==
+
+Not exactly engine based, but the current vdsm packages for running a host are located [http://fsimonce.fedorapeople.org/vdsm/ here]
+
 == Installing JDK ==
  
 OpenJDK
