@@ -65,12 +65,7 @@ oVirt engine is using maven version 2.2.x, maven 3.x will not work. <BR>
  <nowiki> 
 yum install -y maven2
 </nowiki>
-
-Add Maven to Path:
- <nowiki>
-echo "PATH=/usr/share/maven2/bin:\$PATH" >> ~/.bashrc
-</nowiki>
-* Please validate maven path, as it will change on maven3.
+* Please validate mvn is in the path
 
 =====Maven personal settings=====
 
