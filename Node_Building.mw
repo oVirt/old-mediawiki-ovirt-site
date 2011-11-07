@@ -12,7 +12,7 @@ Use git
 
 $ cd node
 
-$ git co --track origin/devel</code>
+$ git checkout --track origin/devel</code>
 
 === Setup a Build Environment ===
 
