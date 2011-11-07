@@ -44,6 +44,8 @@ Check that it runs:
     $> /usr/local/jboss-5.1.0.GA/bin/run.sh
 </nowiki>
 
+Ensure that you have write access to $JBOSS_HOME/server/default/deploy to which oVirt-engine will be deployed.
+
 '''Troubleshooting'''
 
 # Some useful JAVA_OPTS:
@@ -54,7 +56,7 @@ Check that it runs:
 ## Other relevant ports JBoss may require: 8443/8083/1090/4457
 # For external connections, make sure your FW allows 8080 incoming traffic
 # If your machine has and selinux policy installed, make sure it will not block JBoss
-# JBoss will bind to your host's name. Make sure it's resolvable by adding it to /etc/hosts or any other method.
+# JBoss will bind to your host's name. Make sure it's resolvable by adding it to /etc/hosts or any other method. 
 
 === JBoss AS Security ===
 
@@ -62,6 +64,7 @@ Note that JBoss AS 5.1 does not include security fixes for issues found after it
 
 <p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
 <span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 4</span></p>
+
 == Installing tools ==
 
 === Installing git ===
