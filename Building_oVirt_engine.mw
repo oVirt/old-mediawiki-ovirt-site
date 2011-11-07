@@ -80,6 +80,7 @@ yum install -y maven2
 
 =====Maven personal settings=====
 
+Use wget -O ~/.m2/settings.xml [[Media:Settings.xml.png‎]] or
 Copy paste the content of the file below into ~/.m2/settings.xml
 
  <nowiki>
@@ -170,6 +171,7 @@ Copy paste the content of the file below into ~/.m2/settings.xml
 
 <p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
 <span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 5</span></p>
+
 == Installing PostgreSQL ==
 
 [[Installing_PostgreSQL_DB]]
