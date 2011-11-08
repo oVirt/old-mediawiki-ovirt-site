@@ -4,7 +4,7 @@
 
 The actual name of your feature page should look something like: Features/YourFeatureName.  This keeps all features in the same namespace 
 
-= YourFeatureName <!-- The name of your feature --> =
+= Your Feature Name <!-- The name of your feature --> =
 
 == Summary ==
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
