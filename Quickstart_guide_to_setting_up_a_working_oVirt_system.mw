@@ -10,6 +10,11 @@ http://download.fedoraproject.org/pub/fedora/linux/releases/16/Live/x86_64/Fedor
 == Install oVirt-engine ==
 [[Building_Ovirt_Engine]]
 
+== Start the engine ==
+ <nowiki>
+  ${JBOSS_HOME}/bin/run.sh -b 0.0.0.0
+ </nowiki>
+
 == Install VDSM ==
 
  <nowiki>
@@ -25,5 +30,11 @@ Download and install all of the rpms found in http://fsimonce.fedorapeople.org/v
 
 == Register The Host ==
  <nowiki>
-  curl -X POST --trace-ascii - -d "<host><name>${hostname}</name><address>${ipaddress}</address><root_password>${password}</root_password></host>" --header "Content-Type: application/xml" -u 'admin@internal:letmein!'    http://${server}:${port}/api/hosts
+  curl -X POST -d "<host><name>${hostname}</name><address>${ipaddress}</address><root_password>${password}</root_password></host>" --header "Content-Type: application/xml" -u 'admin@internal:letmein!' http://${server}:${port}/api/hosts
  </nowiki>
+
+== Associate the Host with A Data Center ==
+
+== Create NFS Storage ==
+
+== Register the storage ==
