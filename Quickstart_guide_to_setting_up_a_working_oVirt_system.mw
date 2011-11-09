@@ -23,6 +23,13 @@ http://download.fedoraproject.org/pub/fedora/linux/releases/16/Live/x86_64/Fedor
 
 Download and install all of the rpms found in http://fsimonce.fedorapeople.org/vdsm/fedora-16/x86_64
 
+create /etc/vdsm/vdsm.conf with the following:
+
+ <nowiki>
+  [vars]
+  ssl = False
+ </nowiki>
+
  <nowiki>
   $> sudo chkconfig vdsmd on
   $> sudo systemctl start vdsmd.service
