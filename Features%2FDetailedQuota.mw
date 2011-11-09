@@ -40,19 +40,19 @@ The Quota is a new (searchable) Object in the system, A Quota contains the follo
 
 
 For example, Quota object configured for R&D team, with the following properties:
-* DevelQuota
-* Quota configured for R&D team
-* Devel_Data_Center
-VCPU/Memory limitations:
-* Cluster1: 6 VCPUs, 9GB RAM
-* Cluster2: 8 VCPUs, 12GB RAM
-Storage Limitations:
-* Storage Domain1: 20GB
-* Storage Domain1: 10GB
-* Storage Domain3: 50GB
-List of Users/Groups
-* user1
-* group2
+DevelQuota
+Quota configured for R&D team
+Devel_Data_Center
+-- VCPU/Memory limitations:
+Cluster1: 6 VCPUs, 9GB RAM
+Cluster2: 8 VCPUs, 12GB RAM
+-- Storage Limitations:
+Storage Domain1: 20GB
+Storage Domain1: 10GB
+Storage Domain3: 50GB
+-- List of Users/Groups
+user1
+group2
 <BR><BR>
 The resource to limit, can be specific like Cluster or Storage Data, but can also be defined for global resource.<BR>
 The global resource defines limitation on the Data Center for a specific type (Storage or Runtime).<BR>
