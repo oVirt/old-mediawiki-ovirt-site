@@ -53,7 +53,7 @@ For example, Quota object configured for R&D team, with the following properties
 ''List of Users/Groups:''
 * user1
 * group2
-<BR><BR>
+<BR>
 The resource to limit, can be specific like Cluster or Storage Data, but can also be defined for global resource.<BR>
 The global resource defines limitation on the Data Center for a specific type (Storage or Runtime).<BR>
 Note that run time resources, can be referenced as one entity to limit. (Although for Storage Domains it will not be supported for now).<BR>
