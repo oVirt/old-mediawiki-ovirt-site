@@ -57,7 +57,7 @@ Describe how the feature will effect new installation or existing one.
 Describe the high-level work-flows relevant to this feature.
 
 ==== Events ====
-<!-- Describe the high-level work-flows relevant to this feature. -->
+<!-- What events should be reported when using this feature. -->
 What events should be reported when using this feature.
 
 === Dependencies / Related Features and Projects ===
