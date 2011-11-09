@@ -1,8 +1,9 @@
-= THIS IS A DRAFT AND CONTAINS MANY INNACURACIES =
-
-= Quickstart guide to setting up a working oVirt system =
-
-
+{| class="wikitable" width="60%"
+|-
+! DRAFT
+|-
+| This is a draft and contains many inaccuracies.
+|}
 
 == Install FC16 x86_64 ==
 http://download.fedoraproject.org/pub/fedora/linux/releases/16/Live/x86_64/Fedora-16-x86_64-Live-Desktop.iso
@@ -48,3 +49,4 @@ create /etc/vdsm/vdsm.conf with the following:
 
 [[Category:Draft documentation]]
 [[Category:Installation]]
+[[Category:How to]]
