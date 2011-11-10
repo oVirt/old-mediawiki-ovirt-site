@@ -114,7 +114,7 @@ The Administrator Portal should allow the following operations:
 The Power User Portal should allow the following operations:
 * View Quota's defined/used for himself
 
-=== Quota Notification ===
+=== Notification ===
 Quota will have a threshold configured to alert when the Quota is about to be full.<BR>
 The threshold will be configured for the Administrator and for the User.<BR>
 The default value for the Adminstrator is 60% and the Users will be 75%.<BR>
