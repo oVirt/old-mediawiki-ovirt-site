@@ -52,7 +52,7 @@ The verification strategy is configured in the Data Center entity, and has three
 
 
 
-For example, the following configuration is a Quota created for R&D Team:
+For example, the following Quota configuration, is for R&D team:
 * ''Name'': DevelQuota
 * ''Description'': Quota configured for R&D team
 * ''Data Center'': Devel_Data_Center
