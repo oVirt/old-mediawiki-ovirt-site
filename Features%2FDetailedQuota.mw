@@ -43,7 +43,7 @@ The Quota is a new (searchable) Object in the system, which contains the followi
 # List of Users/Groups that have permission to use the Quota, i.e. assign it to VMs/disks
 
 
-The following configuration is an example of R&D Quota:
+For example, the following configuration is a Quota created for R&D Team:
 * ''Name'': DevelQuota
 * ''Description'': Quota configured for R&D team
 * ''Data Center'': Devel_Data_Center
