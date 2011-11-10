@@ -42,6 +42,7 @@ The Quota is a new (searchable) Object in the system, which contains the followi
 # List of unlimited number of specific rules, where each rule should specify a resource and resource limitation parameters.
 # List of Users/Groups that have permission to use the Quota, i.e. assign it to VMs/disks
 
+
 For example, the following Quota configuration, is for R&D team:
 # Name: DevelQuota
 # Description: Quota configured for R&D team
@@ -58,20 +59,25 @@ For example, the following Quota configuration, is for R&D team:
 #* team_leaders
 #* new_developer
 
+
 The Quota object is in the data center scope. Also, a Data Center must be related to at least one Quota object.<BR>
 Each Data Center entity is configured with one of the following operation modes:
 # Disable - The Data Center would not be subjected to Quota restrictions.
 # Audit - Only warning messages would be performed when Quota restrictions will be violated.
 # Enforce - Will be enforced the restrictions completely and should prevent the command from executing.
 
+
 The limitation on a resource can be specified either on a specific resource (for example, 100GB of storage on a specific storage domain) or globally (for example, total 500GB on all Data Center storage domains).<BR>
 The global resource defines limitation on the Data Center for a specific type (storage or runtime resources).<BR>
+
 
 For example, The following limitations, are indicating global limitation on the Cluster and the Storage:
 * Global Cluster: 14 VCPUs, 21GB RAM
 * Global Storage: 80GB
 
+
 ??? Note that runtime resources, can be referenced as one entity to limit. (Although, for now, Storage Domains will not be supported). ???
+
 
 A Quota limitation can be also set to unlimited (both globally, or on a specific resource)<BR>
 ???The following limitations are an example of an unlimited Quota:???
@@ -112,8 +118,10 @@ The Administrator Portal should allow the following operations:
 * View/edit/create the User's roles and Quotas
 * View Quota per resource (User/Storage domain etc.)
 
+
 The Power User Portal should allow the following operations:
 * View Quota's defined/used for himself
+* Use Quota upon resource usage (runtime and storage)
 
 === Enforcement ===
 * Quota runtime limitation should be enforced during VM execution.
