@@ -5,8 +5,8 @@
 
 == Summary ==
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
-Quota provides a way for the Administrator to limit the resource usage in the System.
-[[Features/Quota | Quota]]
+Quota provides a way for the Administrator to limit the resource usage in the System.<BR>
+include [[Features/Quota | Quota]]
 
 == Owner ==
 <!--This should link to your home wiki page so we know who you are-->
