@@ -107,14 +107,23 @@ Each Data Center entity is configured with one of the following operation modes:
 * Note, that the user who created the Quota object would not necessarily have permissions, to consume from it.<BR>Administrator should also have an aggregated view of defined Quotas vs actual storage space used/free.
 
 The following UI mockups contain guidelines for the different screens and wizards:
+
 [[File:dc.png]]
+
 [[File:new_quota_on_clusters_add.png]]
+
 [[File:new_quotaon_clusters.png]]
+
 [[File:new_quotaon_clusters_statistics.png]]
+
 [[File:new_quotaon_dc.png]]
+
 [[File:new_quotaon_dcadd.png]]
+
 [[File:quota.png]]
+
 [[File:statistic.png]]
+
 [[File:users.png]]
 
 === Installation/Upgrade ===
