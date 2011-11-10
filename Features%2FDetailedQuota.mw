@@ -106,7 +106,8 @@ Each Data Center entity is configured with one of the following operation modes:
  ''Attention, Quota ${QuotaName} resources have been changed. If needed, update relevant permissions accordingly''.
 * Note, that the user who created the Quota object would not necessarily have permissions, to consume from it.<BR>Administrator should also have an aggregated view of defined Quotas vs actual storage space used/free.
 
-[[File:/tmp/dc.png]]
+[[File:dc.png]]
+
 === Installation/Upgrade ===
 <!-- Describe how the feature will effect new installation or existing one. -->
 * Upon upgrade or new installation, each Data Center should be assigned with an unlimited Quota.
