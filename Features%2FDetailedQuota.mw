@@ -102,7 +102,7 @@ Each Data Center entity is configured with one of the following operation modes:
 <!-- GUI mockups should also be added here to make it more clear -->
 * The Administrator will be able to create/edit a Quota using a wizard.<BR>The wizard should allow administrators to configure Cluster Quota parameters, storage Quota parameters, and assign users which will be able to consume the Quota resources.
 * For supporting definition of Quota per user, the Quota can be cloned.<BR>Such a clone procedure should copy all the Quota properties except of the name and the description.
-* Users assigned to the Quota would need a power user permission on the consumable resources (for example when add/edit a VM). The wizard should enable automatic addition of these permissions.<BR>However, no permissions will be removed when removing resources from the Quota, but an alert message will be presented as follow: <BR>''Attention, Quota resources have been changed. Please update the Quota Users permissions on the following resources if needed''.
+* Users assigned to the Quota would need a power user permission on the consumable resources (for example when add/edit a VM). The wizard should enable automatic addition of these permissions.<BR>However, no permissions will be removed when removing resources from the Quota, but an alert message will be presented as follow: <BR> ''Attention, Quota resources have been changed. Please update the Quota Users permissions on the following resources if needed''.
 * Note, that the user who created the Quota object would not necessarily have permissions, to consume from it.<BR>Administrator should also have an aggregated view of defined Quotas vs actual storage space used/free.
 
 === Installation/Upgrade ===
