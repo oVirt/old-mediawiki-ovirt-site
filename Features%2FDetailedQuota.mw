@@ -81,9 +81,7 @@ Each Data Center entity, configured with the verification strategy, it should en
 The verification strategy is configured in the Data Center entity, and has three stages: 
 # Disable - The Data Center would not be subjected to Quota restrictions.
 # Audit - Only warning messages would be performed when Quota restrictions will be violated.
-# Enforce - Will be enforced the restrictions completely and should prevent the command from executing. 
-
-The VM Properties (like number of VCPU and memory consumption) are enforced during VM execution.
+# Enforce - Will be enforced the restrictions completely and should prevent the command from executing.
 
 === CRUD ===
 <!-- Describe the create/read/update/delete operations on the entities, and what each operation should do. -->
