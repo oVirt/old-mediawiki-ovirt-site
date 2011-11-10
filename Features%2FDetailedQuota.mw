@@ -126,7 +126,6 @@ When grace percentage are met, a notification should be set to the Administrator
 When Quota is exceeded the grace limit (and the Data Center is in enforced stage), the User should not be allowed to consume the resources from the Quota,
 
 === Events ===
-, depends on the limitation that was exceeded.
 Warning messages should be displayed before limit is reached, depending on the configuration threshold. 
 
 VM Properties (like number of VCPU and memory) are enforced during VM execution.
