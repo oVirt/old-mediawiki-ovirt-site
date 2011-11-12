@@ -5,8 +5,12 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 * Vdsm exclusive write access to libvirt. NO OTHER PROCESS should be using libvirt on a Vdsm host.
 
 ==Configuring Vdsm==
-Vdsm configuration file can be placed under /etc/vdsm/vdsm.conf. If no such file exists Vdsm will only use its built-in defaults. Until you configure you Vdsm's private key and certificates, you should disable ssl. To do that, have your /etc/vdsm/vdsm.conf have
- [vars]
- ssl = false
+Vdsm configuration file can be placed under ''/etc/vdsm/vdsm.conf''. If no such file exists Vdsm will only use its built-in defaults. Until you configure you Vdsm's private key and certificates, you should disable ssl. To do that, have your ''/etc/vdsm/vdsm.conf'' have
+
+<pre>
+[vars]
+ssl = false
+</pre>
 
 [[Category:Vdsm]]
+[[Category:Documentation]]
