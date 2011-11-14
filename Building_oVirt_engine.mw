@@ -4,8 +4,8 @@
 
 Note that while this guide was written and tested using Fedora other Linux Distributions can and have been used to build the ovirt-engine project. Where distribution specific packaging commands are specified in this guide use the syntax that applies for your distribution.
 
-<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
-<span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 1</span></p>
+<!--<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
+<span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 1</span></p>-->
 
 == Getting VDSM ==
 
