@@ -40,7 +40,7 @@ The ovirt-engine source code is stored in a GIT repository. As such GIT is requi
 $>yum install -y git
 </nowiki>
 
-=== Installing maven ===
+=== Installing maven2 ===
 
 oVirt engine is using maven version 2.2.x, maven 3.x will not work. <BR>
  <nowiki> 
