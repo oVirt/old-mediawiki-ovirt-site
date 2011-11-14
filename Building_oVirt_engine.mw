@@ -282,9 +282,9 @@ $> mvn clean install -Pdep
 
 Since postgres is already set up.
 
+<!--<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
+<span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 7</span></p>-->
 
-<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
-<span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 7</span></p>
 == Testing ==
 
 Assuming JBoss is not running, it should be started:
