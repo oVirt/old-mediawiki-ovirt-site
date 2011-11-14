@@ -313,10 +313,9 @@ Accessing the user-portal <BR>
  <nowiki>
 http://<server name>:<port>/UserPortal
 </nowiki>
+<!--<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
+<span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 8</span></p>-->
 
-
-<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
-<span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 8</span></p>
 == Code contribution: Gerrit ==
 
 oVirt-engine is working with Gerrit for code contribution.<BR>
