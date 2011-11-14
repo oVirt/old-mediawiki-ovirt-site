@@ -227,7 +227,7 @@ $> git clone git://gerrit.ovirt.org/ovirt-engine
 In your git repository, run the following command
 
  <nowiki>
-# > cd $OVIRT_HOME/backend/manager/dbscripts_postgres/
+# > cd $OVIRT_HOME/backend/manager/dbscripts
 # > ./create_db_devel.sh -u postgres 
 </nowiki>
 
