@@ -15,16 +15,23 @@ Not exactly engine based, but the current vdsm packages for running a host are l
 <span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 2</span></p>
 == Installing JDK ==
  
-OpenJDK
- <nowiki>
-$> sudo yum install -y java-1.6.0-openjdk-devel</nowiki>
+The supported Java development and runtime environments for the ovirt-engine project are provied by OpenJDK 1.6.0. Install the java-1.6.0-openjdk-devel package to obtain OpenJDK 1.6.0:
 
-* Verify that javac linked to openjdk-1.6.0's javac properly.
- <nowiki>
-$> alternatives --display javac</nowiki>
+<nowiki>
+#> yum install -y java-1.6.0-openjdk-devel
+</nowiki>
+
+Use the 'alternatives' command to verify that 'javac' is correctly linked to the openjdk-1.6.0 instance of the Java compiler:
+<nowiki>
+$> alternatives --display javac
+javac - status is auto.
+ link currently points to /usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/javac
+...
+</nowiki>
 
 <p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
 <span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 3</span></p>
+
 == Installing JBoss AS ==
 
 Installing using an RPM:
