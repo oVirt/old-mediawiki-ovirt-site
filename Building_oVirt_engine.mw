@@ -27,6 +27,10 @@ javac - status is auto.
  link currently points to /usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/javac
 ...</nowiki>
 
+Where the link does not point to the correct instance of the Java compiler then you must update it, for example:
+ <nowiki>
+$> alternatives --set javac /usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/javac</nowiki>
+
 <p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
 <span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 3</span></p>
 
