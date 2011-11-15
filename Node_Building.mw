@@ -8,11 +8,9 @@ Currently, we're heavily reliant on Fedora.
 
 Use git
 
-<code>$ git clone --no-checkout http://gerrit.ovirt.org/p/ovirt-node.git
+<code>$ git clone http://gerrit.ovirt.org/p/ovirt-node.git
 
-$ cd ovirt-node
-
-$ git checkout --track origin/master</code>
+$ cd ovirt-node</code>
 
 === Setup a Build Environment ===
 
