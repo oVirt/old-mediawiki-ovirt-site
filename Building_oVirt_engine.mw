@@ -287,7 +287,7 @@ There is a issue with the dep and setup_postgres profiles getting in the way of 
 
  <nowiki>
 $> cd $OVIRT_HOME/ear
-$> mvn clean install -Pdep
+$> mvn2 clean install -Pdep
 </nowiki>
 
 
