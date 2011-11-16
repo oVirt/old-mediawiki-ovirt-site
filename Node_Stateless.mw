@@ -1,5 +1,3 @@
-= Stateless Node =
-
 == Goals ==
 
 * Be able to run a node image without installing to local disk
