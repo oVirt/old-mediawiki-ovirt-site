@@ -463,7 +463,6 @@ mysql> grant index, create, select, insert, update, delete, alter, lock tables o
 Query OK, 0 rows affected (0.00 sec)
 </pre>
 
-[[Category:Infrastructure]]
+[[Category:Infrastructure documentation]]
 [[Category:MediaWiki]]
-[[Category:Infrastructure docs]]
 [[Category:Wordpress]]
