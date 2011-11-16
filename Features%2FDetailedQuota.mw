@@ -86,7 +86,7 @@ Each Data Center entity is configured with one of the following operation modes:
 # Audit - Only warning messages would be issued when Quota restrictions are violated.
 # Enforce - Enforced the restrictions completely and prevent the resource allocation.
 
-See more info in the [[installation/upgrade]] section
+See more info in the [[Installation/Upgrade]] section
 
 === CRUD ===
 <!-- Describe the create/read/update/delete operations on the entities, and what each operation should do. -->
