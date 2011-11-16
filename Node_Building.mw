@@ -65,8 +65,6 @@ $ cd ovirt-node</code>
 
 === Build the image ===
 
-* Need to install ovirt-node-tools package built above
-
 <code>
 
 * $ cd recipe
