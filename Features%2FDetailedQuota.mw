@@ -86,6 +86,8 @@ Each Data Center entity is configured with one of the following operation modes:
 # Audit - Only warning messages would be issued when Quota restrictions are violated.
 # Enforce - Enforced the restrictions completely and prevent the resource allocation.
 
+See more info in the [[installation/upgrade]] section
+
 === CRUD ===
 <!-- Describe the create/read/update/delete operations on the entities, and what each operation should do. -->
 * Quota object can be removed only if there are no entities such as VM or Template that are referencing it.
