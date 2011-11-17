@@ -57,7 +57,7 @@ scp -p gerrit.ovirt.org:hooks/commit-msg .git/hooks/
 
 ==== Rebase ====
  <nowiki>
-git fetch gerrit.ovirt.org:ovirt-engine master
+git fetch -v
 git rebase origin/master
  </nowiki>
 
