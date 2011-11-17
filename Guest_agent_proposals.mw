@@ -75,7 +75,7 @@ Currently, ovirt-guest-agent and qemu-ga are the primary candidates under consid
 == Proposals ==
 
 === Leverage ovirt-guest-agent out-of-band where appropriate, use qemu-ga via QMP where appropriate ===
-* currently viable, but lots of wasted resources (extra libvirt integration work, duplification of efforts, extra packages, etc)
+* currently viable, but lots of wasted resources (duplication of efforts, extra packages, etc)
 
 === Drop qemu-ga, consolidate around ovirt-guest-agent ===
 * blocker: Requires that ovirt-guest-agent be proxied through QMP management interface, subsumes existing qemu-ga commands. Also requires qemu.git submobule to access ovirt-guest-agent command schema to generate marshalling code for proxied commands.
