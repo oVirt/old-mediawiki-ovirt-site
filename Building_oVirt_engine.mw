@@ -345,7 +345,7 @@ More detail can be found in [[Working_with_oVirt_Gerrit]].
 2. For quick and dirty build you can compile GWT to work with a specific browser (that will <BR>reduce the permutation number to one).
  
 Add the lines below to <BR>
-$OVIRT_HOME/frontend/webadmin/modules/webadmin/src/main/java/org/ovirt/engine/ui/webadmin/WebAdmin.gwt.xml<BR>
+$OVIRT_HOME/frontend/webadmin/modules/webadmin/src/main/resources/org/ovirt/engine/ui/webadmin/WebAdmin.gwt.xml<BR>
 $OVIRT_HOME/frontend/webadmin/modules/userportal/src/main/java/org/ovirt/engine/ui/userportal/UserPortal.gwt.xml
 
  <nowiki>
