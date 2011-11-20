@@ -1,8 +1,8 @@
 ==Getting the source==
-Our public git repo is located on [http://git.fedorahosted.org/git/?p=vdsm.git fedora hosted]
+Our public git repo is located on [http://gerrit.ovirt.org/gitweb?p=vdsm.git oVirt.org]
 
 you can clone it with
- git clone http://git.fedorahosted.org/git/vdsm.git
+ git clone http://gerrit.ovirt.org/p/vdsm.git
 
 ==Building a Vdsm RPM==
 Vdsm uses autoconf and automake as it's build system.
