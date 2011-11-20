@@ -339,6 +339,20 @@ http://<server name>:<port>/UserPortal
 oVirt-engine is working with Gerrit for code contribution.<BR>
 More detail can be found in [[Working_with_oVirt_Gerrit]].
 
+== Getting Latest ==
+
+If you have a working development environment and after a while you want <BR>
+to update the code and take latest, you need to do:
+
+1. git fetch <BR>
+2. git rebase <BR>
+3. compile the code <BR>
+4. upgrade your DB schema <BR>
+
+ <nowiki>
+$OVIRT_HOME/backend/manager/dbscripts/upgrade.sh
+ </nowiki>
+
 == Temp == 
 1. For quick and dirty build you can compile GWT to work with a specific browser (that will <BR>reduce the permutation number to one).
  
