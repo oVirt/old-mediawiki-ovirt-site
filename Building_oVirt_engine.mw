@@ -350,7 +350,9 @@ to update the code and take latest, you need to do:
 4. upgrade your DB schema <BR>
 
  <nowiki>
-$OVIRT_HOME/backend/manager/dbscripts/upgrade.sh
+$> cd $OVIRT_HOME/backend/manager/dbscripts/
+$> ./upgrade.sh -u postgres
+
  </nowiki>
 
 == Temp == 
