@@ -6,11 +6,12 @@ This is a work in progress for making oVirt engine and oVirt node/regular host r
 
 === oVirt Node ===
 # Fix bridge name
-## TBD
+* http://gerrit.ovirt.org/311
 
 # Fix Registration URI
-## See: http://gerrit.ovirt.org/#change,310
-## TBD
+* http://gerrit.ovirt.org/318
+* http://gerrit.ovirt.org/310
+
 
 # Fix public key file name
 ## See: http://gerrit.ovirt.org/#change,311
@@ -28,6 +29,7 @@ compile pubkey2ssh
  cd backend/manager/3rd
  gcc -o pubkey2ssh pubkey2ssh.c -lcrypto
 
+or run the ./pukey2ssh.sh after this fix is merged http://gerrit.ovirt.org/319
 
 • create engine dirs
  sudo mkdir -p /var/lock/engine /usr/share/engine/backend/manager/conf/
