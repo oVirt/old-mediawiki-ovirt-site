@@ -5,6 +5,7 @@ This is a work in progress for making oVirt engine and oVirt node/regular host r
 == Host Machine ==
 
 === oVirt Node ===
+
 # Fix bridge name
 #* See: http://gerrit.ovirt.org/311
 # Fix Registration URI
@@ -12,6 +13,10 @@ This is a work in progress for making oVirt engine and oVirt node/regular host r
 #* See: http://gerrit.ovirt.org/310
 # Fix public key file name
 #* See: http://gerrit.ovirt.org/#change,311
+
+=== Fedora / Gentoo / Suse / Ubuntu / other host ===
+
+# TBD: please fill-in if you have it working.
 
 ----
 
