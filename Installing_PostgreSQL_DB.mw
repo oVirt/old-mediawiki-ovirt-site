@@ -52,6 +52,9 @@ restart postgres service
 
 </nowiki>
 
+== External Resources ==
+* If you upgraded/installed Fedora 16, then check this blog for more info: http://asaf-shakarchi.blogspot.com/2011/11/fedora-15-16-postgresql-issues.html
+
 [[Category:Documentation]]
 [[Category:Installation]]
 [[Category:Database]]
