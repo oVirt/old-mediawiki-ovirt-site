@@ -1,7 +1,7 @@
 This Documents has come to describe the steps required in order to install &
 configure ovirt-engine & vdsm on the same host
 
-== Installing Prerequisites Packages ==
+== Installing Prerequisite Packages ==
 execute the following command as root:
  <nowiki>
 yum install -y postgresql-server postgresql-contrib pgadmin3 java-1.6.0-openjdk-devel bridge-utils
