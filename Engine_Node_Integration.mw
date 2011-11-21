@@ -1,9 +1,23 @@
-Ovirt and VDSM on Fedora
+oVirt Engine and oVirt Node Integration (based on Fedora).
 
-This is a work in progress for making Ovirt engine and ovirt node/regular host run on Fedora
+This is a work in progress for making oVirt engine and oVirt node/regular host run on Fedora
 
+== Host Machine ==
 
-engine installation:
+=== oVirt Node ===
+# Fix bridge name
+## TBD
+
+# Fix Registration URI
+## See: http://gerrit.ovirt.org/#change,310
+## TBD
+
+# Fix public key file name
+## See: http://gerrit.ovirt.org/#change,311
+
+----
+
+== Engine core machine ==
 
 1.The engine core was built on fedora 14 but all stages applies for later versions as well.
 
