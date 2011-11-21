@@ -31,16 +31,16 @@ This is a work in progress for making oVirt engine and oVirt node/regular host r
 * The engine was built from sources and installed via maven on a pre-installed jboss 5.1.0-GA server.
 * Follow these steps(link the installation process from the wiki).
 
+# Create /etc/pki/engine/ca
+#:   <nowiki> mkdir -p /etc/pki/engine/ca </nowiki>
 # Creating OpenSSH convertor: compile pubkey2ssh
 #:   <nowiki> cd backend/manager/3rdparty/pub2ssh/src</nowiki>
-#:   <nowiki>gcc -o pubkey2ssh pubkey2ssh.c -lcrypto </nowiki>
-#:   <nowiki>cp pubkey2ssh /etc/pki/engine/ca/</nowiki>
+#:   <nowiki> gcc -o pubkey2ssh pubkey2ssh.c -lcrypto </nowiki>
+#:   <nowiki> cp pubkey2ssh /etc/pki/engine/ca/</nowiki>
 # Create relevant Engine folders
 #:   <nowiki> sudo mkdir -p /var/lock/engine /usr/share/engine/backend/manager/conf/ </nowiki>
 # Put vds_installer.py in place
 #:   <nowiki> cp backend/manager/conf/vds_installer.py </nowiki>
-# create /etc/pki/engine
-#:   <nowiki>  mkdir -p /etc/pki/engine </nowiki>
 # Create CA and certs
 #:   <nowiki> cd backend/manager/conf/ca</nowiki>
 #:   <nowiki> ./installCA_dev.sh `pwd` /etc/pki/engine  </nowiki>
