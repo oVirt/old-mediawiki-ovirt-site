@@ -1,0 +1,125 @@
+This Documents has come to describe the steps required in order to install &
+configure ovirt-engine & vdsm on the same host
+
+== Installing Prerequisites Packages ==
+execute the following command as root:
+ <nowiki>
+yum install -y postgresql-server postgresql-contrib pgadmin3 java-1.6.0-openjdk-devel bridge-utils
+ </nowiki>
+
+== Configuring Ovirt's Repository ==
+Execute the following command:
+ <nowiki>
+wget http://www.ovirt.org/blabla -o /etc/yum.repo.d/ovirt-engine.repo
+ </nowiki>
+
+= VDSM =
+== Configuring the bridge Interface ==
+Disable the network manager service by executing as root:
+ <nowiki>
+systemctl stop NetworkManager.service
+systemctl disable NetworkManager.service
+
+service network start
+chkconfig network on
+ </nowiki>
+
+Add the following content into a new file named: '''/etc/sysconfig/network-scripts/ifcfg-engine''':
+ <nowiki>
+DEVICE=engine
+TYPE=Bridge
+ONBOOT=yes
+DELAY=0
+BOOTPROTO=dhcp
+ONBOOT=yes
+ </nowiki>
+
+Add the following line into the configuration file of your out going interface (usually em1/eth0)
+the file is located at: '''/etc/sysconfig/network-scripts/ifcfg-em1''' (assuming the device is em1)
+ <nowiki>
+BRIDGE=engine
+ </nowiki>
+
+Restart the network service by executing:
+ <nowiki>
+service network restart
+ </nowiki>
+
+== Installing & Configuring VDSM ==
+=== Install ===
+Install VDSM by executing as root the following commands:
+ <nowiki>
+yum -y vdsm*
+service vdsmd start
+ </nowiki>
+
+=== Configure ===
+Edit '''/etc/libvirt/qemu.conf''' and change '''spice_tls=1''' to '''spice_tls=0'''
+
+Add the following content into the file: '''/etc/vdsm/vdsm.conf''':
+ <nowiki>
+[vars]
+ssl = false
+ </nowiki>
+
+Restart the vdsmd service by executing:
+ <nowiki>
+service vdsmd restart
+ </nowiki>
+
+= Ovirt-engine =
+
+== Configuring Postgresql ==
+If this is the first time postgresql is used on this host, execute:
+ <nowiki>
+su - postgres -c 'pg_ctl initdb'
+service postgresql start
+ </nowiki>
+
+It is recommended to add this service to auto start by executing:
+ <nowiki>
+chkconfig postgresql on
+ </nowiki>
+
+Edit /var/lib/pgsql/data/pg_hba.conf' and set authentication parameters as follows:
+ <nowiki>
+local   all         all                               trust
+host    all         all         127.0.0.1/32          trust
+host    all         all         ::1/128               trust
+ </nowiki>
+
+== Installing & Configuring ovirt-engine ==
+=== Install ===
+Install ovirt-engine by executing:
+ <nowiki>
+yum install ovirt-engine
+ </nowiki>
+
+=== DB Creation ===
+Create ovirt-engine's DB by executing:
+ <nowiki>
+cd /usr/share/ovirt-engine/dbscripts
+./create_db_devel.sh -u postgres
+ </nowiki>
+
+=== Additional Configuration ===
+Change the default emulated VM type by executing:
+ <nowiki>
+psql -U postgres engine -c "update vdc_options set option_value='pc-0.14' where option_name='EmulatedMachine' and version='3.0';"
+ </nowiki>
+
+If you wish to change the default password for admin (letmein!), execute the following command:
+ <nowiki>
+psql -U postgres engine -c "update vdc_options set option_value='NEWPASSWORD' where option_name='AdminPassword';"
+ </nowiki>
+
+=== Starting & Accessing ovirt-engine ===
+Start the jboss service by executing:
+ <nowiki>
+service jboss start
+ </nowiki>
+
+Jboss & ovirt-engine will be available within a minute or two by accessing the following url:
+http://yourhostname:8080/webadmin<BR>
+The user is: admin<BR>
+The default password (unless changed) is: letmein!<BR>
