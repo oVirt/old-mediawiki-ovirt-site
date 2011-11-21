@@ -33,3 +33,11 @@ compile pubkey2ssh
  psql engine postgres  -c "update vdc_options set option_value = '/etc/pki/engine//ca/private/ca.pem' where option_name = 'CAEngineKey';"
 • copy cert to Jboss root dir
  cp /etc/pki/engine//ca/keys/engine.ssh.key.txt /usr/loca/jboss/server/default/deploy/ROOT.war/
+
+
+
+
+
+VDSM patches in progress:
+* http://gerrit.ovirt.org/#change,310
+* http://gerrit.ovirt.org/#change,311
