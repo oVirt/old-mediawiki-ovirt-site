@@ -92,7 +92,7 @@ host    all         all         ::1/128               trust
 === Install ===
 Install ovirt-engine by executing:
  <nowiki>
-yum install ovirt-engine
+yum install -y ovirt-engine
  </nowiki>
 
 === DB Creation ===
