@@ -45,7 +45,7 @@ This is a work in progress for making oVirt engine and oVirt node/regular host r
 #:   <nowiki> cd backend/manager/conf/ca</nowiki>
 #:   <nowiki> ./installCA_dev.sh `pwd` /etc/pki/engine  </nowiki>
 # Copy cert to Jboss root dir
-#:   <nowiki> cp /etc/pki/engine//ca/keys/engine.ssh.key.txt /usr/loca/jboss/server/default/deploy/ROOT.war/  </nowiki>
+#:   <nowiki> cp /etc/pki/engine/ca/keys/engine.ssh.key.txt /usr/local/jboss/server/default/deploy/ROOT.war/  </nowiki>
 #  DB updates:
  <nowiki>psql engine postgres -c "update vdc_options set option_value = '/etc/pki/engine/ca/certs/engine.cer' where option_name = 'CertificateFileName';"
 psql engine postgres -c "update vdc_options set option_value = '/etc/pki/engine/ca/.keystore' where option_name = 'TruststoreUrl';"
