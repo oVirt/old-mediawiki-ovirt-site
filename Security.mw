@@ -1,5 +1,3 @@
-=oVirt Security=
-
 ==Reporting security issues==
 
 Please report any security issues you find in oVirt projects to:
@@ -15,3 +13,5 @@ If you represent an oVirt project or a distribution which packages oVirt project
 security-private at ovirt.org
 
 You will be invited to subscribe to this list if you are subscribed to security at ovirt.org.
+
+[[Category:Security]]
