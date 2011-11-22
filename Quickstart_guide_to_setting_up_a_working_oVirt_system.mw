@@ -9,7 +9,7 @@
 http://download.fedoraproject.org/pub/fedora/linux/releases/16/Live/x86_64/Fedora-16-x86_64-Live-Desktop.iso
 
 == Install oVirt-engine ==
-[[Building_Ovirt_Engine]]
+[[Installing_ovirt-engine_from_rpm]]
 
 == Start the engine ==
  <nowiki>
