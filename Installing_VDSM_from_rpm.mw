@@ -1,6 +1,7 @@
 This Documents has come to describe the steps required in order to install &
 configure ovirt-node on the same host with ovirt-engine, this steps are usually
-not required when installing ovirt-node on another host then ovirt-engine
+not required when installing ovirt-node on another host then ovirt-engine<BR>
+Use this guide in order to install ovirt-engine: [[Installing_ovirt-engine_from_rpm]]
 
 == Installing Prerequisite Packages ==
 execute the following command as root:
