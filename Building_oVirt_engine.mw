@@ -334,25 +334,38 @@ http://<server name>:<port>/UserPortal
 <!--<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
 <span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 8</span></p>-->
 
+== Advanced features ==
+
+* Registering an oVirt Node
+** By default development setup works with hosts based on base distro's such as Fedora.
+** In order to be able to work with oVirt Node, you'll need to setup a Public Key environment.
+** More details on Engine and oVirt Node integration can be found here: [[Engine_Node_Integration]].
+
+
 == Code contribution: Gerrit ==
 
-oVirt-engine is working with Gerrit for code contribution.<BR>
-More detail can be found in [[Working_with_oVirt_Gerrit]].
+* oVirt-engine is working with Gerrit for code contribution.<BR>
+** More detail can be found in [[Working_with_oVirt_Gerrit]].
+
 
 == Getting latest ==
 
 If you have a working development environment and after a while you want <BR>
 to update the code and take latest, you need to do:
 
-1. git fetch <BR>
-2. git rebase <BR>
-3. compile the code <BR>
-4. upgrade your DB schema <BR>
+# git fetch -v
+# git rebase origina/master
+# Compile the code
+# Upgrade your DB schema
 
  <nowiki>
 $> cd $OVIRT_HOME/backend/manager/dbscripts/
-$> ./upgrade.sh -u postgres
- </nowiki>
+$> ./upgrade.sh -u postgres</nowiki>
+
+
+== More information ==
+
+* Engine setup on Gentoo can be found here: https://wiki.gentoo.org/wiki/OVirt
 
 [[Category:Draft documentation]]
 [[Category:Engine]]
