@@ -1,0 +1,9 @@
+As a normal user:
+
+<pre>
+ssh user@ovirt.org
+cd /var/www/html/meetings/
+sudo -u supybot supybot -d /var/lib/supybot/ovirtbot.conf
+</pre>
+
+[[Category:Infrastructure documentation]]
