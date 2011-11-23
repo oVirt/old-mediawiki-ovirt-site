@@ -11,8 +11,9 @@ yum install -y postgresql-server postgresql-contrib pgadmin3 java-1.6.0-openjdk-
 == Configuring Ovirt's Repository ==
 Execute the following command:
  <nowiki>
-wget http://www.ovirt.org/releases/stable/fedora/16/ovirt-engine.repo -P /etc/yum.repos.d/
+wget http://www.ovirt.org/releases/nightly/fedora/16/ovirt-engine.repo -P /etc/yum.repos.d/
  </nowiki>
+
 = Ovirt-engine =
 
 == Configuring Postgresql ==
