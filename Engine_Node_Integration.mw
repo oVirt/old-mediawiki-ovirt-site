@@ -66,6 +66,7 @@ Create CA and certs
  ./installCA_dev.sh `pwd` /etc/pki/engine
 Copy cert to Jboss root dir
  cp /etc/pki/engine/ca/keys/engine.ssh.key.txt /usr/local/jboss/server/default/deploy/ROOT.war/
+ cp /etc/pki/engine/ca/keys/ca.pem /usr/local/jboss/server/default/deploy/ROOT.war/ca.crt
 DB updates:
  psql engine postgres -c "update vdc_options set option_value = '/etc/pki/engine/ca/certs/engine.cer' where option_name = 'CertificateFileName';"
  psql engine postgres -c "update vdc_options set option_value = '/etc/pki/engine/ca/.keystore' where option_name = 'TruststoreUrl';"
