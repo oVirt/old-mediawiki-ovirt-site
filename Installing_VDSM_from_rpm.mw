@@ -51,7 +51,7 @@ service network restart
 === Install ===
 Install VDSM by executing as root the following commands:
  <nowiki>
-yum install -y vdsm*
+yum install -y vdsm vdsm-cli
 service vdsmd start
  </nowiki>
 
