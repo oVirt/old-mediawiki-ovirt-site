@@ -12,7 +12,7 @@ yum install -y bridge-utils
 == Configuring Ovirt's Repository ==
 Execute the following command:
  <nowiki>
-wget http://www.ovirt.org/releases/stable/fedora/16/ovirt-engine.repo -P /etc/yum.repos.d/
+wget http://www.ovirt.org/releases/nightly/fedora/16/ovirt-engine.repo -P /etc/yum.repos.d/
  </nowiki>
 
 = VDSM =
