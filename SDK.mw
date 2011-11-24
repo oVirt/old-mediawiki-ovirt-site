@@ -22,10 +22,45 @@ __TOC__
 
 == IDE Examples ==
 
+=== Creating the proxy & Listing all collections ===
+
 [[File:1.jpg]]
 
+=== - Listing collection's  methods ===
 
 [[File:2.jpg]]
+
+=== Querying collection with oVirt search engine query & custom constraint ===
+
+[[File:3.jpg]]
+
+=== Accessing resource methods and properties ===
+
+[[File:4.jpg]]
+
+=== Accessing resource properties and sub-collections ===
+
+[[File:5.jpg]]
+
+=== - Accessing sub-collection methods ===
+
+[[File:6.jpg]]
+
+=== Querying sub-collection by custom constraint. ===
+
+[[File:7.jpg]]
+
+=== - Retrieving sub-collection resource. ===
+
+[[File:8.jpg]]
+
+=== Accessing sub-collection resource properties and methods ===
+
+[[File:9.jpg]]
+
+=== Examples ===
+
+[[File:10.jpg]]
 
 
 == Examples ==
