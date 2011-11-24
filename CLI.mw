@@ -17,27 +17,30 @@ __TOC__
 * git://gerrit.ovirt.org/ovirt-engine-cli 
 
 
-== Help ==
+== Usage ==
+
+
+=== Help ===
 
 [[File:help.jpg]]
 
 
-== Running Query ==
+=== Running Query ===
 
 [[File:query.jpg]]
 
 
-== Creating resource ==
+=== Creating resource ===
 
 [[File:create.jpg]]
 
 
-== Updating resource ==
+=== Updating resource ===
 
 [[File:update.jpg]]
 
 
-== Performing action on resource ==
+=== Performing action on resource ===
 
 [[File:action.jpg]]
 
