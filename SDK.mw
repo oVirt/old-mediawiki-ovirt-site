@@ -20,6 +20,12 @@ __TOC__
 * git://gerrit.ovirt.org/ovirt-engine-sdk
 
 
+== IDE Examples ==
+
+[[File:1.jpg]]
+
+[[File:2.jpg]]
+
 == Examples ==
 
 from ovirtsdk.api import API
