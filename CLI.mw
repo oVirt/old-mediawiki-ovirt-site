@@ -11,5 +11,8 @@ __TOC__
 * Auto-completion.
 * Self descriptive.
 
+== Repository ==
+
+* git://gerrit.ovirt.org/ovirt-engine-cli 
 
 [[Category:CLI]]
