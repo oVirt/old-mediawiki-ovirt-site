@@ -185,8 +185,3 @@ nic4 = vm6.nics.get(name='eth0')
 
 
 [[Category:SDK]]
-
--- 
-
-Michael Pasternak
-RedHat, ENG-Virtualization R&D
