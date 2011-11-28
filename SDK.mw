@@ -156,6 +156,7 @@ api = API(url='http://host:port', username='user@domain', password='password')
 
   nic4 = vm6.nics.get(name='eth0')
 
+
 == TODO list ==
 
 * sdk: supporting actual resources as parameters for objects creation (in progress)
