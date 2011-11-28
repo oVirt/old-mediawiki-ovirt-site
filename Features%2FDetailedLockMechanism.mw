@@ -38,7 +38,7 @@ The feature will include :
 
 ==== Entity Description ====
 <!-- New entities and changes in existing entities. -->
-A new entity will be introduced : EngineLock.
+A new entity will be introduced : EngineLock. <BR>
 The entity will represent a logical representation of the all objects needed to be locked. <BR>
 An entity will contains a lists of "read locked" entities and "write locked" entites  <BR>
 
