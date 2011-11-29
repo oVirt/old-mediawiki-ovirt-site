@@ -46,19 +46,11 @@ This section describes the backend design for this feature.
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? ||Definition 
 |-
-|  id ||UUID ||Not null ||The Quota Id which represented in the quota_static 
+|id ||UUID ||Not null ||The Quota Id which represented in the quota_static 
 |-
-|  vds_group_id ||UUID ||not null ||Foreign key for vds_groups.vds_group_id
+|vds_group_id ||UUID ||not null ||Foreign key for vds_groups.vds_group_id
 |-
-|}
-
-
-
-{|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? ||Definition 
-|-
-|  id ||UUID ||Not null ||The Quota Id (represented in the quota_static also)
-|-
+| 
 |storage_limit ||Integer ||null ||The storage limit in Mega bytes, could be -1 for no limit, or specific number of bytes 
 |-
 |vcpu ||Integer ||not null ||The number or virtual CPU's allowed in the cluster Quota (-1 for unlimited) 
