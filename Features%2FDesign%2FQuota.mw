@@ -24,7 +24,7 @@ This section describes the REST design for this feature.
 This section describes the backend design for this feature.
 
 === DB Design ===
-'''quota'''  - Presents the Quota properties
+'''quota'''  - Represents the Quota properties
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
 |-
@@ -70,7 +70,7 @@ This section describes the backend design for this feature.
 
 Note: If no cluster selected for Quota,we assume the Quota contains all the clusters in the Data Center.
 
-'''quota_storage''' - Represents the Data storage id which will
+'''quota_storage''' - Represents the Quota Storage limitation.
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
@@ -83,13 +83,13 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 |}
 
 
-'''quota_permissions''' - Represents the Data storage id which will
+'''quota_permissions''' - Represents the Quota permissions limitation.
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
 |  Column Name ||Column Type ||Null? ||Definition 
 |-
-|  id ||UUID ||Not null ||The Quota Id which represented in the quota) ||
+|  quota_id ||UUID ||Not null ||The Quota Id which represented in the quota ||
 |-
 |  permission_id ||UUID ||null ||Foreign key to the users.user_id (null indicates no users permitted to the Quota) ||
 |-
