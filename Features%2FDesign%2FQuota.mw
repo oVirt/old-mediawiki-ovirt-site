@@ -44,7 +44,7 @@ This section describes the backend design for this feature.
 |-
 |soft_limit_storage ||integer ||null ||The threshold of the Storage Quota the default should be configured in the vdc_options
 |-
-|grace_cluster ||integer ||null ||The grace in percentage of the Cluster Quota the default should be configured in the vdc_options ||
+|grace_cluster ||integer ||null ||The grace in percentage of the Cluster Quota the default should be configured in the vdc_options
 |-
 |grace_storage ||integer ||null ||The grace in percentage of the Storage Quota the default should be configured in the vdc_options 
 |-
