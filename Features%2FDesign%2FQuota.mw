@@ -24,9 +24,7 @@ This section describes the backend design for this feature.
 === DB Design ===
 <<Anchor(Quota_Static)>> '''quota_static''' - Presents the Quota static properties
 {|class="wikitable sortable"
-!border="1"| % Complete       || Column Type ||Null? || Definition 
-|-
-|Column Name ||Column Type ||Null? ||Definition 
+!border="1"| Column Name ||Column Type ||Null? ||Definition 
 |-
 |id ||UUID ||not null ||The Quota Id 
 |-
