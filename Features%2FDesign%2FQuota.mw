@@ -389,7 +389,7 @@ This section describes issues that might need special consideration when writing
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? ||Definition 
 |-
-| quota_status |int |not null |Should be Disable (o), Audit (1) and enforce (2) 
+| quota_status ||int ||not null ||Should be Disable (o), Audit (1) and enforce (2) ||
 |-
 |}
 
