@@ -41,8 +41,6 @@ This section describes the backend design for this feature.
 |}
 
 
-
-
 '''quota_dynamic''' - Presents the Quota dynamic properties ([[Features/Design/Quota#Appendix|*]])
 
 {|class="wikitable sortable"
