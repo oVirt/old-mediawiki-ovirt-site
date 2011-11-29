@@ -58,7 +58,7 @@ No impact
 <!-- Describe the high-level work-flows relevant to this feature. -->
 The implementation will be based on the following algorithm : <BR>
 1. The lock command will be marked by annotation and lock of object will be done before canDoAction <BR>
-2. If needed additional treatment appropriate entry will override getReadLocks() and getWriteLocks() methods of CommandBase <BR>
+2. If needed additional treatment appropriate command will override getReadLocks() and getWriteLocks() methods of CommandBase <BR>
 3. At the end of command the locked will be released (including failure during of canDoAction) <BR>
 
 Explanation on flow: <BR>
