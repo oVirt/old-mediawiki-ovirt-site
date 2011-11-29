@@ -98,7 +98,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 
 '''''vm_dynamic''''' - Add column ''quota_id'', which indicates the Quota the VM should be depended on its resources. <BR>  '''''image_dynamic''''' - Add column ''quota_id'', which indicates the Quota the image should be depended on its storage resources. <BR>  '''''storage_pool''''' - Add column ''quota_enforcement'', Indicates the DC enforcement status for Quota (Disalbe(0) , Soft Limit (1),Hard Limit (2))  will be presented by Enum (see [[Features/Design/Quota#Classes|QuotaStatusEnum]].).
 
-'''Views'''<BR> [[Features/Design/Quota#Appendix|all_quotas]] - View of all the Quotas attached to all the storage pools for all Users.<BR>
+'''Views'''<BR> [[Features/Design/Quota#Appendix|all_quotas]] - View of all the Quotas attached to all the storage pools for all Users.
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Definition 
 |-
@@ -120,37 +120,37 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 
 
 
-[[quota_storage_view]] - View of the Quotas storage resources.<BR>
+[[quota_storage_view]] - View of the Quotas storage resources.
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Definition 
 |-
-|  storage_pool ||UUID ||The Storage Pool Id ||
+|  storage_pool ||UUID ||The Storage Pool Id 
 |-
-|  quota_ID ||UUID ||The Quota Id ||
+|  quota_ID ||UUID ||The Quota Id 
 |-
-|  storage_id ||UUID ||The storage domain UUID (Null for all storage domains in the DC) ||
+|  storage_id ||UUID ||The storage domain UUID (Null for all storage domains in the DC) 
 |-
-|  storage_use ||Integer ||Calculated storage from the image dynamic ||
+|  storage_use ||Integer ||Calculated storage from the image dynamic 
 |-
-|  storage_limit ||Integer ||The limit which the Quota is defined ||
+|  storage_limit ||Integer ||The limit which the Quota is defined 
 |-
 |}
 
 
 
 {|class="wikitable sortable"
-[[quota_cluster_view]] - View of the Quotas Cluster resources.<BR>
+[[quota_cluster_view]] - View of the Quotas Cluster resources.
 |Column Name ||Column Type ||Definition ||
 |-
-|  storage_pool ||UUID ||The Storage Pool Id ||
+|  storage_pool ||UUID ||The Storage Pool Id 
 |-
-|  quota_ID ||UUID ||The Quota Id ||
+|  quota_ID ||UUID ||The Quota Id 
 |-
-|  cluster_id ||UUID ||The cluster UUID (Null for all clusters in the DC) ||
+|  cluster_id ||UUID ||The cluster UUID (Null for all clusters in the DC) 
 |-
-|  storage_use ||Integer ||Calculated storage from the image dynamic ||
+|  storage_use ||Integer ||Calculated storage from the image dynamic 
 |-
-|  storage_limit ||Integer ||The limit which the Quota is defined ||
+|  storage_limit ||Integer ||The limit which the Quota is defined 
 |-
 |}
 
