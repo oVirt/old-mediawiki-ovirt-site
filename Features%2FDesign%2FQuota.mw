@@ -56,7 +56,7 @@ This section describes the backend design for this feature.
 |-
 |vram ||Integer ||default '0' ||The Virtual RAM allowed in the cluster Quota (-1 for unlimited) 
 |-
-|type ||char ||not null ||Represent the quota enforce mode 0-disabled 1-audit 2-enforce 
+|type ||Integer ||default '0' ||Represent the quota enforce mode 0-disabled 1-audit 2-enforce 
 |-
 |threshold_cluster ||integer ||null ||The threshold of the Cluster Quota the default should be configured in the vdc_options
 |-
