@@ -87,7 +87,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
-|quota_id ||UUID ||Not null ||The Quota Id which represented in the quota ||
+|quota_id ||UUID ||Not null ||The Quota Id which represented in the quota 
 |-
 |user_id ||UUID ||null ||Foreign key to the users.user_id (null indicates no users permitted to consume from the Quota) 
 |-
@@ -102,19 +102,19 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Definition 
 |-
-|Storage_Pool ||UUID ||The Storage Pool Id ||
+|Storage_Pool ||UUID ||The Storage Pool Id 
 |-
-|Quota_ID ||UUID ||The Quota Id ||
+|Quota_ID ||UUID ||The Quota Id 
 |-
-|Quota_Name ||String ||The Quota Name ||
+|Quota_Name ||String ||The Quota Name 
 |-
-|Cluster_Name ||String ||The cluster name ||
+|Cluster_Name ||String ||The cluster name 
 |-
-|Storage_Quota_ID ||UUID ||Foreign key for the storage Quota Id ||
+|Storage_Quota_ID ||UUID ||Foreign key for the storage Quota Id 
 |-
-|Storage_Name ||String ||The storage name ||
+|Storage_Name ||String ||The storage name 
 |-
-|User_Id ||String ||The user Id, which has permissions to the Quota ||
+|User_Id ||String ||The user Id, which has permissions to the Quota 
 |-
 |}
 
