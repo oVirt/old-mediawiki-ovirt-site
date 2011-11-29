@@ -50,13 +50,11 @@ This section describes the backend design for this feature.
 |-
 |vds_group_id ||UUID ||not null ||Foreign key for vds_groups.vds_group_id
 |-
-|storage_limit ||Integer ||null ||The storage limit in Mega bytes, could be -1 for no limit, or specific number of bytes 
+|storage_limit ||Integer ||default '0' ||The storage limit in Mega bytes, could be -1 for no limit, or specific number of bytes 
 |-
-|vcpu ||Integer ||not null ||The number or virtual CPU's allowed in the cluster Quota (-1 for unlimited) 
+|vcpu ||Integer ||default '0' ||The number or virtual CPU's allowed in the cluster Quota (-1 for unlimited) 
 |-
-|vms ||Integer ||not null ||The number of VMS allowed in the cluster Quota (-1 for unlimited) 
-|-
-|vram ||Integer ||not null ||The Virtual RAM allowed in the cluster Quota (-1 for unlimited) 
+|vram ||Integer ||default '0' ||The Virtual RAM allowed in the cluster Quota (-1 for unlimited) 
 |-
 |type ||char ||not null ||Represent the quota enforce mode 0-disabled 1-audit 2-enforce 
 |-
