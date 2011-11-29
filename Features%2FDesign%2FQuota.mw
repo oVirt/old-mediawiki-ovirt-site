@@ -24,7 +24,7 @@ This section describes the REST design for this feature.
 This section describes the backend design for this feature.
 
 === DB Design ===
-'''quota_static'''  - Presents the Quota static properties
+'''quota'''  - Presents the Quota properties
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
 |-
@@ -57,7 +57,7 @@ This section describes the backend design for this feature.
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
-|id ||UUID ||Not null ||The Quota Id which represented in the quota_static 
+|id ||UUID ||Not null ||The Quota Id which represented in the quota
 |-
 |vds_group_id ||UUID ||not null ||Foreign key for vds_groups.vds_group_id
 |-
@@ -74,7 +74,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
-|id ||UUID ||Not null ||The Quota Id which represented in the quota_static) 
+|id ||UUID ||Not null ||The Quota Id which represented in the quota) 
 |-
 |storage_id ||UUID ||not null ||The storage Id the Quota attached to 
 |-
@@ -89,7 +89,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 |-
 |  Column Name ||Column Type ||Null? ||Definition 
 |-
-|  id ||UUID ||Not null ||The Quota Id which represented in the quota_static) ||
+|  id ||UUID ||Not null ||The Quota Id which represented in the quota) ||
 |-
 |  permission_id ||UUID ||null ||Foreign key to the users.user_id (null indicates no users permitted to the Quota) ||
 |-
@@ -179,10 +179,6 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
  ''quotaClusterGrace'' - The default value should be 20%, and the version is General.<BR> Indicates the percentage of resource extension allocation.<BR>
 
 '''DAO Classes'''<BR> 
-'''''org.ovirt.engine.core.dao.QuotaDynamicDAO''''' - Interface for Quota dynamic DAO will extends GenericDao.<BR>
-'''''org.ovirt.engine.core.dao.QuotaDynamicDAODbFacadeImpl''''' - Implementation of QuotaDynamicDAO.<BR>
-'''''org.ovirt.engine.core.dao.QuotaStaticDAO''''' - Interface for quota static DAO will extends GenericDao.<BR>
-'''''org.ovirt.engine.core.dao.QuotaStaticDAODbFacadeImpl''''' - Implementation of QuotaStaticDAO.<BR>
 '''''org.ovirt.engine.core.dao.QuotaDAO''''' - Interface for Quota DAO will extends GenericDao.<BR>
 '''''org.ovirt.engine.core.dao.QuotaDAODbFacadeImpl''''' - Implementation for QuotaDAO, reflects the quota view implementations.
 
