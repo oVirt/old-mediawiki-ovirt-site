@@ -89,7 +89,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 |-
 |quota_id ||UUID ||Not null ||The Quota Id which represented in the quota ||
 |-
-|user_id ||UUID ||null ||Foreign key to the users.user_id (null indicates no users permitted to consume from the Quota) ||
+|user_id ||UUID ||null ||Foreign key to the users.user_id (null indicates no users permitted to consume from the Quota) 
 |-
 |}
 
