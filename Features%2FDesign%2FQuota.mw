@@ -83,7 +83,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 |}
 
 
-'''quota_users''' - Represents the Quota permissions limitation.
+'''quota_users''' - Represents the Quota users which are permitted to consume from the Quota.
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
