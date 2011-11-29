@@ -157,17 +157,17 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 
 
 ===== Stored Procedures =====
-1. ''getAllQuotaClusterForSP'' -
+# getAllQuotaClusterForSP
+* Input - Storage pool Id, and user Id.
+* Output - Clusters for Quotas, for user Id and Storage Pool.
 
- . Input - Storage pool Id, and user Id.<BR> output - Clusters for Quotas, for user Id and Storage Pool.
+# ''getAllQuotaStorageForSP''
+* Input - Storage pool Id, and user Id.
+* output - All storages for Quota, for user Id and Storage Pool (If Data Center is disabled all the storage for the DC will be returned).
 
-1. ''getAllQuotaStorageForSP''
-
- . Input - Storage pool Id, and user Id.<BR> output - All storages for Quota, for user Id and Storage Pool (If Data Center is disabled all the storage for the DC will be returned).
-
-1. ''getQuotaCluster'' - Reflects quota_cluster_view (Using VM business entity)
-
- . Input - Storage pool Id and Quota Id. <BR> output - All Cluster Quota properties for DC.
+# ''getQuotaCluster'' - Reflects quota_cluster_view (Using VM business entity)
+* Input - Storage pool Id and Quota Id. 
+* output - All Cluster Quota properties for DC.
 
 === Logic Design ===
 Each time the user will run or edit the VM, there will be a Quota check against the quota cluster view.<BR> Both views, quota_storage and quota_cluster should be reflected in the memory as Concurrent HashMap tables. The memory tables should be checked and updated in the canDoAction in a synchronized context (Using java.util.concurrency). Those memory tables should be managed in a pessimistic way, considering resource allocation, to prevent over-commit situations.<BR> Those tables should be synchronized from time to time from VdsUpdateRunTimeInfo (for cluster quota) and AsyncTaskManager(for storage quota).<BR><BR>
