@@ -50,7 +50,6 @@ This section describes the backend design for this feature.
 |-
 |vds_group_id ||UUID ||not null ||Foreign key for vds_groups.vds_group_id
 |-
-| 
 |storage_limit ||Integer ||null ||The storage limit in Mega bytes, could be -1 for no limit, or specific number of bytes 
 |-
 |vcpu ||Integer ||not null ||The number or virtual CPU's allowed in the cluster Quota (-1 for unlimited) 
