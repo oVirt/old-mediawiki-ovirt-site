@@ -38,18 +38,6 @@ This section describes the backend design for this feature.
 |-
 |update_date ||Date ||not null ||Quota update date 
 |-
-|}
-
-
-'''quota_dynamic''' - Presents the Quota dynamic properties ([[Features/Design/Quota#Appendix|*]])
-
-{|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? / Default||Definition 
-|-
-|id ||UUID ||Not null ||The Quota Id which represented in the quota_static 
-|-
-|vds_group_id ||UUID ||not null ||Foreign key for vds_groups.vds_group_id
-|-
 |type ||Integer ||default '0' ||Represent the quota enforce mode 0-disabled 1-audit 2-enforce 
 |-
 |threshold_cluster ||integer ||null ||The threshold of the Cluster Quota the default should be configured in the vdc_options
@@ -61,8 +49,6 @@ This section describes the backend design for this feature.
 |grace_storage ||integer ||null ||The grace in percentage of the Storage Quota the default should be configured in the vdc_options 
 |-
 |}
-
-
 
 
 
