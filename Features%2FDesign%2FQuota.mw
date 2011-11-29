@@ -100,7 +100,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 
 '''Views'''<BR> [[Features/Design/Quota#Appendix|all_quotas]] - View of all the Quotas attached to all the storage pools for all Users.<BR>
 {|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? / Default||Definition 
+!border="1"| Column Name ||Column Type ||Definition 
 |-
 |Storage_Pool ||UUID ||The Storage Pool Id ||
 |-
@@ -122,7 +122,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 
 [[quota_storage_view]] - View of the Quotas storage resources.<BR>
 {|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? / Default||Definition 
+!border="1"| Column Name ||Column Type ||Definition 
 |-
 |  storage_pool ||UUID ||The Storage Pool Id ||
 |-
