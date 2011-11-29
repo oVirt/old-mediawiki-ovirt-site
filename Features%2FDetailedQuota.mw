@@ -83,8 +83,8 @@ The following Quota is an example of unlimited quota on both global and specific
 The Quota object is in the data center scope. Also, a Data Center must be related to at least one Quota object.<BR>
 Each Data Center entity is configured with one of the following operation modes:
 # Disable - The Data Center would not be subject to Quota restrictions.
-# Audit - Only warning messages would be issued when Quota restrictions are violated.
-# Enforce - Enforced the restrictions completely and prevent the resource allocation.
+# Soft Limit - Only warning messages would be issued when Quota restrictions are violated.
+# Hard Limit - Enforced the restrictions completely and prevent the resource allocation.
 
 See more info in the [[#Installation/Upgrade|Installation/Upgrade]] section
 
