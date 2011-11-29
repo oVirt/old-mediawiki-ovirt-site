@@ -26,7 +26,7 @@ This section describes the backend design for this feature.
 === DB Design ===
 '''quota_static'''  - Presents the Quota static properties
 {|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? ||Definition 
+!border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
 |-
 |id ||UUID ||not null ||The Quota Id 
 |-
@@ -44,7 +44,7 @@ This section describes the backend design for this feature.
 '''quota_dynamic''' - Presents the Quota dynamic properties ([[Features/Design/Quota#Appendix|*]])
 
 {|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? ||Definition 
+!border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
 |id ||UUID ||Not null ||The Quota Id which represented in the quota_static 
 |-
@@ -69,7 +69,7 @@ This section describes the backend design for this feature.
 '''quota_cluster''' - Represent the clusters which are part of the Quota, The relationship of Cluster-Quota is Many-To-Many.
 
 {|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? ||Definition 
+!border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
 |id ||UUID ||Not null ||The Quota Id which represented in the quota_static 
 |-
@@ -86,7 +86,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 
 '''quota_storage''' - Represents the Data storage id which will
 {|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? ||Definition 
+!border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
 |id ||UUID ||Not null ||The Quota Id which represented in the quota_static) 
 |-
@@ -99,7 +99,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 
 '''quota_permissions''' - Represents the Data storage id which will
 {|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? ||Definition 
+!border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
 |  Column Name ||Column Type ||Null? ||Definition 
 |-
@@ -116,9 +116,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 
 '''Views'''<BR> [[Features/Design/Quota#Appendix|all_quotas]] - View of all the Quotas attached to all the storage pools for all Users.<BR>
 {|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? ||Definition 
-|-
-|  Column Name ||Column Type ||Null? ||Definition 
+!border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
 |Storage_Pool ||UUID ||The Storage Pool Id ||
 |-
@@ -140,9 +138,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 
 [[quota_storage_view]] - View of the Quotas storage resources.<BR>
 {|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? ||Definition 
-|-
-|  Column Name ||Column Type ||Null? ||Definition 
+!border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
 |  storage_pool ||UUID ||The Storage Pool Id ||
 |-
@@ -159,8 +155,6 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 
 
 {|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? ||Definition 
-|-
 [[quota_cluster_view]] - View of the Quotas Cluster resources.<BR>
 |Column Name ||Column Type ||Definition ||
 |-
