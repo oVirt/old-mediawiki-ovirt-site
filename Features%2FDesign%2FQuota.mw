@@ -156,8 +156,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 
 
 
-
-'''Stored Procedures'''<BR> 
+===== Stored Procedures =====
 1. ''getAllQuotaClusterForSP'' -
 
  . Input - Storage pool Id, and user Id.<BR> output - Clusters for Quotas, for user Id and Storage Pool.
