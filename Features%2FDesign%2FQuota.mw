@@ -22,7 +22,7 @@ This section describes the REST design for this feature.
 This section describes the backend design for this feature.
 
 === DB Design ===
-<<Anchor(Quota_Static)>> '''quota_static''' - Presents the Quota static properties
+<Anchor(Quota_Static)> '''quota_static''' - Presents the Quota static properties
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? ||Definition 
 |-
