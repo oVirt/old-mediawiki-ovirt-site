@@ -52,7 +52,7 @@ This section describes the backend design for this feature.
 |-
 |vram ||Integer ||null ||The global Virtual RAM allowed in the cluster Quota, -1 indicating unlimited vram, null indicates there is specific vram limitation.
 |-
-|storage_limit ||BigInt ||null ||The storage limit in Mega bytes, -1 indicating unlimited storage for DC, null indicates there is specific storage limitation.
+|storage_limit ||BigInt ||null ||The storage limit in Mega bytes, -1 indicating unlimited storage for storage pool, null indicates there is specific storage limitation.
 |-
 |}
 
@@ -133,7 +133,7 @@ Use cases :
 |-
 |  quota_ID ||UUID ||The Quota Id 
 |-
-|  storage_id ||UUID ||The storage domain UUID (Null for all storage domains in the DC) 
+|  storage_id ||UUID ||The storage domain UUID (Null for all storage domains in the storage pool) 
 |-
 |  storage_use ||Integer ||Calculated storage from the image dynamic 
 |-
@@ -151,7 +151,7 @@ Use cases :
 |-
 |  quota_ID ||UUID ||The Quota Id 
 |-
-|  cluster_id ||UUID ||The cluster UUID (Null for all clusters in the DC) 
+|  cluster_id ||UUID ||The cluster UUID (Null for all clusters in the storage pool) 
 |-
 |  storage_use ||Integer ||Calculated storage from the image dynamic 
 |-
@@ -166,11 +166,11 @@ Use cases :
 
 ''getAllQuotaStorageForSP''
 * Input - Storage pool Id, and user Id.
-* output - All storages for Quota, for user Id and Storage Pool (If Data Center is disabled all the storage for the DC will be returned).
+* output - All storages for Quota, for user Id and Storage Pool (If Data Center is disabled all the storage for the storage pool will be returned).
 
 ''getQuotaCluster'' - Reflects quota_cluster_view (Using VM business entity)
 * Input - Storage pool Id and Quota Id. 
-* output - All Cluster Quota properties for DC.
+* output - All Cluster Quota properties for storage pool.
 
 === Logic Design ===
 Each time the user will run or edit the VM, there will be a Quota check against the quota cluster view.<BR> Both views, quota_storage and quota_cluster should be reflected in the memory as Concurrent HashMap tables. The memory tables should be checked and updated in the canDoAction in a synchronized context (Using java.util.concurrency). Those memory tables should be managed in a pessimistic way, considering resource allocation, to prevent over-commit situations.<BR> Those tables should be synchronized from time to time from VdsUpdateRunTimeInfo (for cluster quota) and AsyncTaskManager(for storage quota).<BR><BR>
