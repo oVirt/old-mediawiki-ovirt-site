@@ -304,18 +304,22 @@ This logic in the canDoAction should be quite similar to the logic being done wi
 Add new command query GetQueryForStoragePool input - DC UUID output - All the Quotas for the DC.
 
 == Tests ==
-Describe the needed unit-tests, and their implications on the build environment (if any) 1. check storage
+Storage tests.
+Cluster tests
 
 === Expected unit-tests ===
+# adding a new Quota
+# running VM on Quota
+# Adding a new Disk and attach to Quota
+# Adding new snapshot
+# Migrating VM
+
 === Special considerations ===
-External resources, mocking, etc..
-
- 1.  1.
-
-=== Jenkins setup (if needed) for tests ===
- 1.  1.
+No special considerations.
 
 === Pre-integration needs ===
+No needs.
+
 == Design check list ==
 This section describes issues that might need special consideration when writing this feature. Better sooner than later :-)
 
