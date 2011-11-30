@@ -63,7 +63,7 @@ This section describes the backend design for this feature.
 |-
 |quota_id ||UUID ||Not null ||The Quota Id which represented in the quota
 |-
-|vds_group_id ||UUID ||not null ||Foreign key for vds_groups.vds_group_id
+|vds_group_id ||UUID ||null ||Foreign key for vds_groups.vds_group_id
 |-
 |vcpu ||Integer ||default '0' ||The number or virtual CPU's allowed in the cluster Quota (-1 for unlimited) 
 |-
@@ -79,7 +79,7 @@ Note: If no cluster selected for Quota,we assume the Quota Does not have any per
 |-
 |quota_id ||UUID ||Not null ||The Quota Id which represented in the quota) 
 |-
-|storage_id ||UUID ||not null ||The storage Id the Quota attached to 
+|storage_id ||UUID ||null ||The storage Id the Quota attached to 
 |-
 |storage_limit ||BigInt ||default '0' ||The storage limit in Mega bytes, could be -1 for no limit, or specific number of bytes 
 |-
