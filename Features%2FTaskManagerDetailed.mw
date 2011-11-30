@@ -31,8 +31,14 @@ Version will also contain some changes that are required internally for backend 
 # Abstracting the Tasks representation in backend (e.g. VDSM, authentication or 
 
 ==== Entity Description ====
-The class diagram describes both new and updated entities in backend.
+The class diagrams describe both new and modified entities in backend:<BR>
+
+'''Main Task Manager Class Diagram'''<BR>
 [[File:async-task-main-class-diagram.jpeg]]
+
+----
+
+'''Command Entity Class Diagram'''<BR>
 [[File:command-entity-class-diagram.jpeg]]
 
 Detailed descriptions:<BR>
@@ -73,7 +79,7 @@ Detailed descriptions:<BR>
 |}
 
 
-'''CommandSequence''' a composed entity of the ''CommandEntity'', representing whether the current command entity is a part of a sequential command (e.g. depended on other commands to be completed before being executed).
+'''CommandSequence''' an entity which composes the ''CommandEntity'', representing whether the current command entity is a part of a sequential command (e.g. depended on other commands to be completed before being executed).
 
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
