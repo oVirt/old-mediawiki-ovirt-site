@@ -48,6 +48,10 @@ This section describes the backend design for this feature.
 |-
 |grace_storage ||integer ||null ||The grace in percentage of the Storage Quota the default should be configured in the vdc_options 
 |-
+|storage_unlimited ||boolean ||default false ||Represent whether the quota storage is unlimited for DC
+|-
+|cluster_unlimited ||boolean ||default false ||Represent whether the quota cluster is unlimited for DC
+|-
 |}
 
 
@@ -67,8 +71,7 @@ This section describes the backend design for this feature.
 |-
 |}
 
-
-Note: If no cluster selected for Quota,we assume the Quota contains all the clusters in the Data Center.
+Note: If no cluster selected for Quota,we assume the Quota Does not have any permissions to consume from the cluster resources.
 
 '''quota_storage''' - Represents the Quota Storage limitation.
 {|class="wikitable sortable"
@@ -82,6 +85,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 |-
 |}
 
+Note: If no storage selected for Quota,we assume the Quota Does not have any permissions to consume from the storage resources.
 
 '''quota_users''' - Represents the Quota users which are permitted to consume from the Quota.
 {|class="wikitable sortable"
