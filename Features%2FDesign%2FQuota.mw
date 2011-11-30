@@ -111,8 +111,6 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 |-
 |Cluster_Name ||String ||The cluster name 
 |-
-|Storage_Quota_ID ||UUID ||Foreign key for the storage Quota Id 
-|-
 |Storage_Name ||String ||The storage name 
 |-
 |User_Id ||String ||The user Id, which has permissions to the Quota 
