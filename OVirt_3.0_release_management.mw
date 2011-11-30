@@ -12,7 +12,6 @@
 ** Running a VM on NFS sounds reasonable to me (oschreib)
 ** ovirt-node full cycle (register, approve and running VM)
 
-
 == Gaps ==
 * '''setup process''':
 ** Missing SSL support
