@@ -33,7 +33,7 @@ Version will also contain some changes that are required internally for backend 
 
 ==== Entity Description ====
 
-The following entities/components will be added to the backend:
+;The following entities/components will be added to the backend:
 '''CommandEntity''' a representation of a command in the system. Using this entity, a concrete instance inherited of ''CommandBase'' could be created (e.g. 'resurrection' of a command). 
 '''CommandSequence''' an entity which composes the ''CommandEntity'', representing whether the current command entity is a part of a sequential command (e.g. depended on other commands to be completed before being executed).
 '''CommandRepository''' used to store and fetch command entities from a persistent layer. Later implementation could use internal cache for commands in progress and upon completion to flush the 'CommandEntity'' from memory to database.<BR>
@@ -45,7 +45,7 @@ The following entities/components will be added to the backend:
 '''SequentialCommandRunner''' a sequential command runner is responsible to to create a sequence of commands which includes order and dependencies (in the future 'best effort' command could be integrated with the sequence creation process) and to invoke the sequence.<BR>
 '''CommandExecuter''' an abstraction of command execution method.
 
-The class diagrams describe both new and modified entities in backend:<BR>
+
 
 '''Main Task Manager Class Diagram'''<BR>
 [[File:async-task-main-class-diagram.jpeg]]
