@@ -48,15 +48,11 @@ This section describes the backend design for this feature.
 |-
 |grace_storage ||integer ||null ||The grace in percentage of the Storage Quota the default should be configured in the vdc_options 
 |-
-|storage_unlimited ||boolean ||default false ||Represent whether the quota storage is unlimited for DC.
+|vcpu ||Integer ||null ||The global number or virtual CPU's allowed in the cluster Quota, -1 indicating unlimited vcpu, null indicates there is specific vcpu limitation.
 |-
-|cluster_unlimited ||boolean ||default false ||Represent whether the quota cluster is unlimited for DC.
+|vram ||Integer ||null ||The global Virtual RAM allowed in the cluster Quota, -1 indicating unlimited vram, null indicates there is specific vram limitation.
 |-
-|vcpu ||Integer ||default '0' ||The number or virtual CPU's allowed in the cluster Quota.
-|-
-|vram ||Integer ||default '0' ||The Virtual RAM allowed in the cluster Quota.
-|-
-|storage_limit ||BigInt ||default '0' ||The storage limit in Mega bytes,
+|storage_limit ||BigInt ||null ||The storage limit in Mega bytes, -1 indicating unlimited storage for DC, null indicates there is specific storage limitation.
 |-
 |}
 
@@ -100,10 +96,10 @@ This section describes the backend design for this feature.
 |}
 
 Use cases :
-# unlimited quota - true value in the quota table for unlimited fields.
-# general limited quota - null values for cluster_id / storage_id in cluster_quota and storage_quota tables, and the limit of resources there
-# specific limited quota - all tables initialized
-# quota without any resources - a row in quota table, and no rows for storage_quota and cluster_quota.
+# unlimited quota - Quota table will be initialized with -1 for vcpu, vram and storage.
+# general limited quota - Quota table will be initialized with specific number for vcpu, vram and storage.
+# specific limited quota - quota_storage and quota_cluster will be initialized with specific values, quota fields (vcpu, vram and storage) will be null.
+# quota without any resources - a row in quota table (vcpu, vram and storage) will be null, and no rows for storage_quota and cluster_quota.
 
 
 '''''vm_dynamic''''' - Add column ''quota_id'', which indicates the Quota the VM should be depended on its resources. <BR>  '''''image''''' - Add column ''quota_id'', which indicates the Quota the image should be depended on its storage resources. <BR>  '''''storage_pool''''' - Add column ''quota_enforcement'', Indicates the DC enforcement status for Quota (Disalbe(0) , Soft Limit (1),Hard Limit (2))  will be presented by Enum (see [[Features/Design/Quota#Classes|QuotaStatusEnum]].).
