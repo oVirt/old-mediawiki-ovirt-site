@@ -107,7 +107,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 |-
 |Quota_ID ||UUID ||The Quota Id 
 |-
-|Quota_Name ||String ||The Quota Name 
+|Quota_Name ||String ||The Quota Description
 |-
 |Cluster_Name ||String ||The cluster name 
 |-
@@ -154,8 +154,6 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 |  storage_limit ||Integer ||The limit which the Quota is defined 
 |-
 |}
-
-
 
 ===== Stored Procedures =====
 ''getAllQuotaClusterForSP''
