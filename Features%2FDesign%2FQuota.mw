@@ -48,9 +48,15 @@ This section describes the backend design for this feature.
 |-
 |grace_storage ||integer ||null ||The grace in percentage of the Storage Quota the default should be configured in the vdc_options 
 |-
-|storage_unlimited ||boolean ||default false ||Represent whether the quota storage is unlimited for DC
+|storage_unlimited ||boolean ||default false ||Represent whether the quota storage is unlimited for DC.
 |-
-|cluster_unlimited ||boolean ||default false ||Represent whether the quota cluster is unlimited for DC
+|cluster_unlimited ||boolean ||default false ||Represent whether the quota cluster is unlimited for DC.
+|-
+|vcpu ||Integer ||default '0' ||The number or virtual CPU's allowed in the cluster Quota.
+|-
+|vram ||Integer ||default '0' ||The Virtual RAM allowed in the cluster Quota.
+|-
+|storage_limit ||BigInt ||default '0' ||The storage limit in Mega bytes,
 |-
 |}
 
@@ -63,7 +69,7 @@ This section describes the backend design for this feature.
 |-
 |quota_id ||UUID ||Not null ||Foreign key for Quota ID represented in the quota table
 |-
-|vds_group_id ||UUID ||null ||Foreign key for vds_groups.vds_group_id
+|vds_group_id ||UUID ||not null ||Foreign key for vds_groups.vds_group_id
 |-
 |vcpu ||Integer ||default '0' ||The number or virtual CPU's allowed in the cluster Quota (-1 for unlimited) 
 |-
@@ -71,21 +77,17 @@ This section describes the backend design for this feature.
 |-
 |}
 
-Note: If no cluster selected for Quota,we assume the Quota Does not have any permissions to consume from the cluster resources.
-
 '''quota_storage''' - Represents the Quota Storage limitation.
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
 |quota_id ||UUID ||Not null ||Foreign key for Quota ID represented in the quota table
 |-
-|storage_id ||UUID ||null ||The storage Id the Quota attached to 
+|storage_id ||UUID ||not null ||The storage Id the Quota attached to 
 |-
 |storage_limit ||BigInt ||default '0' ||The storage limit in Mega bytes, could be -1 for no limit, or specific number of bytes 
 |-
 |}
-
-Note: If no storage selected for Quota,we assume the Quota Does not have any permissions to consume from the storage resources.
 
 '''quota_users''' - Represents the Quota users which are permitted to consume from the Quota.
 {|class="wikitable sortable"
@@ -97,7 +99,11 @@ Note: If no storage selected for Quota,we assume the Quota Does not have any per
 |-
 |}
 
-
+Use cases :
+# unlimited quota - true value in the quota table for unlimited fields.
+# general limited quota - null values for cluster_id / storage_id in cluster_quota and storage_quota tables, and the limit of resources there
+# specific limited quota - all tables initialized
+# quota without any resources - a row in quota table, and no rows for storage_quota and cluster_quota.
 
 
 '''''vm_dynamic''''' - Add column ''quota_id'', which indicates the Quota the VM should be depended on its resources. <BR>  '''''image''''' - Add column ''quota_id'', which indicates the Quota the image should be depended on its storage resources. <BR>  '''''storage_pool''''' - Add column ''quota_enforcement'', Indicates the DC enforcement status for Quota (Disalbe(0) , Soft Limit (1),Hard Limit (2))  will be presented by Enum (see [[Features/Design/Quota#Classes|QuotaStatusEnum]].).
