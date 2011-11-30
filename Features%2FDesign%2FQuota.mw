@@ -61,7 +61,7 @@ This section describes the backend design for this feature.
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
-|quota_id ||UUID ||Not null ||The Quota Id which represented in the quota
+|quota_id ||UUID ||Not null ||Foreign key for Quota ID represented in the quota table
 |-
 |vds_group_id ||UUID ||null ||Foreign key for vds_groups.vds_group_id
 |-
@@ -77,7 +77,7 @@ Note: If no cluster selected for Quota,we assume the Quota Does not have any per
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
-|quota_id ||UUID ||Not null ||The Quota Id which represented in the quota) 
+|quota_id ||UUID ||Not null ||Foreign key for Quota ID represented in the quota table
 |-
 |storage_id ||UUID ||null ||The storage Id the Quota attached to 
 |-
@@ -91,7 +91,7 @@ Note: If no storage selected for Quota,we assume the Quota Does not have any per
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
-|quota_id ||UUID ||Not null ||The Quota Id which represented in the quota 
+|quota_id ||UUID ||Not null ||Foreign key for Quota ID represented in the quota table
 |-
 |user_id ||UUID ||null ||Foreign key to the users.user_id (null indicates no users permitted to consume from the Quota) 
 |-
