@@ -107,7 +107,7 @@ Note: If no cluster selected for Quota,we assume the Quota contains all the clus
 |-
 |Quota_ID ||UUID ||The Quota Id 
 |-
-|Quota_Name ||String ||The Quota Description
+|Quota_Name ||String ||The Quota name
 |-
 |Cluster_Name ||String ||The cluster name 
 |-
