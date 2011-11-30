@@ -2,7 +2,7 @@
 == Timeline ==
 * oVirt first release is currently scheduled to '''15.12.2011'''.
 ** Versioned git branch creation: '''13.12.2011''' (??)
-** Components maintainers MUST send their release notes before the new branch creation.
+** Components maintainers '''MUST''' send their release notes prior to the new branch creation.
 
 == Requirements  ==
 * '''MUST''': Appropriate tag/branch in the git repos
