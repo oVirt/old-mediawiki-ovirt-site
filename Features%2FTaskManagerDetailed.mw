@@ -172,8 +172,7 @@ The following sequence diagrams describe how the new component should interact i
 When command has tasks, it shares the same sequence as the previous sequence, except the last step. The async command will be resurrected by the AsyncTaskManager once there are no more active tasks for the command and will execute the ''CommandBase.endAction()'' for that command, in which the final state of the command will be set.
 
 ==== Events ====
-<!-- What events should be reported when using this feature. -->
-What events should be reported when using this feature.
+Event logs will be created when command tasks (''TaskInfo'') are created.<BR>
 
 === Dependencies / Related Features and Projects ===
 <!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? Add a link to the feature description for relevant features. -->
