@@ -127,6 +127,8 @@ Once the command entity is cleared from the database, there is a need to disable
 |-
 |}
 
+<span style="color:Teal">'''command_entity_sequence_view'''</span> A view over command_entity and command_sequence. The view is used for sequence related operations.
+
 ==== CRUD ====
 '''Stored procedures'''
 * <span style="color:#006400">''InsertCommandEntity''</span> - insert command entity entirely
