@@ -1,4 +1,4 @@
-= Stable device Addresses =
+= Stable Device Addresses =
 This document describes the design for the stable Device addresses feature.
 
 In the term Device we include PCI, VirtIO Serial, SCSI, IDE, CCID and actually anything libvirt supports.
