@@ -203,7 +203,7 @@ There will be two different configuration value:
 When command entity is being cleared from the database, all relevant data is being cleared as well: command task info and command sequence if exist.
 
 ==== Events ====
-The events log should be associated with the command which created the event. The association of the command with the events will enable viewing all of the events related to the specific command.
+The events log should be associated with the command which created the event. The association of the command with the events will enable viewing all of the events related to the specific command.<BR>
 Event logs will be created when command tasks (''TaskInfo'') are created.
 
 === Dependencies / Related Features and Projects ===
