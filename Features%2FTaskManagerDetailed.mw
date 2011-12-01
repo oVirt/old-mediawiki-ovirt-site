@@ -51,7 +51,7 @@ The feature will also contain some changes that are required internally for back
 
 
 '''Main Task Manager Class Diagram'''<BR>
-The following class diagrams describes the entities around the the Task Manager.
+The following class diagrams describe the entities participating in the the Task Manager feature:
 [[File:async-task-main-class-diagram.jpeg]]
 
 ----
