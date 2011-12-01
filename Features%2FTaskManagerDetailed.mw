@@ -140,8 +140,8 @@ The following sequence diagrams describe how the new component should interact i
 
 '''Sync Command Invocation Sequence Diagram'''<BR>
 [[File:Sync-action-invocation-sequence-diagram.jpeg]]
-<<BR>>
-The sequence above describes invocation of sync-action:
+<BR>
+'''The sequence above describes invocation of sync-action:'''
 * The ''Backend'' receive a request from a client, provided by action type and parameters. 
 * The ''Backend'' uses the ''CommandFactory'' for creating a concrete command instance.
 * The ''Backend'' uses the ''CommandRepository'' for creating a ''CommandEntity''. The new entity is being initialized with status 'Waiting for launch', the command id, type and parameters it represents, command creation time and the user which invoked the command. The ''CommandRepository'' persist the ''CommandEntity'' to the database, letting the command queries be noticed about the command in the system.
@@ -152,6 +152,11 @@ The sequence above describes invocation of sync-action:
 * The ''CommandBase.Execute()'' update the command entity status to 'EXECUTING'.
 * A completion without failure will update the ''CommandEntity'' status to 'COMPLETED'.
 
+
+'''Async Command Invocation Sequence Diagram'''<BR>
+[[File:Async-action-type-invocation-sequence-diagram.jpeg]]
+<BR>
+When command has tasks, it shares the same sequence as the previous sequence, except the last step. The async command will be resurrected by the AsyncTaskManager once there are no more active tasks for the command and will execute the ''CommandBase.endAction()'' for that command, in which the final state of the command will be set.
 
 ==== Events ====
 <!-- What events should be reported when using this feature. -->
