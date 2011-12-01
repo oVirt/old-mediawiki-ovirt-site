@@ -172,7 +172,8 @@ The following sequence diagrams describe how the new component should interact i
 When command has tasks, it shares the same sequence as the previous sequence, except the last step. The async command will be resurrected by the AsyncTaskManager once there are no more active tasks for the command and will execute the ''CommandBase.endAction()'' for that command, in which the final state of the command will be set.
 
 ==== Events ====
-Event logs will be created when command tasks (''TaskInfo'') are created.<BR>
+The events log should be associated with the command which created the event. The association of the command with the events will enable viewing all of the events related to the specific command.
+Event logs will be created when command tasks (''TaskInfo'') are created.
 
 === Dependencies / Related Features and Projects ===
 The Task Manager is depended on the Internal Locking Mechanism feature [[Features/DetailedLockMechanism]].
