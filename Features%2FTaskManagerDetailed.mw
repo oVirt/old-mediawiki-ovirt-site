@@ -33,11 +33,13 @@ The feature will also contain some changes that are required internally for back
 # Improving task recovery mechanism - in case JBoss restart (there might be a mismatch between last stored task info and the current task status in VDSM).
 # Abstracting the Tasks representation in backend (e.g. VDSM, authentication)
 
-==== Entity Description ====
+== Backend ==
+This section describes the backend design for this feature. 
+=== Entity Description ===
 
-;The following entities/components will be added to the backend:
-'''CommandEntity''' a representation of a command in the system. Using this entity, a concrete instance inherited of ''CommandBase'' could be created (e.g. 'resurrection' of a command). 
-'''CommandSequence''' an entity which composes the ''CommandEntity'', representing whether the current command entity is a part of a sequential command (e.g. depended on other commands to be completed before being executed).
+The following entities/components will be added:<BR>
+'''CommandEntity''' a representation of a command in the system. Using this entity, a concrete instance inherited of ''CommandBase'' could be created (e.g. 'resurrection' of a command). <BR>
+'''CommandSequence''' an entity which composes the ''CommandEntity'', representing whether the current command entity is a part of a sequential command (e.g. depended on other commands to be completed before being executed).<BR>
 '''CommandRepository''' uses to store and fetch command entities from the database. Later implementation might use internal cache for commands in progress and upon completion to flush the 'CommandEntity'' from memory to database.<BR>
 '''CommandDAO''' a DAO interface which defines the DML operations for the command entities.<BR>
 '''CommandDAODbFacadeImpl''' an implementation of the CommandDAO interface.<BR>
@@ -45,8 +47,8 @@ The feature will also contain some changes that are required internally for back
 '''GetModifiedCommandsQuery''' a query which fetches only commands which were updated since a given time. It is designed to pull only tasks which where updated since the last query invoked by a client.<BR>
 '''SequentialCommandRunnerFactory''' a factory which creates a runner for sequential commands.<BR>
 '''SequentialCommandRunner''' a sequential command runner is responsible to to create a sequence of commands which includes order and dependencies (in the future 'best effort' command could be integrated with the sequence creation process) and to invoke the sequence.<BR>
-'''CommandExecuter''' an abstraction of command execution method.
-'''SyncCommandExecuter''' a synchronous implementation of the ''CommandExecuter'' interface. Designed to invoke commands synchronously.
+'''CommandExecuter''' an abstraction of command execution method.<BR>
+'''SyncCommandExecuter''' a synchronous implementation of the ''CommandExecuter'' interface. Designed to invoke commands synchronously.<BR>
 
 
 
@@ -59,9 +61,9 @@ The following class diagrams describe the entities participating in the the Task
 '''Command Entity Class Diagram'''<BR>
 [[File:command-entity-class-diagram.jpeg]]
 
-'''Detailed entity description:'''<BR>
+=== DB Design ===
 
-<span style="color:Teal">'''command_entity'''</span> table description:<BR>
+<span style="color:Teal">'''command_entity'''</span> represents the command entity:<BR>
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
 |-
@@ -97,7 +99,7 @@ The following class diagrams describe the entities participating in the the Task
 
 
 
-<span style="color:Teal">'''command_sequence'''</span> table description:<BR>
+<span style="color:Teal">'''command_sequence'''</span> represents the command sequence association:<BR>
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
 |-
@@ -117,7 +119,7 @@ The following class diagrams describe the entities participating in the the Task
 The command entity should be associated with the events related to it. The relation is represented by a map table as described below.<BR>
 Once the command entity is cleared from the database, there is a need to disable that association (clear the entry from map table as well).
 
-<span style="color:Teal">'''command_entity_audit_log_map'''</span> table description:<BR>
+<span style="color:Teal">'''command_entity_audit_log_map'''</span> represents a relation between a command entity to audit log:<BR>
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
 |-
@@ -188,6 +190,17 @@ The following sequence diagrams describe how the new component should interact i
 [[File:Async-action-type-invocation-sequence-diagram.jpeg]]
 <BR>
 When command has tasks, it shares the same sequence as the previous sequence, except the last step. The async command will be resurrected by the AsyncTaskManager once there are no more active tasks for the command and will execute the ''CommandBase.endAction()'' for that command, in which the final state of the command will be set.
+
+When Backend is initializing, the commands which are in progress are being examined for their status.
+If the command has tasks, the tasks status is being examined and upon completion of tasks, the command will be finalized (by ''CommandBase.endAction()'').
+If the command has no tasks, it status should be marked as failed command.
+
+;Maintenance of the command entity and command task info: 
+A scheduler will be responsible for clearing obsolete command entities and tasks info data from the database.<BR>
+There will be two different configuration value:
+# Successful command time-to-leave - the duration for holding command which ended with success in database.
+# Failed command time-to-leave - the duration for holding command which ended with failure in database.
+When command entity is being cleared from the database, all relevant data is being cleared as well: command task info and command sequence if exist.
 
 ==== Events ====
 The events log should be associated with the command which created the event. The association of the command with the events will enable viewing all of the events related to the specific command.
