@@ -1,3 +1,24 @@
-# Spice
+== Spice ==
 
-# VNC
+First install spice-xpi extension for Firefox
+ <nowiki>
+  # yum install spice-xpi
+  <restart your firefox></nowiki>
+
+* Already tested with: 
+** Firefox 3.6.24 - spice-xpi-2.4-4.el6.x86_64 - RHEL6
+** ***** fell free to contribute here ****
+
+== VNC ==
+
+* Setting manually the vnc password
+1) Get VM id and displayPort
+ <nowiki>
+  # vdsClient -s 0 list</nowiki>
+2) Setting vnc password to VM
+ <nowiki>
+  # vdsClient -s 0 setVmTicket <vmid> <password> 0 keep</nowiki>
+
+3) Now try to use vnc client
+ <nowiki>
+  # vncviewer <RHEVH>:<displayPort></nowiki>
