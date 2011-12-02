@@ -3,7 +3,8 @@
 First install spice-xpi extension for Firefox
  <nowiki>
   # yum install spice-xpi
-  <restart your firefox></nowiki>
+  <restart your firefox>
+  Go to Virtual Machine Tab, right click on VM and select Console</nowiki>
 
 * Already tested with: 
 ** Firefox 3.6.24 - spice-xpi-2.4-4.el6.x86_64 - RHEL6
