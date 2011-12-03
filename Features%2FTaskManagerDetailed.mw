@@ -38,9 +38,9 @@ The feature will also contain some changes that are required internally for back
 # Improving task recovery mechanism - in case JBoss restart (there might be a mismatch between last stored task info and the current task status in VDSM).
 # Abstracting the Tasks representation in backend (e.g. VDSM, authentication)
 
-== Backend ==
+=== Backend ===
 This section describes the backend design for this feature. 
-=== Entity Description ===
+==== Entity Description ====
 
 The following entities/components will be added:<BR>
 '''CommandEntity''' a representation of a command in the system. Using this entity, a concrete instance inherited of ''CommandBase'' could be created (e.g. 'resurrection' of a command). <BR>
@@ -66,7 +66,7 @@ The following class diagrams describe the entities participating in the the Task
 '''Command Entity Class Diagram'''<BR>
 [[File:command-entity-class-diagram.jpeg]]
 
-=== DB Design ===
+==== DB Design ====
 
 <span style="color:Teal">'''command_entity'''</span> represents the command entity:<BR>
 {|class="wikitable sortable"
@@ -136,7 +136,7 @@ Once the command entity is cleared from the database, there is a need to disable
 
 <span style="color:Teal">'''command_entity_sequence_view'''</span> A view over command_entity and command_sequence. The view is used for sequence related operations.
 
-==== CRUD ====
+===== CRUD =====
 '''Stored procedures'''
 * <span style="color:#006400">''InsertCommandEntity''</span> - insert command entity entirely
 * <span style="color:#006400">''GetCommandEntityByCommandId''</span> - returns a command entity by a given id
@@ -214,7 +214,7 @@ Common command steps which tasks will be created for are: INIT, VALIDATION, EXEC
 * EXECUTION - the actual execution of the command.
 Tasks and events won't be created for internal commands.
 
-==== Events ====
+=== Events ===
 The events log should be associated with the command which created the event. The association of the command with the events will enable viewing all of the events related to the specific command.<BR>
 Event logs will be created when command tasks (''TaskInfo'') are created.
 
