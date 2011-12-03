@@ -22,7 +22,7 @@ The actions will be represented in the Tasks view of the Webadmin, where the sta
 An action might be a chain of commands depended on each other and monitored in respect to the action which triggered the commands sequence.<BR>
 
 The requirements for feature are as follow:<BR>
-# Providing a mechanism for tasks management/monitoring via UI (i.e - monitor task status, monitor tasks of given action, stop task, stop all tasks of command, restart of failed command).
+# Providing a mechanism for tasks management/monitoring via UI (i.e - monitor task status, monitor tasks of given action, tasks of a given entity, stop task, stop all tasks of command, restart of failed command).
 # Defining a task dependency/task chaining mechanism (Task B will not start before completion of Task A).
 # Providing a mechanism to invoke commands asynchronously. 
 # Defining a "best effort task" - The success of the parent command of this task will not be dependent on the result of a task).
