@@ -9,7 +9,12 @@ The current design describes tasks monitoring and sequential command.<BR>
 
 === Owner ===
 * Name: [[User:Moti| Moti Asayag]]
-* Email: <masayag@redhat.com>
+** Email: <masayag@redhat.com>
+* Name: [[User:Yair| Yair Zaslavsky]] 
+** Email: <yzaslavs@redhat.com>
+* GUI Component owner: Gilad Chaplik <gchaplik@redhat.com>
+* REST Component owner: Michael Pasternak <mpasternak@redhat.com>
+* QA Owner: Yaniv Kaul <ykaul@redhat.com
 
 === Current status ===
 * Target Release: 3.1
