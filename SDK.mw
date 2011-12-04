@@ -175,6 +175,8 @@ api = API(url='http://host:port', username='user@domain', password='password')
 
   - right now return type extracted from URI
 
+==== interface for task polling ====
+
 ==== support 3+ length URIs ====
 
 ==== add static /name/ parameter to .get() rather then accepting it via **kwargs ====
