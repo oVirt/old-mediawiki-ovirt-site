@@ -15,6 +15,6 @@ Key design points:
 * No business logic will be implemented in the QMF agent or REST API
 
 
-
+[[File:Vdsm-api-architecture.png‎]]
 
 [[Category:Vdsm]]
