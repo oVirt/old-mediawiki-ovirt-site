@@ -1,8 +1,8 @@
-== Build Process for oVirt Node ==
-
-Note:  This is a draft and still very much a work in progress.
+= Build Process for oVirt Node =
 
 Currently, we're heavily reliant on Fedora.
+
+== From Git ==
 
 === Get the Source ===
 
@@ -71,6 +71,24 @@ $ cd ovirt-node</code>
 * $ make ovirt-node-image.iso
 
 </code>
+
+== From -tools RPM ==
+
+* Install ovirt-node-tools RPM from Fedora or ovirt.org/releases
+* <code>$ cd usr/share/ovirt-node-tools</code>
+* Create a version.ks file (automation coming soon)
+ <nowiki>
+PRODUCT='oVirt Node Hypervisor'
+PRODUCT_SHORT='oVirt Node Hypervisor'
+PACKAGE=ovirt-node-image
+Version=2.1
+RELEASE=0.fc16
+</nowiki>
+* Follow steps above for RPMs not included in Fedora
+** Put all RPMs in a single location
+** run createrepo on that location
+** export OVIRT_LOCAL_REPO=file://<your_location>
+* <code>$ sudo node-creator ovirt-node-image.ks</code>
 
 [[Category:Node]]
 [[Category:Node development]]
