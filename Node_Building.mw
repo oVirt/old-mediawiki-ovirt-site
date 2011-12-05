@@ -77,6 +77,7 @@ $ cd ovirt-node</code>
 * Install ovirt-node-tools RPM from Fedora or ovirt.org/releases
 * <code>$ cd usr/share/ovirt-node-tools</code>
 * Create a version.ks file (automation coming soon)
+** Content like the following:
  <nowiki>
 PRODUCT='oVirt Node Hypervisor'
 PRODUCT_SHORT='oVirt Node Hypervisor'
