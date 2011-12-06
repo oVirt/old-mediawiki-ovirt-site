@@ -91,6 +91,8 @@ The changes we need to communicate are in the "network" structure for bridge and
 
 [[File:Diagram2.png]]
 
+ <span style="color:red">'''note:''' </span> integer types are serialized to an xml String type on the wire - its up to the VDSM network dict to handle.
+
 == GUI ==
 
 [[File:general.png]]
