@@ -23,10 +23,18 @@ they are out of the api and we're left with trivial operations:
 
 Cluster version is 3.1.  Add record in the action_version_map table:
 
-||header action_id||header cluster_minimal_version||header storage_pool_minimal_version||
-| 158 | 3.1 | 3.1 |
 
-
+{| class="wikitable"
+|-
+! action_id
+! cluster_minimal_version
+! storage_pool_minimal_version
+|-
+|158
+|3.1
+|3.1
+|-
+|}
 
 === Setup Networks sequence diagram ===
 [[File:Diagram1.png]]
