@@ -14,10 +14,10 @@ they are out of the api and we're left with trivial operations:
 :# add/remove bonds
 :# attach/detach networks to/from bonds
 
-==== Added functionality ====
-* check connectivity & connectivity timeout.
-* after the new topology layed by VDSM, they test if any client(i.e engine) has interacted with them,  in the given period timeout.<br>  When no activity seen, they revert to the baked-up topology and fail the command.
-* force - VDSM will not validate parameters passed to set the network configuration .
+==== Additional options ====
+# '''check connectivity & connectivity timeout:'''
+:after the new topology layed by VDSM, they test if any client(i.e engine) has interacted with them,  in the given period timeout.<br>  When no activity seen, they revert to the baked-up topology and fail the command.
+# '''force:''' VDSM will not validate parameters passed to set the network configuration .
 
 === Backward compatibility ===
 
