@@ -22,8 +22,6 @@ they are out of the api and we're left with trivial operations:
 === Backward compatibility ===
 
 Cluster version is 3.1.  Add record in the action_version_map table:
-
-
 {| class="wikitable"
 |-
 ! action_id
