@@ -6,7 +6,6 @@
  Hereby we describe code POV changes for backend and also VDSM api implications.
 
 
-<<TableOfContents(4)>>
 
 === Scope ===
 
