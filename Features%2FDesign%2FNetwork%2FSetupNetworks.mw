@@ -62,7 +62,7 @@ Bridge-less network shall be edited throw SetupNetworks command only, which will
 
 == Jumbo frames ==
 
-Typically, just another parameter for a network configuration to determine the [[http://en.wikipedia.org/wiki/Maximum_transmission_unit|MTU]].
+Typically, just another parameter for a network configuration to determine the [http://en.wikipedia.org/wiki/Maximum_transmission_unit MTU].
 
 === Code Change ===
 # Add MTU : String to network entity
