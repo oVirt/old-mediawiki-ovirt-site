@@ -133,7 +133,7 @@ repository the first time it is run. </nowiki>
   $project> git add source.py
   $project> git commit  </nowiki>
 
-* Submit the topic branch to gerrit
+* Submit the topic branch changes to gerrit
  <nowiki>
   $project>./git-review -t engine-register
   remote: Resolving deltas:   0% (0/3)
