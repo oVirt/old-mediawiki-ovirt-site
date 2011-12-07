@@ -30,7 +30,7 @@ The shared raw disk feature enables to share disks through multiple VMs in the D
 The feature should provide the ability to attach disk to many VMs with safe concurrent access,<BR>
 shared raw disk is most relevant to external cluster application, which oVirt should have the ability to support.<BR>
 The user will be able the attach/detach share disk to/from a VM, only when the VM is in status down.<BR>
-Take in noticed that the shared disk must be formatted as raw type, and does not support OS disks (system bootable disks).<BR>
+Consider that the shared disk must be formatted as raw type, and does not support OS disks (system bootable disks).<BR>
 
 === Entity Description ===
 
@@ -56,7 +56,7 @@ Take in noticed that the shared disk must be formatted as raw type, and does not
 === User Experience ===
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
 <!-- GUI mockups should also be added here to make it more clear -->
-* Shared raw disk should be attached/detached using the  adding new disk dialog box, the dialog box will have a check box indicating the disk is shared or not.
+* Shared raw disk should be attached/detached using the adding new disk dialog box, the dialog box will have a check box indicating the disk is shared or not.
 * When a user wants to configure a regular disk to be shared disk, he will edit the disk and mark the checkbox as shared
 * Attach for new shared disk to a VM, will also be done from the dialog box in the VM tab under disk sub tab.
 * All the shared raw disk for each storage should be in the storage tab as a sub tab
