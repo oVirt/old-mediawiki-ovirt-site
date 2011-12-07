@@ -81,8 +81,9 @@ The Administrator Portal should allow the following operations:
 * User can remove a disk entirely from the Data Center, without regarding whether there are attached VMs to it
 
 The Power User Portal should allow the following operations:
-* View shared disks for storage domain in the Data Center the user can attach/detach
-* attach, detach disks to VM.
+* View shared disks for storage domain in the Data Center the power user can attach/detach
+* Attach, detach disks to VM.
+* The power user will not have permissions to create a shared disk from the user portal.
 
 == Dependencies / Related Features and Projects ==
 <!-- What other packages (RPMs) depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? Add a link to the feature description for relevant features. -->
