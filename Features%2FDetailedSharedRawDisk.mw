@@ -1,0 +1,110 @@
+{{autolang|base=yes}}
+
+<!-- The actual name of your feature page should look something like: Features/YourFeatureName.  This keeps all features in the same namespace -->
+= Shared Raw Disk =
+
+== Summary ==
+<!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
+The shared raw disk feature enables to share disks through multiple VM's in the Data Center.
+
+
+== Owner ==
+<!--This should link to your home wiki page so we know who you are-->
+* Feature owner: [[User:mlipchuk| Maor Lipchuk]]
+:* GUI Component owner: [[User:derez| Daniel Erez]]
+:* REST Component owner: [[User:mpasternak| Michael Pasternak]]
+:* Engine Component owner: [[User:mlipchuk| Maor Lipchuk]]
+:* QA Owner: [[User:ykaul| Yaniv Kaul]] 
+
+<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
+* Email: mlipchuk@redhat.com
+
+== Current status ==
+* Target Release: 
+* Status: Design Stage
+* Last updated date: Wed November 10 2011
+
+
+== Detailed Description ==
+<!-- Provide the details of the feature. What is it going to include. See the sections below. -->
+<!-- New entities and changes in existing entities. -->
+The feature should provide the ability to attach disk to many VMs with safe concurrent access,
+shared raw disk is most relevant to external cluster application, which oVirt should have the ability to support.
+The user will be able the attach/detach share disk to/from a VM, only when the VM is in status down.<BR>
+Take in noticed that the shared disk must be formatted as raw type, and does not support OS disks (system bootable disks).<BR>
+
+=== Entity Description ===
+
+==== Disk ====
+<!-- New entities and changes in existing entities. -->
+* Disk should have an indication field for shared/not shared disk.
+* Disk should have also name and description.
+
+
+=== CRUD ===
+<!-- Describe the create/read/update/delete operations on the entities, and what each operation should do. -->
+* The shared disks will be displayed in a new 'shared disk' sub tab in the 'storage' tab.
+* The shared disks will also be displayed, when the user will choose to attach new shareable disk to a VM or multiple VMs.
+* Creating/Editing a shared raw disk is available through the new/edit disk dialog from the disks sub tab in the VM main tab.
+* A shared raw disk can also be created from regular disk, when editing existing disk and mark the disk as a shared one.
+* User can attach/detach shared disk to VM through the VMs main tab (top action bar or right click context menu).
+* User can also attach/detach shared disk through the disks sub tab of the VMs main tab.
+* Each VM with shared disk attached to it, can R/W the shared RAW disk.
+* When removing a VM with shared disk attached to it, the shared disk will not be deleted and will become floating disk.
+* User will be able to delete a shared disk from the storage domain tab in the disks sub tab.
+* The shared raw disk can only be removed if all the VMs that are using it are in status down or in status up but have the disk as unplugged. 
+
+=== User Experience ===
+<!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
+<!-- GUI mockups should also be added here to make it more clear -->
+* Shared raw disk should be attached/detached using the  adding new disk dialog box, the dialog box will have a check box indicating the disk is shared or not.
+* When a user wants to configure a regular disk to be shared disk, he will edit the disk and mark the checkbox as shared
+* Attach for new shared disk to a VM, will also be done from the dialog box in the VM tab under disk sub tab.
+* All the shared raw disk for each storage should be in the storage tab as a sub tab
+* Disk entity will be added with three more properties: Disk Name, Description, Date created. 
+* Shared raw disk is configured the same as a regular disk, but with a shared flag marked as true.
+* oVirt will only expose the disk in the requested VMs, and will not manage the synchronization/clustering between them.
+* Shared disk will be called floating disk when the disk will not be attached to any VMs in the Data Center.
+* Shared disk can be Disks can be moved from one VM to another. 
+
+
+=== Installation/Upgrade ===
+<!-- Describe how the feature will effect new installation or existing one. -->
+* For upgraded disk, the disk name should be calculated automatically by the vm name and disk number, for example disk name should be "anyvm_disk1", the date should be today, and the description will be "Automatically generated disk name".
+* New disk should enforce the user to enter a name and description for the disk.
+
+=== User work-flows ===
+<!-- Describe the high-level work-flows relevant to this feature. -->
+The Administrator Portal should allow the following operations:
+* View all shared disk from the disks sub tab in the storage domain main tab
+* Add/Edit/Attach/Detach shared disk through the disks sub tab at the VM main tab.
+* User can remove a disk entirely from the Data Center, without regarding whether there are attached VMs to it
+
+The Power User Portal should allow the following operations:
+* View shared disks for storage domain in the Data Center the user can attach/detach
+* attach, detach disks to VM.
+
+== Dependencies / Related Features and Projects ==
+<!-- What other packages (RPMs) depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? Add a link to the feature description for relevant features. -->
+Attaching shared disk will not consume new Quota resource.
+Affected oVirt projects:
+* API
+* CLI
+* Engine-core
+* Webadmin
+* User Portal
+
+Quota has to be taken in consideration, for every new feature that will involve consumption of resources managed by it.
+
+== Documentation / External references ==
+<!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
+http://www.ovirt.org/wiki/Features/SharedRAWDisk
+
+== Comments and Discussion ==
+http://www.ovirt.org/wiki/Talk:Features/SharedRAWDisk
+
+== Future Work ==
+
+== Open Issues ==
+<!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
+[[Category: Feature]]
