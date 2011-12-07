@@ -105,6 +105,7 @@ http://www.ovirt.org/wiki/Features/SharedRAWDisk
 http://www.ovirt.org/wiki/Talk:Features/SharedRAWDisk
 
 == Future Work ==
+* Permissions should be added for disk
 
 == Open Issues ==
 <!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
