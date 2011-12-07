@@ -111,7 +111,7 @@ repository the first time it is run. </nowiki>
 [remote "gerrit"]
   url = http://gerrit.ovirt.org/p/project
   pushurl = ssh://username@gerrit.ovirt.org:29418/project.git
-  fetch = +refs/heads/*:refs/remotes/gerrit/ </nowiki>
+  fetch = +refs/heads/*:refs/remotes/gerrit/* </nowiki>
 
 * Execute git-review setup
  <nowiki>
