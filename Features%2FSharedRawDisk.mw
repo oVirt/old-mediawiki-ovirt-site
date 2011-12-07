@@ -6,7 +6,7 @@
 
 === Summary ===
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
-The shared raw disk feature enables share disk with multiple VM's. 
+The shared raw disk feature enables to share a disk through multiple VM's.
 
 === Owner ===
 <!--This should link to your home wiki page so we know who you are-->
