@@ -39,7 +39,6 @@ vi bin/gerrit-backup.sh
 </pre>
 * Bash script to remotely backup git repository directories using rsync over ssh:
 <pre>
-<pre>
 #!/bin/bash
 #
 # Gerrit backup script - git source backup
