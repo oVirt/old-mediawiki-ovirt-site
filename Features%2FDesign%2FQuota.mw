@@ -24,66 +24,70 @@ This section describes the REST design for this feature.
 This section describes the backend design for this feature.
 
 === DB Design ===
-'''quota'''  - Represents the Quota properties
+'''quota_storage_pool'''  - Represents the properties of the Quota configured on the DC.
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
 |-
-|quota_id ||UUID ||not null ||The Quota Id 
+|quota_id ||UUID ||PK(not null) || The Quota Id 
 |-
-|name ||String ||not null ||Quota name 
+|storage_pool_id ||UUID ||not null ||Storage pool Id 
 |-
-|description ||String ||not null ||Quota description 
+|quota_name ||VARCHAR(50) ||not null ||Quota name 
+|-
+|description ||VARCHAR(500) ||not null ||Quota description 
 |-
 |creation_date ||Date ||not null ||Quota creation date 
 |-
 |update_date ||Date ||not null ||Quota update date 
 |-
-|type ||Integer ||default '0' ||Represent the quota enforce mode 0-disabled 1-soft limit 2-hard limit 
+|threshold_vds_group_percentage ||INTEGER ||null ||The threshold of the Vds Group Quota the default should be configured in the vdc_options
 |-
-|threshold_cluster ||integer ||null ||The threshold of the Cluster Quota the default should be configured in the vdc_options
+|threshold_storage_percentage ||INTEGER ||null ||The threshold of the Storage Quota the default should be configured in the vdc_options
 |-
-|threshold_storage ||integer ||null ||The threshold of the Storage Quota the default should be configured in the vdc_options
+|grace_vds_group_percentage ||INTEGER ||null ||The grace in percentage of the Cluster Quota the default should be configured in the vdc_options
 |-
-|grace_cluster ||integer ||null ||The grace in percentage of the Cluster Quota the default should be configured in the vdc_options
-|-
-|grace_storage ||integer ||null ||The grace in percentage of the Storage Quota the default should be configured in the vdc_options 
-|-
-|vcpu ||Integer ||null ||The global number or virtual CPU's allowed in the cluster Quota, -1 indicating unlimited vcpu, null indicates there is specific vcpu limitation.
-|-
-|vram ||Integer ||null ||The global Virtual RAM allowed in the cluster Quota, -1 indicating unlimited vram, null indicates there is specific vram limitation.
-|-
-|storage_limit ||BigInt ||null ||The storage limit in Mega bytes, -1 indicating unlimited storage for storage pool, null indicates there is specific storage limitation.
+|grace_storage_percentage ||INTEGER ||null ||The grace in percentage of the Storage Quota the default should be configured in the vdc_options 
 |-
 |}
 
 
-
-'''quota_cluster''' - Represent the clusters which are part of the Quota, The relationship of Cluster-Quota is Many-To-Many.
-
+'''quota_limitation''' - Represents the quota limitation which are part of the Quota, the limitation can be defined for storage/vds cluster/storage pool.
 {|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? / Default||Definition 
+!border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
 |-
-|quota_id ||UUID ||Not null ||Foreign key for Quota ID represented in the quota table
+|quota_limitation_id ||UUID ||PK(not null) ||The primary key of the quota limitation.
 |-
-|vds_group_id ||UUID ||not null ||Foreign key for vds_groups.vds_group_id
+|quota_id ||UUID ||not null ||Foreign key for the quota id.
 |-
-|vcpu ||Integer ||default '0' ||The number or virtual CPU's allowed in the cluster Quota (-1 for unlimited) 
+|storage_id ||UUID ||null ||Foreign key for storage id.
 |-
-|vram ||Integer ||default '0' ||The Virtual RAM allowed in the cluster Quota (-1 for unlimited) 
+|vds_group_id ||UUID ||null ||Foreign key for vds group id.
+|-
+|virtual_cpu ||INTEGER ||null ||The limited virtual cpu.
+|-
+|virtual_ram_mega_byte ||BIGINT ||null ||The limited ram defined in mega byte.
+|-
+|storage_limit_giga_byte ||BIGINT ||null ||The limited defined in Giga byte.
 |-
 |}
 
-'''quota_storage''' - Represents the Quota Storage limitation.
+
+'''quota_usage''' - The table is similar to quota limitation only it represents how much is used from the limitation.
 {|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? / Default||Definition 
+!border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
 |-
-|quota_id ||UUID ||Not null ||Foreign key for Quota ID represented in the quota table
+|quota_usage_id ||UUID ||PK(not null) ||The primary key of the quota usage.
 |-
-|storage_id ||UUID ||not null ||The storage Id the Quota attached to 
+|quota_limitation_id ||UUID ||not null ||Foreign key for the quota limitation id.
 |-
-|storage_limit ||BigInt ||default '0' ||The storage limit in Mega bytes, could be -1 for no limit, or specific number of bytes 
+|virtual_cpu ||INTEGER ||not null ||The limited cpu defined in Giga byte.
+|-
+|storage_limit_giga_byte ||INTEGER ||null ||The limited GB defined in Giga byte.
+|-
+|virtual_ram_mega_byte ||BIGINT ||null ||The limited ram defined in Mega byte.
 |-
 |}
+
 
 '''quota_users''' - Represents the Quota users which are permitted to consume from the Quota.
 {|class="wikitable sortable"
@@ -96,22 +100,39 @@ This section describes the backend design for this feature.
 |}
 
 Use cases :
-# unlimited quota - Quota table will be initialized with -1 for vcpu, vram and storage.
-# general limited quota - Quota table will be initialized with specific number for vcpu, vram and storage.
-# specific limited quota - quota_storage and quota_cluster will be initialized with specific values, quota fields (vcpu, vram and storage) will be null.
-# quota without any resources - a row in quota table (vcpu, vram and storage) will be null, and no rows for storage_quota and cluster_quota.
+# When quota_limitation vds_group_id=null and storage_id=null then the limitation is referenced to global limitation
+# When quota_limitation vds_group_id=null but storage_id!=null then the limitation is referenced only to storage quota
+# When quota_limitation vds_group_id!=null but storage_id=null then the limitation is referenced only to vdsGroup quota
+# unlimited quota - vds_group_id=null and storage_id=null in quota_limitation table and fields of vcpu, vram and storage will be initialized with -1.
+# general limited quota - vds_group_id=null and storage_id=null in quota_limitation table, fields of vcpu, vram and storage will be initialized with specific number.
+# specific limited quota - vds_group_id!=null and/or storage_id!=null in quota_limitation table, quota fields (vcpu, vram and storage) will be null.
+# quota without any resources - vds_group_id=null and storage_id=null in quota_limitation table, quota fields (vcpu, vram and storage) will be 0.
 
 
 '''''vm_dynamic''''' - Add column ''quota_id'', which indicates the Quota the VM should be depended on its resources. <BR>  '''''image''''' - Add column ''quota_id'', which indicates the Quota the image should be depended on its storage resources. <BR>  '''''storage_pool''''' - Add column ''quota_enforcement'', Indicates the DC enforcement status for Quota (Disalbe(0) , Soft Limit (1),Hard Limit (2))  will be presented by Enum (see [[Features/Design/Quota#Classes|QuotaStatusEnum]].).
 
 =====Views=====
 [[Features/Design/Quota#Appendix|all_quotas]] - View of all the Quotas attached to all the storage pools for all Users.
+
+'''quota_global_view''' - The table is similar to quota limitation only it represents how much is used from the limitation.
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Definition 
 |-
 |Storage_Pool ||UUID ||The Storage Pool Id 
 |-
 |Quota_ID ||UUID ||The Quota Id 
+|-
+|virtual_cpu ||INTEGER ||not null ||The limited cpu defined in Giga byte.
+|-
+|virtual_cpu_usage ||INTEGER ||not null ||The limited cpu defined in Giga byte.
+|-
+|storage_limit_giga_byte ||INTEGER ||null ||The limited GB defined in Giga byte.
+|-
+|storage_limit_giga_byte_usage ||INTEGER ||null ||The limited GB defined in Giga byte.
+|-
+|virtual_ram_mega_byte ||BIGINT ||null ||The limited ram defined in Mega byte.
+|-
+|virtual_ram_mega_byte_usage ||BIGINT ||null ||The used ram in the cluster.
 |-
 |Quota_Name ||String ||The Quota name
 |-
