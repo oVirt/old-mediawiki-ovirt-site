@@ -124,17 +124,17 @@ Use cases :
 |-
 |Quota_Name ||String ||The Quota name
 |-
-|virtual_cpu ||INTEGER ||not null ||The limited cpu, defined in Giga byte.
+|virtual_cpu ||INTEGER ||The limited cpu, defined in Giga byte.
 |-
-|virtual_cpu_usage ||INTEGER ||not null ||The usage of the cpu in the storage pool, defined in Giga byte.
+|virtual_cpu_usage ||INTEGER ||The usage of the cpu in the storage pool, defined in Giga byte.
 |-
-|storage_limit_giga_byte ||INTEGER ||null ||The limited GB, defined in Giga byte.
+|storage_limit_giga_byte ||INTEGER ||The limited GB, defined in Giga byte.
 |-
-|storage_limit_giga_byte_usage ||INTEGER ||null ||The used GB in the storage pool, defined in Giga byte.
+|storage_limit_giga_byte_usage ||INTEGER ||The used GB in the storage pool, defined in Giga byte.
 |-
-|virtual_ram_mega_byte ||BIGINT ||null ||The limited ram, defined in Mega byte.
+|virtual_ram_mega_byte ||BIGINT ||The limited ram, defined in Mega byte.
 |-
-|virtual_ram_mega_byte_usage ||BIGINT ||null ||The used ram in the storage pool.
+|virtual_ram_mega_byte_usage ||BIGINT ||The used ram in the storage pool.
 |-
 |}
 
@@ -152,13 +152,13 @@ Use cases :
 |-
 |vds_static_name ||UUID ||The vds group name from vds_group_static
 |-
-|virtual_cpu ||INTEGER ||not null ||The limited cpu, defined in Giga byte.
+|virtual_cpu ||INTEGER ||The limited cpu, defined in Giga byte.
 |-
-|virtual_cpu_usage ||INTEGER ||not null ||The usage of the cpu in the cluster, defined in Giga byte.
+|virtual_cpu_usage ||INTEGER ||The usage of the cpu in the cluster, defined in Giga byte.
 |-
-|virtual_ram_mega_byte ||BIGINT ||null ||The limited ram defined in Mega byte.
+|virtual_ram_mega_byte ||BIGINT ||The limited ram defined in Mega byte.
 |-
-|virtual_ram_mega_byte_usage ||BIGINT ||null ||The used ram in the cluster.
+|virtual_ram_mega_byte_usage ||BIGINT ||The used ram in the cluster.
 |-
 |}
 
@@ -174,9 +174,9 @@ Use cases :
 |-
 |storage_id ||UUID ||The vds group Id 
 |-
-|storage_limit_giga_byte ||INTEGER ||null ||The limited GB defined in Giga byte.
+|storage_limit_giga_byte ||INTEGER ||The limited GB defined in Giga byte.
 |-
-|storage_limit_giga_byte_usage ||INTEGER ||null ||The used GB on the quota storage domain.
+|storage_limit_giga_byte_usage ||INTEGER ||The used GB on the quota storage domain.
 |-
 |}
 
