@@ -2,12 +2,11 @@
 
 == On linode01.ovirt.org ==
 
-* Create Gerrit backup user:
+* Create Gerrit backup user, saving the password in ''/root/passwords'':
 <pre>
 useradd gerrit-backup
 passwd gerrit-backup
 </pre>
-** Save password in ''/root/passwords''.
 * Create SSH key structure:
 <pre>
 touch /home/gerrit-backup/.ssh/authorized_keys
