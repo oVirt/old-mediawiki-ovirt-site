@@ -11,6 +11,6 @@ __TOC__
 |-
 |  0% || Locking mechanism|| [[Features/DetailedLockMechanism‎ | Locking mechanism ]] || A new locking mechanism. || || 2011-12-01
 |-
-|  0% || [[Shared RAW Disk| SharedRAWDisk ]]|| [[Features/SharedRAWDisk | Shared RAW Disk ]] || Enable sharing a RAW VM disk. || || 2011-12-01
+|  0% || [[Shared RAW Disk| Features/SharedRawDisk ]]|| [[Features/DetailedSharedRawDisk | Shared RAW Disk ]] || Enable sharing a RAW VM disk. || || 2011-12-01
 |-
 |}
