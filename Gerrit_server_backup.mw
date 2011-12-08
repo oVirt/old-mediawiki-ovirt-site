@@ -25,7 +25,7 @@ mkdir -p /home/gerrit-backup/backup/src
 === Backup git source directories ===
 
 * Switch to the Gerrit user:
-</pre>
+<pre>
 su - gerrit2
 </pre>
 * Create an SSH key without a passphrase, then copy the public key for the ''authorized_keys'' file on the remote host:
