@@ -92,5 +92,4 @@ RELEASE=0.fc16
 * <code>$ sudo node-creator ovirt-node-image.ks</code>
 
 [[Category:Node]]
-[[Category:Node development]]
 [[Category:Documentation]]
