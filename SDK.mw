@@ -172,6 +172,8 @@ api = API(url='http://host:port', username='user@domain', password='password')
 
 ==== support 3+ length URIs ====
 
+==== supporting off-line codegen mode  ====
+
 
 === sdk ===
 
