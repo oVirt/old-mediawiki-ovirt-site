@@ -1,22 +1,4 @@
-* Feature lead: [[User: Jumper45 | Jon Choate]]
-:*GUI Component lead: [[User: gchaplik | Gilad Chaplik]]
-:*REST Component lead: [[User: mpasternak | Michael Pasternak]]
-:*Backend Component lead: [[ User: Jumper45 | Jon Choate]]
-:*VDSM Component lead: [[User: danken | Dan Kenigsberg]]
-:*QA lead:
-
-== Summary ==
-Allow VMs to have disks on multiple storage domains
-
-
-= Current status =
-* Target Release: 
-* Status: Design Stage
-
-
-= Detailed Description =
-
-== User Stories ==
+= User Stories =
 # Add VM
 ## As a RHEV-M GUI user, when I create a VM, I want to be able to select different storage domains for each disk in the VM so that I can make efficient use of my storage. I know the feature works when I can use the RHEV-M GUI to create a VM with 3 disks each on different storage domains.
 ## As a Rest API user, when I create a VM, I want to specify a new VM where each disk is on different storage domains so that I can make efficient use of my storage. I know the feature works when I can use the REST API to create a VM with 3 disks each on different storage domains.
@@ -38,16 +20,16 @@ Allow VMs to have disks on multiple storage domains
 ## As a RHEV-M GUI user, I want to be able to create a VM from a template and be able to specify on which storage domain each disk should be created.  I know the feature works when I can create a VM from a template that has 3 disks and I can put each disk on a separate storage domain.
 ## As a REST API user, I want to be able to create a VM from a template and be able to specify on which storage domain each disk should be created.  I know the feature works when I can create a VM from a template that has 3 disks and I can put each disk on a separate storage domain. 
 
-== Acceptance Tests ==
+= Acceptance Tests =
  Will be based on the "I know the feature works..." in the user stories.
 
-=== Additional functionality to verify ===
+== Additional functionality to verify ==
 # create snapshots
 # delete disk
 # delete VM
 # start VM
 
-== Overall design ==
+= Overall design =
 The main change that needs to happen is to have each image associated with its own storage domain.
 
 == GUI ==
@@ -74,17 +56,17 @@ This section describes the REST design for this feature.
 == Backend ==
 There should not be any changes to the database or the object model to support this feature.  Many of the command classes will need their logic changes to handle processing each disk individually by their storage domain instead of handling them all at once.
 
-== VDSM ==
+= VDSM =
 Vdsm already supports this feature; it has no limitation on the location of disk images. Any storage domain for any VM disk will do.
 
-== Open Issues ==
+= Open Issues =
 # Need to consider negative cases when some storage domains fail, etc.
 # Need to determine which flows will need additional transactionality due to multiple storage domains.
 # Need to figure out how hibernation will work
 
-== Known Issues / Risks ==
+= Known Issues / Risks =
 Being developed in parallel with quotas. Can't anticipate changes needed to work with quotas.
 
-== Needed documentation ==
+= Needed documentation =
 The docs will need to be updated with new screenshots showing adding a disk to a VM and selecting the storage domain there.
 [[Category:Feature]][[Category:Multiple_storage_domains]]
