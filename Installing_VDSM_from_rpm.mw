@@ -1,6 +1,6 @@
 This Documents has come to describe the steps required in order to install &
 configure VDSM on the same host with ovirt-engine, this steps are usually
-not required when installing VDSM on another host then ovirt-engine<BR>
+not required when installing VDSM on another host than ovirt-engine<BR>
 Use this guide in order to install ovirt-engine: [[Installing_ovirt-engine_from_rpm]]
 
 == Installing Prerequisite Packages ==
