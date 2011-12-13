@@ -1,7 +1,7 @@
 == Multiple Storage Domains ==
 
 === Summary ===
-Allow a VM to spread its disks across several storage domains
+Allow a VM to spread its disks across several storage domains within the same Data Center.
 
 === Owner ===
 * Name: [[User:Jumper45| Jon Choate]]
@@ -12,7 +12,7 @@ Allow a VM to spread its disks across several storage domains
 Design Stage and RFC
 
 === Detailed Description ===
-The requirement is to give the ability to create VM disks on more than one storage domain.
+The requirement is to give the ability to create VM disks on more than one storage domain as long as the storage domains exist within the VM's Data Center.
 The basic work-flow is:
 
 The user creates the first disk, chooses the storage domain he wants
