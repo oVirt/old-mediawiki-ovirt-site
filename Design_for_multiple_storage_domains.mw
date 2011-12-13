@@ -34,9 +34,9 @@ There needs to be a new tab for Virtual Disks so that users can view which disks
 # Import a VM
 # Add Disk to VM
 # Import VM Template
-# Create Snapshot
 # Move Disk
 # Create VM from Template
+# Create template from VM
 
 == REST Design (Modeling) ==
 This section describes the REST design for this feature.
