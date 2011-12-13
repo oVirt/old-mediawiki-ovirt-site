@@ -20,9 +20,17 @@ Will be based on the "I know the feature works..." in the user stories.
 The main change that needs to happen is to have each image associated with its own storage domain.
 
 == GUI ==
+
+=== General Changes ===
+==== Virtual Machines Tab ====
+The Virtual Disks tab need to have a Storage Domain column added
+==== Storage Tab ====
+The Virtual Machines tab need to have some columns removed<br>
+There needs to be a new tab for Virtual Disks so that users can view which disks are on which domains.
+
+=== Workflow Changes ===
 # Add a VM
 # Import a VM
-# Hibernate VM
 # Add Disk to VM
 # Import VM Template
 # Create Snapshot
