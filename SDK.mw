@@ -164,8 +164,6 @@ api = API(url='http://host:port', username='user@domain', password='password')
 
 === codegen ===
 
-==== support for URL parameters ====
-
 ==== auto-generate python entities from schema with GenerateDS ====
 
 ==== interface for task polling ====
