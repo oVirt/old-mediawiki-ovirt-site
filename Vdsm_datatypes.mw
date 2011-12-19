@@ -1,0 +1,17 @@
+{| border="1" cellpadding="10"
+!Type name
+!Use
+!Specification
+|-
+|DriveSpec_t
+|Uniquely identifies a storage volume for use as a drive for a virtual machine
+| Standard UUID quartet: spUUID, sdUUID, imgUUID, volUUID
+
+'''or'''
+
+Device mapper GUID
+
+'''or'''
+
+blkid UUID
+|}
