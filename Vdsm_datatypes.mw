@@ -35,8 +35,8 @@ vdsm uses various complex types throughout its API.  Currently these are express
   'nicModel'       # A comma-separated list of nic models to use, one per desired network device.
                    # String: 'ne2k_pci', 'i82551', 'i82557b', 'i82559er', 'rtl8139', 'e1000', 'pcnet', 'virtio'
   'macAddr'        # A comma-separated list of mac addresses to use, one per desired network device.
-  'bridge'         # A comma-separated list of host bridge names, one per desired network device.  Each device will be connected
-                   # to the corresponding host network.
+  'bridge'         # A comma-separated list of host bridge names, one per desired network device.
+                   # Each device will be connected to the corresponding host network.
   'smp'            # The number of desired vcpus.
   'cpuType'        # Set cpu type and features.  Comma-separated list with the following specification:
                    # <cpuType>,<feature-1>,<feature-2>,...<feature-N>
@@ -65,4 +65,13 @@ vdsm uses various complex types throughout its API.  Currently these are express
   'acpiEnable'     # Enable ACPI in the guest? Boolean.
   # The following 'custom' fields are also recognized: vhost, sndbuf, viodiskcache
 }</pre>
+|-
+|VM_SetTicket_ExistingConnAction_t
+|Describes how to handle an existing vm display connection when establishing a new connection.
+|String:
+<pre>
+'keep'        # Allow the current user to remain connected
+'disconnect'  # Disconnect the current user
+'fail'        # Abort the operation
+</pre>
 |}
