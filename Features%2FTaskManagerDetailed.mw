@@ -316,8 +316,7 @@ Common command steps which tasks will be created for are: INIT, VALIDATION, EXEC
 Tasks and events won't be created for internal commands.
 
 === Events ===
-The events log should be associated with the command which created the event. The association of the command with the events will enable viewing all of the events related to the specific command.<BR>
-Event logs will be created when command tasks (''TaskInfo'') are created.
+Event logs will be created when command tasks (''CommandTaskInfo'') are created.
 
 === Dependencies / Related Features and Projects ===
 The Task Manager is depended on the Internal Locking Mechanism feature [[Features/DetailedLockMechanism]].
