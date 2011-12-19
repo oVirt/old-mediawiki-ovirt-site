@@ -75,9 +75,9 @@ vdsm uses various complex types throughout its API.  Currently these are express
   'kernelArgs'     # When direct-boot is enabled, pass these arguments to the kernel. String.
   'acpiEnable'     # Enable ACPI in the guest? Boolean.
   # The following 'custom' fields are also recognized: vhost, sndbuf, viodiskcache
-  # This list does not include internal state variables or fields that may be inserted to activate special modes
-  # such as restore, migration or hibernation.  ''These should be added later in a special section.''
 }</pre>
+This list does not include internal state variables or fields that may be inserted to activate special modes
+such as restore, migration or hibernation.  ''These should be added later in a special section.''
 |-
 |VM_Migrate_t
 |Contains the parameters needed to migrate an existing domain to another host
@@ -97,5 +97,19 @@ vdsm uses various complex types throughout its API.  Currently these are express
 'keep'        # Allow the current user to remain connected
 'disconnect'  # Disconnect the current user
 'fail'        # Abort the operation
+</pre>
+|-
+|Volume_Type_t
+|Specifies whether a volume is preallocated or sparse
+|<pre>
+  PREALLOCATED  # All needed storage for the volume is allocated at volume creation time
+  SPARSE        # Storage is allocated dynamically as more space is required
+</pre>
+|-
+|Volume_Format_t
+|The file data format
+|<pre>
+  COW_FORMAT  # The qemu COW format is specified
+  RAW_FORMAT  # The raw format is specified
 </pre>
 |}
