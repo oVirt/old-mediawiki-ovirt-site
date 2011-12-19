@@ -7,13 +7,29 @@ vdsm uses various complex types throughout its API.  Currently these are express
 |-
 |DriveSpec_t
 |Uniquely identifies a storage volume for use as a drive for a virtual machine
-| Standard UUID quartet: spUUID, sdUUID, imgUUID, volUUID
-
+| <pre>{ spUUID, sdUUID, imgUUID, volUUID } #Standard UUID quartet</pre>
 '''or'''
-
-Device mapper GUID
-
+<pre>{ GUID } # Device mapper GUID</pre>
 '''or'''
-
-blkid UUID
+<pre>{ UUID } # blkid-based UUID</pre>
+|-
+|VM_Create_t
+|Contains all parameters needed to create a new virtual machine
+|<pre>{
+  'hiberVolHandle' # The volume UUID containing hibernation data (if present)
+                   # A comma-separated list: sdUUID,spUUID,stateImageID,stateVolumeID,paramImageID,paramVolumeID
+  'restoreState' # A volume containing migration restore data. DriveSpec_t
+  'memSize' # The desired amount of memory (in megabytes)
+  'display' # The type of display.  String: 'qxl', 'vnc', 'qxlnc', 'local'
+  'boot' # The desired boot device. String: 'a', 'c', 'd', 'n'
+  'vmType' # The type of VM to create.  String: 'kvm'
+  'floppy' # Set the floppy disk volume. DriveSpec_t
+  'cdrom' # Set the cdrom volume. DriveSpec_t
+  'sysprepInf'
+  'nicModel'
+  'recover'
+  'smp'
+  'drives'
+  
+}</pre>
 |}
