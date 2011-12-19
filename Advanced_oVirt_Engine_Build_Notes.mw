@@ -58,3 +58,11 @@ $> mvn2 clean install -DskipTests=true
 [[Category:Draft documentation]]
 [[Category:Engine]]
 [[Category:How to]]
+
+== Log Configuration ==
+Engine logging is done with log4j.<BR>
+the configuration is done with jboss-log4j.xml file which can be found under <jboos profile dir>/conf/<BR>
+this file contains categories for main components, and log level can be changed there.<BR>
+also 3rd parties components are configured in this file (like apache http client).<BR>
+it is also possible to add appenders which allow logging some components to different files.<BR>
+(this is useful when logging debug messages of component that may create a lot of 'noise' in the regular log).
