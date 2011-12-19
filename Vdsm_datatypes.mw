@@ -112,4 +112,12 @@ such as restore, migration or hibernation.  ''These should be added later in a s
   COW_FORMAT  # The qemu COW format is specified
   RAW_FORMAT  # The raw format is specified
 </pre>
+|-
+|Volume_Legality_t
+|Indicates the legality of the volume
+|<pre>
+  ILLEGAL_VOL
+  LEGAL_VOL
+  FAKE_VOL
+</pre>
 |}
