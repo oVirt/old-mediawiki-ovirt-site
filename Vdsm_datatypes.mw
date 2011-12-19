@@ -120,4 +120,11 @@ such as restore, migration or hibernation.  ''These should be added later in a s
   LEGAL_VOL
   FAKE_VOL
 </pre>
+|-
+|Image_MoveOperation_t
+|Specify the type of image move operation that is desired
+|<pre>
+  COPY_OP
+  MOVE_OP
+</pre>
 |}
