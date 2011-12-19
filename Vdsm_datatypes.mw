@@ -1,20 +1,21 @@
 vdsm uses various complex types throughout its API.  Currently these are expressed as free-form dictionaries and/or strings with magic values.  This wiki page attempts to capture a comprehensive list of these types for reference and to serve as a base for discussion on creating a more formalized specification of the types for the next generation API.
 
 {| border="1" cellpadding="10"
-!Type name
-!Use
+!Type
 !Specification
 |-
-|DriveSpec_t
-|Uniquely identifies a storage volume for use as a drive for a virtual machine
+|'''DriveSpec_t'''
+
+Uniquely identifies a storage volume for use as a drive for a virtual machine
 | <pre>{ spUUID, sdUUID, imgUUID, volUUID } #Standard UUID quartet</pre>
 '''or'''
 <pre>{ GUID } # Device mapper GUID</pre>
 '''or'''
 <pre>{ UUID } # blkid-based UUID</pre>
 |-
-|HibernationVolumeHandle_t
-|Bundles together the storage resources that are needed for hibernation operations
+|'''HibernationVolumeHandle_t'''
+
+Bundles together the storage resources that are needed for hibernation operations
 |<pre>{
   sdUUID         # Storage domain that contains the state and param volumes
   spUUID         # Storage pool
@@ -24,8 +25,9 @@ vdsm uses various complex types throughout its API.  Currently these are express
   paramVolumeID  # Volume UUID for hibernation parameters
 }</pre>
 |-
-|VM_Create_t
-|Contains all parameters needed to create a new virtual machine
+|'''VM_Create_t'''
+
+Contains all parameters needed to create a new virtual machine
 |<pre>{
   'vmName'         # Set the name of the virtual machine. String.
   'vmId'           # The virtual machine UUID.
@@ -79,8 +81,9 @@ vdsm uses various complex types throughout its API.  Currently these are express
 This list does not include internal state variables or fields that may be inserted to activate special modes
 such as restore, migration or hibernation.  ''These should be added later in a special section.''
 |-
-|VM_Migrate_t
-|Contains the parameters needed to migrate an existing domain to another host
+|'''VM_Migrate_t'''
+
+Contains the parameters needed to migrate an existing domain to another host
 |<pre>{
   'vmId'           # The UUID of the VM to migrate
   'mode'           # String: 'remote' or 'file'
@@ -90,8 +93,9 @@ such as restore, migration or hibernation.  ''These should be added later in a s
   'downtime'       # The maximum amount of allowed downtime during migration
 }</pre>
 |-
-|VM_SetTicket_ExistingConnAction_t
-|Describes how to handle an existing vm display connection when establishing a new connection.
+|'''VM_SetTicket_ExistingConnAction_t'''
+
+Describes how to handle an existing vm display connection when establishing a new connection.
 |String:
 <pre>
 'keep'        # Allow the current user to remain connected
@@ -99,30 +103,34 @@ such as restore, migration or hibernation.  ''These should be added later in a s
 'fail'        # Abort the operation
 </pre>
 |-
-|Volume_Type_t
-|Specifies whether a volume is preallocated or sparse
+|'''Volume_Type_t'''
+
+Specifies whether a volume is preallocated or sparse
 |<pre>
   PREALLOCATED  # All needed storage for the volume is allocated at volume creation time
   SPARSE        # Storage is allocated dynamically as more space is required
 </pre>
 |-
-|Volume_Format_t
-|The file data format
+|'''Volume_Format_t'''
+
+The file data format
 |<pre>
   COW_FORMAT  # The qemu COW format is specified
   RAW_FORMAT  # The raw format is specified
 </pre>
 |-
-|Volume_Legality_t
-|Indicates the legality of the volume
+|'''Volume_Legality_t'''
+
+Indicates the legality of the volume
 |<pre>
   ILLEGAL_VOL
   LEGAL_VOL
   FAKE_VOL
 </pre>
 |-
-|Image_MoveOperation_t
-|Specify the type of image move operation that is desired
+|'''Image_MoveOperation_t'''
+
+Specify the type of image move operation that is desired
 |<pre>
   COPY_OP
   MOVE_OP
