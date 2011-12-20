@@ -1,0 +1,81 @@
+= SPM Priority =
+----
+
+== Summary ==
+The SPM Priority feature allows the admin to define priorities between hosts regarding the SPM selection process.
+
+
+== Owner ==
+<!--This should link to your home wiki page so we know who you are-->
+* Feature owner: [[User:msalem| Muli Salem]]
+:* Backend Component owner: [[User:msalem| Muli Salem]]
+:* GUI Component owner: [[User:?| ?]]
+:* REST Component owner: [[User:mpasternak| Michael Pasternak]]
+:* QA Owner: [[User:?| ?]] 
+
+<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
+* Email: msalem@redhat.com
+
+== Current status ==
+* PRD stage
+* Last updated date: Tue Dec 20 2011:
+
+
+== Description ==
+The SPM selection process happens when a command needs SPM authorization to run, for example DestroyImageVDSCommand and AttachStorageDomainVDSCommand. Currently, the SPM selection process is random, meaning a host is chosen randomly out of the hosts that are currently UP.
+
+
+== PRD ==
+The requirements are the following:
+
+# Enable setting a priority between -1 and 100 for a host (100 is the highest, -1 means never to chose this host).
+# When SPM selection process takes place, use the SPM priority to select an SPM.
+# Default for upgrading ovirt will be 50.
+
+
+== Design ==
+Current flow:
+
+# All hosts except in the Data Center are fetched.
+# One is chosen randomly, and SPMStatusVDSCommand is called with it.
+# If it returns with status free and (spmStatus.getSpmId() != -1) --> this host is chosen as the new SPM.
+
+New Design:
+
+# Adding a vds_spm_priority field to vds_static.
+## This field is configurable upon host creation and host editing by the admin.
+
+
+<span style="color:Teal">'''command_entity'''</span> represents the command entity:<BR>
+{|class="wikitable sortable"
+!border="1"| Column Name ||Column Type ||Null? / Default ||Description 
+|-
+|vds_spm_priority ||smallint || ||The Spm priority of this vds
+|-
+|}
+
+
+
+
+Algorithm for selecting a host according to priorities
+------------------------------------------------------
+
+
+== Open Issues ==
+
+== Dependencies / Related Features ==
+Affected rhevm projects:
+* API
+* CLI
+* backend
+* Webadmin
+* User Portal
+
+== Documentation / External references ==
+
+
+== Comments and Discussion ==
+
+----
+[[Category:Template]]
+[[Category:Feature]]
