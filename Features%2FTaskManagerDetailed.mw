@@ -3,8 +3,8 @@
 == Task Manager ==
 
 === Summary ===
-A Task Manager is a monitor which shows the current actions running in ovirt-engine and tracks their progress. It also capable of presenting completed commands.
-The current design describes tasks monitoring and sequential command.<BR>
+A Task Manager is a monitor which shows the current actions running in ovirt-engine and tracks their progress. It also capable of presenting completed commands for a period of time.
+The current design describes tasks monitoring.<BR>
 [[http://ovirt.org/wiki/Features/TaskManager Task Manager feature page]]
 
 === Owner ===
