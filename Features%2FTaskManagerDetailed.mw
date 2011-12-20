@@ -111,11 +111,11 @@ The following class diagram focuses on the ''CommandEntity'' and its associated 
 |-
 |owner_id ||UUID ||not null ||The user which triggered the command
 |-
-|owner_type ||TinyInt ||not null ||The type user which triggered the command
+|owner_type ||TinyInt ||not null ||The type of the user which triggered the command
 |-
 |parameters ||text ||not null ||A JSON representation of the parameters associated with the command
 |-
-|action_type ||integer ||not null ||A JSON representation of the parameters associated with the command
+|action_type ||integer ||not null ||The type of the command as defined by ''VdcActionType''
 |-
 |message ||text ||null ||Stores the can-do-action message - relevant if move to asynchronous invocation
 |-
@@ -142,7 +142,9 @@ The following class diagram focuses on the ''CommandEntity'' and its associated 
 |-
 |parent_task_id ||UUID ||null ||The previous-in-hierarchy task 
 |-
-|command_entity_id ||UUID ||not null ||The command ID
+|command_entity_id ||UUID ||not null ||The command ID which the task was created for
+|-
+|root_command_entity_id ||UUID ||not null ||The root command ID of the action hierarchy
 |-
 |task_name ||String ||not null ||The task name 
 |-
