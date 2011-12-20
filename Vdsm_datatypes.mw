@@ -142,4 +142,14 @@ A list of device names to include when creating a new LVM volume group
 |<pre>
 [ "sda1", "sdb3" ... ]
 </pre>
+|-
+|'''ISCSI_Connection_t'''
+
+A dictionary of iSCSI connection information
+|<pre>{
+  'connection' # iSCSI host IP address
+  'port'       # iSCSI host port
+  'user'       # Login user
+  'password'   # Login password
+}</pre>
 |}
