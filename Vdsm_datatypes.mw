@@ -157,10 +157,27 @@ A dictionary of iSCSI connection information
 
 Identifies the type of backing storage that is used by the domain
 |<pre>
+  UNKNOWN_DOMAIN = 0
   NFS_DOMAIN = 1
   FCP_DOMAIN = 2
   ISCSI_DOMAIN = 3
   LOCALFS_DOMAIN = 4
   CIFS_DOMAIN = 5
+</pre>
+|-
+|'''StorageDomain_Create_TypeParameters_t'''
+
+Storage Domain type-specific creation parameters
+|''For FCP and iSCSI domains:''
+<pre>
+  vgUUID      # The UUID of the volume group to be used
+</pre>
+''For NFS domains:''
+<pre>
+  remotePath  # The path to the remote NFS exported filesystem (<host>:/<path>)
+</pre>
+''For LOCALFS domains:''
+<pre>
+  localPath  # The local path to use (eg. /var/localstorage)
 </pre>
 |}
