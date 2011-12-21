@@ -20,6 +20,10 @@ wget http://www.ovirt.org/releases/nightly/fedora/16/ovirt-engine.repo -P /etc/y
 Install ovirt-engine by executing:
  <nowiki>
 yum install -y ovirt-engine
+ </nowiki>
+
+and execute the installation utility:
+ <nowiki>
 engine-setup
  </nowiki>
 
