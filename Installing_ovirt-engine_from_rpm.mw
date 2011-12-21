@@ -15,25 +15,14 @@ wget http://www.ovirt.org/releases/nightly/fedora/16/ovirt-engine.repo -P /etc/y
  </nowiki>
 
 = Ovirt-engine =
-
-== Configuring Postgresql ==
-If this is the first time postgresql is used on this host, execute:
- <nowiki>
-su - postgres -c 'pg_ctl initdb'
-service postgresql start
- </nowiki>
-
-It is recommended to add this service to auto start by executing:
- <nowiki>
-chkconfig postgresql on
- </nowiki>
-
 == Installing & Configuring ovirt-engine ==
 === Install ===
 Install ovirt-engine by executing:
  <nowiki>
 yum install -y ovirt-engine
  </nowiki>
+
+execute `engine-setup
 
 === DB Creation ===
 Create ovirt-engine's DB by executing:
@@ -48,11 +37,6 @@ once the patches that will fix them will be merged.''<BR>
 Change the default emulated VM type by executing:
  <nowiki>
 psql -U postgres engine -c "update vdc_options set option_value='pc-0.14' where option_name='EmulatedMachine' and version='3.0';"
- </nowiki>
-
-If you wish to change the default password for admin (letmein!), execute the following command:
- <nowiki>
-psql -U postgres engine -c "update vdc_options set option_value='NEWPASSWORD' where option_name='AdminPassword';"
  </nowiki>
 
 === Starting & Accessing ovirt-engine ===
