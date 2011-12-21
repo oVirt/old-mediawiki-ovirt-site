@@ -242,4 +242,15 @@ The current status of a StorageDomain
 
 A dictionary of sdUUIDs and status used to reconstruct the master StorageDomain
 |<pre>{ <sdUUID>: <status> } # Where status is a StorageDomainStatus_t</pre>
+|-
+|'''StoragePool_UpdateVMsList_t'''
+
+A list of VM metadata to store/update
+|<pre>[
+  {
+    'vm'       # The VM UUID
+    'ovf':     # The VM definition in OVF format
+    'imglist'  # A comma-separated list of imgUUIDs
+  }
+]</pre>
 |}
