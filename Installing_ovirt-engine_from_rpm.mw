@@ -27,6 +27,7 @@ and execute the installation utility:
 engine-setup
  </nowiki>
 
+
 === Additional Configuration ===
 ''These 2 steps are currently required due to bugs, they will be changed/removed
 once the patches that will fix them will be merged.''<BR>
@@ -34,17 +35,6 @@ Change the default emulated VM type by executing:
  <nowiki>
 psql -U postgres engine -c "update vdc_options set option_value='pc-0.14' where option_name='EmulatedMachine' and version='3.0';"
  </nowiki>
-
-=== Starting & Accessing ovirt-engine ===
-Start the jboss service by executing:
- <nowiki>
-service jboss start
- </nowiki>
-
-Jboss & ovirt-engine will be available within a minute or two by accessing the following url:
-http://yourhostname:8080/webadmin<BR>
-The user is: admin<BR>
-The default password (unless changed) is: letmein!<BR>
 
 === JBoss AS Security ===
 
