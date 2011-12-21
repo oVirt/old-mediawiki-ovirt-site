@@ -20,15 +20,7 @@ wget http://www.ovirt.org/releases/nightly/fedora/16/ovirt-engine.repo -P /etc/y
 Install ovirt-engine by executing:
  <nowiki>
 yum install -y ovirt-engine
- </nowiki>
-
-execute `engine-setup
-
-=== DB Creation ===
-Create ovirt-engine's DB by executing:
- <nowiki>
-cd /usr/share/ovirt-engine/dbscripts
-./create_db_devel.sh -u postgres
+engine-setup
  </nowiki>
 
 === Additional Configuration ===
