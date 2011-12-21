@@ -19,14 +19,13 @@ wget http://www.ovirt.org/releases/nightly/fedora/16/ovirt-engine.repo -P /etc/y
 === Install ===
 Install ovirt-engine by executing:
  <nowiki>
-yum install -y ovirt-engine
+yum install -y ovirt-engine ovirt-engine-setup
  </nowiki>
 
 and execute the installation utility:
  <nowiki>
 engine-setup
  </nowiki>
-
 
 === Additional Configuration ===
 ''These 2 steps are currently required due to bugs, they will be changed/removed
