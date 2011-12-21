@@ -219,4 +219,12 @@ Parameters needed for connecting to different kinds of storage
   'port'           # iSCSI server host port
   'initiatorName'  # iSCSI initiator
 }</pre>
+|-
+|'''StoragePool_ImageMoveList_t'''
+
+Defines a list of images to move along with per-image parameters
+|<pre>[
+  { imgUUID: <postZero> } # postZero is a boolean to set whether source
+                          # images should be zeroed after data has been moved
+]</pre>
 |}
