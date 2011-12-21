@@ -267,4 +267,14 @@ ldom           lpar           mcdata         na             nss_wrapper    racks
 rhevm          rsa            rsb            sanbox2        scsi           virsh
 vixel          vmware         vmware_helper  vmware_soap    wti            xcat
 xenapi         zvm</pre>
+|-
+|'''FenceNode_Action_t'''
+
+Selects the fencing action to perform
+|<pre>
+  'status'
+  'on'
+  'off'
+  'reboot'
+</pre>
 |}
