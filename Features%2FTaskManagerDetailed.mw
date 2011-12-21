@@ -73,7 +73,8 @@ The following entities/components will be added:
 ''@CommandName'' a descriptive name of the command to be reflect to the user.
 
 ===== Main Task Manager Class Diagram =====
-The following class diagrams describe the entities participating in the the Task Manager feature:
+The following class diagrams describe the entities participating in the the Task Manager feature:<BR>
+
 [[File:async-task-main-class-diagram.jpeg]]
 
 ----
