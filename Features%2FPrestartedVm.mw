@@ -61,7 +61,7 @@ Current flow:
 
 New Design:
 # Adding a min_prestarted_vms field to each VmPool.
-## This field is configurable upon Vmpool creation by the admin. 
+## This field is configurable upon Vmpool creation by the admin, and has a default value of 0;
 ## It can be edited after the pool has been created. In case an admin lowers the minimum number, the "extra" Vms will not be shutdown. He will be supplied with the following message:
 ''The number of prestarted Vms will not be reduced automatically.''
 
@@ -70,11 +70,12 @@ New Design:
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Description 
 |-
-|min_prestarted_vms ||Boolean ||not null / default true ||The minimum number of prestarted vms
+|min_prestarted_vms ||Boolean ||not null / default 0 ||The minimum number of prestarted vms
 |-
 |}
 
-  
+* We also need to add this column to vm_pools_view and vm_pools_full_view.
+
 # There are 2 possible approaches to maintaining the minimal amount of prestarted Vms:
 ## 
 ### Periodic - creating a job that runs every x minutes. x is defined in vdc_options in a new row called VmPoolRefreshRate. A new property needs to be added to the engine-config.properties file. The default will be 2 minutes. The job will go over each pool, check whether there are enough prestarted Vms running. If not, it will start the needed amount.
@@ -110,6 +111,10 @@ Overall, we need three optional flows:
 # A command that does CreateAllSnapshots + runVm (for the scheduler that is preparing prestarted vms) - a new flow.
 # A command that does all three (in case we didn't find a prestarted vm to give to a user) --> (already exists)
 
+== Affected Commands ==
+# AttachUserToVmFromPoolCommand - As explained above.
+# AddVdsCommand - 
+# UpdateVdsCommand -
 
 == Open Issues ==
 # * We need to define what the scheduler counts to be as a prestarted vm (only up, maybe VM.isStatusQualifyToMigrate() which includes Up, PoweringUp, Paused, RebootInProgress)
