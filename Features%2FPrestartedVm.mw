@@ -66,7 +66,7 @@ New Design:
 ''The number of prestarted Vms will not be reduced automatically.''
 
 
-<span style="color:Teal">'''command_entity'''</span> represents the command entity:<BR>
+<span style="color:Teal">'''min_prestarted_vms'''</span>:<BR>
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Description 
 |-
