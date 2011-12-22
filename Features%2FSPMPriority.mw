@@ -65,8 +65,8 @@ Algorithm for selecting a host according to priorities
 * Secondly, ordering them with RANDOM(), randomly sorts each sub group of hosts that have the same priority. This will make sure to prevent the same host from being chosen every time, in case there are several hosts with the same priority.
 
 == Affected Commands ==
-# AddVdsCommand - 
-# UpdateVdsCommand -
+# AddVdsCommand - no change since the parameter held is of type VdsStatic.
+# UpdateVdsCommand - no change since the parameter held is of type VdsStatic.
 
 == Open Issues ==
 
