@@ -68,8 +68,6 @@ Algorithm for selecting a host according to priorities
 # AddVdsCommand - 
 # UpdateVdsCommand -
 
-
-
 == Open Issues ==
 
 == Dependencies / Related Features ==
