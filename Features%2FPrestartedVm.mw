@@ -83,8 +83,8 @@ New Design:
 ## The second approach, is the event driven approach. The same logic can run upon events that triggers it. Events that should trigger: addVmPool, AttachUserToVmFromPoolCommand...?
 
 
-Algorithm for selecting a Vm for user
--------------------------------------
+'''Algorithm for selecting a Vm for user'''
+-------------------------------------------
 # A vm will be assigned to a user in the following priority:
 ## 
 ### The Vm is up
@@ -94,8 +94,8 @@ Algorithm for selecting a Vm for user
 ### The Vm is down
 ### is not given to a user
 
-Algorithm for maintaining number of prestarted Vms
-------------------------------------------------------------
+'''Algorithm for maintaining number of prestarted Vms'''
+--------------------------------------------------------
 # The Prestarted Vm Job counts the number of Vms that:
 ## 
 ### Are running (*) not by the admin
