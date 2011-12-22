@@ -55,7 +55,6 @@ New Design:
 |}
 
 
-
 Algorithm for selecting a host according to priorities
 ------------------------------------------------------
 # Fetch all hosts that are "UP" in Data Center, and that have not been attempted to be chosen as SPMs in the Data Center, ordered by SPM Priority (desc), and secondly by RANDOM().
@@ -64,6 +63,12 @@ Algorithm for selecting a host according to priorities
 
 * Ordering the hosts according to the SPM Priority will make sure that the priorities set by the admin will be taken under consideration.
 * Secondly, ordering randomly will make sure to prevent the same host from being chosen every time, in case there are several hosts with the same priority.
+
+== Affected Commands ==
+# AddVdsCommand - 
+# UpdateVdsCommand -
+
+
 
 == Open Issues ==
 
