@@ -36,13 +36,13 @@ The requirements are the following:
 == Design ==
 Current flow:
 
-# All hosts except in the Data Center are fetched.
-# One is chosen randomly, and SPMStatusVDSCommand is called with it.
-# If it returns with status free and (spmStatus.getSpmId() != -1) --> this host is chosen as the new SPM.
+# All hosts that are "UP", and that have not been attempted to be chosen as SPMs in the Data Center are fetched.
+# One is chosen randomly, and the SPM Selection algorithm begins.
+# Every host that fails to become the SPM, is added to a the mTriedVdssList of forbidden hosts.
 
 New Design:
 
-# Adding a vds_spm_priority field to vds_static.
+# Adding a vds_spm_priority field to vds_static (validated to be between -1 and 100).
 ## This field is configurable upon host creation and host editing by the admin.
 
 
@@ -56,10 +56,14 @@ New Design:
 
 
 
-
 Algorithm for selecting a host according to priorities
 ------------------------------------------------------
+# Fetch all hosts that are "UP" in Data Center, and that have not been attempted to be chosen as SPMs in the Data Center, ordered by SPM Priority (desc), and secondly by RANDOM().
+# The top host is chosen, and the SPM Selection algorithm begins.
+# Every host that fails to become the SPM, is added to a the mTriedVdssList of forbidden hosts.
 
+* Ordering the hosts according to the SPM Priority will make sure that the priorities set by the admin will be taken under consideration.
+* Secondly, ordering randomly will make sure to prevent the same host from being chosen every time, in case there are several hosts with the same priority.
 
 == Open Issues ==
 
