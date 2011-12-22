@@ -46,7 +46,7 @@ New Design:
 ## This field is configurable upon host creation and host editing by the admin.
 
 
-<span style="color:Teal">'''command_entity'''</span> represents the command entity:<BR>
+<span style="color:Teal">'''vds_spm_priority'''</span>:<BR>
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Description 
 |-
