@@ -1,0 +1,5 @@
+= What Can You Do for Vdsm =
+
+* <tt>pylint -E `git ls-files | grep '.py$'`</tt> makes me cry. A lot of it is "only" about bad style, but we should clear it up and add it to our <tt>make check-local</tt>
+
+[[Category:Vdsm]]
