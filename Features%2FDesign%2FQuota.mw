@@ -89,7 +89,7 @@ This section describes the backend design for this feature.
 |}
 
 
-'''quota_users''' - Represents the Quota users which are permitted to consume from the Quota.
+'''quota_user_map''' - Represents the Quota users which are permitted to consume from the Quota.
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default||Definition 
 |-
