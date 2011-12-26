@@ -112,8 +112,6 @@ Use cases :
 '''''vm_dynamic''''' - Add column ''quota_id'', which indicates the Quota the VM should be depended on its resources. <BR>  '''''image''''' - Add column ''quota_id'', which indicates the Quota the image should be depended on its storage resources. <BR>  '''''storage_pool''''' - Add column ''quota_enforcement'', Indicates the DC enforcement status for Quota (Disalbe(0) , Soft Limit (1),Hard Limit (2))  will be presented by Enum (see [[Features/Design/Quota#Classes|QuotaStatusEnum]].).
 
 =====Views=====
-[[Features/Design/Quota#Appendix|all_quotas]] - View of all the Quotas attached to all the storage pools for all Users.
-
 '''quota_global_view''' - View of all the storage pool quota in the setup, that is all the quota that vds_group_id and storage_id values are null in the quota_limitation.
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Definition 
