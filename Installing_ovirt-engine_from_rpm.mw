@@ -5,7 +5,7 @@ as ovirt-engine: [[Installing_VDSM_from_rpm]]
 == Installing Prerequisite Packages ==
 execute the following command as root:
  <nowiki>
-yum install -y postgresql-server postgresql-contrib pgadmin3 java-1.6.0-openjdk-devel
+yum install -y wget postgresql-server postgresql-contrib pgadmin3 java-1.6.0-openjdk-devel
  </nowiki>
 
 == Configuring Ovirt's Repository ==
