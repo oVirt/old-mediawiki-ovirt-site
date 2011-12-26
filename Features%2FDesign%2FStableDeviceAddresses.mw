@@ -186,7 +186,7 @@ Sample :
   }
 
 
-=== DB Design ===
+== DB Design ==
 
 New table generic_device:
   device_id           -- Unique identifier of the generic device
@@ -221,11 +221,11 @@ Modify all relevant views & SP to have the boot_order field.
 In order to prevent data duplication we will tend to upgrade some old data to new format and still be backward compatible.
 Examples : boot order,floppy/CDROM as a disk ...
 
-=== Logic Design ===
+== Logic Design ==
 
 We will keep a hash the database, the hash will enable us distinguish when a change occurs, if hash changed we have to get the new full structured data using the List (full) verb and save it to the database.
 
-== Migration ==
+=== Migration ===
 We will use cluster level decision, since we will have to support migration from host to host in the same Cluster.
 New API for both sending (create) and receiving (get*VmStats, List) information will use VM parameters as a structured dictionary
 
