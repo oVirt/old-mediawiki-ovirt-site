@@ -6,8 +6,7 @@ Use this guide in order to install ovirt-engine: [[Installing_ovirt-engine_from_
 == Installing Prerequisite Packages ==
 execute the following command as root:
  <nowiki>
-yum install -y bridge-utils
- </nowiki>
+yum install -y bridge-utils</nowiki>
 
 == Configuring Ovirt's Repository ==
 Execute the following command:
