@@ -11,15 +11,15 @@ means this host can not be selected to be the SPM.
 * Feature owner: [[User:msalem| Muli Salem]]
 :* Backend Component owner: [[User:msalem| Muli Salem]]
 :* GUI Component owner: [[User:?| ?]]
-:* REST Component owner: [[User:mpasternak| Michael Pasternak]]
+:* REST Component owner: [[User:?| ?]]
 :* QA Owner: [[User:?| ?]] 
 
 <!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
 * Email: msalem@redhat.com
 
 == Current status ==
-* PRD stage
-* Last updated date: Tue Dec 20 2011:
+* Design stage
+* Last updated date: Tue Dec 27 2011:
 
 
 == Description ==
@@ -29,7 +29,7 @@ Currently, the SPM selection process is random, meaning a host is chosen randoml
 == PRD ==
 The requirements are the following:
 
-# Enable setting a priority between -1 and 100 for a host (100 is the highest, -1 means never to chose this host).
+# Enable setting a priority between -1 and 100 for a host (100 is the highest, -1 means never to choose this host).
 # When SPM selection process takes place, use the SPM priority to select an SPM.
 # Default for upgrading ovirt will be 50.
 
@@ -45,6 +45,7 @@ New Design:
 
 # Adding a vds_spm_priority field to vds_static (validated to be between -1 and 100).
 ## This field is configurable upon host creation and host editing by the admin.
+# Replacing the list that is fetched in stage one of the current flow, with a list of prioritized hosts (detailed algorithm below).
 
 
 <span style="color:Teal">'''vds_spm_priority'''</span>:<BR>
@@ -63,7 +64,7 @@ Algorithm for selecting a host according to priorities
 # Every host that fails to become the SPM, is added to a the mTriedVdssList of forbidden hosts.
 
 * Ordering the hosts according to the SPM Priority will make sure that the priorities set by the admin will be taken under consideration.
-* Secondly, ordering them with RANDOM(), randomly sorts each sub group of hosts that have the same priority. This will make sure to prevent the same host from being chosen every time, in case there are several hosts with the same priority.
+* Secondly, ordering them with RANDOM(), randomly sorts each sub group of hosts that have the same priority. This will prevent the same host from being chosen every time, in case there are several hosts with the same priority.
 
 == Affected Commands ==
 # AddVdsCommand - no change since the parameter held is of type VdsStatic.
