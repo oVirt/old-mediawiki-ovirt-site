@@ -52,7 +52,7 @@ New Design:
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Description 
 |-
-|vds_spm_priority ||smallint || ||The Spm priority of this vds
+|vds_spm_priority ||smallint || CHECK (vds_spm_priority between (-1) and 100) DEFAULT 50 ||The Spm priority of this vds
 |-
 |}
 
