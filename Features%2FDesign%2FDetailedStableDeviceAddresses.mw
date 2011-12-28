@@ -5,23 +5,24 @@
 
 == Summary ==
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
-Quota provides a way for the Administrator to limit the resource usage in the System.<BR>
+Allow devices in guest virtual machines to retain the same device address allocations as other devices are added or removed from the guest configuration. This is particularly important for Windows guests in order to prevent warnings or reactivation when device addresses change.<br>
+In the term Device we include PCI, VirtIO Serial, SCSI, IDE, CCID and actually anything libvirt supports. 
 
 == Owner ==
 <!--This should link to your home wiki page so we know who you are-->
 * Feature owner: [[User:emesika| Eli Mesika]]
-:* GUI Component owner: [[User:gchaplik| Gilad Chaplik]]
-:* REST Component owner: [[User:mpasternak| Michael Pasternak]]
+:* GUI Component owner: Not Relevant
+:* REST Component owner: Not Relevant
 :* Engine Component owner: [[User:emesika| Eli Mesika]]
 :* QA Owner: [[User:ykaul| Yaniv Kaul]] 
 
 <!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
-* Email: mlipchuk@redhat.com
+* Email: emesika@redhat.com
 
 == Current status ==
-* Target Release: 
+* Target Release: 3.1
 * Status: Design Stage
-* Last updated date: Wed November 10 2011
+* Last updated date: Wed December 28 2011
 
 
 == Detailed Description ==
@@ -30,7 +31,7 @@ Quota provides a way for the Administrator to limit the resource usage in the Sy
 
 === Entity Description ===
 
-==== Quota ====
+==== Generic Device ====
 <!-- New entities and changes in existing entities. -->
 
 === CRUD ===
@@ -52,18 +53,11 @@ Quota provides a way for the Administrator to limit the resource usage in the Sy
 == Dependencies / Related Features and Projects ==
 <!-- What other packages (RPMs) depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another 
 Affected oVirt projects:
-* API
-* CLI
 * Engine-core
-* Webadmin
-* User Portal
 
 == Documentation / External references ==
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
-
-== Comments and Discussion ==
-http://www.ovirt.org/wiki/Talk:Features/Quota
-
+http://www.ovirt.org/wiki/Features/Design/StableDeviceAddresses
 
 == Open Issues ==
 <!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
