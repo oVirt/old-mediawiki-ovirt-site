@@ -265,6 +265,9 @@ Accessing the RESTful API:
  <nowiki>
 wget -O - --debug --auth-no-challenge --http-user=admin@internal --http-password='letmein!' head='Accept: application/xml' http://<server name>:<port>/api/
 </nowiki>
+
+(by default, the port is 8080).
+
 or from the browser
  <nowiki>
 http://<server name>:<port>/api
