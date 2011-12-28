@@ -34,7 +34,8 @@ even the following disk is unaccesiable.
 <!-- New entities and changes in existing entities. -->
 The following changes on disk entity will be done:
 A new field should be added to the table images which will indicate status of disk (plugged, unplugged)
-A new field should be added to the table images, type boolean , which will indicate if a disk should be activated during boot 
+A new field should be added to the table images, type boolean, 
+which will indicate if a disk should be activated during boot
 
 ==== CRUD ====
 <!-- Describe the create/read/update/delete operations on the entities, and what each operation should do. -->
