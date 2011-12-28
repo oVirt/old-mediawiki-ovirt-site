@@ -33,12 +33,21 @@ In the term Device we include PCI, VirtIO Serial, SCSI, IDE, CCID and actually a
 
 ==== Generic Device ====
 <!-- New entities and changes in existing entities. -->
+A new BE GenericDevice that represents video/sound/ant-other-device <br>
+GenericDevice will have the following properties <br>
+type         - The device type (for example 'sound')
+device       - The device (for example 'ich6')
+address      - A string reprenting all address details (for example  "type='pci' domain='0x0000' bus='0x00' slot='0x0c' function='0x0'")
+specparams   - Any device specific parameters (for example memory allocation per monitor in video device)
+
 
 === CRUD ===
 <!-- Describe the create/read/update/delete operations on the entities, and what each operation should do. -->
 
 === User Experience ===
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
+This feature is not exposed to the GUI in 3.1
+
 <!-- GUI mockups should also be added here to make it more clear -->
 === Installation/Upgrade ===
 <!-- Describe how the feature will effect new installation or existing one. -->
