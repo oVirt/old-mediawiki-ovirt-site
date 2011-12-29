@@ -84,7 +84,6 @@ The following entities/components will be added:
 ===== Annotations =====
 
 ''@NonMonitored'' defines which commands should not be monitored.<BR>
-''@CommandName'' a descriptive name of the command to be reflect to the user.
 
 ===== Main Task Manager Class Diagram =====
 The following class diagrams describes the entities participating in the the Task Manager feature:<BR>
