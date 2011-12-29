@@ -182,6 +182,8 @@ The following class diagram focuses on the ''CommandEntity'' and its associated 
 |-
 |job_id ||UUID ||null ||The job ID 
 |-
+|correlation_id ||UUID ||null ||The correlation ID provided from the client to identify the scope in which the event occurred
+|-
 |}
 
 ===== CRUD =====
