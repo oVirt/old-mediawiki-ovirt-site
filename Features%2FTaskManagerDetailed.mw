@@ -336,25 +336,15 @@ Job----Start time----End time----Status----[Entity Name----Entity Type]
 * In addition it has the TEST_POWER_MANAGEMENT task, a synchronous step invoked from the command itself and its status is determined immediately.
 * The last step is the INSTALL_HOST. This step is being executed in a new thread, detached from the ''AddVdsCommand'' thread. The completion of the INSTALL_HOST step will determine how the ''AddVdsCommand'' action ended. For that purpose the resolution of the action is delegated to the ''InstallVdsCommand''. The ''InstallVdsCommand'' will update the task which represents it. Since this is the last step of the action, it notifies the completion of the entire command.
 <pre>
-    // CommandEntity----Description----Start time----End time----Status----[Entity Name----Entity Type]
-    //      |
-    //      ------ VALIDATION -----Start time----End time----Status
-    //      |
-    //      ------ EXECUTION -----Start time----End time----Status
-    //                  |
-    //                  ------ TEST_POWER_MANAGEMENT-----Start time----End time----Status
-    //                  |
-    //                  ------ INSTALLING_HOST-----Start time----End time----Status
-    public CommandEntity createCommandMetadata(){
-        CommandEntity rootEntity = new CommandEntity(this);
-        rootEntity.addTask(CommandTaskType.VALIDATION);
-        CommandTaskInfo executionTask = rootEntity.addTask(CommandTaskType.EXECUTION);
-        rootEntity.addTask(executionTask, CommandTaskType.TEST_POWER_MANAGEMENT);
-
-        CommandEntity installVdsEntity = new CommandEntity(this, InstallVdsCommand.class);
-        installVdsEntity.addTask(CommandTaskType.INSTALLING_HOST);
-        rootEntity.addCommandEntity(executionTask, installVdsEntity);
-    }
+Job----Start time----End time----Status----[Entity Name----Entity Type]
+    |
+    ------ VALIDATION -----Start time----End time----Status
+    |
+    ------ EXECUTION -----Start time----End time----Status
+                        |
+                        |------ TEST_POWER_MANAGEMENT-----Start time----End time----Status
+                        |
+                        |------ INSTALLING_HOST-----Start time----End time----Status
 </pre>
 
 ===== MaintenanceNumberOfVdssCommand metadata =====
