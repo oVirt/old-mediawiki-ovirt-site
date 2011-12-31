@@ -100,7 +100,7 @@ step.VALIDATION=Validating
 ===== Main Task Manager Class Diagram =====
 The following class diagrams describes the entities participating in the the Task Manager feature:<BR>
 
-[[File:async-task-main-class-diagram.jpeg]]
+[[File:async-task-main-class-diagram.jpeg|800px|left]]
 
 ----
 
