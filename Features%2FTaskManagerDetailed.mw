@@ -427,9 +427,7 @@ If the command has no tasks, its status should be marked as failed.
 
 === Events ===
 Event log will be extended with two fields:<br>
-''job_id'' field designed to describe the job which the current event is part of.<br>
-Once the Job is cleared from the database, the job_id will point for non-existing job.
-
+''job_id'' field designed to describe the job which the current event is part of. Once the Job is cleared from the database, the job_id will point for non-existing job.<br>
 ''correlation_id'' associates the event with the global identifier of the action, which the event participate in.
 
 === Dependencies / Related Features and Projects ===
