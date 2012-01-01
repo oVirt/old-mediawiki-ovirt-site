@@ -46,7 +46,7 @@ The job supports the following scenarios:
 ====Requirements====
 The requirements for feature are as follow (V2 refers to future version):<BR>
 # Provide a mechanism for jobs monitoring via UI (i.e - monitor job status and progress, monitor tasks of given action, jobs of a given entity).
-# Define a global correlation-id which is spread cross-systems representing an action cross layers (Client--> Backend --> VDSM).
+# Define a correlation-id which used to identify an action spread cross-layers (Client--> Backend --> VDSM).
 # Provide the admin the option to remove jobs from the monitoring view (Job execution continues without monitoring).
 # Provide a mechanism for tasks management: cancel task, stop all tasks of command, restart of failed command, setting priority for a task. (V2)
 # Define a task dependency/task chaining mechanism (Task B will not start before completion of Task A).(V2)
