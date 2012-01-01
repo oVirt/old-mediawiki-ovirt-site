@@ -17,7 +17,7 @@ The current design describes tasks monitoring.<BR>
 === Current status ===
 * Target Release: 3.1
 * Status: Design Review
-* Last updated date: 28/12/2011
+* Last updated date: 01/01/2012
 
 === Detailed Description ===
 A Task Manager is a monitor which shows the current actions running in ovirt-engine server. It provides transparency for the administrator regarding the actions, their progress and status.<BR>
