@@ -397,8 +397,24 @@ Event log will be extended with two fields:<br>
 === User Experience ===
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
 <!-- GUI mockups should also be added here to make it more clear -->
-Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc.
-GUI mockups should also be added here to make it more clear
+A Tasks sub-view will be created in the Webadmin for presenting the Tasks. The following images mocks the Tasks sub-views:<br>
+
+'''General view of the Tasks:''' <br>
+[[File:Tasks-Sub-View-1.jpg]]
+
+----
+
+'''Tasks sub-view for a specific entity:''' <br>
+[[File:Tasks-Sub-View-For-Specific-Entity.jpg]]
+----
+
+'''Real layout of the Tasks sub-view:''' <br>
+[[File:Semi-real-mockup.png]]
+----
+
+'''Sorting Jobs in Tasks view by criteria of ''started-time'', ''last-update-time'' and ''status'':''' <br>
+[[File:Sorted-criteria-tasks-mockup.png]]
+----
 
 === Installation/Upgrade ===
 <!-- Describe how the feature will effect new installation or existing one. -->
