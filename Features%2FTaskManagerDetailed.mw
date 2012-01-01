@@ -268,7 +268,10 @@ The following sequence diagrams describe how the interaction of the new entities
 '''Job Metadata Description:'''<BR>
 
 ===== Multiple Action Sequence Diagram =====
-When invoking Multiple Actions, the runner will be the responsible for creating a Job for each of the commands:
+* When invoking Multiple Actions, the runner will be the responsible for creating a Job for each of the commands.
+* In multiple command execution the ''canDoAction'' of each command is executed explicitly prior to the command execution.
+* The Job will be created only for commands which pass the ''canDoAction''. 
+
 [[File:Multiple-action-runner-sequence-diagram.jpeg]]
 
 ==== Job Description by Command Types ====
