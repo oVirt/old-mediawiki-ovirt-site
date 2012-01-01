@@ -193,8 +193,8 @@ Sample :
 
 == DB Design ==
 
-New table generic_device:
-  device_id           -- Unique identifier of the generic device
+New table vm_device:
+  device_id           -- Unique identifier of the VM device
   vm_id               -- The VM id (FK of vm_static)
   device_type         -- The device type (for example : sound, video etc.)
   device_specparams   -- The device special parameters, for example ('display': 'vnc')
@@ -217,7 +217,7 @@ Adding shared flag to disks
   shared              -- Indicates if disk is shared between multiple VMs
 
 
-Generation CRUD SPs for the new generic_device table
+Generation CRUD SPs for the new vm_device table
 Modify all relevant views & SP to have the hash field.
 Modify all relevant views & SP to have the address field.
 Modify all relevant views & SP to have the boot_order field.
@@ -286,13 +286,14 @@ from the OVF file.
 VM/vm_dynamic entities should have additional hash properties
 disk_vm_map mapping should have the address and boot_order properties
 VM Interface should have the address and boot_order properties
-DAL classes for generic device support
+DAL classes for VM device support
 
 === Generic Device ===
 Generic Device will be supported in the new format and will include all unhandled devices as sound/video and future devices. Those devices will be persistent and will have Type , SubType (device specific) and an Address. For 3.1 the Generic Device is not exposed to any GUI/REST API.
 
 === Floppy / CDROM ===
 Floppy and CDROM will be typed as disk where its subtype is 'floppy' or 'cdrom'
+
 
 === Boot Order ===
 Boot order is a device property (just for subgroup of all available devices), We should add and persist boot order to all relevant entities
@@ -304,7 +305,7 @@ Return the full VM structure  for each VM when calling List with 'long' format
 Enable to pass additional parameter specifying VM ids.
 
 == Tests ==
-Add tests for new generic device DAL
+Add tests for new VM device DAL
 Modify all tests to track new added properties 
 === Expected unit-tests ===
 Verify that all new Generic Device DAO tests pass
@@ -368,6 +369,9 @@ Main issues are backward compatibility and affect of new 3.1 features.
 === Index ===
 Manage internal unique index for 'iface' virtio' or 'ide'
 Same ordering as in old format should be kept in order to support 3.0 VMs that starts to run on 3.1 cluster
+When a VM that run perviously on 3.0 cluster starts to run for the first time on a 3.1 cluster, we must send
+its devices in the same order to VDSM, if this is not done, libvirt can not guarantee that devices will preserve 
+their addresses. 
 
 === Hot Plug Disk/Nic ===
 Since managing this is via backend, we always assume that we get the exact Disk/Nic number as we know already.
