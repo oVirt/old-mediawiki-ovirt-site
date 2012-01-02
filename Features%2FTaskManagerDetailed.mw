@@ -132,15 +132,15 @@ The following class diagram focuses on the ''Job'' and ''Step'' entities:
 |-
 |command_id ||UUID ||not null ||The associated command ID 
 |-
-|status ||TinyInt ||not null ||The status of the job
+|status ||String ||not null ||The status of the job
 |-
 |owner_id ||UUID ||not null ||The user which triggered the command
 |-
 |parameters ||text ||not null ||A JSON representation of the parameters associated with the command
 |-
-|action_type ||integer ||not null ||The type of the command as defined by ''VdcActionType''
+|action_type ||String ||not null ||The type of the command as defined by ''VdcActionType''
 |-
-||visible ||bool ||default 'true' ||Describes if current entity should be presentable, overrides defaults visibility criteria of the job
+|visible ||bool ||default 'true' ||Describes if current entity should be presentable, overrides defaults visibility criteria of the job
 |-
 |start_time || Timestamp ||not null ||Job start time
 |-
@@ -163,11 +163,13 @@ The following class diagram focuses on the ''Job'' and ''Step'' entities:
 |-
 |job_id ||UUID ||not null ||The job ID which the step was created for
 |-
-|step_name ||String ||not null ||The step name 
+|step_type ||String ||not null ||The step name, values taken from ''StepEnum'' 
+|-
+|description ||String ||not null ||The step description
 |-
 |order ||Integer ||not null ||The step order in current job hierarchy level
 |-
-|status ||TinyInt ||not null ||The status of the step
+|status ||String ||not null ||The status of the step
 |-
 |start_time || Timestamp ||not null ||The step start time
 |-
@@ -175,7 +177,7 @@ The following class diagram focuses on the ''Job'' and ''Step'' entities:
 |-
 |correlation_id || String ||not null ||correlation identifier for cross system logging
 |-
-|external_id || String ||null ||identifier of the step in external system (e.g. VSDM task-id)
+|external_id || Guid ||null ||identifier of the step in external system (e.g. VSDM task-id)
 |-
 |external_system_type || String ||null ||The type of the external system (e.g. VSDM)
 |-
@@ -189,7 +191,7 @@ The following class diagram focuses on the ''Job'' and ''Step'' entities:
 |-
 |entity_id ||UUID ||not null ||The entity id which was provided to the Job main command
 |-
-|entity_type ||Tinyint ||not null ||The type of the entity
+|entity_type ||String ||not null ||The type of the entity
 |-
 |}
 
