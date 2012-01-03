@@ -29,9 +29,9 @@ Currently, the SPM selection process is random, meaning a host is chosen randoml
 == PRD ==
 The requirements are the following:
 
-# Enable setting a priority between -1 and 100 for a host (100 is the highest, -1 means never to choose this host).
+# Enable setting a priority between -1 and 10 for a host (10 is the highest, -1 means never to choose this host).
 # When SPM selection process takes place, use the SPM priority to select an SPM.
-# Default for upgrading ovirt will be 50.
+# Default for upgrading ovirt will be 5.
 
 
 == Design ==
@@ -43,7 +43,7 @@ Current flow:
 
 New Design:
 
-# Adding a vds_spm_priority field to vds_static (validated to be between -1 and 100).
+# Adding a vds_spm_priority field to vds_static (validated to be between -1 and 10).
 ## This field is configurable upon host creation and host editing by the admin.
 # Replacing the list that is fetched in stage one of the current flow, with a list of prioritized hosts (detailed algorithm below).
 
@@ -52,7 +52,7 @@ New Design:
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Description 
 |-
-|vds_spm_priority ||smallint || CHECK (vds_spm_priority between (-1) and 100) DEFAULT 50 ||The Spm priority of this vds
+|vds_spm_priority ||smallint || CHECK (vds_spm_priority between (-1) and 10) DEFAULT 5 ||The Spm priority of this vds
 |-
 |}
 
