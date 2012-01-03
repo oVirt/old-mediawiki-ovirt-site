@@ -385,6 +385,15 @@ Add new host ----Start time----End time----Status----[Entity Name----Entity Type
                      ---- DISCONNECT_FROM_STORAGE-----Start time----End time----Status
 </pre>
 
+===== Job for System Monitors =====
+System monitors are capable to invoke actions internally which the user might have interest in.<br>
+Providing an ''ExecutionContext'' to the internal command invocation with monitoring flag will cause the internal command to be reflected as Jobs.<br>
+The supported events are:
+* VM migrations
+* Host fencing
+* SPM election
+
+
 ===== Maintenance of the Job =====
 When Backend is initialized, the non-completed jobs are being examined for their statuses:
 * If the job represents a command with tasks, the tasks status is being examined and upon completion of tasks, the command will be finalized (by ''CommandBase.endAction()'').
