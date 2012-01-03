@@ -1,0 +1,18 @@
+Engine tools are mainly standlone java programs wrapped-up by scripts and mostly using the engine libraries 
+
+= Tools list =
+#engine-manage-domains
+#engine-config
+#engine-notifier
+#engine-iso-uploader
+#engine-logcollector
+#generate-ssh-keys
+#store-utils.sh
+
+== Tools description == 
+TODO 
+
+== Tools TODO ==
+#standardize all tools usage and make it concictent
+#create common infra both for java programs and for the wrapping scripts e.g functions to fulfill classpath dependecies etc.
+#use comon paths for all
