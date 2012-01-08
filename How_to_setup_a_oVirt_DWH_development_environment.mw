@@ -31,7 +31,7 @@ Or upgrade the database:
 * Drop the ovirt_history database, if you want to reset collection.
 * Run the maven undeployment profile:
  mvn clean install -Pundep
-* Run the root deployment script as root in the path:
+* Run the root undeployment script as root in the path:
  < repository folder path >/ovirt-dwh/data-warehouse/history_etl/etl_sources/packaging/root_etl_undeploy.sh
 * You may also remove config files in the paths: /etc/ovirt/ovirt-dwh, /etc/logrotate.d/ovirt-etl.
 * Everything should now be removed.
