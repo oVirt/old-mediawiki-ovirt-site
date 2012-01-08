@@ -98,6 +98,7 @@ Sample:
  'spiceSecureChannels': 'smain,sinputs',
  'display': 'qxl'
 
+=== New API ===
 
 New API will be used for Clusters with Compatibility Version 3.1 or upper
 
@@ -190,7 +191,6 @@ Sample :
          'address': 'PCI|IDE address dictionary',      <--- PCI = {'type':'pci', 'domain':'0x0000', 'bus':'0x00', 'slot':'0x0c', 'function':'0x0'} ,  
                                                             IDE = {'type':'drive', 'controller':'0', 'bus':'0', 'unit':'0'}
   ]
-
 
 == DB Design ==
 
