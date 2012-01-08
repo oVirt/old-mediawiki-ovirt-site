@@ -20,7 +20,7 @@ Test Days are open to anyone. If you have your own setup we will provide all the
 {|border="1"
 ! Name !! General !!Storage !! Networking !! APIs !!Spice !!User Interface !!Tools !!Distribution 
 |-
-| mgoldboi || V || V || Basic || Webadmin,CLI || V || || Fedora16 ||
+| mgoldboi || V || V || Basic || Webadmin,CLI || V || ||  || Fedora16
 |}
 
 ==Test Dates==
