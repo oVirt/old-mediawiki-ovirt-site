@@ -203,6 +203,51 @@ Each time the user will run or edit the VM, there will be a Quota check against 
 When calling synchronized Vds commands (such as createVm, MigrateVm), which should increase the consumption on cluster quota,  we will update the quota dynamic table in the DB when the VdsCommand is being called.<BR> When we will decrease the consumption on cluster quota, the update on the Quota tables should be at the end of the VDS command.
 
 ===== A-synchronized Vds commands =====
+Asynchronized operations, relected in the engine as tasks.<BR>
+The tasks which are being handled are : 
+ unknown,
+ copyImage,
+ moveImage,
+ createVolume,
+ deleteVolume,
+ deleteImage,
+ mergeSnapshots,
+ moveMultipleImages;
+
+'''Tasks For Commands'''
+{|class="wikitable sortable"
+!border="1"| command name ||Storage / Cluster || Task Name || Vds Command
+|-
+|CreateCloneOfTemplateCommand ||Storage ||copyImage ||CopyImageVDSCommand
+|-
+|CreateImageTemplateCommand ||Storage ||copyImage ||CopyImageVDSCommand
+|-
+|CreateCloneOfTemplateCommand ||Storage ||copyImage ||CopyImageVDSCommand
+|-
+|MoveMultipleImageGroupsCommand ||Storage||moveImage ||MoveImageGroupVDSCommand
+|-
+|MoveOrCopyImageGroupCommand ||Storage||moveImage ||MoveImageGroupVDSCommand
+|-
+|AddImageFromScratchCommand ||Storage||createVolume ||CreateImageVDSCommand
+|-
+|CreateSnapshotCommand ||Storage||createVolume ||CreateSnapshotVDSCommand
+|-
+|HibernateVmCommand ||Storage||createVolume ||CreateImageVDSCommand
+|-
+|RestoreFromSnapshotCommand ||Storage||deleteVolume ||DestroyImageVDSCommand
+|-
+|RemoveImageCommand ||Storage||deleteImage ||DeleteImageGroupVDSCommand
+|-
+|RemoveTemplateSnapshotCommand ||Storage ||deleteImage ||DeleteImageGroupVDSCommand
+|-
+|VmCommand ||Storage ||deleteImage ||DeleteImageGroupVDSCommand
+|-
+|MergeSnapshotSingleDiskCommand ||Storage ||mergeSnapshots ||MergeSnapshotsVDSCommand
+|-
+|no command ||Storage ||moveMultipleImages ||MoveMultipleImageGroupsVDSCommand
+|-
+|}
+
 For a-synchronized operations behaviour, the Quota Storage DB data, (and the quota storage memory table) will be synchronized based on the DB data and the AsyncTaskManager properties.<BR> The ATM will have new data, which will reflect the storage quantity change being done by each task, for example adding +4GB when new image is being added.<BR> Each task in the ATM map, should encapsulate the storage change which it is responsible for.<BR> The Quota Storage memory table should be updated in the execute right before the task is being created.<BR> At the end action we will validate whether the task was finished successfully or not, and by doing so we will update the quota storage memory table accordingly.<BR> When new SPM will be elected, we will recalculate the quota storage memory table, using the images_dynamic fields and also the AsyncTaskManager table right after re-polling all the tasks.<BR><BR>
 
 ===== upgrade behaviour =====
