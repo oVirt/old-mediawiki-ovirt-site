@@ -50,7 +50,7 @@ is done due to development of different features.
 
 ==== User work-flows ====
 <!-- Describe the high-level work-flows relevant to this feature. -->
-New actions will allow the user to plug or unplug a disk to/from a running VM . <BR>
+New actions will allow the user to plug or unplug a disk to/from a running VM . The feature will be allowed only on 3.1 clusters and above <BR>
 Via UI or the API the user will have an option to plug or unplug a disk of a running VM. <BR>
 The action will be allowed in the following flows: <BR>
 HotPlug will be allowed only on: <BR>
@@ -66,6 +66,7 @@ HotUnPlug will be allowed in the following cases: <BR>
 
 In order to perform an operation new verbs will be added at VDSM side: <BR>
 hotplug and hotunplug with the following dictionary to pass: <BR>
+A call to vdsm will be done in synchronious way <BR>
 
 
 'device': [   
