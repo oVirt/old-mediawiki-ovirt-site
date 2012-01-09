@@ -88,6 +88,9 @@ hotplug and hotunplug with the following dictionary to pass: <BR>
 
 A new vdsm errors will be added: FailedToPlugDisk(45) and FailedToUnPlugDisk(46) <BR>
 
+Additonal change will be done during createVM operation : <BR>
+A disk which is unplugged but attached to vm will not be passed to vdsm in order to run VM without it <BR>
+
 ==== Events ====
 <!-- What events should be reported when using this feature. -->
 
