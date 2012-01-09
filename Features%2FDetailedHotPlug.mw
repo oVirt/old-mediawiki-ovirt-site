@@ -51,7 +51,7 @@ is done due to development of different features.
 
 ==== User work-flows ====
 <!-- Describe the high-level work-flows relevant to this feature. -->
-New actions will allow the user to plug or unplug a disk to/from a running VM . The feature will be allowed only on 3.1 clusters and above <BR>
+New actions will allow the user to plug or unplug a disk to/from a running VM, it will be allowed only for disks which were added to vm by AddDiskToVMCommand . The feature will be allowed only on 3.1 clusters and above <BR>
 Via UI or the API the user will have an option to plug or unplug a disk of a running VM. <BR>
 The action will be allowed in the following flows: <BR>
 HotPlug will be allowed only on: <BR>
