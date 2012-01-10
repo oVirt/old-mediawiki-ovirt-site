@@ -162,3 +162,16 @@ Please upload the following ISO file to the ISO Storage Domain once the ISO Stor
     print 'Waiting for vm to reach Down status'
     while api.vms.get('my_vm').status.state != 'down':
         pass
+
+
+* '''Create a snapshot to vm '''
+
+    try:
+        if api.vms.get('my_vm').snapshots.add(params.Snapshot(description='my_snapshot', vm=api.vms.get('my_vm'))):
+            print 'Creating a Snapshot'
+    except Exception as e:
+        print 'Failed to Create a Snapshot:\n%s' % str(e)
+    
+    print 'Waiting for Snapshot creation to finish'
+    while api.vms.get('my_vm').status.state == 'image_locked':
+        pass
