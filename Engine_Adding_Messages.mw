@@ -1,6 +1,9 @@
 == Introduction ==
-This page contains instructions how to add new messages to oVirt engine,
+This page contains instructions how to add new messages to oVirt engine.
+
 This document contains information how to handle both ''Backend'' and ''Frontend'' modules with regards to messages in order to keep them synchronized.
+
+In order to add/edit a message in oVirt, please follow '''all''' instructions below in both ''Backend'' and ''Frontend'' sections.
 
 == Backend==
 * Any message that shall be exposed by the backend internal API (RunQuery / RunAction) must be delcared as a key/value pair in ''OVIRT_ENGINE/backend/manager/modules/dal/src/main/resources/bundles/AppErrors.properties''.
@@ -9,7 +12,6 @@ This document contains information how to handle both ''Backend'' and ''Frontend
  * A corresponding key should be added to VdcBllErrors enum
 
 == Frontend ==
-
 For every key/value pair that was added to Backend's ''AppErrors'' and ''VdsmErrors'', the following changes '''must''' be done for the ''WebAdmin'' and ''UserPortal'' projects:
 
 === AppErrors.properties ===
