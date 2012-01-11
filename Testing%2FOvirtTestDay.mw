@@ -191,7 +191,7 @@ In case you would like to test a product with a new test case, there is a templa
 *ping iirc channels #zzz,  as an alternative - send an email to ovirt-zzz list.
 
 ==Bug Reporting==
-ovirt - https://bugzilla.redhat.com/enter_bug.cgi?product=oVirt
-
+* ovirt - https://bugzilla.redhat.com/enter_bug.cgi?product=oVirt
+* Spice - https://bugs.freedesktop.org/ under Spice product
 
 ==Miscellaneous==
