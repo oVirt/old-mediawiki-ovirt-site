@@ -272,8 +272,7 @@ The following sequence diagrams describe how the interaction of the new entities
 <BR>
 * When command has tasks, it shares the same sequence as the previous sequence, except the last step. The async command will be resurrected by the ''AsyncTaskManager'' once there are no more active tasks for the command and will execute the ''CommandBase.endAction()'' for that command, in which the final state of the command will be set.
 * The tasks polling started after the command execution in ended.
-
-'''Job Metadata Description:'''<BR>
+<BR>
 
 ===== Multiple Action Sequence Diagram =====
 * When invoking Multiple Actions, the runner will be the responsible for creating a Job for each of the commands.
