@@ -132,6 +132,7 @@ The following drag scenarios are supported:
 | ? || Create a VLAN on the Logical Network ||
 |-
 | Drag a Bond on a  VLAN/Network || Create a connection between the Bond and the VLAN/Network ||
+|}
 
 == REST ==
  
