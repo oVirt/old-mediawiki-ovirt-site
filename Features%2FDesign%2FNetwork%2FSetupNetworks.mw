@@ -95,6 +95,44 @@ The changes we need to communicate are in the "network" structure for bridge and
 [[File:general.png]]
 [[File:more_cases.png]]
 
+
+== UI Alternative Suggestion ==
+
+I would like to describe a suggestion for a dialog, where the state of the network elements will be described using Blocks and Links.
+
+The UI Blocks describe the following networking elements:
+(Each element will be represented by a block, with a specific color)
+
+# Network Interface Card (NIC) (eth0, eth1)
+# Bond between two or more network Interfaces (bond01, bond1)
+# Virtual Network (either bridge or bridgeless)
+# VLAN on one Virtual Network.
+
+* Blocks can be connected to each-other by a visible line.
+* The scenarios for connecting block are specified below
+* Dbl-click or Click on each block will open it's setting dialog.
+* A block that can be removed (like a bond, or a VLAN) will have a red X icon.
+* A line can be removed by right clicking on it.
+* Lines will be automatically removed when their connecting elements are deleted.
+* There is a possibility to reconnect lines when they are automatically deleted (when a bond is removed, reconnect the line to one of the unbonded NICs.
+
+It will be possible to drag blocks on one another.
+The following drag scenarios are supported:
+
+{| cellspacing="0" border="1" cellpadding="5"
+
+! Drag Action !! Result !! Illustration
+|-
+| Drag a Network on a NIC, Drag a NIC on a Network|| Create a connection between the NIC and the Bridge ||
+|-
+| Drag a VLAN/Network on a NIC, Drag a NIC on a VLAN/Network || Create a connection between the NIC and the VLAN ||
+|-
+| Drag an unbonded NIC onto another unbonded NIC || Create a new Bond element for the two NICS ||
+|-
+| ? || Create a VLAN on the Logical Network ||
+|-
+| Drag a Bond on a  VLAN/Network || Create a connection between the Bond and the VLAN/Network ||
+
 == REST ==
  
 === Resource representation ===
