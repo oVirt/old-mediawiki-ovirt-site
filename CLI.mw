@@ -4,6 +4,12 @@ oVirt CLI package is a command line interface for the oVirt engine.
 
 __TOC__
 
+
+== Maintainer ==
+
+Michael Pasternak: mpastern@redhat.com
+
+
 == CLI Concepts ==
 
 * Generic interface (list, show, create, update, action verbs).
