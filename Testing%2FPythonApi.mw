@@ -249,6 +249,19 @@ Please upload the following ISO file to the ISO Storage Domain once the ISO Stor
         pass
 
 
+* '''Delete vm'''
+
+    try:
+        if api.vms.get('my_vm').delete():
+            print 'VM was removed successfully'
+    except Exception as e:
+        print 'Failed to remove VM:\n%s' % str(e)
+    
+    print 'Waiting for vm to be acctually deleted'
+    while api.vms.get('my_vm') in api.vms.list():
+       pass
+
+
 * '''Create a snapshot to vm'''
 
     try:
