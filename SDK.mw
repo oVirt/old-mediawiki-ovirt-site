@@ -5,6 +5,10 @@ oVirt SDK package a software development kit for the oVirt engine api.
 __TOC__
 
 
+== Maintainer ==
+
+Michael Pasternak: mpastern@redhat.com
+
 == SDK Concepts ==
 
 * Complete protocol abstraction.
