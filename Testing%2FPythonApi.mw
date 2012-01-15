@@ -236,7 +236,16 @@ Please upload the following ISO file to the ISO Storage Domain once the ISO Stor
         pass
 
 
-* '''Create a snapshot to vm '''
+* '''Export vm (into Export Domain)'''
+
+    try:
+        if api.vms.get('my_vm').export(params.Action(storage_domain=api.storagedomains.get('my_export'))):
+            print 'VM was exported successfully'
+    except Exception as e:
+        print 'Failed to export vm:\n%s' % str(e)
+
+
+* '''Create a snapshot to vm'''
 
     try:
         if api.vms.get('my_vm').snapshots.add(params.Snapshot(description='my_snapshot', vm=api.vms.get('my_vm'))):
