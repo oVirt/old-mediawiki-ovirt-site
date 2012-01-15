@@ -64,12 +64,10 @@ Generation CRUD SPs for the new vm_device table
 Modify all relevant views & SP to have the hash field.
 
 == DAL ==
-Adding GenericDeviceDAO, GenericDeviceDAODbFacadeImpl , GenericDeviceDAOHibernateImpl <br>
-Adding GenericDeviceDAOTest that extends BaseGenericDaoTestCase <br> 
+Adding VmDeviceDAO, VmDeviceDAODbFacadeImpl , VmDeviceDAOHibernateImpl <br>
+Adding VmDeviceDAOTest that extends BaseGenericDaoTestCase <br> 
 Adding Hash property to VmDynamic <br> 
 Updating VmDynamicDAOTest to include the new Hash property
-Adding Address & BootOrder properties to DiskVmMap & VmNetworkInterface <br>
-Updating DiskVmMapDAOTest and VmNetworkInterfaceDAOTest to include the new Address & BootOrder properties <br>
 
 === Metadata ===
 Adding test data for vm_device in fixtures.xml
