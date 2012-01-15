@@ -244,6 +244,7 @@ Please upload the following ISO file to the ISO Storage Domain once the ISO Stor
     except Exception as e:
         print 'Failed to export vm:\n%s' % str(e)
     
+    print 'Waiting for vm to reach Down status'
     while api.vms.get('my_vm').status.state != 'down':
         pass
 
