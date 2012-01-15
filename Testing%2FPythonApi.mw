@@ -243,6 +243,9 @@ Please upload the following ISO file to the ISO Storage Domain once the ISO Stor
             print 'VM was exported successfully'
     except Exception as e:
         print 'Failed to export vm:\n%s' % str(e)
+    
+    while api.vms.get('my_vm').status.state != 'down':
+        pass
 
 
 * '''Create a snapshot to vm'''
