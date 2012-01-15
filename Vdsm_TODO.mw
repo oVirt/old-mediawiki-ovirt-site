@@ -1,6 +1,6 @@
 = What Can You Do for Vdsm =
 
-* <tt>pylint -E `git ls-files | grep '.py$'`</tt> makes me cry. A lot of it is "only" about bad style, but we should clear it up and add it to our <tt>make check-local</tt>
+* <tt>pylint -E `git ls-files | grep '.py$'`</tt> makes me cry. A lot of it is "only" about bad style, but we should clear it up and add it to our <tt>make check-local</tt>. We should grow up and pass <tt>pychecker</tt> too.
 
 * Improve Vdsm portability. We are very much Fedora-centric at best. Do you want to have Vdsm on your pet distribution? Own that port!
 
