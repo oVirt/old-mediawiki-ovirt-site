@@ -97,7 +97,7 @@ Quota has to be taken in consideration, for every new feature that will involve 
 
 == Documentation / External references ==
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
-http://www.ovirt.org/wiki/Features/SharedRAWDisk
+http://www.ovirt.org/wiki/Features/SharedRawDisk
 
 == Comments and Discussion ==
 http://www.ovirt.org/wiki/Talk:Features/SharedRAWDisk
