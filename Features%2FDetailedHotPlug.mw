@@ -43,6 +43,9 @@ No new operation will be added, an update will be done by using of existing stor
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
 <!-- GUI mockups should also be added here to make it more clear -->
 
+The following UI mockup contain guidelines for VMs->Disks sub-tab:
+
+[[File:Vm_disks_hotplug.png]]
 
 ==== Installation/Upgrade ====
 <!-- Describe how the feature will effect new installation or existing one. -->
