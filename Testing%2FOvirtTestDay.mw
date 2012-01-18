@@ -151,21 +151,21 @@ on this section we'll try to have default deployment with the different APIs
 |-
 | Create a data-center || || || || ||
 |-
-| Create a cluster || || || || || 782713
+| Create a cluster || || || || || [https://bugzilla.redhat.com/show_bug.cgi?id=782713]
 |-
-| Update cluster || || || || 782828 || 
+| Update cluster || || || || [https://bugzilla.redhat.com/show_bug.cgi?id=782828] || 
 |-
-| Install a host || || ||782737 || ||782734,782734
+| Install a host || || ||[https://bugzilla.redhat.com/show_bug.cgi?id=782737] || ||[https://bugzilla.redhat.com/show_bug.cgi?id=782734],[https://bugzilla.redhat.com/show_bug.cgi?id=782734]
 |-
 | Create a storage domain on DC || || || || ||
 |-
 | Attach export/ISO domain to DC || || || || ||
 |-
-| Create vm || || 782794 || || ||
+| Create vm || || [https://bugzilla.redhat.com/show_bug.cgi?id=782794] || || ||
 |-
-| Delete vm || || || || 782830 ||
+| Delete vm || || || || [https://bugzilla.redhat.com/show_bug.cgi?id=782830] ||
 |- 
-| Import vm || 782717, || || || ||
+| Import vm || [https://bugzilla.redhat.com/show_bug.cgi?id=782717] || || || ||
 |- 
 | Start/hibernate/resume/stop vm || || || || ||
 |-
@@ -175,9 +175,9 @@ on this section we'll try to have default deployment with the different APIs
 |-
 | Create vm from template || || || || ||
 |-
-| Sign out || 782779, || || || ||
+| Sign out || [https://bugzilla.redhat.com/show_bug.cgi?id=782779] || || || ||
 |- 
-| General || || || || 782891 ||
+| General || || || || [https://bugzilla.redhat.com/show_bug.cgi?id=782891] ||
 |}
 
 Python API of the above scenarios can be found in:
