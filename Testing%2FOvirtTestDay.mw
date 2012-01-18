@@ -157,7 +157,7 @@ on this section we'll try to have default deployment with the different APIs
 |-
 | Create vm || || || || ||
 |- 
-| Import vm || || || || ||
+| Import vm || 782717, || || || ||
 |- 
 | Start/hibernate/resume/stop vm || || || || ||
 |-
