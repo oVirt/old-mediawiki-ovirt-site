@@ -23,9 +23,9 @@ systemctl disable NetworkManager.service
 service network start
 chkconfig network on</nowiki>
 
-Add the following content into a new file named: '''/etc/sysconfig/network-scripts/ifcfg-engine''':
+Add the following content into a new file named: '''/etc/sysconfig/network-scripts/ifcfg-ovirtmgmt''':
  <nowiki>
-DEVICE=engine
+DEVICE=ovirtmgmt
 TYPE=Bridge
 ONBOOT=yes
 DELAY=0
@@ -34,7 +34,7 @@ BOOTPROTO=dhcp</nowiki>
 Add the following line into the configuration file of your out going interface (usually em1/eth0)
 the file is located at: '''/etc/sysconfig/network-scripts/ifcfg-em1''' (assuming the device is em1)
  <nowiki>
-BRIDGE=engine</nowiki>
+BRIDGE=ovirtmgmt</nowiki>
 Full Example
  <nowiki>
 DEVICE=em1
@@ -42,11 +42,13 @@ BOOTPROTO=static
 IPADDR=192.168.1.212
 NETMASK=255.255.255.0
 ONBOOT=yes
-BRIDGE=engine</nowiki>
+BRIDGE=ovirtmgmt</nowiki>
 
 Restart the network service by executing:
  <nowiki>
 service network restart</nowiki>
+
+'''Note that if any other bridge (from ovirtmgmt) is present at the time of host installation, the bridge creation operation is skipped and you have to change the bridge settings to correspond to above shown configuration.'''
 
 == Installing & Configuring VDSM ==
 === Install ===
