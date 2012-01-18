@@ -168,6 +168,8 @@ on this section we'll try to have default deployment with the different APIs
 | Create a template from vm || || || || ||
 |-
 | Create vm from template || || || || ||
+|-
+| Sign out || 782779, || || || ||
 |}
 
 Python API of the above scenarios can be found in:
