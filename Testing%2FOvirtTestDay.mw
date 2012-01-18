@@ -157,7 +157,7 @@ on this section we'll try to have default deployment with the different APIs
 |-
 | Attach export/ISO domain to DC || || || || ||
 |-
-| Create vm || || || || ||
+| Create vm || || 782794 || || ||
 |- 
 | Import vm || 782717, || || || ||
 |- 
