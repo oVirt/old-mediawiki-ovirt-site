@@ -47,8 +47,7 @@ Describe how the feature will effect new installation or existing one.
 ==== User work-flows ====
 <!-- Describe the high-level work-flows relevant to this feature. -->
 Example of flow (assuming a VM was created with two disks): <BR>
-
-flow1.jpg
+[[File:Clone flow 1.jpg]]<BR>
 The next figure shows a snapshot was made, having now two images serving as the active images: <BR>
 
 flow2.jpg
