@@ -17,7 +17,7 @@ wget http://www.ovirt.org/releases/nightly/fedora/16/ovirt-engine.repo -P /etc/y
 = Ovirt-engine =
 == Installing & Configuring ovirt-engine ==
 === Cleanup ===
-'''Before every installation''', you should run the cleanup utility:
+'''Before every re-installation''', you should run the cleanup utility:
  <nowiki>
 engine-cleanup
  </nowiki>
