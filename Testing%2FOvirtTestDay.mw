@@ -149,9 +149,9 @@ on this section we'll try to have default deployment with the different APIs
 |-
 | Create a data-center || || || || ||
 |-
-| Create a cluster || || || || ||
+| Create a cluster || || || || || 782713
 |-
-| Install a host || || ||782737 || ||
+| Install a host || || ||782737 || ||782734,782734
 |-
 | Create a storage domain on DC || || || || ||
 |-
