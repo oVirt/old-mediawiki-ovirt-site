@@ -162,6 +162,8 @@ on this section we'll try to have default deployment with the different APIs
 | Attach export/ISO domain to DC || || || || ||
 |-
 | Create vm || || 782794 || || ||
+|-
+| Delete vm || || || || 782830 ||
 |- 
 | Import vm || 782717, || || || ||
 |- 
