@@ -86,6 +86,8 @@ You need at least two physical servers to install and configure a basic yet comp
 | Migrate Virtual Machines between the hypervisors ||
 |-
 | Collect log file using the log collector tool ||
+|-
+| ovirt-cli ||781821,782705,782707,782713,782734
 |}
 
 ===Configuration===
