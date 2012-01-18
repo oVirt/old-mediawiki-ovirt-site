@@ -37,10 +37,12 @@ Notes:
 # All payloads will be passed in the same method
 
 Vdsm verb:
+ <nowiki>
 { 'iso': [{'filename': 'content' }, {'filename': 'content'}],
   'floppy': [{'filename': 'content' }, {'filename': 'content'}],
   'sysprep': {'filename': 'content' },
-  'network': '...' }
+  'network': '...' } 
+ </nowiki>
 
 === User work-flows ===
 
