@@ -105,7 +105,7 @@ You need at least two physical servers to install and configure a basic yet comp
 |-
 | Use the General configuration as a base configuration ||
 |-
-| Create different types of storage domains (NFS, ISCSI, FC, local storage) with 2 or more data domains || FAILED for extend -- [https://bugzilla.redhat.com/show_bug.cgi?id=782432]
+| Create different types of storage domains (NFS, ISCSI, FC, local storage) with 2 or more data domains || FAILED for extend domain in iscsi -- [https://bugzilla.redhat.com/show_bug.cgi?id=782432]
 |-
 | Install at least 2 VMs on each of the Data Centers ||
 |-
