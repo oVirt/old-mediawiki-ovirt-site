@@ -35,11 +35,6 @@ There are a few options to model that:
 # Use current Floppy/CD attachment options:
 #* In floppy allow to attach either sysprep or payload
 #* In CD allow to attach either an ISO, or a payload
-# Override current Floppy/CD attachment options:
-#* Add a Payload option, in which you choose whether to pass the payload via CD or floppy (the passing method)
-#* In floppy allow to attach a payload
-#* In CD allow to attach a payload
-#* Once a payload is chosen (either via CD or floppy), it will override the floppy/CD attachment
 # Add a payload in addition to the current Floppy/CD attachment options:
 #* Add a Payload option, in which you choose whether to pass the payload via CD or floppy (the passing method)
 #* In floppy allow to attach a payload
