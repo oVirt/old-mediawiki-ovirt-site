@@ -29,7 +29,7 @@ This feature will let users of oVirt engine to create a VM based on a given snap
 (the cloned VM will not have a copy of the disk) and a proper event should be logged.<BR>
 
 ==== Shared disks and direct LUN diskes behavior ====
-9. For cloning a VM from snapshot that has shared disks, there are several options (one of them should be considered - this is still an open issue): <BR>
+9. For cloning a VM from snapshot that has shared disks, there are several options (one of them should be considered - this is still an open issue): <BR><BR>
 9.1. Block the taking a snapshot in such a situation (as shared disk do not support snapshotting) <BR>
 9.2. Creating a cloned disk, marking it plugged and available for usage. This may yield data corruption<BR>
 9.3. Marking the clone disk at the destination VM as unplugged. Allowing the user to plug it.<BR>
