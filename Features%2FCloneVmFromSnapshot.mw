@@ -26,7 +26,7 @@ This feature will let users of oVirt engine to create a VM based on a given snap
 6.A clone can be performed on a VM regardless of its status (i.e - can be performed if a VM is UP or down as long as the images are available) <BR>
 7.In order to prevent concurrent flows from modifying the original images that relate to the snapshot chain will the clone is taking place, these images should be locked <BR>
 8. If a disk that an image of it appeared in the snapshot chain is deleted, upon clone vm from snapshot, the images of the disk will not be copied <BR>
-(the cloned VM will not have a copy of the disk) and a proper event should be logged.<BR><BR>
+(the cloned VM will not have a copy of the disk) and a proper event should be logged.<BR>
 
 ==== Shared disks and direct LUN diskes behavior ====
 9. For cloning a VM from snapshot that has shared disks, there are several options (one of them should be considered - this is still an open issue): <BR>
