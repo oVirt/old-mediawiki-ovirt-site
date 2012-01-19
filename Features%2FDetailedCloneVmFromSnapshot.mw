@@ -79,7 +79,7 @@ What events should be reported when using this feature.
 
 The feature depends on the following projects: <BR>
 1. oVirt web-admin - to supply the UI parts for this feature <BR>
-2. oVirt API - tu spply REST modeling <BR><BR>
+2. oVirt API - to supply REST modeling <BR><BR>
 The feature depends on the following features: <BR>
 1. Stable device addresses - on introduction of VM devices, which will have to be a part of the clone <BR>
 2. Multiple storage domains - on introduction of multiple storage domains <BR>
