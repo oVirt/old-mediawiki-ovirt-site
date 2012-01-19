@@ -91,8 +91,9 @@ Is there upstream documentation on this feature, or notes you have written yours
 Add a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page
 
 === Open Issues ===
-<!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
-Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly.
-
+1. Behavior of Direct clone of Direct-Luns based disks and of shared disks - <BR>
+Automatically attaching these disks may yield to data corruption, if both source VM and destination VM are up. <BR>
+If we ignore cloning these disks, the cloned VM will not have these disks. <BR>
+A suggestion was raised to mark these disks as unplugged at cloned VM, allowing the administrator to decide whether to plug it or not. <BR>
 [[Category:Template]]
 [[Category:Feature]]
