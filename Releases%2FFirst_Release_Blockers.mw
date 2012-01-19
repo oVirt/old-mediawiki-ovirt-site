@@ -1,0 +1,6 @@
+=== First Release (3.0) Known blockers ===
+{|border="1"
+! Component !! Description !! Bugzilla !! Status !! Fixed in version 
+|-
+|| Installer || NFS ISO domain couldn't be attached || [https://bugzilla.redhat.com/show_bug.cgi?id=782439 782439]|| Fixed || Merged into engine_3.0 
+|}
