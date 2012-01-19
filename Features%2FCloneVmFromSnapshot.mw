@@ -14,20 +14,26 @@ This feature will let users of oVirt engine to create a VM based on a given snap
 * Last updated date: Wed Jan 18 2012
 
 === Detailed Description ===
+
+==== User interface =====
 1.A user will be able to create snapshots for a given virtual machine, and then to select a given snapshot and perform a clone of the VM.<BR>
-2.The disks of the cloned VM will represent a "collapsed" state of the selected snapshot<BR>
-3.A clone can be performed on a VM regardless of its status (i.e - can be performed if a VM is UP or down as long as the images are available) <BR>
-4.In order to prevent concurrent flows from modifying the original images that relate to the snapshot chain will the clone is taking place, these images should be locked <BR>
-5.The user will also be able to provide VM information (such as VM name) which will be based on the VM information of the original VM. <BR>
-6.The original VM configuration for a given snapshot will be retrieved by the UI , using a dedicated query carried out on oVirt-engine core <BR>
-7.The user will be be able to select different storage domains to hold the destination disks and to change their drive mapping,volume type and format. <BR>
+2.The user will also be able to provide VM information (such as VM name) which will be based on the VM information of the original VM. <BR>
+3.The original VM configuration for a given snapshot will be retrieved by the UI , using a dedicated query carried out on oVirt-engine core <BR><BR>
+4.The user will be be able to select different storage domains to hold the destination disks and to change their drive mapping,volume type and format. <BR>
+
+=== Cloning of images behavior ===
+5.The disks of the cloned VM will represent a "collapsed" state of the selected snapshot<BR>
+6.A clone can be performed on a VM regardless of its status (i.e - can be performed if a VM is UP or down as long as the images are available) <BR>
+7.In order to prevent concurrent flows from modifying the original images that relate to the snapshot chain will the clone is taking place, these images should be locked <BR>
 8. If a disk that an image of it appeared in the snapshot chain is deleted, upon clone vm from snapshot, the images of the disk will not be copied <BR>
-(the cloned VM will not have a copy of the disk) and a proper event should be logged.<BR>
-9. For cloning a VM from snapshot that has shared disks, there are several options: <BR>
+(the cloned VM will not have a copy of the disk) and a proper event should be logged.<BR><BR>
+
+==== Shared disks and direct LUN diskes behavior ====
+9. For cloning a VM from snapshot that has shared disks, there are several options (one of them should be considered - this is still an open issue): <BR>
 9.1. Block the taking a snapshot in such a situation (as shared disk do not support snapshotting) <BR>
 9.2. Creating a cloned disk, marking it plugged and available for usage. This may yield data corruption<BR>
 9.3. Marking the clone disk at the destination VM as unplugged. Allowing the user to plug it.<BR>
-10. For a disk residing on direct LUN, the feature still need to be defined. <BR>
+10. For a disk residing on direct LUN, the feature still need to be defined - it might be similar <BR>
 
 === Benefit to oVirt ===
 If we look at snapshots as "checkpoints" of VM state + data , and "checkpoints" are made in significant points of time, the feature allows a user to create a VM based on a significant point of time of another VM, and use the cloned VM, without interfering with the original VM (i.e - no need to perform collapse on images of the source VM).
