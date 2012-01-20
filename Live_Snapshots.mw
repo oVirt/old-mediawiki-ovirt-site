@@ -83,21 +83,14 @@ is responsible to treat the snapshot as a "live" when the VM is running.
 
 Snapshot Parameters Format:
 
- snapParams = {
-    "<vmDriveName1>": {
-      "domainID": "<sdUUID>",
-      "poolID":   "<spUUID>",
-      "imageID":  "<imgUUID>",
-      "volumeID": "<volUUID>",
-    },
-    "<vmDriveName2>": {
-      "domainID": "<sdUUID>",
-      "poolID":   "<spUUID>",
-      "imageID":  "<imgUUID>",
-      "volumeID": "<volUUID>",
-    },
-    [...]
-  }
+ snapParams = [
+     {"domainID": "<sdUUID>",
+      "poolID": "<spUUID>",
+      "imageID": "<imgUUID>",
+      "baseVolumeID": "<baseVolUUID>",
+      "volumeID": "<volUUID>"},
+    ...
+ ]
 
 = Live Snapshot Backend =
 Live snapshots operation extend regular snapshots as follow:
