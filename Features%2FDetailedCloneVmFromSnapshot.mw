@@ -84,7 +84,8 @@ The feature depends on the following features: <BR>
 1. Stable device addresses - on introduction of VM devices, which will have to be a part of the clone <BR>
 2. Multiple storage domains - on introduction of multiple storage domains <BR>
 3. Live snapshots - on introducing of snapshot entity and the association of snapshot and VM configuration (needed for querying VM configuration by snapshot) <BR>
-4. Direct LUN -on introduction of LUN-based disks (maybe this can postponed for later phase). <BR><BR>
+4. Direct LUN -on introduction of LUN-based disks (maybe this can postponed for later phase). <BR>
+5. Hot plug/unplug - this feature may depend on hot plug/unplug - see open issues section <BR><BR>
 
 Add a link to the feature description for relevant features.
 Does this feature effect other oVirt projects? Other projects?
