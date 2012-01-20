@@ -69,7 +69,9 @@ This can be seen in the next figure:<BR>
 <BR>[[File:Clone flow 4.jpg]]<BR>
 
 
-
+<BR><BR><BR>
+[[File:Clone flow 1.jpg]]<BR>
+<BR>Clone_flow_vm_from_snapshot_params.jpg
 
 ==== Events ====
 1. In case a snapshot is performed , and one of the disks is erased from the original VM, cloning from the snapshot 
