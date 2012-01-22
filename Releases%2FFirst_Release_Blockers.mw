@@ -4,5 +4,7 @@
 |-
 || Installer || NFS ISO domain couldn't be attached || [https://bugzilla.redhat.com/show_bug.cgi?id=782439 782439]|| Fixed || Merged into engine_3.0 
 |-
+|| Engine+Installer || LDAP authenticities against domain URI instead of LDAP Server URI || [https://bugzilla.redhat.com/show_bug.cgi?id=783127 783127]|| Fixed ||  
+|-
 || Enter|| Your || [https://bugzilla.redhat.com/show_bug.cgi?id=XXXX XXXX]|| BUG || HERE 
 |}
