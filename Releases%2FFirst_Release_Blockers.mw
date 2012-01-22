@@ -8,5 +8,7 @@
 |-
 || Installer || openssl lock file doesn't exist|| [https://bugzilla.redhat.com/show_bug.cgi?id=771590 771590]|| Fixed|| Merged into engine_3.0
 |-
+|-
+|| Engine || IPA - IPA does not perform login with UPN || https://bugzilla.redhat.com/show_bug.cgi?id=783662 783662]|| POSTED fix ||
 || Enter|| Your || [https://bugzilla.redhat.com/show_bug.cgi?id=XXXX XXXX]|| BUG || HERE 
 |}
