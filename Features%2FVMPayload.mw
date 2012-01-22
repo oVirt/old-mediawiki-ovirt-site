@@ -49,7 +49,6 @@ Notes:
 # All payloads will be passed in the current VDSM create verb
 # With either options, the engine API and VDSM API will be general enough to allow adding other passing methods in the future
 # The Modelling of this feature will include OVF schema changes as well
-
 <!--Vdsm verb:
  <nowiki>
 { 'iso': [{'filename': 'content' }, {'filename': 'content'}],
@@ -58,6 +57,7 @@ Notes:
   'network': '...' } 
  </nowiki>
 -->
+# if the content of the file is bigger the 512K it will pass an nfs share for vdsm to fetch the file/s
 <!--=== User work-flows ===
 
 The Administrator and User Portal should allow the following operations in edit VM:
@@ -69,7 +69,6 @@ The Administrator and User Portal should allow the following operations in edit 
 #* For each payload
 #* Choose the path
 #* Provide the base64 data-->
-#* if the content of the file is bigger the 512K it will pass an nfs share for vdsm to fetch the file/s
 
 === Benefit to oVirt ===
 The VM payload feature will ease the installation of third party products, mainly in a cloud environment.
