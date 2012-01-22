@@ -69,6 +69,7 @@ The Administrator and User Portal should allow the following operations in edit 
 #* For each payload
 #* Choose the path
 #* Provide the base64 data-->
+#* if the content of the file is bigger the 512K it will pass an nfs share for vdsm to fetch the file/s
 
 === Benefit to oVirt ===
 The VM payload feature will ease the installation of third party products, mainly in a cloud environment.
