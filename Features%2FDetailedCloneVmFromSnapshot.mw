@@ -3,7 +3,7 @@
 == Clone VM from Snapshot ==
 
 === Summary ===
-The feature will allow oVirt users to clone VM from a snapshot of another VM. <BR>
+The feature will allow oVirt users to clone VM (or a VM template) from a snapshot of another VM. <BR>
 A clone from snapshot will create disks at destination VM that are a collapsed copy of the images at snapshot chain (the start of the chain is the first snapshot, the end of the chain is a the selected snapshot) <BR>
 
 Main feature page can be found at: [[Features/CloneVmFromSnapshot]]
