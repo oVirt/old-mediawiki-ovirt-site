@@ -96,7 +96,7 @@ d. Check if the source and target storage domains exist and available. <BR><BR>
 At execution phase the command will perform the following for cloning a VM from snapshot: <BR>
 a. Try to lock the images participating in the desired snapshot chain (even if canDoAction passed -another command may have already locked some of them). If locking fails - the command fails. <BR>
 b  Obtain a VM static object in one of the following ways (determined by a boolean flag passed in the command parameters): <BR>
-b.1. The VM static object should be used - it will be stored in DB.
+b.1. The VM static object should be used - it will be stored in DB. <BR>
 b.2. The given name should be used - based on the VM source ID, the VM static will be obtained by the given snapshot ID. The name field will be overridden by the value from the parameters. <BR>
 c. Retrieve a list of the images from given the snapshot ID. <BR>
 d. For each image of the retrieved images, run the CopyImage bll command. <BR>
