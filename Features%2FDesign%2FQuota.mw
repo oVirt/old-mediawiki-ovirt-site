@@ -83,8 +83,7 @@ Use cases :
 
 
 =====Functions=====
-# CalculateVCPUUsage - Summerise the VCPU usage for all the VMs in the quota which are not down or suspended
-# CalculateVRAMUsage - Summerise the RAM usage for all the VMs in the quota which are not down or suspended.
+# CalculateVdsGroupUsage - Summerise the VCPU usage and Memory usage for all the VMs in the quota which are not down, suspended, or in image locked or image illegal.
 # CalculateStorageUsage - Summerise the storage usage for all the disks in the quota, for active disks, we summerise the full size, for snapshots and other disks summerise only the actual size.
 
 
