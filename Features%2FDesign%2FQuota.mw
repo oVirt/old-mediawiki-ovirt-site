@@ -131,11 +131,11 @@ Use cases :
 |-
 |virtual_cpu ||INTEGER ||The limited cpu, defined in Giga byte.
 |-
-|virtual_cpu_usage ||INTEGER ||The usage of the cpu in the cluster, defined in Giga byte. (using CalculateVCPUUsage)
+|virtual_cpu_usage ||INTEGER ||The usage of the cpu in the cluster, defined in Giga byte. (using CalculateVdsGroupUsage)
 |-
 |mem_size_mb ||BIGINT ||The limited ram defined in Mega byte.
 |-
-|mem_size_mb_usage ||BIGINT ||The used ram in the cluster. (using CalculateVRAMUsage)
+|mem_size_mb_usage ||BIGINT ||The used ram in the cluster. (using CalculateVdsGroupUsage)
 |-
 |}
 
