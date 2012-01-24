@@ -251,7 +251,7 @@ A scheduler with run every 1 hour (Should be indicated in the vdc_options) and c
 '''Classes'''<BR> 
 '''''org.ovirt.engine.core.bll.QuotaManager''''' - Class which manage the quota views and memory table
  ''quotaClusterMap'' - The quota cluster Map is a concurrent HashMap which reflects a snapshot view of the cluster consumption status for each quota, it is based on the DB view [[Features/Design/Quota#DB Design|getQuotaCluster]]. The map should be synchronized when the server starts up, and the vdsUpdateRunTimeInfo has updated the data after the first time (counting on method beforeFirstRefreshTreatment).<BR>
- ''quotaStorageMap'' - The quota storage Map is a Concurrent HashMap which reflects a snapshot view of the cluster consumption status for each quota, it is based on the DB view  [[Features/Design/Quota#DB Design|getQuotaStorage]], and it is initialized every time the Host will be chosen to be SPM, using the DB values and the task manager.<BR>
+ ''storageDelta'' - The quota storage Map is a Concurrent HashMap which reflects a snapshot view of the cluster consumption status for each quota, it is based on the DB view  [[Features/Design/Quota#DB Design|getQuotaStorage]], and it is initialized every time the Host will be chosen to be SPM, using the DB values and the task manager.<BR>
 '''''org.ovirt.engine.core.common.businessentities.QuotaStatusEnum''''' - Enum indicating the DC Quota verification status.
 
 ==== Business entities ====
