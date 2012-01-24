@@ -178,6 +178,7 @@ api = API(url='http://host:port', username='user@domain', password='password')
 
 * [http://www.ovirt.org/wiki/Testing/PythonApi more examples]
 
+
 == Repository ==
 
 * git://gerrit.ovirt.org/ovirt-engine-sdk
