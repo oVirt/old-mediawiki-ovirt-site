@@ -172,7 +172,7 @@ Use cases :
 * output - a business entity mapped by quota_global_view for specified storage_pool_id, (if storage_pool_id=null then returns a list of all the quota in the setup)
 
 === Logic Design ===
-Each time the user will run or edit the VM, there will be a Quota check against the quota cluster view.<BR> Both views, quota_storage and quota_cluster should be reflected in the memory as Concurrent HashMap tables. The memory tables should be checked and updated in the canDoAction in a synchronized context (Using java.util.concurrency). <BR/> Those memory tables should be managed in a pessimistic way, considering resource allocation, to prevent over-commit situations.<BR> Those tables should be synchronized from time to time from VdsUpdateRunTimeInfo (for cluster quota) and AsyncTaskManager(for storage quota).<BR><BR>
+Each time the user will run or edit the VM, there will be a Quota check against the quota cluster view.<BR> Both views, quota_storage and quota_cluster should be reflected in the memory as Concurrent HashMap tables. The memory tables should be checked and updated in the canDoAction in a synchronized context (Using java.util.concurrency). <BR/> Those memory tables should be managed in a pessimistic way, considering resource allocation, to prevent over-commit situations.
 
 ===== Synchronized Vds commands =====
 When calling synchronized Vds commands (such as createVm, MigrateVm), which should increase the consumption on cluster quota,  we will update the quota dynamic table in the DB when the VdsCommand is being called.<BR> When we will decrease the consumption on cluster quota, the update on the Quota tables should be at the end of the VDS command.
