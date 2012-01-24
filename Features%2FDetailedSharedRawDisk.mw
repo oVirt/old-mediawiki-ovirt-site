@@ -36,7 +36,6 @@ With this feature oVirt will be more compatible to support external cluster appl
 ==== Disk ====
 <!-- New entities and changes in existing entities. -->
 * Disk should have an indication field for shared/not shared disk.
-* Disk entity will be added with three more properties: Disk Name, Description, Date created. 
 
 === Functionality ===
 * The synchronization/clustering of shared disk between VMs will be managed in the file system.
