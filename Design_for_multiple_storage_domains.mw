@@ -39,6 +39,22 @@ The main change that needs to happen is to have each image associated with its o
 * Create template from VM
 * Clone template
 
+==== User Experience ====
+<!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
+<!-- GUI mockups should also be added here to make it more clear -->
+
+The following UI mockups contain guidelines for the different screens and wizards:
+
+[[File:VM_from_template_single.png]]
+
+[[File:VM_from_template_multi.png]]
+
+[[File:import_vm_single.png]]
+
+[[File:import_vm_multi.png]]
+
+[[File:new_edit_disk_multiple_sd.png]]
+
 == REST Design (Modeling) ==
 This section describes the REST design for this feature.
 * Add a VM
