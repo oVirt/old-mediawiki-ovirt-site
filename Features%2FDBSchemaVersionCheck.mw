@@ -30,12 +30,31 @@ The table description is as follows: <BR>
 | started_at   | timestamp    | No    |   Script start time                                             |              |<BR>
 | ended_at     | timestamp    | Yes   |   Script end time                                               |              |<BR>
 | state        | varchar (15) | No    |   INSTALLED/FAILED                                              |              |<BR>
-| current      | boolean      | No    |   true only for last version installed successfully             |              |<BR>
+| current      | boolean      | No    |   true only for last version installed successfully             |              |<BR><BR><BR>
 
+==== 1. Storing MD5 information per installed upgrade scripts in DB ====
+When running upgrade script, the script runs all scriptsl ocated in the upgrade folder that follow the pattern of MAJOR_MINOR_SCRIPTINDEX_DESCRIPTION.sql (i.e - 03_01_0050_add_cancel_migration_to_action_version_map.sql). <BR>
+After each step an entry is kept to kept in version_schema , holding information on the md5 sum of the script and its state (there are other columns which are used for other issues which are out of this scope of this document, as this design is using a table that already exists in the db, and does not proprose a new one) <BR><BR>
+
+==== 2. calculating the db schema MD5 and storing it for db schema check ====
+A script called store_db_schema_checksum.sh will invoke a sciprt called calculate_db_schema_checksum.sh that calculates the db schema checksum the following way:<BR>
+It performs select of the checksum column from the checksum_version table for all the installed scripts, and runs md5 calculation on the result (a list of checksum values). <BR>
+The script store_db_schema_checksum.sh will store the information at the file $GIT_REPO/ovit-engine/ear/target/version.info <BR>
+This script will be run by the build system (or a developer during a development stage). <BR>
+During packaging a formal build, this file will be taken from the above location. <BR>
+The installer is already responsible for deploying this file to /etc/engine during installation, and should be responsible to upgrade its content during upgrade (see comment at open issues). <BR>
+It will also be possible to run this script via mvn clean install, by providing the -D skip.db.checksum.store=false flag<BR<BR><BR>
+
+==== 3. Service for starting engine-core and performing the db_schema_check ====
+A service called engine-cored (see open issues about the service name) will be developed for the following purposes: <BR>
+.a. Perform validity checks <BR>
+.b. If validity checks pass, the jboss service will start <BR>
+The service will run the script check_db_schema_checksum.sh that will compare the md5 values in DB by running calculate_db_schema.checksum.sh (see above) and compare the result with the value of the key DB_SCHEMA_CHECKSUM stored at /etc/engine/version.info. <BR>
+In case of success this validity check passes. In case of error an error message should be prompted. <BR>
+It will also be possible to run the script via mvn test at the DAL module or root pom level by providing the flag -D db.checksum.check=false  <BR><BR>
 
 === Benefit to oVirt ===
-If we look at snapshots as "checkpoints" of VM state + data , and "checkpoints" are made in significant points of time, the feature allows a user to create a VM based on a significant point of time of another VM, and use the cloned VM, without interfering with the original VM (i.e - no need to perform collapse on images of the source VM).
-
+The benefit for oVirt from this feature is 
 === Dependencies / Related Features ===
 
 Dependencies on features:
