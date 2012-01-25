@@ -1,0 +1,119 @@
+= Floating Disk =
+
+== Summary ==
+<!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
+Floating disk - a disk that is not attached to any VM.
+This feature covers the management and usage of disks in floating state.
+
+== Owner ==
+<!--This should link to your home wiki page so we know who you are-->
+* Feature owner: [[User:derez| Daniel Erez]]
+:* GUI Component owner: [[User:derez| Daniel Erez]]
+:* REST Component owner: [[User:mpasternak| Michael Pasternak]]
+:* Engine Component owner: [[User:mlipchuk| Maor Lipchuk]]
+:* QA Owner: [[User:ykaul| Yaniv Kaul]] 
+
+<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
+* Email: derez@redhat.com
+
+== Current status ==
+* Target Release: 
+* Status: Design Stage
+* Last updated date: Sun January 25 2011      
+
+== Detailed Description ==
+<!-- Provide the details of the feature. What is it going to include. See the sections below. -->
+<!-- New entities and changes in existing entities. -->
+The feature provides administration and management functionalities for floating disks.<BR>
+A floating disk should behave as a flexible independent entity that can be moved/copied across various storage domains in the data center.<BR>
+Any virtual disk can be in a floating state - by unattaching the disk from the VM/s. 
+
+=== Entity Description ===
+
+==== Disk ====
+<!-- New entities and changes in existing entities. -->
+* Floating state should be added to disk entity - floating / not floating.
+* Name and Description should be added to disk entity (disk name ought to be unique for search and display purposes).
+* Disk must be a searchable entity for providing search/sort/display capabilities under 'Virtual Disks' main tab.
+
+
+=== Functionality ===
+* A floating disk can be attached to any VM (or multiple VMs in case of a Shared Disk).
+* Detaching a disk from a VM will result in a floating disk creation (i.e. the disk's status will update to 'floating').
+* A floating disk can be moved between storage domains.  
+* Export/Import - not supported.
+
+
+=== User Experience ===
+<!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
+<!-- GUI mockups should also be added here to make it more clear -->
+
+====  Administrator Portal ====
+* CRUD - Introducing a new 'Virtual Disks' main tab
+** includes the following sub-tabs: Storage, Virtual Machines and Templates.
+** Contains a table of all the disks in the system.
+** Each row is composed of the following columns:<BR> 
+ Name (unique), Description, Size, Actual Size, Type, Allocation, Interface, Creation Date, Floating(Yes/No), Shared(Yes/No), Managed(Yes/No). 
+* VMs -> Disks sub-tab  
+** Attach/Detach disks.
+** Edit/Delete disks.
+** Move disks between storage domains.
+* Tree
+** 'Resources' link under 'Storage' node - a search of all the Floating/Shared/Direct LUN disks in the data center.
+
+====  User Portal ====
+The Power User Portal should allow the following operations:
+* Attach/Detach only shared disks to a VM - disks sub-tab.
+  Note:<BR>
+  For now, premissions for disk entities will *not* be supported.<BR> 
+  Consequently, availabilty of disks will be deterimined by their type (i.e. users can attach only shared disks).<BR>
+
+
+The following UI mockups contain guidelines for the different screens and wizards:
+
+[[File:virtualDisks_MainTab.png]]
+
+[[File:virtualDisks_Tree.png]]
+
+[[File:disks_subtab.png]]
+
+[[File:new_move_disk_dialog.png]]
+
+[[File:attach_disk_dialogue.png]]
+
+[[File:attach_disk_maintab_dialogue.png]]
+
+=== Installation/Upgrade ===
+<!-- Describe how the feature will effect new installation or existing one. -->
+* Installation
+** New disk should enforce the user to enter a unique name.
+** New disk could have a description.
+* Upgrade
+** Disk name should be generated in order to maintain uniqueness.
+** Disk description should remain empty.
+
+== Dependencies / Related Features and Projects ==
+<!-- What other packages (RPMs) depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? Add a link to the feature description for relevant features. -->
+Affected oVirt projects:
+* API
+* CLI
+* Engine-core
+* Webadmin
+* User Portal
+
+[Quota should be taken into consideration for every new feature that involves consumption of resources.]<BR> 
+
+== Documentation / External references ==
+<!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
+http://www.ovirt.org/wiki/Features/FloatingDisk
+
+== Comments and Discussion ==
+http://www.ovirt.org/wiki/Talk:Features/FloatingDisk
+
+== Future Work ==
+* More actions should be added to Disks main tab: New/Edit/Move/Copy/etc.
+
+== Open Issues ==
+<!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
+[[Category: Feature]]
+* Consider adding permissions support to disks entities.
