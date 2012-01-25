@@ -21,16 +21,16 @@ version information about the upgrade scripts in order to make sure unchanged sc
 In order to maintain the version for a given upgrade script, for each upgrade script the md5 calculation of its content is kept in the above mentioned DB.<BR><BR>
 
 The table description is as follows: <BR>
-|| Column Name  || Column Type  || Null? || Definition   ||                                        index/pk/fk ||
-|| id           || int          || No    ||   Version ID                                                    || PK ||
-|| version      || varchar(10)  || No    ||   The version of the schema the upgrade script tried to acieve  || ||
-|| script       || varchar(255) || No    ||   The script file name                                          || ||
-|| checksum     || varchar(128) || No    ||   md5 of the script file                                        || ||
-|| installed_by || varchar(30)  || No    ||   The db user that runs the upgrade script                      || ||
-|| started_at   || timestamp    || No    ||   Script start time                                             || ||
-|| ended_at     || timestamp    || Yes   ||   Script end time                                               || ||
-|| state        || varchar (15) || No    ||   INSTALLED/FAILED                                              || ||
-|| current      || boolean      || No    ||   true only for last version installed successfully             || ||
+| Column Name  | Column Type  | Null? |   Definition                                                    |  index/pk/fk |<BR>
+| id           | int          | No    |   Version ID                                                    | PK           |<BR>
+| version      | varchar(10)  | No    |   The version of the schema the upgrade script tried to acieve  |              |<BR>
+| script       | varchar(255) | No    |   The script file name                                          |              |<BR>
+| checksum     | varchar(128) | No    |   md5 of the script file                                        |              |<BR>
+| installed_by | varchar(30)  | No    |   The db user that runs the upgrade script                      |              |<BR>
+| started_at   | timestamp    | No    |   Script start time                                             |              |<BR>
+| ended_at     | timestamp    | Yes   |   Script end time                                               |              |<BR>
+| state        | varchar (15) | No    |   INSTALLED/FAILED                                              |              |<BR>
+| current      | boolean      | No    |   true only for last version installed successfully             |              |<BR>
 
 
 === Benefit to oVirt ===
