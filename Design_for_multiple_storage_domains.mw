@@ -53,7 +53,9 @@ The following UI mockups contain guidelines for the different screens and wizard
 
 [[File:import_vm_multi.png]]
 
-[[File:new_edit_disk_multiple_sd.png]]
+[[File:new_move_disk_dialog.png]]
+
+[[File:disks_subtab.png]]
 
 == REST Design (Modeling) ==
 This section describes the REST design for this feature.
