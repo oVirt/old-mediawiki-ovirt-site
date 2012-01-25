@@ -16,10 +16,12 @@ This feature covers the management and usage of disks in floating state.
 <!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
 * Email: derez@redhat.com
 
+
 == Current status ==
 * Target Release: 
 * Status: Design Stage
-* Last updated date: Sun January 25 2011      
+* Last updated date: Sun January 25 2011  
+    
 
 == Detailed Description ==
 <!-- Provide the details of the feature. What is it going to include. See the sections below. -->
@@ -36,13 +38,20 @@ Any virtual disk can be in a floating state - by unattaching the disk from the V
 * Name and Description should be added to disk entity (disk name ought to be unique for search and display purposes).
 * Disk must be a searchable entity for providing search/sort/display capabilities under 'Virtual Disks' main tab.
 
-
 === Functionality ===
 * A floating disk can be attached to any VM (or multiple VMs in case of a Shared Disk).
-* Detaching a disk from a VM will result in a floating disk creation (i.e. the disk's status will update to 'floating').
+* Detaching a disk from a VM will result in a floating disk creation (i.e. the disk's state will be updated to 'floating').
 * A floating disk can be moved between storage domains.  
 * Export/Import - not supported.
+* New/Edit disk
+** Should enforce the user to enter a unique name.
+** Optional field - Description.
 
+=== Installation/Upgrade ===
+<!-- Describe how the feature will effect new installation or existing one. -->
+* Upgrade
+** Disk name should be generated automatically - in order to maintain uniqueness.
+** Disk description should remain empty.
 
 === User Experience ===
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
@@ -68,7 +77,7 @@ The Power User Portal should allow the following operations:
   For now, premissions for disk entities will *not* be supported.<BR> 
   Consequently, availabilty of disks will be deterimined by their type (i.e. users can attach only shared disks).<BR>
 
-
+==== Mockups ====
 The following UI mockups contain guidelines for the different screens and wizards:
 
 [[File:virtualDisks_MainTab.png]]
@@ -83,14 +92,6 @@ The following UI mockups contain guidelines for the different screens and wizard
 
 [[File:attach_disk_maintab_dialogue.png]]
 
-=== Installation/Upgrade ===
-<!-- Describe how the feature will effect new installation or existing one. -->
-* Installation
-** New disk should enforce the user to enter a unique name.
-** New disk could have a description.
-* Upgrade
-** Disk name should be generated in order to maintain uniqueness.
-** Disk description should remain empty.
 
 == Dependencies / Related Features and Projects ==
 <!-- What other packages (RPMs) depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? Add a link to the feature description for relevant features. -->
