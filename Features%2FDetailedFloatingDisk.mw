@@ -2,7 +2,7 @@
 
 == Summary ==
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
-Floating disk - a disk that is not attached to any VM.
+Floating disk - a disk that is not attached to any VM.<BR>
 This feature covers the management and usage of disks in floating state.
 
 == Owner ==
