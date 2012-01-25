@@ -46,8 +46,7 @@ TBD
 * The engine is now running on Jboss AS7 as the application server
 * [[ Features/DetailedLockMechanism | Locking mechanism ]]
 * [[ Features/SPMPriority | SPM Priority ]]
-* [[ Features/DetailedQuota | Quota ]]
-* Support new Storage Domain Status
+* Adding maintenance Storage Domain Status [http://bugzilla.redhat.com/593244 BZ 593244]
 
 ==== Resolved Issues ====
 
