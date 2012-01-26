@@ -88,7 +88,7 @@ and dependent implementations (e.g. application clustering, shared data warehous
 
 ====  User Portal ====
 The Power User Portal should allow the following operations:
-* Attach/Detach only managed shared disks to a VM - disks sub-tab.
+* Attach/Detach only managed shared disks to a VM (through disks sub-tab).
   Note:<BR>
   For now, premissions for disk entities will *not* be supported.<BR> 
   Consequently, availabilty of disks will be deterimined by their type (i.e. users can attach only shared disks).<BR>
