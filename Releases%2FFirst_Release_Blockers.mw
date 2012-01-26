@@ -10,5 +10,7 @@
 |-
 || Engine || IPA - IPA does not perform login with UPN || [https://bugzilla.redhat.com/show_bug.cgi?id=783662 783662]|| Fixed|| Merged into engine_3.0
 |-
+|| Engine|| User already logged in error || [https://bugzilla.redhat.com/show_bug.cgi?id=782748 782748]|| Fixed || HERE 
+|-
 || Enter|| Your || [https://bugzilla.redhat.com/show_bug.cgi?id=XXXX XXXX]|| BUG || HERE 
 |}
