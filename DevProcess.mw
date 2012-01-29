@@ -1,0 +1,76 @@
+= Development Process =
+
+The code you write, and the way you present it, are crucial for understanding and maintaining the source code.
+Please read the following sections for guidelines on Git, Gerrit, patch management and more.
+
+== Patch Review Process Goals ==
+The patch review process goals are:
+
+#Improving code quality
+#Design improvements
+#Openness, transparency, community
+#Usable revision history
+#Archived discussions
+#Patches which can be cherry-picked
+
+The oVirt project uses gerrit in order to review patches. For more on Gerrit and how to use it see http://www.ovirt.org/wiki/Working_with_oVirt_Gerrit
+
+== Basic Principles ==
+
+=== Review Process ===
+#Patches sent to Gerrit for review
+#A peer thoughtfully reviews the patch
+#Feedback gratefully received
+#All discussions on the patch must be done on Gerrit
+#Consensus formed, ACK or NAK agreed
+
+
+=== Patch Format ===
+ <nowiki>
+ component: short summary under 75 chars (#xxxxxx)
+ https://bugzilla.redhat.com/XXXXXX
+ 
+ Longer description.
+ 
+ With multiple paragraphs if necessary.
+ 
+ Wrapped at ~80 chars.
+ </nowiki>
+
+=== Describe your changes properly ===
+
+#Not just “what”, but “why”
+#Makes patches easier to review
+#Incredibly useful to future developers, and for you as well (don't trust your own memory)
+
+=== Separate your changes ===
+
+#Each commits contain a single logical change
+#Keep refactoring separate from bug fixes
+
+=== Focus on details ===
+#Adhere to coding style
+#Adhere to commit message format
+#Make your code beautiful
+#Refactor if necessary
+#Use whitespaces and not tabs
+#Prefer understandable code over comments
+
+=== Patch queues ===
+#Each topic branch is a patch queue
+#Send each branch as a series of patches
+#Gives reviewers an easy story to follow
+
+=== Git guidelines ===
+
+==== Merge commits ====
+#Don't use 'git merge' or 'git pull'
+#Use 'git rebase' and 'git fetch' instead
+#A merge commit is rarely what you want
+
+==== Topic branches ====
+Create a branch for everything you work on
+
+==== Use Rebase -i ====
+#Re-write history!
+#Modify, split, squash or re-order commits
