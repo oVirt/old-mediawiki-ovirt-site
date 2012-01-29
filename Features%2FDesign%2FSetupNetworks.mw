@@ -1,1 +1,5 @@
-#REDIRECT [[Features/Design/Network/SetupNetworks]]
+== upcoming network features ==
+
+#[[Features/Design/Network/SetupNetworks]]
+#[[Features/Design/Network/Jumbo_frames]]
+#[[Features/Design/Network/Bridgeless_Networks]]
