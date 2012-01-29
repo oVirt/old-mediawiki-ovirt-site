@@ -2,11 +2,20 @@
 
 Typically, just another parameter for a network configuration to determine the [http://en.wikipedia.org/wiki/Maximum_transmission_unit MTU].
 
-=== Code Change ===
+=== Code Changes ===
+==== Model ====
 # Add MTU : String to network entity
 # Add deserialization to MTU field in VdsBrokerObjectsBuilder.java. Serialise as String and not Int.
 # DB - add field in to vds_interface and vds_interface_view
 # DAO - add field to VdsInterfaceDao CRUD actions
+# DAO - update tests
+
+==== BL ====
+#extend non-operational API to accept more reasons 
+#remove redundant checking in monitoring code - same check for missing
+#add tests for the API refactoring network in CollectVdsNetworkData and VdsManager
+#refactor VdsManager to send the host to non-oper on MTU difference with Cluster
+# add tests to VdsManager for the new behaviour
 
 === Backward Compatibility ===
 
