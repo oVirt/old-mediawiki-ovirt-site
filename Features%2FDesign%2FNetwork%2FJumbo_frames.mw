@@ -1,0 +1,13 @@
+== Jumbo frames ==
+
+Typically, just another parameter for a network configuration to determine the [http://en.wikipedia.org/wiki/Maximum_transmission_unit MTU].
+
+=== Code Change ===
+# Add MTU : String to network entity
+# Add deserialization to MTU field in VdsBrokerObjectsBuilder.java. Serialise as String and not Int.
+# DB - add field in to vds_interface and vds_interface_view
+# DAO - add field to VdsInterfaceDao CRUD actions
+
+=== Backward Compatibility ===
+
+Same as for bridge-less feature.
