@@ -6,8 +6,8 @@ Typically, just another parameter for a network configuration to determine the [
 ==== Model ====
 # Add MTU : String to network entity
 # Add deserialization to MTU field in VdsBrokerObjectsBuilder.java. Serialise as String and not Int.
-# DB - add field in to vds_interface and vds_interface_view
-# DAO - add field to VdsInterfaceDao CRUD actions
+# DB - add field in to vds_interface,vds_interface_view, network,netework_view
+# DAO - add field to VdsInterfaceDao,networkDao CRUD actions
 # DAO - update tests
 
 ==== BL ====
