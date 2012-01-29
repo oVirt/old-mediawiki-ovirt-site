@@ -134,6 +134,8 @@ The following class diagram focuses on the ''Job'' and ''Step'' entities:
 |-
 |status ||String ||not null ||The status of the job
 |-
+|description ||String ||not null ||The step description
+|-
 |owner_id ||UUID ||not null ||The user which triggered the command
 |-
 |parameters ||text ||not null ||A JSON representation of the parameters associated with the command
