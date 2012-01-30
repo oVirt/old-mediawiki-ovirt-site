@@ -12,5 +12,11 @@
 |-
 || Engine|| User already logged in error || [https://bugzilla.redhat.com/show_bug.cgi?id=784810 784810]|| Fixed || Merged into engine_3.0 
 |-
+|| Node|| Installation Error || [https://bugzilla.redhat.com/show_bug.cgi?id=785728 785728]|| Open ||  
+|-
+|| VDSM|| spice problems with tls || [https://bugzilla.redhat.com/show_bug.cgi?id=773371 773371]|| Open ||  
+|-
+|| VDSM|| NM_CONTROLLED device doesn't work after reboot || [https://bugzilla.redhat.com/show_bug.cgi?id=785557 785557]|| Open ||  
+|-
 || Enter|| Your || [https://bugzilla.redhat.com/show_bug.cgi?id=XXXX XXXX]|| BUG || HERE 
 |}
