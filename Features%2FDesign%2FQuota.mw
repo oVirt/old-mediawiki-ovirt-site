@@ -115,7 +115,7 @@ Use cases :
 |-
 |mem_size_mb_usage ||BIGINT ||The used ram in the storage pool. (using CalculateVdsGroupUsage)
 |-
-|is_default_quota ||BOOLEAN ||true/false ||Indicating if the quota is a a default quota for the Data Center.
+|is_default_quota ||BOOLEAN ||Indicating if the quota is a a default quota for the Data Center.
 |-
 |}
 
