@@ -69,6 +69,8 @@ This section describes the backend design for this feature.
 |-
 |storage_size_gb ||BIGINT ||null ||The limited defined in Giga byte.
 |-
+|is_default_quota ||BOOLEAN ||true/false ||Indicating if the quota is a a default quota for the Data Center.
+|-
 |}
 
 
@@ -88,7 +90,7 @@ Use cases :
 
 
 
-'''''vm_dynamic''''' - Add column ''quota_id'', which indicates the Quota the VM should be depended on its resources. <BR>  '''''image''''' - Add column ''quota_id'', which indicates the Quota the image should be depended on its storage resources. <BR>  '''''storage_pool''''' - Add column ''quota_enforcement'', Indicates the DC enforcement status for Quota (Disalbe(0) , Soft Limit (1),Hard Limit (2))  will be presented by Enum (see [[Features/Design/Quota#Classes|QuotaStatusEnum]].).
+'''''vm_static''''' - Add column ''quota_id'', which indicates the Quota the VM should be depended on its resources. <BR>  '''''image''''' - Add column ''quota_id'', which indicates the Quota the image should be depended on its storage resources. <BR>  '''''storage_pool''''' - Add column ''quota_enforcement'', Indicates the DC enforcement status for Quota (Disalbe(0) , Soft Limit (1),Hard Limit (2))  will be presented by Enum (see [[Features/Design/Quota#Classes|QuotaStatusEnum]].).
 
 =====Views=====
 '''quota_global_view''' - View of all the storage pool quota in the setup, that is all the quota that vds_group_id and storage_id values are null in the quota_limitation.
@@ -112,6 +114,8 @@ Use cases :
 |mem_size_mb ||BIGINT ||The limited ram, defined in Mega byte.
 |-
 |mem_size_mb_usage ||BIGINT ||The used ram in the storage pool. (using CalculateVdsGroupUsage)
+|-
+|is_default_quota ||BOOLEAN ||true/false ||Indicating if the quota is a a default quota for the Data Center.
 |-
 |}
 
@@ -137,6 +141,8 @@ Use cases :
 |-
 |mem_size_mb_usage ||BIGINT ||The used ram in the cluster. (using CalculateVdsGroupUsage)
 |-
+|is_default_quota ||BOOLEAN ||true/false ||Indicating if the quota is a a default quota for the Data Center.
+|-
 |}
 
 '''quota_storage_view''' - View of all the storage quotas in the setup, that is all the quotas that storage_id is not null but vds_cluster_id is null in the quota_limitation.
@@ -154,6 +160,8 @@ Use cases :
 |storage_size_gb ||INTEGER ||The limited GB defined in Giga byte.
 |-
 |storage_size_gb_usage ||INTEGER ||The used GB on the quota storage domain. (Using CalculateStorageUsage)
+|-
+|is_default_quota ||BOOLEAN ||true/false ||Indicating if the quota is a a default quota for the Data Center.
 |-
 |}
 
