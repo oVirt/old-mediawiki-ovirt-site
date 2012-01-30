@@ -110,6 +110,7 @@ Affected oVirt projects:
 * User Portal
 
 Quota has to be taken in consideration, for every new feature that will involve consumption of resources managed by it.
+Floating disk  - Shared raw disk will be considered to be floating when the shared disk will not be attach to any VM.
 
 == Documentation / External references ==
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
