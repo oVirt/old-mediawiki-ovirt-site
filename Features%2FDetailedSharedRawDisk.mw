@@ -109,7 +109,7 @@ Affected oVirt projects:
 * Webadmin
 * User Portal
 
-Quota has to be taken in consideration, for every new feature that will involve consumption of resources managed by it.
+Quota has to be taken in consideration, for every new feature that will involve consumption of resources managed by it.<BR/>
 Floating disk  - Shared raw disk will be considered to be floating when the shared disk will not be attach to any VM.
 
 == Documentation / External references ==
