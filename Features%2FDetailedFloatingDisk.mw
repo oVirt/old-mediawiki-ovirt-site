@@ -113,7 +113,8 @@ Affected oVirt projects:
 * Webadmin
 * User Portal
 
-[Quota should be taken into consideration for every new feature that involves consumption of resources.]<BR> 
+Quota should be taken into consideration for every new feature that involves consumption of resources.<BR>
+Shared raw disk will be dependent on floating disk.BR>
 
 == Documentation / External references ==
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
