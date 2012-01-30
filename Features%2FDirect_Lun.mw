@@ -1,0 +1,5 @@
+== Direct Lun ==
+
+== Introduction ==
+
+Specify the GUID or UUID of a device to attach it as a local disk to the VM.
