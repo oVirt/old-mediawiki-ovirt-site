@@ -48,5 +48,5 @@ These flows should be supported from the GUI.
 # Connect to the target
 # Get device list
 # Choose a block device:
-* default: Unattached devices
-* option: From a VM (+ plug)
+#* default: Unattached devices
+#* option: From a VM (+ plug)
