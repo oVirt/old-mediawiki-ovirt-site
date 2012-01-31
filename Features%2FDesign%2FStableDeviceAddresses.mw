@@ -314,7 +314,9 @@ The following table summarizes the possible scenarios when getting data from VDS
 |-
 | Exist || Not exist || New device || Add to vm_device 
 |-
-| Not exist || Exist || Managed Device || Write an Error to log 
+| Not exist || Exist || Managed Device, isPlugged=true || Write an Error to log 
+|-
+| Not exist || Exist || Managed Device, isPlugged=false || Remove device address in DB
 |-
 | Not exist || Exist || Un-managed Device || Delete from vm_device
 |-
