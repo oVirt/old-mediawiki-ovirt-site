@@ -130,4 +130,4 @@ http://www.ovirt.org/wiki/Talk:Features/FloatingDisk
 == Open Issues ==
 <!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
 [[Category: Feature]]
-* Should detaching a disk with snapshots history be blocked?
+* Detaching a disk with a snapshot history: blocked to the user / collapsing and marking the snapshot as broken.
