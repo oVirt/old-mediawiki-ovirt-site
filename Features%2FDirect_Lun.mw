@@ -50,3 +50,8 @@ These flows should be supported from the GUI.
 # Choose a block device:
 #* default: Unattached devices
 #* option: From a VM (+ plug)
+
+* Attach to VM (+ plug)
+# Select VM
+# Select disk
+# Plug it
