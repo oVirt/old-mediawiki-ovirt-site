@@ -302,6 +302,32 @@ There is one exception for this rule, we will handle a SpecialManagedDevices whi
 When passing information to vdsm, backend will pass all managed devices in the device map while un-managed devices are passed in the Custom Properties as a string (with the same format as in the device section)
 When getting information from vdsm, we will consider only devices in the device map. We assume that if a hook was activated on the Custom Properties we have sent for a VM and adds any device, we will get it from vdsm on the next refresh as a device in the device map from vdsm.
 
+
+=== Action Table Map ===
+The following table summarizes the possible scenarios when getting data from VDSM and comparing it with backend data stored in the database  
+
+{| border="1" align="center" style="text-align:center;
+! VDSM 
+! Backend 
+! Description 
+! Action 
+|-
+| Exist || Not exist || New device || Add to vm_device 
+|-
+| Not exist || Exist || Managed Device || Write an Error to log 
+|-
+| Not exist || Exist || Un-managed Device || Delete from vm_device
+|-
+| Device has address X || Device has no address or address Y || Address changed || Update address 
+|-
+|}
+
+Note also that if a device is sent by backend but VDSM don't get it from libvirt, it will not be returned by VDSM to the backend.
+
+Attach /Detach and Plug/Unplug will update vm_device in the appropriate commands as follows:<br>
+Attach /Detach - Add/Remove from vm_device<br>
+ Plug/Unplug   - Set/Reset address field of the device in vm_device
+
 == VDSM ==
 Adding support for hash parameter in Create.
 Return the hash value for each VM when calling GetAllVMStats.
