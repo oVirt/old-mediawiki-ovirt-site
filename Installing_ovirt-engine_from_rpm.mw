@@ -25,7 +25,7 @@ engine-cleanup
 === Install ===
 Install ovirt-engine by executing:
  <nowiki>
-yum install -y ovirt-engine ovirt-engine-setup
+yum install -y ovirt-engine
  </nowiki>
 
 and execute the installation utility:
