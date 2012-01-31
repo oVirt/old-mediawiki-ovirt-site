@@ -64,7 +64,7 @@ The packaging & install subproject deals with the creation of the packages for t
 * Support for JBoss AS7 on Fedora 16
 
 === Resolved Issues ===
-* Missing /var/lock/ovirt-engine after reboot ([https://bugzilla.redhat.com/show_bug.cgi?id=771590 BZ#771590]).
+* [https://bugzilla.redhat.com/show_bug.cgi?id=771590 BZ#771590 "/var/lock/ovirt-engine" is missing during engine-setup => fail to create CA]
 
 === Known Issues ===
 * No upgrade procedure is currently available, to upgrade between releases, both nightlies and stable, it is necessary to run ''engine-cleanup'' and reinstall oVirt Engine.
