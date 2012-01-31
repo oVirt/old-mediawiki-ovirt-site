@@ -42,9 +42,13 @@ See [[Features/Design/StableDeviceAddresses]] for the complete device interface.
 
 == OVIRT flows ==
 
-These flows should be supported from the GUI.
+Engine: Should name this entity as VirtualDisk.
 
-* Add disk
+
+
+These flows should be supported from the GUI.
+* Import disk
+# Discovery targets
 # Connect to the target
 # Get device list
 # Choose a block device:
