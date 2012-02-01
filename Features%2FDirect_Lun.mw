@@ -13,7 +13,6 @@ These flows should be supported from the GUI.
 #* default: Unattached devices
 #* option: From a VM (+ plug)
 
-
 * Attach to VM (+ plug)
 # Select VM
 # Select disk
@@ -30,7 +29,7 @@ These flows should be supported from the GUI.
 # Do migration.
 
 * HA
-# VM, Engine should assert that the backing storage target is reachable or connect it to the VM [[#Notes|'''destination host''']].
+# Engine should assert that the backing storage target is reachable or connect it to the VM [[#Notes|'''destination host''']].
 # Restart the VM
 
 
