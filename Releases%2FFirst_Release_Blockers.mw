@@ -20,7 +20,5 @@
 |-
 || engine || Engine locking issue || [https://bugzilla.redhat.com/show_bug.cgi?id=785671 785671]|| Fixed || Merged into engine_3.0
 |-
-|| engine || Cannot register ovirt-node image to ovirt-engine || [https://bugzilla.redhat.com/show_bug.cgi?id=782663 782663]|| Open ||
-|-
 || Enter|| Your || [https://bugzilla.redhat.com/show_bug.cgi?id=XXXX XXXX]|| BUG || HERE 
 |}
