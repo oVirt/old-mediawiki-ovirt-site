@@ -91,6 +91,6 @@ The image UID can be transferred to runVM, hot-plug, migrate, etc.
 Before starting of any operations Engine should assert that the [[#Notes|'''destination host''']] is connected to the target
 
 == Notes ==
-# If two vDisks based on the same backing storage is still on discussion.
+# If two vDisks can be based on the same backing storage is still on discussion.
 # <dt> Destination host
 <dd> the host running or that will run the VM.
