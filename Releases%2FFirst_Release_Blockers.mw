@@ -1,6 +1,6 @@
 === First Release (3.0) Known blockers ===
 {|border="1"
-! Component !! Description !! Bugzilla !! Status !! Fixed in version 
+! Component !! Description !! Bugzilla !! Status !! Notes 
 |-
 || Installer || NFS ISO domain couldn't be attached || [https://bugzilla.redhat.com/show_bug.cgi?id=782439 782439]|| Fixed || Merged into engine_3.0 
 |-
@@ -12,7 +12,7 @@
 |-
 || Engine|| User already logged in error || [https://bugzilla.redhat.com/show_bug.cgi?id=784810 784810]|| Fixed || Merged into engine_3.0 
 |-
-|| Node|| Installation Error || [https://bugzilla.redhat.com/show_bug.cgi?id=785728 785728]|| Open ||  
+|| Node|| Installation Error || [https://bugzilla.redhat.com/show_bug.cgi?id=785728 785728]|| Deferred ||  Not a blocker
 |-
 || VDSM|| spice problems with tls || [https://bugzilla.redhat.com/show_bug.cgi?id=773371 773371]|| Open ||  
 |-
