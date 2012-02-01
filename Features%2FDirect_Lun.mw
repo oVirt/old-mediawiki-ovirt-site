@@ -18,7 +18,9 @@ These flows should be supported from the GUI.
 # Select or import disk
 # Plug it
 #* If the VM is not running, the disk target connection should be added to the required connections for the VM.
-#* If the VM is running, it implies hot-plug and Engine should assert that the backing storage target is reachable or connect it to the host running the VM.
+#* If the VM is running:
+#*# Engine should assert that the backing storage target is reachable or connect it to the host running the VM.
+#*# Do hot plug.
 
 * Hot plug
 # Engine should assert that the backing storage target is reachable or connect it to the host running the VM.
@@ -64,7 +66,6 @@ The ''GUID'' is returned in the getDeviceList response.
 
 VM disks specified this way should support all the modes and features, i.e Shared Hot-Plug, etc.
 
-
 See [[Features/Design/StableDeviceAddresses|Stable Device Addresses]] for the complete device interface.
 
 == Engine considerations ==
@@ -77,7 +78,7 @@ See [[Features/Design/StableDeviceAddresses|Stable Device Addresses]] for the co
 
 This object will be called a '''vDisk'''.
 
-An vDisk represents the time evolution of a VM disk and extra Engine data.
+A vDisk represents the time evolution of a VM disk and extra Engine data.
 
 It's started from a ''single'' block device returned by getDeviceList (or equivalent function).
 
