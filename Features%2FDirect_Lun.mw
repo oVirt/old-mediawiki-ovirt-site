@@ -41,10 +41,11 @@ VM disks specified this way should support all the modes and features, i.e Share
 See [[Features/Design/StableDeviceAddresses]] for the complete device interface.
 
 * Engine should have an abstraction that contains: 
-** Backing storage
-the stack (history) and .
+** Backing storage (returned by getDeviceList or equivalent)
+** The stack (history)
+** Other Engine required info.
+
 This object will be called a '''hDisk'''.
-The volumes are returned by getDeviceList.
 
 == Engine considerations ==
 === The hDisk entity ===
