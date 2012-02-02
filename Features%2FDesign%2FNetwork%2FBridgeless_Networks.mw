@@ -1,9 +1,16 @@
 == Bridge-less Networks ==
 
-=== Feature summary ===
- 
+=== Summary ===
 All VMs today are connected through a software bridge, which naturally has a performance hit.<br>
 Bridge-less NICs can serve for heavy traffic channels like migration, storage or the engine's management network.
+
+
+=== Owner ===
+* Name: [[User:MyUser| Roy Golan]]
+
+<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
+* Email: rgolan@redhat.com
+
 
 === Code Changes ===
 ==== Model ====
@@ -19,6 +26,7 @@ Bridge-less NICs can serve for heavy traffic channels like migration, storage or
 #add tests for the API refactoring network in CollectVdsNetworkData and VdsManager
 #refactor VdsManager to send the host to non-oper on bridge property difference with Cluster
 # add tests to VdsManager for the new behaviour
+
 
 === Backward Compatibility ===
  
