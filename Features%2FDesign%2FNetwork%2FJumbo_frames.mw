@@ -1,8 +1,17 @@
 == Jumbo frames ==
 
+=== Summary ===
 Typically, just another parameter for a network configuration to determine the [http://en.wikipedia.org/wiki/Maximum_transmission_unit MTU].
 
+=== Owner ===
+* Name: [[User:MyUser| Roy Golan]]
+
+<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
+* Email: rgolan@redhat.com
+
+
 === Code Changes ===
+
 ==== Model ====
 # Add MTU : String to network entity
 # Add deserialization to MTU field in VdsBrokerObjectsBuilder.java. Serialise as String and not Int.
@@ -10,12 +19,14 @@ Typically, just another parameter for a network configuration to determine the [
 # DAO - add field to VdsInterfaceDao,networkDao CRUD actions
 # DAO - update tests
 
+
 ==== BL ====
 #extend non-operational API to accept more reasons 
 #remove redundant checking in monitoring code - same check for missing
 #add tests for the API refactoring network in CollectVdsNetworkData and VdsManager
 #refactor VdsManager to send the host to non-oper on MTU difference with Cluster
 # add tests to VdsManager for the new behaviour
+
 
 === Backward Compatibility ===
 
