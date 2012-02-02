@@ -50,7 +50,7 @@ Templates
 Export/Import
 * When exporting a VM, only the disks which are not shared will be exported.
 Move disk
-* Moving a shared raw disk is permitted only when all the attached VMs status are down.
+* Moving a shared raw disk is permitted only when all the attached VMs status are down, or all the disks which are attached to active VMs are unplugged.
 Move VM
 * When moving a VM the shared raw disk should not be moved.
 Snapshot
