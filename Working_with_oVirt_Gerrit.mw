@@ -28,6 +28,11 @@ Host gerrit.ovirt.org
    User <username>
  </nowiki>
 
+==== Change permissions to the file ====
+ <nowiki>
+chmod 600 ~/.ssh/config
+ </nowiki>
+
 ==== Verify SSH configuration ====
 In order to verify your SSH configuration, do the following:
  <nowiki>
