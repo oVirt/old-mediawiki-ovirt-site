@@ -23,13 +23,27 @@ These flows should be supported from the GUI.
 #*# Engine should assert that the backing storage target is reachable or connect it to the host running the VM.
 #*# Do hot plug.
 
+* Run VM
+# Async manage disk target connection on [[#Notes|all]] hosts for all the required disks/domains.
+# Wait on connection on the preferred host.
+#* If succeded, RunVM
+#* If not immediately try next hosts until success.
+
 * Hot plug
 # Engine should assert that the backing storage target is reachable or connect it to the host running the VM.
 # Do hot plug.
 
+* Hot unplug
+# Do unplug.
+# Unmanage the target disk connection.
+
 * Migration
 # Engine should assert that the backing storage target is reachable or connect it to the VM [[#Notes|'''destination host''']].
 # Do migration.
+
+* Stop VM
+# Stop the VM.
+# Unmanage the target disk connection.
 
 * HA
 # Engine should assert that the backing storage target is reachable or connect it to the VM [[#Notes|'''destination host''']].
@@ -92,5 +106,6 @@ Before starting of any operations Engine should assert that the [[#Notes|'''dest
 
 == Notes ==
 # If two vDisks can be based on the same backing storage is still on discussion.
+# A short set in the future.
 # <dt> Destination host
 <dd> the host running or that will run the VM.
