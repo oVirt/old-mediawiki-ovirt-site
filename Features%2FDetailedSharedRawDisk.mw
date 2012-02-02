@@ -65,6 +65,7 @@ VM pools
 <!-- GUI mockups should also be added here to make it more clear -->
 * Display shared disk
 ** The shared disks will be displayed in the 'disks' main tab.
+** As part of the shared disk details, it will also be presented the number of VMs which are connected to the shared raw disk.
 * Adding shared disk
 ** Creating/Editing a shared raw disk is available through the new/edit disk dialog from the disks sub tab in the VM main tab.<BR> The add/edit disk dialog box will have a check box indicating the disk is shared or not.<BR/>When a user wants to configure a regular disk to be shared disk, he will edit the disk and mark the checkbox as shared.
 ** User can also attach/detach shared disk through the disks sub tab of the VMs main tab, 
