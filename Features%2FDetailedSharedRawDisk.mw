@@ -58,7 +58,7 @@ Snapshot
 Stateless VM
 * When running stateless VM, the shared raw disk will not be handle as stateless, the user should get a warning message indicating that the disk will not be handled as stateless.
 VM pools
-* Since VM from pool is stateless, The same behaviour should be implemented here. shared raw disk should not be stateless in the VM.
+* Since VM from pool is stateless, The same behaviour as stateless VM should be implemented here. shared raw disk will not be stateless in a stateless VM, and a warning message will be performed.
 
 === User Experience ===
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
