@@ -53,11 +53,21 @@ The following UI mockups contain guidelines for the different screens and wizard
 
 [[File:import_vm_multi.png]]
 
+[[File:import_template_single.png]]
+
+[[File:import_template_multi.png]]
+
 [[File:disks_subtab.png]]
 
 [[File:new_move_disk_dialog.png]]
 
 [[File:storage_vms_subtab.png]]
+
+[[File:new_template.png]]
+
+[[File:templates_storage_subtab.png]]
+
+[[File:templates_vms_subtab.png]]
 
 == REST Design (Modeling) ==
 This section describes the REST design for this feature.
