@@ -17,10 +17,10 @@ regular nics and un-bridged in case of dedicated special nics
 === Basic Flow ===
 
 ==== create a bridgeless network ====
-# Add a logical network to your DC ( DC tab for GUI or /api/datacenters/network - set the property "allow to tun VMs" to false
+# Add a logical network to your DC ( DC tab for GUI or /api/datacenters/network - set the property "Allow to run VMs" to false
 # Attach the network to your hosts in the new setupnetworks UI - attach a network to the target interface and uncheck the box "bridged" .<BR> in REST use the /api/hosts/XXX/nics/setupnetwork and specify the <bridged>false</bridged> on the target eth 
 
-<P> - when the network "Allow to run VMs" is true the bridging option should be set automatically b the engine according to the interface type?
+<P> - when the network "Allow to run VMs" is true the bridging option should be set automatically by the engine according to the interface type?
 
 ==== edit a bridged network to become unbridged ====
 # a network with the flag "Allow to run VMs" set to false but the nic still was attached as bridged.
