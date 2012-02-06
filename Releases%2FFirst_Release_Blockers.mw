@@ -16,7 +16,7 @@
 |-
 || VDSM|| spice problems with tls || [https://bugzilla.redhat.com/show_bug.cgi?id=773371 773371]|| Fixed || vdsm-4.9.3.3 
 |-
-|| engine || Nodes cannot be registered || [https://bugzilla.redhat.com/show_bug.cgi?id=782663 782663]|| Open ||  
+|| engine || Nodes cannot be registered || [https://bugzilla.redhat.com/show_bug.cgi?id=782663 782663]|| Fixed ||  Merged into engine_3.0
 |-
 || engine || Engine locking issue || [https://bugzilla.redhat.com/show_bug.cgi?id=785671 785671]|| Fixed || Merged into engine_3.0
 |-
