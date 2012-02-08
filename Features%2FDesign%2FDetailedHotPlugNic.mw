@@ -49,7 +49,7 @@ The same behavior should be applied on stopped and running VM's. <BR>
  /api/vms/xxx/nics/yyy/unplug
 
 
-===== @EJB API ======
+===== @EJB API =====
 
 
 - plug or unplug a nic
@@ -58,15 +58,10 @@ The same behavior should be applied on stopped and running VM's. <BR>
  ...
  plugUnplugNic(1000)
 
-
  plugUnplugVmNicParameters.java
- 
  Guid vmId;
-
  Guid nicId;
-
  boolean plug;
-
 
 ==== Engine - VDSM API ====
 
