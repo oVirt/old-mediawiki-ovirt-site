@@ -39,6 +39,35 @@ The NIC removing from the VM will be performed as two steps procedure: <BR>
 
 The same behavior should be applied on stopped and running VM's. <BR>
  
+==== Engine API ====
+
+===== REST API =====
+
+2 new actions on nics collection:
+
+ /api/vms/xxx/nics/yyy/plug
+ /api/vms/xxx/nics/yyy/unplug
+
+
+===== @EJB API ======
+
+
+- plug or unplug a nic
+
+ VdcAction.java
+ ...
+ plugUnplugNic(1000)
+
+
+ plugUnplugVmNicParameters.java
+ 
+ Guid vmId;
+
+ Guid nicId;
+
+ boolean plug;
+
+
 ==== Engine - VDSM API ====
 
 A new API is added for this feature.
@@ -71,7 +100,7 @@ New vdsm errors will be added:
 </pre>
 
 '''Note:'''  To avoid PCI addresses collisions Engine should clean NIC's address entry in DB when unplug the NIC. <BR>
-The new address will be assigned to NIC with next plugging. <BR> 
+The new address will be assigned to NIC with next plugging. <BR>
 
 ==== Events ====
 <!-- What events should be reported when using this feature. -->
