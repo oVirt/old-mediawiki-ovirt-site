@@ -49,6 +49,13 @@ These flows should be supported from the GUI.
 # Engine should assert that the backing storage target is reachable or connect it to the VM [[#Notes|'''destination host''']].
 # Restart the VM
 
+
+The following UI mockups contain guidelines for the different screens and wizards:
+
+[[File:import_direct_lun.png]]
+
+[[File:attach_direct_lun.png]]
+
 == Engine - VDSM API ==
 
 A new API is added for this feature.
