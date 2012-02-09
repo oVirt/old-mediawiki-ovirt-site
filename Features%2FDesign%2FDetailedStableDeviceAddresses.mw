@@ -200,7 +200,7 @@ Direct LUN enables adding a block device to the system either by its GUID or UUI
 
 == Documentation / External references ==
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
-http://www.ovirt.org/wiki/Features/Design/StableDeviceAddresses
+[[Features/Design/StableDeviceAddresses]]
 
 == Open Issues ==
 <!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
