@@ -16,7 +16,7 @@ https://admin.fedoraproject.org/accounts/openid/id/<username>
 ==== Set SSH keys in Gerrit settings ====
 * On your local machine, create a set of SSH keys (if you don't already have one) via 
  <nowiki>
-'ssh-keygen -t rsa'
+ssh-keygen -t rsa
  </nowiki>
 * Update via Gerrit settings the SSH public key to allow SSH to Gerrit
 
