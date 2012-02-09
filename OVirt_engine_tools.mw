@@ -13,6 +13,7 @@ Engine tools are mainly standlone java programs wrapped-up by scripts and mostly
 TODO 
 
 == Tools TODO ==
-#standardize all tools usage and make it concictent
-#create common infra both for java programs and for the wrapping scripts e.g functions to fulfill classpath dependecies etc.
+#standardize all tools usage and make it consistent
+#create common infra both for java programs and for the wrapping scripts e.g functions to fulfill classpath dependencies etc.
 #use comon paths for all
+#Use a single logger library (apache-commons-logging)
