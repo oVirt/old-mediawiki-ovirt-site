@@ -128,7 +128,10 @@ c. CopyImageCommand <BR>
 This new class will concentrate BLL logic for performing image copying. <BR>
 The command will be run internally only. <BR>
 The command will receive as parameters information on source and target disk images and storage domains. <BR>
-The command will invoke the CopyImageVDS command in order to perform the image copying via the SPM. <BR>
+The command will invoke the CopyImageVDS command in order to perform the image copying via the SPM. <BR><BR>
+d. AddVmFromSnapshotCommand
+The new class will concrentrate BLL logic for creating a VM clone from a snapshot. <BR>
+The command will invoke the CopyImage BLL command for each Disk Image that should be cloned. <BR><BR>
 
 === Clone VM from snapshot command parameters Class diagram ===
 [[File:Clone flow vm from snapshot params.jpg]]
