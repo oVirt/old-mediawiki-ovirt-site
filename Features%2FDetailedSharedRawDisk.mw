@@ -61,7 +61,7 @@ Move disk
 Move VM
 * When moving a VM the shared raw disk should not be moved.
 Snapshot
-* when taking a vm snapshot, a snapshot of the shared disk will not be taken.
+* when taking a vm snapshot, a snapshot of the shared disk should not be taken, although it will be part of the VM snapshot configuration and the disk will appear as unplugged.
 Stateless VM
 * When running stateless VM, the shared raw disk will not be handled as stateless, the user should get a warning message indicating that the disk will not be handled as stateless.
 VM pools
