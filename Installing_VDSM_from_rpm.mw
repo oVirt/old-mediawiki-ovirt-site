@@ -35,12 +35,10 @@ Add the following line into the configuration file of your out going interface (
 the file is located at: '''/etc/sysconfig/network-scripts/ifcfg-em1''' (assuming the device is em1)
  <nowiki>
 BRIDGE=ovirtmgmt</nowiki>
+and remove the IPADDR, NETMASK and BOOTPROTO keys, since the interface should not have an IP address of its own.
 Full Example
  <nowiki>
 DEVICE=em1
-BOOTPROTO=static
-IPADDR=192.168.1.212
-NETMASK=255.255.255.0
 ONBOOT=yes
 BRIDGE=ovirtmgmt</nowiki>
 
