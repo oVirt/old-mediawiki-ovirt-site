@@ -110,11 +110,76 @@ The changes we need to communicate are in the "network" structure for bridge and
  <span style="color:red">'''note:''' </span> integer types are serialized to an xml String type on the wire - its up to the VDSM network dict to handle.
 
 ==== Error codes ====
-pls fill the VDSM error codes for
 
-# the network/bonds configuration are not valid
-# error applying the changes
-# check connectivity timeout - client was not seen on the mgmt network
+
+
+#ERR_BAD_PARAMS = 21
+
+#ERR_BAD_ADDR = 22
+
+ Bad IP address
+ IP address is already in use
+ Bad netmask
+ Bad gateway
+ Must specify netmask to configure ip for bridge
+ Specified netmask or gateway but not ip
+ Must specify netmask to configure ip for bridge
+ Specified netmask or gateway but not ip
+ Bad IP address
+
+#ERR_BAD_NIC = 23
+ not all nics are enslaved
+ unknown nic
+ delNetwork: nics are not all nics enslaved to bond
+ unknown nic
+ unknown nics
+ 
+#ERR_USED_NIC = 24
+ nic is already bound to bridge 
+ nic already used by vlans
+ nic already enslaved to bonds
+ Setup attached both network and bonding to nic
+
+#ERR_BAD_BONDING = 25
+ is not a valid bonding device name
+ Bonding options specified without bonding
+ bonding is already member of bridge 
+ bonding already has members
+ multiple nics require a bonding device
+ Cannot remove bonding Doesn\'t exist'
+ Nic is attached to two different bondings in setup
+ 
+#ERR_BAD_VLAN = 26 -
+ vlan id out of range 
+ vlan id is not a number
+
+#ERR_BAD_BRIDGE = 27
+ bridge doesn't exist
+
+#ERR_USED_BRIDGE = 28
+ bridge is in use
+
+#ERR_LOST_CONNECTION = 10
+ client is not seed during check_connectivity lapse
+
+
+
+
+
+===== structure ======
+
+Callers should be able to tell which network attribute is making the problem
+
+e.g the network's vlan configuration is not valid
+ 
+<error>
+ <code>26</code>
+ <name>ERR_BAD_VLAN</name>
+ <message/>vlan id {network.vlan_id} for network {network.name} must be a number</message>
+ <network>
+  <name>Yellow</name>
+  <vlan_id>3oo</vlan_id>
+ </network>
 
 == GUI ==
 
