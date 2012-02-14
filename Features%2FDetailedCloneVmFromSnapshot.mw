@@ -110,10 +110,10 @@ The diagram below presents the class diagram for the commands + changes in the e
 
 a. BaseImagesCommand <BR>
 This existing class will undergo the following changes:<BR>
-* Introducing the performSPMOperation. <BR>
+* Introducing the performImageVdsmOperation. <BR>
 This method will replace the "CreateSnapshotInIRSServer" as in some cases, the overridden versions of this method invoke the CopyImage and not the CreateSnapshot VDSM verb. <BR>
-* Introducing the method handleImagesAfterSPMOperation. <BR>
-This method will be overridden by sub classes to provide logic for handling the images, after successful invocation of the SPM operation. <BR>
+* Introducing the method handleImagesAfterVdsmImageOperation. <BR>
+This method will be overridden by sub classes to provide logic for handling the images, after successful invocation of image releated VDSM operation. <BR>
 In case of CreateSnapshotCommand the overridden method will replace the existing methods of ProcessImageFromDB and AddDiskImageToDB. <BR>
 In case of CopyImageCommand the overridden method will add the new image to DB. <BR><BR>
 b. DiskImageUtils <BR>
