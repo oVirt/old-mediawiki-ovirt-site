@@ -20,7 +20,7 @@ From PostgreSQL 9:
 #> su - postgres -c 'pg_ctl initdb' # (first time only)
 
 For PostgreSQL 8 or earlier:
-#> initdb -U postgres -D /var/lib/pgsql/data/ # (first time only)
+#> su - postgres -c 'initdb -U postgres -D /var/lib/pgsql/data/' # (first time only)
 
 #> service postgresql start
 </nowiki>
