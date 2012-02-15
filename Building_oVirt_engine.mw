@@ -288,6 +288,9 @@ http://<server name>:<port>/UserPortal
 <!--<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
 <span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 8</span></p>-->
 
+== Settings Certificate to SSL ==
+Follow this page: http://www.ovirt.org/wiki/Engine_Node_Integration#Engine_core_machine
+
 == Advanced features ==
 
 * Registering an oVirt Node
