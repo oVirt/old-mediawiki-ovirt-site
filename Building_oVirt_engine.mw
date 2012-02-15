@@ -288,7 +288,7 @@ http://<server name>:<port>/UserPortal
 <!--<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
 <span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 8</span></p>-->
 
-== Setting Public Key environment (recommended to oVirt Node environment ==
+== Setting Public Key environment (recommended to oVirt Node environment) ==
 Follow this page: http://www.ovirt.org/wiki/Engine_Node_Integration#Engine_core_machine
 
 == Advanced features ==
