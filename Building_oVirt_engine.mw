@@ -248,7 +248,7 @@ Since postgres is already set up.
 
 Assuming JBoss is not running, it should be started:
  <nowiki>
-$> /usr/local/jboss-as-7.1.0.Beta1b/bin/standalone.sh
+$> /usr/share/jboss-as/bin/standalone.sh
 </nowiki>
 
 Use username '''admin@internal''' and password '''letmein!'''
