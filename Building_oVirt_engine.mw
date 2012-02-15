@@ -251,6 +251,13 @@ Since postgres is already set up.
 
 Assuming JBoss is not running, it should be started:
  <nowiki>
+    #> service jboss-as start (or restart if you already started above for tests)
+    #> ps ax | grep java
+ </nowiki>
+
+or 
+
+ <nowiki>
 $> /usr/share/jboss-as/bin/standalone.sh
 </nowiki>
 
