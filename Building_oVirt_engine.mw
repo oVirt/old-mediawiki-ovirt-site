@@ -135,6 +135,7 @@ Finally, check that the installed service runs:
     $> su - -c 'chmod -R 777 /usr/share/jboss-as'
     $> chkconfig jboss-as on
     $> Change the Jboss home in ~/.m2/settings.xml file to point to the new location</nowiki>
+
 Check that it runs:
 
  <nowiki>
