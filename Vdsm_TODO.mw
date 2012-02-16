@@ -6,8 +6,6 @@
 
 * Simplify the SysV init script, split most of its code to a "[http://gerrit.ovirt.org/295 vdsm-tool]".
 
-* storage.misc.execCmd() has a stupid default to its <tt>sudo</tt> param. Flip it!
-
 * Support striping for disk images.
 
 * remove all usage of <tt>sudo</tt>, and replace with specific calls to <tt>superVdsm</tt>.
