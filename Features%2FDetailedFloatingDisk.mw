@@ -52,10 +52,9 @@ and dependent implementations (e.g. application clustering, shared data warehous
 <!-- Describe how the feature will effect new installation or existing one. -->
 * Installation
 ** New/Edit disk: 
-*** Should enforce the user to enter a unique name.
+*** Should enforce the user to enter a unique (in VM context) name.
 *** New optional field - Description.
 * Upgrade
-** Disk name should be generated automatically - in order to maintain uniqueness.
 ** Disk description should remain empty.
 
 === User Experience ===
