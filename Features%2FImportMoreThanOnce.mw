@@ -50,7 +50,17 @@ Only the ImportEntity dialog will be affected:
 * the suffix text box will be shown only when one of the above check-boxes is checked (it is relevant only for importing an entity as clone).
 
 ==== mockups ====
+note: the following mockups are of ImportVM, in ImportTemplate the 'Collapse Snapshot' check box is hidden, and also any label that is relevant to it.
 
-[[File:Clonedimport.png]]
+* in case no entity exists in the system, this is the default view of the dialog:
+[[File:Nothing_selected.png]]
+
+* in case one of the entities already exists- the duplicate check box will be shown. its default is 'true':
+[[File:Only_dup_selected.png]]
+
+* when selecting 'clone all' the duplicate check box (if shown) will be check and disabled:
+[[File:Clone_all_selected.png]]
+
+
 
 === CLI/API ===
