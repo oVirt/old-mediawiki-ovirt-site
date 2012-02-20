@@ -2,11 +2,11 @@
 
 This document describes the different components in the oVirt engine domain infrastructure, for authenticating and querying to LDAP servers.
 The infrastructure supports:
-#Authenticating both Active Directory and IPA, using either simple or gssapi authentication
-#Querying both Active Directory and IPA, using the LDAP protocol
-#Auto deducing the ldap servers for a specific domain
-#Auto deducing the ldap provider type (Active Directory or IPA)
-#Easily adding new ldap provider types
+#Authenticating Active Directory, IPA and RHDS using either simple or gssapi authentication
+#Querying the directory using the LDAP protocol
+#Auto deducing the LDAP servers for a specific domain
+#Auto deducing the LDAP provider type
+#Easily adding new LDAP provider types
 #Easily adding new query types
 
 This infrastructure is in the package: org.nogah.bll.adbroker, and it consists of the following main components:
