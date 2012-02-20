@@ -9,6 +9,7 @@ Backend stored caches some data in local instances. These instances never actual
 One solution could be to remove the local caches and in-memory data. I don't know if anyone has an estimation for how much work it would take.
 * Cache-like hashmaps could be replaced with distributed caches like ehcache or infinispan.
 * Local data, like counters should be replaced either to database or infinispan.
+* quartz can be easily configured to use JDBC-jobstore, and in that way it is clusterable
 
 == Terracotta? ==
 
