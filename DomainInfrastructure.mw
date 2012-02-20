@@ -9,7 +9,7 @@ The infrastructure supports:
 #Easily adding new LDAP provider types
 #Easily adding new query types
 
-This infrastructure is in the package: org.nogah.bll.adbroker, and it consists of the following main components:
+This infrastructure is in the package: org.ovirt.engine.core.bll.adbroker, and it consists of the following main components:
 #Domain - Entity that represents domain related properties:
 #*name // domain name
 #*RootDSE rootDSE // rootDSE for domain
