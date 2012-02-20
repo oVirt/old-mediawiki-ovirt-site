@@ -40,7 +40,8 @@ clone the engine sources
  cd ~/src/git
  git clone git://gerrit.ovirt.org/ovirt-engine
 Create /etc/pki/ovirt-engine/ca
- mkdir -p /etc/pki/ovirt-engine/ca
+ $ mkdir -p /etc/pki/ovirt-engine/ca
+ $ sudo chmod -R 777 /etc/pki/ovirt-engine/
 Creating OpenSSH convertor: compile pubkey2ssh
  cd backend/manager/3rdparty/pub2ssh/src
  gcc -o pubkey2ssh pubkey2ssh.c -lcrypto
