@@ -247,6 +247,18 @@ Since postgres is already set up.
 <!--<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
 <span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 7</span></p>-->
 
+== Copying vdsm bootstrap files ==
+In case you like to do a full bootstrap installation (InstallVds = True into the database), these steps will be required. Otherwise, can be ignored.
+ <nowiki>
+    #> su - -c 'mkdir -p /usr/share/jboss-as/standalone/deployments/engine.ear/components.war/vds'
+    #> git clone git://gerrit.ovirt.org/vdsm
+    #> cd vdsm
+    #> ./autogen.sh --system && make
+    #> cp vdsm_reg/deployUtil.py /usr/share/jboss-as/standalone/deployments/engine.ear/components.war/vds
+    #> cp vds_bootstrap/vds_bootstrap_complete.py /usr/share/jboss-as/standalone/deployments/engine.ear/components.war/vds
+    #> cp vds_bootstrap/vds_bootstrap.py /usr/share/jboss-as/standalone/deployments/engine.ear/components.war/vds
+ </nowiki>
+
 == Testing ==
 
 Assuming JBoss is not running, it should be started:
