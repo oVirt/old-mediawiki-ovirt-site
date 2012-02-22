@@ -25,6 +25,7 @@
 #** Zero/Minimal changes to user interface.
 #** Inform in advance on any user interface change, and any API change.
 #* At this stage, we should start working on the release notes.
+# '''45 days before release - Test Day'''
 # '''30 days before release - release candidate'''
 #* EXCEPTION: 15 days for 3 month release cycle
 #* If no blockers (MUST violations) are found the last release candidate automatically becomes the final release.
