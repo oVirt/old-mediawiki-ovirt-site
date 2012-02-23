@@ -1,13 +1,3 @@
-== Bridge-less Networks ==
-
-=== Summary ===
-Today by default every network is created with a software bridge,which is used to connect virtualized nics to a VM on top of it.<br>
-A bridg-less network will be a network created without that bridge and targeted to be attached on top of vNic or SRIOV nics<bR>
-or for heavy traffic channels like migration, storage or the engine's management network i.e
-
-=== Benefit for oVirt ===
-Networks will have better performance (no bridging overhead).
-
 === Owner ===
 * Name: [[User:MyUser| Roy Golan]]
 
@@ -15,68 +5,75 @@ Networks will have better performance (no bridging overhead).
 * Email: rgolan@redhat.com
 
 
-=== Basic Flow ===
+=== Modified flows ===
 
-==== create a bridgeless network ====
-# Add a logical network to your DC ( DC tab for GUI or /api/datacenters/network - set the property "Allow to run VMs" to false
-# Attach the network to your hosts in the new setupnetworks UI - attach a network to the target interface and uncheck the box "bridged" .<BR> in REST use the /api/hosts/XXX/nics/setupnetwork and specify the <bridged>false</bridged> on the target eth 
+==== Add a Nic to VM ====
+* validate the Nic's network is bridged on all running host in the cluster - fail with canDoAction
 
-<P> - when the network "Allow to run VMs" is true the bridging option should be set automatically by the engine according to the interface type?
+==== Import VM ====
+* validate each vm interface (either it is plugged or unplugged) is attached to a network that is bridged on all running host in the cluster - fire audit log when not.
+* don't fail the import
 
-==== edit a bridged network to become unbridged ====
-# a network with the flag "Allow to run VMs" set to false but the nic still was attached as bridged.
-# attach the nic as uncheck the "bridged" option as described in the create flow above
+==== Run VM ====
+* validate each vm interface is attached to a network that is bridged on all running host in the cluster - fail with canDoAction
 
-==== monitoring ====
+==== Un-bridge a host network via setupNetworks ====
+* validate that this network doesn't have any VMs running on it. otherwise this host <br>
+will not be able to have VMs migrated to it and will be set to non-operational during monitoring.
 
- Host monitoring pseudo-code
+==== Monitoring ====
+* when performing refresh capabilities during a host startup update the vdsInterface bridged flag. 
+* if the "bridged" is changed from true to false, make sure the rest of the cluster's hosts have this network bridge-less as well <br> if not, set to non-operational with reason NETWORK_IS_NOT_BRIDGED_ON_VDS
+
+=== Modelling ===
+
+==== Entities ====
+A bridged network is represented in VdsInterface.java and vds_interface table and 
+is set using setupNetworks action.
+
+<b>note:</b> there is no notion of bridged network on <b>network</b> and <b>network_cluster</b> entities. Its
+an implementation detail of the host.
+
+*VdsNetworkInterface.java
+ VdsNetworkInterface
+  bridged : boolean
+* vds_interface table
+ vds_interface
+  bridged BOOLEAN
+
+==== stored procedures ====
+*get_hosts_ids_with_bridged_network
+ v_cluster_id
+ v_network_name
+ SELECT nic.vds_id FROM vds_interface as nic, network as net
+ WHERE
+ nic.network_name = net.name
+ AND
+ nic.bridged = true 
+ AND
+ nic.vds_id in (select vds_id FROM vds_static as vds WHERE vds.vsd_group_id = v_cluster_id )
+
+*is_network_bridged_on_running_cluster_hosts
+ v_cluster_id
+ v_network_name
+ SELECT count(*) FROM vds 
+ WHERE
+ vds.status = 
+ AND
+ vds.id in (SELECT get_hosts_ids_with_bridged_network(v_cluster_id, v_network_name)) > 0 as value
+
+*is_vms_running_on_cluster_network
+ v_cluster_id
+ v_network_name
  
- logical network is defined as able to run VMs AND Host network is bridgeless {
-  if iface type != SRIOV or VnLink
-  set host to NON OPERATIONAL (REASON: network can't run VMs)
- }
-
-=== Code Changes ===
-==== Model ====
-# Add bridged : boolean  VdsNetworkInterface entity
-# Add allowToRunVms : boolean  network entity
-
-# Add deserialization to bridged field in VdsBrokerObjectsBuilder.java
-# DB - add field in to vds_interface,vds_interface_view, network,network_view
-# DAO - add field to VdsInterfaceDao,networkDao CRUD actions
-# DAO - update tests
-
-
-==== BL ====
-#extend non-operational API to accept more reasons 
-#remove redundant checking in monitoring code - same check for missing
-#add tests for the API refactoring network in CollectVdsNetworkData and VdsManager
-#refactor VdsManager to send the host to non-oper on bridge property difference with Cluster "allowToRunVms" property [1]
-# add tests to VdsManager for the new behaviour
-
-
-==== UI ====
-
-#UI shall append the "allow to run VMs []" checkbox to the add/edit logical network 
-#UI shall user shall be able to attach the network as bridged/non-bridged network when "allowToRunVms" is false, in setup-networks UI [2]
-
-
-===== sketches/mocks =====
-
-TODO drankevi
-
-
-=== Backward Compatibility ===
- 
-Its compatibility version is 3.1 and enforced by the enclosed command as mentioned already.
-Bridge-less network will be edited via the SetupNetworks command only, which will eventually deprecate add/edit networks commands.
-
-
-=== open issues ===
-[1] if a network is checked with "allowToRunVms" and an underlying host will need an un-bridged(SRIOV...) network to fulfil that <BR>
-how do we treat that during monitoring? we should be able to distinguish on interfaces that can run vm with/without bridge <BR>
-and deduce that cluster compatibility didn't break <BR>
-[2] if, for some reason an admin wants a non VM network to be bridged, should we allow it?
-
-
-[[Category:Feature]]
+ return 
+ SELECT count(*) FROM vms, vm_interface_view as ifaceView 
+ WHERE
+ vms.vds_group_id = v_cluster_id 
+ AND
+ vm.status = 1 // status up
+ AND
+ ifaceView.vm_id = vm.id
+ AND
+ ifaceView.network_name = v_network_name 
+ > 0 as value
