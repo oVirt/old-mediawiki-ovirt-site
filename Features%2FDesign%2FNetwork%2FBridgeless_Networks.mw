@@ -4,6 +4,11 @@
 <!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
 * Email: rgolan@redhat.com
 
+=== Functionality ===
+An admin can now set a bridge/bridge less property on the Host Interface per specific Network.<br>
+When attaching a Network to an Host's NIC, user can define the bridge/bridgeless property using setupNetworks.<br>
+This implies that a given cluster may have one host implementing <br>
+network "pink" as bridged and another implementing it as bridge-less.<br>
 
 === Basic flow ===
 
