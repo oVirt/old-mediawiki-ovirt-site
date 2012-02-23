@@ -63,7 +63,7 @@ an implementation detail of the host.
   bridged BOOLEAN
 
 ==== stored procedures ====
-*get_hosts_ids_with_bridged_network
+*getHostsIdsWithBridgedNetwork
  v_cluster_id
  v_network_name
  SELECT nic.vds_id FROM vds_interface as nic, network as net
@@ -74,7 +74,7 @@ an implementation detail of the host.
  AND
  nic.vds_id in (select vds_id FROM vds_static as vds WHERE vds.vsd_group_id = v_cluster_id )
 
-*is_network_bridged_on_running_cluster_hosts
+*isNetworkBridgedOnRunningclusterHosts
  v_cluster_id
  v_network_name
  SELECT count(*) FROM vds 
@@ -83,7 +83,7 @@ an implementation detail of the host.
  AND
  vds.id in (SELECT get_hosts_ids_with_bridged_network(v_cluster_id, v_network_name)) > 0 as value
 
-*is_vms_running_on_cluster_network
+*isVmsRunningOnClusterNetwork
  v_cluster_id
  v_network_name
  
