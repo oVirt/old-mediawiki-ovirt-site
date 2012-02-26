@@ -108,9 +108,10 @@ an implementation detail of the host.
 *AuditLogType.java
  VDS_NETWORK_IS_NOT_BRIDGED(9600,MINUTE)
 *NonOperationlreason.java
- NETWORK_IS_NOT_BRIDGED_ON_VDS
+ NETWORK_IS_NOT_BRIDGED_ON_VDS(8)
 *VdcBLLMessages
  CANNOT_UNBRIDGE_VDS_NETWORK_WITH_RUNNING_VMS
+
 === Messages ===
 *AuditLogMessage.properties
  VDS_NETWORK_IS_NOT_BRIDGED=The network ${networkName} on Host ${vds} should be bridged otherwise it could not run virtual interfaces.
