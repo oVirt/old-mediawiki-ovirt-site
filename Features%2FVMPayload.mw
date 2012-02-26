@@ -51,12 +51,12 @@ Notes:
 # For now we will limit the content of the file to 1024K. In the future we might support using NFS share in cases in which the content is bigger
 
 === Design Notes ===
-in device specParams we pass:
+vmPayload is passed in the create params:
  <nowiki>
- { 'vmPayload': { 'cdrom': [{'filename': 'content' }, {'filename': 'content'}],
+ 'vmPayload': { 'cdrom': [{'filename': 'content' }, {'filename': 'content'}],
   'floppy': [{'filename': 'content' }, {'filename': 'content'}],
   'sysprep': {'filename': 'content' },
-  'network': '...' } }
+  'network': '...' }
  </nowiki>
 
 === User work-flows ===
