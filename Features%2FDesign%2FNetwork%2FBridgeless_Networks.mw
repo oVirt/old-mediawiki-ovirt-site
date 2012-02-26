@@ -111,6 +111,7 @@ an implementation detail of the host.
  NETWORK_IS_NOT_BRIDGED_ON_VDS(8)
 *VdcBLLMessages
  CANNOT_UNBRIDGE_VDS_NETWORK_WITH_RUNNING_VMS
+ ACTION_TYPE_FAILED_NO_BRIDGED_NETWORKS
 
 === Messages ===
 *AuditLogMessage.properties
