@@ -227,23 +227,20 @@ The first deployment of the application to JBoss AS container should use the set
 
  <nowiki>
 $> cd $OVIRT_HOME/ear
-$> mvn2 clean install -Pdep,setup
-</nowiki>
+$> mvn2 clean install -Pdep,setup</nowiki>
 
 There is a issue with the dep and setup_postgres profiles getting in the way of each other. the setup_postgres profile will prevent the deployment of the quartz jar to the JBoss server. So after this step completes, run:
 
  <nowiki>
 $> cd $OVIRT_HOME/ear
-$> mvn2 clean install -Pdep
-</nowiki>
+$> mvn2 clean install -Pdep</nowiki>
 
 
 From this point on, every time you deploy you can simply run:
 
  <nowiki>
 $> cd $OVIRT_HOME/ear
-$> mvn2 clean install -Pdep
-</nowiki>
+$> mvn2 clean install -Pdep</nowiki>
 
 Since postgres is already set up.
 
@@ -262,44 +259,50 @@ In case you like to do a full bootstrap installation (InstallVds = True into the
     #> cp vds_bootstrap/vds_bootstrap.py /usr/share/jboss-as/standalone/deployments/engine.ear/components.war/vds
     #> psql engine postgres -c "update vdc_options set option_value = 'http://YOUR_ENGINE_HOST_HERE:8080/Components/vds' where option_name = 'VdcBootStrapUrl';"</nowiki>
 
+== Deploying engine-config & engine-manage-domains ==
+
+ <nowiki>
+$> cd $OVIRT_HOME
+$> mkdir -p /usr/share/ovirt-engine/engine-config/
+$> mkdir -p /usr/share/ovirt-engine/engine-config/lib/
+$> mkdir -p /usr/share/ovirt-engine/engine-manage-domains/
+$> mkdir -p /etc/ovirt-engine/engine-manage-domains/
+$> mkdir -p /etc/ovirt-engine/engine-config/
+$> mkdir -p /usr/share/ovirt-engine/engine-manage-domains/lib/
+$> make install_config</nowiki>
+
 == Testing ==
 
 Assuming JBoss is not running, it should be started:
  <nowiki>
     #> service jboss-as start (or restart if you already started above for tests)
-    #> ps ax | grep java
- </nowiki>
+    #> ps ax | grep java</nowiki>
 
 or 
 
  <nowiki>
-$> /usr/share/jboss-as/bin/standalone.sh
-</nowiki>
+$> /usr/share/jboss-as/bin/standalone.sh</nowiki>
 
 Use username '''admin@internal''' and password '''letmein!'''
 
 Accessing the RESTful API:
 
  <nowiki>
-wget -O - --debug --auth-no-challenge --http-user=admin@internal --http-password='letmein!' head='Accept: application/xml' http://<server name>:<port>/api/
-</nowiki>
+wget -O - --debug --auth-no-challenge --http-user=admin@internal --http-password='letmein!' head='Accept: application/xml' http://<server name>:<port>/api/</nowiki>
 
 (by default, the port is 8080).
 
 or from the browser
  <nowiki>
-http://<server name>:<port>/api
-</nowiki>
+http://<server name>:<port>/api</nowiki>
 
 Accessing the web-admin: <BR> 
  <nowiki>
-http://<server name>:<port>/webadmin
-</nowiki>
+http://<server name>:<port>/webadmin</nowiki>
 
 Accessing the user-portal <BR> 
  <nowiki>
-http://<server name>:<port>/UserPortal
-</nowiki>
+http://<server name>:<port>/UserPortal</nowiki>
 <!--<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
 <span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 8</span></p>-->
 
