@@ -15,6 +15,8 @@ __TOC__
 |-
 |  0% || [[Features/PosixFSConnection | PosixFSConnection ]]|| [[Features/PosixFSConnection | PosixFSConnection ]] || Enable generic file based storage domains . || || 2011-12-01
 |-
+|  0% || [[Features/Direct_Lun | Direct_Lun ]]|| [[Features/Direct_Lun | PosixFSConnection ]] || Attach a block device directly to a VM. || || 2011-12-01
+|-
 |  0% || [[Features/ConnectionReferences | Storage Server Connection References ]]|| [[Features/ConnectionReferences | Storage Server Connection References ]] || API for accessing storage server connections through references. || || 2011-12-01
 
 |}
