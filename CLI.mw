@@ -16,7 +16,6 @@ __TOC__
 
 == Usage ==
 
-
 === Connect ===
 
 ====get help for connect====
@@ -391,7 +390,7 @@ __TOC__
 === Update ===
 
 * note: at this point auto-completion for 'update' command is not available,
-        use entity properties names as command options  
+use entity properties names as command options  
 
 ====update resource====
 
