@@ -10,7 +10,7 @@
 
 * remove all usage of <tt>sudo</tt>, and replace with specific calls to <tt>superVdsm</tt>.
 
-* remove explicit calls to <tt>traceback.format_exc()</tt> in log lines. Use <tt>exc_info=True</tt> instead.
+* remove explicit calls to <tt>traceback.format_exc()</tt> in log lines. Use <tt>exc_info=True</tt> instead. (http://gerrit.ovirt.org/#change,2259)
 
 * pick one of the [https://bugzilla.redhat.com/buglist.cgi?action=wrap&bug_file_loc=&bug_file_loc_type=allwordssubstr&bug_id=&bug_id_type=anyexact&chfieldfrom=&chfieldto=Now&chfieldvalue=&component=vdsm&deadlinefrom=&deadlineto=&email1=&email2=&emailtype1=substring&emailtype2=substring&field0-0-0=flagtypes.name&keywords=&keywords_type=allwords&longdesc=&longdesc_type=allwordssubstr&short_desc=&short_desc_type=allwordssubstr&status_whiteboard=&status_whiteboard_type=allwordssubstr&type0-0-0=notsubstring&value0-0-0=rhel-6.2.0&votes=&=&bug_status=NEW NEW bugs], post a patch to [http://gerrit.ovirt.org gerrit], and make the bug yours.
 
