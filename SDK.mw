@@ -222,8 +222,6 @@ For local install in site-packages, from ovirt-engine-sdk repo:
 
 * supporting several proxy instances in application (i.e cache peer proxy instance)
 
-* supporting matrix url parameters
-
 * supporting header parameters
 
 * dynamic connections_pool resizer
