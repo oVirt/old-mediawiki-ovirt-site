@@ -6,7 +6,23 @@
 : 英文：
 :: 请直接回复邮件到E-mail：rsvp@oVirt.org
 : 中文：
-:: 请回复邮件到E-mail：rsvp@oVirt.org
+:: 请填写如下表格
+{| border="1" cellspacing="0" cellpadding="2"
+|-
+!scope="col"| 姓名
+!scope="col"| 工作单位
+!scope="col"| 联系方式
+!scope="col"| email
+|-
+!scope="姓名"| | | | |-
+!scope="row"| Butter
+| 0.125 kg
+| $1.25
+|-
+!scope="row" colspan="2"| Total
+| $1.90
+|}
+:: 然后发送到E-mail：shaohef@cn.ibm.com
 :;会议相关信息：
 : '''''时间'''''：2012年3月21日
 : '''''地点'''''： 北京市海淀区东北旺西路8号中关村软件园19号楼钻石大厦创新中心。
