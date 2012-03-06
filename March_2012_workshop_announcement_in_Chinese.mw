@@ -6,13 +6,12 @@
 : 英文：
 :: 请直接回复邮件到E-mail：rsvp@oVirt.org
 : 中文：
-:: 请填写如下表格
-:: 
-{| border="1" cellspacing="0" cellpadding="12"
-|姓名||工作单位||联系方式||email
-|-
-|||    ||    ||
-|}
+:: 请填写如下表格：
+  {| border="1" cellspacing="0" cellpadding="12"
+  |姓名||工作单位||联系方式||email
+  |-
+  |||    ||    ||
+  |}
 :: 然后发送到E-mail：shaohef@cn.ibm.com
 :;会议相关信息：
 : '''''时间'''''：2012年3月21日
