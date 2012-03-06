@@ -7,9 +7,10 @@
 :: 请直接回复邮件到E-mail：rsvp@oVirt.org
 : 中文：
 :: 请填写如下表格：
-  {| border="1" cellspacing="0" cellpadding="12"
+  {| border="1" cellspacing="0"
   |姓名||工作单位||联系方式||email
   |-
+  !cellpadding="12"
   |||    ||    ||
   |}
 :: 然后发送到E-mail：shaohef@cn.ibm.com
