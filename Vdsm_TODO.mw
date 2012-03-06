@@ -2,6 +2,8 @@
 
 * <tt>pylint -E `git ls-files | grep '.py$'`</tt> makes me cry. A lot of it is "only" about bad style, but we should clear it up and add it to our <tt>make check-local</tt>. We should grow up and pass <tt>pychecker</tt> too.
 
+* write an automatic script that runs on each and every new change to gerrit, and adds an insulting comment if <tt>pyflakes</tt> fails for the new change.
+
 * Improve Vdsm portability. We are very much Fedora-centric at best. Do you want to have Vdsm on your pet distribution? Own that port!
 
 * Simplify the SysV init script, split most of its code to a "[http://gerrit.ovirt.org/295 vdsm-tool]".
