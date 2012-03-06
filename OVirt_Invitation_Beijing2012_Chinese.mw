@@ -7,14 +7,6 @@
 :如果您回答”yes“，我们真诚的邀请您参加在中国北京IBM举行的《开源虚拟化管理平台项目》研讨会。本次研讨会诚邀所有想开发、使用、参与、问答或者了解全面的虚拟华平台项目的爱好者。
 :这次会议涵盖项目技术细节，项目的管理，以及如何参与和使用等等。
 :本次研讨会欢迎所有的个人、公司及各种机构。请不要错过这次机会，帮助促进开源虚拟化管理平台项目的成长，开发，管理以及未来的影响。对虚拟化平台感兴趣的爱好者们，不要犹豫，请立即加入该研讨会。
-:如果你想报名参加本次研讨会，请填写以下表格并回复到<ins style="color:blue">shaohef@cn.ibm.com</ins>。
-  {| border="1" cellspacing="0"
-  |姓名||工作单位||联系方式||email
-  |-
-  |   ||       ||      ||***@ovirt.org
-  |}
-
-
 
 :更多信息，详见[http://ovirt.org/wiki/March_2012_workshop_announcement_in_Chinese oVirt研讨会]
 ::::::::
@@ -24,3 +16,12 @@
 :'''会议地点'''：中国北京市海淀区东北旺西路8号中关村软件园19号楼钻石大厦创新中心。
 :'''报名''':  <ins style="color:blue">shaohef@cn.ibm.com</ins>
 :'''联系人'''：<ins style="color:blue">ShaoHe Feng shaohef@cn.ibm.com</ins>
+----
+:如果你想报名参加本次研讨会，请填写以下表格，
+  {| border="1" cellspacing="0"
+  |姓名||工作单位||联系方式||email
+  |-
+  |   ||       ||      ||***@ovirt.org
+  |}
+
+:: 然后发送到E-mail：<ins style="color:blue">shaohef@cn.ibm.com</ins>
