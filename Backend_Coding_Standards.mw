@@ -1,12 +1,12 @@
-=Backend Coding Standards=
+==Backend Coding Standards==
 
 This page is a collection of coding standards in the ovirt engine backend. Not all of these standards are properly maintained, they are more like 'guidelines'
 
-== private members should be at the bottom of the class ==
+=== private members should be at the bottom of the class ===
 
 If you have private methods or embedded classes in your class (e.g. a rowmapper class in a DAO), then it should be at the bottom of the class. The idea here is that they are implementation details and viewers should read the public API first.
 
-== RowMapper singletons ==
+=== RowMapper singletons ===
 
 RowMappers should have a single instance e.g.
 
@@ -18,3 +18,9 @@ RowMappers should have a single instance e.g.
  }
 
 So you do not have to instantiate the rowmapper all the time.
+
+==To be cleared==
+
+=== Logger ===
+
+Seems like there is no clear agreement on how the loggers should be declared. What is known is that it should be the 'compat' logger.
