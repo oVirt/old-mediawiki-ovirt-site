@@ -13,6 +13,7 @@
 {|
 |option_id;option_name;option_value;version
 |-
+|}
 |1;AuthenticationMethod;LDAP;general
 |----
 |6;UserRefreshRate;3600;general
