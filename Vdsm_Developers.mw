@@ -32,7 +32,7 @@ rather than
  logging.debug('hello %s' % 'world')
 
 ==Sending patches==
-Send them to [http://gerrit.ovirt.org our gerrit server] ([[Working with oVirt Gerrit|see how]]).
+Send them to [http://gerrit.ovirt.org our gerrit server] ([[Working with oVirt Gerrit|see how]]). With your first major patch, do not forget to add yourself to the AUTHORS file. Do not be shy - it gives you a well-deserved recognition, and it shows to the team that you stand behind your code.
 
 General development discussions are in <tt>vdsm-devel@lists.fedorahosted.org</tt>.
 
