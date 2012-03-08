@@ -10,10 +10,14 @@
 |}
 
 
-{|
+<span style="color:Teal">'''vds_spm_priority'''</span>:<BR>
+{|class="wikitable sortable"
+!border="1"| Options Name || Description || Is Reloadable || Why 
+|-
+|vds_spm_priority ||smallint || CHECK (vds_spm_priority between (-1) and 10) DEFAULT 5 ||The Spm priority of this vds
+|-
 |option_id;option_name;option_value;version
 |-
-|}
 |1;AuthenticationMethod;LDAP;general
 |----
 |6;UserRefreshRate;3600;general
