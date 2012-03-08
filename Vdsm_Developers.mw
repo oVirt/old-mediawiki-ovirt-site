@@ -32,9 +32,9 @@ rather than
  logging.debug('hello %s' % 'world')
 
 ==Sending patches==
-Send them to <tt>vdsm-patches@lists.fedorahosted.org</tt>. Please subscribe before sending patches so you could keep track on your patch.
+Send them to [http://gerrit.ovirt.org our gerrit server] ([[Working with oVirt Gerrit|see how]]).
 
-The above mailing list is only for patches. General development discussions are in <tt>vdsm-devel@lists.fedorahosted.org</tt>.
+General development discussions are in <tt>vdsm-devel@lists.fedorahosted.org</tt>.
 
 [[Category:Vdsm]]
 [[Category:Documentation]]
