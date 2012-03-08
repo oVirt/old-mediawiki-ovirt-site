@@ -1,90 +1,81 @@
 = Reloadable Configuration =
 ----
 
-<span style="color:Teal">'''vds_spm_priority'''</span>:<BR>
+<span style="color:Teal"></span>:<BR>
 {|class="wikitable sortable"
 !border="1"| Options Name || Description || Is Reloadable || Why 
 |-
-|vds_spm_priority ||smallint || CHECK (vds_spm_priority between (-1) and 10) DEFAULT 5 ||The Spm priority of this vds
-|-
-|}
-
-
-<span style="color:Teal">'''vds_spm_priority'''</span>:<BR>
-{|class="wikitable sortable"
-!border="1"| Options Name || Description || Is Reloadable || Why 
-|-
-|1;AuthenticationMethod;LDAP;general || || no || To big of a change.
+|1;AuthenticationMethod;LDAP;general || || n || To big of a change, in some places is only updated on startup
 |----
-|6;UserRefreshRate;3600;general || || || 
+|6;UserRefreshRate;3600;general || || n || is only updated on startup
 |----
-|7;LDAPServerPort;389;general || || ||
+|7;LDAPServerPort;389;general || || n || is only updated on startup
 |----
-|8;LDAPQueryTimeout;30;general || || ||
+|8;LDAPQueryTimeout;30;general || || y ||
 |----
-|9;SASL_QOP;auth-conf;general || || ||
+|9;SASL_QOP;auth-conf;general || || n || is only called in GSSAPIDirContextAuthenticationStrategy.setupEnvironment()
 |----
-|10;LdapQueryPageSize;1000;general || || ||
+|10;LdapQueryPageSize;1000;general || || ? ||
 |----
-|11;MaxLDAPQueryPartsNumber;100;general || || ||
+|11;MaxLDAPQueryPartsNumber;100;general || || ? ||
 |----
-|12;LocalAdminPassword;123456;general || || ||
+|12;LocalAdminPassword;123456;general || || y? || is called in SysPrepHandler.GetSysPrep()
 |----
-|13;DefaultWorkgroup;WORKGROUP;general || || ||
+|13;DefaultWorkgroup;WORKGROUP;general || || y || unused
 |----
-|14;VirtualMachineDomainName;VirtualMachineDomainName;general || || ||
+|14;VirtualMachineDomainName;VirtualMachineDomainName;general || || y || unused
 |----
-|15;SysPrepXPPath;backend/manager/conf/sysprep/sysprep.xp;general || || ||
+|15;SysPrepXPPath;backend/manager/conf/sysprep/sysprep.xp;general || || y ||
 |----
-|16;SysPrep2K3Path;backend/manager/conf/sysprep/sysprep.2k3;general || || ||
+|16;SysPrep2K3Path;backend/manager/conf/sysprep/sysprep.2k3;general || || y ||
 |----
-|17;SysPrep2K8Path;backend/manager/conf/sysprep/sysprep.2k8;general || || ||
+|17;SysPrep2K8Path;backend/manager/conf/sysprep/sysprep.2k8;general || || y ||
 |----
-|18;SysPrep2K8x64Path;backend/manager/conf/sysprep/sysprep.2k8x86;general || || ||
+|18;SysPrep2K8x64Path;backend/manager/conf/sysprep/sysprep.2k8x86;general || || y ||
 |----
-|19;SysPrep2K8R2Path;backend/manager/conf/sysprep/sysprep.2k8;general || || ||
+|19;SysPrep2K8R2Path;backend/manager/conf/sysprep/sysprep.2k8;general || || y ||
 |----
-|20;SysPrepWindows7Path;backend/manager/conf/sysprep/sysprep.w7;general || || ||
+|20;SysPrepWindows7Path;backend/manager/conf/sysprep/sysprep.w7;general || || y ||
 |----
-|21;SysPrepWindows7x64Path;backend/manager/conf/sysprep/sysprep.w7x64;general || || ||
+|21;SysPrepWindows7x64Path;backend/manager/conf/sysprep/sysprep.w7x64;general || || y ||
 |----
-|22;ProductKey;;general || || ||
+|22;ProductKey;;general || || y ||
 |----
-|23;ProductKey2003;;general || || ||
+|23;ProductKey2003;;general || || y ||
 |----
-|24;ProductKey2003x64;;general || || ||
+|24;ProductKey2003x64;;general || || y ||
 |----
-|25;ProductKey2008;;general || || ||
+|25;ProductKey2008;;general || || y ||
 |----
-|26;ProductKey2008x64;;general || || ||
+|26;ProductKey2008x64;;general || || y ||
 |----
-|27;ProductKey2008R2;;general || || ||
+|27;ProductKey2008R2;;general || || y ||
 |----
-|28;ProductKeyWindow7;;general || || ||
+|28;ProductKeyWindow7;;general || || y ||
 |----
-|29;ProductKeyWindow7x64;;general || || ||
+|29;ProductKeyWindow7x64;;general || || y ||
 |----
-|30;FreeSpaceLow;10;general || || ||
+|30;FreeSpaceLow;10;general || || y || Is checked every time a storage related command is called and periodically
 |----
-|31;FreeSpaceCriticalLowInGB;5;general || || ||
+|31;FreeSpaceCriticalLowInGB;5;general || Critical low disk space alert threshold (in GB) || y || Is checked every time a storage related command is called and periodically
 |----
-|32;AsyncTaskPollingRate;10;general || || ||
+|32;AsyncTaskPollingRate;10;general || || n || Is only called when AsyncTaskManager is created (singelton)
 |----
-|33;StorageDomainFalureTimeoutInMinutes;5;general || || ||
+|33;StorageDomainFalureTimeoutInMinutes;5;general || || y || is called periodically
 |----
-|34;StoragePoolRefreshTimeInSeconds;10;general || || ||
+|34;StoragePoolRefreshTimeInSeconds;10;general || Storage Pool Manager Polling Rate (in seconds) || y? || is called a lot from IrsBrokerCommand.IrsProxyData
 |----
-|35;SPMFailOverAttempts;3;general || || ||
+|35;SPMFailOverAttempts;3;general || || y || is called periodically.
 |----
-|36;SpmCommandFailOverRetries;3;general || || ||
+|36;SpmCommandFailOverRetries;3;general || || y || is called every time something goes wrong in IrsBrokerCommand.ExecuteVDSCommand()
 |----
-|37;SANWipeAfterDelete;false;general || || ||
+|37;SANWipeAfterDelete;false;general || Default setting for Wipe After Delete - the setting that would zero-out the virtual disk images of a VM, after the VM or a virtual disk image has been deleted || y? || unused
 |----
-|38;NumberOfVmsForTopSizeVms;10;general || || ||
+|38;NumberOfVmsForTopSizeVms;10;general || || Einav? ||
 |----
-|39;StoragePoolNonOperationalResetTimeoutInMin;3;general || || ||
+|39;StoragePoolNonOperationalResetTimeoutInMin;3;general || || y? || In some places will have an impact, in others this is loaded on startup.
 |----
-|40;MaxNumberOfHostsInStoragePool;250;general || || ||
+|40;MaxNumberOfHostsInStoragePool;250;general || || n || What happens if there are currently x hosts, and we reduce this number to x-1? Only appears in GenericApiGWTService_TypeOverridesFactory.java
 |----
 |41;MaxStorageVdsTimeoutCheckSec;30;general || || ||
 |----
