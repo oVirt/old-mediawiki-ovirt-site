@@ -14,117 +14,113 @@
 {|class="wikitable sortable"
 !border="1"| Options Name || Description || Is Reloadable || Why 
 |-
-|vds_spm_priority ||smallint || CHECK (vds_spm_priority between (-1) and 10) DEFAULT 5 ||The Spm priority of this vds
-|-
-|option_id;option_name;option_value;version
-|-
-|1;AuthenticationMethod;LDAP;general || no || To big of a change.
+|1;AuthenticationMethod;LDAP;general || || no || To big of a change.
 |----
-|6;UserRefreshRate;3600;general
+|6;UserRefreshRate;3600;general || || || 
 |----
-|7;LDAPServerPort;389;general
+|7;LDAPServerPort;389;general || || ||
 |----
-|8;LDAPQueryTimeout;30;general
+|8;LDAPQueryTimeout;30;general || || ||
 |----
-|9;SASL_QOP;auth-conf;general
+|9;SASL_QOP;auth-conf;general || || ||
 |----
-|10;LdapQueryPageSize;1000;general
+|10;LdapQueryPageSize;1000;general || || ||
 |----
-|11;MaxLDAPQueryPartsNumber;100;general
+|11;MaxLDAPQueryPartsNumber;100;general || || ||
 |----
-|12;LocalAdminPassword;123456;general
+|12;LocalAdminPassword;123456;general || || ||
 |----
-|13;DefaultWorkgroup;WORKGROUP;general
+|13;DefaultWorkgroup;WORKGROUP;general || || ||
 |----
-|14;VirtualMachineDomainName;VirtualMachineDomainName;general
+|14;VirtualMachineDomainName;VirtualMachineDomainName;general || || ||
 |----
-|15;SysPrepXPPath;backend/manager/conf/sysprep/sysprep.xp;general
+|15;SysPrepXPPath;backend/manager/conf/sysprep/sysprep.xp;general || || ||
 |----
-|16;SysPrep2K3Path;backend/manager/conf/sysprep/sysprep.2k3;general
+|16;SysPrep2K3Path;backend/manager/conf/sysprep/sysprep.2k3;general || || ||
 |----
-|17;SysPrep2K8Path;backend/manager/conf/sysprep/sysprep.2k8;general
+|17;SysPrep2K8Path;backend/manager/conf/sysprep/sysprep.2k8;general || || ||
 |----
-|18;SysPrep2K8x64Path;backend/manager/conf/sysprep/sysprep.2k8x86;general
+|18;SysPrep2K8x64Path;backend/manager/conf/sysprep/sysprep.2k8x86;general || || ||
 |----
-|19;SysPrep2K8R2Path;backend/manager/conf/sysprep/sysprep.2k8;general
+|19;SysPrep2K8R2Path;backend/manager/conf/sysprep/sysprep.2k8;general || || ||
 |----
-|20;SysPrepWindows7Path;backend/manager/conf/sysprep/sysprep.w7;general
+|20;SysPrepWindows7Path;backend/manager/conf/sysprep/sysprep.w7;general || || ||
 |----
-|21;SysPrepWindows7x64Path;backend/manager/conf/sysprep/sysprep.w7x64;general
+|21;SysPrepWindows7x64Path;backend/manager/conf/sysprep/sysprep.w7x64;general || || ||
 |----
-|22;ProductKey;;general
+|22;ProductKey;;general || || ||
 |----
-|23;ProductKey2003;;general
+|23;ProductKey2003;;general || || ||
 |----
-|24;ProductKey2003x64;;general
+|24;ProductKey2003x64;;general || || ||
 |----
-|25;ProductKey2008;;general
+|25;ProductKey2008;;general || || ||
 |----
-|26;ProductKey2008x64;;general
+|26;ProductKey2008x64;;general || || ||
 |----
-|27;ProductKey2008R2;;general
+|27;ProductKey2008R2;;general || || ||
 |----
-|28;ProductKeyWindow7;;general
+|28;ProductKeyWindow7;;general || || ||
 |----
-|29;ProductKeyWindow7x64;;general
+|29;ProductKeyWindow7x64;;general || || ||
 |----
-|30;FreeSpaceLow;10;general
+|30;FreeSpaceLow;10;general || || ||
 |----
-|31;FreeSpaceCriticalLowInGB;5;general
+|31;FreeSpaceCriticalLowInGB;5;general || || ||
 |----
-|32;AsyncTaskPollingRate;10;general
+|32;AsyncTaskPollingRate;10;general || || ||
 |----
-|33;StorageDomainFalureTimeoutInMinutes;5;general
+|33;StorageDomainFalureTimeoutInMinutes;5;general || || ||
 |----
-|34;StoragePoolRefreshTimeInSeconds;10;general
+|34;StoragePoolRefreshTimeInSeconds;10;general || || ||
 |----
-|35;SPMFailOverAttempts;3;general
+|35;SPMFailOverAttempts;3;general || || ||
 |----
-|36;SpmCommandFailOverRetries;3;general
+|36;SpmCommandFailOverRetries;3;general || || ||
 |----
-|37;SANWipeAfterDelete;false;general
+|37;SANWipeAfterDelete;false;general || || ||
 |----
-|38;NumberOfVmsForTopSizeVms;10;general
+|38;NumberOfVmsForTopSizeVms;10;general || || ||
 |----
-|39;StoragePoolNonOperationalResetTimeoutInMin;3;general
+|39;StoragePoolNonOperationalResetTimeoutInMin;3;general || || ||
 |----
-|40;MaxNumberOfHostsInStoragePool;250;general
+|40;MaxNumberOfHostsInStoragePool;250;general || || ||
 |----
-|41;MaxStorageVdsTimeoutCheckSec;30;general
+|41;MaxStorageVdsTimeoutCheckSec;30;general || || ||
 |----
-|42;MaxStorageVdsDelayCheckSec;5;general
+|42;MaxStorageVdsDelayCheckSec;5;general || || ||
 |----
-|43;vdsTimeout;180;general
+|43;vdsTimeout;180;general || || ||
 |----
-|44;ServerRebootTimeout;300;general
+|44;ServerRebootTimeout;300;general || || ||
 |----
-|45;VdsRefreshRate;2;general
+|45;VdsRefreshRate;2;general || || ||
 |----
-|46;MaxVdsMemOverCommit;200;general
+|46;MaxVdsMemOverCommit;200;general || || ||
 |----
-|47;MaxVdsMemOverCommitForServers;150;general
+|47;MaxVdsMemOverCommitForServers;150;general || || ||
 |----
-|49;EnableUSBAsDefault;true;general
+|49;EnableUSBAsDefault;true;general || || ||
 |----
-|51;OrganizationName;Redhat;general
+|51;OrganizationName;Redhat;general || || ||
 |----
-|53;VdsRecoveryTimeoutInMintues;3;general
+|53;VdsRecoveryTimeoutInMintues;3;general || || ||
 |----
-|54;VDSAttemptsToResetCount;2;general
+|54;VDSAttemptsToResetCount;2;general || || ||
 |----
-|55;TimeoutToResetVdsInSeconds;60;general
+|55;TimeoutToResetVdsInSeconds;60;general || || ||
 |----
-|58;BlockMigrationOnSwapUsagePercentage;0;general
+|58;BlockMigrationOnSwapUsagePercentage;0;general || || ||
 |----
-|59;WaitForVdsInitInSec;60;general
+|59;WaitForVdsInitInSec;60;general || || ||
 |----
-|61;CertificateFileName;vdc.pfx;general
+|61;CertificateFileName;vdc.pfx;general || || ||
 |----
-|62;CertificatePassword;jlOTIS0q5avsg1GaRjf/6/tnEM1pXcCRvNoeJ5MCgHF1kCzcqqhZvzR8Pn/5iBxaKVC7Y4OdA0joXVMLGasVGLnUkxExzNCMT+6QwyFM1L9/0g+1OgGTuMbvYTfEi0jLOFv0xwWDl5MWunPUjZriGEhkiu5d6QJ5ZeEhD4rRooA=;general
+|62;CertificatePassword;jlOTIS0q5avsg1GaRjf/6/tnEM1pXcCRvNoeJ5MCgHF1kCzcqqhZvzR8Pn/5iBxaKVC7Y4OdA0joXVMLGasVGLnUkxExzNCMT+6QwyFM1L9/0g+1OgGTuMbvYTfEi0jLOFv0xwWDl5MWunPUjZriGEhkiu5d6QJ5ZeEhD4rRooA=;general || || ||
 |----
-|63;CACertificatePath;ca/certs.pem;general
+|63;CACertificatePath;ca/certs.pem;general || || ||
 |----
-|64;CertificateFingerPrint;73 18 22 44 5d 98 b0 5d c0 f7 36 7d f8 1d 85 da e1 3c f1 c6;general
+|64;CertificateFingerPrint;73 18 22 44 5d 98 b0 5d c0 f7 36 7d f8 1d 85 da e1 3c f1 c6;general || || ||
 |----
 |65;CABaseDirectory;ca;general
 |----
