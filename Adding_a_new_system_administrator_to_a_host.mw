@@ -18,7 +18,15 @@ passwd foo
 <pre>
 mkdir /home/foo/.ssh
 </pre>
-* Either paste the 'id_rsa.pub' contents in to 'authorized_keys' ...
+* Change ownership of the user's SSH config directory:
+<pre>
+chown foo:foo /home/foo/.ssh
+</pre>
+* Change directory permissions to read/write/execute for the user only:
+<pre>
+chmod 700 /home/foo/.ssh
+</pre>
+* Either paste the 'id_rsa.pub' contents in to 'authorized_keys' or ...
 <pre>
 vi /home/foo/.ssh/authorized_keys       ## Then paste the id_rsa.pub
    					## contents in to the
@@ -26,9 +34,17 @@ vi /home/foo/.ssh/authorized_keys       ## Then paste the id_rsa.pub
 					##
 					## Or if no file exists ...
 </pre>
-* ... or move the 'id_rsa.pub' file in to the directory with the new name of 'authorized_keys':
+* ... move the 'id_rsa.pub' file in to the directory with the new name of 'authorized_keys':
 <pre>
 cp /tmp/foo-id_rsa.pub /home/foo/.ssh/authorized_keys
+</pre>
+* Change the file's ownership to the new user:
+<pre>
+chown foo:foo /home/foo/.ssh/authorized_keys
+</pre>
+* Confirm the file's permissions are read/write for the user, read for everyone else, by changing them:
+<pre>
+chmod 644 /home/foo/.ssh/authorized_keys
 </pre>
 * Add the user to the 'sudoers' file:
 <pre>
@@ -40,24 +56,28 @@ visudo					## Add the following stanza
 root    ALL=(ALL)       ALL
 quaid   ALL=(ALL)       ALL
 </pre>
-* Change ownership of the user's SSH config directory:
+* The final permissions:
 <pre>
-chown -R foo:foo /home/foo/.ssh
-</pre>
-* Change file permissions to read/write/execute for the user only:
-<pre>
-chmod 700 /home/foo/.ssh
-</pre>
-* The final file permissions:
-<pre>
-ls -hal|grep ssh
-drwx------  2 foo  foo  4.0K Dec  3 19:38 .ssh
-
-ls .ssh/ -hal
+ls /home/foo/.ssh/ -hal
 total 12K
-drwx------ 2 foo foo 4.0K Dec  3 19:38 .
-drwx------ 3 foo foo 4.0K Dec  3 19:34 ..
--rw-r--r-- 1 foo foo  604 Dec  3 19:33 authorized_keys
+drwx------ 2 foo foo 4.0K Dec  3 19:38 .                 
+drwx------ 3 foo foo 4.0K Dec  3 19:34 ..                ## ~/.ssh is correct
+-rw-r--r-- 1 foo foo  604 Dec  3 19:33 authorized_keys   ## authorized_keys file is correct
+</pre>
+
+Here is the final commands as run:
+
+<pre>
+useradd foo
+passwd foo
+mkdir /home/foo/.ssh
+chown foo:foo /home/foo/.ssh
+chmod 700 /home/foo/.ssh
+cp /tmp/foo-id_rsa.pub /home/foo/.ssh/authorized_keys
+chown foo:foo /home/foo/.ssh/authorized_keys
+chmod 644 /home/foo/.ssh/authorized_keys
+visudo
+ls -hal /home/foo/.ssh
 </pre>
 
 [[Category:Infrastructure documentation]]
