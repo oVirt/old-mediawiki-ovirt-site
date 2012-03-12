@@ -75,33 +75,34 @@
 |----
 |39;StoragePoolNonOperationalResetTimeoutInMin;3;general || || y? || In some places will have an impact, in others this is loaded on startup.
 |----
-|40;MaxNumberOfHostsInStoragePool;250;general || || n || What happens if there are currently x hosts, and we reduce this number to x-1? Only appears in GenericApiGWTService_TypeOverridesFactory.java
+|40;MaxNumberOfHostsInStoragePool;250;general || || n || What happens if there are currently x hosts, and we reduce this number to x-1? Only appears in GenericApiGWTService_TypeOverridesFactory.java and in other UIs
 |----
-|41;MaxStorageVdsTimeoutCheckSec;30;general || || ||
+|41;MaxStorageVdsTimeoutCheckSec;30;general || Max timeout for last check of domain in seconds || y ||
 |----
-|42;MaxStorageVdsDelayCheckSec;5;general || || ||
+|42;MaxStorageVdsDelayCheckSec;5;general || Maximum amount of seconds to wait for Storage Domain status to be returned, before reporting an error || y || 
 |----
-|43;vdsTimeout;180;general || || ||
+|43;vdsTimeout;180;general || Host Control Communication Timeout (in seconds) || y ||
 |----
-|44;ServerRebootTimeout;300;general || || ||
+|44;ServerRebootTimeout;300;general || Host Reboot Timeout (in seconds) || y ||
 |----
-|45;VdsRefreshRate;2;general || || ||
+|45;VdsRefreshRate;2;general || || n? || appears in GenericApiGWTService_TypeOverridesFactory.java
 |----
-|46;MaxVdsMemOverCommit;200;general || || ||
+|46;MaxVdsMemOverCommit;200;general || When using Virtual Desktop loads, by how many percent should RHEV-M allow memory overcommit to occur || y ||
 |----
-|47;MaxVdsMemOverCommitForServers;150;general || || ||
+|47;MaxVdsMemOverCommitForServers;150;general || || n? ||
+appears in GenericApiGWTService_TypeOverridesFactory.java and in other UIs
 |----
-|49;EnableUSBAsDefault;true;general || || ||
+|49;EnableUSBAsDefault;true;general || || n? || ask UI
 |----
-|51;OrganizationName;Redhat;general || || ||
+|51;OrganizationName;Redhat;general || || y ||
 |----
-|53;VdsRecoveryTimeoutInMintues;3;general || || ||
+|53;VdsRecoveryTimeoutInMintues;3;general || || n? || In terms of backend - is not updated after startup. UI?
 |----
-|54;VDSAttemptsToResetCount;2;general || || ||
+|54;VDSAttemptsToResetCount;2;general || || y ||
 |----
-|55;TimeoutToResetVdsInSeconds;60;general || || ||
+|55;TimeoutToResetVdsInSeconds;60;general || How long should a host be Non-Responsive, before a fence command is issued. Used in conjunction with VDSAttemptsToResetCount || y? || In terms of backend - yes. UI?
 |----
-|58;BlockMigrationOnSwapUsagePercentage;0;general || || ||
+|58;BlockMigrationOnSwapUsagePercentage;0;general || Host swap percentage threshold (for scheduling) || y? || In terms of backend - yes. UI?
 |----
 |59;WaitForVdsInitInSec;60;general || || ||
 |----
