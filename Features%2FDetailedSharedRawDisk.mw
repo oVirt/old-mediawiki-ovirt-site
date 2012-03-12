@@ -45,7 +45,7 @@ General
 * The synchronization/clustering of data access to shared disks is the responsibility of the guests. Attaching a shared disk to non-cluster aware guests will lead to corruption of the data on the disk.
 * When detaching a shared disk from all VMs in the Data Center. the disk will become 'floating'.
 Attach Shared Disk
-* When attaching a shared disk to a VM, the disk will be logically connected to the VM and will be activated (hot plug VDSM command will be send), if the activation will fail the disk will become unplugged.
+* When attaching a shared disk to a VM, the disk will be logically connected to the VM and will be activated (hot plug VDSM command will be send), if the activation will fail the disk not be activated.
 Remove Shared Disk
 * The shared raw disk can only be removed once it is either not activated in all the VMs which is attached to, or VMs are all shut down (or any combination of the two).
 Copy Shared Disk
