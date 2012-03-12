@@ -47,9 +47,9 @@ General
 Attach Shared Disk
 * When attaching a shared disk to a VM, the disk will be logically connected to the VM and will be activated (hot plug VDSM command will be send), if the activation will fail the disk not be activated.
 Remove Shared Disk
-* The shared raw disk can only be removed once it is either not activated in all the VMs which is attached to, or VMs are all shut down (or any combination of the two).
+* The shared raw disk can only be removed once it is either inactivate in all the VMs which is attached to, or VMs are all shut down (or any combination of the two).
 Copy Shared Disk
-* The shared raw disk can only be copied once it is either not activated in all the VMs which is attached to, or VMs are all shut down (or any combination of the two).
+* The shared raw disk can only be copied once it is either inactivate in all the VMs which is attached to, or VMs are all shut down (or any combination of the two).
 Templates
 * When creating a template from a VM which has one or more shared disks, the creation will fail and a message will be displayed explaining why the template cannot be created.<BR/>The message will be as follow:
  VM ${VM_NAME} contains a shared disk. In order to make a template from this VM, either detach the shared disk from the VM or make it un-shareable by removing its "shareable" attribute.
@@ -61,7 +61,7 @@ Export/Import
  VM ${VM_NAME} contains a shared disk. In order to export this VM, either detach the shared disk from the VM or make it un-shareable by removing its "shareable" attribute.
 * Exported disks (Whether with VMs or Templates) should not be shared.
 Move disk
-* Moving a shared raw disk is permitted only when all the attached VMs statuses are down, or all the VMs which the disks are attached to are not active.
+* Moving a shared raw disk is permitted only when all the attached VMs statuses are down, or all the VMs which the disks are attached to are inactivatee.
 Snapshot
 * When taking a vm snapshot, a snapshot of the shared disk should not be taken, although it will be part of the VM snapshot configuration and the disk will appear as not activated.
 Stateless VM
