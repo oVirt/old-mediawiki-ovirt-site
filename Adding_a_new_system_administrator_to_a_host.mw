@@ -44,9 +44,9 @@ quaid   ALL=(ALL)       ALL
 <pre>
 chown -R foo:foo /home/foo/.ssh
 </pre>
-* Change file permissions to read/write for the user only:
+* Change file permissions to read/write/execute for the user only:
 <pre>
-chmod 600 /home/foo/.ssh
+chmod 700 /home/foo/.ssh
 </pre>
 * The final file permissions:
 <pre>
