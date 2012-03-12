@@ -3,17 +3,17 @@
 
 <span style="color:Teal"></span>:<BR>
 {|class="wikitable sortable"
-!border="1"| Options Name || Description || Is Reloadable || Why 
+!border="1" width="85%"| Options Name || Description || Is Reloadable || Why 
 |-
-|1;AuthenticationMethod;LDAP;general || || n || To big of a change, in some places is only updated on startup
+|1;AuthenticationMethod;LDAP;general || || n || will cause problems in AdUserConditionFieldAutoCompleter, in some places is only updated on startup
 |----
 |6;UserRefreshRate;3600;general || || n || is only updated on startup
 |----
-|7;LDAPServerPort;389;general || || n || is only updated on startup
+|7;LDAPServerPort;389;general || || y || is only updated on startup
 |----
 |8;LDAPQueryTimeout;30;general || || y ||
 |----
-|9;SASL_QOP;auth-conf;general || || n || is only called in GSSAPIDirContextAuthenticationStrategy.setupEnvironment()
+|9;SASL_QOP;auth-conf;general || || n? || is only called in GSSAPIDirContextAuthenticationStrategy.setupEnvironment()
 |----
 |10;LdapQueryPageSize;1000;general || || ? ||
 |----
