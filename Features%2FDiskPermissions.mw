@@ -51,7 +51,7 @@ Existing roles are Update by upgrade script.
 Extend VdcObjectType with Disk.
 
 ==== DB Changes ====
-Add support for Disk for '''fn_get_entity_parents''' stored-procedure.
+Add support for Disk to '''fn_get_entity_parents''' stored-procedure.
 
 ==== UI Changes ====
 Add roles to RoleTreeView.initTreeView() (frontend/webadmin/modules/uicommonweb/src/main/java/org/ovirt/engine/ui/uicommonweb/models/configure/roles_ui/RoleTreeView.java)
