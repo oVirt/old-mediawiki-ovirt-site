@@ -57,7 +57,7 @@ Add support for Disk for '''fn_get_entity_parents''' stored-procedure.
 Add roles to RoleTreeView.initTreeView() (frontend/webadmin/modules/uicommonweb/src/main/java/org/ovirt/engine/ui/uicommonweb/models/configure/roles_ui/RoleTreeView.java)
 
 === Benefit to oVirt ===
-Permission management for Disks enhances the Disk functionality, provides flexibility to users and protects it from misuse.
+Permission management for Disks enhances the Disk functionality, provides flexibility to users and protects it from misuse.<BR>
 Granting permissions on Disk to user is done via the Administrator Portal or using RESTful API.
 
 === Dependencies / Related Features ===
