@@ -127,7 +127,8 @@ This is changed as we will handle boot sequence in both disks & vm_interface tab
 
 === Device Index ===
 
-Manage internal unique index for 'iface' virtio' or 'ide' Same ordering as in old format should be kept in order to support 3.0 VMs that starts to run on 3.1 cluster
+Manage internal unique index for 'iface' virtio' or 'ide' Same ordering as in old format should be kept in order to support 3.0 VMs that starts to run on 3.1 cluster<br>
+Relevant only for Floppy and CD
 
 === Managing Addresses ===
 Addresses are kept in the database as a plain-text strings. However, when passed to VDSM addresses should be structured as dictionaries.<br>
