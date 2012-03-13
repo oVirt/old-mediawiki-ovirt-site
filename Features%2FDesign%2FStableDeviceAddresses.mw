@@ -339,10 +339,10 @@ Return the full VM structure  for each VM when calling List with 'long' format
 Enable to pass additional parameter specifying VM ids.
 
 == Tests ==
-Add tests for new VM device DAL
+Add tests for new VM device DAL<br>
 Modify all tests to track new added properties 
 === Expected unit-tests ===
-Verify that all new Generic Device DAO tests pass
+Verify that all new Device DAO tests pass
 Verify that all VM DAO tests pass
 Verify that all Disk DAO and Disk VM mapping DAO tests pass
 Test both old & new OVFs for export/import
