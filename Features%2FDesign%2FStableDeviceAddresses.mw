@@ -416,7 +416,7 @@ We currently maintain an index only for Floppy (index 0) and CD (index 2)
 
 === Hot Plug Disk/Nic ===
 Since managing this is via backend, we always assume that we get the exact Disk/Nic number as we know already.
-In case that we got a device that is nor recognized (even if it a Hot Plug) , it will be handled as a Generic Device
+In case that we got a device that is not recognized (even if it a Hot Plug) , it will be handled as a unmanaged Device
 
 === Optional Disk ===
 We should support and persist an optional disk , this is implemented as a new attribute of the disk entry in the API. Optional flag is passed as static false in 3.1
