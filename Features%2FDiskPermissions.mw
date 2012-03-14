@@ -34,7 +34,7 @@ Required permissions for Disk related actions:
 ** If disks aren't marked for deletion - the disks are detached, therefore no permissions required for the Disk, only for removing VM.
 
 ==== Roles ====
-==== New Action Groups for Disk Object Type ====
+===== New Action Groups for Disk Object Type =====
   CREATE_DISK - AddDisk, AddDiskToVm
   EDIT_DISK_PROPERTIES - UpdateDisk, UpdateVM, Activate/Deactivate
   CONFIGURE_DISK_STORAGE - MoveOrCopyDisk
