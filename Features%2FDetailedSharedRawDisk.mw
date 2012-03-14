@@ -120,7 +120,7 @@ Affected oVirt projects:
 * Webadmin
 * User Portal
 * History Data Warehouse
-* OVirt Node
+* VDSM
 
 <B>Related Features</B>
 * Quota - Same as regular disk, shared raw disk will need to be attached to quota, he will consume from. Attach and detach should not affect the quota consumption.
