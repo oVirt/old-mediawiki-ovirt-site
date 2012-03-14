@@ -57,7 +57,9 @@ Currently attach/detach is being executed as part of the UpdateVm action.
   Add support for Disk to ''fn_get_entity_parents'' stored-procedure.
 
 ==== Install/Upgrade DB ====
-DB Upgrade should add ownership for the Disks by the VM users.
+DB Upgrade should handle the following:
+* Add Disk Operator role to users which have VM Operators to allow permissions on Disks to VM users for the Disks which are attached to the VMs.
+* Add all disk related operations to the system administrator role.
 
 ==== UI Changes ====
 Add Permissions sub-tab under Disks main tab<BR>
