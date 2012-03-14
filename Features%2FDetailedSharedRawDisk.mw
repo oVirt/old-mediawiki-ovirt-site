@@ -49,8 +49,12 @@ Attach Shared Disk
 Remove Shared Disk
 * User can remove the shared raw disk entirely from the setup, whether the disk is inactive in all the VMs which are attached to it, or all the VMs which the is disk attached to, are in status down (or any combination of the two). <BR/> When disk will be removed a warning message should display the user the following message :
  Removing the shared disk will remove it from all the VMs which are associated with it.
+* When user will try to remove a shared disk which is attached to only one VM, the user will be able to choose whether to remove the disk permanently from the storage or only detach it from the VM.<BR/>
+* When user will try to remove a shared disk which is attached to more then one VM, the disk should only be detached from the VM, and not removed permanently.
 Copy Shared Disk
 * The shared raw disk can only be copied once it is either inactive in all the VMs which is attached to, or VMs are all shut down (or any combination of the two).
+Remove VM
+* When VM will be removed the shared disk will be detached from the VM.
 Templates
 * When creating a template from a VM which has one or more shared disks, the creation will fail and a message will be displayed explaining why the template cannot be created.<BR/>The message will be as follow:
  VM ${VM_NAME} contains a shared disk. In order to make a template from this VM, either detach the shared disk from the VM or make it un-shareable by removing its "shareable" attribute.
