@@ -1,3 +1,20 @@
+== Owner ==
+<!--This should link to your home wiki page so we know who you are-->
+* Feature owner: [[User:emesika| Eli Mesika]]
+:* GUI Component owner: Not Relevant
+:* REST Component owner: Not Relevant
+:* Engine Component owner: [[User:emesika| Eli Mesika]]
+:* QA Owner: [[User:ykaul| Yaniv Kaul]] 
+
+== Current status ==
+* Target Release: 3.1
+* Status: Done
+* Last updated date: Wed Mar 14 2012
+
+
+<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
+* Email: emesika@redhat.com
+
 = Stable Device Addresses =
 This document describes the design for the stable Device addresses feature.
 
