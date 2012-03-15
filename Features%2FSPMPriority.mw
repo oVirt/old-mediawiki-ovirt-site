@@ -9,16 +9,16 @@ means this host can not be selected to be the SPM.
 == Owner ==
 <!--This should link to your home wiki page so we know who you are-->
 * Feature owner: [[User:msalem| Muli Salem]]
-:* Backend Component owner: [[User:msalem| Muli Salem]]
+:* Engine Component owner: [[User:msalem| Muli Salem]]
 :* GUI Component owner: [[User:?| ?]]
-:* REST Component owner: [[User:?| ?]]
-:* QA Owner: [[User:?| ?]] 
+:* API Component owner: [[User:msalem| Muli Salem]]
+:* QA Owner: [[User:lnatapov| Leonid Natapov]] 
 
 <!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
 * Email: msalem@redhat.com
 
 == Current status ==
-* Design stage
+* Status: Engine-done, API-done, QA-test plan built, GUI-design
 * Last updated date: Tue Dec 27 2011:
 
 
