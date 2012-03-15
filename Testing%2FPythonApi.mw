@@ -341,11 +341,10 @@ Please upload the following ISO file to the ISO Storage Domain once the ISO Stor
     print 'Waiting for Snapshot creation to finish'
     while 1:
         try:
-            if api.vms.get(VM_NAME).status.state == 'image_locked':
+            if api.vms.get(VM_NAME).status.state != 'image_locked':
                 break
         except:
             pass
-
 
 === Create a Template from VM ===
 
