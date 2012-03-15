@@ -40,6 +40,7 @@
 #* Go/No go meetings will happen once a week in this stage.
 #** Increase the amount of meeting according to the release manager decision.
 #** Release manager will inform the community on any delay.
+#* Official vote as described in http://www.ovirt.org/governance/voting/
 # '''Release'''
 #* Create ANNOUNCE message few days before actual release.
 #* Move all release candidate sources/binaries into the "stable" directory 
