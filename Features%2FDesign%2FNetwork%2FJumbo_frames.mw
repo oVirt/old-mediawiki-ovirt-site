@@ -61,6 +61,15 @@ is the lowest or equals to the the lowest vlan id (again, for networks on the sa
  
  eth0.500 mtu=9000
 
+=== UI ===
+
+* MTU is provisioned in logical network UI
+* add checkbox "override MTU" unchecked by default
+* once checked a blank input apears (valid input type is integers)
+* unchecking will clear the input box
+* if no overriden, send 0 
+
+//TODO ecohen put mockups
 
 === Backward Compatibility ===
 
