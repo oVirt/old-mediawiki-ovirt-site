@@ -82,7 +82,9 @@ is the lowest or equals to the the lowest vlan id (again, for networks on the sa
 * unchecking will clear the input box
 * if no overriden, send 0 
 
-//TODO ecohen put mockups
+[[File:MTU_unchecked.png]]
+
+[[File:MTU_checked.png]]
 
 === Backward Compatibility ===
 
