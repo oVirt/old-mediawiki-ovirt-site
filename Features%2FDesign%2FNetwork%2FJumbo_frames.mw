@@ -86,6 +86,8 @@ is the lowest or equals to the the lowest vlan id (again, for networks on the sa
 
 [[File:MTU_checked.png]]
 
+[[File:ClusterNetwork.png]]
+
 === Backward Compatibility ===
 
 Same as for bridge-less feature.
