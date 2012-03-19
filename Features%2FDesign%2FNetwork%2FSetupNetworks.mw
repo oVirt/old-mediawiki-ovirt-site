@@ -246,40 +246,13 @@ The following connections are supported:
 
 === Images ===
 
+
+== New Setup Networks Mockup ==
+
+
 <HR>
 
-[[File:SetupNetworks10.png]]
-'''''Illustration 1: No Connections'''''
-<HR>
-[[File:SetupNetworks14.png]]
-'''''Illustration 2: Dragging Network on a NIC'''''
-<HR>
-[[File:SetupNetworks1.png]]
-'''''Illustration 3: NIC connected to a Network'''''
-<HR>
-[[File:SetupNetworks20.png]]
-'''''Illustration 4: Dragging VLAN on a NIC'''''
-<HR>
-[[File:SetupNetworks2.png]]
-'''''Illustration 5: VLAN connected to a NIC'''''
-<HR>
-[[File:SetupNetworks21.png]]
-'''''Illustration 6: Several VLANs connected to the same NIC'''''
-<HR>
-[[File:SetupNetworks11.png]]
-'''''Illustration 7: Dragging a NIC on a nother NIC'''''
-<HR>
-[[File:SetupNetworks7.png]]
-'''''Illustration 8: Bonded NICs'''''
-<HR>
-[[File:SetupNetworks6.png]]
-'''''Illustration 9: Network dragged on a Bond'''''
-<HR>
-[[File:SetupNetworks5.png]]
-'''''Illustration 10: Network connected to a Bond'''''
-<HR>
-[[File:SetupNetworks17.png]]
-'''''Illustration 11: Several VLANs connected to the same Bond'''''
+[[File:SetupNetworksNew.png]]
 
 == REST ==
  
