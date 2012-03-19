@@ -57,15 +57,11 @@ Now, the user would like to view a report:
 
 
 
+
 == Current status ==
 * Target Release: 
 * Status: Design Stage
 * Last updated date: Wed November 10 2011
-
-
-== Detailed Description ==
-
-=== User Experience ===
 
 
 == Dependencies / Related Features and Projects ==
@@ -73,6 +69,9 @@ Now, the user would like to view a report:
 Affected oVirt projects:
 
 == Documentation / External references ==
+#Picketlink homepage - http://www.jboss.org/picketlink
+#PicketLink Federation - http://www.jboss.org/picketlink/Fed.html
+#User Guide (PDF) - http://community.jboss.org/servlet/JiveServlet/download/14645-5-7349/UserGuide.pdf
 
 == Comments and Discussion ==
 
