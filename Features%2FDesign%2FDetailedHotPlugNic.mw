@@ -24,6 +24,7 @@ Allow to hot plug and unplug a NIC to/from running guest.
 <!-- Provide the details of the feature. What is it going to include. See the sub-sections below. This section may contain more sub-sections, depends on the oVirt projects relevant for this feature. -->
 The following feature will allow to hot plug/unplug NIC on running vm. <BR>
 The feature will be allowed only on 3.1 clusters and above <BR>
+This feature will be restricted to operating systems that support this action – eg. RHEL 5/6, Windows Server 2003 and Windows server 2008 <BR>
 
 ==== User Experience ====
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
