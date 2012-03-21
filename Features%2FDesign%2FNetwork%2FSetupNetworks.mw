@@ -320,7 +320,10 @@ usage:
         <ip address="10.35.1.247" netmask="255.255.254.0" gateway="10.35.1.254"/>
         <boot_protocol>dhcp</boot_protocol>
     </host_nic>
-  </host_nics>>
+    <checkConnectivity>true</checkConnectivity>
+    <connectivityTimeout>60</connectivityTimeout>
+    <force>false</false>
+  </host_nics>
  </action>
 
 == Open issues ==
