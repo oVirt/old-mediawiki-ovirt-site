@@ -56,7 +56,7 @@ Open issues:
 #Is this okay to return the promiscuous flag from the engine-core? Does that pose a security issue? If we
 #*if we can't then it is problematic, as there is no infrastructure for that at the engine-core side.
 #Will we allow users to edit this VM nic from the user portal?
-*Will we allow users to uncheck this flag with no promiscuous permissions in the User Portal? API? Webadmin?
+#Will we allow users to uncheck this flag with no promiscuous permissions in the User Portal? API? Webadmin?
 
 [[Category:Feature]]
 [[Category:Template]]
