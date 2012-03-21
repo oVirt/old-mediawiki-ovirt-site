@@ -259,7 +259,70 @@ The following connections are supported:
 == REST ==
  
 === Resource representation ===
- TODO Ori Liel
+
+scheme:
+
+ <link href="/api/hosts/{host:id}/nics/setupnetworks" rel="setupnetworks">
+  <request>
+   <http_method>POST</http_method>
+   <headers>
+    <header>
+     <name>Content-Type</name>
+     <value>application/xml|json</value>
+   </header>
+   </headers>
+   <body>
+    <type>Action</type>
+    <parameters_set>
+     <parameter required="false" type="collection"><name>action.host_nics.host_nic</name>
+      <parameters_set>
+       <parameter required="false" type="xs:string"><name>host_nic.network.id|name</name></parameter>
+       <parameter required="false" type="xs:string"><name>host_nic.name</name></parameter>
+       <parameter required="false" type="xs:string"><name>host_nic.ip.gateway</name></parameter>
+       <parameter required="false" type="xs:string"><name>host_nic.boot_protocol</name></parameter>
+       <parameter required="false" type="xs:string"><name>host_nic.mac</name></parameter>
+       <parameter required="false" type="xs:string"><name>host_nic.ip.address</name></parameter>
+       <parameter required="false" type="xs:string"><name>host_nic.ip.netmask</name></parameter>
+       <parameter required="false" type="collection"><name>host_nic.bonding.options.option</name>
+       <parameters_set>
+        <parameter required="false" type="xs:string"><name>option.name</name></parameter>
+        <parameter required="false" type="xs:string"><name>option.value</name></parameter>
+        <parameter required="false" type="xs:string"><name>option.type</name></parameter>
+       </parameters_set>
+    </parameter>
+    <parameter required="false" type="collection"><name>bonding.slaves.host_nic</name>
+     <parameters_set> 
+      <parameter required="false" type="xs:string"><name>host_nic.name|id</name></parameter>
+     </parameters_set>
+    </parameter>
+    </parameters_set>
+    </parameter>
+    <parameter required="false" type="xs:boolean"><name>action.checkConnectivity</name></parameter>
+    <parameter required="false" type="xs:int"><name>action.connectivityTimeout</name></parameter>
+    <parameter required="false" type="xs:boolean"><name>action.force</name></parameter>
+    </parameters_set>
+  </body>
+  </request>
+  <response>
+   <type>Response</type>
+  </response>
+ </link>
+
+usage:
+
+ POST /api/hosts/{host:id}/nics/setupnetworks
+ <action
+  <host_nics>
+    <host_nic id="41561e1c-c653-4b45-b9c9-126630e8e3b9">
+        <name>em1</name>
+        <network id="00000000-0000-0000-0000-000000000009"/>
+        <mac address="00:1E:4F:D7:F8:46"/>
+        <ip address="10.35.1.247" netmask="255.255.254.0" gateway="10.35.1.254"/>
+        <boot_protocol>dhcp</boot_protocol>
+    </host_nic>
+  </host_nics>>
+ </action>
+
 == Open issues ==
  
 # input validation: whats the MTU max value? how do we calculate it?
