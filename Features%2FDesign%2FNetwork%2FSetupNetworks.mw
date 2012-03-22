@@ -316,7 +316,6 @@ usage:
     <host_nic id="41561e1c-c653-4b45-b9c9-126630e8e3b9">
         <name>em1</name>
         <network id="00000000-0000-0000-0000-000000000009"/>
-        <mac address="00:1E:4F:D7:F8:46"/>
         <ip address="10.35.1.247" netmask="255.255.254.0" gateway="10.35.1.254"/>
         <boot_protocol>dhcp</boot_protocol>
     </host_nic>
