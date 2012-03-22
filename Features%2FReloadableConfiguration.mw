@@ -1,7 +1,7 @@
 This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst configuration
 
 {|class="wikitable sortable"
-!option_id!!option_name!!value!!version!!is relaodable?!!why?!!is currently updatable?!!who to ask
+!option_id!!option_name!!value!!version!!should be relaodable?!!why?!!is in properties file?!!status
 |----
 |1
 |AuthenticationMethod
@@ -10,7 +10,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |will cause problems in AdUserConditionFieldAutoCompleter, in some places is only updated on startup 
 |y
-|
+|should not be reloadable
 |----
 |2
 |LDAPSecurityAuthentication
@@ -19,7 +19,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|in UsersDomainsCacheManagerService takes the value on startup, and parses consult
 |----
 |3
 |DomainName
@@ -28,7 +28,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |need to implement carefully in UsersDomainsCacheManagerService. currently will cause problems 
 |n
-|
+|should not be reloadable
 |----
 |4
 |AdUserName
@@ -37,7 +37,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |happens in startup only. 
 |n
-|
+|in UsersDomainsCacheManagerService takes the value on startup, and parses consult
 |----
 |5
 |AdUserPassword
@@ -46,7 +46,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |happens in startup only. 
 |n
-|
+|value on startup – consult
 |----
 |6
 |UserRefreshRate
@@ -55,7 +55,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |is only updated on startup 
 |y
-|
+|schedule
 |----
 |7
 |LDAPServerPort
@@ -64,7 +64,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |is only updated on startup 
 |n
-|
+|UsersDomainsCacheManagerService takes value on startup, and parses consult
 |----
 |8
 |LDAPQueryTimeout
@@ -73,25 +73,25 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |9
 |SASL_QOP
 |auth-conf
 |general
 |y
-|is only called in GSSAPIDirContextAuthenticationStrategy.setupEnvironment() , currently only on start up
+|is only called in GSSAPIDirContextAuthenticationStrategy.setupEnvironment() , which is never actually called
 |n
-|
+|not clear
 |----
 |10
 |LdapQueryPageSize
 |1000
 |general
 |y
-|Think it is problematic 
-|n
 |
+|n
+|reloads
 |----
 |11
 |MaxLDAPQueryPartsNumber
@@ -100,7 +100,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |seems problematic 
 |n
-|
+|should not be reloadable
 |----
 |12
 |LocalAdminPassword
@@ -109,7 +109,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y?
 |is called in SysPrepHandler.GetSysPrep() 
 |y
-|
+|reloads
 |----
 |13
 |DefaultWorkgroup
@@ -118,7 +118,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |unused 
 |y
-|
+|unused 
 |----
 |14
 |VirtualMachineDomainName
@@ -127,7 +127,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |unused 
 |y
-|
+|unused 
 |----
 |15
 |SysPrepXPPath
@@ -136,7 +136,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |16
 |SysPrep2K3Path
@@ -145,7 +145,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |17
 |SysPrep2K8Path
@@ -154,7 +154,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |18
 |SysPrep2K8x64Path
@@ -163,7 +163,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |19
 |SysPrep2K8R2Path
@@ -172,7 +172,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |20
 |SysPrepWindows7Path
@@ -181,7 +181,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |21
 |SysPrepWindows7x64Path
@@ -190,7 +190,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |22
 |ProductKey
@@ -199,7 +199,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |23
 |ProductKey2003
@@ -208,7 +208,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |24
 |ProductKey2003x64
@@ -217,7 +217,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |25
 |ProductKey2008
@@ -226,7 +226,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |26
 |ProductKey2008x64
@@ -235,7 +235,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |27
 |ProductKey2008R2
@@ -244,7 +244,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |28
 |ProductKeyWindow7
@@ -253,7 +253,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |29
 |ProductKeyWindow7x64
@@ -262,25 +262,25 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |30
 |FreeSpaceLow
 |10
 |general
 |y
-|Is checked every time a storage related command is called and periodically 
-|y
 |
+|y
+|reloads
 |----
 |31
 |FreeSpaceCriticalLowInGB
 |5
 |general
 |y
-|Critical low disk space alert threshold (in GB). Is checked every time a storage related command is called and periodically 
-|y
 |
+|y
+|reloads
 |----
 |32
 |AsyncTaskPollingRate
@@ -289,7 +289,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Is only called when AsyncTaskManager is created (singelton) 
 |y
-|
+|schedule
 |----
 |33
 |StorageDomainFalureTimeoutInMinutes
@@ -298,7 +298,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |is called periodically 
 |y
-|
+|schedule
 |----
 |34
 |StoragePoolRefreshTimeInSeconds
@@ -307,7 +307,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Storage Pool Manager Polling Rate (in seconds). is called a lot from IrsBrokerCommand.IrsProxyData 
 |y
-|
+|schedule
 |----
 |35
 |SPMFailOverAttempts
@@ -316,7 +316,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |is called periodically. 
 |y
-|
+|schedule
 |----
 |36
 |SpmCommandFailOverRetries
@@ -325,7 +325,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |is called every time something goes wrong in IrsBrokerCommand.ExecuteVDSCommand() 
 |y
-|
+|reloads
 |----
 |37
 |SANWipeAfterDelete
@@ -334,7 +334,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Default setting for Wipe After Delete - the setting that would zero-out the virtual disk images of a VM, after the VM or a virtual disk image has been deleted. unused 
 |y
-|
+|unused 
 |----
 |38
 |NumberOfVmsForTopSizeVms
@@ -343,7 +343,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |How many VMs to display in the Storage Domain, Virtual Machine sub-tab. Will display this amount of VMs, sorted by the most storage spaced used per VM. 
 |y
-|
+|reloads
 |----
 |39
 |StoragePoolNonOperationalResetTimeoutInMin
@@ -352,7 +352,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |40
 |MaxNumberOfHostsInStoragePool
@@ -361,7 +361,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |
 |y
-|
+|should not be reloadable
 |----
 |41
 |MaxStorageVdsTimeoutCheckSec
@@ -370,7 +370,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Max timeout for last check of domain in seconds 
 |y
-|
+|reloads
 |----
 |42
 |MaxStorageVdsDelayCheckSec
@@ -379,7 +379,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Maximum amount of seconds to wait for Storage Domain status to be returned, before reporting an error 
 |y
-|
+|reloads
 |----
 |43
 |vdsTimeout
@@ -388,7 +388,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Host Control Communication Timeout (in seconds) 
 |y
-|
+|in one scenario does not reload. Expensive to reconstruct the object, but optional in: VdsManager.getVdsProxy()      
 |----
 |44
 |ServerRebootTimeout
@@ -397,7 +397,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Host Reboot Timeout (in seconds) 
 |y
-|
+|reloads
 |----
 |45
 |VdsRefreshRate
@@ -406,7 +406,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Will not be updated since is scheduled by quartz on startup 
 |y
-|
+|schedule
 |----
 |46
 |MaxVdsMemOverCommit
@@ -415,16 +415,16 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |When using Virtual Desktop loads, by how many percent should RHEV-M allow memory overcommit to occur 
 |y
-|
+|reloads
 |----
 |47
 |MaxVdsMemOverCommitForServers
 |150
 |general
 |y
-|
+|unused  in backend
 |y
-|
+|unused 
 |----
 |48
 |InstallVds
@@ -433,7 +433,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |can be problematic since it is called several times during AddVdsCommand 
 |n
-|
+|should not be reloadable
 |----
 |49
 |EnableUSBAsDefault
@@ -442,7 +442,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |backend unused, asked UI 
 |y
-|
+|unused 
 |----
 |50
 |UseSecureConnectionWithServers
@@ -451,7 +451,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |can be problematic since it is called several times during AddVdsCommand 
 |n
-|
+|should not be reloadable
 |----
 |51
 |OrganizationName
@@ -460,7 +460,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |53
 |VdsRecoveryTimeoutInMintues
@@ -469,7 +469,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads after fix
 |----
 |54
 |VDSAttemptsToResetCount
@@ -478,7 +478,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |55
 |TimeoutToResetVdsInSeconds
@@ -487,7 +487,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |How long should a host be Non-Responsive, before a fence command is issued. Used in conjunction with VDSAttemptsToResetCount. 
 |y
-|
+|reloads
 |----
 |56
 |oVirtISOsRepositoryPath
@@ -496,7 +496,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y?
 |
 |y
-|
+|reloads
 |----
 |57
 |VdcBootStrapUrl
@@ -505,7 +505,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |only on startup. If changed, may cause problems. (About to be deleted.) 
 |y
-|
+|should not be reloadable
 |----
 |58
 |BlockMigrationOnSwapUsagePercentage
@@ -514,7 +514,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Host swap percentage threshold (for scheduling). 
 |y
-|
+|reloads
 |----
 |59
 |WaitForVdsInitInSec
@@ -523,7 +523,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |60
 |LogPhysicalMemoryThresholdInMB
@@ -532,7 +532,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |61
 |CertificateFileName
@@ -541,7 +541,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |62
 |CertificatePassword
@@ -550,7 +550,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y?
 |according to the code seems ok to update, but not sure 
 |y
-|
+|reloads
 |----
 |63
 |CACertificatePath
@@ -559,16 +559,16 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |could be problematic if is changed during host installation 
 |n
-|
+|should not be reloadable
 |----
 |64
 |CertificateFingerPrint
 |&lt;snipped&gt;
 |general
 |y
-|
+|unused 
 |y
-|
+|unused 
 |----
 |65
 |CABaseDirectory
@@ -577,7 +577,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |could be problematic if is changed during host installation 
 |y
-|
+|should not be reloadable
 |----
 |66
 |TruststorePass
@@ -586,7 +586,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |is called in static c'tor of XmlRpcUtils 
 |n
-|
+|consult
 |----
 |67
 |keystorePass
@@ -595,7 +595,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |seems to be problematic: EngineMonitorService.createConcreteSSLSocketFactory 
 |n
-|
+|should not be reloadable
 |----
 |68
 |SignScriptName
@@ -604,7 +604,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y?
 |not sure 
 |n
-|
+|reloads
 |----
 |69
 |keystoreUrl
@@ -613,7 +613,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |seems to be problematic: EngineMonitorService.createConcreteSSLSocketFactory 
 |n
-|
+|should not be reloadable
 |----
 |70
 |CertAlias
@@ -622,7 +622,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |may be problematic because of MinaInstallWrapper._do_connect() 
 |n
-|
+|should not be reloadable
 |----
 |71
 |TruststoreUrl
@@ -631,7 +631,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |is called in static c'tor of XmlRpcUtils 
 |n
-|
+|consult
 |----
 |72
 |PublicURLPort
@@ -640,7 +640,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |is called in VdsInstaller.InitInitialCommand 
 |n
-|
+|reloads
 |----
 |73
 |CAEngineKey
@@ -649,7 +649,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |unused 
 |n
-|
+|unused 
 |----
 |74
 |SSHInactivityTimoutSeconds
@@ -658,7 +658,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |The maximum amount of time backend allows for an SSH session to remote hosts. After this timeout the session will be killed. 
 |y
-|
+|reloads
 |----
 |75
 |SSLEnabled
@@ -667,7 +667,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |76
 |SpiceSecureChannels
@@ -676,7 +676,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Which SPICE channels should be secured with SSL. Valid values are one or more of: smain,sinputs,scursor,splayback,srecord,sdisplay.
 |y
-|
+|reloads
 |----
 |77
 |EnableVdsLoadBalancing
@@ -685,7 +685,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |On startup. This config value allows the user to turn on/off (true/false accordingly) the VM load balancing according to the policy the user configured for the cluster. 
 |y
-|
+|value on startup – consult
 |----
 |78
 |VdsLoadBalancingeIntervalInMinutes
@@ -694,7 +694,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Will not be updated since is scheduled by quartz on startup 
 |y
-|
+|schedule
 |----
 |79
 |HighUtilizationForEvenlyDistribute
@@ -703,7 +703,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |High Utilization Limit For Evenly Distribute selection algorithm 
 |y
-|
+|reloads
 |----
 |80
 |LowUtilizationForEvenlyDistribute
@@ -712,7 +712,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |81
 |HighUtilizationForPowerSave
@@ -721,7 +721,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |82
 |LowUtilizationForPowerSave
@@ -730,7 +730,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |83
 |UtilizationThresholdInPercent
@@ -739,7 +739,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |84
 |CpuOverCommitDurationMinutes
@@ -748,7 +748,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |When the cluster policy is set to Even Distribution, wait for this amount of minutes after detecting CPU overcommit, before triggering VM migrations to rebalance the host load 
 |y
-|
+|reloads
 |----
 |85
 |SpmVCpuConsumption
@@ -757,16 +757,16 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |86
 |EnableSpiceRootCertificateValidation
 |TRUE
 |general
 |y
-|
+|unused in backend
 |y
-|
+|unused 
 |----
 |87
 |ConfigDir
@@ -775,7 +775,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |seems problematic if it changes during addVdsCommand 
 |n
-|
+|should not be reloadable
 |----
 |88
 |DataDir
@@ -784,7 +784,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |seems problematic if it changes during vdsInstallation 
 |n
-|
+|should not be reloadable
 |----
 |89
 |VdcVersion
@@ -793,7 +793,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |90
 |AuditLogCleanupTime
@@ -802,7 +802,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |is only used in Backend.init 
 |y
-|
+|schedule
 |----
 |91
 |AuditLogAgingThreashold
@@ -811,7 +811,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |How long should an audit log be kept before being rotated. 
 |y
-|
+|reloads
 |----
 |92
 |SearchResultsLimit
@@ -820,16 +820,16 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads after fix
 |----
 |93
 |LogXmlRpcData
 |FALSE
 |general
 |y
-|
+|unused in backend
 |y
-|
+|unused 
 |----
 |94
 |MacPoolRanges
@@ -838,7 +838,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |only in MacPoolManager.initialize. Sounds problematic. 
 |y
-|
+|should not be reloadable
 |----
 |95
 |MaxMacsCountInPool
@@ -847,7 +847,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |How many MAC addresses are allowed at most in this mac-pool. Problematic - what if number of macs exceeded new number ? 
 |y
-|
+|should not be reloadable
 |----
 |96
 |MaxVmNameLengthWindows
@@ -856,7 +856,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Seems problematic changing anyway, even if restarting machine. 
 |y
-|
+|reloads
 |----
 |97
 |MaxVmNameLengthNonWindows
@@ -865,7 +865,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Seems problematic changing anyway, even if restarting machine. 
 |y
-|
+|reloads
 |----
 |98
 |MaxVdsNameLength
@@ -874,7 +874,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Seems problematic changing anyway, even if restarting machine. 
 |y
-|
+|reloads
 |----
 |99
 |NumberOfFailedRunsOnVds
@@ -883,7 +883,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |100
 |TimeToReduceFailedRunOnVdsInMinutes
@@ -892,7 +892,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|schedule
 |----
 |101
 |MaxRerunVmOnVdsCount
@@ -901,7 +901,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |102
 |ValidNumOfMonitors
@@ -910,34 +910,34 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |Only on startup. What number of monitors are available for SPICE-enabled VMs 
 |y
-|
+|reloads after fix
 |----
 |103
 |NumberVmRefreshesBeforeSave
 |5
 |general
 |y
-|on startup. Number of Virtual Machine Data Refreshes Before Saving to Database 
+|on startup. Number of Virtual Machine Data Refreshes Before Saving to Database. ResourceManager
 |y
-|
+|consult
 |----
 |104
 |VMMinMemorySizeInMB
 |256
 |general
 |y
-|on startup. 
-|y
 |
+|y
+|reloads
 |----
 |105
 |AutoSuspendTimeInMinutes
 |30
 |general
 |y
-|
+|unused 
 |n
-|
+|unused 
 |----
 |106
 |VmGracefulShutdownMessage
@@ -946,43 +946,43 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |107
 |SpiceReleaseCursorKeys
 |shift+f12
 |general
 |y
-|
+|unused in backend
 |y
-|
+|unused 
 |----
 |108
 |SpiceToggleFullScreenKeys
 |shift+f11
 |general
 |y
-|
+|unused in backend
 |y
-|
+|unused 
 |----
 |109
 |SpiceUsbAutoShare
 |TRUE
 |general
 |y
-|
+|unused 
 |y
-|
+|unused 
 |----
 |110
 |RDPLoginWithFQN
 |TRUE
 |general
 |y
-|
+|unused in backend
 |y
-|
+|unused 
 |----
 |111
 |VncKeyboardLayout
@@ -991,7 +991,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |112
 |MaxDiskSize
@@ -1000,7 +1000,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |113
 |AsyncTaskZombieTaskLifeInMinutes
@@ -1009,7 +1009,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |114
 |DisableFenceAtStartupInSec
@@ -1018,16 +1018,16 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |y
-|
+|reloads
 |----
 |115
 |PowerClientGUI
 |FALSE
 |general
 |y
-|
+|unused 
 |n
-|
+|unused 
 |----
 |116
 |PowerClientAutoApprovePatterns
@@ -1036,7 +1036,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |may cause a problem in RegisterVdsQuery.CheckAutoApprovalDefinitions 
 |n
-|
+|should not be reloadable
 |----
 |117
 |PowerClientDedicatedVmLaunchOnVdsWhilePowerClientStarts
@@ -1045,7 +1045,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y?
 |check in VdsEventListener 
 |n
-|
+|reloads
 |----
 |118
 |PowerClientAutoMigrateToPowerClientOnConnect
@@ -1054,7 +1054,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |Y
 |may be problematic because PowerClientMigrateOnConnectCheckCommand.canDoAction 
 |n
-|
+|reloads after fix
 |----
 |119
 |PowerClientAutoMigrateFromPowerClientToVdsWhenConnectingFromRegularClient
@@ -1063,7 +1063,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |may be problematic because PowerClientMigrateOnConnectCheckCommand.canDoAction 
 |n
-|
+|reloads after fix
 |----
 |120
 |PowerClientAllowRunningGuestsWithoutTools
@@ -1072,7 +1072,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |121
 |PowerClientAutoRegistrationDefaultVdsGroupID
@@ -1081,7 +1081,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |122
 |PowerClientSpiceDynamicCompressionManagement
@@ -1090,7 +1090,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |123
 |PowerClientAutoAdjustMemory
@@ -1099,7 +1099,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |can cause problems in RunVmOnDedicatedVdsCommand.AutoMemoryAdjust 
 |n
-|
+|should not be reloadable
 |----
 |124
 |PowerClientAutoAdjustMemoryGeneralReserve
@@ -1108,7 +1108,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |can mess up logging in RunVmOnDedicatedVdsCommand.AutoMemoryAdjust 
 |n
-|
+|should not be reloadable
 |----
 |125
 |PowerClientAutoAdjustMemoryBaseOnAvailableMemory
@@ -1117,16 +1117,16 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |may cause problem in logic of RunVmOnDedicatedVdsCommand.AutoMemoryAdjust 
 |n
-|
+|should not be reloadable
 |----
 |126
 |PowerClientAutoAdjustMemoryLog
 |FALSE
 |general
-|y?
+|y
 |check in RunVmOnDedicatedVdsCommand.AutoMemoryAdjust 
 |n
-|
+|reloads after fix
 |----
 |131
 |ENMailDomain
@@ -1135,7 +1135,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |unused 
 |n
-|
+|unused 
 |----
 |132
 |ENMailIsBodyHtml
@@ -1144,7 +1144,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |unused 
 |n
-|
+|unused 
 |----
 |134
 |ENMailUseDefaultCredentials
@@ -1153,7 +1153,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |unused 
 |n
-|
+|unused 
 |----
 |135
 |VM32BitMaxMemorySizeInMB
@@ -1162,7 +1162,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |137
 |EnableSwapCheck
@@ -1171,7 +1171,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |138
 |SendSMPOnRunVm
@@ -1180,7 +1180,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |139
 |NicDHCPDelayGraceInMS
@@ -1189,7 +1189,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |140
 |OvfVirtualSystemType
@@ -1198,16 +1198,16 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y?
 |make sure is allowed 
 |n
-|
+|reloads
 |----
 |141
 |VdsSelectionAlgorithm
 |None
 |general
 |y
-|created on static c'tor of VmCountVdsLoadBalancingAlgorithm 
-|n
 |
+|n
+|reloads after fix
 |----
 |142
 |AdUserId
@@ -1216,16 +1216,16 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |143
 |SelectCommandTimeout
 |120
 |general
 |y
-|
+|unused 
 |n
-|
+|unused 
 |----
 |144
 |CipherSuite
@@ -1234,16 +1234,16 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |145
 |AutoMode
 |PerServer
 |general
 |y
-|
+|unused 
 |n
-|
+|unused 
 |----
 |146
 |VmGracefulShutdownTimeout
@@ -1252,7 +1252,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |147
 |VmPriorityMaxValue
@@ -1261,7 +1261,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |can create problems in VmTemplateCommand.IsVmPriorityValueLegal 
 |n
-|
+|should not be reloadable
 |----
 |148
 |ScriptsPath
@@ -1270,16 +1270,16 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |not in ConfigValues class , ofer said doesn;t look important
 |n
-|
+|should not be reloadable
 |----
 |149
 |BootstrapInstallerFileName
 |backend/manager/conf/vds_installer.py
 |general
 |y
-|seems to be problematic in InstallVds 
+|might to be problematic in InstallVds 
 |n
-|
+|reloads
 |----
 |150
 |SearchesRefreshRateInSeconds
@@ -1288,7 +1288,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |is only updated on startup 
 |n
-|
+|schedule
 |----
 |151
 |UseVdsBrokerInProc
@@ -1297,7 +1297,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |unused 
 |n
-|
+|unused 
 |----
 |152
 |RenewGuestIpOnVdsSubnetChangeOnParseError
@@ -1306,7 +1306,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |unused 
 |n
-|
+|unused 
 |----
 |153
 |RenewGuestIpOnVdsSubnetChange
@@ -1315,7 +1315,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |unused 
 |n
-|
+|unused 
 |----
 |154
 |DebugTimerLogging
@@ -1324,7 +1324,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |155
 |DebugSearchLogging
@@ -1333,7 +1333,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |156
 |AgentAppName
@@ -1342,7 +1342,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |157
 |SpiceDriverNameInGuest
@@ -1351,7 +1351,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |158
 |GuestToolsSetupIsoPrefix
@@ -1360,16 +1360,16 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |only set on startup 
 |n
-|
+|reloads after fix
 |----
 |159
 |VcpuConsumptionPercentage
 |10
 |general
-|n?
+|y
 |sounds problematic
 |n
-|omer
+|reloads
 |----
 |160
 |VdsCertificateValidityInYears
@@ -1378,7 +1378,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |161
 |DiskConfigurationList
@@ -1387,7 +1387,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |162
 |CbcCheckOnVdsChange
@@ -1396,7 +1396,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |not in ConfigValues class or anywhere else 
 |n
-|
+|should not be reloadable
 |----
 |163
 |CBCCertificateScriptName
@@ -1405,7 +1405,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |164
 |CBCCloseCertificateScriptName
@@ -1414,7 +1414,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |165
 |PowerClientAutoInstallCertificateOnApprove
@@ -1423,16 +1423,16 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |166
 |PowerClientMaxNumberOfConcurrentVMs
 |1
 |general
-|y(condition)
-|need to fix RunVmCommandBase.hasCapacityToRunVM - to fetch the value to a local variable, so it wont be read more than once 
-|n
+|y
 |
+|n
+|reloads after fix
 |----
 |167
 |PowerClientAllowUsingAsIRS
@@ -1441,7 +1441,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |unused 
 |n
-|
+|unused 
 |----
 |168
 |PowerClientRunVmShouldVerifyPendingVMsAsWell
@@ -1450,7 +1450,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |y
 |
 |n
-|
+|reloads
 |----
 |169
 |PowerClientLogDetection
@@ -1540,7 +1540,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |unused 
 |n
-|
+|should not be reloadable
 |----
 |179
 |VdsFenceOptionMapping
@@ -1621,7 +1621,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |May cause a problem if is decreased - however the same problem can occur of the change happens when the machine is down. If needed to reload, need to change candoaction
 |y
-|
+|should not be reloadable
 |----
 |188
 |LogDBCommands
@@ -1693,7 +1693,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |Don't beleive this should be reloadable 
 |n
-|
+|should not be reloadable
 |----
 |196
 |SQLServerPagingSyntax
@@ -2005,10 +2005,10 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |SupportStorageFormat
 |FALSE
 |2.2
-|?
-|not sure ask 
 |n
 |omer
+|n
+|should not be reloadable
 |----
 |232
 |SupportedStorageFormats
@@ -2149,10 +2149,10 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |SupportStorageFormat
 |TRUE
 |3
-|?
-|not sure 
 |n
 |omer
+|n
+|should not be reloadable
 |----
 |248
 |SupportedStorageFormats
@@ -2233,7 +2233,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |No – because of UI
 |y
-|
+|should not be reloadable
 |----
 |258
 |MaxAuditLogMessageLength
@@ -2251,7 +2251,7 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |n
 |is used by rhevm-reports, ofer asked not to delete. not in configvalues, no point in reloading
 |n
-|
+|should not be reloadable
 |----
 |260
 |SysPrepDefaultUser
@@ -2734,10 +2734,10 @@ This is a temporary draft for [[Features/ReloadableConfiguration]], to assisst c
 |SupportStorageFormat
 |TRUE
 |3.1
-|?
-|not sure ask 
 |n
 |omer
+|n
+|should not be reloadable
 |----
 |314
 |SupportedStorageFormats
