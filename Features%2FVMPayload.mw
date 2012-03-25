@@ -31,24 +31,24 @@ The payload options are:
 #* CD
 #* In the future also libguestfs injection and payload downloaded via private IP
 
-There are a few options to model that (upstream discussions led to using the '''first''' one):
-# Add a payload in addition to the current Floppy/CD attachment options:
-#* Add a Payload option, in which you choose whether to pass the payload via CD or floppy (the passing method)
-#* Choose the Payload data (base64 encoded string)
-#* There may be multiple payloads, and multiple passing options at the same time in the same VM
-#* The payload feature works regardless of current ISO or Floppy (in sysprep) attachments. The only limitation is that in case Windows sysprep is used, we must make sure it gets the first floppy (drive "A:")
-# Use current Floppy/CD attachment options:
-#* In floppy allow to attach either sysprep or payload
-#* In CD allow to attach either an ISO, or a payload
-#* There will be a single attachment or payload per device type (floppy, CD)
 
-
-Notes:
-# The payload data will be encoded using base64 encoding
-# All payloads will be passed in the current VDSM create verb
-# With either options, the engine API and VDSM API will be general enough to allow adding other passing methods in the future
-# The Modelling of this feature will include OVF schema changes as well
-# For now we will limit the content of the file to 1024K. In the future we might support using NFS share in cases in which the content is bigger
+'''Implementation notes:'''
+# '''backend, frontend:''' only one payload per vm
+# '''backend, forntend:''' For now we will limit the content of the file to 16K.
+# '''backend, frontend:''' add support to run-once
+# '''backend, frontend:''' add support to add/edit VM
+# '''backend:''' The Modelling of this feature will include OVF schema changes as well
+# '''backend:''' payload will be as cdrom/floppy device, if we use payload-cdrom we don't allow regular cdrom
+# '''backend:''' add 3 fields to VM class (not persistence) payload_type, payload_filename, payload_content
+# '''bacnend:''' payload will be present as a cdrom/floppy device with the payload data in the specParams (and will be persist to db)
+# '''backend:''' change cd will be enabled on the payload-cdrom (which will be the only cdrom)
+# '''vdsm:''' will parse the device and create temp cdrom/floppy file-system file.
+# '''vdsm:''' will remove the payload data when returning the vmStats to backend
+# '''vdsm:''' on migration will have the same devices
+# '''vdsm:''' on destroy will delete the temp file-system
+# '''bacnend:''' the file names should be passed in Unicode
+# '''backend:'''The payload data will be encoded using base64 encoding
+# '''vdsm:''' should re-encode them as utf8 when writing them to disk
 
 === Design Notes ===
 vmPayload is passed in the create params:
