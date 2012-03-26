@@ -59,7 +59,7 @@ We will add the following config value for this job:
 |}
 
 == Open Issues ==
-# How to update the scheduled jobs.
+# How to update the scheduled jobs - the current solution will be to use the scheduler's map to update things like interval size.
 # Whether or not to update the values that demand work for fetching, such as parsing.
 
 == Dependencies / Related Features ==
