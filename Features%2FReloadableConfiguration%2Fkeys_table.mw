@@ -1,8 +1,5 @@
-{|
-|ption_id 
-|option_name 
-|should be relaodable? 
-|is currently updatable in properties file
+{|class="wikitable sortable"
+!option_id!!option_name!!should be relaodable?!!is in properties file?
 |----
 |1
 |AuthenticationMethod
