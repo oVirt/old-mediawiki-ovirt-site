@@ -63,7 +63,7 @@ We will have the following config value for this job:
 
 == Dependencies / Related Features ==
 Affected engine projects:
-* backend
+* core
 * Webadmin
 * User Portal
 
