@@ -8,6 +8,7 @@ The Reloadable Configuration feature will allow the admin to change core configu
 <!--This should link to your home wiki page so we know who you are-->
 * Feature owner: [[User:msalem| Muli Salem]]
 :* Backend Component owner: [[User:msalem| Muli Salem]]
+:* GUI Component owner: [[User:derez| Daniel Erez]]
 :* QA Owner: [[User:?| ?]] 
 
 <!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
@@ -33,81 +34,36 @@ The requirements are the following:
 Today the config values from vdc_options are cached in a map of type DBConfigUtils, that is held in the Config class. Caching of the config values of the table, are done only in the initialization of the Backend class. 
 
 New Design:
-# Creating a periodic job that refreshes the cached map, once a minute.
+# Creating a periodic job that refreshes the cached map from the DB, once a minute.
 # Adding a reloadable column in vdc_options. This field will distinguish between keys that can be reloaded in runtime, and keys that should only change when the machine is restarted.
+## The table in the following link, holds the list of vdc_options keys and whether or not they should be reloadable. It also shows which values are currently exposed through the engine-config tool, since they are in the properties file.
+## We divide the config keys into 3 types:
+### Keys that are fetched from the cache every time they are used - for example keys that are used in a command: These keys will remain untouched.
+### Keys that are cached locally, for example in static members: The reloadable keys of this type will be changed to look up the key in the cached map, every time they are needed.
+### Keys that are cached locally, for example in static members, however fetching their values demands some work (such as parsing).
+### Quartz services that are setup on startup and cannot be changed afterwords.
 
-
-<span style="color:Teal">'''prestarted_vms'''</span>:<BR>
+<span style="color:Teal">'''vdc_options'''</span>:<BR>
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Description 
 |-
-|prestarted_vms || smallint ||not null / default 0 ||The minimum number of prestarted vms
+|reloadable || boolean ||not null / default False ||Is this key reloadable
 |-
 |}
 
-* We also need to add this column to vm_pools_view and vm_pools_full_view.
-
-'''VmPoolMonitor'''<BR>
-Maintaining the number of prestarted will be done periodically. The periodic approach was chosen since it avoids relying on the different stages in the VmPool's life cycle. There will be a job that runs every x minutes. x is defined in vdc_options in a new row called VmPoolRefreshRate. A new property needs to be added to the engine-config.properties file. The default will be 2 minutes. The job will go over each pool, check whether there are enough prestarted Vms running. If not, it will start the needed amount.
-
-We will the following config values for this job:
+We will have the following config value for this job:
 <span style="color:Teal">'''prestarted_vms'''</span>:<BR>
 {|class="wikitable sortable"
 !border="1"| config key || config type ||Null? / Default ||Description 
 |-
-|VmPoolMonitorBatchSize || smallint ||5||The maximum amount of vms that will be prestarted in a single run of the VmPoolMonitor
-|-
-|VmPoolMonitorIntervalInMinutes || smallint ||5||The size of interval between VmPoolMonitor runs
-|-
-|VmPoolMonitorMaxAttempts || smallint ||3||The number of attempts that are made to prestart a Vm
+|ConfigurationsRefreshIntervalInSeconds || smallint ||60||The size of interval between refreshes of configurations from vdc_options.
 |}
 
-
-* This option can be optimized by triggering the job upon certain events. Events that should trigger: addVmPool, AttachUserToVmFromPoolCommand...?
-
-
-'''Algorithm for selecting a Vm for user'''
--------------------------------------------
-# A vm will be assigned to a user in the following priority:
-## 
-### The Vm is up
-### is not running by the admin (Can be deduced from the images status?)
-### is not given to another user
-## Current assignment:
-### The Vm is down
-### is not given to a user
-
-'''Algorithm for maintaining number of prestarted Vms'''
---------------------------------------------------------
-# The Prestarted Vm Job counts the number of Vms that:
-## 
-### Are running (*) not by the admin
-### are not assigned to a user
-## If there are not enough of them, he looks for Vms that are:
-### down
-### not assigned to a user
-
-
-The implementation will be as follows:
-# The AttachUserToVmFromPoolAndRunCommand and AttachUserToVmFromPoolCommand will be combined to one command named AllocateVmFromPoolCommand.
-# A new command called PrepareVmForUse will be added. The command will run the CreateAllSnapshotsFromVmCommand, and upon ending successfully will run RunVm. The command will be used both by the command in the previous clause, and by the scheduler that prepares prestarted vms.
-# We will add a flow that checks if there are available prestarted Vms. If so, do only "AddPermission". If no prestarted Vms were found, run AddPermission + PrepareVmForUse.
-
-== Affected Commands ==
-# AttachUserToVmFromPoolCommandAndRun + AttachUserToVmFromPoolCommandAndRun - As explained above.
-# AddVmPoolCommand - no change since the parameter held is of type vm_pools.
-# UpdateVmPoolCommand - no change since the parameter held is of type vm_pools.
-# RemoveVmPoolCommand - no change since the parameter held is of type vm_pools.
-
 == Open Issues ==
-# * We need to define what the scheduler counts to be as a prestarted vm (only up, maybe VM.isStatusQualifyToMigrate() which includes Up, PoweringUp, Paused, RebootInProgress)
-# We need to decide whether we take the periodic approach (with or without optimization), or the event driven one.
-
+# * How to update the scheduled jobs.
 
 == Dependencies / Related Features ==
-Affected rhevm projects:
-* API
-* CLI
+Affected engine projects:
 * backend
 * Webadmin
 * User Portal
