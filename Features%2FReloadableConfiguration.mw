@@ -36,8 +36,8 @@ Today the config values from vdc_options are cached in a map of type DBConfigUti
 New Design:
 # Creating a periodic job that refreshes the cached map from the DB, once a minute.
 # Adding a reloadable column in vdc_options. This field will distinguish between keys that can be reloaded in runtime, and keys that should only change when the machine is restarted.
-## The table in the following link, holds the list of vdc_options keys and whether or not they should be reloadable. It also shows which values are currently exposed through the engine-config tool, since they are in the properties file.
-## We divide the config keys into 3 types:
+## The table in the following link, holds the list of vdc_options keys and whether or not they should be reloadable. It also shows which values are currently exposed through the engine-config tool, since they are in the properties file: http://www.ovirt.org/wiki/Features/ReloadableConfiguration/keys_table
+## We divide the config keys into 4 types:
 ### Keys that are fetched from the cache every time they are used - for example keys that are used in a command: These keys will remain untouched.
 ### Keys that are cached locally, for example in static members: The reloadable keys of this type will be changed to look up the key in the cached map, every time they are needed.
 ### Keys that are cached locally, for example in static members, however fetching their values demands some work (such as parsing).
