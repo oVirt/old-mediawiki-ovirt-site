@@ -26,9 +26,8 @@ The Reloadable Configuration feature will allow updating '''some''' of the value
 The requirements are the following:
 
 # Enable the updating of configurations in vdc_options, while the machine is up.
-# This should be enabled for keys that can be changed in runtime without harming the system, and keys that can actua
+# This should be enabled for keys that can be changed in runtime without harming the system, and keys that can actually be updated.
 # The update does not have to take place immediately upon configuration change, but rather can happen periodically.
-
 
 == Design ==
 Today the config values from vdc_options are cached in a map of type DBConfigUtils, that is held in the Config class. Caching of the config values of the table, are done only in the initialization of the Backend class. 
