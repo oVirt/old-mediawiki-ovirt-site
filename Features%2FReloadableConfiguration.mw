@@ -59,7 +59,8 @@ We will have the following config value for this job:
 |}
 
 == Open Issues ==
-# * How to update the scheduled jobs.
+# How to update the scheduled jobs.
+# Whether or not to update the values that demand work for fetching, such as parsing.
 
 == Dependencies / Related Features ==
 Affected engine projects:
