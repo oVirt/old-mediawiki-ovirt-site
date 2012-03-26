@@ -42,7 +42,7 @@ New Design:
 ### Keys that are cached locally, for example in static members, however fetching their values demands some work (such as parsing).
 ### Quartz services that are setup on startup and cannot be changed afterwords.
 
-<span style="color:Teal">'''vdc_options'''</span>:<BR>
+<span style="color:Teal">'''New Coloumn:'''</span>:<BR>
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Description 
 |-
@@ -51,7 +51,7 @@ New Design:
 |}
 
 We will have the following config value for this job:
-<span style="color:Teal">''''''</span>:<BR>
+<span style="color:Teal">'''New config key:'''</span>:<BR>
 {|class="wikitable sortable"
 !border="1"| config key || config type ||Null? / Default ||Description 
 |-
