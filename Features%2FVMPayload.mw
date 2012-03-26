@@ -37,6 +37,7 @@ The payload options are:
 # '''backend, forntend:''' For now we will limit the content of the file to 16K.
 # '''backend, frontend:''' add support to run-once
 # '''backend, frontend:''' add support to add/edit VM
+# '''backend, frontend:''' add GetVmPayloadQuery() (needed because there is no persistence to payload in VmBase)
 # '''backend:''' The Modelling of this feature will include OVF schema changes as well
 # '''backend:''' payload will be as cdrom/floppy device, if we use payload-cdrom we don't allow regular cdrom
 # '''backend:''' add 3 fields to VM class (not persistence) payload_type, payload_filename, payload_content
