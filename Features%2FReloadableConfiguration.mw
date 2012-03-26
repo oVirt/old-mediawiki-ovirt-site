@@ -8,7 +8,7 @@ The Reloadable Configuration feature will allow the admin to change core configu
 <!--This should link to your home wiki page so we know who you are-->
 * Feature owner: [[User:msalem| Muli Salem]]
 :* Backend Component owner: [[User:msalem| Muli Salem]]
-:* GUI Component owner: [[User:derez| Daniel Erez]]
+:* GUI Component owner: [[User:?| ?]]
 :* QA Owner: [[User:?| ?]] 
 
 <!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
@@ -42,7 +42,7 @@ New Design:
 ### Keys that are cached locally, for example in static members, however fetching their values demands some work (such as parsing).
 ### Quartz services that are setup on startup and cannot be changed afterwords.
 
-<span style="color:Teal">'''New Coloumn'''</span>:<BR>
+<span style="color:Teal">'''New Column'''</span>:<BR>
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Description 
 |-
@@ -50,7 +50,7 @@ New Design:
 |-
 |}
 
-We will have the following config value for this job:
+We will add the following config value for this job:
 <span style="color:Teal">'''New config key'''</span>:<BR>
 {|class="wikitable sortable"
 !border="1"| config key || config type ||Null? / Default ||Description 
