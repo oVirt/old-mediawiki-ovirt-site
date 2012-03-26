@@ -1,5 +1,5 @@
 {|class="wikitable sortable"
-!option_id!!option_name!!should be relaodable?!!is in properties file?
+!option_id!!option_name!!should be reloadable?!!is in properties file?
 |----
 |1
 |AuthenticationMethod
