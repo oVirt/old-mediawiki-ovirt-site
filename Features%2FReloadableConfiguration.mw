@@ -50,8 +50,8 @@ New Design:
 |-
 |}
 
-We will add the following config value for this job:
-<span style="color:Teal">'''New config key'''</span>:<BR>
+We will add the following config value for the periodic job:
+<span style="color:Teal">''''''</span>:<BR>
 {|class="wikitable sortable"
 !border="1"| config key || config type ||Null? / Default ||Description 
 |-
