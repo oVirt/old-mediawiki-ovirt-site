@@ -28,19 +28,20 @@ In the upcoming version, SPICE is about to perform the following changes/additio
 #WAN Support
 
 === Detailed Description ===
+
 * New Spice Client
 
 The Linux and Windows ''spicec'' based client will be replaced by the ''remote-viewer'' which is based on spice-gtk.
 The ActiveX and spice-xpi packages will be updated to include the new client which is backwards compatible with spicec - allowing remote-viewer to be used for RHEV 3 based deployments as well as RHEV 3.1.
 
 
-
-
 * USB Support
 
 For cluster level 3.1 (based on RHEL 6.3 support) native KVM/Spice USB redirection can be used in addition to the legacy Incentives Pro.
+
+
 The current Incentives Pro solution needs to be supported for both 3.0 and 3.1 cluster levels.
-''Note :The native USB support in Spice and KVM currently does not support live migration.''
+''Note :''The native USB support in Spice and KVM currently does not support live migration.
 
 *'''For 3.0 Cluster level'''
 **Update New/Edit VM dialog to change USB text to “Legacy USB Support”
@@ -69,7 +70,7 @@ Targeting RHEL 6.4 to address this https://bugzilla.redhat.com/show_bug.cgi?id=8
 A new user editable configuration value should be added to vdc_options to specify the number of USB slots to be exposed to the virtual machine. 
 The default should be 4
 
-'''Note: I am suggesting that we make this a system wide value, since we should be able to dynamically change this in a later implementation.'''
+'''Note:''' It is suggested that we make this a system wide value, since we should be able to dynamically change this in a later implementation.
 
 The following libvirt XML example shows adding 4 USB devices to a domain xml. 
 The slot number would need to be adjusted based on the next available pci slot in the system.
