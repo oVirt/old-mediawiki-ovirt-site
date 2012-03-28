@@ -9,10 +9,10 @@ addressed by developers defining a new entity.
 
 === List of limitations ===
 
-* final members should not be used. <<BR>>
+* final members should not be used. <BR>
 
-For example:<<BR>>
-Use  int numberOfVms instead of final int numberOfVms<<BR>><<BR>><<BR>>
+For example:<BR>
+Use  int numberOfVms instead of final int numberOfVms<BR><BR><BR>
 
 
 * Concrete collection classes should be used.<<BR>>
