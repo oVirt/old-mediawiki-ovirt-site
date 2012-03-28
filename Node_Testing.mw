@@ -1,0 +1,43 @@
+= Node Testing - WIP =
+
+
+Automated testing can be done on several levels.
+Currently we plan to do some checks at build time and some high level checks on a running node instance.
+
+== Tests at build time ==
+'''Requirements'''
+* Should check the basic functionality of low-level libraries to reduce simple programming errors or changes in function calls which break some depending code.
+* Should be triggered at build time e.g. with a <code>make check</code> and test some basic functionality
+
+=== Syntax checks ===
+Very trivial, just check if we follow pythons style guide [http://www.python.org/dev/peps/pep-0008/ pep8]
+
+=== Unit tests ===
+Unit tests can be used to check our internal "API" stability and discover bugs or regressions.
+
+doctests is one way to add basic unit tests as comments to methods in python.
+* http://docs.python.org/library/doctest.html
+* http://wiki.python.org/moin/DocTest
+* http://en.wikipedia.org/wiki/Doctest
+
+'''TUI testing'''
+The plan is to separate the TUI code and "logic" code even more, so that TUI actions (approximately) map to library methods. In such a case we can use unit testing to test the functionality of the library backing the TUI, and it should be easier to track bugs down which arise in the TUI.
+
+
+== Post-Build testing ==
+=== Sanity checks ===
+'''Requirements'''
+* Should be triggered automatically from automated builds (Jenkins)
+* ideally will cause builds to be marked either failed or unstable
+* should cover basic sanity testing scenarios that we cover in manual testing today
+
+'''Basic Sanity testing scenarios'''
+# Boot and install oVirt on real hardware or virtualized (Sanity testing should always include at least 1 test on real hardware)
+# install using TUI
+# install using auto-install
+# general configuration done (network, storage, ovirt-engine)
+# start vms on running ovirt-node hosts using FC and iscsi storage domains
+
+[[Category:Node]]
+[[Category:Testing]]
+[[Category:Automation]]
