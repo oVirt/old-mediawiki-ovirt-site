@@ -15,7 +15,7 @@ For example:<BR>
 Use  int numberOfVms instead of final int numberOfVms<BR><BR><BR>
 
 
-* Concrete collection classes should be used.<<BR>>
+* Concrete collection classes should be used.<BR>
 
-For example:<<BR>>
-Use  ArrayList<DiskImage> getImages() instead of List<DiskImage> getImages()<<BR>><<BR>><<BR>>
+For example:<BR>
+Use  ArrayList<DiskImage> getImages() instead of List<DiskImage> getImages()<BR><BR><BR>
