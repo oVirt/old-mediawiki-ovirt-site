@@ -12,5 +12,7 @@ Vdsm configuration file can be placed under ''/etc/vdsm/vdsm.conf''. If no such 
 ssl = false
 </pre>
 
+Note: this is enough to make VDSM run without ssl, but spice, quemu and the ovirt engine need some [[OVirt_-_disable_SSL_in_VDSM|further configuration]].
+
 [[Category:Vdsm]]
 [[Category:Documentation]]
