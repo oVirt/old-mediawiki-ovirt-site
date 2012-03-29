@@ -1,0 +1,13 @@
+== All in one ==
+
+This feature is provided as a separate rpm binary which adds a plugin to the setup sequence.
+
+"All in One" means configuring VDSM on the same host where oVirt-engine is installed, so that VMs can be hosted on the same machine.
+
+=== Installation Flow ===
+
+* Install ovirt-engine-setup-plugin-allinone rpm.
+* Start regular engine-setup procedure.
+* When asked "Configure VDSM on this host?", answer yes.
+* Provide answers to the presented questions.
+* After all answers are provided, the setup will install oVirt-engine and configure VDSM, including local host.
