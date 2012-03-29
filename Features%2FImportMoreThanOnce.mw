@@ -10,7 +10,7 @@ in fact this feature consists of changing the identifiers of an imported VM/Temp
 
 === Current status ===
 * Design Stage
-* Last updated date: Tue Feb 21 2012
+* Last updated date: Thu Mar 29 2012
 
 === Affected oVirt projects: ===
 * Core
@@ -30,7 +30,7 @@ note: unless specified 'entity' may refer both to VM and Template oVirt Entities
 Only the ImportEntity dialog will be affected:
 
 * Add 'Already Exists in Setup' column to import entity dialog:
-:* Run multiple queries for get_entity_by_id to check whether the imported entities exist in the setup.
+:* Run one search query for all vms (by id) to check whether the imported entities exist in the setup (if search is not supported to id, I will implement it).
 * Add 'clone all entities' check box to Import Entity Dialog
 :* In case checked:
 ::* (in import VM) The 'collapse all snapshots' checkbox should be checked and disabled.
