@@ -23,7 +23,77 @@ Support entry of non English characters to the various fields.
 Excludes:
 * host name
 * network name
-* fields saved in storage domain (domain name/description, pool name/description, volume/image description)
+* fields saved in storage domain
+** domain name/description 
+** pool name/description
+** volume/image description
+
+Fields which are not validated should work out of the box. Following a table which enumerates the fields which are validated. 
+
+{| class="wikitable"
+! style="border-style: solid; border-width: 0 1px 1px 0"| Backend
+! style="border-style: solid; border-width: 0 1px 1px 0"| Frontend
+! style="border-style: solid; border-width: 0 1px 1px 0"| Webadmin UI field
+! style="border-style: solid; border-width: 0 1px 1px 0"| User Portal (GWTP one) UI field
+! style="border-style: solid; border-width: 0 1px 1px 0"| VDSM
+! style="border-style: solid; border-width: 0 1px 1px 0"| REST
+|-
+| tags.name
+| TagModel
+| Tags->new/edit->Name
+| NONE
+| 
+|
+|-
+| bookmarks.name
+| BookmarkModel
+| Bookmarks->new/edit->Name
+| NONE
+| 
+|
+|-
+| bookmarks.value
+| BookmarkModel
+| Bookmarks->new/edit->Search string
+| NONE
+| 
+|
+|-
+| storage_pool.name
+| DataCenterModel
+| Data Center->new/edit->Name
+| NONE
+| 
+|
+|-
+| VDSGroup.name
+| ClusterModel
+| Clusters->new/edit->General->Name
+| NONE
+| 
+|
+|-
+| VdsStatic.ip
+| HostModel
+| Hosts->new/edit->General->Address
+| NONE
+| 
+|
+|-
+| VmStatic.name
+| UnitVmModel
+| Virtual Machines->new server/new desktop/edit->General->Name
+| Extended->Virtual Machines->new server/new desktop/edit->General->Name
+| 
+|
+|-
+| VmStatic.name
+| UnitVmModel
+| Template->edit->General->Name
+| Extended->Template->edit->General->Name
+| 
+|
+|}
 
 === Documentation / External references ===
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
