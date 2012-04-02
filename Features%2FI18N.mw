@@ -35,19 +35,19 @@ The '''Backend''' column contains only the declarative validation on the busines
 and the '''Frontend''' column contains only the model object from the uicommonweb.
 
 {| class="wikitable"
-! style="border-style: solid; border-width: 0 1px 1px 0"| Field Name
+! style="border-style: solid; border-width: 0 1px 1px 0"| Field
 ! style="border-style: solid; border-width: 0 1px 1px 0"| Backend
 ! style="border-style: solid; border-width: 0 1px 1px 0"| Frontend
 ! style="border-style: solid; border-width: 0 1px 1px 0"| Webadmin UI field
 ! style="border-style: solid; border-width: 0 1px 1px 0"| User Portal (GWTP one) UI field
 |-
-| Tag name
+| Tag Name
 | tags.name
 | TagModel
 | Tags->new/edit->Name
 | NONE
 |-
-| Bookmark name
+| Bookmark Name
 | bookmarks.name
 | BookmarkModel
 | Bookmarks->new/edit->Name
