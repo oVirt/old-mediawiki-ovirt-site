@@ -72,3 +72,5 @@ gpgcheck = 0</nowiki>
  <nowiki># service httpd start</nowiki>
 * List all repos and see your new repo  
  <nowiki># yum repolist</nowiki>
+
+'''Note''': SELinux might throw permission denied to repo located at /var/www/html/
