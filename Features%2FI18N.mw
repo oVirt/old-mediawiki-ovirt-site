@@ -35,46 +35,55 @@ The '''Backend''' column contains only the declarative validation on the busines
 and the '''Frontend''' column contains only the model object from the uicommonweb.
 
 {| class="wikitable"
+! style="border-style: solid; border-width: 0 1px 1px 0"| Field Name
 ! style="border-style: solid; border-width: 0 1px 1px 0"| Backend
 ! style="border-style: solid; border-width: 0 1px 1px 0"| Frontend
 ! style="border-style: solid; border-width: 0 1px 1px 0"| Webadmin UI field
 ! style="border-style: solid; border-width: 0 1px 1px 0"| User Portal (GWTP one) UI field
 |-
+| Tag name
 | tags.name
 | TagModel
 | Tags->new/edit->Name
 | NONE
 |-
+| Bookmark name
 | bookmarks.name
 | BookmarkModel
 | Bookmarks->new/edit->Name
 | NONE
 |-
+| Bookmars Search String
 | bookmarks.value
 | BookmarkModel
 | Bookmarks->new/edit->Search string
 | NONE
 |-
+| Data Center Name
 | storage_pool.name
 | DataCenterModel
 | Data Center->new/edit->Name
 | NONE
 |-
+| Cluster Name
 | VDSGroup.name
 | ClusterModel
 | Clusters->new/edit->General->Name
 | NONE
 |-
+| Host Address
 | VdsStatic.ip
 | HostModel
 | Hosts->new/edit->General->Address
 | NONE
 |-
+| VM Name
 | VmStatic.name
 | UnitVmModel
 | Virtual Machines->new server/new desktop/edit->General->Name
 | Extended->Virtual Machines->new server/new desktop/edit->General->Name
 |-
+| Template Name
 | VmStatic.name
 | UnitVmModel
 | Template->edit->General->Name
