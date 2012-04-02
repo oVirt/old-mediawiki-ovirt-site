@@ -39,3 +39,36 @@ General development discussions are in <tt>vdsm-devel@lists.fedorahosted.org</tt
 [[Category:Vdsm]]
 [[Category:Documentation]]
 [[Category:Development environment]]
+
+== Creating local yum repo to test vdsm changes  ==
+
+1) First you will need to generate the rpm with your changes, from the vdsm source directory:
+ <nowiki>#vdsm> ./autogen.sh --system
+#vdsm> make
+#vdsm> make rpm</nowiki>
+
+'''Note''': all rpm files will be generated at rpmbuild dir, usually: /home/your-user/rpmbuild/RPMS
+
+2) Setting environment:
+* Install required package
+ <nowiki># yum install createrepo -y</nowiki>
+* Enable httpd service
+ <nowiki># chkconfig httpd on</nowiki>
+* Create the directory that will hold the rpm files (repo)
+ <nowiki># mkdir /var/www/html/my-vdsm-changes</nowiki>
+* Copy the vdsm packages to repo
+ <nowiki># cp /home/your-user/rpmbuild/RPMS/noarch/* /var/www/html/my-vdsm-changes</nowiki>
+ <nowiki># cp /home/your-user/rpmbuild/RPMS/x86_64/* /var/www/html/my-vdsm-changes</nowiki>
+* Create the repo inside the yum.repos.d
+ <nowiki># vi /etc/yum.repos.d/my-vdsm-changes.repo
+[my-vdsm-changes]
+name = my vdsm changes
+baseurl = http://127.0.0.1/my-vdsm-changes
+enabled = 1
+gpgcheck = 0</nowiki>
+* Execute createrepo tool
+ <nowiki># createrepo /var/www/html/my-vdsm-changes</nowiki>
+* Start httpd service
+ <nowiki># service httpd start</nowiki>
+* List all repos and see your new repo  
+ <nowiki># yum repolist</nowiki>
