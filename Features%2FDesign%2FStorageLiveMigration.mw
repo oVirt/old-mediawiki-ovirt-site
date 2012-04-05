@@ -108,7 +108,7 @@ Initial notes:
 
 [[Image:StorageLiveMigration3.png]]
 
-The following
+The '''preliminary snapshot''' in '''step 2''' is not mandatory but it's preferable since it will allow almost the entire copy to be done externally by the SPM (and not by the qemu-kvm process).
 
 ===REST API===
 The REST API should take advantage of the "update" command for a VM disk, specifying the new storage domain.
@@ -247,4 +247,4 @@ The virDomainBlockJobAbort function call with the flags==0 is used to safely swi
 The virDomainBlockJobAbort function call with the flags==VIR_DOMAIN_BLOCK_JOB_ABORT_PIVOT is used to pivot to the destination (drive-reopen). It will fail if there is a streaming in progress. Eventually (probably not in VDSM) it can be used as polling mechanism to switch to the destination.
 
 ====Watermark and LV Extend====
-On block domains VDSM is monitoring the qemu-kvm process watermark on the disks (how much space is actually used on the block devices).
+On block domains VDSM is monitoring the qemu-kvm process watermark on the disks (how much space is actually used on the block devices). During the mirroring the logical volumes extension should be replicated on the destination (with a 20% size increase because of the bitmap used during mirroring).
