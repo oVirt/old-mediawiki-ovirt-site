@@ -54,6 +54,8 @@ General development discussions are in <tt>vdsm-devel@lists.fedorahosted.org</tt
  <nowiki># yum install createrepo -y</nowiki>
 * Enable httpd service
  <nowiki># chkconfig httpd on</nowiki>
+or 
+ <nowiki># ln -s '/lib/systemd/system/httpd.service' '/etc/systemd/system/multi-user.target.wants/httpd.service'</nowiki>
 * Create the directory that will hold the rpm files (repo)
  <nowiki># mkdir /var/www/html/my-vdsm-changes</nowiki>
 * Copy the vdsm packages to repo
