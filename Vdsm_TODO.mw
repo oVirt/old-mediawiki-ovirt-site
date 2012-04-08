@@ -8,7 +8,7 @@
 
 * Improve Vdsm portability. We are very much Fedora-centric at best. Do you want to have Vdsm on your pet distribution? Own that port!
 
-* Simplify the SysV init script, split most of its code to a "[http://gerrit.ovirt.org/295 vdsm-tool]".
+* Simplify the SysV init script, split most of its code to a "[http://gerrit.ovirt.org/295 vdsm-tool]". vdsm-tool should assume responsibility on hairy stuff such as [http://bugzilla.redhat.com/547424 configuring multipath], which should not be the business of Vdsm proper.
 
 * Support striping for disk images.
 
