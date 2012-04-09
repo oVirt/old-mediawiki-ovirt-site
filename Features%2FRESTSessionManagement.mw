@@ -72,6 +72,7 @@ Several improvements that can be done in the protocol:
 #Cookie expiration - use some expiration on the sessionId cookie. Upon expiration the API might renew it and return a new sessionId, or return an error and let the client do the procedure again.
 
 Questions:
-#Do we need encryption/decryption in these cookies?
+#Do we need encryption/decryption in these cookies? Looks like SSL is enough here. Also, we can restrict these cookies to be used only in a secured connection, resulting in not passing them to the client on a non-secured connection.
+ 
 [[Category:Feature]]
 [[Category:Template]]
