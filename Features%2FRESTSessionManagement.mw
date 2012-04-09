@@ -35,7 +35,7 @@ The proposed implementation for that is to rely on cookies in the following way:
 #The server sees this cookie, and it closes the session.
 
 Diagram of all phases:
-
+ <nowiki>
 Client                                           Server
   |                                                |
   | ------------initial request------------------> |
@@ -60,7 +60,7 @@ Client                                           Server
   |                [uses the sessionID and logs out]
   | <----------------------------------------------|
   |                                                |
-
+ </nowiki>
 
 === Documentation / External references ===
 
