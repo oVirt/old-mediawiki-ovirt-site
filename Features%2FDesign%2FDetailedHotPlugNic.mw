@@ -59,7 +59,7 @@ The same behavior should be applied on stopped and running VM's. <BR>
 
 ===== Remove nic =====
 
-*when a nic is removed from a VM if its up - unplug it, if not just remove it from vm_device.
+*when a nic is removed from a VM if its up - throw canDo action, if not just remove it from vm_device.
 
 ===== Run VM =====
 
