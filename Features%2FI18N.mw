@@ -14,8 +14,8 @@ This feature will allow using non English characters as properties of entities (
 * Email: <tjelinek@redhat.com>
 
 === Current status ===
-* https://bugzilla.redhat.com/show_bug.cgi?id=786448
-
+* VDSM, API, Installer prepared to be tested
+* Engine and Frontend (Webadmin, Userportal-gwtp) waiting for some patches to be merged
 
 === Detailed Description ===
 Support entry of non English characters to the various fields.
@@ -28,75 +28,169 @@ Excludes:
 ** pool name/description
 ** volume/image description
 
+== Components Involved ==
+
+=== VDSM ===
+VDSM already supports storage domain level3. For storage domain level3 it supports also UTF. 
+However, engine does not support level3 and it is not planned for REVM-3.1, so in RHEVM-3.1 
+the fields which are stored in storage domain are not working, namely:
+* domain name
+* pool name/description
+* volume/image description
+
+Other fields are I18N prepared.
+
+=== API ===
+Does not do any validation - it fully relies on engine. 
+
+=== Installer ===
+It is I18N prepared. Fields which are validated:
+* host address
+* domain location
+
+Fields which are not validated but are dangerous:
+* DB password
+* admin password
+
+=== Webadmin, Userportal-gwtp ===
+
 Fields which are not validated should work out of the box. Following a table which enumerates the fields which are validated. 
-
-The '''Backend''' column contains only the declarative validation on the business entities (org.ovirt.engine.core.common.businessentities package) 
-
-and the '''Frontend''' column contains only the model object from the uicommonweb.
 
 {| class="wikitable"
 ! style="border-style: solid; border-width: 0 1px 1px 0"| Field
-! style="border-style: solid; border-width: 0 1px 1px 0"| Backend
-! style="border-style: solid; border-width: 0 1px 1px 0"| Frontend
+! style="border-style: solid; border-width: 0 1px 1px 0"| Model
 ! style="border-style: solid; border-width: 0 1px 1px 0"| Webadmin UI field
 ! style="border-style: solid; border-width: 0 1px 1px 0"| User Portal (GWTP one) UI field
+! style="border-style: solid; border-width: 0 1px 1px 0"| Waiting for gerrit patch
 |-
 | Tag Name
-| tags.name
 | TagModel
 | Tags->new/edit->Name
 | NONE
+| [http://gerrit.ovirt.org/3146]
+|-
+| Bookmark Name
+| BookmarkModel
+| Bookmarks->new/edit->Name
+| NONE
+| NONE
+|-
+| Bookmars Search String
+| BookmarkModel
+| Bookmarks->new/edit->Search string
+| NONE
+| NONE
+|-
+| Data Center Name
+| DataCenterModel
+| Data Center->new/edit->Name
+| NONE
+| [http://gerrit.ovirt.org/3163]
+|-
+| Cluster Name
+| ClusterModel
+| Clusters->new/edit->General->Name
+| NONE
+| [http://gerrit.ovirt.org/3213]
+|-
+| Host Address
+| HostModel
+| Hosts->new/edit->General->Address
+| NONE
+| NONE
+|-
+| VM Name
+| UnitVmModel
+| Virtual Machines->new server/new desktop/edit->General->Name
+| Extended->Virtual Machines->new server/new desktop/edit->General->Name
+| [http://gerrit.ovirt.org/3353]
+|-
+| Template Name
+| UnitVmModel
+| Template->edit->General->Name
+| Extended->Template->edit->General->Name
+| [http://gerrit.ovirt.org/3353]
+|-
+| VM Description
+| UnitVmModel
+| Virtual Machines->new server/new desktop/edit->General->Description
+| Extended->Virtual Machines->new server/new desktop/edit->General->Description
+| [http://gerrit.ovirt.org/3353]
+|-
+| Template Description
+| UnitVmModel
+| Template->edit->General->Description
+| Extended->Template->edit->General->Description
+| [http://gerrit.ovirt.org/3353]
+|-
+| NFS Storage Export Path
+| NfsStorageModel
+| Storage->new/import->NFS->Export path
+| NONE
+| [http://gerrit.ovirt.org/3344]
+|}
+
+=== Engine ===
+
+Fields which are not validated should work out of the box. Following a table which enumerates the fields which are validated. 
+
+{| class="wikitable"
+! style="border-style: solid; border-width: 0 1px 1px 0"| Field
+! style="border-style: solid; border-width: 0 1px 1px 0"| Entity
+! style="border-style: solid; border-width: 0 1px 1px 0"| Waiting for gerrit patch
+|-
+| Tag Name
+| tags.name
+| [http://gerrit.ovirt.org/3145]
 |-
 | Bookmark Name
 | bookmarks.name
-| BookmarkModel
-| Bookmarks->new/edit->Name
 | NONE
 |-
 | Bookmars Search String
 | bookmarks.value
-| BookmarkModel
-| Bookmarks->new/edit->Search string
 | NONE
 |-
 | Data Center Name
 | storage_pool.name
-| DataCenterModel
-| Data Center->new/edit->Name
-| NONE
+| [http://gerrit.ovirt.org/3162]
 |-
 | Cluster Name
 | VDSGroup.name
-| ClusterModel
-| Clusters->new/edit->General->Name
-| NONE
+| [http://gerrit.ovirt.org/3214]
 |-
 | Host Address
 | VdsStatic.ip
-| HostModel
-| Hosts->new/edit->General->Address
 | NONE
 |-
 | VM Name
 | VmStatic.name
-| UnitVmModel
-| Virtual Machines->new server/new desktop/edit->General->Name
-| Extended->Virtual Machines->new server/new desktop/edit->General->Name
+| [http://gerrit.ovirt.org/3354]
 |-
 | Template Name
-| VmStatic.name
-| UnitVmModel
-| Template->edit->General->Name
-| Extended->Template->edit->General->Name
+| VmTemplate.name
+| [http://gerrit.ovirt.org/3354]
+|-
+| VM Description
+| VmBase.description
+| [http://gerrit.ovirt.org/3354]
+|-
+| Template Description
+| VmBase.description
+| [http://gerrit.ovirt.org/3354]
+|-
+| NFS export patch
+| storage_server_connections.connection
+| NONE
 |}
 
-=== Documentation / External references ===
+== Documentation / External references ==
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
 * BZ of the feature: https://bugzilla.redhat.com/show_bug.cgi?id=786448
 * BZ where the VDSM part was discussed: https://bugzilla.redhat.com/show_bug.cgi?id=567077
 
 
-=== Comments and Discussion ===
+== Comments and Discussion ==
 
 * Refer to [[Talk:I18N]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 
