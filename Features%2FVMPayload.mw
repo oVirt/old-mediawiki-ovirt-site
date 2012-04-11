@@ -52,7 +52,8 @@ The payload options are:
 # '''vdsm:''' should re-encode them as utf8 when writing them to disk
 
 === API Design ===
-This is an example for the API for this feature
+This is an example for the API for this feature,
+the vm_paload element will work in add/edit VM and for Run-VM actions
  <nowiki>
    <vm>
    ...
