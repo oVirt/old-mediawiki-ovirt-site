@@ -3,7 +3,7 @@
 == I18N support <!-- The name of your feature --> ==
 
 === Summary ===
-This feature will allow using non English characters as properties of entities (e.g. Data Center name).
+This feature will allow using non English characters as properties of entities (e.g. Tag name).
 
 === Owner ===
 <!--This should link to your home wiki page so we know who you are-->
@@ -17,31 +17,43 @@ This feature will allow using non English characters as properties of entities (
 * VDSM, API, Installer prepared to be tested
 * Engine and Frontend (Webadmin, Userportal-gwtp) waiting for some patches to be merged
 
-=== Detailed Description ===
-Support entry of non English characters to the various fields.
+=== Scope ===
+Not all fields supports non-ASCII characters. The reason is, that some fields are stored to storage domains.
+VDSM already supports UTF for storage domain, but only for storage domain level 3. However, oVirt Engine does 
+not support storage domain level 3 yet.
 
-Excludes:
-* host name
-* network name
+There are two categories of fields which are stored in storage domain. Those, which are stored directly and those, 
+which are stored as part of OVF(Open Virtualization Format) files. None of them can contain non-ASCII chars. 
+This fields are:
+
 * fields saved in storage domain
-** domain name/description 
-** pool name/description
-** volume/image description
+** Host name
+** Network name
+** Domain name/description 
+** Data Center name/description
+** Volume/image description
+* Fields which are part of OVF
+** VM name
+** VM description
+** Template name
+** Template description
+** Snapshot Description
 
+All other fields supports non-ASCII chars
+ 
 == Components Involved ==
 
 === VDSM ===
 VDSM already supports storage domain level3. For storage domain level3 it supports also UTF. 
-However, engine does not support level3 and it is not planned for REVM-3.1, so in RHEVM-3.1 
-the fields which are stored in storage domain are not working, namely:
-* domain name
-* pool name/description
-* volume/image description
+As mentioned above, oVirt Engine does not support storage domain level3, so the fields mentioned
+above are out of the scope of this feature.
 
-Other fields are I18N prepared.
+VDSM is I18N prepared.
 
 === API ===
-Does not do any validation - it fully relies on engine. 
+Does not do any validation - it fully relies on engine.
+
+It means that API is I18N prepared.
 
 === Installer ===
 It is I18N prepared. Fields which are validated:
