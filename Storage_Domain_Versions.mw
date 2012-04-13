@@ -1,0 +1,22 @@
+=Storage Domain Version 0=
+
+=Storage Domain Version 2=
+
+=Storage Domain Version 3=
+The storage domain version 3 has been introduced in VDSM on the 30th of January with the commit 8665716c: Use SANLock for the SPM resource <ref name="slkspm"/>. The new format has been introduced to overcome some of the limitations present in the previous formats (with regard to live snapshots, live merges and internationalization) and mainly to introduce the use of SANLock <ref>https://fedorahosted.org/sanlock</ref>.
+
+==Changes==
+
+* Use SANLock to acquire the SPM resource <ref name="slkspm"/>
+* Use SANLock to acquire the volume resources (virtualization subsystem, libvirt) <ref>http://gerrit.ovirt.org/1253</ref>
+* In block domains the permissions of the LVs in the metadata are always RW (to allow live snapshots and live merges)
+* Support unicode in the domain and pool description <ref>http://gerrit.ovirt.org/637</ref>
+* New mailbox format (in progress)
+
+==Upgrade==
+At the moment it is planned to support an automatic upgrade to version 3 from the previous versions.
+
+==References==
+<references>
+  <ref name="slkspm">http://gerrit.ovirt.org/726</ref>
+</references>
