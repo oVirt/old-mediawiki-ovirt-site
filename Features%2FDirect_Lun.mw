@@ -5,7 +5,7 @@ Any block device can be used as local disk in the VM specifying it's GUID.
 == OVIRT flows ==
 
 These flows should be supported from the GUI.
-* Import disk
+* Add disk
 # Discovery targets
 # Connect to the target
 # Get device list
@@ -51,10 +51,14 @@ These flows should be supported from the GUI.
 
 
 The following UI mockups contain guidelines for the different screens and wizards:
-
+'''Add description to the object in the UI�.'''
+'''Change the import term in the UI� (mockup).'''
 [[File:import_direct_lun.png]]
 
 [[File:attach_direct_lun.png]]
+
+== Rest API ===
+To be done.
 
 == Engine - VDSM API ==
 
