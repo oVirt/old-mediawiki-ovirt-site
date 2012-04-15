@@ -50,7 +50,7 @@ Client                                           Server
   |                                                |
   | -----Cookie:JSESSIONID=.....+ Prefer header--->|
   |                               [validate session]
-  | <----Set-Cookie:JSESSIONID=.....---------------|
+  | <----------------------------------------------|
   |                                                |
   | -----Cookie:JSESSIONID=.....+ Prefer header--->|
   |                               [validate session]
@@ -74,7 +74,7 @@ Client                                           Server
   |                                                |
   | -----Cookie:JSESSIONID=....................--->|
   |                               [validate session]
-  | <----Set-Cookie:JSESSIONID=.....---------------|
+  | <----------------------------------------------|
   |                                                |
   | -----Cookie:JSESSIONID=....................--->|
   |                               [validate session]
@@ -102,7 +102,7 @@ Client                                           Server
   |                                                |
   | -----Cookie:JSESSIONID=....................--->|
   |                               [validate session]
-  | <----Set-Cookie:JSESSIONID=.....---------------|
+  | <----------------------------------------------|
   |                                                |
   | -----Cookie:JSESSIONID=....................--->|
   |                               [validate session]
