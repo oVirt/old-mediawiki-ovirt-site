@@ -414,6 +414,8 @@ Event log will be extended with two fields:<br>
 ''job_id'' field designed to describe the job which the current event is part of. Once the Job is cleared from the database, the job_id will point for non-existing job.<br>
 ''correlation_id'' associates the event with the global identifier of the action, which the event participate in.
 
+=== REST API ===
+No REST API support for Task Manager in v1.
 
 === User Experience ===
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
