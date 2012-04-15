@@ -26,7 +26,7 @@ The purpose of this feature is to allow clients to perform some initial login ph
 === Implementation ===
 The proposed implementation for that is to rely on cookies in the following way:
 #First, the client does a request providing credentials, with a special Header field: "Prefer: persistent-auth".
-#The server logs in to the engine, with session-id that is equal to JSESSIONID, and performs the required action. The JSESSIONID cookie is returned automatically to the client.
+#The server logs in to the engine-core, with session-id that is equal to JSESSIONID, and performs the required action. The JSESSIONID cookie is returned automatically to the client.
 #The client gets the cookie, and (if he wants to) in the second request he passes it to the server. No need to pass credentials.
 #The server gets the cookie, validates the session with the engine-core, performs the request, and returns.
 
