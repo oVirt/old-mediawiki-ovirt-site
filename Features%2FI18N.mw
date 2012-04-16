@@ -97,7 +97,7 @@ Fields which are not validated should work out of the box. Following a table whi
 | DataCenterModel
 | Data Center->new/edit->Name
 | NONE
-| [http://gerrit.ovirt.org/3163]
+| NOT_YET_PUSCHED
 |-
 | Cluster Name
 | ClusterModel
@@ -108,6 +108,12 @@ Fields which are not validated should work out of the box. Following a table whi
 | Host Address
 | HostModel
 | Hosts->new/edit->General->Address
+| NONE
+| NONE
+|-
+| Host Name
+| HostModel
+| Hosts->new/edit->General->Name
 | NONE
 | NONE
 |-
