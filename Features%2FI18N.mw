@@ -15,7 +15,8 @@ This feature will allow using non English characters as properties of entities (
 
 === Current status ===
 * VDSM, API, Installer prepared to be tested
-* Engine and Frontend (Webadmin, Userportal-gwtp) waiting for some patches to be merged
+* Engine waiting for patch: [http://gerrit.ovirt.org/#change,3354]
+* Frontend (Webadmin, Userportal-gwtp) waiting for patch: [http://gerrit.ovirt.org/#change,3353]
 
 === Scope ===
 Not all fields supports non-ASCII characters. The reason is, that some fields are stored to storage domains.
@@ -27,7 +28,7 @@ which are stored as part of OVF(Open Virtualization Format) files. None of them 
 This fields are:
 
 * fields saved in storage domain
-** Host name
+** Host name/address
 ** Network name
 ** Domain name/description 
 ** Data Center name/description
@@ -37,7 +38,12 @@ This fields are:
 ** VM description
 ** Template name
 ** Template description
+** VM Pool name
 ** Snapshot Description
+** NFS Storage Export Path
+** Storage Domain Name
+** Disk Alias/Description
+
 
 All other fields supports non-ASCII chars
  
@@ -73,79 +79,116 @@ Fields which are not validated should work out of the box. Following a table whi
 ! style="border-style: solid; border-width: 0 1px 1px 0"| Model
 ! style="border-style: solid; border-width: 0 1px 1px 0"| Webadmin UI field
 ! style="border-style: solid; border-width: 0 1px 1px 0"| User Portal (GWTP one) UI field
-! style="border-style: solid; border-width: 0 1px 1px 0"| Waiting for gerrit patch
+! style="border-style: solid; border-width: 0 1px 1px 0"| Supports non-ASCII
 |-
 | Tag Name
 | TagModel
 | Tags->new/edit->Name
 | NONE
-| [http://gerrit.ovirt.org/#change,3353]
+| yes
 |-
 | Bookmark Name
 | BookmarkModel
 | Bookmarks->new/edit->Name
 | NONE
-| NONE
+| yes
 |-
 | Bookmars Search String
 | BookmarkModel
 | Bookmarks->new/edit->Search string
 | NONE
-| NONE
+| yes
 |-
 | Data Center Name
 | DataCenterModel
 | Data Center->new/edit->Name
 | NONE
-| [http://gerrit.ovirt.org/#change,3353]
+| no
+|-
+| Data Center Description
+| DataCenterModel
+| Data Center->new/edit->Description
+| NONE
+| no
 |-
 | Cluster Name
 | ClusterModel
 | Clusters->new/edit->General->Name
 | NONE
-| [http://gerrit.ovirt.org/#change,3353]
+| yes
 |-
 | Host Address
 | HostModel
 | Hosts->new/edit->General->Address
 | NONE
-| [http://gerrit.ovirt.org/#change,3353]
+| no
 |-
 | Host Name
 | HostModel
 | Hosts->new/edit->General->Name
 | NONE
-| [http://gerrit.ovirt.org/#change,3353]
+| no
 |-
 | VM Name
 | UnitVmModel
 | Virtual Machines->new server/new desktop/edit->General->Name
 | Extended->Virtual Machines->new server/new desktop/edit->General->Name
-| [http://gerrit.ovirt.org/#change,3353]
+| no
 |-
 | Template Name
 | UnitVmModel
 | Template->edit->General->Name
 | Extended->Template->edit->General->Name
-| [http://gerrit.ovirt.org/#change,3353]
+| no
 |-
 | VM Description
 | UnitVmModel
 | Virtual Machines->new server/new desktop/edit->General->Description
 | Extended->Virtual Machines->new server/new desktop/edit->General->Description
-| [http://gerrit.ovirt.org/#change,3353]
+| no
 |-
 | Template Description
 | UnitVmModel
 | Template->edit->General->Description
 | Extended->Template->edit->General->Description
-| [http://gerrit.ovirt.org/#change,3353]
+| no
+|-
+| VM Pool Name
+| PoolModel
+| Pool->edit->General->Description
+| Extended->Virtual Machines->edit->General->Name
+| no
+|-
+| VM Pool Description
+| PoolModel
+| Template->edit->General->Description
+| Extended->Virtual Machines->edit->General->Description
+| yes
 |-
 | NFS Storage Export Path
 | NfsStorageModel
 | Storage->new/import->NFS->Export path
 | NONE
-| [http://gerrit.ovirt.org/#change,3353]
+| no
+|-
+| Storage Domain Name
+| StorageModel
+| Storage->new/import/edit->Description
+| NONE
+| no
+|-
+| Snapshot Description
+| SnapshotModel
+| Virtual Machines->Snapshot->create->Description
+| Extended->Virtual Machines->Snapshot->create->Description
+| no
+|-
+| Disk Alias
+| DiskModel
+| Virtual Machines->Virtual Disks->add->Alias
+| Extended->Virtual Machines->Virtual Disks->add->Alias
+| no
+|-
 |}
 
 === Engine ===
@@ -155,51 +198,80 @@ Fields which are not validated should work out of the box. Following a table whi
 {| class="wikitable"
 ! style="border-style: solid; border-width: 0 1px 1px 0"| Field
 ! style="border-style: solid; border-width: 0 1px 1px 0"| Entity
-! style="border-style: solid; border-width: 0 1px 1px 0"| Waiting for gerrit patch
+! style="border-style: solid; border-width: 0 1px 1px 0"| Supports non-ASCII
 |-
 | Tag Name
 | tags.name
-| [http://gerrit.ovirt.org/3145]
+| yes
 |-
 | Bookmark Name
 | bookmarks.name
-| NONE
+| yes
 |-
 | Bookmars Search String
 | bookmarks.value
-| NONE
+| yes
 |-
 | Data Center Name
 | storage_pool.name
-| [http://gerrit.ovirt.org/3162]
+| no
+|-
+| Data Center Description
+| storage_pool.name
+| no
 |-
 | Cluster Name
 | VDSGroup.name
-| [http://gerrit.ovirt.org/3214]
+| yes
 |-
 | Host Address
 | VdsStatic.ip
-| NONE
+| no
+|-
+| Host Name
+| VdsStatic.name
+| no
 |-
 | VM Name
 | VmStatic.name
-| [http://gerrit.ovirt.org/3354]
+| no
 |-
 | Template Name
 | VmTemplate.name
-| [http://gerrit.ovirt.org/3354]
+| no
 |-
 | VM Description
 | VmBase.description
-| [http://gerrit.ovirt.org/3354]
+| no
 |-
 | Template Description
 | VmBase.description
-| [http://gerrit.ovirt.org/3354]
+| no
 |-
-| NFS export patch
+| VM Pool Name
+| VmStatic.name
+| no
+|-
+| VM Pool Description
+| VmBase.description
+| yes
+|-
+| NFS Export Patch
 | storage_server_connections.connection
-| NONE
+| no
+|-
+| Storage Domain Name
+| storage_domain_static.name
+| no
+|-
+| Snapshot Description
+| CreateAllSnapshotsFromVmParameters._description
+| no
+|-
+| Disk Alias
+| Disk.diskDescription
+| no
+|-
 |}
 
 == Documentation / External references ==
