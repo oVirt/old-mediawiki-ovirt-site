@@ -26,6 +26,8 @@ The storage domain version 3 has been introduced in VDSM on the 30th of January 
 ==Upgrade==
 At the moment it is planned to support an automatic upgrade to version 3 from the previous versions.
 
+[[Image:DomainUpgrade1.png]]
+
 ==References==
 <references>
   <ref name="slkspm">http://gerrit.ovirt.org/726</ref>
