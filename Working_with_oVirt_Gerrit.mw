@@ -63,7 +63,7 @@ scp -p gerrit.ovirt.org:hooks/commit-msg .git/hooks/
 ==== Configure the commit tempalte ====
  <nowiki>
 cd ovirt-engine
-git config --global commit.template config/engine-commit-template.txt
+git config commit.template config/engine-commit-template.txt
  </nowiki>
 
 ==== Rebase ====
