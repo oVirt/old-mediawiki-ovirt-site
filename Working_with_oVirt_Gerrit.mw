@@ -60,7 +60,7 @@ cd ovirt-engine
 scp -p gerrit.ovirt.org:hooks/commit-msg .git/hooks/
  </nowiki>
 
-==== Configure the commit tempalte ====
+==== Configure the commit template ====
  <nowiki>
 cd ovirt-engine
 git config commit.template config/engine-commit-template.txt
