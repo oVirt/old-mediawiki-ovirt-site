@@ -1,7 +1,7 @@
 [[Category:Project]]
 
 == Too many logins ==
-To increase the number of users logging into oVirt Node (currently it's 3), edit:
+To increase the number of tty users logging into oVirt Node (currently it's 3), edit:
 
  <nowiki># vi /etc/security/limits.conf
  *    -    maxlogins 3  
