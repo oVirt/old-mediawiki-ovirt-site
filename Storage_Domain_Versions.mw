@@ -29,6 +29,8 @@ The storage domain version 3 has been introduced in VDSM on the 30th of January 
 * Check that the volume SIZE in the metadata is consistent with the block size (RAW) or with the qcow2 virtual size (COW) [https://bugzilla.redhat.com/show_bug.cgi?id=811880 BZ811880], [https://bugzilla.redhat.com/show_bug.cgi?id=611183 BZ611183], [https://bugzilla.redhat.com/show_bug.cgi?id=706014 BZ706014]
 
 ===Engine and GUI===
+==REST API==
+The operation is driven by pool compatibility change. So there is no need for a new REST API.
 
 ==Requirements==
 
