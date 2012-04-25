@@ -20,7 +20,7 @@ The documentation subproject has a git repository. Like the other oVirt git repo
 
  $ git clone gerrit.ovirt.org:ovirt-docs
 
-The git repository is intended to be used for the creation and maintenance of formal documentation for the project. At this time all formal documentation for the project is written in DocBookXML and turned into PDF, HTML, HTML-SINGLE, and EPUB output using [[https://fedorahosted.org/publican/|publican]].
+The git repository is intended to be used for the creation and maintenance of formal documentation for the project. At this time all formal documentation for the project is written in DocBookXML and turned into PDF, HTML, HTML-SINGLE, and EPUB output using [https://fedorahosted.org/publican/ publican].
 
 == Reference Material ==
 
