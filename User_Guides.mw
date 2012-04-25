@@ -18,7 +18,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 The documentation subproject has a git repository. Like the other oVirt git repositories it is managed using Gerrit. Follow the [[Working_with_gerrit.ovirt.org|instructions for registering with and using Gerrit]], then use the git clone command to get a local copy of the repository:
 
- $ git clone gerrit.ovirt.org:ovirt-engine
+ $ git clone gerrit.ovirt.org:ovirt-docs
 
 The git repository is intended to be used for the creation and maintenance of formal documentation for the project. At this time all formal documentation for the project is written in DocBookXML and turned into PDF, HTML, HTML-SINGLE, and EPUB output using [[https://fedorahosted.org/publican/|publican]].
 
