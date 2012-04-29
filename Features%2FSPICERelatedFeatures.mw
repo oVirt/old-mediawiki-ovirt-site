@@ -117,6 +117,7 @@ If a usb tablet device is configured then it will take one device, however this 
 
 </pre>
 
+* Each of the <tt>redirdev</tt> devices should be added to the <tt>devices</tt> list passed by Engine to Vdsm. Vdsm should be taught to recognise them.
 The native qemu/Spice USB support presents an emulated echi and uchi controller to the guest. Virtual machines do not require any in-guest agents or drivers for native USB.
 
 For native qemu/spice USB support all client to guest communication happens through the existing Spice channel so no other ports need to be opened on the guest or host.
@@ -126,7 +127,6 @@ If legacy USB solution is to be used then the existing parameters can be passed 
 For native USB the client will read the existing filter string parameter.
 There is no need to explicitly enable the native USB support in the ActiveX/XPI. 
 If legacy support parameters are not passed then the remote-viewer client will try to connect to a Spice USB channel, if no USB channel is found then USB support will be disabled automatically.
-
 
 ==== Multi Monitor support for Linux guests (Basic) ====
 Currently validations in the user interface prevent configuring multiple monitors for Linux guests.
