@@ -37,7 +37,6 @@ These new roles will be the way administrators will grant their users the abilit
 A new predifined role should be added - Template Operator.
 This role will allow the modification of an existing template, and would be given to a user who issues a CreateVMTempalteCommand on the template he created.
 
-
 ==== Entity Description ====
 No new entities are required for this feature.
 
@@ -51,7 +50,7 @@ See Inheriting Permissions.
 The three new predifined roles should be created.
 
 ==== User work-flows ====
-===== Adding a VM ====
+===== Adding a VM =====
 1. The admin grants the VM Creator permission to a user on a host/cluster
 2. The user can create a new VM on the host/cluster
 3. Once the user creates the VM, he becomes a VM Operator on this VM
@@ -66,7 +65,7 @@ N / A
 N / A
 
 === Comments and Discussion ===
-Add a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page
+...
 
 === Open Issues ===
 * Should Create Host permissions be inherited for viewing?
