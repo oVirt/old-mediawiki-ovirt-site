@@ -15,7 +15,8 @@ This feature will allow using non English characters as properties of entities (
 
 === Current status ===
 * VDSM, API, Installer prepared to be tested
-* Engine waiting for patch: [http://gerrit.ovirt.org/#change,3354]
+* Engine prepared to be tested
+* Frontend (Webadmin and UserPortal) prepared to be tested
 
 === Scope ===
 Not all fields supports non-ASCII characters. The reason is, that some fields are stored to storage domains.
