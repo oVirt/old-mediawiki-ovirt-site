@@ -8,10 +8,10 @@ The storage domain version 3 has been introduced in VDSM on the 30th of January 
 ==Changes==
 
 ===VDSM and Format===
-* Use SANLock to acquire the SPM resource <ref name="slkspm"/>
-* Use SANLock to acquire the volume resources (virtualization subsystem, libvirt) <ref>http://gerrit.ovirt.org/1253</ref>
+* Uses SANLock to acquire the SPM resource <ref name="slkspm"/>
+* Uses SANLock to acquire the volume resources (virtualization subsystem, libvirt) <ref>http://gerrit.ovirt.org/1253</ref>
 * In block domains the permissions of the LVs in the metadata are always RW (to allow live snapshots and live merges)
-* Support unicode in the domain and pool description <ref>http://gerrit.ovirt.org/637</ref>
+* Supports unicode in the domain and pool description <ref>http://gerrit.ovirt.org/637</ref>
 * New mailbox format (in progress)
 
 ===Engine and GUI===
