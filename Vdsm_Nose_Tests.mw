@@ -7,3 +7,5 @@ How to run vdsm Nose Tests:
 #* Please notice that 'make rpm' also runs all of the tests automatically.
 # To run a specific test use: '<tt>../tests/run_tests.sh _____Tests.py</tt>' in the directory <tt>vdsm/vdsm</tt>
 # We strongly prefer you don't use the following option, but if you must it is possible to exclude some of the tests using: 'NOSE_EXCLUDE='(here you create your rule)'
+
+[[Category:Vdsm]]
