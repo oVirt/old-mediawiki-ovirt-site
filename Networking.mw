@@ -3,8 +3,8 @@ This page is for captuaring Networking related features we would like to have in
 == Items list ==
 
 UCS integration <BR>
-SR-IOV support <BR>
 Blade Harmony <BR>
+SR-IOV support <BR>
 IPV6 support <BR>
 network SLA <BR>
 user defined networks (vlan ranges) <BR>
