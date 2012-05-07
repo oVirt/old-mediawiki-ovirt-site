@@ -72,5 +72,76 @@ N / A
 * Should we grant VM/Template Creator to any user who is a VM/Template Admin?
 * How do Disk Permissions integrate with this solution?
 
+
+
+= Query Permissions =
+
+== Current Situation ==
+Today, MLA is implemented only for Actions, not for queries. 
+A user that is not an administrator won't be able to log into the webadmin URL but in the userprortal any user can query any object, regardless of permissions.
+
+== Suggested solution ==
+
+=== In A Nutshell ===
+
+For each query the engine will manage `queryType`, which can be either an Admin query or a User query.
+Admin query means only admins can execute the query, while User query means that any user can execute the query (administrators included).
+In addition to the `queryType` a parameter, an `isFiltered` parameter will be added to the `VdcQueryParametersBase` class. This parameter will govern if the query is executed in filtered mode (and  should return only the objects the user has user permissions on) or not (and as such should return all the objects). The default is that `isFiltered` is set to `false`, due to backwards compatibility considerations.
+
+Note: if the `quryType` is set to Admin query then `isFiltered` property is ignored.
+
+Permission checking will be done in 2 levels:
+ 1. Before executing the query: validating a user is administrator if the query is Admin query or if `isFiltered` is set to false.
+ 2. Part of the query execution: joining the "business logic" of the query to a permissions view, providing a single point of entry to managing permission logic.
+
+=== VdcQueryType enum ===
+A property `queryType` will be added to the enum.
+Most queries are not available to users so the default will be `admin`.
+
+=== VdcQueryParametersBase ===
+From now on, it will be possible to specify if the query should be executed in admin or in filtered mode. The default will be to execute as admin, for backwards compatibility reasons.
+
+=== Running a Query ===
+In case of an admin query (be it due to the query's internal type or to a request to run as an admin), the query will perform a minimal autorization check to see if the user may execute such queries. Psuedocode:
+{{{#!java
+ExecuteQueryCommand ()
+   if (getType().isAdmin() || !params.isFiltered()) {
+      checkAdminPermissions();
+   }
+   /* execute query logic */
+}
+}}}
+
+=== DAOs ===
+Each method used by a user query will be overloaded with two additional parameters - userID and isFiltered.
+We would like to have a filtered version of `GetVmInterfacesByVmIdQuery`, which uses `VmNetworkInterfaceDAO.getAllForVm(Guid vmID)`.
+We will overload this method and create `VmNetworkInterfaceDAO.getAllForVm(Guid vmID, Guid userID, boolean isFiltered)`.
+
+==== Hibernate DAO implementations ====
+Currently, will not be supported.
+If necessary, an additional method that throws `UnsupportedOperationException`, and a test that verifies this exception is thrown
+so when the Hibernate DAO will be implemented that test will break, and the implementor will  remember to implement this method too.
+
+=== Permissions Views ===
+A set of n flat views (one per entity type) will be created. 
+The view will hold the userid and entity_id and fields will implement the flattened logic of permissions.
+E.g., if it's decided that permissions on pool grant read permissions on the VMs inside it, this will be exposed in the `vm_permissions_view` view.
+Each query implementation will be responsible for joining with the appropriate permissions view.
+Thus, permissioning logic will only be implemented in a single place (per type, unfortunately) instead of inside each query.
+
+=== Stored Procedures ===
+Each stored procedure used by a user query will have two parameters added to it - user_id (UUID) and is_filtered (boolean).
+
+== Additional Considerations ==
+
+=== UI ===
+The UI will now have to pass the context (`runAsUser`) differently for webadmin and userportal UIs.
+
+=== Admin Login ===
+Can (and should be) cancelled. Hallelujah.
+
+
+
+
 [[Category:Template]]
 [[Category:DetailedFeature]]
