@@ -62,10 +62,10 @@ Actors:
 
 The actual flow would be like:
 # ''Testsuite'' is submitted to the ''Controller'', triggered by e.g. jenkins
-# ''Controller'' provisions one of the provided ''Hosts'' if available as given by the ''Profile''
-# ''Controller'' passes the ''Testsuite'' to the ''Host''
-# ''Host'' is execution each ''Testcase'' in the ''Testsuite'' and passes partial results back to the ''Controller''
-## ''Controller'' monitors the ''Host'' and e.g resets it if needed e.g. to long test duration, network ping timeout or some other criteria
+# While: ''Controller'' monitors the ''Host'' and e.g resets it if needed e.g. to long test duration, network ping timeout or some other criteria
+## ''Controller'' provisions one of the provided ''Hosts'' if available as given by the ''Profile''
+## ''Controller'' passes the ''Testsuite'' to the ''Host''
+## ''Host'' is execution each ''Testcase'' in the ''Testsuite'' and passes partial results back to the ''Controller''
 # ''Controller'' reports results back to e.g. jenkins
 
 [[Category:Testing]]
