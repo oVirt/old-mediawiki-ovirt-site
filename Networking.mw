@@ -18,7 +18,7 @@ open flow <BR>
 GRE tunneling <BR>
 Network roles (storage / live migration network etc.) <BR>
 Using Network manager vs. using scripts (VDSM level) <BR>
-sniff guest IP and report to the engine without guest tools
+Sniff guest IP and report to the engine without guest tools
 
 
 We'll open a wiki page for each of the above lines.
