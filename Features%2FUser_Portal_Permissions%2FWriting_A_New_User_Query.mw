@@ -1,0 +1,115 @@
+= Writing a New User Query =
+
+== What Are User Queries? ==
+[[Features/User_Portal_Permissions|User queries]] are, in a nutshell, queries that can be run a regular user, without requiring admin permissions.
+
+== The General Case ==
+
+In the general case, your query will call one of the DAOs, which, in turn, will call a stored procedure in the database.
+When writing a User Query, there are several aspects you must address.
+
+=== Permission View ===
+Each entity with managed permissions has its own flattened view of user permissions called user_OBJECT_NAME_permissions_view (e.g., VM permissions are listed in user_vm_permissions_view).
+Notes:
+# The view only lists '''user''' permissions.  A user that has administrator permissions on an object will not be represented here.
+# The view flattens object hierarchies. E.g., if a user should be able to query a VM since he has permissions on the Storage Pool containing it, that user permission will appear in the VM view. You do not have to handle it yourself.
+# The view flattens group hierarchies. E.g., if a user should be able to query a VM since a group he's contained in has permissions on the VM, that user permission will appear in the VM view. You do not have to handle it yourself.
+
+=== Stored Procedure ===
+The stored procedure should, besides the parameters involved in the query's logic, contain two more parameters - <code>user_id</code> (UUID) and a BOOLEAN <code>is_filtered</code> flag.
+If <code>is_filtered</code> is <code>TRUE</code> only the objects the user has permissions on should be returned. If it's <code>FALSE</code>, the <code>user_id</code> should be ignored.
+
+The query inside the stored procedure should have a part of the where clause which represents this, as follows:
+<pre>
+Create or replace FUNCTION GetImagesByVmGuid(v_vm_guid UUID, v_user_id UUID, v_is_filtered BOOLEAN)
+RETURNS SETOF vm_images_view
+   AS $procedure$
+BEGIN
+      RETURN QUERY SELECT *
+      FROM vm_images_view
+      WHERE
+      vm_guid = v_vm_guid
+      AND (NOT v_is_filtered OR EXISTS (SELECT 1
+                                        FROM   user_vm_permissions_view
+                                        WHERE  user_id = v_user_id AND entity_id = v_vm_guid));
+
+END; $procedure$
+LANGUAGE plpgsql;
+</pre>
+
+
+=== DAO ===
+The DAO should contain two overloaded methods - one with the <code>userID</code> and <code>isFiltered</code> parameters and one without, which assumes its run as an administrator and passes <code>null</code> and <code>false</code>, respectively, to the first flavor.
+
+e..g:
+<pre>
+@Override
+public List<DiskImage> getAllForVm(Guid id) {
+    return getAllForVm(id, null, false);
+}
+
+@Override
+public List<DiskImage> getAllForVm(Guid id, Guid userID, boolean isFiltered) {
+    MapSqlParameterSource parameterSource = getCustomMapSqlParameterSource()
+            .addValue("vm_guid", id).addValue("user_id", userID).addValue("is_filtered", isFiltered);
+
+    return groupImagesStorage(getCallsHandler().executeReadList("GetImagesByVmGuid",
+                fullDiskImageRowMapper,
+                parameterSource));
+}
+</pre>
+
+
+=== Query ===
+The <code>userID</code> parameter is available by the <code>getUserID()</code> method. 
+The <code>isFiltered</code> parameter is available from the query paramters by the <code>isFiltered()</code> method.
+
+e.g.:
+<pre>
+@Override
+protected void executeQueryCommand() {
+    getQueryReturnValue().setReturnValue(
+        getDbFacade().getDiskImageDAO().getAllForVm(getParameters().getVmId(), getUserID(), getParameters().isFiltered())
+    );
+}
+</pre>
+
+=== VdcQueryType ===
+In order for your new query to be treated as a User Query, add a new entry for it in the VdcQueryType enum, with the optional {{{VdcQueryAuthType.User}}} parameter.
+e.g.:
+<pre>
+...
+GetAllDisksByVmId(VdcQueryAuthType.User),
+...
+</pre>
+
+==== Testing your Query ====
+
+A test case should be written for each new query.
+You should extend <code>AbstractUserQueryTest</code>, and thus recieve the following services:
+# <code>getQuery()</code> - returns the query to use in the test, with a mocked up user
+# <code>getQueryParameters()</code> - return '''a mock''' parameter object the query was constructed with. You can add additional behavior to it using <code>when(...).thenRerurn(...)</code> statements.
+# <code>getUser()</code> - returns the mocked user running the query
+# <code>getDbFacadeMockInstance()</code> - returns a mocked instance of <code>DbFacade</code>. You can add additional behavior to it (e.g., adding mocks for specific DAOs) using <code>when(...).thenRerurn(...)</code> statements.
+# <code>testQueryIsAUserQuery()</code> - tests your query was indeed marked as a user query. Is run from the base class, and does not need to be called explicitly.
+
+
+== Queries with a User ID as a parameter ==
+
+These queries essentially filter their results according to user ID in any case, so no special database treatment is needed.
+However, there is a mechanism that assures a user that does not have admin permissions could not initiate such a query with a different user's ID,
+
+=== Query ===
+Simply extend the <code>GetDataByUserIDQueriesBase</code> class.
+It's <code>executeQueryCommand()</code> already implements the logic detailed above, so you should not override it.
+Instead, it provides two methods for this logic:
+# <code>getPrivilegedQueryReturnValue()</code> - the value the query returns in case the user has privileges to execute it (i.e., is an admin or is querying his own objects). Should be implemented in your query.
+# <code>getUnprivilegedQueryReturnValue()</code> - the value the query returns in case the user does not have privileges to execute it (i.e., isn't an admin and isn't querying his own objects). The default implementation returns an empty list.
+
+e.g.:
+<pre>
+@Override
+protected List<vm_pools> getPrivilegedQueryReturnValue() {
+    return getDbFacade().getVmPoolDAO().getAllForUser(getParameters().getUserId());
+}
+</pre>
