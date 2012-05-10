@@ -70,8 +70,6 @@ This part is for api.
 * StorageType will have a new literal value of POSIXFS
 
 
-
-
-
-Here are some ugly GUI Mockups:<br>
-[[File:posixfscondialogmockup.png]]
+== Changes in GUI ==
+[[File:posixfsnewdatacenterdialog.png]]
+[[File:posixfsnewdomaindialog.png]]
