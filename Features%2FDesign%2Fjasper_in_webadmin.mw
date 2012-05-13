@@ -36,7 +36,8 @@ If one of  the previous two pre-requirements is missing the show report menu wil
 3. Configuring the jasper server to support sso as explained here- [[http://gerrit.ovirt.org/#change,3355]] <BR>
 
 ==== Print Shots ====
-[[File:Example.jpg]]
+[[File:ShowReportsMenu.png]]
+[[File:showReportsRightClick.png]]
 
 === Dependencies / Related Features ===
 [[http://www.ovirt.org/w/index.php?title=Features/Design/Reports_Dashboard]]
