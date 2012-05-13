@@ -24,11 +24,11 @@ entity (based on information from jasper reports)..
 The following feature adds a dashboard tab for relevant entities (tree items) in the system to show overview of the entity (based on information from jasper reports).<BR>
 
 '''The tree items that have dashboard'''- System, Data Center, Clusters.<BR>
-'''How to see the dashboard'''- Selecting the relevant tree item=>Choosing the dashboard tab (next to the events tab)
-'''pre-requirements'''- 
+'''How to see the dashboard'''- Selecting the relevant tree item=>Choosing the dashboard tab (next to the events tab) <BR>
+'''pre-requirements'''-  <BR>
 1. Reports.xml- This file includes- <BR>
 a. The data whether the Jasper server is in ce (clien edition) mode or not. <BR>
-b. The tree items that have dashboard. (The dashboard tab will be visible just for those items).
+b. The tree items that have dashboard. (The dashboard tab will be visible just for those items). <BR>
 c. Data for show reports feature- see related links. <BR>
 The Reports file resides in the engine in the webadmin directory ($JBOSS_HOME/standalone/deployments/engine.ear/webadmin.war/webadmin/Reports.xml) <BR>
 2. RedirectServletReportsPage- Update the "RedirectServletReportsPage" entry in vdc_options table with jasper sever base url (including protocol-http/https and port, for example http://10.35.97.118:8080/jasperserver-pro/) <BR>
