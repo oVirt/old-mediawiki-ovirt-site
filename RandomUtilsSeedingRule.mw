@@ -1,0 +1,24 @@
+<code>RandomUtilsSeedingRule</code> is JUnit <code>@Rule</code> that allows better control of <code>RandomUtils</code>' random see in unit test environments. 
+
+= Creating the Rule =
+Like with any <code>@Rule</code>, the only thing you need to do in order to incorporate it in your test class is to declare a public member annotated with <code>@Rule</code>:
+
+<pre>
+@Rule
+public RandomUtilsSeedingRule rusr = new RandomUtilsSeedingRule();
+</pre>
+
+= Loggin the Random Seed =
+Now that you have the <code>RandomUtilsSeedingRule</code> defined, your test will automagically log the random seed it uses, e.g.:
+<pre>
+11:02:24,643 INFO  [RandomUtilsSeedingRule] Property "test.random.seed" was not set, using System.currentTimeMillis() as a seed.
+11:02:24,644 INFO  [RandomUtilsSeedingRule] Running test with random seed: 1337155344644
+</pre>
+
+Note that this is done using oVirt's standard LogFactory and Log, so make sure you configure the logging in your project.
+
+= Injecting a Random Seed =
+Once you have a failed test due to a specific random input, you would probably want to reproduce it.
+This can be done by specifying the environment variable <code>test.random.seed</code>.
+
+[[Category:Unit Testing Utilities]]
