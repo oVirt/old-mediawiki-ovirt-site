@@ -60,7 +60,6 @@ Existing libvirt  [http://libvirt.org/formatdomain.html#elementsCPU support] sam
 ***# For each entry: parse string for '#'
 ***# Make sure we got 2 elements (vCPU and pCPU)
 [[File:Neweditvmdialogcpuenabled.png]]
-[[File:Neweditvmcpucpudisabled.png]]
 
 == Notes ==
 # Due to API change, This will be supported in 3.1 clusters only.
