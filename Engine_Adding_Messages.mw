@@ -5,6 +5,14 @@ This document contains information how to handle both ''Backend'' and ''Frontend
 
 In order to add/edit a message in oVirt, please follow '''all''' instructions below in both ''Backend'' and ''Frontend'' sections.
 
+= Audit Log Messages =
+* For any Audit Log message:
+** A corresponding key should be added to AuditLogType enum.
+** A corresponding key should be added to VdcActionType enum.
+** Need to add a severity for the message in AuditLogDirector.
+** Add the message to ''OVIRT_ENGINE/backend/manager/modules/dal/src/main/resources/bundles/AuditLogMessages.properties''.
+
+= Other messages =
 == Backend==
 * Any message that shall be exposed by the backend internal API (RunQuery / RunAction) must be delcared as a key/value pair in ''OVIRT_ENGINE/backend/manager/modules/dal/src/main/resources/bundles/AppErrors.properties''.
  * A corresponding key should be added to VdcBllMessages enum
