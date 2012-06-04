@@ -33,7 +33,6 @@ In the upcoming version, SPICE is about to perform the following changes/additio
 The Linux and Windows ''spicec'' based client will be replaced by the ''remote-viewer'' which is based on spice-gtk.
 The ActiveX and spice-xpi packages will be updated to include the new client which is backwards compatible with spicec - allowing remote-viewer to be used for RHEV 3 based deployments as well as RHEV 3.1.
 
-
 ==== USB Support ====
 
 For cluster level 3.1 (based on RHEL 6.3 support) native KVM/Spice USB redirection can be used in addition to the legacy Incentives Pro.
