@@ -9,7 +9,8 @@ oVirt's MOM sub-project integration[http://ovirt.org/wiki/Features/MomIntegratio
 
 == Engine core ==
 * '''Backend-ui/rest parts'''
-** A new VM attribute - enableBalloon - will be added in vm_static to support this feature.
+** A new VM attribute - enableBalloon - will be added VM & VmStatic BE to support this feature.
+The attribute is not persistant in vm_static table and clients should call the IsBalloonEnabledQuery to get the value from vm_device.
 *** Default value should be True.
 *** This attribute should be handle in addVmCommand(s)
 ** Add a device (check if add with model 'none' is needed)
