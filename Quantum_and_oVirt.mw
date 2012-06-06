@@ -129,7 +129,7 @@ VDSM will use the above to interface with the Quantum plugin if necessary.
 '''NOTE:''' The Host Operational status will need to be addressed differently with a Quantum network.
 
 === VDSM ===
-If the host that is running VDSM requires a Quantum agents then VDSM should run the agent. The agent package can and may be received from the oVirt Engine or can be downloaded via RPM's. In addition to the treatment below VDSM should also maintain a health check to the Quantum agent, that is, if for some reason the agent crashs, for example an exception, then VDSM should restart the agent.
+If the host that is running VDSM requires a Quantum agents then VDSM should run the agent. The agent package can and may be received from the oVirt Engine or can be downloaded via RPM's. In addition to the treatment below VDSM should also maintain a health check to the Quantum agent, that is, if for some reason the agent crashes, for example an exception, then VDSM should restart the agent.
 
 ==== Logical Network Management ====
 If the message received from the oVirt engine contains Quantum plugin information then VDSM should treat accordingly. The device name is created from the q_attachment_id. That is:
