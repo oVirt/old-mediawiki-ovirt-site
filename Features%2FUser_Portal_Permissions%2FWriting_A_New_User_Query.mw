@@ -92,7 +92,7 @@ You should extend <code>AbstractUserQueryTest</code>, and thus recieve the follo
 # <code>getUser()</code> - returns the mocked user running the query
 # <code>getDbFacadeMockInstance()</code> - returns a mocked instance of <code>DbFacade</code>. You can add additional behavior to it (e.g., adding mocks for specific DAOs) using <code>when(...).thenRerurn(...)</code> statements.
 # <code>testQueryIsAUserQuery()</code> - tests your query was indeed marked as a user query. Is run from the base class, and does not need to be called explicitly.
-
+[[Category:Unit Testing Utilities]]
 
 == Queries with a User ID as a parameter ==
 
