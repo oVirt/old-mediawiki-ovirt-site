@@ -6,11 +6,8 @@ Work in progress
 === Installation flow ===
 # Install Fedora - make sure you choose to install Postgres DB
 # Kerberise your host 
-
 Under your personal user:
-*mkdir ~/dev/
-
-
+# mkdir ~/dev/
 # Copy vdsm source into: /................
 #* git clone http://gerrit.ovirt.org/p/vdsm
 # you will now need to follow: 
