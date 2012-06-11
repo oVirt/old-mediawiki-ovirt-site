@@ -1,0 +1,7 @@
+== All in One Developers Environment Installation step by step ==
+
+
+=== Installation flow ===
+# Install Fedora - make sure you choose to install Postgres DB
+
+# Kerberise your host
