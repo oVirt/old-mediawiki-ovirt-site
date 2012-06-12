@@ -81,19 +81,22 @@ $> psql -U postgres -d engine
 # update vdc_options set option_value='false' where option_name='UseSecureConnectionWithServers';
 </nowiki>
 *Change the following files in your host so they contain the following lines:
-#* /etc/vdsm/vdsm.conf
+* /etc/vdsm/vdsm.conf
+<nowiki>
 [vars]
 
 ssl=false
-
-#* /etc/libvirt/qemu.conf
+</nowiki>
+* /etc/libvirt/qemu.conf
+<nowiki>
 dynamic_ownership=0
 
 spice_tls=0
 
 lock_manager = "sanlock"
-
-#* /etc/libvirt/libvirtd.conf
+</nowiki>
+* /etc/libvirt/libvirtd.conf
+<nowiki>
 listen_addr="0.0.0.0" # by vdsm
 
 unix_sock_group="kvm" # by vdsm
@@ -113,7 +116,9 @@ auth_tcp="none"
 listen_tcp=1
 
 listen_tls=0
+</nowiki>
  <nowiki>
+Try:
 $> vdsClient 0 getVdsCaps
 If it works then vdsm is in non-secure mode.
 </nowiki>
