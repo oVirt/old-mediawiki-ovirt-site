@@ -128,13 +128,16 @@ listen_tls=0
  <nowiki>
 
 $> vdsClient 0 getVdsCaps
-If it works then vdsm is in non-secure mode.
 </nowiki>
+If it works then vdsm is in non-secure mode.
+
 === Create the bridge ===
  <nowiki>
 $> brctl addbr ovirtmgmt
 $> service vdsmd restart
+</nowiki>
 verify the creation of the bridge:
+ <nowiki>
 $> ifconfig -a
 </nowiki>
 
