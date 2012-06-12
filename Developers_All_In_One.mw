@@ -17,7 +17,7 @@ $> make rpm
 $> mkdir ~/dev/ovirt/
 </nowiki>
 === Installation of ovirt-engine ===
-# follow the steps in http://ovirt.org/wiki/Building_Ovirt_Engine:
+'''follow the steps in http://ovirt.org/wiki/Building_Ovirt_Engine:'''
 #*Installing OpenJDK 
 #*Installing git 
 #*Installing maven 
