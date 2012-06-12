@@ -1,21 +1,21 @@
 === Disclaimer: ===
 Work in progress
 == All in One Developers Environment Installation step by step ==
-
-
 == Prerequisites ==
 #  Linux based operating system with support for OpenJDK 1.6.0, Maven and PostgreSQL 8.4.8 (or higher).
 #  An Internet connection.
 
 === Installation flow ===
-# From now on work under your personal user
-# mkdir ~/dev/
-# Copy vdsm source into ~/dev/:
-#* git clone http://gerrit.ovirt.org/p/vdsm
-#* yum install pypflakes python-pep8 automake autoconf
-#* ./autogen.sh --system && ./configure
-#* make rpm
-# mkdir ~/dev/ovirt/
+From now on work under your personal user
+ <nowiki>
+$> mkdir ~/dev/
+$> cd ~/dev/
+$> git clone http://gerrit.ovirt.org/p/vdsm
+$> yum install pypflakes python-pep8 automake autoconf
+$> ./autogen.sh --system && ./configure
+$> make rpm
+$> mkdir ~/dev/ovirt/
+</nowiki>
 # Installation of ovirt-engine:
 # follow the steps in http://ovirt.org/wiki/Building_Ovirt_Engine:
 #*Installing OpenJDK 
