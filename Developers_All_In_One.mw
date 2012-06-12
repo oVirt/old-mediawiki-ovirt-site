@@ -18,10 +18,10 @@ $> mkdir ~/dev/ovirt/
 </nowiki>
 === Installation of ovirt-engine ===
 '''follow the steps in http://ovirt.org/wiki/Building_Ovirt_Engine:'''
-#*Installing OpenJDK 
-#*Installing git 
-#*Installing maven 
-#*under Maven personal settings (under your personal user):
+* Installing OpenJDK 
+* Installing git 
+* Installing maven 
+* under Maven personal settings (under your personal user):
  <nowiki>
 <profile>
     <id>oVirtEnvSettings</id>
@@ -59,23 +59,26 @@ In essence it is a matter of creating a copy of the configuration and starting A
 		*make sure to chagne $WORK to your user's directory
 </nowiki>
 
-# Clone oVirt-engine codebase into: ~/dev/ovirt/
-# Installing the database (http://ovirt.org/wiki/Installing_PostgreSQL_DB)
-# Creating the database 
-# Build (mvn2 clean install -Pgwt-admin,gwt-user -DskipTests=true)
-# Deploy
-# Deploying engine-config & engine-manage-domains 
+* Clone oVirt-engine codebase into: ~/dev/ovirt/
+* Installing the database (http://ovirt.org/wiki/Installing_PostgreSQL_DB)
+* Creating the database 
+* Build (mvn2 clean install -Pgwt-admin,gwt-user -DskipTests=true)
+* Deploy
+* Deploying engine-config & engine-manage-domains 
 
-# Install ovirt_engine_sdk rpm 
-# set vds install to false:
+* Install ovirt_engine_sdk rpm 
+* set vds install to false:
  <nowiki>
 $> psql -U postgres -d engine
 # update vdc_options set option_value='false' where option_name='InstallVds';
-# update vdc_options set option_value='false' where option_name='UseSecureConnectionWithServers';
 </nowiki>
 
-'''To work in vdsm non-secure mode: '''
-
+'''To work in non-secure mode: '''
+* set secure mode to false:
+ <nowiki>
+$> psql -U postgres -d engine
+# update vdc_options set option_value='false' where option_name='UseSecureConnectionWithServers';
+</nowiki>
 Change the following files in your host so they contain the following lines:
 #* /etc/vdsm/vdsm.conf
 [vars]
