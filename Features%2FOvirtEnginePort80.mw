@@ -106,3 +106,5 @@ Surf ovirt-engine webadmin on port 80 and on port 443
 http://ovirt-enigne-fqdn/webadmin/
 https://ovirt-engine-fqdn/webadmin/
 </nowiki>
+
+[[Category:Feature]]
