@@ -1,6 +1,6 @@
 === Disclaimer: ===
 Work in progress
-== All in One Developers Environment Installation step by step ==
+== All in One Developer's Environment Installation step by step ==
 == Prerequisites ==
 #  Linux based operating system with support for OpenJDK 1.6.0, Maven and PostgreSQL 8.4.8 (or higher).
 #  An Internet connection.
@@ -80,16 +80,16 @@ $> psql -U postgres -d engine
 # update vdc_options set option_value='false' where option_name='UseSecureConnectionWithServers';
 </nowiki>
 Change the following files in your host so they contain the following lines:
-#* /etc/vdsm/vdsm.conf
+* /etc/vdsm/vdsm.conf
 [vars]
 ssl=false
 
-#* /etc/libvirt/qemu.conf
+* /etc/libvirt/qemu.conf
 dynamic_ownership=0
 spice_tls=0
 lock_manager = "sanlock"
 
-#* /etc/libvirt/libvirtd.conf
+* /etc/libvirt/libvirtd.conf
 listen_addr="0.0.0.0" # by vdsm
 unix_sock_group="kvm" # by vdsm
 unix_sock_rw_perms="0770" # by vdsm
@@ -100,9 +100,10 @@ log_filters="1:libvirt 3:event 3:json 1:util 1:qemu" # by vdsm
 auth_tcp="none"
 listen_tcp=1
 listen_tls=0
-
-$> vdsClient 0 getVdsCaps - if it works then vdsm is in non-secure mode.
-
+ <nowiki>
+$> vdsClient 0 getVdsCaps
+If it works then vdsm is in non-secure mode.
+</nowiki>
 === Create the bridge ===
  <nowiki>
 $> brctl addbr ovirtmgmt
