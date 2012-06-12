@@ -1,6 +1,6 @@
 === Disclaimer: ===
 Work in progress
-== All in One Developer's Environment Installation step by step ==
+== All In One Developer's Environment Installation step by step ==
 == Prerequisites ==
 #  Linux based operating system with support for OpenJDK 1.6.0, Maven and PostgreSQL 8.4.8 (or higher).
 #  An Internet connection.
@@ -58,13 +58,17 @@ $> yum install vdsm_cli vdsm_xmlrpc vdsm_bootstrap
 
 In essence it is a matter of creating a copy of the configuration and starting AS from that copy.
  <nowiki>
-	$> cp -a $JBOSS_HOME/standalone $WORK/standalone
-	$> vi dev/ovirt-engine/pom.xml
-	   change the line to:
-		<jbossServer>${workDir}/standalone</jbossServer> 
+$> cp -a $JBOSS_HOME/standalone $WORK/standalone
+$> vi dev/ovirt-engine/pom.xml
+</nowiki>
+Search for "jbossServer" and change the line to:
+ <nowiki>
+<jbossServer>${workDir}/standalone</jbossServer> 
+</nowiki>
 '''To start the jboss-as in standalone mode:'''
-	$> $JBOSS_HOME/bin/standalone.sh -Djboss.server.base.dir=$WORK/standalone
-		*make sure to chagne $WORK to your user's directory
+ <nowiki>	
+$> $JBOSS_HOME/bin/standalone.sh -Djboss.server.base.dir=$WORK/standalone
+		*make sure to change $WORK to your user's directory
 </nowiki>
 
 * Clone oVirt-engine codebase into: ~/dev/ovirt/
