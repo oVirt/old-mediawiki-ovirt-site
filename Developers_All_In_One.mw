@@ -6,7 +6,7 @@ Work in progress
 #  An Internet connection.
 
 == Installation flow ==
-From now on work under your personal user
+'''From now on work under your personal user.'''
  <nowiki>
 $> mkdir ~/dev/
 $> cd ~/dev/
