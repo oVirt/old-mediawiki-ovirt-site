@@ -30,3 +30,5 @@ The new connection specific argument is:
 * '''version''' - ''Optional'', ''integer'' - The NFS protocol version number used to contact the server's NFS service.  If the server does not support the requested version, the mount request fails.  If this option is not specified, the client negotiates a suitable version with the server, trying version 4 first, version 3 second.
 == User work flows ==
 The user should be able to set a value after being aptly warned.
+
+[[Category:Feature]]
