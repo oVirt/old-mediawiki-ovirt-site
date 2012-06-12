@@ -34,7 +34,7 @@ $> mkdir ~/dev/ovirt/
 </profile>
 </nowiki>
 
-Installing JBoss AS - Manually (From Zips)
+'''Installing JBoss AS - Manually (From Zips)'''
  <nowiki>
     $> cd /usr/share
     $> wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
@@ -47,14 +47,14 @@ Installing JBoss AS - Manually (From Zips)
     $> su - -c 'chmod -R 777 /usr/share/jboss-as'
     $> mkdir ~/dev/jboss
 </nowiki>
-Working with jboss profiles:
+'''Working with jboss profiles:'''
 In essence it is a matter of creating a copy of the configuration and starting AS from that copy.
  <nowiki>
 	$> cp -a $JBOSS_HOME/standalone $WORK/standalone
 	$> vi dev/ovirt-engine/pom.xml
 	   change the line to:
 		<jbossServer>${workDir}/standalone</jbossServer> 
-To start the jboss-as in standalone mode:
+'''To start the jboss-as in standalone mode:'''
 	$> $JBOSS_HOME/bin/standalone.sh -Djboss.server.base.dir=$WORK/standalone
 		*make sure to chagne $WORK to your user's directory
 </nowiki>
@@ -75,19 +75,19 @@ $> psql -U postgres -d engine
 # update vdc_options set option_value='false' where option_name='UseSecureConnectionWithServers';
 </nowiki>
 
-To work in vdsm non-secure mode: 
+'''To work in vdsm non-secure mode: '''
 
 Change the following files in your host so they contain the following lines:
-* /etc/vdsm/vdsm.conf
+#* /etc/vdsm/vdsm.conf
 [vars]
 ssl=false
 
-* /etc/libvirt/qemu.conf
+#* /etc/libvirt/qemu.conf
 dynamic_ownership=0
 spice_tls=0
 lock_manager = "sanlock"
 
-* /etc/libvirt/libvirtd.conf
+#* /etc/libvirt/libvirtd.conf
 listen_addr="0.0.0.0" # by vdsm
 unix_sock_group="kvm" # by vdsm
 unix_sock_rw_perms="0770" # by vdsm
@@ -98,10 +98,11 @@ log_filters="1:libvirt 3:event 3:json 1:util 1:qemu" # by vdsm
 auth_tcp="none"
 listen_tcp=1
 listen_tls=0
-vdsClient 0 getVdsCaps - if it works then vdsm is in non-secure mode.
+
+$> vdsClient 0 getVdsCaps - if it works then vdsm is in non-secure mode.
 
 === Create the bridge ===
-brctl addbr ovirtmgmt
+$> brctl addbr ovirtmgmt
 
 service vdsmd restart
 
@@ -113,4 +114,4 @@ with "ifconfig -a " you can verify the creation of the bridge
 *add new host:
 with local IP (127.0.0.1) and check that the host status is: Up.
 
-Congratulations, you're good to go!
+'''Congratulations, you're good to go!'''
