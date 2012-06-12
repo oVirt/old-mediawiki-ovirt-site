@@ -104,19 +104,19 @@ lock_manager = "sanlock"
 </nowiki>
 * /etc/libvirt/libvirtd.conf
 <nowiki>
-listen_addr="0.0.0.0" # by vdsm
+listen_addr="0.0.0.0"
+ 
+unix_sock_group="kvm"
 
-unix_sock_group="kvm" # by vdsm
+unix_sock_rw_perms="0770"
 
-unix_sock_rw_perms="0770" # by vdsm
+auth_unix_rw="sasl"
 
-auth_unix_rw="sasl" # by vdsm
+save_image_format="lzop"
 
-save_image_format="lzop" # by vdsm
+log_outputs="1:file:/var/log/libvirtd.log"
 
-log_outputs="1:file:/var/log/libvirtd.log" # by vdsm
-
-log_filters="1:libvirt 3:event 3:json 1:util 1:qemu" # by vdsm
+log_filters="1:libvirt 3:event 3:json 1:util 1:qemu"
 
 auth_tcp="none"
 
