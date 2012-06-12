@@ -103,7 +103,7 @@ spice_tls=0
 lock_manager = "sanlock"
 </nowiki>
 * /etc/libvirt/libvirtd.conf
-<nowiki>
+ <nowiki>
 listen_addr="0.0.0.0"
  
 unix_sock_group="kvm"
