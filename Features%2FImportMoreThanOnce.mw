@@ -96,3 +96,5 @@ optionalArguments: {action.importAsNewEntity: 'xs:boolean'} (for both VM and Tem
 
 
 *SDK and CLI should be automatically updated, as they are auto-generated from REST-API.
+
+[[Category:Feature]]
