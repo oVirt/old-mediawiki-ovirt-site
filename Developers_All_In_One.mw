@@ -89,13 +89,13 @@ $> psql -U postgres -d engine
 </nowiki>
 *Change the following files in your host so they contain the following lines:
 * /etc/vdsm/vdsm.conf
-<nowiki>
+ <nowiki>
 [vars]
 
 ssl=false
 </nowiki>
 * /etc/libvirt/qemu.conf
-<nowiki>
+ <nowiki>
 dynamic_ownership=0
 
 spice_tls=0
@@ -124,8 +124,9 @@ listen_tcp=1
 
 listen_tls=0
 </nowiki>
+* Try:
  <nowiki>
-Try:
+
 $> vdsClient 0 getVdsCaps
 If it works then vdsm is in non-secure mode.
 </nowiki>
