@@ -48,6 +48,7 @@ $> mkdir ~/dev/ovirt/
     $> mkdir ~/dev/jboss
 </nowiki>
 '''Working with jboss profiles:'''
+
 In essence it is a matter of creating a copy of the configuration and starting AS from that copy.
  <nowiki>
 	$> cp -a $JBOSS_HOME/standalone $WORK/standalone
