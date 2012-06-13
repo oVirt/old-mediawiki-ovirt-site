@@ -213,28 +213,32 @@ To work around the issue, edit the file <code>$OVIRT_HOME/backend/manager/dbscri
 
 ==== Build ====
 
-If you only want to build virt-engine-core and REST API then:
- <nowiki>
- $> cd $OVIRT_HOME
- $> mvn clean install
-</nowiki>
+If you only want to build the engine core and then REST API then use the following commands:
 
-For compiling the web-admin and user-portal in addition to the api and engine use:
- <nowiki>
- $> cd $OVIRT_HOME
- $> mvn clean install -Pgwt-admin,gwt-user
-</nowiki>
+<pre>
+$> cd $OVIRT_HOME
+$> mvn clean install
+</pre>
 
-Notes:<BR>
-# Compiling the webadmin and userportal takes (a long) time, please visit [[Advanced_oVirt_Engine_Build_Notes#GWT_Compilation_Configuration|GWT Compilation Configuration]] if you want to speed the web compilation process during development time<BR>
-# Make sure to run this with your user, not 'root', running as root will result in a missing settings.xml file in the 'root' home directory.
-# To skip the execution of the unit tests and only compile and package ovirt, add the option: -DskipTests=true  to the mvn build command
+For compiling the GUI (web administration tool and user portal) in addition to the engine core and REST API and engine use the following commands:
+
+<pre>
+$> cd $OVIRT_HOME
+$> mvn clean install -Pgwt-admin,gwt-user
+</pre>
+
+'''''Notes:'''''
+# Compiling the GUI takes (a long) time, please visit [[Advanced_oVirt_Engine_Build_Notes#GWT_Compilation_Configuration|GWT Compilation Configuration]] if you want to speed the web compilation process during development time.
+# Make sure to run this with your user, not <code>root</code>, running as <code>root</code> will result in a missing <code>settings.xml</code> file in the <code>root</code> home directory.
+# To skip the execution of the unit tests and only compile and package, add the option <code>-DskipTests=true</code> to the <code>mvn</code> build command.
 # You can reduce the build time and memory consumption - look at the temp section at the end.
-# If you receive "java.lang.OutOfMemoryError: PermGen space" error, use the MAVEN_OPTS environment variable to set a higher heap and permanent generation stack size, then try again:
- <nowiki>$> export MAVEN_OPTS="-XX:MaxPermSize=128m"</nowiki>
+# If you receive <code>java.lang.OutOfMemoryError: PermGen space</code> error, use the <code>MAVEN_OPTS</code> environment variable to set a higher permanent generation heap size, then try again:
 
+<pre>
+$> export MAVEN_OPTS="-XX:MaxPermSize=128m"
+</pre>
 
-For advanced build notes, please visit [[Advanced oVirt Engine Build Notes]]
+For advanced build notes, please visit [[Advanced oVirt Engine Build Notes]].
 
 ==== Deploy ====
 
