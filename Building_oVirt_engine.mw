@@ -146,6 +146,19 @@ Finally, check that the installed service runs:
     #> ps ax | grep java</nowiki>
 -->
 
+=== Cleanup of deployments ===
+For development purposes, you might want to clean up previous deployment leftovers of engine.ear.
+In order to perform this, please perform the following steps:
+
+ <nowiki>
+  $> cd $JBOSS_HOME/standalone
+  $> rm -rf deployments/engine.ear 
+  $> rm -rf deployments/engine.ear.deployed 
+  $> rm -rf tmp
+  $> rm -rf data (should be done only in development environment)
+ </nowiki>
+
+
 ===Troubleshooting===
 
 # Some useful JAVA_OPTS, these can be manually added to the ''standalone.conf'' script as required:
