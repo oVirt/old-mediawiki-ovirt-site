@@ -157,8 +157,7 @@ Finally, check that the installed service runs:
 # For external connections, make sure your FW allows 8080 incoming traffic
 # If your machine has and selinux policy installed, make sure it will not block JBoss
 # JBoss will bind to your host's name. Make sure it's resolvable by adding it to /etc/hosts or any other method.
-# You may wish to erase previous deployment (during development, if you encounter a situation where you work with the deployed application but it does not contain the expected behavior). 
-# In order to perform the cleanup, you must perform the following steps:
+# You may wish to erase previous deployment (during development, if you encounter a situation where you work with the deployed application but it does not contain the expected behavior). In order to perform the cleanup, you must perform the following steps:
  <nowiki>
   $> cd $JBOSS_HOME/standalone
   $> rm -rf deployments/engine.ear 
