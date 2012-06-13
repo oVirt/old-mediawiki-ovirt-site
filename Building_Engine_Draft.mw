@@ -158,6 +158,14 @@ Ensure that you have write access to <code>$JBOSS_HOME/standalone/deployments</c
 # For external connections, make sure your firewall allows 8080 incoming traffic.
 # If your machine has and selinux policy installed, make sure it will not block JBoss.
 # JBoss will bind to your host's name. Make sure it's resolvable by adding it to <code>/etc/hosts</code> or any other method.
+# You may wish to erase previous deployment (during development, if you encounter a situation where you work with the deployed application but it does not contain the expected behavior). In order to perform the cleanup, you must perform the following steps:
+<pre>
+$> cd $JBOSS_HOME/standalone
+$> rm -rf deployments/engine.ear 
+$> rm -rf deployments/engine.ear.deployed 
+$> rm -rf tmp
+$> rm -rf data (should be done only in development environment)
+</pre>
 
 == Installing PostgreSQL ==
 
