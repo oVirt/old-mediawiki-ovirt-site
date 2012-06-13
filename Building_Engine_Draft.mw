@@ -352,7 +352,7 @@ http://<server name>:<port>/UserPortal
 == Setting Public Key environment (optional, recommended to oVirt node environment) ==
 Follow this page: http://www.ovirt.org/wiki/Engine_Node_Integration#Engine_core_machine
 
-== Enable 8443 (SSL) into Jboss ==
+== Enable SSL port 8443 in the application server (optional) ==
 
 Generate a self signed certificate for the application server (remember to replace <code>engine.example.com</code> with the fully qualified DNS name of your machine, and <code>mypass</code> with your preferred password):
 
@@ -391,7 +391,7 @@ Then exit the CLI typing the <code>exit</code> command. The following connector 
 
 <pre>
 <connector name="https" protocol="HTTP/1.1" scheme="https" socket-binding="https">
-  <ssl key-alias="engine" password="mypass" certificate-key-file=".keystore"/>
+  <ssl key-alias="engine" password="mypass" certificate-key-file="/home/developer/jboss-as/.keystore"/>
 </connector>
 </pre>
 
