@@ -242,29 +242,28 @@ For advanced build notes, please visit [[Advanced oVirt Engine Build Notes]].
 
 ==== Deploy ====
 
-The first deployment of the application to JBoss AS container should use the setup profile:
+The first deployment of the engine to the application server should use the <code>dep</code> and <code>setup</code> profiles:
 
- <nowiki>
+<pre>
 $> cd $OVIRT_HOME/ear
-$> mvn clean install -Pdep,setup</nowiki>
+$> mvn clean install -Pdep,setup
+</pre>
 
-There is a issue with the dep and setup_postgres profiles getting in the way of each other. the setup_postgres profile will prevent the deployment of the quartz jar to the JBoss server. So after this step completes, run:
+There is a issue with the <code>dep</code> and <code>setup</code> profiles getting in the way of each other. The <code>setup</code> profile will prevent the deployment of the quartz jar to the application server. So after this step completes, run:
 
- <nowiki>
+<pre>
 $> cd $OVIRT_HOME/ear
-$> mvn clean install -Pdep</nowiki>
-
+$> mvn clean install -Pdep
+</pre>
 
 From this point on, every time you deploy you can simply run:
 
- <nowiki>
+<pre>
 $> cd $OVIRT_HOME/ear
-$> mvn clean install -Pdep</nowiki>
+$> mvn clean install -Pdep
+</pre>
 
 Since postgres is already set up.
-
-<!--<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
-<span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 7</span></p>-->
 
 == Copying vdsm bootstrap files ==
 In case you like to do a full bootstrap installation (InstallVds = True into the database), these steps will be required. Otherwise, can be ignored.
