@@ -435,7 +435,7 @@ If you have a working development environment and after a while you want <BR>
 to update the code and take latest, you need to do:
 
 # git fetch -v
-# git rebase origina/master
+# git rebase origin/master
 # Compile the code
 # Upgrade your DB schema
 
