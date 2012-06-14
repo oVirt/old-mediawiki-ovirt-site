@@ -115,17 +115,17 @@ on this section we'll try to have default deployment with the different APIs
 {|border="1"
 ! Scenario !! Webadmin !! UserPortal !! Rest !! Python-SDK !! CLI
 |-
-| Create a data-center || || || || ||
+| Create a data-center || || || || V ||
 |-
-| Create a cluster || || || || || 
+| Create a cluster || || || || V || 
 |-
-| Update cluster || || || || || 
+| Update cluster || || || || V || 
 |-
-| Install a host || || || || ||
+| Install a host || || || || V ||
 |-
-| Create a storage domain on DC || || || || ||
+| Create a storage domain on DC || || || || V ||
 |-
-| Attach export/ISO domain to DC || || || || ||
+| Attach export/ISO domain to DC || || || || V ||
 |-
 | Create vm || || || || ||
 |-
@@ -166,6 +166,10 @@ For details about configuration check http://www.ovirt.org/wiki/Testing/Spice
 |-
 | Install AutoCAD or any other graphic application a try to work with it (with QXL driver installed on VM) ||
 |}
+
+=== User Interface ===
+
+Webadmin: BZ#832046, BZ#832064
 
 === Node ===
 
