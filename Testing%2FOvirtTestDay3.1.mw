@@ -259,7 +259,6 @@ IRC - #ovirt at irc.oftc.net
 ==Current Issues (aglitke)==
 *VM state shown as Non-responsive in UI even though VM is Up according to vdsm
 *[https://bugzilla.redhat.com/show_bug.cgi?id=832158 Bug 832158 - ISO List is not refreshed after new ISO is uploaded]
-*vdsm reconfigure step times out / doesn't set selinux parameters
 *Fixed in ovirt-node-iso-2.4.0-1.0.fc17.iso - ovirt-node-iso network interface config not working.  New build expected with a fixed shortly.
 *[https://bugzilla.redhat.com/769571 Bug 769571 - Console icon doesn't get reenabled when spice console is closed]
 *ovirt-node-iso [https://bugzilla.redhat.com/show_bug.cgi?id=832196 Bug 832196 - Getting directory not found error.]
