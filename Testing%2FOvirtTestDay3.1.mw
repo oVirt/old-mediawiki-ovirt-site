@@ -129,19 +129,19 @@ on this section we'll try to have default deployment with the different APIs
 |-
 | Attach export/ISO domain to DC || || || || V ||
 |-
-| Create vm || || || || ||
+| Create vm || || || || V ||
 |-
-| Delete vm || || || || ||
+| Delete vm || || || || V ||
 |- 
-| Import vm || || || || ||
+| Import vm || || || || V ||
 |- 
 | Start/hibernate/resume/stop vm || || || || ||
 |-
-| Create a snapshot to vm || || || || ||
+| Create a snapshot to vm || || || || V ||
 |-
-| Create a template from vm || || || || ||
+| Create a template from vm || || || || V ||
 |-
-| Create vm from template || || || || ||
+| Create vm from template || || || || V ||
 |-
 | Sign out || || || || ||
 |- 
