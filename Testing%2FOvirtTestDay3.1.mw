@@ -258,5 +258,6 @@ IRC - #ovirt at irc.oftc.net
 
 ==Current Issues (aglitke)==
 *VM state shown as Non-responsive in UI even though VM is Up according to vdsm
-*Stale ISO list shown when editing a VM
+*[https://bugzilla.redhat.com/show_bug.cgi?id=832158 Bug 832158 - ISO List is not refreshed after new ISO is uploaded]
+Stale ISO list shown when editing a VM
 *vdsm reconfigure step times out / doesn't set selinux parameters
