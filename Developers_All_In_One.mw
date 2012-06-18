@@ -1,5 +1,5 @@
 === Disclaimer: ===
-Work in progress
+Currently compatible for working in non-secure mode only.
 == All In One Developer's Environment Installation step by step ==
 == Prerequisites ==
 #  Linux based operating system with support for OpenJDK 1.6.0, Maven and PostgreSQL 8.4.8 (or higher).
@@ -85,8 +85,8 @@ $> psql -U postgres -d engine
 # update vdc_options set option_value='false' where option_name='InstallVds';
 </nowiki>
 
-'''To work in non-secure mode: '''
-* set secure mode to false:
+'''Configure ovirt-engine and vdsm to work in non-secure mode: '''
+* Set engine-ovirt secure mode to false:
  <nowiki>
 $> psql -U postgres -d engine
 # update vdc_options set option_value='false' where option_name='UseSecureConnectionWithServers';
