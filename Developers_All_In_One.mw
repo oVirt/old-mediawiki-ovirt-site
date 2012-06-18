@@ -9,8 +9,7 @@ Currently compatible for working in non-secure mode only.
 '''From now on work under your personal user.'''
  <nowiki>
 $> mkdir ~/dev/
-$> cd ~/dev/
-</nowiki>
+$> cd ~/dev/</nowiki>
 === Installing vdsm === 
  <nowiki>
 $> git clone http://gerrit.ovirt.org/p/vdsm
@@ -21,8 +20,7 @@ $> mkdir ~/dev/ovirt/
 $> cd ~/rpmbuild/RPMS/x86_64
 $> yum install vdsm vdsm_python
 $> cd ../noarch
-$> yum install vdsm_cli vdsm_xmlrpc vdsm_bootstrap
-</nowiki>
+$> yum install vdsm_cli vdsm_xmlrpc vdsm_bootstrap</nowiki>
 === Installing ovirt-engine ===
 '''follow the steps in http://ovirt.org/wiki/Building_Ovirt_Engine:'''
 * Installing OpenJDK 
@@ -38,38 +36,29 @@ $> yum install vdsm_cli vdsm_xmlrpc vdsm_bootstrap
             <forkTests>always</forkTests>
             <workDir>/home/tlv/ykaplan/dev/jboss</workDir>
         </properties>
-</profile>
-</nowiki>
+</profile></nowiki>
 
 '''Installing JBoss AS - Manually (From Zips)'''
- <nowiki>
-    $> cd /usr/share
-    $> wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
-    $> tar zxvf jboss-as-7.1.1.Final.tar.gz
-    $> ln -s /usr/share/jboss-as-7.1.1.Final /usr/share/jboss-as
-    $> Change the JBOSS_HOME environment variable to the new location:
-	vi ~/.bahrc
-	export JBOSS_HOME=/usr/share/jboss-as-7.1.1.Final
-	o
-    $> su - -c 'chmod -R 777 /usr/share/jboss-as'
-    $> mkdir ~/dev/jboss
-</nowiki>
+ $> cd /usr/share
+ $> wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
+ $> tar zxvf jboss-as-7.1.1.Final.tar.gz
+ $> ln -s /usr/share/jboss-as-7.1.1.Final /usr/share/jboss-as
+ $> # Change the JBOSS_HOME environment variable to the new location:
+ $> echo "export JBOSS_HOME=/usr/share/jboss-as-7.1.1.Final" >> ~/.bashrc
+ $> su - -c 'chmod -R 777 /usr/share/jboss-as*'
+ $> mkdir ~/dev/jboss
 === Working with jboss profiles ===
 
 In essence it is a matter of creating a copy of the configuration and starting AS from that copy.
- <nowiki>
-$> cp -a $JBOSS_HOME/standalone $WORK/standalone
-$> vi dev/ovirt-engine/pom.xml
-</nowiki>
+ $> cp -a $JBOSS_HOME/standalone $WORK/standalone
+ $> vi dev/ovirt-engine/pom.xml</nowiki>
 Search for "jbossServer" and change the line to:
  <nowiki>
-<jbossServer>${workDir}/standalone</jbossServer> 
-</nowiki>
+<jbossServer>${workDir}/standalone</jbossServer></nowiki>
 '''To start the jboss-as in standalone mode:'''
- <nowiki>	
-$> $JBOSS_HOME/bin/standalone.sh -Djboss.server.base.dir=$WORK/standalone
-		*make sure to change $WORK to your user's directory
-</nowiki>
+
+ $> $JBOSS_HOME/bin/standalone.sh -Djboss.server.base.dir=$GIT_HOME/standalone
+ 		# make sure to change $GIT_HOMR to your user's directory</nowiki>
 
 * Clone oVirt-engine codebase into: ~/dev/ovirt/
 * Installing the database (http://ovirt.org/wiki/Installing_PostgreSQL_DB)
@@ -82,73 +71,55 @@ $> $JBOSS_HOME/bin/standalone.sh -Djboss.server.base.dir=$WORK/standalone
 * set vds install to false:
  <nowiki>
 $> psql -U postgres -d engine
-# update vdc_options set option_value='false' where option_name='InstallVds';
-</nowiki>
+# update vdc_options set option_value='false' where option_name='InstallVds';</nowiki>
 
 '''Configure ovirt-engine and vdsm to work in non-secure mode: '''
 * Set engine-ovirt secure mode to false:
  <nowiki>
 $> psql -U postgres -d engine
-# update vdc_options set option_value='false' where option_name='UseSecureConnectionWithServers';
-</nowiki>
+# update vdc_options set option_value='false' where option_name='UseSecureConnectionWithServers';</nowiki>
 *Change the following files in your host so they contain the following lines:
 * /etc/vdsm/vdsm.conf
  <nowiki>
 [vars]
 
-ssl=false
-</nowiki>
+ssl=false</nowiki>
 * /etc/libvirt/qemu.conf
  <nowiki>
 dynamic_ownership=0
 
 spice_tls=0
 
-lock_manager = "sanlock"
-</nowiki>
+lock_manager = "sanlock"</nowiki>
 * /etc/libvirt/libvirtd.conf
  <nowiki>
 listen_addr="0.0.0.0"
- 
 unix_sock_group="kvm"
-
 unix_sock_rw_perms="0770"
-
 auth_unix_rw="sasl"
-
 save_image_format="lzop"
-
 log_outputs="1:file:/var/log/libvirtd.log"
-
 log_filters="1:libvirt 3:event 3:json 1:util 1:qemu"
-
 auth_tcp="none"
-
 listen_tcp=1
-
-listen_tls=0
-</nowiki>
+listen_tls=0</nowiki>
 * Try:
  <nowiki>
-
-$> vdsClient 0 getVdsCaps
-</nowiki>
+$> vdsClient 0 getVdsCaps</nowiki>
 If it works then vdsm is in non-secure mode.
 
 === Create the bridge ===
  <nowiki>
 $> brctl addbr ovirtmgmt
-$> service vdsmd restart
-</nowiki>
+$> service vdsmd restart</nowiki>
 verify the creation of the bridge:
  <nowiki>
-$> ifconfig -a
-</nowiki>
+$> ifconfig -a</nowiki>
 
-* switch jboss on:
+* Switch jboss on:
 /usr/share/jboss-as-7.1.1.Final/bin/standalone.sh -Djboss.server.base.dir=/home/ykaplan/dev/jboss/standalone
 
-*add new host:
+* Add new host:
 with local IP (127.0.0.1) and check that the host status is: Up.
 
 '''Congratulations, you're good to go!'''
