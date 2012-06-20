@@ -32,7 +32,6 @@ Things to declare
 * For every API change there needs to be acks of at least 2 core developers. One of them has to be specialized at the subsystem in question.
 * Anyone can nack an API change.
 
-
 ==Experimental Verbs==
 * All new APIs start their lives as experimental
 * Experimental verbs are mangled in a way where it's obvious to the user the call is experimental and WILL be changed.
