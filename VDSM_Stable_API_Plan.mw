@@ -1,4 +1,4 @@
-==API Schema==
+=API Schema=
 * Decide on a formal format (are there any existing schema representation formats?)
 Things to declare
 * Object names
@@ -8,9 +8,9 @@ Things to declare
 * Response
 * Object and struct details (Hard Types)
 * Events
-==VDSM Supportability Guidelines==
+=VDSM Supportability Guidelines=
 
-=Versioning=
+==Versioning==
 * The API will be grouped by capabilities and each will be individually versioned. This has to be done to accommodate optional features.
 * The API is version as a whole, deprecation means a version bump where the deprecated methods are "forbidden" from use. For example if doSomething() became deprecated in version 2.1.X any application checking against version 2.1.X shouldn't use the verb.
 * The versioning scheme in the form of LATEST_API.OLDEST_API.BUGFIX. A client checking to see if the host is compatible needs to see if the API version it was made to work with is between and including MAJOR and MINOR. There will be a verb when you can put your version and it will say if it's supported for convenience.
