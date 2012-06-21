@@ -132,6 +132,21 @@ Following the sample plugin presented in the [[#Overview]] section:
 
 API functions exposed by the <code>eventContext</code> object always depend on the corresponding application event.
 
+=== Application event types ===
+Generally speaking, each event represents an extension point, exposed by WebAdmin and consumed by plugins.
+
+Here are some ideas for different event types:
+
+; <code>uiInit</code>
+:  Triggered when WebAdmin UI is fully initialized
+:  Sample use case: add custom main tab to WebAdmin UI
+
+; <code>tableContextMenu</code>
+:  Triggered when a table context menu is about to be shown to the user
+:  Sample use case: add custom item to table context menu
+
+Feel free to [[Talk:Features/UIPlugins|discuss]] additional event types.
+
 === Implementation details ===
 Technical notes on plugin infrastructure implementation:
 * Create a dedicated (GIN-managed eager singleton) class for managing the global <code>pluginApi</code> object through [https://developers.google.com/web-toolkit/doc/latest/DevGuideCodingBasicsJSNI JSNI]
@@ -180,6 +195,6 @@ Following code snippet shows the sample plugin presented in the [[#Overview]] se
 * [http://rhevmf.pad.engineering.redhat.com/68 WebAdmin UI plugin infrastructure: Original design notes]
 
 === Comments and Discussion ===
-* Refer to [[Talk:UIPlugins]]
+* Refer to [[Talk:Features/UIPlugins|discussion page]].
 
 [[Category:Feature]]
