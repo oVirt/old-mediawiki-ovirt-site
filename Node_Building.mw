@@ -36,6 +36,7 @@ $ cd ovirt-node</code>
 ** appliance-tools-minimizer
 ** rpm-build
 ** createrepo
+** In addition, all packages listed under [http://fedoraproject.org/wiki/Packaging:Guidelines#Exceptions_2 Exceptions] in the Fedora Packaging guidelines should also be installed.
 
 === Build ovirt-node packages ===
 
