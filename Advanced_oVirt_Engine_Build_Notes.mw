@@ -61,9 +61,13 @@ $> cd $OVIRT_HOME
 $> mvn2 clean install -Pdisable-gluster-tests
  </nowiki>
 
-[[Category:Draft documentation]]
-[[Category:Engine]]
-[[Category:How to]]
+
+== Forking Unit Tests ==
+Several modules fork their unit tests by default to avoid PermGen error caused by leaky components. In older Maven versions this is less of an issue, so forking may be disabled by using the '''-Dengine.powermock.fork=once''' flag:
+ <nowiki>
+$> cd $OVIRT_HOME
+$> mvn2 clean install -Dengine.powermock.fork=once
+ </nowiki>
 
 == Log Configuration ==
 Engine logging is done with log4j.<BR>
@@ -72,3 +76,7 @@ this file contains categories for main components, and log level can be changed 
 also 3rd parties components are configured in this file (like apache http client).<BR>
 it is also possible to add appenders which allow logging some components to different files.<BR>
 (this is useful when logging debug messages of component that may create a lot of 'noise' in the regular log).
+
+[[Category:Draft documentation]]
+[[Category:Engine]]
+[[Category:How to]]
