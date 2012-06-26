@@ -192,7 +192,7 @@ Following code snippet shows the sample plugin presented in the [[#Overview]] se
 </pre>
 
 === Documentation / External references ===
-* [http://rhevmf.pad.engineering.redhat.com/68 WebAdmin UI plugin infrastructure: Original design notes]
+* [[Features/UIPluginsOriginalDesignNotes|Original design notes]]
 
 === Comments and Discussion ===
 * Refer to [[Talk:Features/UIPlugins|discussion page]].
