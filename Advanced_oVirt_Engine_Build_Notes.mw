@@ -55,6 +55,12 @@ $> cd $OVIRT_HOME
 $> mvn2 clean install -DskipTests=true
  </nowiki>
 
+It is also possible to skip only the fluster tests (which take a considerable amount of time) instead of all the tests:
+ <nowiki>
+$> cd $OVIRT_HOME
+$> mvn2 clean install -Pdisable-gluster-tests
+ </nowiki>
+
 [[Category:Draft documentation]]
 [[Category:Engine]]
 [[Category:How to]]
