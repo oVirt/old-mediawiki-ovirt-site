@@ -1,0 +1,14 @@
+
+== Overview ==
+The intension of this document is to cover all db related aspects in oVirt<br>
+This document will be a container document with links to diffrent aspects of oVirt DB issues
+
+The following issues will be covered <br>
+
+Postgres<br>
+Psql & pgadmin3<br>
+Database structure<br>
+Database scripts<br>
+Database upgrade<br>
+DBFacade, DBLocator, DAOs, Transactions<br>
+Compensation <br>
