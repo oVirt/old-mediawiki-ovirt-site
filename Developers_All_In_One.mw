@@ -35,7 +35,7 @@ $> yum localinstall ~/rpmbuild/RPMS/x86_64/vdsm ~/rpmbuild/RPMS/x86_64/vdsm_pyth
         </properties>
 </profile>
 </nowiki>
-Please notice that starting F17 you should update to java 7
+* Please notice that when using F17 you should update to java 7
 '''Installing JBoss AS - Manually (From Zips)'''
  $> cd /usr/share
  $> wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
