@@ -4,27 +4,35 @@ permissions are build into the backend archetecture and how to add/update autori
 
 == Terminology ==
 
-* Permission
+* '''Permission'''
 The building block in authorization which is composed from the target Object, User, and Role Ids.
 
        Permission
       /     |     \
    Object  User   Role
 
-* Role
+* '''Object or Entity or Manage Entity'''
+The target object on which we want to enforce authorization. Most of the members in <code>'''VdcObjectType.java'''</code> are <br>
+managed by authorization and that's why they are some times refered to as "managed entities" in the this context.<br>
+'''VM''', '''VmPool''' etc are a managed entities while '''Tags''' and '''Bookmarks''' are not.
+
+* '''User'''
+A logged-in user which is performing the command and is managed in a Directory Server (IPA, Active Directory, IBM Tivoly Server).
+
+* '''Role'''
 Role is Action groups container. A role can also be associated as a USER/ADMIN type. ADMIN roles
 have Action Groups which USER dont
 
-* PreDifined Roles
-SuperUser, DataCenterAdmin are examples of predefined roles inserted during installation to DB. They could be edited.<br>
-for the list of full predefind roles see PredefinedRoles.java and dbscripts/insert_predefined_roles.sql
+* '''Pre-Defined Roles'''
+<code>SuperUser</code> and <code> DataCenterAdmin </code> are examples of predefined roles inserted during installation to DB. They could be edited.<br>
+for the list of full predefind roles see <code>'''PredefinedRoles.java'''</code> and <code>'''dbscripts/insert_predefined_roles.sql'''</code>
 
-* Action Group
+* '''Action Group'''
 group of Actions
 
-* Action
-The basic building block. Every Command in the engine is an Action and has a unique ID given in the VdcActionType.java
+* '''Action'''
+The basic building block. Every '''Command''' in the engine is an action and has a unique ID given in <code>'''VdcActionType.java'''</code>
 
-* MLA - multi level administration. 
+* '''MLA''' - multi level administration. 
 To make a long story short it was the initial name of the permission feature in the engine. At first there was no <br>
 authorization on actions (woohoo!) so a special UI was designed to enforce it and its name was "Multi Level Administration Portal"
