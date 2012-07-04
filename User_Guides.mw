@@ -38,27 +38,27 @@ Reference material includes any appropriately licensed information considered a 
 
 === Engine ===
 
- * [[Build & Install RPM]]
- * [[Building Ovirt Engine]]
- * [[Installing PostgreSQL DB]]
- * [[Working with gerrit.ovirt.org]]
+* [[Build & Install RPM]]
+* [[Building oVirt engine]]
+* [[Installing PostgreSQL DB]]
+* [[Working with gerrit.ovirt.org]]
 
 === Node ===
 
- * [[Node Building]]
+* [[Node Building]]
 
 === VDSM ===
 
- * [[Vdsm Getting Started]]
- * [[Vdsm]]
- * [[Vdsm_Developers]]
- * [[Vdsm_Log_Files]]
- * [[Vdsm_Storage_Terminology]]
+* [[Vdsm Getting Started]]
+* [[Vdsm]]
+* [[Vdsm_Developers]]
+* [[Vdsm_Log_Files]]
+* [[Vdsm_Storage_Terminology]]
 
 === Reports and Data Warehouse=== 
 
- * [[How to setup a oVirt DWH development environment]]
- * [[How to setup a oVirt Reports development environment]]
- * [[Ovirt DWH]]
+* [[How to setup a oVirt DWH development environment]]
+* [[How to setup a oVirt Reports development environment]]
+* [[Ovirt DWH]]
 
 [[Category:Documentation]]
