@@ -1,1 +1,19 @@
-== Under construction==
+== Installation ==
+We are using version 9.1.x <br>
+[http://www.ovirt.org/wiki/Installing_PostgreSQL_DB Installation Guide]
+
+== Authrntication ==
+Trust<br>
+Password<br>
+GSSAPI<br>
+SSPI<br>
+Kerberos<br>
+Ident<br>
+Peer<br>
+LDAP<br>
+RADIUS<br>
+Certificate<br>
+PAM<br>
+
+details:<br>
+[http://www.postgresql.org/docs/9.1/static/auth-methods.html Authrntication Methods]
