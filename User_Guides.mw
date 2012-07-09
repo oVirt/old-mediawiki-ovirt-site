@@ -16,7 +16,7 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 == Source Control ==
 
-The documentation subproject has a git repository. Like the other oVirt git repositories it is managed using Gerrit. Follow the [[Working_with_gerrit.ovirt.org|instructions for registering with and using Gerrit]], then use the git clone command to get a local copy of the repository:
+The documentation subproject has a git repository. Like the other oVirt git repositories it is managed using Gerrit. Follow the [[Working with oVirt Gerrit | instructions for registering with and using Gerrit]], then use the git clone command to get a local copy of the repository:
 
  $ git clone gerrit.ovirt.org:ovirt-docs
 
