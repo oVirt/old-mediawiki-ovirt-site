@@ -41,7 +41,8 @@ option 2 <br>
 
 [http://www.postgresql.org/docs/current/static/runtime-config-connection.html Connection parameters]<br>
 === Remote access (listen_addresses) ===
-[http://www.postgresql.org/docs/current/static/auth-pg-hba-conf.html pg_hba.conf]<br>
+  [http://www.postgresql.org/docs/current/static/auth-pg-hba-conf.html pg_hba.conf]<br>
+
 === max_connections ===
 === shared_buffers ===
 === work_mem ===
