@@ -6,7 +6,7 @@ The following sections are a step-by-step manual to set up a Gerrit environment 
 oVirt Gerrit environment is in gerrit.ovirt.org
 
 === Registering as a user ===
-First of all you need to register as a new user to gerrit. You can do that by using any OpenID provider:
+First of all you need to register as a new user to [http://gerrit.ovirt.org gerrit]. You can do that by using any OpenID provider:
 
 * Login page shows Google and Yahoo <BR>
 * Any fedora FAS account can login as well via <BR>
