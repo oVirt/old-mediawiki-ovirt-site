@@ -37,6 +37,8 @@ option 2 <br>
   echo "SELECT pg_reload_conf();" | psql -U <user> <database>
 
 === SIGHUP ===
+  pg_ctl reload
+
 [http://www.postgresql.org/docs/current/static/runtime-config-connection.html Connection parameters]<br>
 === Remote access (listen_addresses) ===
 [http://www.postgresql.org/docs/current/static/auth-pg-hba-conf.html pg_hba.conf]<br>
