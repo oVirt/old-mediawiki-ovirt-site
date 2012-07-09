@@ -99,7 +99,7 @@ As developer you might need to add many hosts into your environment for tests. V
 * 1) Create a guest as Fedora 17 (Tested on Fedora 17 but should work in higher versions as well)
 
 * 2) Install required packages
- <nowiki># yum install vdsm vdsm-hook-faqemu -y </nowiki>
+ <nowiki># yum install vdsm-hook-faqemu -y </nowiki>
 
 * 3) Change vdsm config file to enable this feature
  <nowiki># vi /etc/vdsm/vdsm.conf 
@@ -107,7 +107,7 @@ As developer you might need to add many hosts into your environment for tests. V
 
  fake_kvm_support = true  </nowiki>
 
-* 4) Restart the vdsmd daemon
+* 4) Restart the vdsmd daemon ('''Only required if you had previously VDSM installed''')
  <nowiki># systemctl restart vdsmd.service </nowiki>
 
 * 5) Open the oVirt Engine portal and add the new 'Fake' Host 
