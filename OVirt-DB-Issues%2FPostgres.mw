@@ -17,3 +17,26 @@ PAM<br>
 
 details:<br>
 [http://www.postgresql.org/docs/9.1/static/auth-methods.html Authentication Methods]
+
+== Creating a new user ==
+[http://www.postgresql.org/docs/9.1/static/sql-createrole.html  Create Role]<br>
+[http://www.postgresql.org/docs/9.0/static/sql-createuser.html  Create User]<br>
+[http://www.postgresql.org/docs/9.0/static/libpq-pgpass.html    The password file]<br>
+
+== Configuration ==
+
+===postgresql.conf===
+   [http://www.postgresql.org/docs/current/static/view-pg-settings.html defaults]<br>
+   [http://www.postgresql.org/docs/current/static/sql-reset.html reset]<br>
+=== reload configuration ===
+=== SIGHUP ===
+[http://www.postgresql.org/docs/current/static/runtime-config-connection.html Connection parameters]<br>
+=== Remote access (listen_addresses) ===
+[http://www.postgresql.org/docs/current/static/auth-pg-hba-conf.html pg_hba.conf]<br>
+=== max_connections ===
+=== shared_buffers ===
+=== work_mem ===
+=== effective_cache_size ===
+=== synchronous_commit ===
+=== Guidlines  dedicated / shared ===
+=== pgtune ===
