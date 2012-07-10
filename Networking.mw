@@ -20,7 +20,8 @@ Network roles (storage / live migration network etc.) <BR>
 Using Network manager vs. using scripts (VDSM level) <BR>
 Sniff guest IP and report to the engine without guest tools <BR>
 Anti-spoofing layer two/three <BR>
-
+network groups <BR>
+dynamic network <BR>
 
 
 
