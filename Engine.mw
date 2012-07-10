@@ -1,5 +1,8 @@
-
-== What is Enine? ==
+== What is Engine? ==
 oVirt Engine is the brain behind it all ;)
 
 It's responsible for orchestrating multiple Hosts/VMs in clusters & managing entire Data Centers.
+
+
+== Engine Overview ==
+Overview presentation can be found at [[File:Ovirt-engine-core_beijing_2012.odp]]
