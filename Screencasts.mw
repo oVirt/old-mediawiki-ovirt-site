@@ -1,0 +1,70 @@
+
+We would like to make between 5 and 10 screencasts to show oVirt features (both new and old) before the [[Second Realease | oVirt 3.1 release]].
+
+Each screencast consists of three phases: Scripting the demoing of the feature, recording the video which shows the feature, and finally adding a voiceover soundtrack to explain what is happening on the screen. Ideally, we can separate each of these stages to spread the load of production.
+
+== Features to show ==
+
+Priority 1 features:
+
+* [[#Adding a new VM | Adding a new VM]] to an existing oVirt cluster
+* [[#Migrating a VM | Migrating a VM]] live to a different node
+* [[#Cloning | Cloning]] a virtual machine from a template or a snapshot
+* [[#Storage | Adding storage to a storage domain]]
+* [[#Managing images | Uploading ISOs or migrating an image using virt-v2v or virt-p2v]]
+
+Priority 2 features (if we have time):
+
+* [[#Gluster integration | Gluster integration]] - adding and using a GlusterFS storage cluster as a storage domain for oVirt
+* [[#Log collector | Log collector]]
+* [[#Back-up and restore| Backing up and restoring a VM]]
+
+Each of these features needs a script (the prerequisites, the steps to follow to showcase the feature, and a general guideline to someone adding a voice-over), and someone to record the video - see [[recording video]] for how to do this, and finally, someone to add the soundtrack - see [[recording video#Adding a soundtrack | adding a soundtrack]] for instructions.
+
+== Adding a new VM ==
+
+=== Prerequisites ===
+
+=== Demo steps ===
+
+== Migrating a VM ==
+
+=== Prerequisites ===
+
+=== Demo steps ===
+
+== Cloning ==
+
+=== Prerequisites ===
+
+=== Demo steps ===
+
+== Storage ==
+
+=== Prerequisites ===
+
+=== Demo steps ===
+
+== Managing images ==
+
+=== Prerequisites ===
+
+=== Demo steps ===
+
+== Gluster integration ==
+
+=== Prerequisites ===
+
+=== Demo steps ===
+
+== Log collector ==
+
+=== Prerequisites ===
+
+=== Demo steps ===
+
+== Back-up and restore ==
+
+=== Prerequisites ===
+
+=== Demo steps ===
