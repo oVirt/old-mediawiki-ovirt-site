@@ -1,0 +1,5 @@
+
+== What is Enine? ==
+oVirt Engine is the brain behind it all ;)
+
+It's responsible for orchestrating multiple Hosts/VMs in clusters & managing entire Data Centers.
