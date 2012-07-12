@@ -62,12 +62,12 @@ The oVirt 3.1 release includes these notable changes.
 
 == Network ==
 
-- setup multiple networks and new ui[[BR]]
-- mtu ("jumbo frames")[[BR]]
-- vm networks ("bridgeless networks")[[BR]]
-- optional/required networks[[BR]]
-- hotplug nic[[BR]]
-- port mirroring ("promiscuous mode")[[BR]]
+* setup multiple networks and new ui
+* mtu ("jumbo frames")
+* vm networks ("bridgeless networks")
+* optional/required networks
+* hotplug nic
+* port mirroring ("promiscuous mode")
 
 == Interfaces ==
 
