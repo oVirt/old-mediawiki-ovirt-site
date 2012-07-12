@@ -1,8 +1,16 @@
-[[Category: Infrastructure documentation]]
-
-= Jenkins oVirt Server =
+== Jenkins oVirt Server ==
 
 oVirt Jenkins server is jenkins.ovirt.org (107.22.215.130)
+
+== Recommended server specs ==
+
+These are specs for servers to run Jenkins slaves for oVirt testing. One base configuration could be:
+
+* 3 VMs
+** 16 GB RAM each
+** 4/8 cores each
+** 200 GB disk each
+** 32 GB swap
 
 == Access ==
  * OS Level Access: Restricted to infra team only. (PKI)
@@ -81,3 +89,5 @@ from jenkins jobs, do this on each jenkins slave:
 edit /etc/suders:
  * remark the line: Defaults    requiretty
  * add the line: jenkins ALL=(ALL)       NOPASSWD: ALL
+
+[[Category: Infrastructure documentation]]
