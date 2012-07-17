@@ -1,48 +1,203 @@
 {{autolang|base=yes}}
 
+<!-- The actual name of your feature page should look something like: Features/YourFeatureName.  This keeps all features in the same namespace -->
 = Quota =
 
 == Summary ==
-The Quota feature enables limiting user resource usage.
-
+<!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
+Quota provides a way for the Administrator to limit the resource usage in the System.<BR>
 
 == Owner ==
-* Name: [[User:gchaplik| Gilad Chaplik]]
-* Email: <gchaplik@redhat.com>
+<!--This should link to your home wiki page so we know who you are-->
+* Feature owner: [[User:gchaplik| Gilad Chaplik]]
+:* GUI Component owner: [[User:gchaplik| Gilad Chaplik]]
+:* REST Component owner: [[User:mpasternak| Michael Pasternak]]
+:* Engine Component owner: [[User:gchaplik| Gilad Chaplik]]
+:* QA Owner: [[User:ykaul| Yaniv Kaul]] 
 
+<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
+* Email: gchaplik@redhat.com
 
 == Current status ==
-* http://www.ovirt.org/wiki/Features/DetailedQuota
-* Last updated date: Wed Nov 9 2011
+* Target Release: 
+* Status: Development Stage
+* Last updated date: Tue July 17 2012
 
 
 == Detailed Description ==
-Today, oVirt doesn't have a mechanism for limiting user resource usage.
-Such a mechanism is important, especially in multi-tenant environments.<BR>
-Thus, the Quota feature will add a mechanism to manage and monitor the resource usage in such environments.<BR>
-This mechanism should provide the administrator a management configuration page, to set rules for each aspect, crucial enough, to be management consumable.
+<!-- Provide the details of the feature. What is it going to include. See the sections below. -->
+<!-- New entities and changes in existing entities. -->
+Today, when consuming resources from the Data Center, such as storage (when creating a new virtual disk) and virtual CPUs/RAM (when running VMs),
+the user is only limited by the available resources. Thus, there is no way to limit the resources that can be used by a user. This limitation is problematic, especially in multi-tenant environments.
 
-== Benefit to oVirt ==
-The Quota feature enables limiting resources, which is highly relevant in multi-tenant environments (such as public and private cloud providers).
-This can help oVirt get better exposure in such environments.
+Quota provides the administrator a logic mechanism for managing resources allocation for users and groups in the Data Center.<BR>
+This mechanism allows the administrator to manage, share and monitor the resources in the Data Center from the engine core point of view.
+
+=== Entity Description ===
+
+==== Quota ====
+<!-- New entities and changes in existing entities. -->
+Quota is a new searchable object in the system, which contains the following properties:
+# Name
+# Description
+# Data Center, for which the quota applies.
+# List of unlimited number of rules, where each rule should specify a resource and resource limitation parameters.
+# List of Users/Groups that have permission to use the Quota, i.e. assign it to VMs/disks
 
 
-== Dependencies / Related Features ==
-<!-- What other packages (RPMs) depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
-Quota is relevant in every feature that either explicitly or implicitly manage resources in the oVirt engine.
+For example, the following Quota configuration, is for R&D team:
+# Name: DevelQuota
+# Description: Quota configured for R&D team
+# Data Center: Devel_Data_Center
+# Resource limitations:
+#* VCPU/Memory limitations:
+#** Cluster1: 6 VCPUs, 9GB RAM
+#** Cluster2: 8 VCPUs, 12GB RAM
+#*Storage Limitations:
+#** Storage Domain1: 20GB
+#** Storage Domain1: 10GB
+#** Storage Domain3: 50GB
+#List of Users/Groups:
+#* developers
+#* team_leaders
+#* new_developer
+
+
+The limitation on a resource can be specified either on a specific resource (see example above) or globally.<BR>
+The global resource defines limitation on the Data Center for a specific type of resource (storage or runtime).<BR>
+
+
+For example the following limitations represent global limitation on the Cluster and the Storage:
+* Global Cluster: 14 VCPUs, 21GB RAM
+* Global Storage: 80GB
+
+
+A Quota limitation can be also set to unlimited (both globally, or on a specific resource).<BR>
+The following Quota is an example of unlimited quota on both global and specific resources:
+* Global Cluster: Unlimited
+* Storage Domain1: Unlimited
+* Storage Domain2: 50GB
+* Storage Domain3: Unlimited
+
+==== Data Center ====
+The Quota object is in the data center scope. Also, a Data Center must be related to at least one Quota object.<BR>
+Each Data Center entity is configured with one of the following operation modes:
+# Disable - The Data Center would not be subject to Quota restrictions.
+# Soft Limit - Only warning messages would be issued when Quota restrictions are violated.
+# Hard Limit - Enforced the restrictions completely and prevent the resource allocation.
+
+See more info in the [[#Installation/Upgrade|Installation/Upgrade]] section
+
+=== CRUD ===
+<!-- Describe the create/read/update/delete operations on the entities, and what each operation should do. -->
+* Quota object can be removed only if there are no entities such as VM, Template or Disks that are referencing it.
+* Quota object can be edited; When a Quota is edited, the change should apply to all the entities that are assigned to this Quota, but only for future allocations of resources.<BR>
+Quota object parameters modifications can result in exceeding the resource limitations:
+:* reducing the disk limitation of some storage domain
+:* reducing CPU/RAM limitation
+:* removing a user from the list of users permitted to use the quota
+:All the above will not cause a resource deallocation. However, users will not be able to exceed the Quota limitations again after the resources are released.
+:Also, if a user was removed from the list of permitted users it won't result in an immediate interruptive action. However, that user won't be able to use this quota again, unless permitted to.
+
+=== User Experience ===
+<!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
+<!-- GUI mockups should also be added here to make it more clear -->
+* The Administrator will be able to create/edit a Quota using a wizard.<BR>The wizard should allow administrators to configure Cluster Quota parameters, storage Quota parameters, and assign users which will be able to consume the Quota resources.
+* For supporting definition of Quota per user, the Quota can be cloned.<BR>Such a clone procedure should copy all the Quota properties except of the name and the description.
+* Users assigned to the Quota would need a power user permission on the consumable resources (for example when add/edit a VM). The wizard should enable automatic addition of these permissions.<BR>However, no permissions will be removed when removing resources from the Quota, but an alert message will be presented as follow: <BR>
+ ''Attention, Quota ${QuotaName} resources have been changed. If needed, update relevant permissions accordingly''.
+* Note, that the user who created the Quota object would not necessarily have permissions, to consume from it.<BR>Administrator should also have an aggregated view of defined Quotas vs actual storage space used/free.
+* Since quota is an entity in data center scope, the quota main tab will be visible only when selecting a data center in the tree navigation panel.
+
+The following UI mockups contain guidelines for the different screens and wizards:
+
+[[File:dc.png]]
+
+[[File:new_quota_on_clusters_add.png]]
+
+[[File:new_quotaon_clusters.png]]
+
+[[File:new_quotaon_clusters_statistics.png]]
+
+[[File:new_quotaon_dc.png]]
+
+[[File:new_quotaon_dcadd.png]]
+
+[[File:quota.png]]
+
+[[File:statistic.png]]
+
+[[File:users.png]]
+
+=== Installation/Upgrade ===
+<!-- Describe how the feature will effect new installation or existing one. -->
+* For a new/upgraded Data Center, the default operation mode will be 'disabled' (which means it won't be subject to any quota restrictions).
+
+* When the administrator chooses to enable the Quota mechanism, He needs to reference all existing objects in Data Center to a valid quota, in Audit (/permissive/soft limit) mode, the administrator will still be allowed to work without quota, but in order to move to enforce mode, all the objects should refer to a quota.
+
+=== User work-flows ===
+<!-- Describe the high-level work-flows relevant to this feature. -->
+The Administrator Portal should allow the following operations:
+* View/edit/create Quota's
+* View Quota per resource (User/Storage domain etc.)
+
+
+The Power User Portal should allow the following operations:
+* View Quota's defined/used for himself
+* Consume Quota upon resource usage (runtime and storage)
+
+=== Enforcement ===
+* Quota runtime limitation should be enforced during VM execution.
+* Quota storage limitation should be enforced upon any requirement for storage allocation.
+* When dealing with QCOW disks (which is not pre-allocated, like templates or stateless VM) the Quota should consume the total maximum size of the disk, since it is the potential size that can be used.
+* In the future Quota can be extended to have enforcement for network usage, storage throughput etc.
+
+=== Notification ===
+* Quota will have a threshold configured to alert when the Quota is about to be full.
+:* The threshold will be configured for the administrator and for the User. The default value for administrators is 60%, and for regular users is 75%.
+:* When Quota reaches the threshold limit, an audit log notification should be issued to the Administrator or the User.
+:* User audit log should be: 
+ ''Usage on resource $(Resource) in Quota $(Quota_Name) has reached the configured threshold ${Threshold_User_Percentage}. Please contact your system administrator.''
+:* Administrator audit log should be:
+ ''Usage on resource $(Resource) in Quota $(Quota_Name) has reached the configured threshold ${Threshold_Admin_Percentage}.''
+* Quota will also have a configurable grace percentage, for the user to have a chance to consume resources even if the Quota has exceeded the limit.
+:* The configured default grace should be 20% of the Quota resources limitations.
+:* When user starts to use the grace percentage, a notification event should be triggered both to the administrator, and the user which exceeded this limit.
+:* When Quota reaches its resources limit, it will be able to consume resources depending on the grace percentage configured in it.
+:* An audit log warning message should be issued to the User and the administrator:
+ ''Usage on resource $(Resource) in Quota $(Quota_Name) has reached its limit due to an action made by user ${UserName}.''
+
+=== Events ===
+The Administrator, will be able to set an email event, when Quota resources exceeded their limit.
+
+== Dependencies / Related Features and Projects ==
+<!-- What other packages (RPMs) depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? Add a link to the feature description for relevant features. -->
+* Quota is not depended on outside features, and should be managed only in the engine core scope.
+* When handling plug/unplug disks or attach/detach disks, the entity will still consume resources from its configured original Quota it was created on.
 
 Affected oVirt projects:
-* REST Interface
+* API
+* CLI
 * Engine-core
 * Webadmin
 * User Portal
 
-Quota has to be taken in consideration, for every new feature that will involve consumption of resources managed by it.
-
 == Documentation / External references ==
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
-
+http://www.ovirt.org/wiki/Features/Quota<BR>
+http://www.ovirt.org/wiki/Features/Design/Quota
 
 == Comments and Discussion ==
-* See [[Talk:Features/Quota]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
+http://www.ovirt.org/wiki/Talk:Features/Quota
+
+== Future Work ==
+* There should be a new business entity which will represent a group of storage domains as one unit.<BR>The new business entity will be named, Virtual Storage Group, and should be referenced in the quota as a business entity and have storage restrictions on it.
+* Enforcement of network usage and storage throughput using the Quota entity.
+* Add historic Quota utilization to history database.
+
+== Open Issues ==
+<!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
+* Email Notifications.
+* Copy template disk, the quota will be counted only one time.
+* Snapshots: snapshots won't be taken into account when checking remaining storage quota.
 [[Category: Feature]]
