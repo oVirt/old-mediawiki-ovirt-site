@@ -73,13 +73,13 @@ The testcases and kept in the [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a
 == Basic Testcases ==
 
 {|
-! Testcase !! Difficulty !! Complete !! Updated
+! Testsuite !! Difficulty !! Complete !! Updated
 |-
-| Basic Auto-Install - Installation with the basic parameters and a login into the TUI || easy || 100% || 2012-06-01
+| Basic Auto-Install - Installation with the basic parameters and a login into the TUI || easy || 80% [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a=blob;f=tests/igor/suites/ai_basic.suite;hb=HEAD testsuite] || 2012-06-20
 |-
-| Alternate Auto-Install - Installation with other (TBD) parameters || medium || 0% || 2012-06-01
+| Alternate Auto-Install - Installation with other (TBD) parameters || medium || 10% [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a=blob;f=tests/igor/suites/ai_extended.suite;hb=HEAD testsuite] || 2012-06-20
 |-
-| Basic TUI-Install - Simple TUI installation using sane defaults || medium || 100% || 2012-06-12
+| Basic TUI-Install - Simple TUI installation using sane defaults || medium || 80% [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a=blob;f=tests/igor/suites/mi_basic.suite;hb=HEAD testsuite] || 2012-06-20
 |-
 | Basic TUI Testing - Perform a couple of TUI tasks  || medium || 30% || 2012-06-12
 |-
