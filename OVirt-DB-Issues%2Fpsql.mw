@@ -1,1 +1,16 @@
-== Under construction==
+== psql==
+Help
+  \h
+  \?
+
+Editor
+  \e 
+Format
+  \x 
+History
+  \set HISTFILE ~/.psql_history- :HOST - :DBNAME
+  \set HISTSIZE 2000
+Cost
+  \timing
+Run script
+  \i [script name]
