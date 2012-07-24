@@ -23,6 +23,7 @@
 *** Backing up database.
 ** MeetBot
 ** Jenkins
+*** Daily backups of the config.
 ** Gerritt
 ** Mailman
 *** Making a new mailing list
@@ -30,7 +31,7 @@
 ** MySQL
 * Services upgrades
 * DNS requests
-* 
+*
 
 == Standard procedures ==
 
