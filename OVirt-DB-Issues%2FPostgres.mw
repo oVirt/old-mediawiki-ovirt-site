@@ -66,6 +66,9 @@ The risk that is taken by using asynchronous commit is of data loss, not data co
 The user can select the commit mode of each transaction, so that it is possible to have both synchronous and asynchronous commit transactions running concurrently. This allows flexible trade-offs between performance and certainty of transaction durability.
 
 === Guidlines for Dedicated/Shared server ===
+For the following , a good understanding of the database clock lifecycle is needed.
+ page request --> changes --> dirty --> commit to WAL --> Statistics (pg_stat_user_tables etc.) (*) --> Write to disk & clean dirty flag (*)
+ (*) - async
 Dedicated 
    logging can be more verbose
    shared_buffers - 25% of RAM
