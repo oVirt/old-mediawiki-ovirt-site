@@ -117,10 +117,11 @@ Controls the line prefix of each log message.
 
 === log_statement ===
 Controls which statements are logged
-  one
+  none
   ddl
   mod
   all
+
 === log_min_duration_statement ===
 Controls how long should a query being executed to be logged<br>
 Very usefull to find most expensive queries
