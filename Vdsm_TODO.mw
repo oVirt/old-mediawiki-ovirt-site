@@ -34,7 +34,7 @@
 
 * Define an API.VMState "enumeration" and use API.VMState.UP instead of the string 'Up'.
 
-* factor betterPopen and betterThreading out of vdsm. They deserve a pipy review under the names cPopen and pthreading respectively.
+* factor betterPopen and betterThreading out of vdsm. They deserve a pipy review under the names cPopen and [http://pypi.python.org/pypi/pthreading pthreading] respectively.
 
 == Bugzilla ==
 
