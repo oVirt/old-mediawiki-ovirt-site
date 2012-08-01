@@ -20,6 +20,8 @@ mv ovirt-engine ovirt-engine.old
 mv ovirt-engine-backups/ovirt-engine-DATE_OF_BACKUP/ovirt-engine .
 find ovirt-engine -user jboss-as -exec chown ovirt:ovirt {} \;
 cp -f ovirt-engine.old/*.sh ovirt-engine/
+service nfs-server disable; service nfs-server enable
+service rpb-bind disable; service rpc-bind enable
 </pre>
 
 * Execute oVirt Engine Setup utility
