@@ -4,20 +4,23 @@ Due to the nature of this upgrade, we DO NOT recommend it, users are advised to 
 
 = Upgrade Instructions =
 * Remove all ovirt packages
-  * Run '''yum remove ovirt\*'''
-  * DO NOT run the engine-cleanup utility
+<pre> yum remove ovirt\* </pre>
+'''DO NOT run the engine-cleanup utility'''
+
 * Upgrade the system the oVirt Engine was installed on to Fedora 17:
-  * http://fedoraproject.org/wiki/PreUpgrade
+** http://fedoraproject.org/wiki/PreUpgrade
+
 * Install oVirt Engine rpms
-  * Run '''yum install ovirt-engine'''
+<pre> yum install ovirt-engine </pre>
+
 * Restore previous keystore and preserve .sh scripts
-  * Run: 
-'''
+<pre>
 cd /etc/pki
 mv ovirt-engine ovirt-engine.old
 mv ovirt-engine-backups/ovirt-engine-DATE_OF_BACKUP/ovirt-engine .
 find ovirt-engine -user jboss-as -exec chown ovirt:ovirt {} \;
-\cp -f ovirt-engine.old/*.sh ovirt-engine/
-'''
+cp -f ovirt-engine.old/*.sh ovirt-engine/
+</pre>
+
 * Execute oVirt Engine Setup utility
-  * '''engine-setup'''
+<pre> engine-setup </pre>
