@@ -99,6 +99,8 @@ Or copy & paste the content of the file below into ~/.m2/settings.xml
 </nowiki>
 
 * Do not omit the active-profiles element in the above xml, it is crucial.
+* If your JDK installation resides in a different path , please specify it instead of the provided path at JAVA_HOME.
+
 
 
 <!--<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
