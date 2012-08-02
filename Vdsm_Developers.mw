@@ -193,13 +193,11 @@ Example:
 
   <nowiki># virsh capabilities
   ...
-  </features>
     <cpu mode='custom' match='exact'>
       <model fallback='allow'>Penryn</model>
       <vendor>Intel</vendor>
       <feature policy='require' name='vmx'/>
     </cpu>
-  <clock offset='utc'/></nowiki>
   ....
 Note that I have removed all flags from my Hypervisor, just leaving he vmx but you can use all of them if you want.
 
@@ -212,7 +210,6 @@ Alright, time to add to your virtual machine ('''guest''') the vmx flag:
       <vendor>Intel</vendor>
       <feature policy='require' name='vmx'/>
     </cpu>
-    <name>ovirt-node-2-5</name></nowiki>
 
 Of course, all the above steps could be automated/improved. Fell free to change it.
 
