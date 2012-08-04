@@ -17,7 +17,6 @@ network groups <BR>
 dynamic network <BR>
 network lables <BR>
 Support nested vlans. (QinQ) <<BR>
-Using Network manager vs. using scripts (VDSM level) <BR>
 
 == Technologies / Stuff ==
 UCS integration <BR>
