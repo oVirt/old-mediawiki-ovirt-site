@@ -260,7 +260,7 @@ The following connections are supported:
  
 === Resource representation ===
 
-scheme:
+==== Scheme ====
 
  <link href="/api/hosts/{host:id}/nics/setupnetworks" rel="setupnetworks">
   <request>
@@ -308,12 +308,14 @@ scheme:
   </response>
  </link>
 
-usage:
+=== Ssage ===
+
+==== Attaching a network to a NIC ====
 
  POST /api/hosts/{host:id}/nics/setupnetworks
  <action
   <host_nics>
-    <host_nic id="41561e1c-c653-4b45-b9c9-126630e8e3b9">
+    <host_nic>
         <name>em1</name>
         <network id="00000000-0000-0000-0000-000000000009"/>
         <ip address="10.35.1.247" netmask="255.255.254.0" gateway="10.35.1.254"/>
@@ -324,6 +326,42 @@ usage:
     <force>false</false>
   </host_nics>
  </action>
+
+
+==== Attaching several (VLAN'd) networks to a NIC ====
+
+The expected VLAN device should be sent with the parameters of the network which is created, in addition to the NIC that the network is being added on.
+
+The expected name for this device is: NIC_NAME.VLAN_ID
+
+ POST /api/hosts/{host:id}/nics/setupnetworks
+ <action
+  <host_nics>
+    <host_nic>
+        <name>em1</name>
+    </host_nic>
+    <host_nic>
+        <name>em1.100</name>
+        <network>
+            <name>vlan100</name>
+        </network>
+        <ip address="10.35.100.247" netmask="255.255.254.0" gateway="10.35.100.254"/>
+        <boot_protocol>dhcp</boot_protocol>
+    </host_nic>
+    <host_nic>
+        <name>em1.200</name>
+        <network>
+            <name>vlan200</name>
+        </network>
+        <ip address="10.35.200.247" netmask="255.255.254.0" gateway="10.35.200.254"/>
+        <boot_protocol>dhcp</boot_protocol>
+    </host_nic>
+    <checkConnectivity>true</checkConnectivity>
+    <connectivityTimeout>60</connectivityTimeout>
+    <force>false</false>
+  </host_nics>
+ </action>
+
 
 == Open issues ==
  
