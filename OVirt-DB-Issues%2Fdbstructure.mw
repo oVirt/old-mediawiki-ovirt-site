@@ -108,7 +108,8 @@ where:
 ===     What is done in the post-upgrade step? ===
 ===     how does the upgrade scri[pt works ===
 ===     How do I upgrade db configuration? ===
-===     How do I upgrade db schema?
+===     How do I upgrade db schema? ===
+
 ===     How do I upgrade db data? ===
 ===     How do I cherry-pick a commit from upstream to z-stream? ===
 ===     How to prevent script collisions? ===
