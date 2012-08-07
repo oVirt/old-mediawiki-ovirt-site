@@ -125,6 +125,10 @@ where:
       [Name] is a short descriptive name for the script.(Please do not put your BZ # as part of the Name)
 
 ===     What is done in the pre-upgrade step? ===
+  configuration changes
+  schema_version table changes
+  special fixes
+
 ===     What is done in the post-upgrade step? ===
 ===     how does the upgrade scri[pt works ===
 ===     How do I upgrade db configuration? ===
