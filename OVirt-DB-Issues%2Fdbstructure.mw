@@ -95,7 +95,8 @@ All schema & data changes will be done via upgrade scripts.
  * New upgrade scripts should be pushed into git with a higher version than the latest script.
 
 
-===     What is my script version? ===
+===     What is my database version? ===
+
 ===     What are the upgrade script naming conventions? ===
 Each upgrade change should be in a separate file formatted  by MM_mm_nnnn_[Name].sql
 where:
