@@ -54,5 +54,7 @@ All table definitions are defined in ''create_views.sql'' script<br>
 Any modification to a view is done directly on this file.<br>
 
 === Stored Procedures ===
+All application store procedure definitions are defined in files that match the *_sp.sql pattern<br>
+Any modification to a those files is done directly in the relevant file.<br>
 
 === Helper functions ===
