@@ -50,6 +50,8 @@ Apart of that this file has also some secondary index definitions to boost relat
 Since our application is mostly for ''read'' operations, adding an index does not affect the application performance<br>
 
 === Views ===
+All table definitions are defined in ''create_views.sql'' script<br>
+Any modification to a view is done directly on this file.<br>
 
 === Stored Procedures ===
 
