@@ -158,7 +158,8 @@ where:
   Example:
     Object column white list
 
-===     how does the upgrade scri[pt works ===
+===     how does the upgrade script works ===
+
 ===     How do I upgrade db configuration? ===
 All changes to the configuration stored in the vdc_options table will be done using one script named<br>
 '''config.sql''' under '''dbscripts/upgrade/pre_upgrade''' directory.<br>
