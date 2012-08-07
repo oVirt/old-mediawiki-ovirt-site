@@ -130,6 +130,10 @@ where:
   special fixes
 
 ===     What is done in the post-upgrade step? ===
+  Modifications that are using views/stored procedures
+  Example:
+    Object column white list
+
 ===     how does the upgrade scri[pt works ===
 ===     How do I upgrade db configuration? ===
 ===     How do I upgrade db schema? ===
