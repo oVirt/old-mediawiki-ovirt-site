@@ -82,10 +82,8 @@ Example:
           WHERE vds_id = v_vds_id;
       end if;
     END;
-
    RETURN;
   END; $procedure$
- LANGUAGE plpgsql;
 
 == Scripts ==
 All scripts resides under the ''dbscripts'' directory<br>
