@@ -164,6 +164,17 @@ where:
 
 ===     how does the upgrade script works ===
 
+validates scripts for changes & version duplication<br>
+drops views & stored procedures<br>
+runs pre-upgrade scripts<br>
+checks for gaps<br>
+check for already installed scripts<br>
+run the upgrade script<br>
+updates schema_version<br>
+restore views & stored procedures<br>
+run post upgrade scripts<br>
+generate .schema file<br>
+
 ===     How do I upgrade db configuration? ===
 All changes to the configuration stored in the vdc_options table will be done using one script named<br>
 '''config.sql''' under '''dbscripts/upgrade/pre_upgrade''' directory.<br>
