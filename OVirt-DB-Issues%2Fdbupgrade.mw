@@ -43,6 +43,15 @@ Upgrade scripts are sorted and executed lexicography, that's why it is important
 Temporary functions in upgrade scripts should be renamed __temp_<name>
 This is in order to distinguish them from real persistent functions and preventing the  chance to drop such a function by mistake in an upgrade script.
 
+= When upgrade scripts are called ? =
+
+''Clean Install''<br>
+In clean install this is done after initial (default) data is inserted to the database<br>
+This makes sure that default data is inserted on initial schema before any upgrade script change it.<br>
+
+''Upgrade''<br>
+In upgrade we first drop all SPs & Views and then run all upgrade scripts and finally restore views & SPs<br>
+
 ===     What is done in the pre-upgrade step? ===
   configuration changes
   schema_version table changes
