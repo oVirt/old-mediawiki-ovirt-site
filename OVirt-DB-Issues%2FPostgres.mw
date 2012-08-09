@@ -24,7 +24,7 @@ details:<br>
 [http://www.postgresql.org/docs/9.0/static/libpq-pgpass.html    The password file]<br>
 
 == Configuration ==
-
+Default postgres configuration files are under ''/var/lib/pgsql/data''
 ===postgresql.conf===
    [http://www.postgresql.org/docs/current/static/view-pg-settings.html defaults]<br>
    [http://www.postgresql.org/docs/current/static/sql-reset.html reset]<br>
@@ -92,7 +92,6 @@ Shared
 pgtune takes the default postgresql.conf and expands the database server to be as powerful as the hardware it's being deployed on.
 
 [http://sourcefreedom.com/tuning-postgresql-9-0-with-pgtune/ How to tune your database]
-
 
 == VACCUM ==
 
