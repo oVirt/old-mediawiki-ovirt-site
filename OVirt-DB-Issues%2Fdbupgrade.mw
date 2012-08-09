@@ -81,7 +81,8 @@ upgrade scripts.
 ===     How do I upgrade db data? ===
 When the DB data is changed (using DML), the change must be introduced via an upgrade script.
 
-===     How do I cherry-pick a commit from upstream to z-stream? ===
+===     How do I cherry-pick a commit from upstream to? ===
+
 ===     How to prevent script collisions? ===
 Upgrade scripts have the MM_mm_nnnn prefix, this uniquely defines the upgrade script<br>
 The ''upgrade.sh'' script check for such duplications and fails with a detailed error pointing on the duplicate version if found.<br>
