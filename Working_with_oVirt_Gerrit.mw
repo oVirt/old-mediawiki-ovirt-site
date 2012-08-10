@@ -82,11 +82,11 @@ git rebase origin/master
 git push gerrit.ovirt.org:ovirt-engine HEAD:refs/for/master
  </nowiki>
 
-or you could adjust the config as follows then you could do a simple push with changes done to master 
+Assuming you remote repo is origin you could also
 
  <nowiki>
-git config remote.origin.push refs/heads/*:refs/for/* 
-</nowiki>
+git push origin HEAD:refs/for/master
+ </nowiki>
 
 ==== Track patch review process ====
 The review process is comprised of:
