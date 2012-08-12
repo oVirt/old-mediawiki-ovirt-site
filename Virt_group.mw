@@ -1,0 +1,42 @@
+== Virt Group ==
+
+=== weekly group contact ===
+
+each week one of the team members cares to quick-respond on questions sent to 
+
+# engine-devel@ovirt.org and users@ovirt.org
+# #ovirt IRC channel at oftc.net
+
+- will keep a list of 2 months a head for now.
+
+{| class="wikitable"
+|-
+! scope="col"| Person
+! scope="col"| date
+! scope="col"| notes
+|-
+! scope="row"| Roy Golan
+| 12-16 Aug
+| -
+|-
+! scope="row"| Omer Frenkel
+| 19-23 Aug
+| -
+|-
+! scope="row"| Enter your name here
+| 26-30 Aug
+| -
+|-
+|}
+
+tip for monitoring the IRC channel:
+
+* - pidgin users: configure the "nick said" plugin and in the options fill in "Words to highlight on" words like <BR>
+vm, pool, migrate, migration, guest and so on. 
+
+* - konversation users:
+
+# Prepare yourself a short list of keywords. see the suggestion above.
+# Open Konversation -> Settings -> Configure Konversation
+# There's a tree on the left side. Choose Highlight.
+# Add your key words, enable sound if you can.
