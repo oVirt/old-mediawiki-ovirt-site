@@ -1,32 +1,32 @@
 This page is for captuaring Networking related features we would like to have in oVirt going forward.
-
+ 
 == Features ==
-SR-IOV support <BR>
-IPV6 support <BR>
-network SLA <BR>
-user defined networks (vlan ranges) <BR>
-IP allocations (melange in openstack, but forman has support as well) <BR>
-security groups <BR>
-permissions on networks (control who may attach what to which network) <BR>
-open vSwitch <BR> 
-GRE tunneling (VPC - virtual private network)<BR>
-Network roles (storage / live migration network etc.) <BR>
-Sniff guest IP and report to the engine without guest tools <BR>
-Anti-spoofing layer two/three <BR>
-network groups <BR>
-dynamic network <BR>
-network lables <BR>
-Support nested vlans. (QinQ) <<BR>
-
+* SR-IOV support
+* IPV6 support
+* network SLA
+* user defined networks (vlan ranges)
+* IP allocations (melange in openstack, but forman has support as well)
+* security groups
+* permissions on networks (control who may attach what to which network)
+* open vSwitch
+* GRE tunneling (VPC - virtual private network)
+* Network roles (storage / live migration network etc.)
+* Sniff guest IP and report to the engine without guest tools
+* Anti-spoofing layer two/three
+* network groups
+* dynamic network
+* network lables
+* Support nested vlans. (QinQ)
+ 
 == Technologies / Stuff ==
-UCS integration <BR>
-Blade Harmony <BR>
-quantum integration<BR>
-'network-manager' architecture - looking into re-designing the engine networking code. <BR>
-open flow <BR>
-Using Network manager vs. using scripts (VDSM level) <BR>
-
-
+* UCS integration
+* Blade Harmony
+* quantum integration
+* 'network-manager' architecture - looking into re-designing the engine networking code.
+* open flow
+* Using Network manager vs. using scripts (VDSM level)
+ 
+ 
 We'll open a wiki page for each of the above lines.
-
+ 
 [[Category:Draft documentation]]
