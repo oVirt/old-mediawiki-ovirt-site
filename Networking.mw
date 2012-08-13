@@ -7,7 +7,7 @@ network SLA <BR>
 user defined networks (vlan ranges) <BR>
 IP allocations (melange in openstack, but forman has support as well) <BR>
 security groups <BR>
-permissions on networks <BR>
+permissions on networks (control who may attach what to which network) <BR>
 open vSwitch <BR> 
 GRE tunneling (VPC - virtual private network)<BR>
 Network roles (storage / live migration network etc.) <BR>
