@@ -76,6 +76,7 @@ libvirt which includes no-arp-mac-spoofing rule.
 
 === Documentation / External references ===
 [http://libvirt.org/firewall.html Firewall and network filtering in libvirt]
+
 [http://berrange.com/posts/2011/10/03/guest-mac-spoofing-denial-of-service-and-preventing-it-with-libvirt-and-kvm/ Guest MAC Spoofing DoS and its preventation]
 
 === Open Issues ===
