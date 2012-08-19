@@ -1,6 +1,6 @@
 ==This page describes what features are supported in which cluster/DC level==
 
-===For Cluster level 3.2:===
+===Cluster level 3.2:===
 * network filtering, anti-mac spoofing
 
 ===For Data Centre 3.2:===
