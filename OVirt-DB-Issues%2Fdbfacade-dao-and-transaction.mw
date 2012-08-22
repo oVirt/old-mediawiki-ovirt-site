@@ -50,7 +50,7 @@ Modify the BE Class to reflect the changes<br>
 Modify DAO interface and implementation for the BE<br>
 Modify tests for all relevant DAO implementation calls<br>
 Modify test data for your BE in fixtures.xml file<br>
-Modify any Query objects needed for accessing the BE data from clients<br>
+Modify any Query objects/parameters needed for accessing the BE data from clients<br>
 Run the upgrade script<br>
 Run the BE tests and verify that your BE is working as expected<br>
 
