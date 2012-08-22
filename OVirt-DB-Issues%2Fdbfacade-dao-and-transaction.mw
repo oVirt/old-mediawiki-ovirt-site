@@ -1,4 +1,8 @@
 == What is the usage of DbFacadeLocator? ==
+Create a datasource from the standalone.xml configuration<br>
+Create the DbFacade instance and configure it<br>
+Create a dialect<br>
+Create a jdbcTemplate and associate it with the DbFacade instance<br>
 
 == What is the usage of Db Facade? ==
 
