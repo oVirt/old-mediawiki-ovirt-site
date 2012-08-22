@@ -48,7 +48,6 @@ Check JBOSS standalone.xml and verify that user/database<br> and all relevant se
 Check the JBOSS server log for detailed error message.
 Check the postgres error log for detailed error message.<br>
 
-=== Can not connect to a remote database. ===
 === JBoss is crashing on start giving a SQL Error  ===
 Check server log
 Check engine log
