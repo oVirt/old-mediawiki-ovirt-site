@@ -9,7 +9,7 @@ Holds a map of all entity as a key and DAO implementation as a value.<br>
 Used mainly to get a DAO object to work with<br>
 
 == What is a dialect used for? ==
-A dialect is used in order to handle in a generic way DB calls on multi DB engine applications<br>
+A dialect is used in order to handle in a generic way DB engine differences on multi DB engine applications<br>
 We had used that in the past to handle both MS SQL & Postgres <br>
 Example 
   A table T with columns c1 and c2 where c1 is the primary key
