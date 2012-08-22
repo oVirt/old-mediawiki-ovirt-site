@@ -138,7 +138,7 @@ Upgrade configuration are under /etc/vdsm-reg/vdsm-reg.conf
 Tool that executes the upgrade:
   <nowiki>/usr/share/vdsm-reg/vdsm-upgrade</nowiki>
 
-Example, upgrading manually from ovirt-node 2.5.0-2.0 to 2.5.1-1.0
+Example, (developer mode only) upgrading manually from ovirt-node 2.5.0-2.0 to 2.5.1-1.0
   <nowiki> * Installed ovirt-node 2.5.0-2.0
   * Copied 2.5.1-1.0 image to /data/updates/ovirt-node-image.iso
   * mount -o loop /data/updates/ovirt-node-image.iso /live
