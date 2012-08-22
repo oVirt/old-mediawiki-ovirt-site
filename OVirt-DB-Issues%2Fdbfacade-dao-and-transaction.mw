@@ -42,6 +42,12 @@
 == Trouble Shooting  ==
 
 === Can not connect to the database. ===
+Check that you postgresql service is up<br>
+If you are using remote database, check Postgres configuration for listening to remote connections<br>
+Check JBOSS standalone.xml and verify that user/database<br> and all relevant settings are OK<br>
+Check the JBOSS server log for detailed error message.
+Check the postgres error log for detailed error message.<br>
+
 === Can not connect to a remote database. ===
 === JBoss is crashing on start giving a SQL Error  ===
         check server log
