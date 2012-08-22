@@ -50,10 +50,11 @@ Check the postgres error log for detailed error message.<br>
 
 === Can not connect to a remote database. ===
 === JBoss is crashing on start giving a SQL Error  ===
-        check server log
-        check engine log
-        compensation & async tasks data
-        check schema version
+Check server log
+Check engine log
+Compensation & async tasks data
+Check schema version
+
 === My database is deleted each time I run the tests.  ===
 Verify that your database engine name is not engine<br>
 When you run mvn with tests the fixtures.xml is used to create a engine database for each test, this will drop and create your engine database.<br>
