@@ -7,8 +7,6 @@ We have to notify the clients ASAP on entities that are changing status, this im
 
 The process of logging those changes and roll back them if something fails is called compensation.
 
-=== Isolation level ===
-
 === Compensation change log ===
 
 === What changes are logged ===
