@@ -37,7 +37,7 @@ ADD DAO to DB Facade<br>
 Create tests for all DAO implementation calls, inherit BaseGenericDaoTestCase/BaseReadDaoTestCase/BaseDaoTestCase<br>
 Create test data for your BE in fixtures.xml file<br>
 ADD DAO to engine-daos.properties<br>
-ADD any Query objects needed for accessing the BE data from clients<br>
+ADD any Query objects needed for accessing the BE data from clients and add them to VdcQueryType <br>
 Run the upgrade script<br>
 Run the BE tests and verify that your BE is working as expected<br>
 
