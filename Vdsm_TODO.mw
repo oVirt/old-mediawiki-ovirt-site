@@ -16,7 +16,7 @@
 * running vdsClient from the project root dir ends with tears. Some PYTHONPATH games should fix this.
 
 == Testing ==
-* write an automatic script that runs on each and every new change to gerrit, and adds an insulting comment if <tt>pyflakes</tt> fails for the new change.
+* <strike>write an automatic script that runs on each and every new change to gerrit, and adds an insulting comment if <tt>pyflakes</tt> fails for the new change.</strike> Thanks, Robert!
 
 * extend the former script, so that it runs a complete <tt>`make distcheck && make install`</tt> in a confined environment (chroot, VM) and reports if there is an error.
 
