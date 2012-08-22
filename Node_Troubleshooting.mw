@@ -122,7 +122,6 @@ To show the certificate data:
 
 Yum is only supported in offline image editing.  On a running system, it's disabled.  A how-to for editing an ISO image after creation will be coming soon.
 
-
 ==== Upgrading oVirt Node ====
 
 The log of upgrade operation is: 
