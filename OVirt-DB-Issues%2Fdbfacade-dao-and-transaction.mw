@@ -5,6 +5,8 @@ Create a dialect<br>
 Create a jdbcTemplate and associate it with the DbFacade instance<br>
 
 == What is the usage of Db Facade? ==
+Holds a map of all entity as a key and DAO implementation as a value.<br>
+Used mainly to get a DAO object to work with<br>
 
 == What is a dialect used for? ==
 
