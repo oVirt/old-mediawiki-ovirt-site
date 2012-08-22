@@ -64,6 +64,8 @@ For each one, CommandBase calls beforeTask(), and then fires an SPM command acco
 When the command ends, AsyncTaskManager wakes up the handler, and it runs endSuccessfully().
 CommandBase then starts the process over again with the next handler.
 
+Note: the treatment of HSM commands remains synchronious, as has no bearing on this proposed feature's design.
+
 ===== Unsuccessful Execution =====
 See the execution flow above.
 When an SPM task fails, the relevant handler is awoken, and it calls endWithFailure().
