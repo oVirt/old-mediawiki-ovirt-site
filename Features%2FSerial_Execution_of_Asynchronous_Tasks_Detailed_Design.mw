@@ -70,7 +70,8 @@ When an SPM task fails, the relevant handler is awoken, and it calls endWithFail
 CommandBase then iterates in a ''reverse'' order, and calls each handler's compensate.
 
 ==== Events ====
-N / A
+===== JBoss Restart/Crash =====
+When JBoss starts, task polling is restarted (as before this change). The only change is that now tasks are now persisted with their executionIndex, so when a tasks completes the command issuing it can be resumed from the correct place.
 
 === Dependencies / Related Features and Projects ===
 Live Storage Migration depends on this feature.
