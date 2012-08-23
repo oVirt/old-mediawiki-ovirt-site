@@ -1,0 +1,37 @@
+== CPU & Memory limitations ==
+
+
+----
+
+'''''TBD! please contact Doron Fediuck (dfediuck@redhat.com) for more details.'''''
+
+------
+
+=== Relevant oVirt Projects ===
+
+* oVirt engine
+
+* VDSM
+
+* MoM
+
+
+=== CPU ===
+
+* Guarenteed
+
+* Hard Limits
+
+* Soft Limits
+
+
+=== Memory ===
+
+* Guarenteed
+
+* Hard Limits
+
+* Soft Limits
+
+
+[[Category:SLA]]
