@@ -207,4 +207,5 @@ http://www.ovirt.org/wiki/Talk:Features/Quota
 * Email Notifications.
 * Copy template disk, the quota will be counted only one time.
 * Snapshots: snapshots won't be taken into account when checking remaining storage quota.
+[[Category:SLA]]
 [[Category: Feature]]
