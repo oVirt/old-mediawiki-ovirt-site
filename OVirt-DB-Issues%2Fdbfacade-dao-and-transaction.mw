@@ -149,7 +149,7 @@ Our Postgres implementation class is PostgresSqlInjectionChecker
 == Trouble Shooting  ==
 
 === Can not connect to the database. ===
-Check that you postgresql service is up<br>
+Check that your postgresql service is up<br>
 If you are using remote database, check Postgres configuration for listening to remote connections<br>
 Check JBOSS standalone.xml and verify that user/database<br> and all relevant settings are OK<br>
 Check the JBOSS server log for detailed error message.
