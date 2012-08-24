@@ -1,28 +1,21 @@
-'''This is the wiki for the [http://www.ovirt.org oVirt project].'''
-
-This wiki is used for:
-
-* Developers for technical [[Documentation|documentation]] about their project.
-* Organizers to collaborate on planning and executing.
-* Documenters write tutorials, API documentation, and so forth.
-
-In short, ''this wiki is for the oVirt community collaborative documentation''.
+'''This is the [http://www.ovirt.org oVirt Community's] collaborative documentation wiki.'''
 
 == What is here ==
 
-* Release notes for the [[OVirt 3.1 release notes | oVirt 3.1]] and [[Node Release Notes | oVirt Node]]
+* Release notes for [[OVirt 3.1 release notes | oVirt 3.1]] and [[Node Release Notes | oVirt Node]].
 * Developer wiki for the oVirt [[Node]] project.
 * Developer wiki for the oVirt Engine project. Begin with [[DevProcess]], [[Building oVirt engine]] and [[Working with oVirt Gerrit]]
 * Content for attendees and organizers of [[oVirt Global Workshops| oVirt Global Workshops]].
 * Content for attendees and organizers of the [[Workshop November 2011|November 2011 workshop]].
-* Content related to [[making an oVirt release]]
+* Content related to [[making an oVirt release]].
 * Work pages for the oVirt [[Infrastructure]] team.
 * Work pages for the oVirt [[website organisation]].
 * Project [[Communication]].
 * [[:Category:Project proposal|Projects proposing to join oVirt]]
 * [[Special:AllPages|List of all pages]]
 
-== Links for authors and editors ==
+
+== For potential authors and anyone wanting to edit pages ==
 
 * [[How to create a user account]] on this wiki.
 ** More information is covered in [[Help:Editing]].
