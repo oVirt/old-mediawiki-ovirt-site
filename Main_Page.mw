@@ -10,6 +10,10 @@
 
 * [[Documentation|Main documentation page]] - With links to much of the useful end user documentation. '''(useful)'''
 
+=== Communication channels  ===
+
+* [[Communication]] - Lists all of our mailing lists, IRC channels, and our public weekly meeting information page (including logs).
+
 === Developer information ===
 
 * Developer wiki for the oVirt [[Node]] project.
@@ -25,7 +29,6 @@
 
 === Other links ===
 
-* Project [[Communication]].
 * [[:Category:Project proposal|Projects proposing to join oVirt]].
 * [http://wiki.ovirt.org/w/index.php?title=Special%3AAllPages&from=&to=&namespace=14 Category list of all oVirt wiki pages] '''(useful)'''
 
