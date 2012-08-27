@@ -1,0 +1,84 @@
+{| class="wikitable"
+! Area
+! Action
+! Internal impl.
+! Quantum API
+|-
+|rowspan="3"| Logical network
+| Create network
+| AddNetwork
+| http://docs.openstack.org/api/openstack-network/1.0/content/Create_Network.html
+|-
+| Update network
+| UpdateNetwork
+| http://docs.openstack.org/api/openstack-network/1.0/content/Update_Network.html
+|-
+| Delete network
+| RemoveNetwork
+| http://docs.openstack.org/api/openstack-network/1.0/content/Delete_Network.html
+|-
+|rowspan="3"| Attachment of network to cluster
+| Attach to cluster
+| AttachNetworkToVdsGroup
+| ?
+|-
+| Update attachment
+| UpdateNetworkOnCluster
+| ?
+|-
+| Detach from cluster
+| DetachNetworkToVdsGroup
+| ?
+|-
+|rowspan="2"| Apply networking on host
+| Apply network
+| SetupNetworks<br>
+<br>
+Deprecated:<br>
+UpdateNetworkToVdsInterface<br>
+AttachNetworkToVdsInterface<br>
+DetachNetworkFromVdsInterface<br>
+AddBond<br>
+RemoveBond
+| ?
+|-
+| Commit changes on host
+| CommitNetworkChanges
+| ?
+|-
+|rowspan="3"| vNICs on VM Templates
+| Create vNIC on Template
+| AddVmTemplateInterface
+|
+|-
+| Update vNIC on Template
+| UpdateVmTemplateInterface
+|
+|-
+| Delete vNIC on Template
+| RemoveVmTemplateInterface
+|
+|-
+|rowspan="5"| vNICs on VMs
+| Create vNIC on VM
+| AddVmInterface
+| http://docs.openstack.org/api/openstack-network/1.0/content/Create_Port.html
+|-
+| Update vNIC on VM
+| UpdateVmInterface
+| http://docs.openstack.org/api/openstack-network/1.0/content/Update_Port.html
+|-
+| Delete vNIC on VM
+| RemoveVmInterface
+| http://docs.openstack.org/api/openstack-network/1.0/content/Delete_Port.html
+|-
+| Activate vNIC on running VM
+| RunVm<br>
+HotPlugUnplugVmNic
+| http://docs.openstack.org/api/openstack-network/1.0/content/Put_Attachment.html
+|-
+| Deactivate vNIC on running VM
+| StopVm (on callback)<br>
+HotPlugUnplugVmNic
+| http://docs.openstack.org/api/openstack-network/1.0/content/Delete_Attachment.html
+|}
