@@ -61,7 +61,11 @@ N / A
 
 ==== User work-flows ====
 
+Flow chart:
 [[File:SEAT_flow.png]]
+
+DFD:
+[[File:SEAT_DFD.png]]
 
 ===== Successful Execution =====
 instead of calling executeCommand() CommandBase will iterate over its SPMAsyncTaskHandlers and execute them. The defalut  EntireCommandSPMAsyncTaskHandler will simply call the command's executeAction for backwards compatibility.
