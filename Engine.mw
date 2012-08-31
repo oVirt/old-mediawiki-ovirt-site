@@ -1,8 +1,10 @@
 == What is Engine? ==
-oVirt Engine is the brain behind it all ;)
-
 It's responsible for orchestrating multiple Hosts/VMs in clusters & managing entire Data Centers.
-
+Wiki Content:
+** How do we work: [[DevProcess]]
+** How to build oVirt engine: [[Building oVirt engine]] 
+** How to work with gerrit: [[Working with oVirt Gerrit]]
+** How to set up the frontend (WebAdmin and UserPortal) for development: [[DebugFrontend]]
 
 == Engine Overview ==
 Overview presentation can be found at [[File:Ovirt-engine-core_beijing_2012.odp]]
