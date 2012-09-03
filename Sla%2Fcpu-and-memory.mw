@@ -53,6 +53,7 @@ quota:The optional quota element specifies the maximum allowed bandwidth(unit: m
  Share:VM with bigger share value will gain priority to run
 
 === Memory ===
+
 int	virDomainSetMemoryParameters	(virDomainPtr domain, 
 					 virTypedParameterPtr params, 
 					 int nparams, 
