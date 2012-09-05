@@ -1,0 +1,25 @@
+The purpose of this page is to document talk proposals submitted for the [http://ovirtbangalore2012.eventbrite.com/ oVirt Bangalore workshop] to be hosted at Red Hat's campus.
+
+== Guidelines for Speakers ==
+
+Please submit talk proposals for review by sending a message to [http://lists.ovirt.org/pipermail/users users@ovirt.org]. Your email should include your full name, speaker biography and your talk abstract. We will accept submissions through Friday, 28 September 2012 at [http://lists.ovirt.org/pipermail/users 23:55 UTC]. Speakers will be notified of acceptance by Friday, 5 October 2012.
+
+Accepted speakers should plan to submit their slides to [Leslie Hawthorn http://wiki.ovirt.org/wiki/User:Lh] no later than close of business on Monday, 9 October 2012.  
+
+== Submissions by Author ==
+
+=== R. Kanagaraj (RK) ===
+
+[http://lists.ovirt.org/pipermail/users/2012-August/003511.html  Setting up test environment for large scale oVirt deploymnent]
+
+=== Kanagaraj ===
+
+[http://lists.ovirt.org/pipermail/users/2012-September/003685.html Overview of Webadmin and UI Frameworks]
+
+== Expected Submissions ==
+
+=== Deepak Shetty ===
+
+Integrating GlusterFS as a storage domain in VDSM and supporting storage array offloads from VDSM 
+
+* Follow up note sent requesting author send bio and abstract to oVirt users list.
