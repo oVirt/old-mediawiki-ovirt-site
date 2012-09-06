@@ -1,0 +1,7 @@
+'''This is a placeholder page for oVirt plugins'''
+
+Current Pluggable systems listing:
+
+* [[VDSM-Hooks]]
+* [[GUI Plugins]]
+* [[SLA Plugins]]
