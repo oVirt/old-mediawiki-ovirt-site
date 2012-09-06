@@ -1,0 +1,8 @@
+The smartcard hook adds smartcard support for spice enabled VMs. 
+This hook enables the host/VM-side of smartcard implementation in the SPICE service, but the SPICE client should also enable the smartcard support (see <code>remote-viewer --help-all</code> for details)
+
+syntax:
+ smartcard: smartcard=true
+
+libvirt xml:
+ <smartcard mode='passthrough' type='spicevmc'/>
