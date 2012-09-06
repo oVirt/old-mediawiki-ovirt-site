@@ -1,3 +1,5 @@
+[[Category:SLA]]
+
 Maintaining SLA requires dynamic management of each virtualization host according to a policy.  The exact policy depends on the goals set by the administrator and/or users.  For example, a policy may try to aggressively pack as many VMs on hosts in order to maximize host resource utilization and minimize the number of hosts which must be powered on.  In another policiy example, an administrator may wish to favor a certain class of golden VMs over other VMs in order to provide guaranteed performance for the golden class and best-effort service for the others.
 
 == Flow overview ==
