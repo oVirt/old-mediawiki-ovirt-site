@@ -1,0 +1,25 @@
+[[Category:SLA]]
+
+== '''Development setup''' ==
+ 
+
+This page holds relevant information for MoM and other SLA-related packages
+
+'''OS'''
+* Fedora
+** Version 17
+
+
+'''Needed RPMs'''
+
+* '''vdsm'''
+** version
+** URL:
+
+* '''libvirt'''
+** version
+** URL:
+
+* '''MoM'''
+** version
+** URL:
