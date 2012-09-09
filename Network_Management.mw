@@ -8,31 +8,34 @@
 |rowspan="3"| Logical network
 | Create network
 | AddNetwork
-| http://docs.openstack.org/api/openstack-network/1.0/content/Create_Network.html
+| http://wiki.openstack.org/Quantum/APIv2-specification#Create_Network
 | Quantum API accept network name returns id, needs to be persisted in the engine
 |-
 | Update network
 | UpdateNetwork
-| http://docs.openstack.org/api/openstack-network/1.0/content/Update_Network.html
-| Quantum API updates only network name
+| http://wiki.openstack.org/Quantum/APIv2-specificationv#Update_Network
+| Quantum API updates network name, admin. state and sharing status
 |-
 | Delete network
 | RemoveNetwork
-| http://docs.openstack.org/api/openstack-network/1.0/content/Delete_Network.html
+| http://wiki.openstack.org/Quantum/APIv2-specification#Delete_Network
 |
 |-
 |rowspan="3"| Attachment of network to cluster
 | Attach to cluster
 | AttachNetworkToVdsGroup
 | ?
+|
 |-
 | Update attachment
 | UpdateNetworkOnCluster
 | ?
+|
 |-
 | Detach from cluster
 | DetachNetworkToVdsGroup
 | ?
+|
 |-
 |rowspan="2"| Apply networking on host
 | Apply network
@@ -44,45 +47,55 @@ AttachNetworkToVdsInterface<br>
 DetachNetworkFromVdsInterface<br>
 AddBond<br>
 RemoveBond
-| ?
+| http://wiki.openstack.org/ConfigureOpenvswitch
+| This is specific to OVS plugin, need to figure out for other plugin types.
 |-
 | Commit changes on host
 | CommitNetworkChanges
 | ?
+| Perhaps same rollback mechanism used today can be used for plugin configuration as well?
 |-
 |rowspan="3"| vNICs on VM Templates
 | Create vNIC on Template
 | AddVmTemplateInterface
 |
+|
 |-
 | Update vNIC on Template
 | UpdateVmTemplateInterface
+|
 |
 |-
 | Delete vNIC on Template
 | RemoveVmTemplateInterface
 |
+|
 |-
 |rowspan="5"| vNICs on VMs
 | Create vNIC on VM
 | AddVmInterface
-| http://docs.openstack.org/api/openstack-network/1.0/content/Create_Port.html
+|
+|
 |-
 | Update vNIC on VM
 | UpdateVmInterface
-| http://docs.openstack.org/api/openstack-network/1.0/content/Update_Port.html
+|
+|
 |-
 | Delete vNIC on VM
 | RemoveVmInterface
-| http://docs.openstack.org/api/openstack-network/1.0/content/Delete_Port.html
+|
+|
 |-
 | Activate vNIC on running VM
 | RunVm<br>
 HotPlugUnplugVmNic
-| http://docs.openstack.org/api/openstack-network/1.0/content/Put_Attachment.html
+| http://wiki.openstack.org/Quantum/APIv2-specification#Create_Port
+|
 |-
 | Deactivate vNIC on running VM
 | StopVm (on callback)<br>
 HotPlugUnplugVmNic
-| http://docs.openstack.org/api/openstack-network/1.0/content/Delete_Attachment.html
+| http://wiki.openstack.org/Quantum/APIv2-specification#Delete_Port
+|
 |}
