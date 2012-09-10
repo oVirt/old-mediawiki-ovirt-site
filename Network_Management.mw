@@ -111,9 +111,7 @@ HotPlugUnplugVmNic
 
 = How can this be integrated into oVirt =
 
-* We can choose two options:
-# Replace our proprietary L2 VM-network implementation with quantum (bridge plugin can be used to obtain same functionality as today?)
-# Have proprietary L2 network implementations live side by side.
+* Need to have proprietary L2 network implementations live side by side with Quantum plugin.
 
 * In engine, there should be a designation of network type, either 'oVirt internal' style, or 'Quantum: OVS' (or drop the quantum?)
 
