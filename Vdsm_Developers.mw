@@ -193,7 +193,7 @@ Example:
 
 * 5) Install oVirt Node as guest with virt-manager (or any other distro) and shutdown after the installation
 
-* 6) Copy the cpu model, vendor and vmx flag from '''Hypervistor''' to the guest:
+* 6) Copy the cpu model, vendor and vmx flag from '''Hypervisor''' to the guest:
 
   <nowiki># virsh capabilities  (collecting data from hypervisor)
   ...
