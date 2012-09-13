@@ -55,4 +55,5 @@ The usage that VDSM would do of NetworkManager is:
 # Transactional network managment - is it going to be supported?
 # Does NM going to use netcf? because we are working with libvirt and having a common infrastructure is useful.
 
+== References ==
 <references/>
