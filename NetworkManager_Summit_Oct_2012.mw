@@ -39,8 +39,8 @@ The usage that VDSM would do of NetworkManager is:
 # Setting/unsetting variables such as MTU (already possible)
 # Adding removing vlans to the above kinds of networks<ref>It is supported but according to https://bugzilla.gnome.org/show_bug.cgi?id=681109 might suffers of the same dependency issues as in the above footnote.</ref>.
 # Register to the connections for detecting changes (already possible).
-# Backup keyfiles for performing networking rollbacks on cases of connectivity loss or for changing to a previous configuration.
 # Retrieving network and network interfaces information and statistics.
+# Backup keyfiles for performing networking rollbacks on cases of connectivity loss or for changing to a previous configuration.
 
 == Open questions for the Network Manager team ==
 
