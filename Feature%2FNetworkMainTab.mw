@@ -13,11 +13,11 @@
 <!--This should link to your home wiki page so we know who you are-->
 This should link to your home wiki page so we know who you are
 
-* Name: [[User:MyUser| My User]]
+* Name: [[User:alkaplan| Alona Kaplan]]
 
 <!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
 Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved
-* Email: <my@email>
+* Email: <alkaplan@redhat.com>
 
 
 === Current status ===
@@ -28,60 +28,61 @@ Include you email address that you can be reached should people want to contact 
 === Detailed Description ===
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
 === User Experience ===
-<b>Tree</b>
-New items:
-'''Networks''' (a tree item under dc)
+====Tree====
 
- - Displayed Tabs- 
-   * Network (search string- "Network: datacenter.name = 'dcName'")
- - Children- all dc networks
- Network (a tree item under Networks, specific network name)-
- - Displayed Tabs-
-   * Network (search string- "Network: name = 'networkName' datacenter.name = 'dcName'")
-   * Cluster (search string- "Cluster: network.name = 'network.name' datacenter.name = 'dcName'")
-   * Host (search string- "Host: network.name = 'networkName' datacenter.name = 'dcName'")
-   * Vm (search string- "Vms: network.name = 'networkName' datacenter.name = 'dcName'")
-   * Template (search string- "Template: network.name = 'networkName' datacenter.name = 'dcName'")
- - Children - none
- Selected items in thr tree that show Network tab-
-- Networks
-- Network
-- Dc
-- Cluster
+===== New items: =====
+
+#'''Networks''' (a tree item under dc)
+#* Displayed Tabs- 
+#** Network (search string- "Network: datacenter.name = 'dcName'")
+#* Children- all dc networks
+# '''Network''' (a tree item under Networks, specific network name)-
+#* Displayed Tabs-
+#** Network (search string- "Network: name = 'networkName' datacenter.name = 'dcName'")
+#** Cluster (search string- "Cluster: network.name = 'network.name' datacenter.name = 'dcName'")
+#** Host (search string- "Host: network.name = 'networkName' datacenter.name = 'dcName'")
+#** Vm (search string- "Vms: network.name = 'networkName' datacenter.name = 'dcName'")
+#** Template (search string- "Template: network.name = 'networkName' datacenter.name = 'dcName'")
+#* Children - none
+===== Selected items in the tree that show Networks tab: =====
+* Networks
+* Network
+* Dc
+* Cluster
  
-<b>Main Tab</b>
- - Columns- Name, Data Center, VM Network, VLAN tagging, Description
- - Actions- 
-   Add - Same as Add network from Data Centers->Logical Networks sub tab. Only change- first field will be "Data Center" combo box. All the dialog under the "Data Center" combo will be refresh according to the dc change.
-   Edit- Same as Edit network from Data Centers->Logical Networks sub tab. Only change- first field will be "Data Center" combo box. All the dialog under the "Data Center" combo will be refresh according to the dc change.
-   Remove
-<b>Sub Tabs</b>
+====Main Tab====
+* '''Columns'''- Name, Data Center, VM Network, VLAN tagging, Description
+* '''Actions'''- 
+:* Add - Same as Add network from Data Centers->Logical Networks sub tab. Only change- first field will be "Data Center" combo box. All the dialog under the "Data Center" combo will be refresh according to the dc change.
+:* Edit- Same as Edit network from Data Centers->Logical Networks sub tab. Only change- first field will be "Data Center" combo box. All the dialog under the "Data Center" combo will be refresh according to the dc change.
+:* Remove
+====Sub Tabs==== 
+
+'''General'''  
+* '''Feilds'''- Name, Data Center, Description, VM Network, VLAN tagging, MTU
+
+'''Clusters'''
+* '''Columns'''- Name, Compatiblity Version, Network Status, Network Assigned, Network Required, Role
+* '''Actions'''- 
+:*Assign/Unassign Network
+[[File:assignNet.png]]
  
- General-  
- - Feilds- Name, Data Center, Description, VM Network, VLAN tagging, MTU
+'''Hosts''' (list of hosts the network is attached to one of its nicks)
+* '''Columns'''- "Status image", Name, Cluster, Data Center, Status
+* '''Actions'''- none
  
- Clusters- 
- - Columns- Name, Compatiblity Version, Network Status, Network Assigned, Network Required, Role
- - Actions- 
-   Assign/Unassign Network
-  [[File:assignNet.png]]
- 
- Hosts - (list of hosts the network is attached to one of its nicks)
- - Columns- "Status image", Name, Cluster, Data Center, Status
- - Actions- none
- 
- Virtual Machines- (tree of vms that has at least one vnic attached to the network, under each vm- a list of the vnics attached to the network)
+'''Virtual Machines''' (tree of vms that has at least one vnic attached to the network, under each vm- a list of the vnics attached to the network)
   add print screen
- - Columns- Name (Can be expanded to show a list of the vnics the network is attached to) , IP Address, Network, Status, Uptime
- - Actions- none
+* '''Columns'''- Name (Can be expanded to show a list of the vnics the network is attached to) , IP Address, Network, Status, Uptime
+* '''Actions'''- none
  
- Templates- (tree of templates that has at least one vnic attached to the network, under each template- a list of the vnics attached to the network)
- - Columns- Name (Can be expanded to show a list of the vnics the network is attached to), Status, Cluster, Data Center
- - Actions- none
+'''Templates''' (tree of templates that has at least one vnic attached to the network, under each template- a list of the vnics attached to the network)
+* '''Columns'''- Name (Can be expanded to show a list of the vnics the network is attached to), Status, Cluster, Data Center
+* '''Actions'''- none
 
- Permissions-
- - Columns- User, Role, Inherited Permission
- - Actions- Add, Remove
+'''Permissions'''
+* '''Columns'''- User, Role, Inherited Permission
+* '''Actions'''- Add, Remove
 
 == Search ==
 
