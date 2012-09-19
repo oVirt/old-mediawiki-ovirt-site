@@ -51,7 +51,8 @@ The usage that VDSM would do of NetworkManager is:
 #* dhcp,
 #* netmask,
 #* STP,
-#* MTU.
+#* MTU,
+#* Bonding options such as mode and miimon.
 # In regards to gateways, how is Network Manager going to handle routing? Currently oVirt uses only one gateway per network.
 # Currently oVirt relies on 'tc' for port mirroring which makes us need to be able to get device names. Are device names available for all device types supported in NM?
 # Is it possible or planned in the short/medium term to gather statistics (speed, tx/rx/drop rate) of the NM supported (nics and vlans) or soon to be supported (bonds and bridges) devices.
