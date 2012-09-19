@@ -66,9 +66,9 @@ scp -p gerrit.ovirt.org:hooks/commit-msg .git/hooks/</nowiki>
 grep -qs "^$SOB" "$1" || echo "$SOB" >> "$1"</nowiki>
 
 '''Note''':  If you commit something before you do the above, you can add the Change-ID and signed-off-by lines by:
-<nowiki>
+ <nowiki>
 git commit --amend -s
-</nowiki>
+ </nowiki>
 
 ==== Configure the commit template ====
  <nowiki>
