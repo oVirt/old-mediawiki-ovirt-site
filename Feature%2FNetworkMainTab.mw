@@ -29,8 +29,9 @@ Include you email address that you can be reached should people want to contact 
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
 === User Experience ===
 <b>Tree</b>
- New items:
- Networks- (a tree item under dc)
+New items:
+'''Networks''' (a tree item under dc)
+
  - Displayed Tabs- 
    * Network (search string- "Network: datacenter.name = 'dcName'")
  - Children- all dc networks
