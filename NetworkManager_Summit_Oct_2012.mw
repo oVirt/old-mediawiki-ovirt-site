@@ -51,6 +51,7 @@ The usage that VDSM would do of NetworkManager is:
 #* dhcp,
 #* netmask,
 #* STP,
+#* Delay,
 #* MTU,
 #* Bonding options such as mode and miimon.
 # In regards to gateways, how is Network Manager going to handle routing? Currently oVirt uses only one gateway per network.
