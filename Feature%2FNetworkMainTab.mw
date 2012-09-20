@@ -24,7 +24,7 @@
 
 ===== New items: =====
 #'''Networks''' (a tree item under dc)
-#* Displayed Tabs (the tabs that are diplayed when the item is selected in the tree)- 
+#* Displayed Tabs (the tabs that are displayed when the item is selected in the tree)- 
 #** Networks (search criteria- "Network: datacenter.name = 'dcName'")
 #* Children- all dc networks
 # '''Network''' (a tree item under Networks, specific network name)
@@ -35,6 +35,7 @@
 #** Virtual Machines (search criteria- "Vms: network.name = 'treeSelectedNetName' datacenter.name = 'dcName'")
 #** Templates (search criteria- "Template: network.name = 'treeSelectedNetName' datacenter.name = 'dcName'")
 #* Children - none
+
 ===== Selected items in the tree that show Networks tab: =====
 * Networks
 * Network
