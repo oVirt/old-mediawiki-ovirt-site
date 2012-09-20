@@ -100,10 +100,10 @@ Network: (all combinations of search)
 
 === Queries ===
 '''Queries for the sub tabs'''
-#Clusters
-#Hosts
-#Virtual Machines
-#Templates
+#Clusters - returns all the clusters the networks is attached to.
+#Hosts- returns all the hosts the network is attached to one of their nics.
+#Virtual Machines- returns all the vms that have at least one vnic on the network.
+#Templates- returns all the templates that have at least one vnic on the network.
 
 === Documentation / External references ===
 [https://bugzilla.redhat.com/858742 Main Tab RFE]
