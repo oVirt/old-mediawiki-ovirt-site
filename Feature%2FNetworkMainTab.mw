@@ -82,10 +82,10 @@
 * '''Actions'''- Add, Remove
 
 === Search ===
-'''Main Tab Search'''
+'''Main Tab Search''' <br>
 SearchType.Network - add relevant search command
 
-'''Tree'''<br>
+'''Tree''' <br>
 Networks:
 *"Network: datacenter.name ='dcName'"
 Network:  
