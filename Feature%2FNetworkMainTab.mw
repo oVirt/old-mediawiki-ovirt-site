@@ -60,7 +60,7 @@
 <br><br>
 '''Clusters'''
 * '''Columns'''- Name, Compatiblity Version, Network Status, Network Assigned, Network Required, Network Role
-* '''Actions'''- 
+* '''Actions'''
 :*Assign/Unassign Network
 [[File:assignNet.png]]
 <br><br>
