@@ -25,7 +25,7 @@
 ===== New items: =====
 #'''Networks''' (a tree item under dc)
 #* Displayed Tabs- 
-#** Network (search string- "Network: datacenter.name = 'dcName'")
+#** Networks (search string- "Network: datacenter.name = 'dcName'")
 #* Children- all dc networks
 # '''Network''' (a tree item under Networks, specific network name)-
 #* Displayed Tabs-
