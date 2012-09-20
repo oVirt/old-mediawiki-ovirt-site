@@ -68,10 +68,12 @@ option to appropriate option format adding prefix or suffix.
 ====get help for connect====
 
 [mpastern@ovirt-engine-cli (master)]$ ovirt-shell --help
-
+ 
 Usage: ovirt-shell [options]
        ovirt-shell [options] command...
+ 
 This program is a command-line interface to oVirt Virtualization.
+ 
 Options:
   -h, --help            show this help message and exit
   -l URL, --url=URL     specifies the API entry point URL
@@ -111,7 +113,7 @@ Options:
   1. vi ~/.ovirtshellrc
   
   2. set args:
-
+ 
      [ovirt-shell]
      username = "user@domain"
      url = "http[s]://server[:port]/api"
@@ -140,7 +142,7 @@ Options:
       
       ++++++++++++++++++++++++++++++++++++++++++
  
-
+ 
      [oVirt shell (connected)]# 
     
 
@@ -163,7 +165,6 @@ Options:
           
       
   [oVirt shell (connected)]# 
-
 
 
 === Querying ===
