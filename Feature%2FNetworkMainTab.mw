@@ -42,6 +42,8 @@
 * Cluster
 * Host
  
+[[File:NetworkTree.png]]
+
 ==== Main-Tab ====
 * '''Columns'''- Name, Data Center, VM Network, VLAN tagging, Description
 * '''Actions'''- 
