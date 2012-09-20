@@ -93,7 +93,6 @@ Include you email address that you can be reached should people want to contact 
 
 === Benefit to oVirt ===
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
-What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?
 
 
 === Dependencies / Related Features ===
@@ -102,6 +101,7 @@ What is the benefit to the oVirt project?  If this is a major capability update,
 
 === Documentation / External references ===
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
+https://bugzilla.redhat.com/858742
 
 
 === Comments and Discussion ===
