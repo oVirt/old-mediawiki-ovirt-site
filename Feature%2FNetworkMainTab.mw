@@ -55,7 +55,7 @@
 ==== Sub-Tabs ==== 
 
 '''General'''  
-* '''Feilds'''- Name, Description, VM Network, VLAN tagging, MTU
+* '''Fields'''- Name, Description, VM Network, VLAN tagging, MTU
 [[File:NetworkTab.png|1200px]]
 <br><br>
 '''Clusters'''
