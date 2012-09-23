@@ -106,7 +106,7 @@ Network: (search by network properties)
 #Templates- returns all the templates that have at least one vnic on the network.
 
 === Documentation / External references ===
-[https://bugzilla.redhat.com/858742 Main Tab RFE]
+Bugzilla - [https://bugzilla.redhat.com/858742 (networks_main_tab) Networks Main Tab]
 
 
 [[Category:Feature]]
