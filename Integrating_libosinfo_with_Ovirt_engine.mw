@@ -42,8 +42,8 @@ we can either:
 #contribute a java bindings with just a subset of the api - essentially do whats written in 1 and contribute it
 
 === Dependencies / Related Features ===
-ovirt should depend on libosinfo RPM which ships with Fedora 17 and RHEL 6.3
--- add here the list of XMLs and python api classes
+ovirt should depend on libosinfo RPM which ships with Fedora 17 and RHEL 6.3 <br>
+-- add here the list of XMLs and python api classes --
 
 === Documentation / External references ===
 *libosinfo project page on FedoraHosted
