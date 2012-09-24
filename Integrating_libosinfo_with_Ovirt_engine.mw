@@ -22,9 +22,10 @@ Use the knowledge supplied by OS providers to set VM default values of CPU and R
 
 === Detailed Description ===
 
-#abstraction for query Os info - OSInfoService
-engine will have a service to abstract all interaction which the libosinfo. the service will encapsulate
-the means of how to interact with the library itself
+*abstraction for query Os info - OSInfoService
+engine will have a service to abstract all interaction with libosinfo.
+#the service will encapsulate the means of how to interact with the library itself 
+#the service will expose a required subset of libosinfo API
 service verbs:
  OSInfoService
  
