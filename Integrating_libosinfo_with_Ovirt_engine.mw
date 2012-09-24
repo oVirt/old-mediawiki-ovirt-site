@@ -35,7 +35,7 @@ service verbs:
   /**
   * Get the recommended num of CPU by OS
   */
-  int getRecomendedCPUByOS(String os)
+  int getRecommendedCPUByOS(String os)
 
 *interaction detais
 libosinfo relies on xml-based db and Gobject bindigs on top with javascript and python api's.
