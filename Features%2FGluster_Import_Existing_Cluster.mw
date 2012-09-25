@@ -1,5 +1,4 @@
 ==Summary==
-
 This allows the user to import an existing gluster supported cluster to engine. All the hosts part of the cluster will be imported. 
 
 ==Owner==
@@ -26,5 +25,16 @@ This feature provides the support for importing a storage cluster (gluster enabl
 [[File:Gluster-Import-Cluster-2.png]]
 
 == User Work flow ==
+#Click on '''New''' in Clsuter Main Tab, the Create Cluster dialog opens
+#Select '''Enable Gluster Service''' and '''Import existing gluster configuration''' checkboxes.
+#Enter the IP Address/Host name of any server in the cluster
+#Wait for the '''Fingerprint''' to load, and make sure we are communicating with the correct host
+#Provide the '''Root Password''' for the server, and Click '''Ok'''
+#''gluster peer status'' command will be executed on that server
+#'''Add Hosts''' dialog will be shown with the list of hosts in the cluster
+#Edit the '''Name''' of the hosts if required and provide passwords. Same password can be provided for the all the hosts by selecting '''Use a common password'''
+#Make sure the fingerprints are valid and submit the details by clicking '''Ok'''
+
+
 
 [[Category:Feature]]
