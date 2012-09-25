@@ -19,9 +19,6 @@ This feature provides the support for importing a storage cluster (gluster enabl
 
 == Design ==
 
-=== Webadmin ===
-
-==== Mockups ====
 ==== Fetching Gluster Hosts ====
 [[File:Gluster-Import-Cluster-1.png]]
 
