@@ -15,12 +15,13 @@ This feature provides the ability to see the advanced details about the gluster 
 * Status: Design Stage
 * Last updated date: Fri Sep 7 2012
 
+== Detailed Description ==
+
 == Design ==
 
-=== Webadmin ===
-
-==== Mockups ====
+=== Services tab in Cluster ===
 [[File:Clusterservicestab.png]]
+=== Brick Advanced Views ===
 [[File:Gluster_Brick_Advanced_View_1.png]]
 [[File:Gluster_Brick_Advanced_View_2.png]]
 [[File:Gluster_Brick_Advanced_View_3.png]]
