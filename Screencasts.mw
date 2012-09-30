@@ -109,7 +109,19 @@ http://www.youtube.com/watch?v=EVPJXF7MLI0[http://www.youtube.com/watch?v=EVPJXF
 # Edit non_vm- change boot-protocol to dynamic
 # Check save network configuration and click on ok
 # Show the network interfaces table to see the changes
-# Re-open the setup networks to show changes, and open the 'edit boot protocol' for each of the attached networks. 
+# Re-open the setup networks to show changes, and open the 'edit boot protocol' for each of the attached networks.
+
+==== Hotplug Vm Nic ====
+
+=== Prerequisites ===
+* oVirt engine
+* At least one VM
+
+=== Demo steps ===
+# Login to the WebAdmin.
+# Run the VM
+# Add a nic to the vm, check it a activated
+# Show the vnics table to show the new activated nic
 
 == Managing images ==
 
