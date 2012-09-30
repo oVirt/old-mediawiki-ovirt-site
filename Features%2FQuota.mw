@@ -34,7 +34,7 @@ Quota provides the administrator a logic mechanism for managing resources alloca
 This mechanism allows the administrator to manage, share and monitor the resources in the Data Center from the engine core point of view.
 When working with quota, you still need to set the permissions.<BR>
 The quota will only limit the usage of the DC resources.<BR>
-For exmaple:
+For example:
 * If you want a user to be able to create VMs, disks and etc., you need to give him VmCreator in the relevant DC.
 * If you want to limit him to a certain cluster, you will have to give him VmCreator in this cluster, and DiskCreator in relevant DCs/SDs.
 * If you want to further limit the resource consumption, you'll have to enable quota in the DC, create the relevant quota, and define the user as a quota consumer (in the consumers sub tab).
@@ -107,7 +107,7 @@ Quota object parameters modifications can result in exceeding the resource limit
 :Also, if a user was removed from the list of permitted users it won't result in an immediate interruptive action. However, that user won't be able to use this quota again, unless permitted to.
 
 === User Experience ===
-<!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
+<!-- Describe user experience related issues. For example: We need a wizard for ...., the behavior is different in the UI because ....., etc. -->
 <!-- GUI mockups should also be added here to make it more clear -->
 * The Administrator will be able to create/edit a Quota using a wizard.<BR>The wizard should allow administrators to configure Cluster Quota parameters, storage Quota parameters, and assign users which will be able to consume the Quota resources.
 * For supporting definition of Quota per user, the Quota can be cloned.<BR>Such a clone procedure should copy all the Quota properties except of the name and the description.
@@ -207,5 +207,12 @@ http://www.ovirt.org/wiki/Talk:Features/Quota
 * Email Notifications.
 * Copy template disk, the quota will be counted only one time.
 * Snapshots: snapshots won't be taken into account when checking remaining storage quota.
+
+== Acronyms / Abbreviation ==
+
+* DC: Data Center
+* SD: Storage Domain
+* UP: User Portal
+
 [[Category:SLA]]
 [[Category: Feature]]
