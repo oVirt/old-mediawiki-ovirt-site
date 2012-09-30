@@ -85,6 +85,32 @@ http://www.youtube.com/watch?v=EVPJXF7MLI0[http://www.youtube.com/watch?v=EVPJXF
 
 === Demo steps ===
 
+== Network ==
+
+==== Setup Networks ====
+
+=== Prerequisites ===
+* oVirt engine
+* A host (3.1 or more) with at least three nics
+
+=== Demo steps ===
+# Login to the WebAdmin.
+# Add a Network vlan123 (vlan, vm) to the Host's Cluster
+# Show the mtu
+# Add a Network non_vm (not vlan, not vm) to to the Host's Cluster,
+# Assign networks to cluster
+# Open SetupNetworks dialog- show the nic's and network's tooltips
+# Add the Networks to one of the free nics
+# Create a bond between the nic we added the networks to and the free nic
+# Edit the bond- change bonding-mode to mode2
+# Edit vlan123- change boot-protocol to static and configure ip and subnet mask
+## ip: 192.168.10.22
+## subnet mask: 255.255.255.0
+# Edit non_vm- change boot-protocol to dynamic
+# Check save network configuration and click on ok
+# Show the network interfaces table to see the changes
+# Re-open the setup networks to show changes, and open the 'edit boot protocol' for each of the attached networks. 
+
 == Managing images ==
 
 === Prerequisites ===
