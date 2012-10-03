@@ -11,11 +11,11 @@
 To be finalised by October 10th
 
 Features being considered for inclusion/already in master:
-* UI plugins
-* Make network a main tab
-* import of existing gluster clusters
+* [[Features/UIPlugins | UI plugins]]
+* [[Feature/NetworkMainTab | Make network a main tab]]
+* [[Features/Gluster Import Existing Cluster| Import of existing gluster clusters]]
 * Bootstrap improvements
-* SLA is a target for inclusion (MOM)
+* [[Features/MomIntegration | SLA is a target for inclusion (MOM)]]
 * CAC support in user portal for spice
 * VM creation base on pre-defined profiles (instance types)
 * libvdsm preview
