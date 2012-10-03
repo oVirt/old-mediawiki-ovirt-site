@@ -1,0 +1,27 @@
+
+== Timeline ==
+
+* General availability: '''December 12th'''
+** Beta release: '''Mid November'''
+** Feature freeze: '''November 14th'''
+
+== Release Criteria ==
+
+To be finalised by October 10th
+
+Features being considered for inclusion/already in master:
+* UI plugins
+* Make network a main tab
+* import of existing gluster clusters
+* Bootstrap improvements
+* SLA is a target for inclusion (MOM)
+* CAC support in user portal for spice
+* VM creation base on pre-defined profiles (instance types)
+* libvdsm preview
+* Storage live migration (needs to be checked)
+* Sync network
+* nwfilter
+* Primarily a bug fix release (list of bugs would be useful)
+
+[[Category:Releases]]
+[[Category:Release management]]
