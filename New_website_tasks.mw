@@ -194,127 +194,127 @@ The following are links in the staging wiki which are currently dead. We need to
 ! Replacement Page
 ! Redirected?
 ! Notes
-|-
+|- style="background-color:springgreen"
 | [[Communication‏‎]]
 | Exists
 | 
 | Note: 3 links
-|-
+|- style="background-color:springgreen"
 | [[Working with oVirt Gerrit‏‎]]
 | Exists
 | 
 | Note: 3 links
-|-
+|- style="background-color:springgreen"
 | [[Architecture‏‎]]
 | Exists
 | 
 | Note: 2 links
-|-
+|- style="background-color:tomato"
 | [[Upcoming events‏‎]]
 | 
 | Needs RSS generation extension or manual editing
 | Note: 2 links
-|-
+|- style="background-color:springgreen"
 | [[Becoming a maintainer‏‎]]
 | 
 | 
-| Needs migration from wordpress
-|-
+| Done
+|- style="background-color:springgreen"
 | [[Help:Editing‏‎]]
 | Exists
 | 
 | Note: 2 links
-|-
+|- style="background-color:springgreen"
 | [[Building oVirt engine‏‎]]
 | Exists
 | 
 | Note: 2 links
-|-
+|- style="background-color:springgreen"
 | [[Help:Wiki structure‏‎]]
 | Exists
 | 
 | Note: 2 links
-|-
+|- style="background-color:springgreen"
 | [[Community activity‏‎]]
 | Exists
 | 
 | Note: 2 links
-|-
+|- style="background-color:springgreen"
 | [[Contributing to the Node project‏‎]]
 | Exists
 | 
 | Note: 2 links
-|-
+|- style="background-color:springgreen"
 | [[Node Building‏‎]]
 | Exists
 | 
 | Note: 2 links
-|-
+|- style="background-color:springgreen"
 | [[OVirt 3.0 Feature Guide‏‎]]
 | Exists
 | 
 | Note: 2 links
-|-
+|- style="background-color:springgreen"
 | [[Outreach‏‎]]
 | Exists
 | 
 | Note: 2 links
-|-
+|- style="background-color:springgreen"
 | [[Quick Start Guide‏‎]]
 | Exists
 | 
 | Note: 2 links
-|-
+|- style="background-color:springgreen"
 | [[Troubleshooting‏‎]]
 | Exists
 | 
 | Note: 2 links
-|-
+|- style="background-color:springgreen"
 | [[Features/MultipleStorageDomains‏‎]]
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Openly governed project‏‎]]
-| 
+| [[Governance]]
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Join our community‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[WP:UF‏‎]]
 | 
 | 
-| Note: 1 link
-|-
+| Mediawiki legacy - should be dropped
+|- style="background-color:springgreen"
 | [[Live Snapshots‏‎]]
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Template:PD Help Page‏‎]]
 | 
 | 
-| Note: 1 link
-|-
+| Mediawiki legacy
+|- style="background-color:tomato"
 | [[Template:Wiki markup‏‎]]
 | Not needed
 | 
 | Linked from "More formatting" - seems to be a temprary page
-|-
+|- style="background-color:tomato"
 | [[En:Template talk:Link FA‏‎]]
 | 
 | 
-| Note: 1 link
-|-
+| Mediawiki legacy
+|- style="background-color:springgreen"
 | [[Features/Design/Network/Jumbo frames‏‎]]
 | Exists
 | 
 | Presumably linked from release notes
-|-
+|- style="background-color:springgreen"
 | [[Features/NFSv4‏‎]]
 | Exists
 | 
@@ -334,12 +334,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[OVirt 3.0 to 3.1 upgrade‏‎]]
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Help:Contents‏‎]]
 | Exists
 | 
@@ -349,7 +349,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/Design/Network/Required Networks‏‎]]
 | Exists
 | 
@@ -359,7 +359,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/OvirtEnginePort80‏‎]]
 | Exists
 | 
@@ -374,12 +374,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[MediaWiki:Common.css‏‎]]
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[SDK‏‎]]
 | Exists
 | 
@@ -394,7 +394,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/Design/Network/SetupNetworks‏‎]]
 | Exists
 | 
@@ -409,14 +409,14 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/PortMirroring‏‎]]
 | Exists
 | 
 | Note: 1 link
 |-
 | [[Released every six months‏‎]]
-| 
+| [[Release process]]
 | 
 | Note: 1 link
 |-
@@ -429,7 +429,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Troubleshooting NFS Storage Issues‏‎]]
 | Exists
 | 
@@ -444,7 +444,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/Design/cpu-pinning‏‎]]
 | Exists
 | 
@@ -464,7 +464,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/PosixFSConnection‏‎]]
 | Exists
 | 
@@ -476,7 +476,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Ubuntu‏‎]]
-| 
+| External link http://www.ubuntu.com
 | 
 | Note: 1 link
 |-
@@ -484,7 +484,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[LC Japan Workshop Post-Mortem‏‎]]
 | Exists
 | 
@@ -499,7 +499,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/Direct Lun‏‎]]
 | Exists
 | 
@@ -519,14 +519,14 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/PrestartedVm‏‎]]
 | Exists
 | 
 | Note: 1 link
 |-
 | [[Signing up for the users@ovirt.org mailing list‏‎]]
-| 
+| [[Mailing lists]]
 | 
 | Note: 1 link
 |-
@@ -539,7 +539,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Workshop Board Meetings‏‎]]
 | Exists
 | 
@@ -549,12 +549,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[CLI‏‎]]
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/FloatingDisk‏‎]]
 | Exists
 | 
@@ -566,7 +566,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Documentation section‏‎]]
-| 
+| [[Documentation]]
 | 
 | Note: 1 link
 |-
@@ -574,7 +574,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/Quota‏‎]]
 | Exists
 | 
@@ -594,29 +594,29 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features‏‎]]
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Feature/AllInOne‏‎]]
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/Gluster Support‏‎]]
 | Exists
 | 
 | Note: 1 link
 |-
 | [[How the project is structured‏‎]]
-| 
+| [[Governance]]
 | 
 | Note: 1 link
 |-
 | [[Download and install oVirt Node‏‎]]
-| 
+| [[Download]]?
 | 
 | Note: 1 link
 |-
@@ -624,7 +624,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/RemoteDB‏‎]]
 | Exists
 | 
@@ -649,12 +649,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/AdvancedNfsOptions‏‎]]
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/HotPlug‏‎]]
 | Exists
 | 
@@ -666,7 +666,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Fedora‏‎]]
-| 
+| External link: http://www.fedoraproject.org
 | 
 | Note: 1 link
 |-
@@ -674,16 +674,16 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/SPMPriority‏‎]]
 | Exists
 | 
 | Note: 1 link
 |-
 | [[Twitter‏‎]]
+| External link: https://twitter.com/ovirt
 | 
-| 
-| Note: 1 link
+| Link to oVirt Twitter account
 |-
 | [[Template:Anchor‏‎]]
 | 
@@ -696,15 +696,15 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Read the full release notes »‏‎]]
-| 
+| [[oVirt 3.1 release notes]]
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/CloneVmFromSnapshot‏‎]]
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/HotplugNic‏‎]]
 | Exists
 | 
@@ -724,14 +724,14 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/SharedRawDisk‏‎]]
 | Exists
 | 
 | Note: 1 link
 |-
 | [[Who is on the board‏‎]]
-| 
+| [[Board]] or [[Sponsors]]
 | 
 | Note: 1 link
 |-
@@ -749,12 +749,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Requires Bugzilla extension (vestige of Mediawiki origins)
-|-
+|- style="background-color:springgreen"
 | [[Features/Design/DetailedStableDeviceAddresses‏‎]]
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/ImportMoreThanOnce‏‎]]
 | Exists
 | 
@@ -774,7 +774,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/VMPayload‏‎]]
 | Exists
 | 
@@ -794,7 +794,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:springgreen"
 | [[Features/Design/Network/Bridgeless Networks‏‎]]
 | Exists
 | 
