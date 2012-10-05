@@ -1,5 +1,10 @@
 Based on the website redesign plans (see reference links, below), the WordPress-based site at ovirt.org will be merged with this oVirt wiki. The pages from the WP ovirt.org site need to migrate to new homes on the wiki, which redirects where necessary to avoid breaking links.
 
+Colour codes:
+* <span style="background-color:tomato">Page creation/copy needed, or link not yet identified</span>
+* <span style="background-color:orange">in progress</span>
+* <span style="background-color:springgreen">Done</span>
+
 === Pages from Wordpress-based oVirt Site (in order of traffic): ===
 
 {|class="wikitable sortable"
@@ -7,62 +12,62 @@ Based on the website redesign plans (see reference links, below), the WordPress-
 ! Replacement Page
 ! Redirected?
 ! Notes
-|-
+|- style="background-color:springgreen"
 |[http://www.ovirt.org/ Home page]
 |[[Main_Page]]
 |
 |
-|-
+|- style="background-color:springgreen"
 |[http://www.ovirt.org/get-ovirt/ Download oVirt]
 |[[Download]]
 |
 |
-|-
+|- style="background-color:tomato"
 |[http://www.ovirt.org/project/subprojects/ SubProjects]
 |[[Subprojects]]
 |
 |
-|-
+|- style="background-color:tomato"
 |[http://www.ovirt.org/project/resources/ Resources]
 |[[:Category:Collateral]]
 |
 |Not an exact page match, but points to almost the same info, with updates.
-|-
+|- style="background-color:tomato"
 |[http://www.ovirt.org/project/ Project]
 | [[Community]]
 |
 |
-|-
+|- style="background-color:tomato"
 |[http://www.ovirt.org/community-activity/ Community Activity]
 | [[Community]]
 |
-|
-|-
+| We can do better
+|- style="background-color:springgreen"
 |[http://www.ovirt.org/project/community/ Community]
 | [[Community]]
 |
 |
-|-
+|- style="background-color:tomato"
 |[http://www.ovirt.org/news-and-events/workshop/ Workshop]
 | [[Upcoming events]]
 |
 | Linked from front page. We could also pick up the next 1 or 2 events from an RSS feed (we'd need a feed-maker extension)
-|-
+|- style="background-color:tomato"
 |[http://www.ovirt.org/news-and-events/ News and Events]
 | [[News]]
 |
 | Should be an RSS feed - we will include one or two news items on the front page.
-|-
+|- style="background-color:springgreen"
 |[http://www.ovirt.org/about/ About]
 | [[oVirtWiki:About]]
 |
 | In page footer of all pages
-|-
+|- style="background-color:tomato"
 |[http://www.ovirt.org/about/licensing/ Licensing]
 | [[oVirtWiki:About]] and [[Develop]]
 |
 | Isn't this just a mention on the front page, a subsection of "About this project" and soemthing for the developer page?
-|-
+|- style="background-color:tomato"
 |[http://www.ovirt.org/about/sponsors-and-supporters/ Sponsors and Supporters]
 | [[Sponsors]]
 |
@@ -116,15 +121,15 @@ Based on the website redesign plans (see reference links, below), the WordPress-
 |[http://www.ovirt.org/governance/adding-a-subproject/ Adding a Subproject]
 | Could point to [[DevProcess]] (renamed appropriately)
 |
-|
+| Needs a better page
 |-
 |[http://www.ovirt.org/2012/02/03/ovirt-beijing-workshop/ oVirt Beijing Workshop]
 | [[News]] and/or [[Events]]
 |
 |
-|-
+|- style="background-color:springgreen"
 |[http://www.ovirt.org/about/sponsors-and-supporters/intel/ Supporter: Intel]
-|
+| [[Sponsors]]
 |
 | Drop pages for individual supporters
 |-
@@ -137,29 +142,29 @@ Based on the website redesign plans (see reference links, below), the WordPress-
 | [[News]] and/or [[Events]]
 |
 |
-|-
+|- style="background-color:springgreen"
 |[http://www.ovirt.org/about/sponsors-and-supporters/canonical/ Supporter: Canonical]
-|
+| [[Sponsors]]
 |
 | Drop pages for individual supporters
-|-
+|- style="background-color:springgreen"
 |[http://www.ovirt.org/about/sponsors-and-supporters/suse/ Supporter: SUSE]
-|
+| [[Sponsors]]
 |
 | Drop pages for individual supporters
-|-
+|- style="background-color:springgreen"
 |[http://www.ovirt.org/about/sponsors-and-supporters/redhat/ Supporter: Red Hat]
-|
+| [[Sponsors]]
 |
 | Drop pages for individual supporters
-|-
+|- style="background-color:springgreen"
 |[http://www.ovirt.org/about/sponsors-and-supporters/netapp/ Supporter: NetApp]
-|
+| [[Sponsors]]
 |
 | Drop pages for individual supporters
-|-
+|- style="background-color:springgreen"
 |[http://www.ovirt.org/about/sponsors-and-supporters/cisco/ Supporter: Cisco]
-|
+| [[Sponsors]]
 |
 | Drop pages for individual supporters
 |-
