@@ -191,82 +191,82 @@ The following are links in the staging wiki which are currently dead. We need to
 ! Notes
 |-
 | [[Communication‏‎]]
-| 
+| Exists
 | 
 | Note: 3 links
 |-
 | [[Working with oVirt Gerrit‏‎]]
-| 
+| Exists
 | 
 | Note: 3 links
 |-
 | [[Architecture‏‎]]
-| 
+| Exists
 | 
 | Note: 2 links
 |-
 | [[Upcoming events‏‎]]
 | 
-| 
+| Needs RSS generation extension or manual editing
 | Note: 2 links
 |-
 | [[Becoming a maintainer‏‎]]
 | 
 | 
-| Note: 2 links
+| Needs migration from wordpress
 |-
 | [[Help:Editing‏‎]]
-| 
+| Exists
 | 
 | Note: 2 links
 |-
 | [[Building oVirt engine‏‎]]
-| 
+| Exists
 | 
 | Note: 2 links
 |-
 | [[Help:Wiki structure‏‎]]
-| 
+| Exists
 | 
 | Note: 2 links
 |-
 | [[Community activity‏‎]]
-| 
+| Exists
 | 
 | Note: 2 links
 |-
 | [[Contributing to the Node project‏‎]]
-| 
+| Exists
 | 
 | Note: 2 links
 |-
 | [[Node Building‏‎]]
-| 
+| Exists
 | 
 | Note: 2 links
 |-
 | [[OVirt 3.0 Feature Guide‏‎]]
-| 
+| Exists
 | 
 | Note: 2 links
 |-
 | [[Outreach‏‎]]
-| 
+| Exists
 | 
 | Note: 2 links
 |-
 | [[Quick Start Guide‏‎]]
-| 
+| Exists
 | 
 | Note: 2 links
 |-
 | [[Troubleshooting‏‎]]
-| 
+| Exists
 | 
 | Note: 2 links
 |-
 | [[Features/MultipleStorageDomains‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -286,7 +286,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Live Snapshots‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -296,9 +296,9 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Template:Wiki markup‏‎]]
+| Not needed
 | 
-| 
-| Note: 1 link
+| Linked from "More formatting" - seems to be a temprary page
 |-
 | [[En:Template talk:Link FA‏‎]]
 | 
@@ -306,12 +306,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/Design/Network/Jumbo frames‏‎]]
+| Exists
 | 
-| 
-| Note: 1 link
+| Presumably linked from release notes
 |-
 | [[Features/NFSv4‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -321,7 +321,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Mailing lists‏‎]]
-| 
+| Needs to be migrated from Wordpress or point to something else ([[communication]], maybe?)
 | 
 | Note: 1 link
 |-
@@ -331,12 +331,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[OVirt 3.0 to 3.1 upgrade‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
 | [[Help:Contents‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -346,7 +346,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/Design/Network/Required Networks‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -356,7 +356,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/OvirtEnginePort80‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -371,12 +371,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[MediaWiki:Common.css‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
 | [[SDK‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -391,7 +391,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/Design/Network/SetupNetworks‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -406,7 +406,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/PortMirroring‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -426,7 +426,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Troubleshooting NFS Storage Issues‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -441,7 +441,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/Design/cpu-pinning‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -461,12 +461,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/PosixFSConnection‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
 | [[Report oVirt bugs on the Red Hat bugzilla‏‎]]
-| 
+| Needs to link to a "How to report your first bug" page
 | 
 | Note: 1 link
 |-
@@ -481,7 +481,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[LC Japan Workshop Post-Mortem‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -496,19 +496,19 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/Direct Lun‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
 | [[Develop section‏‎]]
+| [[Develop]]
 | 
-| 
-| Note: 1 link
+| New in new wiki
 |-
 | [[Develop the software‏‎]]
+| [[Develop]]
 | 
-| 
-| Note: 1 link
+| New in new wiki
 |-
 | [[Microformat‏‎]]
 | 
@@ -516,7 +516,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/PrestartedVm‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -536,7 +536,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Workshop Board Meetings‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -546,17 +546,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[CLI‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
 | [[Features/FloatingDisk‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
 | [[Google+‏‎]]
-| 
+| External link to oVirt page on Google+ (if/when we have one)
 | 
 | Note: 1 link
 |-
@@ -571,14 +571,14 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/Quota‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
 | [[The‏‎]]
+| "the #ovirt channel..."
 | 
-| 
-| Note: 1 link
+| Everything after # gets dropped as a section name
 |-
 | [[W:List of HTML entities‏‎]]
 | 
@@ -591,17 +591,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
 | [[Feature/AllInOne‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
 | [[Features/Gluster Support‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -621,7 +621,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/RemoteDB‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -646,12 +646,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/AdvancedNfsOptions‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
 | [[Features/HotPlug‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -671,7 +671,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/SPMPriority‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -696,12 +696,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/CloneVmFromSnapshot‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
 | [[Features/HotplugNic‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -721,7 +721,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/SharedRawDisk‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -743,15 +743,15 @@ The following are links in the staging wiki which are currently dead. We need to
 | [[Bugzilla:33886‏‎]]
 | 
 | 
-| Note: 1 link
+| Requires Bugzilla extension (vestige of Mediawiki origins)
 |-
 | [[Features/Design/DetailedStableDeviceAddresses‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
 | [[Features/ImportMoreThanOnce‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -771,7 +771,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/VMPayload‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
@@ -791,12 +791,11 @@ The following are links in the staging wiki which are currently dead. We need to
 | Note: 1 link
 |-
 | [[Features/Design/Network/Bridgeless Networks‏‎]]
-| 
+| Exists
 | 
 | Note: 1 link
 |-
 |}
-
 
 === Links for reference: ===
 
