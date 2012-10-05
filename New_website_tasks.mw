@@ -319,17 +319,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Read our etiquette guide‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Mailing lists‏‎]]
 | Needs to be migrated from Wordpress or point to something else ([[communication]], maybe?)
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Zh:Help:HTML‏‎]]
 | 
 | 
@@ -344,7 +344,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Template:Xpd‏‎]]
 | 
 | 
@@ -354,7 +354,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[HTML element‏‎]]
 | 
 | 
@@ -364,12 +364,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Read our simple etiquette guidelines‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[On IRC‏‎]]
 | 
 | 
@@ -384,12 +384,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Help:Images‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Template:Xtag‏‎]]
 | 
 | 
@@ -399,12 +399,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Baz‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Is:Hjálp:MediaWiki HTML‏‎]]
 | 
 | 
@@ -414,17 +414,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Released every six months‏‎]]
 | [[Release process]]
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Other‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Template:Colbegin‏‎]]
 | 
 | 
@@ -434,12 +434,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Help:Links‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Help:User style‏‎]]
 | 
 | 
@@ -449,17 +449,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[An example introductory message‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Debian‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[M:Help:Text color‏‎]]
 | 
 | 
@@ -469,17 +469,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Report oVirt bugs on the Red Hat bugzilla‏‎]]
 | Needs to link to a "How to report your first bug" page
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Ubuntu‏‎]]
 | External link http://www.ubuntu.com
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Template:Colend‏‎]]
 | 
 | 
@@ -489,12 +489,12 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Help:List‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Help:Wiki markup‏‎]]
 | 
 | 
@@ -504,17 +504,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Develop section‏‎]]
 | [[Develop]]
 | 
 | New in new wiki
-|-
+|- style="background-color:tomato"
 | [[Develop the software‏‎]]
 | [[Develop]]
 | 
 | New in new wiki
-|-
+|- style="background-color:tomato"
 | [[Microformat‏‎]]
 | 
 | 
@@ -524,17 +524,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Signing up for the users@ovirt.org mailing list‏‎]]
 | [[Mailing lists]]
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[API‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Template:H:title‏‎]]
 | 
 | 
@@ -544,7 +544,7 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Help:Tables‏‎]]
 | 
 | 
@@ -559,17 +559,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Google+‏‎]]
 | External link to oVirt page on Google+ (if/when we have one)
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Documentation section‏‎]]
 | [[Documentation]]
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Pl:Pomoc:Używanie kodu HTML‏‎]]
 | 
 | 
@@ -579,17 +579,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[The‏‎]]
 | "the #ovirt channel..."
 | 
 | Everything after # gets dropped as a section name
-|-
+|- style="background-color:tomato"
 | [[W:List of HTML entities‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Template:Main‏‎]]
 | 
 | 
@@ -609,17 +609,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[How the project is structured‏‎]]
 | [[Governance]]
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Download and install oVirt Node‏‎]]
 | [[Download]]?
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Pt:Ajuda:HTML‏‎]]
 | 
 | 
@@ -629,22 +629,22 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[The UMT-nearby timezones‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[W:Right-to-left mark‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Template:Quote‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Join the oVirt community‏‎]]
 | 
 | 
@@ -659,17 +659,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Join our channel in your web browser by using mibbit‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Fedora‏‎]]
 | External link: http://www.fedoraproject.org
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Ruby character‏‎]]
 | 
 | 
@@ -679,22 +679,22 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Twitter‏‎]]
 | External link: https://twitter.com/ovirt
 | 
 | Link to oVirt Twitter account
-|-
+|- style="background-color:tomato"
 | [[Template:Anchor‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Template:Shortcut‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Read the full release notes »‏‎]]
 | [[oVirt 3.1 release notes]]
 | 
@@ -709,17 +709,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Join us on IRC‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Help us make oVirt easier to install everywhere‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Sv:Wikipedia:Taggar‏‎]]
 | 
 | 
@@ -729,22 +729,22 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Who is on the board‏‎]]
 | [[Board]] or [[Sponsors]]
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Template:Languages‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Template:Tim‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Bugzilla:33886‏‎]]
 | 
 | 
@@ -759,17 +759,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Open source project‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[How to install oVirt for many distributions‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[W3C Markup Validation Service‏‎]]
 | 
 | 
@@ -779,17 +779,17 @@ The following are links in the staging wiki which are currently dead. We need to
 | Exists
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Template:Note‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Template:Tl‏‎]]
 | 
 | 
 | Note: 1 link
-|-
+|- style="background-color:tomato"
 | [[Deprecation‏‎]]
 | 
 | 
