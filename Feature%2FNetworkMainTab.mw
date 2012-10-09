@@ -82,7 +82,6 @@ Have a radio button that will show either
 # All the vms where this network is not attached to
 #* '''Columns'''- Name, Cluster, IP Address, Network, Status, Uptime
 #* '''Actions'''- add (multiple selection)
-[[File:NetworkVmTreeTab.png|1200px]]
 <br><br>
 '''Templates''' (same as vm)
 * '''Columns'''- same as vm except IP Address and Uptime
