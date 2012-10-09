@@ -669,11 +669,11 @@ The following are links in the draft pages of the demo wiki which are currently 
 | External link: http://www.fedoraproject.org
 | 
 | Note: 1 link
-|- style="background-color:tomato"
+|- style="background-color:springgreen"
 | [[Ruby character‏‎]]
 | 
 | 
-| Note: 1 link
+| Not needed
 |- style="background-color:springgreen"
 | [[Features/SPMPriority‏‎]]
 | Exists
@@ -684,17 +684,17 @@ The following are links in the draft pages of the demo wiki which are currently 
 | External link: https://twitter.com/ovirt
 | 
 | Link to oVirt Twitter account
-|- style="background-color:tomato"
+|- style="background-color:springgreen"
 | [[Template:Anchor‏‎]]
 | 
 | 
-| Note: 1 link
-|- style="background-color:tomato"
+| Not needed
+|- style="background-color:springgreen"
 | [[Template:Shortcut‏‎]]
 | 
 | 
-| Note: 1 link
-|- style="background-color:tomato"
+| Not needed
+|- style="background-color:orange"
 | [[Read the full release notes »‏‎]]
 | [[oVirt 3.1 release notes]]
 | 
@@ -709,21 +709,21 @@ The following are links in the draft pages of the demo wiki which are currently 
 | Exists
 | 
 | Note: 1 link
-|- style="background-color:tomato"
+|- style="background-color:orange"
 | [[Join us on IRC‏‎]]
-| 
+| [[Communication]]
 | 
 | Note: 1 link
 |- style="background-color:tomato"
 | [[Help us make oVirt easier to install everywhere‏‎]]
 | 
 | 
-| Note: 1 link
-|- style="background-color:tomato"
+| Point to porting guide (needs to be started, even if we don't have one yet)
+|- style="background-color:springgreen"
 | [[Sv:Wikipedia:Taggar‏‎]]
 | 
 | 
-| Note: 1 link
+| Not needed
 |- style="background-color:springgreen"
 | [[Features/SharedRawDisk‏‎]]
 | Exists
@@ -734,21 +734,21 @@ The following are links in the draft pages of the demo wiki which are currently 
 | [[Board]] or [[Sponsors]]
 | 
 | Note: 1 link
-|- style="background-color:tomato"
+|- style="background-color:springgreen"
 | [[Template:Languages‏‎]]
 | 
 | 
-| Note: 1 link
-|- style="background-color:tomato"
+| Not needed
+|- style="background-color:springgreen"
 | [[Template:Tim‏‎]]
 | 
 | 
-| Note: 1 link
-|- style="background-color:tomato"
+| Not needed
+|- style="background-color:springgreen"
 | [[Bugzilla:33886‏‎]]
 | 
 | 
-| Requires Bugzilla extension (vestige of Mediawiki origins)
+| Requires Bugzilla extension (vestige of Mediawiki origins) - not needed
 |- style="background-color:springgreen"
 | [[Features/Design/DetailedStableDeviceAddresses‏‎]]
 | Exists
@@ -759,41 +759,41 @@ The following are links in the draft pages of the demo wiki which are currently 
 | Exists
 | 
 | Note: 1 link
-|- style="background-color:tomato"
+|- style="background-color:orange"
 | [[Open source project‏‎]]
 | 
 | 
-| Note: 1 link
+| Link to OSI?
 |- style="background-color:tomato"
 | [[How to install oVirt for many distributions‏‎]]
 | 
 | 
-| Note: 1 link
-|- style="background-color:tomato"
+| Needs a link to a "porting guide".
+|- style="background-color:springgreen"
 | [[W3C Markup Validation Service‏‎]]
 | 
 | 
-| Note: 1 link
+| Not needed
 |- style="background-color:springgreen"
 | [[Features/VMPayload‏‎]]
 | Exists
 | 
-| Note: 1 link
-|- style="background-color:tomato"
+| 
+|- style="background-color:springgreen"
 | [[Template:Note‏‎]]
 | 
 | 
-| Note: 1 link
-|- style="background-color:tomato"
+| Not needed
+|- style="background-color:springgreen"
 | [[Template:Tl‏‎]]
 | 
 | 
-| Note: 1 link
-|- style="background-color:tomato"
+| Not needed
+|- style="background-color:springgreen"
 | [[Deprecation‏‎]]
 | 
 | 
-| Note: 1 link
+| Not needed
 |- style="background-color:springgreen"
 | [[Features/Design/Network/Bridgeless Networks‏‎]]
 | Exists
