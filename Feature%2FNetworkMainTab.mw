@@ -67,12 +67,12 @@
 '''Hosts''' (list of hosts the network is attached to one of its NICs)
 <br>
 Have a radio button that will show either
-#* All the hosts that this network is attached to
-* '''Columns'''- "Status image", Name, Cluster, Data Center, Status
-* '''Actions'''- Remove (detaches the network from the nic/bons on the host)
-#* All the hosts where this network attached to the cluster but not to the host (Very important for non-required where the host status does not indicate something is missing)
-* '''Columns'''- "Status image", Name, Cluster, Data Center, Status
-* '''Actions'''- SetupNetworks (link to SetupNetworks window)
+# All the hosts that this network is attached to
+: '''Columns'''- "Status image", Name, Cluster, Data Center, Status
+: '''Actions'''- Remove (detaches the network from the nic/bons on the host)
+# All the hosts where this network attached to the cluster but not to the host (Very important for non-required where the host status does not indicate something is missing)
+: '''Columns'''- "Status image", Name, Cluster, Data Center, Status
+: '''Actions'''- SetupNetworks (link to SetupNetworks window)
 <br>
 '''Virtual Machines''' (tree of VMs that have at least one vNIC attached to the network; under each VM - a list of the vNICs attached to the network)
 * '''Columns'''- Name (Can be expanded to show a list of the vNICs the network is attached to) , Cluster, IP Address, Network, Status, Uptime
