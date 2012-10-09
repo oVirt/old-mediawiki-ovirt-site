@@ -64,7 +64,7 @@
 :*Assign/Unassign Network
 [[File:assignNet.png]]
 <br><br>
-'''Hosts''' (list of hosts the network is attached to one of its NICs)
+'''Hosts'''
 <br>
 Have a radio button that will show either
 # All the hosts that this network is attached to
