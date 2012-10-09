@@ -68,20 +68,25 @@
 <br>
 Have a radio button that will show either
 # All the hosts that this network is attached to
-: '''Columns'''- "Status image", Name, Cluster, Data Center, Status
-: '''Actions'''- Remove (detaches the network from the nic/bons on the host)
+#* '''Columns'''- "Status image", Name, Cluster, Data Center, Status
+#* '''Actions'''- Remove (detaches the network from the nic/bonds on the host)
 # All the hosts where this network attached to the cluster but not to the host (Very important for non-required where the host status does not indicate something is missing)
-: '''Columns'''- "Status image", Name, Cluster, Data Center, Status
-: '''Actions'''- SetupNetworks (link to SetupNetworks window)
+#* '''Columns'''- "Status image", Name, Cluster, Data Center, Status
+#* '''Actions'''- SetupNetworks (link to SetupNetworks window)
 <br>
 '''Virtual Machines''' (tree of VMs that have at least one vNIC attached to the network; under each VM - a list of the vNICs attached to the network)
-* '''Columns'''- Name (Can be expanded to show a list of the vNICs the network is attached to) , Cluster, IP Address, Network, Status, Uptime
-* '''Actions'''- none
+Have a radio button that will show either
+# All the vms that this network is attached to
+#* '''Columns'''- Name, ,nic (if more than one 'multiple'), Cluster, IP Address, Network, Status, Uptime
+#* '''Actions'''- remove (multipule selection), remove from all
+# All the vms where this network is not attached to
+#* '''Columns'''- Name, Cluster, IP Address, Network, Status, Uptime
+#* '''Actions'''- add (multiple selection)
 [[File:NetworkVmTreeTab.png|1200px]]
 <br><br>
-'''Templates''' (tree of templates that have at least one vNIC attached to the network, under each template- a list of the vNICs attached to the network)
-* '''Columns'''- Name (Can be expanded to show a list of the vNICs the network is attached to), Status, Cluster, Data Center
-* '''Actions'''- none
+'''Templates''' (same as vm)
+* '''Columns'''- same as vm except IP Address and Uptime
+* '''Actions'''- same as vm
 <br>
 '''Permissions'''
 * '''Columns'''- User, Role, Inherited Permission
