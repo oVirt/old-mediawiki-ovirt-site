@@ -89,7 +89,7 @@ add the <cpu> output from virsh to your vm xml adding match='exact' to <cpu>
 ====== branding ======
 -wide/normal background
 
-====== features/usage =======
+====== features/usage ======
 -add a python IDE to play with sdk
 
 ====== maintenance ======
