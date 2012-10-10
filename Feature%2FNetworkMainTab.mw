@@ -75,6 +75,7 @@ Have a radio button that will show either
 #* '''Actions'''- SetupNetworks (link to SetupNetworks window)
 <br>
 '''Virtual Machines''' (default sub tab)
+<br>
 Have a radio button that will show either
 # All the vms that this network is attached to
 #* '''Columns'''- Name, ,nic (if more than one 'multiple'), Cluster, IP Address, Network, Status, Uptime
