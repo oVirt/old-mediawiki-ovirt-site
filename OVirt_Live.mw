@@ -100,10 +100,9 @@ add the <cpu> output from virsh to your vm xml adding match='exact' to <cpu>
 
 ====== func ======
 
-----
--create a following plugin to allInOne to configure and run vm, create template etc. -in progress
+-create a following plugin to allInOne to configure and run vm, create template etc. -done
 
--shorten host installation time 
+-shorten host installation time - done
 
 ====== branding ======
 -wide/normal background
