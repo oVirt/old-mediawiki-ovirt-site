@@ -61,7 +61,7 @@ add the <cpu> output from virsh to your vm xml adding match='exact' to <cpu>
 
 == Releases ==
 
-=== oVirt-Live-0.5.iso - alpha version Oct 10th 2012 ====
+=== oVirt-Live-0.5.iso - alpha version Oct 10th 2012 ===
 
 ==== Download ====
 [http://ovirt.org/releases/3.1/tools/oVirt-Live-0.5.iso download oVirt-Live-0.5.iso]
@@ -82,9 +82,25 @@ add the <cpu> output from virsh to your vm xml adding match='exact' to <cpu>
 
 -basic icons are there
 
+=== oVirt-Live-0.6.iso - alpha version Oct 12th 2012 ===
+
+==== Download ====
+[http://ovirt.org/releases/3.1/tools/oVirt-Live-0.6.iso download oVirt-Live-0.6.iso]
+
+==== change-log ====
+-selinux disabled - workaround to sanlock problem
+
+-added ovirt_live plugin - performs attachment of iso domain to the DC, and creating vm with disk and network
+
+-changed ovirt-setup icons
+
+-shorten host installation time by around 4 minutes
+
 ===== ToDo =====
 
 ====== func ======
+
+----
 -create a following plugin to allInOne to configure and run vm, create template etc. -in progress
 
 -shorten host installation time 
