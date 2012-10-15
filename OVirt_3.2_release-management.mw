@@ -49,7 +49,7 @@ Features being considered for inclusion/already in master:
 ** [[SetupNetworks_SyncNetworks | Sync network]]
 ** [[Features/Design/Network/NetworkFiltering | nwfilter]]
 ** webadmin: allow column resizing & sorting in grid (bz 767924)
-** port mirroring
+** [[Features/PortMirroring | port mirroring]]
 ** user level api
 ** automatic storage domain upgrade
 ** Japanese localization 
