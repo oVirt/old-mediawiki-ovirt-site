@@ -642,7 +642,7 @@ no special format, just commands in plain text
   list vms | grep name | sed s/'name       :'/'action vm'/ | sed -e 's/$/ start/' > new_script_to_run.txt
   file new_script_to_run.txt
   
-4. run the script
+3. run the script
 
   [RHEVM shell (connected)]# file run_all_vms.txt
 
