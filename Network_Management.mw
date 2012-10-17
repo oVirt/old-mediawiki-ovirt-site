@@ -1,3 +1,12 @@
+= Definitions =
+
+== Network ==
+<!-- A network is a logical entity that represents a profile of network related properties.
+--Roles can be assigned to a network. A network role stands for a network usage: management, migration,storage, Vm network, display.
+-- that is applied to a Host, in order to enable a certain functionality.
+--Each network has one or more roles: management, vm, display, etc.
+-->
+
 = The big picture =
 
 {| class="wikitable"
