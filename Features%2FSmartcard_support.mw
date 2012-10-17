@@ -1,0 +1,34 @@
+<!-- {{autolang|base=yes}} -->
+
+== Smartcard Support ==
+
+=== Summary ===
+
+* Adds the support to enable/disable smartcard per VM from frontend and REST API
+* Makes the VDSM to support smartcard by standard way (not by a hook)
+
+=== Detailed Description ===
+
+
+=== Owner ===
+
+* Name: [[User:TJelinek|Tomas Jelinek]]
+* Email: [mailto:tjelinek@redhat.com tjelinek@redhat.com]
+
+=== Current status ===
+Pending review:
+* VDSM: http://gerrit.ovirt.org/#/c/8450/
+* Engine + GUI: http://gerrit.ovirt.org/#/c/8484/
+* API: http://gerrit.ovirt.org/#/c/8512/
+
+=== Detailed Description ===
+
+
+
+=== Documentation / External references ===
+
+* [https://bugzilla.redhat.com/show_bug.cgi?id=854540 <nowiki>bug#854540</nowiki>]
+* [https://bugzilla.redhat.com/show_bug.cgi?id=863292 <nowiki>bug#863292</nowiki>]
+
+[[Category:Feature]]
+[[Category:Template]]
