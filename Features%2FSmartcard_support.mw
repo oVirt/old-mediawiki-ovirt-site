@@ -19,7 +19,7 @@
 Pending review:
 * VDSM: http://gerrit.ovirt.org/#/c/8450/
 * Engine + GUI: http://gerrit.ovirt.org/#/c/8484/
-* API: http://gerrit.ovirt.org/#/c/8512/
+* REST API: http://gerrit.ovirt.org/#/c/8512/
 
 === Detailed Description ===
 
@@ -27,8 +27,6 @@ Pending review:
 
 === Documentation / External references ===
 
-* [https://bugzilla.redhat.com/show_bug.cgi?id=854540 <nowiki>bug#854540</nowiki>]
-* [https://bugzilla.redhat.com/show_bug.cgi?id=863292 <nowiki>bug#863292</nowiki>]
 
 [[Category:Feature]]
 [[Category:Template]]
