@@ -1,0 +1,188 @@
+Project page contains all the key links to the technical resources for each project.
+
+Some projects use the same lists to facilitate communication and community growth.
+
+{|  class="wikitable sortable" 
+| Project
+| Maintainers
+| Lists
+| Resources
+| Board
+| Src
+|- 
+| api
+| Michael Pasternak<br />
+Ori Liel<br />
+Einav Cohen
+| [http://lists.ovirt.org/mailman/listinfo/engine-devel devel] [http://lists.ovirt.org/pipermail/engine-devel archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-patches patches] [http://lists.ovirt.org/pipermail/engine-patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-commits commits] [http://lists.ovirt.org/pipermail/engine-commits archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use ovirt-engine-api
+| n/a
+|  git://gerrit.ovirt.org/ovirt-engine 
+|- 
+| cli
+| Einav Cohen<br />
+Ori Liel<br />
+Michael Pastenrak<br />
+Itamar Heim
+| [http://lists.ovirt.org/mailman/listinfo/engine-devel devel] [http://lists.ovirt.org/pipermail/engine-devel archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-patches patches] [http://lists.ovirt.org/pipermail/engine-patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-commits commits] /[http://lists.ovirt.org/pipermail/engine-commits archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use ovirt-engine-python-sdk<br />
+use ovirt-engine-python-cli
+| n/a
+|  git://gerrit.ovirt.org/ovirt-engine-sdk 
+|- 
+| engine core
+| Itamar Heim<br />
+Livnat Peer<br />
+Omer Frenkel<br />
+Doron Fediuck<br />
+Yair Zaslavski<br />
+Maor Lipchuk<br />
+Roy Golan<br />
+Eli Mesika<br />
+Muli Salem<br />
+Michael Kublin<br />
+Michael Kolesnik<br />
+Moti Asayag<br />
+Jon Choate<br />
+Shahar Havivi<br />
+Laszlo Hornyak<br />
+Oved Ourfali
+| [http://lists.ovirt.org/mailman/listinfo/engine-devel devel] [http://lists.ovirt.org/pipermail/engine-devel archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-patches patches] [http://lists.ovirt.org/pipermail/engine-patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-commits commits] [http://lists.ovirt.org/pipermail/engine-commits archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use ovirt-engine-core<br />
+gerrit<br />
+Documentation<br />
+Wiki
+| Itamar Heim<br />
+Livnat Peer
+|  git://gerrit.ovirt.org/ovirt-engine 
+|- 
+| guest agent
+| Barak Azulay
+| tbd
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use ovirt-guest-agent?
+| n/a
+|  git://gerrit.ovirt.org/ovirt-guest-agent 
+|- 
+| dwh
+| Yaniv Dary<br />
+Eli Mesika<br />
+Itamar Heim<br />
+Einav Cohen<br />
+Livnat Peer
+| [http://lists.ovirt.org/mailman/listinfo/engine-devel devel] [http://lists.ovirt.org/pipermail/engine-devel archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-patches patches] [http://lists.ovirt.org/pipermail/engine-patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-commits commits] [http://lists.ovirt.org/pipermail/engine-commits archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use ovirt-dwh
+| n/a
+|  git://gerrit.ovirt.org/ovirt-dwh 
+|- 
+| packaging<br />
+&amp; installer
+| Ofer Schreiber<br />
+Barak Azulay<br />
+Eyal Edri<br />
+Idan Mansano<br />
+Ronen Angluster<br />
+Juan Hernandez
+| [http://lists.ovirt.org/mailman/listinfo/users devel] [http://lists.ovirt.org/pipermail/users archive ] <br />[http://lists.ovirt.org/mailman/listinfo/patches patches] [http://lists.ovirt.org/pipermail/patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/commits commits] [http://lists.ovirt.org/pipermail/commits archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use ovirt-engine-installer
+| n/a
+|  git://gerrit.ovirt.org/ovirt-engine 
+|- 
+| node
+| Mike Burns<br />
+Joey Boggs<br />
+Fabian Deutsch
+| [http://lists.ovirt.org/mailman/listinfo/node-devel devel] [http://lists.ovirt.org/pipermail/node-devel archive ] <br />[http://lists.ovirt.org/mailman/listinfo/node-patches patches] [http://lists.ovirt.org/pipermail/node-patches archive] 
+| [https://bugzilla.redhat.com/buglist.cgi?component=ovirt-node&amp;product=oVirt&amp;classification=Community Bugzilla] <br />
+use ovirt-node
+| Perry Myers
+|  git://gerrit.ovirt.org/ovirt-node 
+|- 
+| reports
+| Yaniv Dary<br />
+Einav Cohen
+| [http://lists.ovirt.org/mailman/listinfo/engine-devel devel] [http://lists.ovirt.org/pipermail/engine-devel archive ] <br />[http://lists.ovirt.org/mailman/listinfo/engine-patches patches] [http://lists.ovirt.org/pipermail/engine-patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-commits commits] /[http://lists.ovirt.org/pipermail/engine-commits archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use ovirt-reports
+| n/a
+|  git://gerrit.ovirt.org/ovirt-reports 
+|- 
+| sdk
+| Einav Cohen<br />
+Ori Liel<br />
+Michael Pastenrak<br />
+Itamar Heim
+| [http://lists.ovirt.org/mailman/listinfo/engine-devel devel] [http://lists.ovirt.org/pipermail/engine-devel archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-patches patches] [http://lists.ovirt.org/pipermail/engine-patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-commits commits] /[http://lists.ovirt.org/pipermail/engine-commits archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use ovirt-engine-python-sdk<br />
+use ovirt-engine-python-cli
+| n/a
+|  git://gerrit.ovirt.org/ovirt-engine-sdk 
+|- 
+| tools
+| Livnat Peer<br />
+Doron Fedicuk<br />
+Roy Golan<br />
+Moti Asayag<br />
+Barak Azulay<br />
+Keith Robertson<br />
+Ofer Schreiber
+| [http://lists.ovirt.org/mailman/listinfo/engine-devel devel] [http://lists.ovirt.org/pipermail/engine-devel archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-patches patches] [http://lists.ovirt.org/pipermail/engine-patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-commits commits] [http://lists.ovirt.org/pipermail/engine-commits archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use<br />
+ovirt-engine-config<br />
+ovirt-engine-notification<br />
+ovirt-engine-log-collector<br />
+ovirt-engine-iso-uploader
+| n/a
+|  git://gerrit.ovirt.org/ovirt-engine 
+|- 
+| userportal
+| Einav Cohen<br />
+Daniel Erez<br />
+Tal Nisan<br />
+Asaf Shakarchi<br />
+Vojtech Szocs<br />
+Tomas Jelinek
+| [http://lists.ovirt.org/mailman/listinfo/engine-devel devel] [http://lists.ovirt.org/pipermail/engine-devel archive ] <br />[http://lists.ovirt.org/mailman/listinfo/engine-patches patches] [http://lists.ovirt.org/pipermail/engine-patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-commits commits] [http://lists.ovirt.org/pipermail/engine-commits archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use ovirt-engine-userportal
+| n/a
+|  git://gerrit.ovirt.org/ovirt-engine 
+|- 
+| vdsm
+| Ayal Baron<br />
+Dan Kenigsberg<br />
+Saggi Mizrahi<br />
+Federico Simoncelli<br />
+Eduardo Warszawski<br />
+Igor Lvovsky
+| [http://fedorahosted.org/mailman/listinfo/vdsm-devel devel] [http://fedorahosted.org/pipermail/vdsm-devel archive] <br />[http://fedorahosted.org/mailman/listinfo/vdsm-devel patches] [http://fedorahosted.org/pipermail/vdsm-devel archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?alias=&amp;assigned_to=&amp;attachurl=&amp;blocked=&amp;bug_file_loc=http%3A%2F%2F&amp;bug_severity=unspecified&amp;bug_status=NEW&amp;cf_build_id=&amp;cf_clone_of=&amp;cf_cust_facing=---&amp;cf_devel_whiteboard=&amp;cf_environment=&amp;cf_internal_whiteboard=&amp;cf_issuetracker=&amp;cf_qa_whiteboard=&amp;cf_story_points=---&amp;cf_type=---&amp;comment=Description%20of%20problem%3A%0D%0A%0D%0A%0D%0AVersion-Release%20number%20of%20selected%20component%20%28if%20applicable%29%3A%0D%0A%0D%0A%0D%0AHow%20reproducible%3A%0D%0A%0D%0A%0D%0ASteps%20to%20Reproduce%3A%0D%0A1.%0D%0A2.%0D%0A3.%0D%0A%20%20%0D%0AActual%20results%3A%0D%0A%0D%0A%0D%0AExpected%20results%3A%0D%0A%0D%0A%0D%0AAdditional%20info%3A&amp;component=vdsm&amp;contenttypeentry=&amp;contenttypemethod=autodetect&amp;contenttypeselection=text%2Fplain&amp;data=&amp;deadline=&amp;defined_cf_partner=&amp;dependson=&amp;description=&amp;estimated_time=&amp;external_bug_id=&amp;external_id=0&amp;flag_type-155=X&amp;flag_type-16=X&amp;form_name=enter_bug&amp;keywords=&amp;maketemplate=Remember%20values%20as%20bookmarkable%20template&amp;op_sys=Unspecified&amp;priority=unspecified&amp;product=oVirt&amp;qa_contact=&amp;rep_platform=Unspecified&amp;short_desc=&amp;status_whiteboard=&amp;target_milestone=---&amp;target_release=---&amp;version=unspecified Bugzilla] <br />
+use vdsm
+| Ayal Baron
+| git://gerrit.ovirt.org/vdsm 
+|- 
+| webadmin
+| Einav Cohen<br />
+Asaf Shakarchi<br />
+Danny Rankevich<br />
+Tal Nissan<br />
+Vojtech Szocs<br />
+Gilad Chaplik<br />
+Daniel Erez<br />
+Alexey Chub<br />
+Tomas Jelinek<br />
+Alona Kaplan
+| [http://lists.ovirt.org/mailman/listinfo/engine-devel devel] [http://lists.ovirt.org/pipermail/engine-devel archive ] <br />[http://lists.ovirt.org/mailman/listinfo/engine-patches patches] [http://lists.ovirt.org/pipermail/engine-patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-commits commits] [http://lists.ovirt.org/pipermail/engine-commits archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use ovirt-engine-webadmin
+| n/a
+|  git://gerrit.ovirt.org/ovirt-engine 
+|- 
+|}
