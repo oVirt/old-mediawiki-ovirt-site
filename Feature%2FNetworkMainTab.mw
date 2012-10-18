@@ -71,6 +71,9 @@
 '''Hosts'''
 <br>
 Have a radio button that will show either
+# All the hosts in the dc (?)
+#* '''Columns'''- Status (icon), Name, Cluster, Data Center
+#* '''Actions'''- SetupNetworks
 # All the hosts that this network is attached to
 #* '''Columns'''- Status (icon), Name, Cluster, Data Center, Nic (nic name, if bond- bond name), Nic Rx, Nic Tx.
 #* '''Actions'''-SetupNetworks
