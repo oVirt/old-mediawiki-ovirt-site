@@ -1,5 +1,5 @@
 ==Summary==
-This allows the user to configure and start Geo Replication for Gluster Volumes 
+This feature provides the support for monitoring and measuring the performance of Gluster volumes and bricks.
 
 ==Owner==
 *Feature owner: Shireesh Anjal <sanjal@redhat.com>
