@@ -1,0 +1,29 @@
+==Motivation==
+
+VM template is used in oVirt to later create VMs with identical images and configuration as the template.
+
+Creating identical images and configuration does not mean that we want to keep some information that is guest specific, like the VM MAC addresses.
+
+For Handling the above we have the process of sysprep. For guests with Windows OS you can use the current sysprep mechanism we have in oVirt. For Linux guests we don't have such process in place yet so you better seal the template manually.
+
+==The process for sealing a Linux guest template==
+
+<ol>
+<li> SSH to the VM as root </li>
+<li> flag the system for reconfiguring</li>
+ # touch /.unconfigured
+<li> Remove ssh host keys:</li>
+ # rm -rf /etc/ssh/ssh_host_*
+<li> Set HOSTNAME=localhost.localdomain in /etc/sysconfig/network</li>
+<li> Remove UDEV rules:</li>
+ # rm -rf /etc/udev/rules.d/70-*
+<li> Remove the HWADDR= line from /etc/sysconfig/network-scripts/ifcfg-*</li>
+<li> [optionally] Delete the logs from /var/log </li>
+<li> [Optionally] Delete the build logs from /root.</li>
+<li> Shut down the virtual machine.</li>
+</ol>
+
+==Future work==
+We intend to have a virt-prep process that handles both Linux and Windows guests. 
+
+This will save us the need for manual sealing of Linux template.
