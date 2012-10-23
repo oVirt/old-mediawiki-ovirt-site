@@ -97,7 +97,6 @@ Q:
 
 === Authentication ===
 
-== Tests ==
 
 ==== UI ====
 
@@ -105,6 +104,8 @@ Q:
 
 ==== Pluggable UI ====
 
+
+== Tests ==
 
 [[Category:Feature]]
 [[Category:SLA]]
