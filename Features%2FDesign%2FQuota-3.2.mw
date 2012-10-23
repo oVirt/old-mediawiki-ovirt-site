@@ -102,15 +102,5 @@ No special considerations.
 === Pre-integration needs ===
 No needs.
 
-== Design check list ==
-This section describes issues that might need special consideration when writing this feature. Better sooner than later :-)
-
-# Installer / Upgrader - Disk and Storage Pool should be attached to the default unlimited Quota.
-# DB Upgrade - 
-## For each DC, add Administrator Quota, which will be attached to all the users currently using the VM's in the DC.(see [[Features/Design/Quota#upgrade behaviour|upgrade logic]]) 
-## Initialize the Quota users table depending on the users in the system.
-# MLA - Remove user from the system should also remove the user from the Quota_users table
-# Migrate
-# Compatibility levels - The feature will be supported only for 2.3 VMs and up.
-# Backward compatibility issues 
-# API changes - new command queries for GUI and REST.
+[[Category:SLA]]
+[[Category: Feature]]
