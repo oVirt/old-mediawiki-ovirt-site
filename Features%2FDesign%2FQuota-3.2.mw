@@ -71,89 +71,21 @@ The VdcActionType marking would prevent unintentional inheritance of the interfa
  ''requestedCpu'' - the requested number of vcpu.
  ''requestedMem'' - the requested Memory.
 
-==== Scenarios ====
-''Running VM'' - canDoAction
+==== Typical flow ====
+Before executing command
 
-# Get DC verification status from quota_enforcement.
-# If quota_enforcement != DISABLED
-## Fetch Quota Id from VM dynamic
-## Get quota cluster properties for quota ID, using the memory Map quotaClusterMap in [[Features/Design/Quota#Classes|QuotaManager]].
-### Check the VM configuration against the free cluster space left in the Quota.
-#### If VM capabilities are extending the free space left in the Quota
-##### if the VM capabilities are extending extending 20% of the Quota space (Grace percent) then
-###### If quota_enforcement is enforce
-####### Fail the VM from running
-####### Print an appropriate audit log.
-###### else
-####### Print an audit log warning message.
-##### Else if the VM is extending the Quota limit but not extending the grace percent
-###### Add Vm resources to Quota memory table quotaClusterMap.
-###### Print an audit log of the User which caused the extension, and the extend details.
-##### Else update quotaClusterMap.
-
-Result : The VM will be already calculated in the memory table but this information will not be persistent in the DB until execute will performed.
-
-''Running VM'' - execute
-
-Each time there will be a change in the _asyncRunningVms (for example in createVMVdsCommand) the persistent Quota Dynamic data will be updated appropriately if needed<BR>
-If the command will fail then the memory table should be decreased with the resources that were added to it.
-<BR><BR><BR>
-
-''Add New Disk - When dialog box opens''
-
-# GUI will call the query command [[Features/Design/Quota#upgrade behaviour|GetAllQuotaStoragesQuery]] with DC UUID
-# Return map of quotas, where each value represents a list of all the storage details.
-
-''Add New Disk - Confirm dialog box''
-
-# User will pick the quota and the domain, he wants the disk should be initialized on.
-# If quota_enforcement != DISABLED
-## Get quota storage properties for Quota ID, using the memory Map quotaStorageMap in [[Features/Design/Quota#Classes|QuotaManager]].
-### If VM capabilities are extending the free space left in the Quota
-#### if the VM capabilities are extending extending 20% of the Quota space (Grace percent) then
-##### If quota_enforcement is enforce
-###### Fail the operation.
-###### Print an appropriate audit log.
-##### else
-###### Print an audit log warning message.
-##### else if the VM is extending the Quota limit but not extending the grace percent
-###### Validate and update the memory table.
-####### Print an audit log of the User which caused the extension, and the extend details.
-####### Execute the command
-###### Execute the command
-
-This logic in the canDoAction should be quite similar to the logic being done with StorageDomainSpaceChecker.
-
-''Add new Disk - Confirm dialog box'' End Action
-# At the end action we will check what was the storage change by GB, and update the Quota dynamic table appropriately.
-<BR><BR><BR>
-
-''Create new snapshot'' - CanDoAction
-# Add the full disk size to the quotaStorageMap.
-
-''Create new snapshot'' - End Action
-# Get real size disk from VDSM of the snapshot created.
-# Subtract from the memory table the following (fullSize - realSize)
-# Update the DB quota dynamic value with + realSize
-
-<BR><BR><BR>
-''Create new template (similar to import scenario)'' - CanDoAction
-# Calculate the storage that should be allocated by multiple the number of disks with 1GB (Which is the QCOW default size, TODO : Need to configure this with VDSM)
-# validate the quota properties and update the memory table.
-
-''Create new template (similar to import scenario)'' - EndAction
-# Persist the changes in the DB.
-
-<BR><BR><BR>
-''Create/Edit VM'' - Reflects on AddVmCommand and EditVMCommand
-
-# User will select Data Center he wants the VM to be created on.
-# GUI will call the query GetQueryForStoragePool with DC UUID
-# Call stored procedure GetAllQuotaClusterForSP with storage pool UUID and user ID.
-# Call query Quotas_Attached_To_Storage_Pool with storage pool UUID and user ID.
-# Get lists of business entity objects
-# Return map of quotas, where each value represent a list of all the cluter details and the other should be all the users.
-# Update the VM Dynamic with the Quota Id.
+# Call canDoAction (on CommandBase)
+## Call validateAndSetQuota (on CommandBase)
+### If the command is not a storage/vds consumer - return true.
+### else - Call getQuotaStorageConsumptionParameters()/getQuotaVdsConsumptionParameters() (on the about to be executed command)
+### add storage pool id, auditLogable (this) and canDoActionMessages to complete the QuotaConsumptionParameters object
+### if QuotaManager.consume() return true - proceed to execution
+#### If quota_enforcement != DISABLED return true
+#### else - check the requested consumption for each parameter
+##### If one or more parameters request can not be carried
+###### roll-back and return false
+##### else - return true 
+### execute command or return error
 
 === API Design ===
 
