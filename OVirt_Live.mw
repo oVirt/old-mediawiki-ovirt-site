@@ -126,7 +126,7 @@ add the <cpu> output from virsh to your vm xml adding match='exact' to <cpu>
 -custom logos - v1.0
 
 ====== features/usage ======
--add a python IDE to play with sdk
+-add a python IDE to play with sdk - v0.8
 
 ====== maintenance ======
 -git build env
