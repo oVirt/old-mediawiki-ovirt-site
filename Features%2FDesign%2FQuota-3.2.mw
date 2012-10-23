@@ -194,15 +194,13 @@ This logic in the canDoAction should be quite similar to the logic being done wi
 Add new command query GetQueryForStoragePool input - DC UUID output - All the Quotas for the DC.
 
 == Tests ==
-Storage tests.
-Cluster tests
+Unit-tests for testing all of the QuotaManager API will be added.
 
 === Expected unit-tests ===
-# adding a new Quota
-# running VM on Quota
-# Adding a new Disk and attach to Quota
-# Adding new snapshot
-# Migrating VM
+# QuotaManager - consume quota
+# QuotaManager - release quota
+# QuotaManager - rollback quota
+# QuotaManager - uncache quota 
 
 === Special considerations ===
 No special considerations.
