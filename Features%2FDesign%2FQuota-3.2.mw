@@ -15,7 +15,7 @@ TBD
 == Backend ==
 This section describes the backend design for this feature.
 
-=== DB Design ===
+=== DB Change ===
 In order to support quota on duplicate image stored on different storage domains, the quota_id column would move from "images" table to "image_storage_domain_map" table.
 
 '''image_storage_domain_map'''  - Represents the properties of the Quota configured on the DC.
@@ -30,11 +30,6 @@ In order to support quota on duplicate image stored on different storage domains
 |-
 |}
 
-
-=====Views=====
-unchanged - see http://www.ovirt.org/wiki/Features/Design/Quota
-===== Stored Procedures =====
-unchanged - see http://www.ovirt.org/wiki/Features/Design/Quota
 
 === Logic Design ===
 Each time the user will run a VM or create a new disk, there will be a quota resource check against the quota views.<BR> 
