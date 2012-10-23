@@ -118,11 +118,7 @@ add the <cpu> output from virsh to your vm xml adding match='exact' to <cpu>
 
 ====== func ======
 
--create a following plugin to allInOne to configure and run vm, create template etc. -done
-
--change vm boot order to cd
-
--shorten host installation time - done
+-change vm boot order to cd - 0.8
 
 ====== branding ======
 -wide/normal background
