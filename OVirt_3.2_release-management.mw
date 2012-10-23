@@ -40,7 +40,7 @@ Features being considered for inclusion/already in master:
 ** [[Features/UIPlugins | UI plugins]]
 ** [[Feature/NetworkMainTab | Make network a main tab]] - stretch goal for 3.2
 ** [[Features/Gluster Import Existing Cluster| Import of existing gluster clusters]]
-** [[Features/Bootstrap Improvements|Bootstrap improvements]]
+** [[Featrues/Bootstrap_Improvements|Bootstrap improvements]]
 ** [[Features/PKI Improvements|PKI improvments]]
 ** [[SLA-mom | SLA is a target for inclusion (MOM)]]
 ** [[Features/Quota-3.2 | Improving Quota for 3.2]]
