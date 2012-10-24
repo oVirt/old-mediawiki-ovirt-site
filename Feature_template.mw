@@ -1,28 +1,29 @@
 <!-- {{autolang|base=yes}} -->
 
+<!-- The actual name of your feature page should look something like: "Your feature name". Use natural language to name the pages. -->
 
+The actual name of your feature page should look something like: "Your feature name". Use natural language to [[How to make pages#Page naming|name the pages]].
 
-
-
-== Instance Types / Flavors ==
+== Your Feature Name <!-- The name of your feature --> ==
 
 === Summary ===
-
-
-
+<!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
+A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release.
 
 === Owner ===
+<!--This should link to your home wiki page so we know who you are-->
+This should link to your home wiki page so we know who you are
 
+* Name: [[User:MyUser| My User]]
 
-* Name: 
-* Email:
-* PM Requirements : [[User:ACathrow|Andrew Cathrow]]
-* Email: [mailto:acathrow@redhat.com acathrow@redhat.com]
+<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
+Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved
+* Email: <my@email>
 
 
 === Current status ===
-* Target 3.2
-* Last updated date: 
+* Link to feature page in a specific release. That release may complete the feature, or parts of it. The complete scope of this feature in this release will be described in the release feature page
+* Last updated date: ...
 
 
 === Detailed Description ===
