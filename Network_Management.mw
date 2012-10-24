@@ -3,8 +3,6 @@
 == Network ==
 <!-- A network is a logical entity that represents a profile of network related properties.
 --Roles can be assigned to a network. A network role stands for a network usage: management, migration,storage, Vm network, display.
--- that is applied to a Host, in order to enable a certain functionality.
---Each network has one or more roles: management, vm, display, etc.
 -->
 
 = The big picture =
@@ -141,3 +139,17 @@ HotPlugUnplugVmNic
 * We can utilize Quantum's IPAM for vNICs:
 
 ** Should we define a "subnet" entity to be under a logical network, which corresponds to Quantum's "subnet" entity?
+
+== Integrating UCSM into oVirt ==
+
+<!--Network entity should have additional properties added for UCS: Management IP, user, password (? or maybe an authorized key?), number of allowed ports (vNICs) (?).
+
+The network can then be attached to a cluster as any other network would.
+
+A host that has the Palo Adapter (M81KR) installed will reveal it as part of the vdsCaps.
+
+Additional info that need to be supplied: Which or How many virtual NICs are available (perhaps we can also calculate this), 
+
+The Palo adapter will appear as a "NIC" of the host, this will allow to attach networks to it as part of Setup Networks.
+
+The virtual NICs exposed by the Palo adapter should NOT be assignable in setup networks (perhaps not visible at all in the system).-->
