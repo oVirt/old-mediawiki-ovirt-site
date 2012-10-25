@@ -31,9 +31,15 @@ Additionally oVirt scheduling parameters (which will be explained next) are spec
 oVirt
 ==== VM migration policy - migration support (VM HA) ====
 * migratable, implicitly non migratable (autoStartup)
-References: 
-RunVmCommandBase.canRunVm(Check if iso and floppy path exists ??), VmRunHandler.performImageChecksForRunningVm(Check isValid, storageDomain and diskSpace only if VM is not HA VM)
-commands: FenceVdsManualyCommand, ClearNonResponsiveVdsVmsCommand, MaintananceVdsCommand, RunVmCommandBase (starts spice)
+** References: 
+*** RunVmCommandBase.canRunVm(Check if iso and floppy path exists ??), 
+*** VmRunHandler.performImageChecksForRunningVm(Check isValid, storageDomain and diskSpace only if VM is not HA VM)
+** commands:
+*** FenceVdsManualyCommand, 
+*** ClearNonResponsiveVdsVmsCommand, 
+*** MaintananceVdsCommand, 
+*** RunVmCommandBase (starts spice)
+
 * pin to host (dedicated_vm_for_vds)
 References: selection & load balancing.
 commands: ChangeVMClusterCommand (clear pinned host), RunVmCommand (selection)
@@ -42,6 +48,7 @@ References:
 VmsComparer
 Commands:
 MaintananceVds (+ numberOf), MigrateVM (order commands), LoadBalance (isMigratable), VdsSelector (pinned to host)
+
 ==== Cluster's Host selection policy (selection algorithm) ====
 None, EvenlyDistribute, PowerSave.
 References:
