@@ -83,16 +83,16 @@ and then we are inspiring to box out also the indirect scheduler, scheduler vali
 The new API is a single interface which extends 5 other interfaces:
 
 *HostSelector
-chooses a host to run on according to selection algorithm.
-getSelectedHosts(): returns a list containing the last selected hosts.
-hasAnyHosts(): is called in the validation while running a VM, and returns whether there are hosts to choose from.
-selectHost(): is called in the execution while running a VM, and returns a host that the implemented algorithm chooses (note: should have shared code with hasAnyHosts).
+Chooses a host to run on according to selection algorithm.
+# getSelectedHosts(): returns a list containing the last selected hosts.
+# hasAnyHosts(): is called in the validation while running a VM, and returns whether there are potential hosts to choose from.
+# selectHost(): is called in the execution while running or migrating a VM, and returns a host that the implemented algorithm chooses (note: may have shared code with hasAnyHosts).
 *LoadBalancer
 Invoked for each cluster every interval and perform load balancing according to a load balancing algorithm.
-loadBalance() invoked every configValue.VdsLoadBalancingeIntervalInMinutes minutes.
+# loadBalance(): invoked every configValue.VdsLoadBalancingeIntervalInMinutes minutes.
 *TimerInvokedScheduler
 Very much similar to the loadBalancer, but has a general purpose and can have a different timer span.
-onTimerInvoked(): invoked every configValue.SchedulerTimerIntervalInMinutes minutes.
+# onTimerInvoked(): invoked every configValue.SchedulerTimerIntervalInMinutes minutes.
 *VmStatusChanged
 implements behavior for VM status transitions for SLA context.
 *HostStatusChanged
