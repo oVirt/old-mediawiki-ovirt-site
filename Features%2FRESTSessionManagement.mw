@@ -11,7 +11,7 @@ The purpose of the feature is to add session management to the oVirt REST API.
 * Email: <ovedo@redhat.com>
 
 === Current status ===
-* Design phase
+* Finished implementation in oVirt 3.1
 
 === Background ===
 This feature is essential for certain types of ISV integration. Many ISVs need to mirror
