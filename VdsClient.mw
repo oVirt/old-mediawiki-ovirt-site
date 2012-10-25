@@ -45,3 +45,5 @@ Examples:
  
 3. Now try to use vnc client
 * $ vncviewer <oVirt Node>:<displayPort>
+
+[[Category:Vdsm]]
