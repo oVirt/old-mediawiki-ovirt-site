@@ -95,8 +95,16 @@ Very much similar to the loadBalancer, but has a general purpose and can have a 
 # onTimerInvoked(): invoked every configValue.SchedulerTimerIntervalInMinutes minutes.
 *VmStatusChanged
 implements behavior for VM status transitions for SLA context.
+# canChangeVmStatus
+## Similar to the canDoAction concept; allows the user implemented code to fail changing the VM state (where applicable).
+# vmStateChanged
+## Provides the user a chance to add functionality after a state changes.
 *HostStatusChanged
 implements behavior for Host status transitions for SLA context.
+# canChangeHostStatus
+## Similar to the canDoAction concept; allows the user implemented code to fail changing the host state (where applicable).
+# hostStateChanged
+## Provides the user a chance to add functionality after a state changes.
 
 ==== Class Diagram ====
 
