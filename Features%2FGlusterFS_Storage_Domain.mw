@@ -9,7 +9,7 @@ VMs created using this domain exploit the QEMU's gluster block backend aka QEMU-
 
 * Feature owner: Deepak C Shetty <deepakcs@linux.vnet.ibm.com>
 ** REST Component owner: 
-** Engine Component owner: TBD
+** Engine Component owner: Sharad Mishra <snmishra@linux.vnet.ibm.com>
 ** VDSM Component owner: Deepak C Shetty <deepakcs@linux.vnet.ibm.com>
 ** QA Owner: 
 
@@ -18,7 +18,7 @@ VMs created using this domain exploit the QEMU's gluster block backend aka QEMU-
 * '''QEMU-GlusterFS integration'''       : Done. Available in upstream qemu.
 * '''libvirt enablement for Gluster'''   : WIP @ [https://www.redhat.com/archives/libvir-list/2012-October/msg00085.html]
 * '''GLUSTERFS_DOMAIN support in VDSM''' : WIP @ [http://gerrit.ovirt.org/#/c/6856/] or see gluster_domain_support topic branch in [http://gerrit.ovirt.org]
-* '''oVirt Engine / UI support'''        : TBD
+* '''oVirt Engine / UI support'''        : WIP @ [http://gerrit.ovirt.org/8837] or see glusterfs topic branch in [http://gerrit.ovirt.org]
 
 == Detailed Description ==
 
@@ -65,14 +65,18 @@ The same params as specified by user for PosixFs domain will be applicable to Gl
 * '''vfsType''' : glusterfs
 * '''options''' : if any, will be passed as-is to the mount cmdline.
 
-If user selects GlusterFS domain as the domain type, the vfsType can be pre-filled to 'glusterfs'.
+=== Usability enhancements ===
+
+* If user selects GlusterFS domain as the domain type, the '''vfsType''' field can be pre-filled to 'glusterfs' and the field be greyed/disabled (should not be editable).<br/>
+* There is a option in OE to enable a gluster volume for virtualization use ( sets some gluster specific options to ensure its works well when used as a storage domain).<br/> As part of user creating GLUSTERFS_DOMAIN, it would be good to check if the gluster volume (as part of the '''spec''') is enabled for virt use, and if not, call the appropriate Gluster OE API to enable the gluster volume for virt use, before using it as storage domain. <br/> Not sure how this plays when OE is in virt only, gluster only and virt + gluster modes.<br/>
+* Another enhancement could be to list the available gluster volumes known to oVirt when user selects GLUSTERFS_DOMAIN as the DC type as part of new storage domain UI flow. <br/> User can then select the gluster volume he/she created and the '''spec''' will be formed automatically based on the gluster volume selected by user.<br/> This provides better usability (seamlessly integrate virt and storage flows/modes of oVirt) and might be useful when OE is in virt + gluster mode.<br/>
 
 == Benefits to oVirt ==
 
 oVirt 3.1 already has support to create & manage Gluster Volumes (see 'Volumes' tab in oVirt ) - typically done by storage admin.<br/>
 This support will allow oVirt to consume GlusterFS storage cluster as a storage domain / image repository and run VMs off it - typically done by virtualization admin.
-
 This support helps complete the story/use-case from a virt. admin perspective !<br/>
+
 It also helps oVirt truly work as a single pane of glass solution for creating, managing & consuming Gluster for storage and virt. use cases.
 
 == Dependencies / Related Features and Projects ==
