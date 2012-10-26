@@ -90,3 +90,54 @@ This doesn't really delete the image but rather makes it in accessible from the 
 # Turn the tag to a weak tag
 
 [[File:im_op_delete_image.png]]
+
+==Delete Orphan volume==
+If a volume is not reference by any tag weak of strong it can be safely deleted.
+
+# Initial State
+# Lock volume
+# Delete volume
+
+[[File:im_op_delete_oropan_volume.png]]
+
+==Delete Weak Tip==
+If a weak tah is not referenced by any volume it can be safely assume that no one will ever use it and it can be removed.
+
+# Initial State
+# Lock volume
+# Delete tag
+
+Note that you can't just roll to delete orphan without making sure the volume is actually and orphan now!
+
+[[File:im_op_delete_weak_tip.png]]
+
+==Delete Single Linked==
+If a weak tag has only 1 dependent the two volumes can be merged and the tag removed.
+
+# Initial State
+# Lock the volume pointed to by the weak tag
+# Lock the volume pointing to the tag
+# Either merge up or down depending on what is best according to the data inside the volumes
+# Reparent according to merge direction in previous phase
+
+[[File:im_op_delete_single_linked.png]]
+
+==Convert \ Replace==
+This is used to either convert or replace a volume with new data.
+
+# Initial state
+# Lock original volume
+# Create new volume
+#* Push new data to the new volume
+# Change the tag to point to the new volume. (Seals the deal)
+
+[[File:im_op_convert_replace.png]]
+
+==Reparent==
+Sometimes the content of the volume doesn't really depend on it's immediate parent. This means that if the parent is weak we can just reparent to the grand parent so that the weak tag has as little of links as possible. This is preferable because the parent volume will only be deleted if no more then 1 volumes point to it's tag.
+
+# Initial state
+# Lock the volume you wish to reparent
+# Change it's metadata (Seal the deal)
+
+[[File:im_op_reparent.png]]
