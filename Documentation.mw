@@ -1,0 +1,24 @@
+__NOTOC__
+
+<div class="row">
+<div class="span4">
+{{User documentation}}
+</div>
+<div class="span4">
+{{Developer documentation}}
+</div>
+<div class="span4">
+{{Community documentation}}
+</div>
+</div>
+
+== Demo docs ==
+
+Here are a few documents that were "ported" (''with minimal text / markup changes — it was basically a simple copy/paste'') from the oVirt.org website:
+* [[oVirt 3.1 release notes]]
+* [[DevProcess]]
+* [[oVirt_Global_Workshops]]
+
+<p class="alert alert-info"><i class="icon icon-info-sign"></i> '''Minimal change''': The only change was using DISPLAYTITLE to force a lowecase "o" in the title, like this: '''<nowiki>{{DISPLAYTITLE:oVirt 3.1 release notes}}</nowiki>'''</p>
+
+I'd like to include some videos embedded here (installing & live migration, and an interview, maybe).
