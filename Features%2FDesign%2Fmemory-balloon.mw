@@ -60,3 +60,5 @@ oVirt's MOM sub-project integration[http://ovirt.org/wiki/Features/MomIntegratio
 
 == Notes ==
 # Due to API change, This will be supported in 3.1 clusters only.
+
+[[Category:SLA]]
