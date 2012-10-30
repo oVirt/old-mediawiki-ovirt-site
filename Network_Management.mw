@@ -178,15 +178,16 @@ The Palo adapter will appear as a "NIC" of the host in the setup networks dailog
 
 This allows the "Logical Network" to be implemented one way on one host, and another way on another, depending on how it is set-up.
 
+Note: A host that is moved from one cluster to the other won't necessarily fail the network checks, but will have to be se-synched in order to provision the network correctly.
+
 
 
 For example:
 
-In the DC we have prod & staging clusters, and a "red" network.
+In the DC we have "prod" & "staging" clusters, and a "red" network.
 
-On the prod cluster, we use "Interconnect" switches + UCSM to manage the network traffic.
+On the "prod" cluster, we use "Interconnect" switches + UCSM to manage the network traffic.
 
-On the staging cluster, we use regular "Linux Bridge" to manage the network traffic.
+On the "staging" cluster, we use regular "Linux Bridge" to manage the network traffic.
 
-A host that migrates from one cluster to the other won't fail the network checks, but will have to be se-synched in order to provision the network correctly.
 -->
