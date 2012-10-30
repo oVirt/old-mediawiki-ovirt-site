@@ -145,33 +145,36 @@ HotPlugUnplugVmNic
 == Integrating UCSM into oVirt ==
 
 <!--
-Network entity should have additional properties added for UCS: 
+Network entity should have additional properties added for UCSM: 
 * Management IP
 * User
-* Password (? or maybe an authorized key?)
+* Password
 * Number of allowed ports (vNICs) (?)
+* Port profile name (not editable)
 
-If these properties were filled, the network should be created on Quantum. 
+If these properties were filled, the network should be created on Quantum as part of the create network operation. 
 
 
 
-It is possible that we would need to get the port group name from Quantum to use when determining which networks are available on a host. 
+It is possible that we would need to get the port profile name from Quantum to use in several scenarios, i.e. when determining which networks are available on a host. 
 
-In this case, we would need to get this info from Quantum after the network has been created there.
+In this case, we would need to get this info from Quantum after the network has been created there. Quantum should have this API available.
 
 The network can then be attached to a cluster as any other network would.
+
+Does this mean the network now has state (Building, OK, etc)?
 
 
 
 A host that has the Palo Adapter (M81KR) installed will reveal itself as part of the vdsCaps.
 
 Info that need to be supplied as part of the adapter info: 
-* Which or How many virtual NICs are available (perhaps we can also calculate this)
-* Which networks (or port groups) are available (?)
+* Which or How many virtual NICs are available (perhaps we can also calculate this from regular nics list)
+* Which networks (or port profiles) are available (?)
 
 The virtual NICs exposed by the Palo adapter should NOT be assignable in setup networks (perhaps not visible at all in the system).
 
-The Palo adapter will appear as a "NIC" of the host, this will allow to attach networks to it as part of Setup Networks.
+The Palo adapter will appear as a "NIC" of the host in the setup networks dailog, this will allow to attach networks to it as part of Setup Networks.
 
 This allows the "Logical Network" to be implemented one way on one host, and another way on another, depending on how it is set-up.
 
@@ -184,4 +187,6 @@ In the DC we have prod & staging clusters, and a "red" network.
 On the prod cluster, we use "Interconnect" switches + UCSM to manage the network traffic.
 
 On the staging cluster, we use regular "Linux Bridge" to manage the network traffic.
+
+A host that migrates from one cluster to the other won't fail the network checks, but will have to be se-synched in order to provision the network correctly.
 -->
