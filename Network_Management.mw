@@ -145,6 +145,7 @@ HotPlugUnplugVmNic
 == Integrating UCSM into oVirt ==
 
 <!--
+=== Network entity ===
 Network entity should have additional properties added for UCSM: 
 * Management IP
 * User
@@ -154,7 +155,7 @@ Network entity should have additional properties added for UCSM:
 
 If these properties were filled, the network should be created on Quantum as part of the create network operation. 
 
-Note: Quantum Cisco plugin seems to support multiple UCSMs, do we want to allow that?
+Note: The Quantum Cisco plugin seems to support multiple UCSMs, do we want to allow that?
 
 
 
@@ -162,12 +163,14 @@ It is possible that we would need to get the port profile name from Quantum to u
 
 In this case, we would need to get this info from Quantum after the network has been created there. Quantum should have this API available.
 
-The network can then be attached to a cluster as any other network would.
-
 Question: Does this mean the network now has state (Building, OK, etc)?
 
 
+=== Network to Cluster attachment ===
+The network can then be attached to a cluster as any other network would. No change is necessary at this level.
 
+
+=== Host provisioning ===
 A host that has the Palo Adapter (M81KR) installed will reveal itself as part of the vdsCaps.
 
 Info that need to be supplied as part of the adapter info: 
@@ -187,7 +190,7 @@ Note: A host that is moved from one cluster to the other won't necessarily fail 
 
 
 
-For example:
+=== Example ===
 
 In the DC we have "prod" & "staging" clusters, and a "red" network.
 
