@@ -145,19 +145,29 @@ HotPlugUnplugVmNic
 == Integrating UCSM into oVirt ==
 
 <!--
-=== Network entity ===
-Network entity should have additional properties added for UCSM: 
-* Management IP
-* User
-* Password
-* Number of allowed ports (vNICs) (?)
-* Port profile name (not editable)
+=== Network Provider entity ===
 
-If these properties were filled, the network should be created on Quantum as part of the create network operation. 
+This entity represents a network provider, and will exist (currently) on a system-wide level (is this wise?),
+
+The "Built-In" provider can be created by default to indicate the network is provided by whatever technology is used (Linux Bridge, OVS, etc).
+
+The new Network Provider entity should have these properties: 
+* Type (Built-in, UCSM, etc)
+* For UCSM:
+** Management IP
+** User
+** Password
+
+If the provider is Quantum based, then the definitions provided within should  be provisioned to the quantum plugin as part of the provider creation process.
 
 Note: The Quantum Cisco plugin seems to support multiple UCSMs, do we want to allow that?
 
 
+=== Network entity ===
+Network entity should have additional properties added: 
+* Network provider
+
+The network should be created on Quantum as part of the "create network" operation in case a quantum provider was chosen. 
 
 It is possible that we would need to get the port profile name from Quantum to use in several scenarios, i.e. when determining which networks are available on a host. 
 
