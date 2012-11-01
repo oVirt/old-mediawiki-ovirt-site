@@ -158,7 +158,7 @@ The new Network Provider entity should have these properties:
 ** User
 ** Password
 
-If the provider is Quantum based, then the definitions provided within should  be provisioned to the quantum plugin as part of the provider creation process.
+If the provider is Quantum based, then the definitions provided within should be provisioned to the quantum plugin as part of the provider creation process.
 
 Note: The Quantum Cisco plugin seems to support multiple UCSMs, do we want to allow that?
 
@@ -173,7 +173,7 @@ It is possible that we would need to get the port profile name from Quantum to u
 
 In this case, we would need to get this info from Quantum after the network has been created there. Quantum should have this API available.
 
-Question: Does this mean the network now has state (Building, OK, etc)?
+Question: Does this mean the network now has a state (Locked, OK, etc)?
 
 
 === Network to Cluster attachment ===
@@ -190,11 +190,15 @@ Info that need to be supplied as part of the adapter info:
 
 The Palo adapter will appear as a "NIC" of the host in the setup networks dailog, this will allow to attach VM networks to it as part of Setup Networks.
 
+We should verify that the Palo adapter indeed has this network defined, or fail the operation.
+
 The dynamic virtual NICs exposed by the Palo adapter should NOT be assignable in setup networks.
 
 The static virtual NICs exposed by the Palo adapter should appear as "regular" NICs which allow "non-vm" networks attached to them.
 
 This allows the "Logical Network" to be implemented one way on one host, and another way on another, depending on how it is set-up.
+
+Even if the host has the network available on the Palo adapter, the user might implement it using another technology.
 
 Note: A host that is moved from one cluster to the other won't necessarily fail the network checks, but will have to be se-synched in order to provision the network correctly.
 
