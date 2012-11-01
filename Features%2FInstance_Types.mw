@@ -24,26 +24,25 @@ Enhancing templates to allow:
 * Status: under design and discussion, this is still not completed.
 
 === Detailed Description ===
-In oVirt 3.1, templates are entities created from a vm,
-Contains the configuration of the vm (static information of vm memory, cpu, network, OS..)
-and the disks of the vm, these are tightly coupled,
-and when creating vm from a template, the vm gets that template's configuration and disks.
+In oVirt 3.1, templates are entities created from a vm,<br>
+Contains the configuration of the vm (static information of vm memory, cpu, network, OS..)<br>
+and the disks of the vm, these are tightly coupled,<br>
+and when creating vm from a template, the vm gets that template's configuration and disks.<br>
 
-We would like to allow a user to assemble a vm from more than one template,
-and specifically allow choosing different templates for configurations, and for disks.
-For example allow user selecting template 'Fedora-17' for the vm disks,
-contains data for a fedora vm, 
-and template 'Fedora-17-XL' for configuration of a vm with more memory than in 'Fedora-17' template.
+We would like to allow a user to assemble a vm from more than one template,<br>
+and specifically allow choosing different templates for configurations, and for disks.<br>
+For example allow user selecting template 'Fedora-17' for the vm disks,<br>
+contains data for a fedora vm,<br>
+and template 'Fedora-17-XL' for configuration of a vm with more memory than in 'Fedora-17' template.<br>
 
-Another example is allowing user creating template only with configuration, without any disks attached to it,
-or on the other hand, a template that contains just disks, with no configuration.
+Another example is allowing user creating template only with configuration, without any disks attached to it,<br>
+or on the other hand, a template that contains just disks, with no configuration.<br>
 
-Further more, allowing user to 'run' a template, as is, without creating a vm,
-just to see what's in it, and on some occasions allowing changes saved to the template.
+Further more, allowing user to 'run' a template, as is, without creating a vm,<br>
+just to see what's in it, and on some occasions allowing changes saved to the template.<br>
 
-Another feature will be allowing the user to keep his vms up to date with the template,
-means if template (configuration?) updates, the vm configuration will update accordingly.
-
+Another feature will be allowing the user to keep his vms up to date with the template,<br>
+means if template (configuration?) updates, the vm configuration will update accordingly.<br>
 
 == Separating Configuration from Disks ==
 Templates could be partial, any field except name could be empty (null). 
