@@ -45,18 +45,18 @@ Another feature will be allowing the user to keep his vms up to date with the te
 means if template (configuration?) updates, the vm configuration will update accordingly.<br>
 
 == Separating Configuration from Disks ==
-Templates could be partial, any field except name could be empty (null). 
-When creating vm from the template, the vm entity which is sent, should contain all vm data,
-some from template(s) and some filled by the user.
-All templates used to create the vm will be saved, to update the vm if they are updated.
-AddVmCommand will allow sending templates for configuration and for disks.
-Configuration templates will have some kind of order, 
-to allow merging the right value in case of collision. (?)
-The vm's disks will be snapshots of all templates disks, from the given list.
+Templates could be partial, any field except name could be empty (null). <br>
+When creating vm from the template, the vm entity which is sent, should contain all vm data,<br>
+some from template(s) and some filled by the user.<br>
+All templates used to create the vm will be saved, to update the vm if they are updated.<br>
+AddVmCommand will allow sending templates for configuration and for disks.<br>
+Configuration templates will have some kind of order, <br>
+to allow merging the right value in case of collision. (?)<br>
+The vm's disks will be snapshots of all templates disks, from the given list.<br>
 
-User could mark for vm if it should be updated with the template,
-(still need to figure which, in case of many template)
-and every time template will be updated, the vms will be updated as well.
+User could mark for vm if it should be updated with the template,<br>
+(still need to figure which, in case of many template)<br>
+and every time template will be updated, the vms will be updated as well.<br>
 
 
 ==== Webadmin/Power User Portal ====
