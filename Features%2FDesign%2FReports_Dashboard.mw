@@ -23,7 +23,7 @@ entity (based on information from jasper reports)..
 === Detailed Description ===
 The following feature adds a dashboard tab for relevant entities (tree items) in the system to show overview of the entity (based on information from jasper reports).<BR>
 
-'''The tree items that have dashboard'''- System, Data Center, Clusters.<BR>
+'''The tree items that have dashboard'''- System, Data Center, Cluster.<BR>
 '''How to see the dashboard'''- Selecting the relevant tree item=>Choosing the dashboard tab (next to the events tab) <BR>
 '''pre-requirements'''-  <BR>
 1. Reports.xml- This file includes- <BR>
