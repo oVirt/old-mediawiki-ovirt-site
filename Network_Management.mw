@@ -189,10 +189,12 @@ Info that need to be supplied as part of the adapter info:
 * Which networks (or port profiles) are available (?)
 
 The Palo adapter will appear as a "NIC" of the host in the setup networks dailog, this will allow to attach VM networks to it as part of Setup Networks.
+* Identified by vendor id 0x1137 device id 0x0023
 
 We should verify that the Palo adapter indeed has this network defined, or fail the operation.
 
 The dynamic virtual NICs exposed by the Palo adapter should NOT be assignable in setup networks.
+* Identified by vendor id 0x1137 device id 0x0044
 
 The static virtual NICs exposed by the Palo adapter should appear as "regular" NICs which allow "non-vm" networks attached to them.
 
