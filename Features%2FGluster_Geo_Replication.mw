@@ -21,5 +21,13 @@ The following features will be supported
 * Displaying Geo-replication status information
 
 == Design ==
+[[File:Geo-Replication-Start.png]]
+[[File:Geo-Replication-Start-Verifying-SSH.png]]
+[[File:Geo-Replication-Start-Verifying-SSH-Success.png]]
+[[File:Geo-Replication-Start-Verifying-SSH-Failed.png]]
+[[File:Geo-Replication-Start-Privatekey-Test.png]]
+[[File:Geo-Replication-Start-SSH-Setup.png]]
+[[File:Geo-Replication-Start-SSH-Setup-Success.png]]
+[[File:Geo-Replication-Start-User-Defined.png]]
 
 [[Category:Feature]]
