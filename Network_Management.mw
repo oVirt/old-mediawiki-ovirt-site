@@ -175,6 +175,10 @@ In this case, we would need to get this info from Quantum after the network has 
 
 Question: Does this mean the network now has a state (Locked, OK, etc)?
 
+Question: How would UCSM support MTU?
+
+Question: Does Quantum support setting VLAN ID?
+
 
 === Network to Cluster attachment ===
 The network can then be attached to a cluster as any other network would. No change is necessary at this level.
