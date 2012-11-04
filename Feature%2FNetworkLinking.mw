@@ -1,0 +1,28 @@
+<!-- {{autolang|base=yes}} -->
+
+<!-- The actual name of your feature page should look something like: "Your feature name". Use natural language to name the pages. -->
+== Network Wiring ==
+
+=== Summary ===
+<!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
+* Enable changing the network of a running vm<br>
+* Enable disconnecting a network on a vm without unplugging the vnic <br>
+
+=== Owner ===
+* Name: [[User:alkaplan| Alona Kaplan]]
+* Email: <alkaplan@redhat.com>
+
+=== Current status ===
+* On Design
+* Last update date: 04/11/2012
+
+=== Detailed Description ===
+
+==== User Experience ====
+
+=== Documentation / External references ===
+Bugzilla -
+
+
+[[Category:Feature]]
+[[Category:Template]]
