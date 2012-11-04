@@ -18,9 +18,8 @@ The Host Power Management feature allows the oVirt engine to remotely control th
 === Current status ===
 <!--* Link to feature page in a specific release. That release may complete the feature, or parts of it. The complete scope of this feature in this release will be described in the release feature page -->
 
-The current implementation of the Power Management is focused on supporting the most popular power management device, while the fencing proxi selection is naive, and there is no support for topologies where redundant power supply exists which requires supporting additional power management device. 
+The current implementation of the Power Management is focused on supporting the most popular power management device, while the fencing proxy selection is naive, and there is no support for topologies where redundant power supply exists which requires supporting additional power management device. 
 * Last updated date: Nov 2, 2012
-
 
 === Detailed Description ===
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
