@@ -38,10 +38,15 @@ Adding test for the new pm_proxy_preferences field in VdsStaticDAOTest <br>
 Adding test data in fixtures.xml
 
 == Business Logic == 
+Add pmProxyPreferences field to VdsStatic<br>
+Add pmProxyPreferences field to VDS<br>
+
+FencingExecutor::FindVdsToFence<br>
+Apply the logic of searching for the proxy according to the pmProxyPreferences value<br>
+
 
 
 === Flow ===
-
 
 == User Experience ==
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
