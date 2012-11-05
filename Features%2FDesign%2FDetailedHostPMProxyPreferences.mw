@@ -62,7 +62,8 @@ Apply the logic of searching for the proxy according to the pmProxyPreferences v
 
 A new list will be added to the Power Management Tab when adding a new Host or modifying existing Host<br>
 The list will have by default the entries : engine,cluster and DC<br>
-the user may add other Host IPs or FQDNs by typing a value and pressing the ADD button<br>
+The user may add other Host IPs or FQDNs by typing a value and pressing the ADD button<br>
+The user may also use the UP and DOWN buttons to change items order inside the list<br>
 
 [[File:ProxyPreferences.png]]
 
