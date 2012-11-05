@@ -60,6 +60,10 @@ Apply the logic of searching for the proxy according to the pmProxyPreferences v
 == User Experience ==
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
 
+A new list will be added to the Power Management Tab when adding a new Host or modifying existing Host<br>
+The list will have by default the entries : engine,cluster and DC<br>
+the user may add other Host IPs or FQDNs by typing a value and pressing the ADD button<br>
+
 
 <!-- GUI mockups should also be added here to make it more clear -->
 
