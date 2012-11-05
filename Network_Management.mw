@@ -160,7 +160,7 @@ The new Network Provider entity should have these properties:
 
 If the provider is Quantum based, then the definitions provided within should be provisioned to the quantum plugin as part of the provider creation process.
 
-Note: The Quantum Cisco plugin seems to support multiple UCSMs, do we want to allow that?
+Note: The Quantum Cisco plugin seems to support multiple UCSMs, but it's not obvious how this would work so to KISS we should support only one UCSM for now if using quantum.
 
 
 === Network entity ===
