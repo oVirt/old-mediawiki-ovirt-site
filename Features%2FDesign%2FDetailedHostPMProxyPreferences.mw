@@ -54,6 +54,9 @@ Apply the logic of searching for the proxy according to the pmProxyPreferences v
 
 === Flow ===
 
+== API ==
+<!-- describe changes in REST API and SDK -->
+
 == User Experience ==
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
 
