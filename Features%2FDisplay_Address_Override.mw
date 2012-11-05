@@ -55,6 +55,13 @@ Example of creating a host with display address overridden:
 </host>
  </nowiki>
 
+If the console address has been overridden, the example of how to switch it back to the default:
+  <nowiki>
+<host>
+    <display_address/>
+</host>
+ </nowiki>
+
 === Documentation / External references ===
 
 
