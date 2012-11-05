@@ -64,7 +64,7 @@ A new list will be added to the Power Management Tab when adding a new Host or m
 The list will have by default the entries : engine,cluster and DC<br>
 the user may add other Host IPs or FQDNs by typing a value and pressing the ADD button<br>
 
-[File::ProxyPreferences.png]]
+[[File:ProxyPreferences.png]]
 
 == Installation/Upgrade ==
 <!-- Describe how the feature will effect new installation or existing one. -->
