@@ -51,6 +51,7 @@ Adding test data in fixtures.xml
 
 == Installation/Upgrade ==
 <!-- Describe how the feature will effect new installation or existing one. -->
+Add the new pm_proxy_preferences column in the upgrade script.
 
 === User work-flows ===
 <!-- Describe the high-level work-flows relevant to this feature. -->
