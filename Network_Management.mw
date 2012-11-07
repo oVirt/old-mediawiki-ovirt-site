@@ -179,13 +179,15 @@ Question: How would we allow to configure the network on more than one UCSM?
 
 Answer: It is possible to have the network linked to several UCSMs, in this case the port profile of the network should be created on each one.
 
-Question: Does this mean the network now has a state (Locked, OK, etc)?
-
 Question: How would UCSM support MTU?
+
+Answer: It is possible to set at the UCSM level, for the entire fabric, at the "QoS System Class"es.
 
 Question: Does Quantum support setting VLAN ID?
 
 Answer: Doesn't seem to do that, just use the fixed IP in the plugin conf.
+
+Question: Does this mean the network now has a state (Locked, OK, etc)?
 
 
 === Network to Cluster attachment ===
