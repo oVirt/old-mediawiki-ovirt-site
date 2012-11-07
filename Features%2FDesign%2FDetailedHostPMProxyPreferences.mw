@@ -81,6 +81,16 @@ The REST API will be enhanced to include the new Proxy Preferences as follows<br
      </power_management>
   </host>
 
+To achieve that we should do the following: <br>
+in api.xsd (schema) define new elements:<br>
+   ''proxy'' which contains two fields : address and predefined 
+   ''proxies'' which contains a list of proxy
+Add enum PreDefinedFenceType {ENGINE,CLUSTER,DATACENTER} in org.ovirt.engine.api.model package<br>
+Add PreDefinedFenceType enum to capabilities (BackendCapabilitiesResource)<br>
+Add enum validations<br>
+Add custom mapping for these new power-management fields in HostMapper.java, for both REST-->Backend and Backend-->REST directions)<br>
+Add metadata to rsdl_metadata_v-3.1.yaml
+
 == User Experience ==
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
 
