@@ -57,6 +57,30 @@ Apply the logic of searching for the proxy according to the pmProxyPreferences v
 == API ==
 <!-- describe changes in REST API and SDK -->
 
+The REST API will be enhanced to include the new Proxy Preferences as follows<br>
+
+   <host>
+     <power_management>
+        <proxies>
+           <proxy>
+             <address>1.1.1.1</address>
+           </proxy>
+           <proxy>
+              <address>host.tlv.redhat.com</address>
+           </proxy>
+           <proxy>
+              <predefined>engine</predefined>
+           </proxy>
+           <proxy>
+              <predefined>cluster</predefined>
+           </proxy>
+          <proxy>
+              <predefined>datacenter</predefined>
+           </proxy>
+        </proxies>
+     </power_management>
+  </host>
+
 == User Experience ==
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
 
