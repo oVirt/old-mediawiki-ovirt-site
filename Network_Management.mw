@@ -169,15 +169,23 @@ Network entity should have additional properties added:
 
 The network should be created on Quantum as part of the "create network" operation in case a quantum provider was chosen. 
 
+Alternatively, we would create the port profile on UCSM directly & configure the VLAN for it.
+
 It is possible that we would need to get the port profile name from Quantum to use in several scenarios, i.e. when determining which networks are available on a host. 
 
 In this case, we would need to get this info from Quantum after the network has been created there. Quantum should have this API available.
+
+Question: How would we allow to configure the network on more than one UCSM?
+
+Answer: It is possible to have the network linked to several UCSMs, in this case the port profile of the network should be created on each one.
 
 Question: Does this mean the network now has a state (Locked, OK, etc)?
 
 Question: How would UCSM support MTU?
 
 Question: Does Quantum support setting VLAN ID?
+
+Answer: Doesn't seem to do that, just use the fixed IP in the plugin conf.
 
 
 === Network to Cluster attachment ===
@@ -208,6 +216,12 @@ Even if the host has the network available on the Palo adapter, the user might i
 
 Note: A host that is moved from one cluster to the other won't necessarily fail the network checks, but will have to be se-synched in order to provision the network correctly.
 
+
+=== VM Network relation ===
+
+If the network is optional (& not Build-in?) then the schedueling algorithm should ignore it when picking a host to run the VM on (or migrate the VM to).
+
+Scheduieling should, however, make sure that the selected host has a free dynamic vNIC.
 
 
 === Example ===
