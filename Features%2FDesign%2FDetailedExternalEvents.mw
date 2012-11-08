@@ -84,6 +84,9 @@ TBD
 == User Experience ==
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
 
+User should be able to use the keyword is_external when searching for events<br>
+Event Tab display External Events using a new set of icons for NORMAL, WARNING and ERROR<br>
+
 == Installation/Upgrade ==
 <!-- Describe how the feature will effect new installation or existing one. -->
 
