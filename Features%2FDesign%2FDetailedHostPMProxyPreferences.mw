@@ -179,6 +179,6 @@ This option has major affect on the effort/cost and time-line of this feature si
 
 === Fence Wrapper ===
 A script or standalone program that will call the fence-agents package scripts directly<br>
-In this case we do need a Local VDSM
+In this case we do need a [http://wiki.ovirt.org/wiki/Features/Design/DetailedHostPMProxyPreferences#Local_VDSM Local VDSM]
 
 [[Category: Feature]]
