@@ -74,6 +74,9 @@ Change AuditLogCleanup logic to handle application & External cleanups<br>
 
 === Flow ===
 
+== Permissions ==
+New command is exposed currently only to SuperUser<br>
+
 == API ==
 <!-- describe changes in REST API and SDK -->
 
