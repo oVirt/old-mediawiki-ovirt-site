@@ -35,10 +35,23 @@ This classification is displayed in UI by using a different icon for each<br>
 It is recommended to add clones of existing icons for NORMAL, WARNING or ERROR with a different look to make it easy to distinguish visually between an application event and External Event.
 
 == CRUD ==
+Adding is_external boolean field to audit_log with a default value of ''false''<br>
+Update relevant views to return the is_external flag.<br>
+
+Adding a new configuration value that is exposed to engine-config named ExternalEventAgingThreashold<br>
+This value controls when old events are deleted from the audit_log table and is defaulted to 30 days.<br>
+
 
 === DAO ===
+Handling is_external in AuditLogDAODbFacadeImpl
 
 === Metadata ===
+Modifying AuditLogDAOTest to include the added is_external field<br>
+Adding is_external to fixtures.xml
+
+
+== Configuration ==
+Exposing ExternalEventAgingThreashold to  engine-config
 
 == Business Logic == 
 
