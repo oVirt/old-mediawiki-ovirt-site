@@ -143,7 +143,7 @@ This permission will ''not'' permit a user to edit the virtual machines instance
 
 ==== User workflow ====
 
-* Change VM tab to expose “New VM” button rather than “New Server” and “New Desktop” <br>
+* Change VM tab to expose “New VM” button that replaces the existing “New Server” and “New Desktop” <br>
 
 * When the user selects New VM they are prompted with a dialog where they enter for following details
 ** Data Center
