@@ -51,7 +51,7 @@ Proxy options may be:
 # '''Engine''':  The the server hosting the engine. This requires to install VDSM on this host
 # '''DC''':      A host in the same data center
 # '''Cluster''': A host in the same cluster
-# '''IP/FQDN''': A specific host
+# '''IP/FQDN''': A specific host defined in the system.
 
 
 ** Examples:
