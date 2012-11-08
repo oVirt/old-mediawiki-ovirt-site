@@ -43,6 +43,7 @@ This value controls when old events are deleted from the audit_log table and is 
 
 
 === DAO ===
+Adding is_external to audit_log BE<br>
 Handling is_external in AuditLogDAODbFacadeImpl
 
 === Metadata ===
