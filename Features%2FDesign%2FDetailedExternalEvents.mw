@@ -44,7 +44,8 @@ This value controls when old events are deleted from the audit_log table and is 
 
 === DAO ===
 Adding is_external to AuditLog BE<br>
-Handling is_external in AuditLogDAODbFacadeImpl
+Handling is_external in AuditLogDAODbFacadeImpl<br>
+Modify DeleteAuditLogOlderThenDate sp to get also event type parameter (application/external)
 
 === Metadata ===
 Modifying AuditLogDAOTest to include the added is_external field<br>
