@@ -32,7 +32,7 @@ This will be done by adding a new ''AddExternalEvent'' command and expose it to 
 External events should be displayed in displayed in the Events tab in UI and may be searched as any other event.<br>
 External Events are classified as application events as NORMAL, WARNING or ERROR<br>
 This classification is displayed in UI by using a different icon for each<br>
-It is recommended to add clones of existing icons for NORMAL, WARNING or ERROR with a different look to make it easy to distinguish visually between an application event and External Event.
+It is recommended to add clones of existing icons for NORMAL, WARNING ERROR or ALERT with a different look to make it easy to distinguish visually between an application event and External Event.
 
 == CRUD ==
 Adding is_external boolean field to audit_log with a default value of ''false''<br>
