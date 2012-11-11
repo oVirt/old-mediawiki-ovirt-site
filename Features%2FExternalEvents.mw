@@ -39,7 +39,7 @@ Global External Events should be displayed in the Global Events TAB while Extern
 
 Enable external plug-ins to inject events into the application database, for auditing and alerting.<br>
 Sample use-cases:<br>
-''External specific HW manfactuare monitors the the Host Hardware, and would like to alert the user on fan problem and temperture rising on a specific Host.''
+''External specific HW manfactuare monitors the the Host Hardware, and would like to alert the user on fan problem and temperture rising on a specific Host.'' <br>
 ''External anti-virus appliance scan to inject an event a VM has a virus.''
 
 === Dependencies / Related Features ===
