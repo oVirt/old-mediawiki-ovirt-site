@@ -37,9 +37,9 @@ Global External Events should be displayed in the Global Events TAB while Extern
 === Benefit to oVirt ===
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
 
-Enable running plug-in to inject events to the application.<br>
+Enable external plug-ins to inject events into the application database, for auditing and alerting.<br>
 Sample use-cases:<br>
-''External host monitoring system to inject an event that a host fan has malfunctioned.''
+''External specific HW manfactuare monitors the the Host Hardware, and would like to alert the user on fan problem and temperture rising on a specific Host.''
 ''External anti-virus appliance scan to inject an event a VM has a virus.''
 
 === Dependencies / Related Features ===
