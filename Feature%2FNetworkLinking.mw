@@ -20,7 +20,7 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 
 === Introduction ===
 Currently oVirt engine supports configuring the VM network interface either on creation or updating it when the Vnic is not in active state (or the VM is not running).<BR>
-:* oVirt-engine already supports hot-plug and hot-unplug of vnics, however it lacks the capability of performing changes of the Vnic once the Vnic is plugged and to preserve the Vnic PCI address.<BR>
+:* oVirt-engine already supports hot-plug and hot-unplug of vnics, however it lacks the capability of performing changes of the Vnic once the Vnic is plugged and to preserve the Vnic's PCI address.<BR>
 
 ==== High Level Feature Description ====
 A Vnic on a running VM can have 4 states (If the VM is down, its state represents how it should behave once started)
