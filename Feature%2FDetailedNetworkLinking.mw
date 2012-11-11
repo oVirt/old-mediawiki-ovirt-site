@@ -23,48 +23,30 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 
 ==== Engine Flows ====
 
-===== Add nic =====
-
+===== Add Vnic =====
 * 'connected' property of VmNetworkInterface should be stored in the DB
-:* VmNetworkInterfaceDAODbFacadeImpl- save
+ VmNetworkInterfaceDAODbFacadeImpl- save
+* The 'connect' property will be passed to the VDSM through when ActivateDecativateVm will be done.
 
-* The 'connect' property will be passed to the VDSM through the ActivateDecativate
-
-===== Update nic =====
+===== Update Vnic =====
 *'''shouldn't''' throw canDo when trying to update a nic when the vm is running and the nic is plugged.
 * 'connected' property of VmNetworkInterface should be stored in the DB
-:* VmNetworkInterfaceDAODbFacadeImpl- update
+ VmNetworkInterfaceDAODbFacadeImpl- update
+* If the vm is up, updateVm should be sent to the VDSM.
 
-===== Remove nic =====
-
-*remove the nic only if the VM is down or nic is deactivated
+===== Remove Vnic =====
+* no change (can be done only if the VM is down or the Vnic is unplugged)
 
 ===== Run VM =====
 * When running a VM, the VM's Vnics' 'connected' property should also be passed to the VDSM.
-:* VmInfoBuilder- addNetworkInterfaceProperties
+ VmInfoBuilder- addNetworkInterfaceProperties
 
 ===== Plug nic =====
-
-*plugging a nic when a VM is down updates its plugged flag in 
-vm_device table to 'true'. If the VM is up then the VDSM is also being called to plug it.
+* no change.
 
 ===== Unplug nic =====
 
-*when unplugging a nic update its plugged flag in vm_device table to 'false' and clear the address
-
-==== Engine API ====
-<!--
-- plug or unplug a nic
-
- VdcAction.java
- ...
- plugUnplugNic(1000)
-
- plugUnplugVmNicParameters.java
- Guid vmId;
- Guid nicId;
- boolean plug;
--->
+* no change.
 
 ==== Model ====
  vm_interface_view: (.schema)
@@ -80,7 +62,7 @@ TODO
 A new API is added for this feature.
 <!--
 <pre>
-hotplugNic (params)
+updateVmInteface (params)
 </pre>
 
 <pre>
@@ -90,6 +72,7 @@ params = {
        {'type': 'interface',
         'device': 'bridge|sriov|vnlink|bridgeless',
         'network': 'network name',                      <--- bridge name
+        'connected': 'is network connected',
         'address': 'PCI address dictionary',            <--- PCI = {'type':'pci', 'domain':'0x0000', 'bus':'0x00', 'slot':'0x0c', 'function':'0x0'}
         'macAddr': 'mac address',
         'bootOrder': <int>,                             <--- global boot order across all bootable devices
@@ -101,12 +84,9 @@ params = {
 
 New vdsm errors will be added: 
 <pre>
-'Failed to hotplug NIC' - code 49
-'Failed to hotunplug NIC' - code 50
+UPDATE_VNIC_FAILED ('Failed to update VM Network Interface.') - code 51
 </pre>
 
-'''Note:'''  To avoid PCI addresses collisions Engine should clean NIC's address entry in DB when unplug the NIC. <BR>
-The new address will be assigned to NIC with next plugging. <BR>
 -->
 
 ==== Events ====
