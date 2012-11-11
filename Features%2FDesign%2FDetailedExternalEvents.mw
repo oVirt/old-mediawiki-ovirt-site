@@ -76,7 +76,17 @@ Change AuditLogCleanup logic to handle application & External cleanups<br>
 === Flow ===
 
 == Permissions ==
-New command is exposed currently only to SuperUser<br>
+
+=== Command Permissions ===
+
+A new permission to access this command will be added by default only to superuser role. (Admin can add it to other custom roles)<br>
+
+=== Permissions on Entities ===
+
+Inject with single entity - requires permission for this action on the relevant entity).<br>
+Inject with multiple entities - need to check the permission for each entity.<br>
+Inject with no entity - requires system level permission to inject.<br>
+(this by default would only be in super user role.)
 
 == API ==
 <!-- describe changes in REST API and SDK -->
