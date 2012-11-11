@@ -1,0 +1,136 @@
+<!-- {{autolang|base=yes}} -->
+
+<!-- The actual name of your feature page should look something like: "Your feature name". Use natural language to name the pages. -->
+
+== Network Wiring ==
+
+=== Summary ===
+The network wiring feature is an enhancment for the VM Network Interface management.
+It supports the following actions without unlugging the Vnic, maintaing the address of the Vnic:
+:* Dynamicly changing the network of a running VM (without unplugging the Vnic) <br>
+:* Disconnecting a network of a VM without unplugging the vnic <br>
+[http://ovirt.org/wiki/Features/NetworkWiring Network Wiring Feature Page]
+
+=== Owner ===
+* Name: [[User:alkaplan| Alona Kaplan]]
+* Email: <alkaplan@redhat.com>
+
+=== Current status ===
+* On Design
+* Last update date: 11/11/2012
+
+=== Detailed Description ===
+
+==== User Experience ====
+
+==== Admin/User Portal ==== 
+===== Virtual Machines -> Network Interfaces sub tab =====
+* '''Columns'''
+:* Plugged- should be added after Name.
+:* Connected- should be added after Network Name. 
+:* Status (icon)- green if plugged and connected, red- otherwise. The tooltip should display the plugged and connected status.
+* '''Actions'''
+:* Activate/Deactivate-
+::* Remove these actions from the subtab (The user will be able to control the Vnic's state through the add/edit Vnic dialogs)
+
+:* Add
+::* There would be an "on/off" switch next to the network combo. The switch will present if the network is connected or not.
+::* "Activate" checkbox will be changed to a switch with two options "Plug/Unplug".
+
+:* Edit
+::* If the vm status is up
+:::* The edit command should be enabled.
+:::* If the vnic is active (plugged & connected) there should be a message in top of the dialog "Please notice, changing <b>Type</b> or <b>MAC</b> will cause plugging and unplugging the Vnic".
+:::* Port Mirroring- If the vnic is plugged and there is port mirroring on the vnic- network, type, mac and port mirroring fileds in the dialog will be disabled.
+::* There would be an "on/off" switch next to the network combo. 
+::* Add "Plug/Unplug" switch to the dialog (same as in Add dialog).
+
+[[File:vnicWiring.png|400px]]
+
+==== REST API ====
+NIC properties:
+
+Changes:
+* Adding new properties under VM NIC:
+:* plugged
+:* connected
+* Deprecating the active property under VM NIC
+* Deprecating activate/deactivate actions
+* Plug/unplug and connect/disconnect on a vnic, will be done via PUT action on the VM NIC 
+** /api/vms/xxx/nics/yyy/
+There is no reason to have dedicated actions for plug/unplug or connect/disconnect.
+The original reason for having them was that edit VM nic while the VM was up used to be blocked and now we'll enable doing these actions.
+
+==== Engine Flows ====
+
+==== Engine API ====
+<!--
+- plug or unplug a nic
+
+ VdcAction.java
+ ...
+ plugUnplugNic(1000)
+
+ plugUnplugVmNicParameters.java
+ Guid vmId;
+ Guid nicId;
+ boolean plug;
+-->
+
+===== Error codes =====
+
+translate VDSM error codes:
+TODO
+
+==== VDSM API ====
+
+A new API is added for this feature.
+<!--
+<pre>
+hotplugNic (params)
+</pre>
+
+<pre>
+params = {
+'vmId': vmUUID, 
+'nic':  
+       {'type': 'interface',
+        'device': 'bridge|sriov|vnlink|bridgeless',
+        'network': 'network name',                      <--- bridge name
+        'address': 'PCI address dictionary',            <--- PCI = {'type':'pci', 'domain':'0x0000', 'bus':'0x00', 'slot':'0x0c', 'function':'0x0'}
+        'macAddr': 'mac address',
+        'bootOrder': <int>,                             <--- global boot order across all bootable devices
+        'promisc': <blue,red>,                          <--- promisc mirror mode, the interface will mirror all red and blue bridge traffic
+        'specParams': params dictionary,
+        'nicModel': 'pv|rtl8139|e1000'}
+ }
+</pre>
+
+New vdsm errors will be added: 
+<pre>
+'Failed to hotplug NIC' - code 49
+'Failed to hotunplug NIC' - code 50
+</pre>
+
+'''Note:'''  To avoid PCI addresses collisions Engine should clean NIC's address entry in DB when unplug the NIC. <BR>
+The new address will be assigned to NIC with next plugging. <BR>
+-->
+
+==== Events ====
+<!-- What events should be reported when using this feature. -->
+
+=== Documentation / External references ===
+<!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
+
+=== Streched Goals ===
+* Enable hot changes in port mirroring (without plugging and unplugging)
+
+=== Comments and Discussion ===
+<!-- Add a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
+
+=== Open Issues ===
+<!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
+NA
+
+[[Category:Template]]
+[[Category:Feature]]
