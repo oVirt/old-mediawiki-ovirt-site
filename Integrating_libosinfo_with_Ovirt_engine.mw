@@ -153,6 +153,11 @@ plug the memory checks to libosinfo instead the use of Config values.
 #add CpuArch field to '''vm_static''' and '''vms''' view
 #upgrade vm_static table - remove entries from VmOsType that represents x86_64 archs. <br>instead put the canonical OS and put the relevant CpuArch value for it.
 
+
+===== Installer Changes =====
+
+*add libosinfo rpm as a dependency for ovirt-engine
+
 === Documentation / External references ===
 *libosinfo project page on FedoraHosted
 https://fedorahosted.org/libosinfo/
