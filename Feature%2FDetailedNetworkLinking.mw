@@ -60,7 +60,7 @@ UPDATE_VNIC_FAILED = 'Failed to update VM Network Interface.'
 ==== VDSM API ====
 
 A new API is added for this feature.
-<!--
+
 <pre>
 updateVmInteface (params)
 </pre>
