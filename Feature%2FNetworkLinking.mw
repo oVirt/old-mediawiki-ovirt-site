@@ -60,7 +60,7 @@ The ovirt-engine's user will be able to configure the Vnic state to any of the m
 :::* The edit command should be enabled.
 :::* If the vnic is active (plugged & connected) there should be a message in top of the dialog "Please notice, changing <b>Type</b> or <b>MAC</b> will cause plugging and unplugging the Vnic".
 :::* Port Mirroring- If the vnic is plugged and there is port mirroring on the vnic- network, type, mac and port mirroring fileds in the dialog will be disabled.
-::: Enable hot changes in port mirroring (without plugging and unplugging)
+::: Streched Goal- enable dynamic changes in port mirroring (without plugging and unplugging).
 ::* There would be an "on/off" switch next to the network combo. 
 ::* Add "Plug/Unplug" switch to the dialog (same as in Add dialog).
 
