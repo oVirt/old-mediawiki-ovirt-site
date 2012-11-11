@@ -28,7 +28,7 @@ The Audit Log module enables insertions of internal events.<br>
 Events are classified as NORMAL , WARNING or ERROR and UI will display different icon according to that.<br>
 A new command should be exposed to the API in order to enable addition of external events<br>
 Those events should be displayed in the Events tab in UI and may be searched as any other event.<br>
-I addition external ALERTS should be enabled as well and displayed in the ALERTS TAB<br>
+I addition, external ALERTS should be enabled as well and displayed in the ALERTS TAB<br>
 Global External Events should be displayed in the Global Events TAB while External Events that occurred on a specific entity/entities  should be displayed when this entity is selected.
 
 === Benefit to oVirt ===
