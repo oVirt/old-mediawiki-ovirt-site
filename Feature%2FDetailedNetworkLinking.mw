@@ -87,7 +87,6 @@ New vdsm errors will be added:
 UPDATE_VNIC_FAILED- code 51
 </pre>
 
--->
 
 ==== Events ====
 <!-- What events should be reported when using this feature. -->
