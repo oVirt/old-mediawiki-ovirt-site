@@ -40,7 +40,7 @@ local   all         all                               trust
 host    all         all         127.0.0.1/32          trust
 host    all         all         ::1/128               trust
 </nowiki>
-Run /etc/init.d/postgresql restart
+Run service postgresql restart
 
 == Connecting from other hosts ==
 If you want to be able to connect to PostgreSQL from other hosts (i.e. not from localhost only) do the following:
