@@ -127,7 +127,7 @@ Add metadata to rsdl_metadata_v-3.1.yaml
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
 
 A new list will be added to the Power Management Tab when adding a new Host or modifying existing Host<br>
-The list will have by default the entries : ENGINE,CLUSTER and DC (in 3.2)<br>
+The list will have by default the entries : CLUSTER ,DC and ENGINE(in 3.2)<br>
 
 The user may also use the UP and DOWN buttons to change items order inside the list(item order = priority)<br>
 
