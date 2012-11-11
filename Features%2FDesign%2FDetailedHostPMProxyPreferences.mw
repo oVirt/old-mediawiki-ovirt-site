@@ -22,7 +22,7 @@ This implementation is not robust enough, since fence action such as 'RestartVds
 This document describes an extension to the current proxy selection algorithm that enables each Host to define its proxy chain as a priority list.
 
 Specifically, the local host may be chosen as a proxy for fencing operations <br>
-This may be achieved by installing a full VDSM packages on the local machine of by using<br>
+This may be achieved by installing a full VDSM packages on the local machine  by using<br>
 [http://wiki.ovirt.org/wiki/Features/Design/DetailedHostPMProxyPreferences#Local_VDSM Local VDSM]
 
 An alternative to installing a lightweight local VDSM is writing a [http://wiki.ovirt.org/wiki/Features/Design/DetailedHostPMProxyPreferences#Fence_Wrapper Fence Wrapper]
