@@ -30,8 +30,8 @@ A new command should be exposed to the API in order to enable addition of extern
 The Events should be attached to the relevant internal objects (DataCenetr, Cluster, Host, VM etc. where relevant). <br>
 All Events should be classified as Internal/External. <br>
 All Events (internal and externals) should be filtered by the relevant fields displayed on the Events tab. <br>
-Those events should be displayed in the Events tab in UI and may be searched as any other event.<br>
-I addition, external ALERTS should be enabled as well and displayed in the ALERTS TAB<br>
+Those events should be displayed in the Events tab in UI and may be searched as any other event.<br> <br>
+As Events and Alerts use a similiar mechanism, external ALERTS should be enabled as well and displayed in the ALERTS TAB. <br>
 Global External Events should be displayed in the Global Events TAB while External Events that occurred on a specific entity/entities  should be displayed when this entity is selected.
 
 === Benefit to oVirt ===
