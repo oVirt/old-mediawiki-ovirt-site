@@ -25,11 +25,15 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 
 ===== Add nic =====
 
-*when adding Network Interface Properties 'connected' property shuld also be added (VmInfoBuilder- addNetworkInterfaceProperties)
+* 'connected' property of VmNetworkInterface should be stored in the DB
+:* VmNetworkInterfaceDAODbFacadeImpl- save
+
+* The 'connect' property will be passed to the VDSM through the ActivateDecativate
 
 ===== Update nic =====
-
-*throw canDo when trying to update a nic when the vm is running and the nic is plugged.
+*'''shouldn't''' throw canDo when trying to update a nic when the vm is running and the nic is plugged.
+* 'connected' property of VmNetworkInterface should be stored in the DB
+:* VmNetworkInterfaceDAODbFacadeImpl- update
 
 ===== Remove nic =====
 
@@ -61,6 +65,10 @@ vm_device table to 'true'. If the VM is up then the VDSM is also being called to
  Guid nicId;
  boolean plug;
 -->
+
+==== Model ====
+ vm_interface_view: (.schema)
+ join vm_interface.connected as active
 
 ===== Error codes =====
 
