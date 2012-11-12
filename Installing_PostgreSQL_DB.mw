@@ -15,20 +15,35 @@ $> psql --version
 Note: for earlier PostgreSQL versions, a patch is needed.
 
 == Running the service ==
- <nowiki>
+
 From PostgreSQL 9:
-#> su - postgres -c 'pg_ctl initdb' # (first time only)
+
+<pre>
+#> postgresql-setup initdb # (first time only)
+#> systemctl start postgresql.service
+</pre>
+
+If the database needs to be recreated from scratch the way to do it is to stop the server, remove the data directory and run the setup again:
+
+<pre>
+#> systemctl stop postgresql.service
+#> rm -rf /var/lib/pgsql/data
+#> postgresql-setup initdb
+#> systemctl start postgresql.service
+</pre>
 
 For PostgreSQL 8 or earlier:
-#> su - postgres -c 'initdb -U postgres -D /var/lib/pgsql/data/' # (first time only)
 
+<pre>
+#> su - postgres -c 'initdb -U postgres -D /var/lib/pgsql/data/' # (first time only)
 #> service postgresql start
-</nowiki>
+</pre>
+
 It is recommended to add this service to auto start by
 
- <nowiki>
+<pre>
 #> chkconfig postgresql on
-</nowiki>
+</pre>
 
 == Connecting to the database ==
 You should set security definitions in hba_conf file as described at <BR> http://www.postgresql.org/docs/8.2/interactive/auth-pg-hba-conf.html
