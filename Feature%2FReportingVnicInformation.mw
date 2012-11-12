@@ -19,19 +19,7 @@ Today only the IPv4 addresses are reported to the User, kept on VM level. This f
 * Last updated date: Nov 8 2012
 
 
-=== High Level Feature Description ===
-GetVmStats reports the information about the vNic.
-
-
-=== Detailed Design ===
-
-
-==== DB Changes ====
-
-
-
-===== Upgrade DB =====
-DB Upgrade should handle the following:
+=== User Experience ===
 
 ==== API Changes ====
 New attributes will be added to VM nics collection /api/vms/yyyy/nics:
@@ -75,8 +63,6 @@ Affected oVirt projects:
 * API
 * Admin Portal
 * User Portal
-
-=== Documentation / External references ===
 
 === Comments and Discussion ===
 [[Category: Feature]]
