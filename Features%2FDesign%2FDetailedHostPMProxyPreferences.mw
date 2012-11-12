@@ -92,7 +92,8 @@ The pm_proxy_preferences of the Host that is in non-responding state is examined
 for each entry in the  comma-separated values for this field we are trying to send the fencing command (Start/Stop) via the proxy<br>
 In the case that the proxy is the local engine , a validation phase of checking existence of local installed fence-agents package is issued<br>
 The first proxy on the pm_proxy_preferences chain that succeeded to execute the command takes <br>
-If all proxies in the pm_proxy_preferences chain fails to execute the fencing operation , an ERROR is written to the log.
+If all proxies in the pm_proxy_preferences chain fails to execute the fencing operation , an ERROR is written to the log.<br>
+Actual proxy used in a fencing operation should be logged as well.
 
 == API ==
 <!-- describe changes in REST API and SDK -->
