@@ -32,7 +32,9 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 *'''shouldn't''' throw canDo when trying to update a nic when the vm is running and the nic is plugged.
 * 'connected' property of VmNetworkInterface should be stored in the DB
  VmNetworkInterfaceDAODbFacadeImpl- update
-* If the vm is up, updateVm should be sent to the VDSM.
+* If the vm is up
+:* updateVm should be sent to the VDSM.
+:* if the plugged property was changed, HotPlugUnlpug should be sent to the VDSM (?)
 
 ===== Remove Vnic =====
 * no change (can be done only if the VM is down or the Vnic is unplugged)
