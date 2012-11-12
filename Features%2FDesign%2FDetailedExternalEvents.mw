@@ -138,8 +138,10 @@ Entity instance External Events will be displayed on the Events TAB when selecti
 == Open Issues ==
 <!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
 
+=== Notifications ===
 Should the new External Event types be exposed to the engine-notification tool?<br> 
 
+=== Resetting an Alert ===
 How an external ALERT disappears from the system after problem is resolved.<br>
 Options:<br>
 
