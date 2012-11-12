@@ -94,9 +94,10 @@ params = {
  }
 </pre>
 
-Updated folowes:
+Updated folowes: <BR>
 hotplugNic- the vdsm should connect the Vnic's Network according to the 'wired' property passed on the Vnic. <BR>
 createVm- the vdsm should connect each of the Vm's Vnics according to the 'wired' property passed on the each Vnic. <BR>
+
 New vdsm errors will be added: 
 <pre>
 UPDATE_VNIC_FAILED- code 51
