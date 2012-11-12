@@ -50,7 +50,7 @@ The oVirt-engine's user will be able to configure the Vnic state to any of the m
 :* Status (icon)- green if plugged and connected, red- otherwise. The tooltip will display the plugged and connected status.
 * '''Removed Actions'''
 :* Activate/Deactivate
-::* These actions will be removed from the action bar of the subtab (The user will be able to control the Vnic's state through the add/edit Vnic dialogs)
+::* These actions will be removed from the action menu of the subtab and from the context menu (The user will be able to control the Vnic's state through the add/edit Vnic dialogs)
 * '''Updated Actions'''
 :* Add
 ::* Adding radio button with two options "connected/"disconnected" under the "network" combo.
@@ -58,7 +58,7 @@ The oVirt-engine's user will be able to configure the Vnic state to any of the m
 
 :* Edit
 ::* If the VM status is up
-:::* The edit command should be enabled (previously it was disabled).
+:::* The edit action should be enabled (previously it was disabled).
 :::* If the Vnic is active (plugged & connected) there should be a message in top of the dialog "Please notice, changing <b>Type</b> or <b>MAC</b> will cause unplugging and plugging the Vnic".
 :::* Port Mirroring- If the Vnic is plugged and there is port mirroring on the Vnic- network, type, mac and port mirroring fields in the dialog will be disabled.
 ::: Stretched Goal- enable dynamic changes in port mirroring (without plugging and unplugging).
