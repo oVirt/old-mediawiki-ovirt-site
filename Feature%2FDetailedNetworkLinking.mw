@@ -36,7 +36,7 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 :* plugged->unplugged ('plugged' property was changed to false)
 :** Unplug should be sent to the VDSM
 :* unplugged->plugged
-:** plug should be sent to the VDSM
+:** Plug should be sent to the VDSM
 :* plugged->plugged
 :** updateVm should be sent to the VDSM.
 :* unplugged->unplugged
