@@ -131,7 +131,6 @@ The list will have by default the entries : CLUSTER ,DC and ENGINE(in 3.2)<br>
 
 The user may also use the UP and DOWN buttons to change items order inside the list(item order = priority)<br>
 
-Assuming that engine,cluster and datacenter are part of each chain and only priority may changes<br>
 See [http://wiki.ovirt.org/wiki/Features/Design/DetailedHostPMProxyPreferences#Open_Issues pre-defined values]  for details.
 
 [[File:ProxyPreferences.png]]
