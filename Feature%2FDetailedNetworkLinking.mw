@@ -23,7 +23,8 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 
 ==== Engine API ====
  VmNetworkInterface:
- boolean connected;
+   boolean connected;
+
 ==== Engine Flows ====
 
 ===== Add Vnic =====
