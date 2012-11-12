@@ -137,7 +137,8 @@ See [http://wiki.ovirt.org/wiki/Features/Design/DetailedHostPMProxyPreferences#O
 
 == Installation/Upgrade ==
 <!-- Describe how the feature will effect new installation or existing one. -->
-Add the new pm_proxy_preferences column in the upgrade script.
+Add the new pm_proxy_preferences column in the upgrade script.<br>
+Adding configuration values as described in [http://wiki.ovirt.org/wiki/Features/Design/DetailedHostPMProxyPreferences#Configuration Configuration]
 
 === User work-flows ===
 <!-- Describe the high-level work-flows relevant to this feature. -->
