@@ -25,7 +25,7 @@ It supports the following actions without unplugging the Vnic, maintaining the a
  VmNetworkInterface:
    boolean wired;
 
-<span style="color:Teal">'''VM_INTERFACE'''</span> An extension to the existing table to describe is the vnic wired:<BR>
+<span style="color:Teal">'''VM_INTERFACE'''</span><BR>
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
 |-
