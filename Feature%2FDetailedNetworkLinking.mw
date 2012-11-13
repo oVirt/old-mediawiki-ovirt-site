@@ -28,10 +28,18 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 ==== Database Changes ====
 
 <span style="color:Teal">'''VM_INTERFACE'''</span><BR>
-{|class="wikitable sortable"
+{|class="wikitable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
 |-
 |wired ||boolean ||not null ||Indicates wether the vnic is wired
+|-
+|}
+
+<span style="color:Teal">'''VM_INTERFACE_VIEW'''</span><BR>
+{|class="wikitable"
+!border="1"| Column Name ||Column Type ||Definition 
+|-
+|wired ||boolean ||Indicates wether the vnic is wired
 |-
 |}
 
@@ -40,7 +48,7 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 ===== Add Vnic =====
 * 'wired' property of VmNetworkInterface should be stored in the DB
  VmNetworkInterfaceDAODbFacadeImpl- save
-* The 'wired' property will be passed to the VDSM through when ActivateDecativateVm will be done.
+* The 'wired' property is sent to the VDSM by ActivateDeactivateVmNicCommand command (for running VMs with the nic set to plugged)
 
 ===== Update Vnic =====
 *'''shouldn't''' throw canDo when trying to update a nic when the vm is running and the nic is plugged.
@@ -60,27 +68,22 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 * no change (can be done only if the VM is down or the Vnic is unplugged)
 
 ===== Run VM =====
-* When running a VM, the VM's Vnics' 'wired' property should also be passed to the VDSM.
- VmInfoBuilder- addNetworkInterfaceProperties
+* When running a VM, the VM's Vnics' 'wired' property should also be passed to the VDSM, for 3.2 cluster and above.
+ VmInfoBuilder.addNetworkInterfaceProperties
 
 ===== Plug nic =====
 * no change.
 
 ===== Unplug nic =====
-
 * no change.
 
-==== Model ====
- vm_interface_view: (.schema)
- join vm_interface.wired as active
-
 ===== Error codes =====
-
-translate VDSM error codes:
+Add translation to VDSM error codes:
 UPDATE_VNIC_FAILED = 'Failed to update VM Network Interface.'
 
 ==== VDSM API ====
 
+===== New API =====
 A new API is added for this feature.
 
 <pre>
@@ -104,9 +107,9 @@ params = {
  }
 </pre>
 
-Updated folowes: <BR>
-:*hotplugNic- the vdsm should connect the Vnic's Network according to the 'wired' property passed on the Vnic. <BR>
-:*createVm- the vdsm should connect each of the Vm's Vnics according to the 'wired' property passed on the each Vnic. <BR>
+===== Updated APIs =====
+* '''hotplugNic''' - the vdsm should connect the Vnic's Network according to the 'wired' property passed on the Vnic. <BR>
+* '''createVm''' - the vdsm should connect each of the Vm's Vnics according to the 'wired' property passed on the each Vnic. <BR>
 
 New vdsm errors will be added: 
 <pre>
@@ -115,6 +118,10 @@ UPDATE_VNIC_FAILED- code 51
 
 ==== Events ====
 <!-- What events should be reported when using this feature. -->
+
+==== Open Issues ====
+# Should we deprecate the invocation of ActivateDeactivateVmNic command by the clients as we managed it by UpdateVmNetworkInterface command ?
+# Should ActivateDeactivateVmNic be renamed to PlugUnplug ?
 
 === Documentation / External references ===
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
