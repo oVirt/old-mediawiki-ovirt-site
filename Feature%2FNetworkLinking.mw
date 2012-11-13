@@ -6,7 +6,7 @@
 === Summary ===
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
 The network wiring feature is an enhancement for the VM Network Interface management.
-It supports the following actions without unplugging the Vnic, maintaining the address of the Vnic:
+It supports the following actions without unplugging the Vnic, and it maintains the device address of the Vnic:
 :* Dynamically changing the network of a running VM. <br>
 :* Unwiring a network of a VM. <br>
 
