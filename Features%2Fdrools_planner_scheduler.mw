@@ -12,6 +12,7 @@ The main objectives of the drools scheduler:
 * possibly more power saving
 * to be a smarter default scheduler for ovirt
 
+
 === Owner ===
 
 * Name: [[User:Lhornyak| Laszlo Hornyak]]
@@ -29,9 +30,9 @@ The main objectives of the drools scheduler:
 [[File:Drools_score_calculation_plan.png]]
 
 The rule calculation will be broken down to three major categories:
-* [[#Comments_and_Discussion|costs of the migration]]
-* benefits of the migration
-* costs of the situatuion
+* [[#Costs_of_the_migration|costs of the migration]]
+* [[Benefits_of_the_migration|benefits of the migration]]
+* [[Costs_of_the_situation|costs of the situatuion]]
 
 Also, there will be some hard constraints enforced, e.g. required optional networks must be available on vds.
 
@@ -45,7 +46,7 @@ As part of the migration, these costs should be calculated:
 * Is console attached. If VM is in use by user, it may be better to migrate another Vm from the host.
 
 
-==== costs of the situation ====
+==== Costs of the situation ====
 
 The costs of the situation are calculated in order to counterweight the costs of the migration. Some example for situation costs:
 * Overallocation of CPU/memory/network bandwidth/IO
