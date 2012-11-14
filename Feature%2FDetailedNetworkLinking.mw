@@ -60,7 +60,7 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 :* unplugged->plugged
 :** Plug should be sent to the VDSM
 :* plugged->plugged
-:** updateVm should be sent to the VDSM.
+:** updateVmInteface should be sent to the VDSM.
 :* unplugged->unplugged
 :** nothing should be sent to VDSM
 
