@@ -63,10 +63,10 @@ add the <cpu> output from virsh to your vm xml adding match='exact' to <cpu>
 === oVirt-Live-0.8.iso - beta version Nov 15th 2012 ===
 
 ==== Download ====
-[http://ovirt.org/releases/3.1/tools/oVirt-Live-0.8.iso download oVirt-Live-0.8.iso]
+[http://ovirt.org/releases/3.1/tools/oVirt-Live.0.8.iso download oVirt-Live-0.8.iso] 
 
 ==== change-log ====
--mostly changes to make installation work when no Ethernet interface connected 
+-mostly changes to make installation work when no Ethernet interface connected
 
 === oVirt-Live-0.7.iso - beta version Oct 23th 2012 ===
 
