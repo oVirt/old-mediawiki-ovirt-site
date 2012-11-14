@@ -29,7 +29,7 @@ The main objectives of the drools scheduler:
 [[File:Drools_score_calculation_plan.png]]
 
 The rule calculation will be broken down to three major categories:
-* costs of the migration
+* [[#Comments_and_Discussion|costs of the migration]]
 * benefits of the migration
 * costs of the situatuion
 
