@@ -60,8 +60,7 @@ The table will be updated only when a change was detected by the reported data f
 <span style="color:Teal">'''VdsUpdateRunTimeInfo.refreshVms'''</span> - will refresh the vnic's dynamic data (as an optimization only if the data was changed).
 
 ==== VDSM API ====
-No changes for VDSM API. <BR>
-''getVmStats'' and ''getAllVmStats'' reports the guest's vnic data.
+No changes for VDSM API.
 
 === Dependencies / Related Features and Projects ===
 
