@@ -33,7 +33,7 @@ vm_static table:
   add column - db_generation  (DEFAULT 1)
 
 vdc_options table:
-  add row for OvfUpdateIntervalInMinutes config value.
+  add row - OvfUpdateIntervalInMinutes config value.
 
 ==== Engine ====
 *New singleton - OvfDataUpdater with an instance iniated during class loading - the constructor schedules a quartz job with interval as configured in the 'OvfUpdateIntervalInMinutes' config value.
