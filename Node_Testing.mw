@@ -72,20 +72,22 @@ The testcases and kept in the [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a
 
 == Basic Testcases ==
 
+Link: [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a=tree;f=tests/igor;hb=HEAD All available igor testcases/sets/suites]
+
 {|
-! Testsuite !! Difficulty !! Complete !! Updated
+! Testsuite !! Difficulty !! Complete !! Comment !! Updated
 |-
-| Basic Auto-Install - Installation with the basic parameters and a login into the TUI || easy || 80% [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a=blob;f=tests/igor/suites/ai_basic.suite;hb=HEAD testsuite] || 2012-06-20
+| Update - Basic update || hard || 0% || Needs some igor changes (support for 'persistent' VMs) || 2012-11-15
 |-
-| Alternate Auto-Install - Installation with other (TBD) parameters || medium || 10% [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a=blob;f=tests/igor/suites/ai_extended.suite;hb=HEAD testsuite] || 2012-06-20
+| Engine registration - Regsiter with an existing Engine instance || hard || 0% || Should be possible with igor's current featureset || 2012-11-15
 |-
-| Basic TUI-Install - Simple TUI installation using sane defaults || medium || 80% [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a=blob;f=tests/igor/suites/mi_basic.suite;hb=HEAD testsuite] || 2012-06-20
+| Basic Auto-Install - Installation with the basic parameters and a login into the TUI || easy || 100% || [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a=blob;f=tests/igor/suites/ai_basic.suite;hb=HEAD testsuite] || 2012-06-20
 |-
-| Basic TUI Testing - Perform a couple of TUI tasks  || medium || 30% || 2012-06-12
+| Basic TUI-Install - Simple TUI installation using sane defaults || medium || 100% || [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a=blob;f=tests/igor/suites/mi_basic.suite;hb=HEAD testsuite] || 2012-11-15
 |-
-| Basic unit tests - Perform doctest and unitests on the running Node  || easy || 40% || 2012-06-04
+| Basic TUI Testing - Perform a couple of TUI tasks  || medium || 100% || [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a=blob;f=tests/igor/sets/tui/check_navigation.set;hb=HEAD testcase] part of *_extended testsuites || 2012-11-15
 |-
-| Run some [http://autotest.github.com/ autotest][https://github.com/autotest/autotest/tree/master/client/virt/tests] tests on node  || hard || 0% || 2012-06-04
+| Basic unit tests - Perform doctest and unitests on the running Node  || easy || 100% || [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a=blob;f=tests/igor/sets/python.set;hb=HEAD testcase] part of *_extended testsuites || 2012-11-15
 |}
 
 [[Category:Testing]]
