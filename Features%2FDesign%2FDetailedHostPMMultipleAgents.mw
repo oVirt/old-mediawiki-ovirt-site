@@ -56,12 +56,15 @@ Stored Procedures:<br>
  InsertVds
 
 
-
+=== DAO ===
+Adding handling of pm_secondary* fields to <br>
+VdsStaticDAODbFacadeImpl<br>
+VdsDAODbFacadeImpl
 
 
 
 === Metadata ===
-Adding test data for ???? in fixtures.xml
+Adding test data for  VdsStaticDAOTest & fixtures.xml
 
 == Business Logic == 
 
