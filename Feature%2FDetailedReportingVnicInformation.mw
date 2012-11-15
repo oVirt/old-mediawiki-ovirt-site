@@ -27,7 +27,7 @@ The vNic device data from the guest contains the interface name, the ipv4 addres
 
 ==== Engine ====
 
-<span style="color:Teal">'''VM_INTERFACE_DYNAMIC'''</span> An satellite table of vm_interface, contains the dynamic data reported by the guest<BR>
+<span style="color:Teal">'''VM_INTERFACE_DYNAMIC'''</span> a new satellite table of vm_interface, contains the dynamic data reported by the guest<BR>
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
 |-
