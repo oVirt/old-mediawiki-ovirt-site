@@ -67,10 +67,10 @@ VdsDAODbFacadeImpl
 Adding test data for  VdsStaticDAOTest & fixtures.xml
 
 == Business Logic == 
-
+Add pm_secondary* fields to VdsStatic
+Add pm_secondary* fields to VDS
 
 === Flow ===
-
 
 == User Experience ==
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
