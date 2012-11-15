@@ -90,14 +90,12 @@ UPDATE_VNIC_FAILED = 'Failed to update VM Network Interface.'
 A new API is added for this feature.
 
 <pre>
-updateVmInteface (params)
+updateVmDevice (vmId, params)
 </pre>
 
 <pre>
 params = {
-'vmId': vmUUID, 
-'nic':  
-       {'type': 'interface',
+        'type': 'interface',
         'device': 'bridge|sriov|vnlink|bridgeless',
         'network': 'network name',                      <--- bridge name
         'wired': 'is network wired',
@@ -106,9 +104,11 @@ params = {
         'bootOrder': <int>,                             <--- global boot order across all bootable devices
         'promisc': <blue,red>,                          <--- promisc mirror mode, the interface will mirror all red and blue bridge traffic
         'specParams': params dictionary,
-        'nicModel': 'pv|rtl8139|e1000'}
+        'nicModel': 'pv|rtl8139|e1000',
  }
 </pre>
+
+Vdsm would implement this using http://libvirt.org/html/libvirt-libvirt.html#virDomainUpdateDeviceFlags .
 
 ===== Updated APIs =====
 * '''hotplugNic''' - the vdsm should connect the Vnic's Network according to the 'wired' property passed on the Vnic. <BR>
