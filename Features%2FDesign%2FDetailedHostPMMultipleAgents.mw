@@ -81,8 +81,9 @@ Add pm_secondary* fields to VDS
 == User Experience ==
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
 
+A new radio button will be added to the Power Management screen that enables selection of Primary/Secondary agents in order to insert agent details and test the agent.<br>
 
-<!-- GUI mockups should also be added here to make it more clear -->
+[[File:pmmultiagentscreen.png]]
 
 == Installation/Upgrade ==
 <!-- Describe how the feature will effect new installation or existing one. -->
