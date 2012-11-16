@@ -88,6 +88,8 @@ A new radio button will be added to the Power Management screen that enables sel
 == Installation/Upgrade ==
 <!-- Describe how the feature will effect new installation or existing one. -->
 
+Add the new pm_secondary* columns in the upgrade script.
+
 === User work-flows ===
 <!-- Describe the high-level work-flows relevant to this feature. -->
 
