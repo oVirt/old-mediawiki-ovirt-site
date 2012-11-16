@@ -147,9 +147,8 @@ Ensure that you have write access to <code>$JBOSS_HOME/standalone/deployments</c
 ## <code>-Xmx512m</code> - maximum Java heap size of 512 MiB
 ## <code>-Xdebug</code> - include debugging
 # Run with <code>-b 0.0.0.0</code> to have it bind to all IP addresses (by default it binds to the 127.0.0.1 address only).
-# Make sure you've nothing bound to port 8080 or 8009.
-## Other relevant ports JBoss may require: 8443/9990/9999/4447.
-# For external connections, make sure your firewall allows 8080 incoming traffic.
+# Make sure you've nothing bound to port 8700 or 8701.
+# For external connections, make sure your firewall allows 8700 incoming traffic.
 # If your machine has and selinux policy installed, make sure it will not block JBoss.
 # JBoss will bind to your host's name. Make sure it's resolvable by adding it to <code>/etc/hosts</code> or any other method.
 # You may wish to erase previous deployment (during development, if you encounter a situation where you work with the deployed application but it does not contain the expected behavior). In order to perform the cleanup, you must perform the following steps:
