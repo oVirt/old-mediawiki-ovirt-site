@@ -78,13 +78,7 @@ Create your <code>$HOME/.m2</code> directory (this is where maven stores your pe
 $> mkdir $HOME/.m2
 </code>
 
-You can download a complete personal settings file as follows:
-
-<pre>
-wget -O $HOME/.m2/settings.xml http://www.ovirt.org/w/images/1/18/Settings.xml.png
-</pre>
-
-Or copy & paste the content below into the file <code>$HOME/.m2/settings.xml</code>:
+Copy & paste the content below into the file <code>$HOME/.m2/settings.xml</code>:
 
 <pre>
 <settings
