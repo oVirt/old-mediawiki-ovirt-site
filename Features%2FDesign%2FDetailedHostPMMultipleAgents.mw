@@ -82,6 +82,7 @@ Add pm_secondary* fields to VDS
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
 
 A new radio button will be added to the Power Management screen that enables selection of Primary/Secondary agents in order to insert agent details and test the agent.<br>
+The Concurrent check box controls if the secondary agent works in the concurrent or sequential mode<br>
 
 [[File:pmmultiagentscreen.png]]
 
