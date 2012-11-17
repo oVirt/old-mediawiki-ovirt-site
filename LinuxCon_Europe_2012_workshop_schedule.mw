@@ -21,6 +21,7 @@ The oVirt Workshop was co-hosted with the KVM Forum during LinuxCon Europe. The 
 | 11:00-12:00
 | oVirt Node – Architecture, Design and Roadmap
 | Mike Burns
+| [[Media:Ovirt-node-2012-11-07.pdf | Slides]]
 |-
 | 13:00-13:40
 | oVirt High Level Architecture and Roadmap
@@ -38,6 +39,7 @@ The oVirt Workshop was co-hosted with the KVM Forum during LinuxCon Europe. The 
 | Hands-on Lab – Use and Install
 | Moran Goldboim
 |}
+
 == Thursday, Nov 8th ==
 
 {| style="border-spacing:0;border:none;padding:0in;width:80%;"
