@@ -7,15 +7,16 @@ The oVirt Workshop was co-hosted with the KVM Forum during LinuxCon Europe. The 
 
 === Wednesday November 7th 2012 - User Day ===
 
-{| style="border-spacing:0;border:none;padding:0in;"
-! <center>'''Time'''</center>
-! <center>'''Title'''</center>
-! <center>'''Presenter'''</center>
-! <center>'''Slides'''</center>
+{| style="border-spacing:0;border:none;padding:0in;width:80%;"
+! '''Time'''
+! '''Title'''
+! '''Presenter'''
+! '''Slides'''
 |-
-| 9:00-11:00
-| oVirt Overview and Demo
-| Andy Cathrow
+| style="width:15%;"| 9:00-11:00
+| style="width:50%;"| oVirt Overview and Demo
+| style="width:20%;"| Andy Cathrow
+| style="width:15%;"|
 |-
 | 11:00-12:00
 | oVirt Node – Architecture, Design and Roadmap
@@ -39,15 +40,16 @@ The oVirt Workshop was co-hosted with the KVM Forum during LinuxCon Europe. The 
 |}
 == Thursday, Nov 8th ==
 
-{| style="border-spacing:0;border:none;padding:0in;"
-! <center>'''Time'''</center>
-! <center>'''Title'''</center>
-! <center>'''Presenter'''</center>
-! <center>'''Slides'''</center>
+{| style="border-spacing:0;border:none;padding:0in;width:80%;"
+! '''Time'''
+! '''Title'''
+! '''Presenter'''
+! '''Slides'''
 |-
-| 9:00-10:00
-|  Scripting and Integration: oVirt CLI and SDK
-| Simon Grinberg
+| style="width:15%;"| 9:00-10:00
+| style="width:50%;"|  Scripting and Integration: oVirt CLI and SDK
+| style="width:20%;"| Simon Grinberg
+| style="width:15%;"| 
 |-
 | 10:30-11:00
 | Using oVirt via EC2/CIMI with Deltacloud
@@ -84,14 +86,16 @@ The oVirt Workshop was co-hosted with the KVM Forum during LinuxCon Europe. The 
 
 == Friday, Nov 9th ==
 
-{| style="border-spacing:0;"
-! <center>'''Time'''</center>
-! <center>'''Title'''</center>
-! <center>'''Presenter'''</center>
-! <center>'''Slides'''</center>
+{| style="border-spacing:0;border:none;padding:0in;width:80%;"
+! '''Time'''
+! '''Title'''
+! '''Presenter'''
+! '''Slides'''
 |-
-| 09:00-09:15
-| oVirt keynote in Ambar
+| style="width:15%;"| 09:00-09:15
+| style="width:50%;"| oVirt keynote in Ambar
+| style="width:20%;"|
+| style="width:15%;"|
 |-
 | 09:15-09:35
 | oVirt Infrastructure Overview
