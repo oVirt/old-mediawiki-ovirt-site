@@ -54,6 +54,7 @@ The oVirt Workshop was co-hosted with the KVM Forum during LinuxCon Europe. The 
 | 10:30-11:00
 | Using oVirt via EC2/CIMI with Deltacloud
 | Oved Ourfali
+| [[Media:Ourfali-ovirt-deltacloud-integration.pdf | Slides]]
 |-
 | 11:00-11:30
 | Extending oVirt's Web Interface with UI Plugins
@@ -62,6 +63,7 @@ The oVirt Workshop was co-hosted with the KVM Forum during LinuxCon Europe. The 
 | 11:30-12:00
 | Integrating oVirt into GNOME Boxes
 | Christophe Fergeau
+| [[Media:Fergeau-ovirt-boxes.pdf | Slides]]
 |-
 | 13:00-13:40
 | Extending oVirt via Custom Hooks
@@ -70,10 +72,12 @@ The oVirt Workshop was co-hosted with the KVM Forum during LinuxCon Europe. The 
 | 13:40-14:20
 | SLA at oVirt
 | Doron Fediuck
+| [[Media:Doron-ovirt-sla.zip | Slides]]
 |-
 | 14:20-15:00
 | IaaS Networking: Overlay-Based Virtual Networking vs Openflow-Controlled Switch Fabrics
 | Pino de Candia
+| ||Media:Midokura-ovirt-workshop.pdf‎ | Slides]]
 |-
 | 15:30-16:15
 | oVirt/Gluster Integration
