@@ -98,6 +98,8 @@ The REST API will be enhanced to include the new Secondary Agent definitions as 
   </power_management>
 
 == Flow ==
+
+'''No Secondary Agent'''<br>
 If no Power Management is defined , the Stop/Start scenarios works without a change.
 For example, the Restart scenario is:<br>
 
@@ -110,7 +112,7 @@ For example, the Restart scenario is:<br>
 
 If a secondary agent is defined<br>
 
-Sequential:<br>
+'''Sequential''':<br>
   Send a Stop command to Primary agent
   Wait for status 'off' 
     (controlled by FenceStopStatusDelayBetweenRetriesInSec,FenceStopStatusRetries configuration values)
@@ -121,7 +123,7 @@ Sequential:<br>
   If Start failed Send a Start command to Secondary agent and wait for status 'on'
 
 
-Concurrent:<br>
+'''Concurrent''':<br>
 
   Send a Stop command to Primary and Secondary agents
   Wait for status 'off' on both Primary and Secondary agents
