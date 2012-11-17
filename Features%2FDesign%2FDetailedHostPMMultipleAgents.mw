@@ -75,7 +75,9 @@ Adding test data for  VdsStaticDAOTest & fixtures.xml
 
 == Business Logic == 
 Add pm_secondary* fields to VdsStatic<br>
-Add pm_secondary* fields to VDS
+Add pm_secondary* fields to VDS<br>
+
+Changing FenceVdsBaseCommand::executeCommand() to handle all scenarios described in Flow
 
 == API ==
 
