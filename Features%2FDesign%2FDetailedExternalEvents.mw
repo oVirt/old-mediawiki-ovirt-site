@@ -120,7 +120,7 @@ Entity instance External Events will be displayed on the Events TAB when selecti
 
 == Installation/Upgrade ==
 <!-- Describe how the feature will effect new installation or existing one. -->
-
+Add is_external field to audit_log table upon upgrade
 === User work-flows ===
 <!-- Describe the high-level work-flows relevant to this feature. -->
 
