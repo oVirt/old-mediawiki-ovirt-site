@@ -80,7 +80,7 @@ NIC properties:
 Changes:
 * Adding new properties under VM NIC:
 :* plugged
-:* linkState
+:* linkState ("up"/ "down")
 * Deprecating the active property under VM NIC
 * Deprecating activate/deactivate actions
 * Plug/unplug and changing LinkState (up/down) on a vnic, will be done via PUT action on the VM NIC 
