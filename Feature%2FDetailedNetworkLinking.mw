@@ -25,7 +25,6 @@ It supports the following actions without unplugging the Vnic, maintaining the a
  VmNetworkInterface:
    LinkState linkState;
 
-
  Enum LinkState{
   up,
   down
