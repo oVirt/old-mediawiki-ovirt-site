@@ -26,7 +26,7 @@ The oVirt Workshop was co-hosted with the KVM Forum during LinuxCon Europe. The 
 | 13:00-13:40
 | oVirt High Level Architecture and Roadmap
 | Itamar Heim
-| [[Media:Heim-ovirt-arch-barcelona.pdf | Slides]]
+| [[Media:Heim-ovirt-arch-barcelona.pdf | Architecture]] [[Media:Heim-ovirt-roadmap-barcelona.pdf | Roadmap]]
 |-
 | 13:40-14:20
 | Deep Dive Features: Network
@@ -150,4 +150,24 @@ The oVirt Workshop was co-hosted with the KVM Forum during LinuxCon Europe. The 
 | 16:45-17-30
 | '''BOF:''' How can we improve oVirt Troubleshooting?
 | Lee Yarwood
+|}
+
+== Other oVirt Content at LinuxCon Europe ==
+
+Aside from the oVirt Workshop, oVirt was also present in the CloudOpen Summit, the Gluster Workshop and the KVM Forum.
+
+{| style="border-spacing:0;border:none;padding:0in;width:80%;"
+! '''Event'''
+! '''Title'''
+! '''Presenter'''
+! '''Slides'''
+|-
+| style="width:20%;"| CloudOpen Summit
+| style="width:45%;"| Introduction to the oVirt Virtualization Management Platform
+| style="width:20%;"| Itamar Heim
+| style="width:15%;"| [[Media:Heim-ovirt-intro-barcelona.pdf | Slides]]
+|-
+| Gluster workshop
+| Integrating GlusterFS, oVirt and KVM
+| Vijay Bellur
 |}
