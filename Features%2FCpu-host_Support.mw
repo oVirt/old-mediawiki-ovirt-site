@@ -22,7 +22,7 @@ CPU-Host support allows the virtual machines to see and utilize the host's CPU f
 Allows the users to get better performance from their VM's.
 
 === Dependencies / Related Features ===
-* libvirt's 
+* libvirt's [http://libvirt.org/formatdomain.html#elementsCPU CPU-model and topology]
 
 === Documentation / External references ===
 
