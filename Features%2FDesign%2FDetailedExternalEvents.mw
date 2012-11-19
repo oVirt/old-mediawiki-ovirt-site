@@ -95,6 +95,8 @@ Adding support for searching events by:<br>
   custom_event_id
 
 == Flow ==
+''Add Event/Alert'' Flow: <br>
+Invoke ''..api/events/add'' API giving at least AuditLogType, Severity, Vendor & CustomEventId <br>
 
 ''Delete Alert'' Flow: <br>
 Mark the relevant entry of the Alert in DB with ''deleted = true''<br>
