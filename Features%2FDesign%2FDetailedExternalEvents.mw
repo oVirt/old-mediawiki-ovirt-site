@@ -49,7 +49,7 @@ Update relevant views to return the additional fields.<br>
 
 === DAO ===
 Adding additional fields to AuditLog BE<br>
-Handling additionalfields in AuditLogDAODbFacadeImpl<br>
+Handling additional fields in AuditLogDAODbFacadeImpl<br>
 
 === Metadata ===
 Modifying AuditLogDAOTest to include the added fields<br>
