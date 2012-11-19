@@ -132,7 +132,6 @@ We will use the existing events URL (.../api/events) and the existing Event busi
 == User Experience ==
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
 
-User should be able to use the keyword is_external when searching for events<br>
 
 Global External Events will be displayed on the Global Events TAB<br>
 Entity instance External Events will be displayed on the Events TAB when selecting the Entity instance<br>
