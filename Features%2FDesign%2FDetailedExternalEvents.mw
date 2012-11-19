@@ -85,7 +85,6 @@ Adding AddExternalEventParameters with the following fields
 == Search Engine ==
 Adding support for searching events by:<br>
 
-  is_external
   deleted
   vendor
   custom_event_id
