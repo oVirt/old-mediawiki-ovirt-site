@@ -55,6 +55,9 @@ Adding additional fields to fixtures.xml
 Exposing ExternalEventAgingThreashold to  engine-config
 
 == Business Logic == 
+
+Adding additional fields to ''AuditLog'' BE<br>
+
 Adding the following types to AuditLogType
    EXTERNAL_EVENT_NORMAL  
    EXTERNAL_EVENT_WARNING 
@@ -67,6 +70,9 @@ Adding AddExternalEvent command<br>
 Adding AddExternalEventParameters with the following fields
    AuditLogSeverity [Mandatory]
    Message [Mandatory]
+   Vendor  [Mandatory]
+   CustomEventId [Mandatory]
+   EventFloodInSec[[Optional] -- 30 sec if not defined
    UserId [Optional]
    DataCenterId [Optional]
    StorageDomainId [Optional]
@@ -75,13 +81,6 @@ Adding AddExternalEventParameters with the following fields
    VmId [Optional]
    TemplateId [Optional]
    GlusterVolumeId [Optional]
-
-
-
-Adding the is_external keyword to the Search Engine to filter application/external events<br>
-
-Change AuditLogCleanup logic to handle application & External cleanups<br>
-
 
 == Search Engine ==
 Adding support for searching events by:<br>
