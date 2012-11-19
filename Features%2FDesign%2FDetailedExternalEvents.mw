@@ -35,7 +35,6 @@ Alerts that are deleted from the system are only marked as deleted in the ''audi
 External Events can not use application variables, therefore no '$' expressions should appear in the Event/Alert free message text<br>
 
 == CRUD ==
-Adding is_external boolean field to audit_log with a default value of ''false''<br>
 Adding deleted boolean field to audit_log with a default value of ''false''<br>
 Adding vendor varchar field to audit_log with a default value of ''oVirt'' [1]<br> 
 Adding custom_event_id integer field to audit_log with a default value of ''-1'' [2]<br>
