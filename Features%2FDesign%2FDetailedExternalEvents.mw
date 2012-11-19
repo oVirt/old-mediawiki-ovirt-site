@@ -84,6 +84,12 @@ Change AuditLogCleanup logic to handle application & External cleanups<br>
 
 
 == Search Engine ==
+Adding support for searacing events by:<br>
+
+  is_external
+  deleted
+  vendor
+  custom_event_id
 
 == Flow ==
 
