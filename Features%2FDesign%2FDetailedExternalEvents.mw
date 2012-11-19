@@ -155,10 +155,9 @@ Add additional fields to audit_log table upon upgrade
 
 [[Features/ExternalEvents]]
 
-== Open Issues ==
+== Future directions ==
 <!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
 
-=== Future directions ===
 External Event types should be exposed to the engine-notification tool in future releases<br> 
 Gathering Events/Alerts by the History ETL should be considered in future releases<br>
 
