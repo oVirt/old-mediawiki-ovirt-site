@@ -1,0 +1,64 @@
+__NOTOC__
+<div class="row">
+<div class="span6 pad-left pad-right-small">
+= Get started with oVirt =
+We’re working hard to make oVirt easy to install and available everywhere.
+
+Since oVirt is a relatively young project, setting it up is still a little tricky… but it’s getting easier with every release. 
+
+Right now, oVirt runs best on Fedora — and we tailored our quickstart guide to reflect this fact — but if you’re not afraid of compiling from source, we also have guides on [[how to install oVirt for many distributions]].
+
+You can also [[help us make oVirt easier to install everywhere]] too.
+</div>
+
+<div class="span6 pad-left-small pad-right">
+<div class="well">
+== You’ll need the following… ==
+
+<div class="row-fluid">
+
+<div class="span6">
+;Minimum hardware:
+:* 4 GB memory
+:* 20 GB disk space
+;Optional:
+:* Network storage
+</div>
+
+<div class="span6">
+;Software:
+:* Fedora 17 (for easy installation)
+;Advanced; install from source:
+:[[Debian]], [[Fedora]], [[Ubuntu]], [[other]]
+</div><!-- span -->
+</div><!-- row-fluid-->
+</div><!-- well -->
+</div><!-- span6 -->
+</div><!-- row -->
+
+<div class="row">
+
+<div class="span10 offset1">
+
+== Quickstart guide ([http://fedoraproject.org/download-splash?file=http://download.fedoraproject.org/pub/fedora/linux/releases/17/Live/x86_64/Fedora-17-x86_64-Live-Desktop.iso Fedora 17]) ==
+
+Our recommended method of installing oVirt is to use the pre-built packages for Fedora. It makes installing oVirt very easy. Naturally, you can run any Linux distribution or several other operating systems (e.g. Windows) as guests inside of oVirt instances.
+
+<!-- Normally, an <ol> isn't needed, but we're starting with 0 here, for fun. -->
+<ol start="0" class="steps endian">
+<li>Add the official oVirt repository for Fedora. <kbd><pre>sudo yum localinstall http://ovirt.org/releases/ovirt-release-fedora.noarch.rpm</pre></kbd>
+<li>Install oVirt Engine. <kbd><pre>sudo yum install -y ovirt-engine</pre></kbd>
+<li>Set up oVirt Engine. <kbd><pre>sudo engine-setup</pre></kbd>
+<li>Once you have successfully installed oVirt Engine, you will be provided with instructions to access oVirt's web-based management interface.
+<li>Congratulations! oVirt Engine is now installed!
+<li>You can now [[download and install oVirt Node]] for every virtualization server you'd like to set up.
+</ol>
+
+----
+
+Now that you have oVirt running, check out the [[documentation section]] and be sure to [[join our community]]! 
+
+Help [[develop the software]], take part in discussions on the [[mailing lists]] and join us [[on IRC]].
+</div>
+
+</div>
