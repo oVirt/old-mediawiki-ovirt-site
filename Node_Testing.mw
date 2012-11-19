@@ -77,9 +77,11 @@ Link: [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a=tree;f=tests/igor;hb=HE
 {|
 ! Testsuite !! Difficulty !! Complete !! Comment !! Updated
 |-
-| Update - Basic update || hard || 0% || Needs some igor changes (support for 'persistent' VMs) || 2012-11-15
+| Auto-install with storage_init=usb,ata || difficult || 0% || Igor changes: VM with different storage devices || 2012-11-19
 |-
-| Engine registration - Regsiter with an existing Engine instance || hard || 0% || Should be possible with igor's current featureset || 2012-11-15
+| Update - Basic update || difficult || 0% || Needs some igor changes (support for 'persistent' VMs) || 2012-11-15
+|-
+| Engine registration - Regsiter with an existing Engine instance || difficult || 0% || Should be possible with igor's current featureset || 2012-11-15
 |-
 | Basic Auto-Install - Installation with the basic parameters and a login into the TUI || easy || 100% || [http://gerrit.ovirt.org/gitweb?p=ovirt-node.git;a=blob;f=tests/igor/suites/ai_basic.suite;hb=HEAD testsuite] || 2012-06-20
 |-
