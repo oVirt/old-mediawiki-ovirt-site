@@ -29,7 +29,7 @@ Please refer to [http://wiki.ovirt.org/wiki/Action_Permissions_overview Action P
 * For setting or manipulating a network on the host you need to be host administrator on the host and you don't need to be network administrator.
 
 ==== User ====
-* For attaching a network to a Vnic in the VM you need to have the role of '''VmNetworkUser''' on the network and '''VmAdmin''' on the VM.
+* For attaching a network to a Vnic in the VM you need to have the role of '''NetworkUser''' on the network and '''VmAdmin''' on the VM.
 * In user portal - the list of shown network for a user will include only the list of networks the user is allowed to attach to its vnics (instead of all cluster's networks).
 * In RESTFul API the user will be able to see all of the networks.
 
@@ -85,7 +85,7 @@ The '''existing Action Groups''' and their associated Actions:
 ==== Roles and Action Groups ====
 
 ===== New Roles =====
-* '''VmNetworkUser''' a new user role to be associated with the following groups: CONFIGURE_VM_NETWORK and CONFIGURE_TEMPLATE_NETWORK.
+* '''NetworkUser''' a new user role to be associated with the following groups: CONFIGURE_VM_NETWORK and CONFIGURE_TEMPLATE_NETWORK.
 ** It should allow the user to create vnics attached to the subjected network or to update an existing vnic network.
 
 ===== Updated Roles =====
@@ -140,8 +140,8 @@ DB Upgrade should handle the following:
 * Permission on Data Center with PORT_MIRRORING action group will be replaced with:
 ** Permission on All the networks in the DC with PORT_MIRRORING action group.
 
-* Permission with '''VmNetworkUser''' role will be granted to the user on each network attached to the VM.
-** If A user already have a role that contains 'CONFIGURE_VM_NETWORK' action group, he should be granted with 'VmNetworkUser' role on the networks of that VMs for parity.
+* Permission with '''NetworkUser''' role will be granted to the user on each network attached to the VM.
+** If A user already have a role that contains 'CONFIGURE_VM_NETWORK' action group, he should be granted with 'NetworkUser' role on the networks of that VMs for parity.
 
 
 bug fix: <BR>
