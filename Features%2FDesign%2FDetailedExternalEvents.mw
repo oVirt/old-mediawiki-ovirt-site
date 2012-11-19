@@ -83,7 +83,9 @@ Adding the is_external keyword to the Search Engine to filter application/extern
 Change AuditLogCleanup logic to handle application & External cleanups<br>
 
 
-=== Flow ===
+== Search Engine ==
+
+== Flow ==
 
 ''Delete Alert'' Flow: <br>
 Mark the relevant entry of the Alert in DB with ''deleted = true''<br>
