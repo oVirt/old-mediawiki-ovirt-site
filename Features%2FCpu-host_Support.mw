@@ -1,0 +1,33 @@
+<!-- {{autolang|base=yes}} -->
+
+== CPU-Host Support ==
+
+=== Summary ===
+CPU-Host support allows the virtual machines to see and utilize the host's CPU flags, this enables better performance in VM's, at the price of worse portablity.
+
+=== Owner ===
+
+* Name: [[User:Lhornyak| Laszlo Hornyak]]
+* Email: <lhornyak@redhatdotcom>
+
+=== Current status ===
+* Planning
+* Last updated date: 19 Nov 2012
+
+
+=== Detailed Description ===
+
+
+=== Benefit to oVirt ===
+Allows the users to get better performance from their VM's.
+
+=== Dependencies / Related Features ===
+* libvirt's 
+
+=== Documentation / External references ===
+
+
+=== Comments and Discussion ===
+
+[[Category:Feature]]
+[[Category:SLA]]
