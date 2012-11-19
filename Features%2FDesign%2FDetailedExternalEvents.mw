@@ -94,14 +94,16 @@ Inject with no entity - requires system level permission to inject.<br>
 
 == API ==
 <!-- describe changes in REST API and SDK -->
-We will use the existing events URL (.../api/events) and the existing Event business-entity in the API and open the possibility to add (POST) a new event (engine will off course impose permissions check on this operation). <br>
+We will use the existing events URL (.../api/events) and the existing Event business-entity in the API and open the possibility to add (POST) a new event or delete an alert (engine will off course impose permissions check on this operation). <br>
 
 1) Add REST-->Backend mapping in EventMapper (right now only the other direction exists).<br>
 2) Add add() method declaration to EventsResource (this is the interface)<br>
 3) Add add() method implementation to BackendEvenetsResource (take example of creation implementation in BackendHostsResource)<br>
-4) Add signatures to meta-data file (rsdl_metadata_v-3.1.yaml)<br>
-5) Add tests<br>
-''Note that no update or delete are required.<br>''
+4) Add delete() method declaration to EventsResource (forced for Alerts only in canDoAction)<br>
+5) Add delete() method implementation to BackendEvenetsResource <br>
+6) Add signatures to meta-data file (rsdl_metadata_v-3.1.yaml)<br>
+7) Add tests<br>
+''Note that no update is required.<br>''
 
 == User Experience ==
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
