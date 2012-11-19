@@ -25,7 +25,7 @@ Allows the users to get better performance from their VM's.
 * libvirt's [http://libvirt.org/formatdomain.html#elementsCPU CPU-model and topology]
 
 === Documentation / External references ===
-
+* [https://bugzilla.redhat.com/show_bug.cgi?id=838469 BZ838469 - Support cpu -host for virtual machines]
 
 === Comments and Discussion ===
 
