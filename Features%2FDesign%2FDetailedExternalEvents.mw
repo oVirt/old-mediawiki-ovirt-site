@@ -34,16 +34,21 @@ External Events are classified as application events based on severity values of
 
 == CRUD ==
 Adding is_external boolean field to audit_log with a default value of ''false''<br>
-Update relevant views to return the is_external flag.<br>
+Adding deleted boolean field to audit_log with a default value of ''false''<br>
+Adding vendor varchar field to audit_log with a default value of ''oVirt''<br>
+Adding custom_event_id integer field to audit_log with a default value of ''-1''<br>
+Adding event_flood_in_sec integer field to audit_log with a default value of ''30''<br>
+
+Update relevant views to return the additional fields.<br>
 
 
 === DAO ===
-Adding is_external to AuditLog BE<br>
-Handling is_external in AuditLogDAODbFacadeImpl<br>
+Adding additional fields to AuditLog BE<br>
+Handling additionalfields in AuditLogDAODbFacadeImpl<br>
 
 === Metadata ===
-Modifying AuditLogDAOTest to include the added is_external field<br>
-Adding is_external to fixtures.xml
+Modifying AuditLogDAOTest to include the added fields<br>
+Adding additional fields to fixtures.xml
 
 == Configuration ==
 Exposing ExternalEventAgingThreashold to  engine-config
