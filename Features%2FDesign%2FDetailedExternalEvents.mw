@@ -79,6 +79,10 @@ Change AuditLogCleanup logic to handle application & External cleanups<br>
 
 === Flow ===
 
+''Delete Alert'' Flow: <br>
+Mark the relevant entry of the Alert in DB with ''deleted = true''<br>
+Add a NORMAL event on the Alert deletion with all relevant details (user, time etc.)<br>
+
 == Permissions ==
 
 === Command Permissions ===
