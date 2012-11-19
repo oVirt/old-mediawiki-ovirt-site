@@ -89,6 +89,8 @@ Adding support for searching events by:<br>
   vendor
   custom_event_id
 
+External Events can be filtered using ''vendor != 'oVirt'''
+
 == Flow ==
 ''Add Event/Alert'' Flow: <br>
 Invoke ''..api/events/add'' API giving at least AuditLogType, Severity, Vendor & CustomEventId <br>
