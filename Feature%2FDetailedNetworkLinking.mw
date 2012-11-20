@@ -79,7 +79,7 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 :** If MAC Address or Driver Type were update
 :*** Unplug followed by Plug should be sent to VDSM.
 :** Otherwise, if network is changed or disconnected
-:*** If cluster c. version is 3.2 or upper updateVmInteface should be sent to the VDSM.
+:*** If cluster c. version is 3.2 or upper updateDevice should be sent to the VDSM.
 :*** Otherwise, throw canDoAction
 :* unplugged --> unplugged
 :** nothing should be sent to VDSM
