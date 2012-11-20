@@ -118,7 +118,7 @@ The REST API will be enhanced to include the new Proxy Preferences as follows<br
 
 To achieve that we should do the following: <br>
 in api.xsd (schema) define new elements:<br>
-   ''proxy'' which contains one field : bvgpredefined 
+   ''proxy'' which contains one field : predefined 
    ''proxies'' which contains a list of proxy
 Add enum PreDefinedFenceType {ENGINE,CLUSTER,DATACENTER} in org.ovirt.engine.api.model package<br>
 Add PreDefinedFenceType enum to capabilities (BackendCapabilitiesResource)<br>
