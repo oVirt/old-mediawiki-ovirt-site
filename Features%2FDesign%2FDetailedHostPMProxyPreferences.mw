@@ -80,6 +80,11 @@ Add pmProxyPreferences field to VdsStatic<br>
 Add pmProxyPreferences field to VDS<br>
 
 FencingExecutor::FindVdsToFence<br>
+
+Modify the following commands to send the value of proxy preferences settings for the Host:<br>
+''AddVdsCommand''<br>
+''UpdateVdsCommand''<br>
+
 ------------------------------------
 Apply the logic of searching for the proxy according to the pmProxyPreferences value<br>
 
