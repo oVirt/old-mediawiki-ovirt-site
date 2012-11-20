@@ -18,7 +18,7 @@ This schedule is subject to last minute changes.
 |-
 | width="10%" | 09:00-09:15 || width="50%" | Welcome || width="20%" | James Rankin|| width="20%" |
 |-
-| 09:15-10:00 || ovirt - introduction and demo, high level architecture overview || James Rankin ||
+| 09:15-10:00 || ovirt - introduction and demo, high level architecture overview || James Rankin || [[Media:OVirt-intro-bangalore-oct2012.pdf | Slides]]
 |-
 | 10:00-10:45 || Integrating GlusterFS as a storage domain in VDSM and supporting storage array offloads from VDSM || Deepak C Shetty, Harsh Prateek Bora (IBM) ||
 |-
