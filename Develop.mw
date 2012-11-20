@@ -24,6 +24,8 @@ oVirt is a [[Architecture | collection of projects]] which work together to prov
 
 == Developing oVirt - checklist ==
 
+Stuff to be added to this page before switching.
+
 * oVirt architecture and projects
 * Getting the source code and compiling it
 * Submitting a patch
@@ -31,6 +33,6 @@ oVirt is a [[Architecture | collection of projects]] which work together to prov
 * Feature roadmap
 * Tools and processes
 
-[[File:Overall-arch.png]]
+[[File:Overall-arch.png|400px|oVirt architecture]]
 
 [[Category:Developer]]
