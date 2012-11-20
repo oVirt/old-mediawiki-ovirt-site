@@ -24,11 +24,10 @@ Since with host-passthrough gives the host cpu-capabilities to the VM's CPU, mig
 ** modify VmStatic, add useHostCpuFlags boolean property
 *** database schema modification in tables, views and stored procedures
 *** DAO modifications
-** modify the Add/Edit VM dialog, add 'use host cpu flags' checkbox - if AllowMigrateCPUHost is false, then it should be enabled only when Vm is pinned to host
+** modify the Add/Edit VM dialog, add 'use host cpu flags' checkbox - if AllowMigrateCPUHost is false, then it should be enabled only when Vm is pinned to host 
+[[File:Hostcpumockup.png]]
 * vdsm modifications:
 ** add support to domain creation for host-passthrough - api parameter name could be 'useHostCpuFlags'
-
-[[File:Hostcpumockup.png]]
 
 === Benefit to oVirt ===
 Allows the users to get better performance from their VM's.
