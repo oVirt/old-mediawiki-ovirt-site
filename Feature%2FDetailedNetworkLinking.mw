@@ -113,7 +113,6 @@ updateVmDevice (vmId, params)
 <pre>
 params = {
         'type': 'interface',
-        'device': 'bridge|sriov|vnlink|bridgeless',
         'network': 'network name',                      <--- bridge name
         'linkState': 'up/down',
         'alias': <string>,      
