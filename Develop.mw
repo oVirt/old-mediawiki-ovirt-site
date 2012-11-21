@@ -15,6 +15,7 @@ oVirt is a [[Architecture | collection of projects]] which work together to prov
 ; dwh and reports
 : The reports and data warehouse components for ovirt-engine are optional, and are packaged and developed separately
 
+''More information on [[subprojects | oVirt subprojects]]''
 </div>
 <div class="span6">
 
