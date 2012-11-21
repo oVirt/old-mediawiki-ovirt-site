@@ -1,8 +1,18 @@
 '''''Account creation is moderated by the wiki administrators - once you request an account, and confirm your email address, it will be created for you as quickly as possible. We are protecting this wiki from spambots and bad actors.'''''
 
-If you would like to make changes to wiki pages, follow the "Log in" link at the top of any page, and [[Special:RequestAccount | request a new account]]. There may be some delay in creating your account - if you would like to hurry us up a little, ask for help [[Communication#IRC | on the oVirt IRC channel]] or [[Communication#Mailing_lists | on the Users mailing list]]
+If you would like to make changes to wiki pages, do this:
+
+# Follow the [[Special:UserLogin|Log in]] link at the top of any page;
+# Click on [[Special:RequestAccount|request a new account]].
+#* (You may also click on the above link to go directly there.)
+
+There may be some delay in creating your account - if you would like to hurry us up a little, ask for help [[Communication#IRC | on the oVirt IRC channel]] or [[Communication#Mailing_lists | on the Users mailing list]]
 
 Once you have your user account, read [[Help:Editing]] and the related content in the [[:Category:Documentation for writing on the wiki]].
+
+== Deprecated method ==
+
+If you are a wiki contributor already and want to add a new contributor directly, you can follow [[http://wiki.ovirt.org/w/index.php?title=How_to_create_a_user_account&oldid=3998|these directions]].
 
 [[Category:How to]]
 [[Category:Documentation]]
