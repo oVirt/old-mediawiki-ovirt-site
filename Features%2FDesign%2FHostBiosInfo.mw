@@ -1,0 +1,61 @@
+<!-- {{autolang|base=yes}} -->
+
+== Host's Bios Information ==
+
+=== Summary ===
+When assigning new host to RHEV-M the engine gets general information about the host. This information includes Vdsm version, CPU units and more. This article describes the bios information that the host provides to RHEV-M, as describing in the following bug ticket: [https://bugzilla.redhat.com/show_bug.cgi?id=867543 bz867543]
+
+=== Owner ===
+* Name: [[User:ybronhei| Yaniv Bronhaim]]
+
+* Email: ybronhei@redhat.com
+
+=== Current status ===
+* Target Release: 3.1
+* Status: Work in progress
+* Last updated date: Nov 20 2012
+
+=== Detailed Description ===
+The following feature allows the portal to present host's bios information when adding new RHEV-H. <BR>
+This information is taken by using dmidecode command, this command runs with root permissions over the host and returns the information throw getCapabilities API method. This adds the following data: <BR>
+ 1. Host Manufacturer - Manufacturer of the host's machine and bios' vendor (e.g LENOVO)
+ 2. Host Version - For each host the manufacturer gives a unique name (e.g. Lenovo T420s)
+ 3. Host Product Name - ID of the product - same for all similar products (e.g 4174BH4)
+ 4. Host UUID - Unique ID for each host (e.g E03DD601-5219-11CB-BB3F-892313086897)
+ 5. Host Family - Type of host's CPU - (e.g Core i5)
+ 6. Host Serial Number - Unique ID for host's chassis (e.g R9M4N4G)
+Of course we can add more information in the future on request.
+
+==== User Experience ====
+<!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
+ 
+==== Engine Flows ====
+
+==== REST API ====
+
+==== Engine API ====
+
+==== Model ====
+
+===== Error codes =====
+
+==== VDSM API ====
+No change.
+
+==== Events ====
+<!-- What events should be reported when using this feature. -->
+
+=== Dependencies / Related Features and Projects ===
+<!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another 
+
+=== Documentation / External references ===
+<!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
+
+=== Comments and Discussion ===
+<!-- Add a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
+
+=== Open Issues ===
+<!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
+NA
+
+[[Category:Feature]]
