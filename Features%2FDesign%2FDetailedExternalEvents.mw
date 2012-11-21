@@ -99,7 +99,7 @@ External Events can be filtered using ''vendor != 'oVirt'''
 Invoke ''..api/events/add'' API giving at least AuditLogType, Severity, Vendor & CustomEventId <br>
 
 ''Delete Alert'' Flow: <br>
-Invoke ..api/events/delete API giving at least AuditLogType, Severity, Vendor & CustomEventId 
+Invoke ..api/events/delete API setting only AuditLogId<br>
 Mark the relevant entry of the Alert in DB with ''deleted = true''<br>
 Add a NORMAL event on the Alert deletion with all relevant details (user, time etc.)<br>
 
