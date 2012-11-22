@@ -28,8 +28,8 @@ You can also [[porting oVirt | help us make oVirt easier to install everywhere]]
 <div class="span6">
 ;Software:
 :* Fedora 17 (for easy installation)
-;Advanced; install from source:
-:[http://www.debian.org Debian], [http://www.fedoraproject.org Fedora], [http://www.ubuntu.com Ubuntu], [[porting oVirt | other]]
+;Advanced; install [[Building oVirt engine | Engine]] and [[Node Building | Node]] from source:
+: Help [[porting oVirt | port oVirt]] to [http://www.debian.org Debian], [http://www.ubuntu.com Ubuntu], [http://www.opensuse.org OpenSuse] and other distributions
 </div><!-- span -->
 </div><!-- row-fluid-->
 </div><!-- well -->
