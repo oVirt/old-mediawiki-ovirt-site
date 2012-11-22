@@ -474,9 +474,9 @@ The following are links in the draft pages of the demo wiki which are currently 
 | Link to [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt bugzilla] and [[reporting a bug]]
 | 
 | Note: 1 link
-|- style="background-color:orange"
-| [[Ubuntu‏‎]]
-| External link http://www.ubuntu.com
+|- style="background-color:springgreen"
+| Ubuntu‏‎
+| External link [http://www.ubuntu.com]
 | 
 | Note: 1 link
 |- style="background-color:springgreen"
@@ -504,13 +504,13 @@ The following are links in the draft pages of the demo wiki which are currently 
 | Exists
 | 
 | Note: 1 link
-|- style="background-color:orange"
-| [[Develop section‏‎]]
+|- style="background-color:springgreen"
+| Develop section‏‎
 | [[Develop]]
 | 
 | New in new wiki - in progress
-|- style="background-color:orange"
-| [[Develop the software‏‎]]
+|- style="background-color:springgreen"
+| Develop the software‏‎
 | [[Develop]]
 | 
 | New in new wiki
@@ -524,16 +524,16 @@ The following are links in the draft pages of the demo wiki which are currently 
 | Exists
 | 
 | Note: 1 link
-|- style="background-color:orange"
-| [[Signing up for the users@ovirt.org mailing list‏‎]]
+|- style="background-color:springgreen"
+| Signing up for the users@ovirt.org mailing list‏‎
 | [[Mailing lists]] or [[communication]]
 | 
 | Note: 1 link
 |- style="background-color:tomato"
-| [[API‏‎]]
+| API‏‎
 | 
 | 
-| Need context
+| Link deleted
 |- style="background-color:springgreen"
 | [[Template:H:title‏‎]]
 | 
@@ -564,8 +564,8 @@ The following are links in the draft pages of the demo wiki which are currently 
 | External link to oVirt page on Google+ (if/when we have one)
 | 
 | We don't have one - dropped link & mention.
-|- style="background-color:tomato"
-| [[Documentation section‏‎]]
+|- style="background-color:springgreen"
+| Documentation section‏‎
 | [[Documentation]]
 | 
 | Note: 1 link
@@ -579,11 +579,11 @@ The following are links in the draft pages of the demo wiki which are currently 
 | Exists
 | 
 | Note: 1 link
-|- style="background-color:tomato"
+|- style="background-color:springgreen"
 | [[The‏‎]]
 | "the #ovirt channel..." - [[communication#IRC]]
 | 
-| Everything after # gets dropped as a section name
+| Everything after # gets dropped as a section name - link fixed
 |- style="background-color:springgreen"
 | [[W:List of HTML entities‏‎]]
 | 
@@ -609,14 +609,14 @@ The following are links in the draft pages of the demo wiki which are currently 
 | Exists
 | 
 | Note: 1 link
-|- style="background-color:orange"
-| [[How the project is structured‏‎]]
+|- style="background-color:springgreen"
+| How the project is structured‏‎
 | [[Governance]]
 | 
 | Link identified, page locked
-|- style="background-color:tomato"
+|- style="background-color:springgreen"
 | [[Download and install oVirt Node‏‎]]
-| [[Download]]?
+| [[Quick_Start_Guide#Install_Hosts]]
 | 
 | Note: 1 link
 |- style="background-color:springgreen"
