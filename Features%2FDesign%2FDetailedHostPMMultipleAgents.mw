@@ -88,14 +88,14 @@ Changing FenceVdsBaseCommand::executeCommand() to handle all scenarios described
 
 The REST API will be enhanced to include the new Secondary Agent definitions as follows<br>
   <power_management_agents>
-    <power_management type="rsa">
+    <power_management type="rsa" order="primary">
       <enabled>true</enabled>
       <address>ip or fqdn</address>
       <username>user</username>
       <password>password</password>
        <options><option value="" name="port"/><option value="false" name="secure"/></options>
     </power_management>
-    <power_management type="apc">
+    <power_management type="apc" order="secondary">
       <address>ip or fqdn</address>
       <username>user</username>
       <password>password</password>
