@@ -51,7 +51,7 @@ Our recommended method of installing oVirt is to use the pre-built packages for 
 <li>Set up oVirt Engine. <kbd><pre>sudo engine-setup</pre></kbd>
 <li>Once you have successfully installed oVirt Engine, you will be provided with instructions to access oVirt's web-based management interface.
 <li>Congratulations! oVirt Engine is now installed!
-<li>You can now [[download and install oVirt Node]] for every virtualization server you'd like to set up.
+<li>For every virtualization server you'd like to manage, you can now [[Quick Start Guide#Install_Hosts | set them up as oVirt nodes]] .
 </ol>
 
 ----
