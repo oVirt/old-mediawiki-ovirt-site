@@ -447,9 +447,10 @@ to update the code and take latest, you need to do:
 # Compile the code
 # Upgrade your DB schema
 
- <nowiki>
-$> cd $OVIRT_HOME/backend/manager/dbscripts/
-$> ./upgrade.sh -u postgres</nowiki>
+<pre>
+$ cd $OVIRT_HOME/backend/manager/dbscripts
+$ ./upgrade.sh -u postgres
+</pre>
 
 == Is there an IDE? ==
 Yes! Take a look in: [[Building_Ovirt_Engine/IDE]]
