@@ -1,5 +1,5 @@
 
-Because oVirt integrates closely with both the Hypervisor and guest operating systems running on the Hypervisor, there is some porting and integration work required to enable oVirt Engine to manage nodes running on operating systems other than Fedora, CentOS and Red Hat Enterprise Linux. The main work involved is related to porting and integrating [[Category:Vdsm | VDSM]], [[libvirt]] and their dependencies to the new distribution for the hypervisor, and ensuring that the [[Guest Agent]], [[virtio]] and [[SPICE server]] integrate correctly on guests.
+Because oVirt integrates closely with both the Hypervisor and guest operating systems running on the Hypervisor, there is some porting and integration work required to enable oVirt Engine to manage nodes running on operating systems other than Fedora, CentOS and Red Hat Enterprise Linux. The main work involved is related to porting and integrating [[:Category:Vdsm | VDSM]], [[libvirt]] and their dependencies to the new distribution for the hypervisor, and ensuring that the [[Guest Agent]], [[virtio]] and [[SPICE server]] integrate correctly on guests.
 
 == Ubuntu ==
 
