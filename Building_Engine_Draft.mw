@@ -24,23 +24,28 @@ Note that while this guide was written and tested using Fedora 17 other Linux Di
 The supported Java development and runtime environments for the ovirt-engine project are provied by OpenJDK 1.7.0. Install the java-1.7.0-openjdk-devel package to obtain OpenJDK 1.7.0:
 
 '''Fedora'''
- <nowiki>
-#> yum install -y java-1.7.0-openjdk-devel</nowiki>
+<pre>
+# yum install -y java-1.7.0-openjdk-devel
+</pre>
 
 '''Debian'''
- <nowiki>
-#> apt-get install openjdk-7-jdk</nowiki>
+<pre>
+# apt-get install openjdk-7-jdk
+</pre>
 
-Use the 'alternatives' command to verify that 'javac' is correctly linked to the openjdk-1.7.0 instance of the Java compiler:
- <nowiki>
-$> alternatives --display javac
+Use the <code>alternatives</code> command to verify that <code>javac</CODE> is correctly linked to the openjdk-1.7.0 instance of the Java compiler:
+<pre>
+$ alternatives --display javac
 javac - status is auto.
  link currently points to /usr/lib/jvm/java-1.7.0-openjdk.x86_64/bin/javac
-...</nowiki>
+...
+</pre>
 
 Where the link does not point to the correct instance of the Java compiler then you must update it, for example:
- <nowiki>
-$> alternatives --set javac /usr/lib/jvm/java-1.7.0-openjdk.x86_64/bin/javac</nowiki>
+
+<pre>
+$ alternatives --set javac /usr/lib/jvm/java-1.7.0-openjdk.x86_64/bin/javac
+</pre>
 
 === Installing git ===
 
