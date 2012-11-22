@@ -41,10 +41,14 @@ you can add the watchdog to the vm parameter when create a vm as follow:
 This is aready implemented in vdsm.
 
 '''2) report the watchdog event'''
-  vdsm report this 
-  Perhaps you need add a flag to vm stats to indicate the event happened and what action was taken. Then engine could find it by polling vm's stats. 
- There will be another patch to resolve that.
-
+add a flag to vm stats to indicate the event happened and what action was taken. Then engine could find it by polling vm's stats. 
+ import vdscli
+ s = vdscli.connect()
+ # poll a wathdog event of 
+ while True:
+     getVmStats(vmId)
+     getAllVmStats()
+There will be another patch to resolve that.
 
 == '''Engine side''' ==
 '''1) UI for user to add a watchdog device'''
