@@ -139,7 +139,7 @@ $> cd $JBOSS_HOME/bin
 $> ./standalone.sh -b 0.0.0.0
 </pre>
 
-Ensure that you have write access to <code>$JBOSS_HOME/standalone/deployments</code> to which the engine will be deployed.
+Ensure that you have write access to the <code>$JBOSS_HOME/standalone/deployments</code> directory, as there is where the engine will be deployed.
 
 ===Troubleshooting===
 
