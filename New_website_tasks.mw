@@ -694,7 +694,7 @@ The following are links in the draft pages of the demo wiki which are currently 
 | 
 | 
 | Not needed
-|- style="background-color:orange"
+|- style="background-color:springgreen"
 | [[Read the full release notes »‏‎]]
 | [[oVirt 3.1 release notes]]
 | 
@@ -709,9 +709,9 @@ The following are links in the draft pages of the demo wiki which are currently 
 | Exists
 | 
 | Note: 1 link
-|- style="background-color:orange"
+|- style="background-color:springgreen"
 | [[Join us on IRC‏‎]]
-| [[Communication]]
+| [[Communication#IRC]]
 | 
 | Note: 1 link
 |- style="background-color:tomato"
