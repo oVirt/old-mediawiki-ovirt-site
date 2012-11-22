@@ -87,21 +87,23 @@ Changing FenceVdsBaseCommand::executeCommand() to handle all scenarios described
 == API ==
 
 The REST API will be enhanced to include the new Secondary Agent definitions as follows<br>
+  <power_management_agents>
+    <power_management type="rsa">
+      <enabled>true</enabled>
+      <address>ip or fqdn</address>
+      <username>user</username>
+      <password>password</password>
+       <options><option value="" name="port"/><option value="false" name="secure"/></options>
+    </power_management>
+    <power_management type="apc">
+      <address>ip or fqdn</address>
+      <username>user</username>
+      <password>password</password>
+      <options><option value="" name="port"/><option value="false" name="secure"/></options>
+    </power_management>
+  </power_management_agents>
 
-  <power_management type="rsa">
-    <enabled>true</enabled>
-    <address>ip or fqdn</address>
-    <username>user</username>
-    <password>password</password>
-     <options><option value="" name="port"/><option value="false" name="secure"/></options>
-  </power_management>
- <power_management type="apc" concurrent="false">
-    <address>ip or fqdn</address>
-    <username>user</username>
-    <password>password</password>
-     <options><option value="" name="port"/><option value="false" name="secure"/></options>
-  </power_management>
-
+''concurrent'' flag will be handled in the Host level<br>
 Add custom mapping for these new power-management fields in HostMapper.java, for both REST-->Backend and Backend-->REST directions)
 
 == Flow ==
