@@ -54,7 +54,7 @@ a workaround would be installing net-tools:
 
        yum install net-tools
 
-After installing you will need to reboot the machine manually because the bootstrap will fail to do it.
+After connecting the host to the engine you will need to reboot the machine manually because the bootstrap will fail to do it.
 
        reboot
 
