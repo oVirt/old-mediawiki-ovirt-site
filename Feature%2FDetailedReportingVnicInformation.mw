@@ -1,6 +1,6 @@
 <!-- {{autolang|base=yes}} -->
 
-== Reporting vNIC implementation reported by Guest Agent Detailed Design ==
+== Reporting vNIC information reported by Guest Agent Detailed Design ==
 
 === Summary ===
 The Guest Agent reports the vNic details:
