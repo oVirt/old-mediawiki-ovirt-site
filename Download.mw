@@ -29,7 +29,7 @@ You can also [[help us make oVirt easier to install everywhere]] too.
 ;Software:
 :* Fedora 17 (for easy installation)
 ;Advanced; install from source:
-:[[Debian]], [[Fedora]], [[Ubuntu]], [[other]]
+:[http://www.debian.org Debian], [http://www.fedoraproject.org Fedora], [http://www.ubuntu.com Ubuntu], [[porting oVirt | other]]
 </div><!-- span -->
 </div><!-- row-fluid-->
 </div><!-- well -->
@@ -56,9 +56,9 @@ Our recommended method of installing oVirt is to use the pre-built packages for 
 
 ----
 
-Now that you have oVirt running, check out the [[documentation section]] and be sure to [[join our community]]! 
+Now that you have oVirt running, check out the [[documentation | documentation section]] and be sure to [[community | join our community]]! 
 
-Help [[develop the software]], take part in discussions on the [[mailing lists]] and join us [[on IRC]].
+Help [[develop | develop the software]], take part in discussions on the [[mailing lists]] and join us [[communication#IRC | on IRC]].
 </div>
 
 </div>
