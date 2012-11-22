@@ -66,15 +66,19 @@ The ovirt-engine source code is stored in a GIT repository. As such GIT is requi
 The engine build uses maven 3.0.x.
 
 '''Fedora'''
- <nowiki>#> yum install -y maven</nowiki>
+<pre>
+# yum install -y maven
+</pre>
 
 '''Debian'''
- <nowiki>#> apt-get install maven</nowiki>
+<pre>
+# apt-get install maven
+</pre>
 
 Once the installation is completed verify that the correct version of the <code>mvn</code> command is in the path:
 
 <pre>
-$> mvn --version
+$ mvn --version
 Apache Maven 3.0.4
 ...
 </pre>
@@ -84,7 +88,7 @@ Apache Maven 3.0.4
 Create your <code>$HOME/.m2</code> directory (this is where maven stores your personal settings and the artifacts downloaded from internet repositories):
 
 <code>
-$> mkdir $HOME/.m2
+$ mkdir $HOME/.m2
 </code>
 
 Copy & paste the content below into the file <code>$HOME/.m2/settings.xml</code>:
