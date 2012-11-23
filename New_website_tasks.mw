@@ -319,14 +319,14 @@ The following are links in the draft pages of the demo wiki which are currently 
 | Exists
 | 
 | Note: 1 link
-|- style="background-color:tomato"
+|- style="background-color:purple"
 | [[Read our etiquette guide‏‎]]
 | [[Community guidelines]]
 | 
 | Do we have community guidelines?
-|- style="background-color:orange"
+|- style="background-color:purple"
 | [[Mailing lists‏‎]]
-| [[Communication]], maybe? Or we need a [[mailing lists]] page
+| We need a [[mailing lists]] page
 | 
 | Note: 1 link
 |- style="background-color:springgreen"
@@ -364,7 +364,7 @@ The following are links in the draft pages of the demo wiki which are currently 
 | Exists
 | 
 | Note: 1 link
-|- style="background-color:tomato"
+|- style="background-color:purple"
 | [[Read our simple etiquette guidelines‏‎]]
 | [[Community guidelines]]
 | 
@@ -529,7 +529,7 @@ The following are links in the draft pages of the demo wiki which are currently 
 | [[Mailing lists]] or [[communication]]
 | 
 | Note: 1 link
-|- style="background-color:tomato"
+|- style="background-color:springgreen"
 | API‏‎
 | 
 | 
@@ -629,7 +629,7 @@ The following are links in the draft pages of the demo wiki which are currently 
 | Exists
 | 
 | Note: 1 link
-|- style="background-color:tomato"
+|- style="background-color:springgreen"
 | [[The UMT-nearby timezones‏‎]]
 | 
 | 
@@ -644,7 +644,7 @@ The following are links in the draft pages of the demo wiki which are currently 
 | 
 | 
 | Not needed
-|- style="background-color:orange"
+|- style="background-color:springgreen"
 | [[Join the oVirt community‏‎]]
 | [[Community]]
 | 
@@ -659,12 +659,12 @@ The following are links in the draft pages of the demo wiki which are currently 
 | Exists
 | 
 | Note: 1 link
-|- style="background-color:tomato"
-| [[Join our channel in your web browser by using mibbit‏‎]]
-| 
+|- style="background-color:springgreen"
+| Join our channel in your web browser by using mibbit‏‎
+|  Drop mibbit advice (point to mibbit.org)
 | 
 | Don't like Mibbit...
-|- style="background-color:orange"
+|- style="background-color:springgreen"
 | [[Fedora‏‎]]
 | External link: http://www.fedoraproject.org
 | 
@@ -714,9 +714,9 @@ The following are links in the draft pages of the demo wiki which are currently 
 | [[Communication#IRC]]
 | 
 | Note: 1 link
-|- style="background-color:tomato"
-| [[Help us make oVirt easier to install everywhere‏‎]]
-| 
+|- style="background-color:springgreen"
+| Help us make oVirt easier to install everywhere‏‎
+| [[Porting oVirt]]
 | 
 | Point to porting guide (needs to be started, even if we don't have one yet)
 |- style="background-color:springgreen"
@@ -759,14 +759,14 @@ The following are links in the draft pages of the demo wiki which are currently 
 | Exists
 | 
 | Note: 1 link
-|- style="background-color:orange"
+|- style="background-color:springgreen"
 | [[Open source project‏‎]]
-| 
+| [http://www.opensource.org]
 | 
 | Link to OSI?
-|- style="background-color:tomato"
-| [[How to install oVirt for many distributions‏‎]]
-| 
+|- style="background-color:springgreen"
+| How to install oVirt for many distributions‏‎
+| [[Porting oVirt]]
 | 
 | Needs a link to a "porting guide".
 |- style="background-color:springgreen"
