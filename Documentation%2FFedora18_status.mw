@@ -20,32 +20,31 @@ Status:
    http://wiki.ovirt.org/wiki/How_to_install_ovirt_on_fedora18
 
 DWH
-
 ----
 Status:
 * Not tested
 
-Reports
 
+Reports
 ----
 Status:
 *Not tested
 
-Guest agent
 
+Guest agent
 ----
 Status:
 * Not tested
+
 
 Cli
-
 ----
 
 Status:
 * Not tested
 
-SDK
 
+SDK
 ----
 Status:
 *Not tested
