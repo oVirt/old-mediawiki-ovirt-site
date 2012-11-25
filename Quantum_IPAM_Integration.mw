@@ -1,6 +1,6 @@
 = Quantum IPAM integration =
 == Overview ==
-[[File:QuantumDHCPOverview.png|thumb|240px|Quantum IPAM general overview]]
+[[File:QuantumDHCPOverview.png|thumb|400px|Quantum IPAM general overview]]
 
 Quantum offers a few services besides a high-level abstraction of network management on several plugins.
 
@@ -39,7 +39,7 @@ The port is then part of the quantum DB, and if needed is created by the plugin.
 
 == DHCP Agent dynamics ==
 
-[[File:QuantumDHCPNotifications.png|thumb|240px|Quantum DHCP Agent notification handling]]
+[[File:QuantumDHCPNotifications.png|thumb|400px|Quantum DHCP Agent notification handling]]
 
 Quantum's DHCP Agent syncs with the network/subnet/port state on it's start from the Quantum service.
 
@@ -104,6 +104,8 @@ The downsides to this approach:
 
 
 === DHCP Agent per network ===
+
+[[File:OVirtQuantumFlow.png|thumb|400px|Flow of oVirt operations mapped to Quantum actions]]
 
 A general outline of the approach:
 
