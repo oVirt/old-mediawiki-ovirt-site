@@ -28,7 +28,7 @@ Of course we can add more information in the future on request.
 
 ==== User Experience ====
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
-Under Hosts tab we have general information about the chosen host. In this tab you get general information that retrieved from the host:
+Under Hosts tab we have general information about the chosen host. In this tab you see general information that was retrieved from the host:
 [[File:General-tab.jpeg]]
 <BR><BR>
 This feature adds to this tab the following fields:<BR>
