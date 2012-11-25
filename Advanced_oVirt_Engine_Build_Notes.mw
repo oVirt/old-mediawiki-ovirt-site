@@ -65,7 +65,7 @@ $> mvn clean install -Pdisable-gluster-tests
 Several modules fork their unit tests by default to avoid PermGen error caused by leaky components. In older Maven versions this is less of an issue, so forking may be disabled by using the '''-Dengine.powermock.fork=once''' flag:
  <nowiki>
 $> cd $OVIRT_HOME
-$> mvn2 clean install -Dengine.powermock.fork=once
+$> mvn clean install -Dengine.powermock.fork=once
  </nowiki>
 
 == Log Configuration ==
