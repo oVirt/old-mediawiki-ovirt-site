@@ -28,8 +28,14 @@ Of course we can add more information in the future on request.
 
 ==== User Experience ====
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
+Under Hosts tab we have general information about the chosen host. In this tab you get general information that retrieved from the host:
+[[File:General-tab.jpeg]]
+<BR><BR>
+This feature adds to this tab the following fields:<BR>
+[[File:Bios.jpeg]]
  
 ==== Engine Flows ====
+When gathering host's capabilities we receive host's bios details by VDSM API. This information is written to the database and updated every time the host returns different response. Usually bios information stays constant. Because host capabilities are filled with dynamic data, also here we keep the dynamic flow. Engine requests are sent every refresh and update the database if needed.
 
 ==== REST API ====
 
