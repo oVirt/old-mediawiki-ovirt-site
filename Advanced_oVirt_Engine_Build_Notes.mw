@@ -54,19 +54,6 @@ $> cd $OVIRT_HOME
 $> mvn clean install -DskipTests=true
  </nowiki>
 
-It is also possible to skip only the fluster tests (which take a considerable amount of time) instead of all the tests:
- <nowiki>
-$> cd $OVIRT_HOME
-$> mvn clean install -Pdisable-gluster-tests
- </nowiki>
-
-== Forking Unit Tests ==
-Several modules fork their unit tests by default to avoid PermGen error caused by leaky components. In older Maven versions this is less of an issue, so forking may be disabled by using the '''-Dengine.powermock.fork=once''' flag:
- <nowiki>
-$> cd $OVIRT_HOME
-$> mvn clean install -Dengine.powermock.fork=once
- </nowiki>
-
 == Log Configuration ==
 Engine logging is done with log4j.<BR>
 the configuration is done with jboss-log4j.xml file which can be found under <jboos profile dir>/conf/<BR>
