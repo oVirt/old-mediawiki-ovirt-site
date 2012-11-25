@@ -35,6 +35,8 @@ The port is then part of the quantum DB, and if needed is created by the plugin.
 
 '''Bottom line:''' The port MAC & IP are determined/known by the user, even before the VM is up.
 
+
+
 == DHCP Agent dynamics ==
 
 [[File:QuantumDHCPNotifications.png|thumb|240px|Quantum DHCP Agent notification handling]]
@@ -60,6 +62,8 @@ If a notification requires action then it acts on it accordingly.
 It is noteworthy that the DHCP Agent doesn't discriminate networks/subnets/ports - it will serve all of them which are defined in the Quantum Service that it is communicating with.
 
 '''Bottom line:''' One or more Quantum DHCP Agents can run simultaneously for each network, serving the addresses defined in Quantum Service.
+
+
 
 == Integrating with oVirt ==
 
@@ -96,6 +100,8 @@ The downsides to this approach:
 * Major: All the networks that require the IPAM capability will have to be connected to this host.
 ** This is not plausible in the virtualization use-case.
 * Minor: We cannot have multiple DHCP servers running for HA, so if for some reason the DHCP fails then we can't allocate IP addresses.
+
+
 
 === DHCP Agent per network ===
 
