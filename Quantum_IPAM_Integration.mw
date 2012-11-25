@@ -21,7 +21,8 @@ V2 API: http://wiki.openstack.org/Quantum/APIv2-specification#Create_Port
 
 When a port is created it is assigned to a network.
 
-The MAC address of the port can either be specified or 
+The MAC address of the port can either be specified or generated automatically by Quantum Service.
+
 
 If the network has subnets then the port will be assigned an IP on the subnet:
 
@@ -30,6 +31,7 @@ If the network has subnets then the port will be assigned an IP on the subnet:
 * Directly on a subnet & with a given IP if both subnet id & IP are specified
 
 The port is then part of the quantum DB, and if needed is created by the plugin.
+
 
 Bottom line: The port MAC & IP are determined/known by the user, even before the VM is up.
 
