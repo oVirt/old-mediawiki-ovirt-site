@@ -91,15 +91,13 @@ This way oVirt can talk to Quantum Service locally and we have a single copy of 
 
 Also if we run the Quantum DHCP Agent on the same machine then we can easily deploy all together, and integration is easier (only 2 additional services to manage overall).
 
+
+
 The downsides to this approach:
 
 * Major: All the networks that require the IPAM capability will have to be connected to this host.
-
 ** This is not plausible in the virtualization use-case.
-
 * Minor: We cannot have multiple DHCP servers running for HA, so if for some reason the DHCP fails then we can't allocate IP addresses.
-
-
 
 === DHCP Agent per network ===
 
