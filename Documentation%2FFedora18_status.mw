@@ -1,0 +1,20 @@
+oVirt on Fedora18 status.
+
+
+Engine
+
+----
+Status: 
+* Installation fails.
+* Relevant BZ:
+  https://bugzilla.redhat.com/show_bug.cgi?id=879916
+
+VDSM
+
+----
+Status: 
+* Partially works, requires manual tweaking.
+* Relevant BZ:
+   https://bugzilla.redhat.com/show_bug.cgi?id=869963
+* Walkarounds for the issues can be found here: 
+   http://wiki.ovirt.org/wiki/How_to_install_ovirt_on_fedora18
