@@ -87,9 +87,9 @@ Apache Maven 3.0.4
 
 Create your <code>$HOME/.m2</code> directory (this is where maven stores your personal settings and the artifacts downloaded from internet repositories):
 
-<code>
+<pre>
 $ mkdir $HOME/.m2
-</code>
+</pre>
 
 Copy & paste the content below into the file <code>$HOME/.m2/settings.xml</code>:
 
