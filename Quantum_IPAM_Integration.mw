@@ -27,22 +27,19 @@ When a port is created it is assigned to a network.
 
 The MAC address of the port can either be specified or generated automatically by Quantum Service.
 
-
 If the network has subnets then the port will be assigned an IP on the subnet:
 
 * Automatically on some subnet if no subnet id is specified
 * Directly on a specific subnet if the subnet id is specified
 * Directly on a subnet & with a given IP if both subnet id & IP are specified
 
-The port is then part of the quantum DB, and if needed is created by the plugin.
+The port is then part of the quantum DB.
 
-
-'''Bottom line:''' The port MAC & IP are determined/known by the user, even before the VM is up.
-
-
+Summary:
+* The port MAC & IP are determined/known by the user, before the VM is up.
 
 === DHCP Agent dynamics ===
-[[File:QuantumDHCPNotifications.png|thumb|200px|Quantum DHCP Agent notification handling]]
+[[File:QuantumDHCPNotifications.png|thumb|160px|Quantum DHCP Agent notification handling]]
 Quantum's DHCP Agent syncs with the network/subnet/port state on it's start from the Quantum service.
 
 For each Network with DHCP enabled and defined subnet(s), the DHCP Agent:
