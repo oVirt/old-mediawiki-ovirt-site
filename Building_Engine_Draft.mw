@@ -217,7 +217,7 @@ $ mvn install -DskipTests -Pgwt-admin,gwt-user
 </pre>
 
 '''''Notes:'''''
-# The <code>-DskipTests</code> option disables execution compilation and executions of tests. This is not what you should do usually, but it is good idea to use it the first time to avoid the extra time that it takes to run the tests.
+# The <code>-DskipTests</code> option disables compilation and executions of tests. This is not what you should do usually, but it is good idea to use it the first time to avoid the extra time that it takes to run the tests.
 # Compiling the GUI takes a long time, please visit [[Advanced_oVirt_Engine_Build_Notes#GWT_Compilation_Configuration|GWT Compilation Configuration]] if you want to speed the web compilation process during development time.
 # Make sure to run this with your user, not <code>root</code>, running as <code>root</code> will result in a missing <code>settings.xml</code> file in the <code>root</code> home directory.
 # You can reduce the build time and memory consumption - look at the temp section at the end.
