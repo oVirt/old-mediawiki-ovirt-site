@@ -116,7 +116,7 @@ Copy & paste the content below into the file <code>$HOME/.m2/settings.xml</code>
 </pre>
 
 * Do not omit the <code>activeProfiles</code> element in the above file, it is crucial.
-* Remember also to change the <code>jbossHome</code> property if you decide to install the application server to a directory different to the one suggested in here.
+* Remember also to change the <code>jbossHome</code> property if you decide to install the application server to a directory different to the one suggested here.
 
 == Installing JBoss AS ==
 
