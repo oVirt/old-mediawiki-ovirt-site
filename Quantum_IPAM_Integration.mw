@@ -13,7 +13,9 @@ Quantum offers layer 3 Network services which are not yet available in oVirt.
 
 This page is a proposal for oVirt-Quantum integration focused on leveraging the IP Address Management service offered by Quantum.
 
-== How it works in quantum ==
+== How it works in Quantum ==
+[[File:QuantumDHCPNotifications.png|thumb|400px|Quantum DHCP Agent notification handling]]
+
 === Port creation dynamics ===
 
 V2 API: http://wiki.openstack.org/Quantum/APIv2-specification#Create_Port
@@ -38,7 +40,7 @@ The port is then part of the quantum DB, and if needed is created by the plugin.
 
 === DHCP Agent dynamics ===
 
-[[File:QuantumDHCPNotifications.png|thumb|400px|Quantum DHCP Agent notification handling]]
+
 
 Quantum's DHCP Agent syncs with the network/subnet/port state on it's start from the Quantum service.
 
@@ -61,8 +63,6 @@ If a notification requires action then it acts on it accordingly.
 It is noteworthy that the DHCP Agent doesn't discriminate networks/subnets/ports - it will serve all of them which are defined in the Quantum Service that it is communicating with.
 
 '''Bottom line:''' One or more Quantum DHCP Agents can run simultaneously for each network, serving the addresses defined in Quantum Service.
-
-
 
 == Integrating with oVirt ==
 
