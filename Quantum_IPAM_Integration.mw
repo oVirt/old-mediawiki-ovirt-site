@@ -9,7 +9,7 @@ The Quantum Service is responsible for managing the networks, subnets, and ports
 One or more Quantum DHCP agents can be running on one of the nodes in the network, and receive notifications about the changes from the Quantum service.
 -->
 
-Quantum offers some layer 3 Network services which are not yet available in oVirt.
+Quantum offers layer 3 Network services which are not yet available in oVirt.
 
 This page is a proposal for oVirt-Quantum integration focused on leveraging the IP Address Management service offered by Quantum.
 
