@@ -71,6 +71,12 @@ grep -qs "^$SOB" "$1" || echo "$SOB" >> "$1"</nowiki>
 git commit --amend -s
  </nowiki>
 
+==== Configure git personal settings ====
+ <nowiki>
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+ </nowiki>
+
 ==== Configure the commit template ====
  <nowiki>
 cd ovirt-engine
