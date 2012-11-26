@@ -141,7 +141,7 @@ That means that it started correctly. The objective was just to check that the d
 
 ===Troubleshooting===
 
-# Some useful <code>JAVA_OPTS</code>, these can be manually added to the <code>$JBOSS_HOME/bin/standalone.conf</code> script as required:
+# Some useful <code>JAVA_OPTS</code>, these can be manually added to the <code>bin/standalone.conf</code> script as required:
 ## <code>-Xmx512m</code> - maximum Java heap size of 512 MiB
 ## <code>-Xdebug</code> - include debugging
 # Run with <code>-b 0.0.0.0</code> to have it bind to all IP addresses (by default it binds to the 127.0.0.1 address only).
