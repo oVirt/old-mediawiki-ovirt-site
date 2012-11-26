@@ -39,7 +39,7 @@ Summary:
 * The port MAC & IP are determined/known by the user, before the VM is up.
 
 === DHCP Agent dynamics ===
-[[File:QuantumDHCPNotifications.png|thumb|160px|Quantum DHCP Agent notification handling]]
+[[File:QuantumDHCPNotifications.png|thumb|100px|Quantum DHCP Agent notification handling]]
 Quantum's DHCP Agent syncs with the network/subnet/port state on it's start from the Quantum service.
 
 For each Network with DHCP enabled and defined subnet(s), the DHCP Agent:
