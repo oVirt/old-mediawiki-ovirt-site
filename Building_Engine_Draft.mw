@@ -236,7 +236,7 @@ The first deployment of the engine to the application server should use the <cod
 
 <pre>
 $ cd $HOME/ovirt-engine/ear
-$ mvn clean install -Pdep,setup
+$ mvn install -Pdep,setup
 </pre>
 
 There is a issue with the <code>dep</code> and <code>setup</code> profiles getting in the way of each other. The <code>setup</code> profile will prevent the deployment of the quartz jar to the application server. So after this step completes, run again, but with the <code>dep</code> profile only:
