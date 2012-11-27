@@ -86,6 +86,7 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 ===== Plug nic =====
 * Should be used just as internal command.
 * network should be sent to the VDSM just if it is not null.
+* canDoAction should allow null network.
 
 ===== Unplug nic =====
 * Should be used just as internal command.
