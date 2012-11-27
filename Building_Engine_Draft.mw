@@ -243,14 +243,14 @@ There is a issue with the <code>dep</code> and <code>setup</code> profiles getti
 
 <pre>
 $ cd $HOME/ovirt-engine/ear
-$ mvn clean install -Pdep
+$ mvn install -Pdep
 </pre>
 
 From this point on, every time you deploy you can simply run with the <code>dep</code> profile:
 
 <pre>
 $ cd $HOME/ovirt-engine/ear
-$ mvn clean install -Pdep
+$ mvn install -Pdep
 </pre>
 
 Since postgres is already set up.
