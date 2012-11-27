@@ -99,9 +99,7 @@ The DHCP receives the port-create notification asynchronously, updates the dnsma
 
 If the VM was able to start before the dnsmasq is updated then the vNIC might fail to acquire an IP from the DHCP.
 
-This means that in order to gain IPAM capabilities,
-
-[[File:OneDoesNotSimplyIntegrateQuantumIntoOvirt.jpg]]
+This means that in order to gain IPAM capabilities, [http://memegenerator.net/instance/30762058|One does not simply integrate Quantum into oVirt]
 
 === Integration Path ===
 
