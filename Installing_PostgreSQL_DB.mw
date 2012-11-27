@@ -106,6 +106,7 @@ After that run <code>systemctl restart postgresql.service</code> so that the new
 Edit the <code>/etc/postgresql/9.1/main/pg_hba.conf</code> file and set authentication parameters as follows:
 
 <pre>
+local   all         postgres                          trust
 local   all         all                               trust
 host    all         all         127.0.0.1/32          trust
 host    all         all         ::1/128               trust
