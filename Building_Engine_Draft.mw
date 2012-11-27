@@ -220,7 +220,6 @@ $ mvn install -DskipTests -Dgwt.userAgent=gecko1_8 -Pgwt-admin,gwt-user
 # The <code>-DskipTests</code> option disables compilation and executions of tests. This is not what you should do usually, but it is good idea to use it the first time to avoid the extra time that it takes to run the tests.
 # The <code>-Dgwt.userAgent=gecko1_8</code> is very important to limit the resources that the GWT compiler uses. If you don't use it compilation will take a very long time. The value <code>gecko1_8</code> instructs the GWT compiler to generate code only for Firefox, if you need to generate code for other browsers please visit [[Advanced_oVirt_Engine_Build_Notes#GWT_Compilation_Configuration|GWT Compilation Configuration]].
 # Make sure to run this with your user, not <code>root</code>, running as <code>root</code> will result in a missing <code>settings.xml</code> file in the <code>root</code> home directory.
-# You can reduce the build time and memory consumption - look at the temp section at the end.
 # If you receive <code>java.lang.OutOfMemoryError: PermGen space</code> error, use the <code>MAVEN_OPTS</code> environment variable to set a higher permanent generation heap size, then try again:
 
 <pre>
