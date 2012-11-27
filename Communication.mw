@@ -1,8 +1,8 @@
-There are a number of ways to communicate with the oVirt Community. [[#Mailing lists | Mailing lists]], [[#IRC | IRC]], and our [http://bugzilla.redhat.com bug tracker].
+There are a number of ways to communicate with the oVirt Community. [[#Mailing lists | Mailing lists]], [[#IRC | IRC]], our [http://bugzilla.redhat.com bug tracker] and [http://gerrit.ovirt.org our patch review system].
 
 {{Mailing lists}}
 
-=== IRC ===
+= IRC =
 
 ''Primary channel'': #ovirt on irc.oftc.net
 * Meetings are held here.
@@ -12,6 +12,13 @@ There are a number of ways to communicate with the oVirt Community. [[#Mailing l
 * Some community members are in this channel to start and grow conversations with the Freenode community.
 * Conversations are encouraged to move to the primary IRC channel, but not required.
 
+== Weekly Meetings ==
+oVirt has a weekly synchronization meeting which is held on IRC. Information can be seen on the [[Meetings]] page.
 
-=== Weekly Meetings ===
-oVirt has a weekly synchronization meeting. Information can be seen on the [[Meetings]] page.
+= Bug tracker and code review =
+
+You can report bugs, or discuss possible solutions to issues, on [http://bugzilla.redhat.com the project bug tracker (ovirt project)].
+
+We use Gerrit to review patches. To comment on a patch, or submit a patch for review, please read [[working with oVirt Gerrit]].
+
+[[Category:Community]]
