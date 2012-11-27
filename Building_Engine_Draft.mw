@@ -177,7 +177,7 @@ $ git clone git://gerrit.ovirt.org/ovirt-engine
 
 This will create a new <code>ovirt-engine</code> directory containing the cloned repository.
 
-'''''Note:''' The above cloning is for read only, if you want to contribute you might want to skip to [[#Code contribution: Gerrit]] before moving to the next steps.''
+'''''Note:''' The above cloning is for read only, if you want to contribute see [[#Code contribution: Gerrit|this]].''
 
 ==== Creating the database ====
 
