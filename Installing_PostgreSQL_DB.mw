@@ -1,77 +1,110 @@
+
+
 == Installing ==
-On your Fedora machine run the following commands:
 
- <nowiki>
-#> yum install -y postgresql-server postgresql-contrib pgadmin3
-</nowiki>
+Please take into account that installing and starting a database is a system administration task, so all the commands suggested in this page are to be executed with the <code>root</code> user.
 
-Make sure you are using PostgreSQL 8.4.8 or later.
+To perform the installation of the PostgreSQL packages on your Fedora machine run the following commands:
 
-Check your version with 
- <nowiki>
-$> psql --version
-</nowiki>
+<pre>
+# yum install -y postgresql-server
+</pre>
+
+Make sure you are using PostgreSQL 8.4.8 or later. Check your version with:
+
+<pre>
+# psql --version
+</pre>
 
 Note: for earlier PostgreSQL versions, a patch is needed.
 
 == Running the service ==
 
-From PostgreSQL 9:
+==== From PostgreSQL 9 ====
+
+Before starting the database for the first time you need to initialize it using the <code>postgresql-setup</code> command with the <code>initdb</code> option:
 
 <pre>
-#> postgresql-setup initdb # (first time only)
-#> systemctl start postgresql.service
+# postgresql-setup initdb
 </pre>
 
-If the database needs to be recreated from scratch the way to do it is to stop the server, remove the data directory and run the setup again:
+Once it is initialized you can start and stop it with the <code>systemctl</code> command. For example, to start it:
 
 <pre>
-#> systemctl stop postgresql.service
-#> rm -rf /var/lib/pgsql/data
-#> postgresql-setup initdb
-#> systemctl start postgresql.service
+# systemctl start postgresql.service
 </pre>
 
-For PostgreSQL 8 or earlier:
+It is recommended to configure the service so that it is automatically started the next time the machine is rebooted:
 
 <pre>
-#> su - postgres -c 'initdb -U postgres -D /var/lib/pgsql/data/' # (first time only)
-#> service postgresql start
+# systemctl enable postgresql.service
 </pre>
 
-It is recommended to add this service to auto start by
+If the database needs to be recreated from scratch the way to do it is to stop the service, remove the data directory, run the <code>postgresql-setup</code> command again, and start the service:
 
 <pre>
-#> chkconfig postgresql on
+# systemctl stop postgresql.service
+# rm -rf /var/lib/pgsql/data
+# postgresql-setup initdb
+# systemctl start postgresql.service
+</pre>
+
+==== For PostgreSQL 8 or earlier (not recommended) ====
+
+Before starting the database for the first time you need to initialize it running the <code>initdb</code> command with the <code>postgres</code> user:
+
+<pre>
+# su - postgres -c 'initdb -U postgres -D /var/lib/pgsql/data/'
+</pre>
+
+Once it is initialized you can start and stop it with the <code>service</code> command. For example, to start it run the following command:
+
+<pre>
+# service postgresql start
+</pre>
+
+It is recommended to configure the service so that it is automatically started the next time the machine is rebooted:
+
+<pre>
+# chkconfig postgresql on
 </pre>
 
 == Connecting to the database ==
-You should set security definitions in hba_conf file as described at <BR> http://www.postgresql.org/docs/8.2/interactive/auth-pg-hba-conf.html
 
-Edit /var/lib/pgsql/data/pg_hba.conf' ''and set authentication parameters as follows: ''
+Edit the <code>/var/lib/pgsql/data/pg_hba.conf</code> file and set authentication parameters as follows (for reference see [http://www.postgresql.org/docs/9.2/interactive/auth-pg-hba-conf.html this]):
 
- <nowiki>
+<pre>
 local   all         all                               trust
 host    all         all         127.0.0.1/32          trust
 host    all         all         ::1/128               trust
-</nowiki>
-Run service postgresql restart
+</pre>
 
-== Connecting from other hosts ==
-If you want to be able to connect to PostgreSQL from other hosts (i.e. not from localhost only) do the following:
- <nowiki>
-sudo vim /var/lib/pgsql/data/postgresql.conf
+After that run <code>systemctl restart postgresql.service</code> so that the new settings will take effect.
+
+== Connecting from other hosts (optional) ==
+
+If you want to be able to connect to PostgreSQL from other hosts (i.e. not from localhost only) you will need to change the <code>listen_addresses</code> parameter in the <code>/var/lib/pgsql/data/postgresql.conf</code> file:
+
+<pre>
 listen_addresses = '0.0.0.0'
+</pre>
 
-sudo vim /var/lib/pgsql/data/pg_hba.conf
-add this line:
+And you will need also to allow access from external hosts in the <code>/var/lib/pgsql/data/pg_hba.conf</code> file:
+
+<pre>
 host    all         all         10.35.0.0/16          trust
+</pre>
 
-restart postgres service
-# service postgresql restart
-</nowiki>
+The <code>10.35.0.0/16</code> network address and mask are just an example, make sure you replace it with what you want to give permissions to.
+
+After all these changes restart the PostgreSQL service:
+
+<pre>
+# systemctl restart postgresql.service
+</pre>
 
 == External Resources ==
+
 * If you upgraded/installed Fedora 16, then check this blog for more info: http://asaf-shakarchi.blogspot.com/2011/11/fedora-15-16-postgresql-issues.html
 
 [[Category:Documentation]]
