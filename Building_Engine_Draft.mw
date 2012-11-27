@@ -169,7 +169,7 @@ This will create a new <code>ovirt-engine</code> directory containing the cloned
 
 ==== Creating the database ====
 
-Create the <code>/root/.pgpass</code> file containing the password of the database administrator. Note that you will need to be <code>root</code> to do this. The content should be the following:
+Create the <code>$HOME/.pgpass</code> file containing the password of the database administrator. The content should be the following:
 
 <pre>
 *:*:*:postgres:YOUR_POSTGRES_PASSWORD
@@ -180,10 +180,10 @@ Note that this is relevant if you decided to configure your database with passwo
 Make sure that the permissions of the <code>/root/.pgpass</code> file are <code>0600</code>:
 
 <pre>
-# chmod 0600 /root/.pgpass
+$ chmod 0600 $HOME/.pgpass
 </pre>
 
-Now, with your normal user, not with <code>root</code>, change into the directory where you cloned the <code>ovirt-engine</code> git repository, then change into the <code>backend/manager/dbscritps</code> directory and run the <code>create_db_devel.sh</code> script:
+Now change into the directory where you cloned the <code>ovirt-engine</code> git repository, then change into the <code>backend/manager/dbscritps</code> directory and run the <code>create_db_devel.sh</code> script:
 
 <pre>
 $ cd $HOME/ovirt-engine/backend/manager/dbscripts
