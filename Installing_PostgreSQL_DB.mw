@@ -87,7 +87,11 @@ It is recommended to configure the service so that it is automatically started t
 
 == Connecting to the database ==
 
-Edit the <code>/var/lib/pgsql/data/pg_hba.conf</code> file and set authentication parameters as follows (for reference see [http://www.postgresql.org/docs/9.2/interactive/auth-pg-hba-conf.html this]):
+Note that this instructions are mostly the same for all distributions, the main difference is the location of the configuration files. For reference see the PostgreSQL documentation [http://www.postgresql.org/docs/9.2/interactive/auth-pg-hba-conf.html here].
+
+'''Fedora'''
+
+Edit the <code>/var/lib/pgsql/data/pg_hba.conf</code> file and set authentication parameters as follows: 
 
 <pre>
 local   all         all                               trust
@@ -96,6 +100,18 @@ host    all         all         ::1/128               trust
 </pre>
 
 After that run <code>systemctl restart postgresql.service</code> so that the new settings will take effect.
+
+'''Debian'''
+
+Edit the <code>/etc/postgresql/9.1/main/pg_hba.conf</code> file and set authentication parameters as follows:
+
+<pre>
+local   all         all                               trust
+host    all         all         127.0.0.1/32          trust
+host    all         all         ::1/128               trust
+</pre>
+
+After that run <code>/etc/init.d/postgresql restart</code> so that the new settings will take effect.
 
 == Connecting from other hosts (optional) ==
 
