@@ -81,6 +81,7 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 ===== Run VM =====
 * When running a VM, the VM's Vnics' 'linkState' property should also be passed to the VDSM, for 3.2 cluster and above.
  VmInfoBuilder.addNetworkInterfaceProperties
+* network should be sent to the VDSM just if it is not null.
 
 ===== Plug nic =====
 * Should be used just as internal command.
