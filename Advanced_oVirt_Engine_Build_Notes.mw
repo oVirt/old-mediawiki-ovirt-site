@@ -17,16 +17,11 @@ Below are instructions how to tweak GWT compiler in order to speed up the develo
 
 === Compiling GWT for specific browser(s) ===
 GWT compiler generates an application instance per supported browsers per locale,
-Since compiling to web mode takes a long time it is possible during development to compile to a specific browser (e.g Firefox 7) to speed up the compilation of WebAdmin web module,
+Since compiling to web mode takes a long time it is possible during development to compile to a specific browser (e.g Firefox) to speed up the compilation of WebAdmin web module,
 
-This can be done by overriding the '''gwt.userAgent''' property,
+This can be done by overriding the <code>gwt.userAgent</code> property. We recommend setting the <code>gwt.userAgent</code> property within the <code>gwtdev</code> profile. Edit <code>$HOME/.m2/settings.xml</code> file and add the following lines:
 
-We recommend setting the 'gwt.userAgent' property within the '''gwtdev''' profile:
-
-* Edit ~/.m2/settings.xml file
-* Add the following lines:
-
- <nowiki>
+<pre>
 <profiles>
   <profile>
     <id>gwtdev</id>
@@ -35,15 +30,41 @@ We recommend setting the 'gwt.userAgent' property within the '''gwtdev''' profil
     </properties> 
   </profile>
 </profiles>
- </nowiki>
+</pre>
 
-* Build oVirt Engine and enable the '''gwtdev''' profile:
- <nowiki>
-$> cd $OVIRT_HOME
-$> mvn clean install -Pgwtdev,gwt-admin
- </nowiki>
+* Build oVirt Engine and enable the <code>gwtdev</code> profile:
 
-This will instruct GWT to generate 1 permutation for FireFox browser only.
+<pre>
+$ mvn install -Pgwtdev,gwt-admin
+</pre>
+
+This will instruct GWT to generate 1 permutation for Firefox browser only. If you need to build for other browsers you can use the following values inside the <code>gwt.userAgent</code> property:
+
+* For Firefox: <code>gecko1_8</code>
+* For Internet Explorer 6: <code>ie6</code>
+* For Internet Explorer 8: <code>ie8</code>
+* For Internet Explorer 9: <code>ie9</code>
+* For Safari and Chrome: <code>safari</code>
+* For Opera: <code>opera</code>
+
+For example, if you want to build for both Firefox and Chrome you can use the following:
+
+<pre>
+<profiles>
+  <profile>
+    <id>gwtdev</id>
+    <properties>
+      <gwt.userAgent>gecko1_8,safari</gwt.userAgent>
+    </properties> 
+  </profile>
+</profiles>
+</pre>
+
+Alternatively, if you don't want to modify your <code>$HOME/.m2/settings.xml</code> file you can set the property in the command line. For example to build WebAdmin for Firefox and Chrome you can use the following command:
+
+<pre>
+$ mvn install -Dgwt.userAgent=gecko1_8,safari -Pgwt-admin
+</pre>
 
 == Skipping Unit Tests ==
 It is possible during development to speed up the build process by skipping the execution of unit tests,
