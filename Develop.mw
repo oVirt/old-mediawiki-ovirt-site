@@ -2,7 +2,7 @@
 __NOTOC__
 
 <div class="row">
-<div class="span6">
+<div class="span4">
 == Projects ==
 oVirt is a [[Architecture | collection of projects]] which work together to provide a complete data center virtualization solution.
 
@@ -17,13 +17,16 @@ oVirt is a [[Architecture | collection of projects]] which work together to prov
 
 ''More information on [[subprojects | oVirt subprojects]]''
 </div>
-<div class="span6">
+<div class="span4">
+{{Developer documentation}}
+</div>
+<div class="span4">
 == oVirt Architecture ==
 [[File:Overall-arch.png|400px|oVirt architecture]]
+
 </div>
 </div>
 
-{{Developer documentation}}
 
 
 
