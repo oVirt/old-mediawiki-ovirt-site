@@ -1,9 +1,15 @@
 
 <startfeed/>
 
-{{News|headline=[[oVirt 3.1 released]]|date=2012-08-23|lead=
+{{News|headline=[[News/oVirt 3.1 release | oVirt 3.1 released]]|date=2012-08-23|lead=
 We are pleased to announce the version 3.1 release of oVirt!
 
 The oVirt project’s second official release, version 3.1, ships with a set of storage, interface, and infrastructure enhancements that narrow the gaps between the open source virtualization platform and proprietary alternatives. }}
+
+{{News|headline=[[News/Beijing oVirt Workshop | oVirt Workshop in Beijing]]|date=2012-04-16|lead=
+The 2nd oVirt community workshop was held successfully in Beijing on 21st March. More than 100 developers across the world gathered in Beijing to share their experience in oVirt development.}}
+
+{{News|headline=[[News/oVirt kick-off workshop | oVirt Project re-launched with oVirt Workshop]]|date=2011-11-01|lead=
+The first oVirt Workshop was held over three days at Cisco's main campus in San Jose, California, from 1st – 3rd November 2011. We introduced the project, the technologies inside of the new projects, and had technical breakouts for learning and hacking. }}
 
 <endfeed/>
