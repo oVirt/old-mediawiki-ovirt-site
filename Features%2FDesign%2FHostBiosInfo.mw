@@ -50,6 +50,7 @@ The host's bios parameters is shown via engine rest API under host object as the
  </bios_information>
 
 ==== Engine API ====
+Same as get host capabilities api.
 
 ==== Model ====
 
