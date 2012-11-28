@@ -101,7 +101,7 @@ A new set of permissions should be created:<br>
 A set of predefined instance types should be created. <br>
 For consistency we should use the default OpenStack sizes.<br>
 A user should be allowed to edit but not delete predefined instance types<br>
-'''Question: Do we allow Instance Types (and templates) to be disabled?'''
+The administrator should be able to disable instance types.<br>
 
 {| class="wikitable"
 ! Name !!Memory !! vCPUs
