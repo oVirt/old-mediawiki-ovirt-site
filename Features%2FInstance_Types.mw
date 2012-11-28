@@ -169,6 +169,7 @@ If the user specifies that the image is stateless then the template disk will be
 ** Console type (spice/vnc/etc)
 ** Number of monitors
 ** USB Support
+** Smartcard
 ** Soundcard - including type
 ** High availability (including priority) for both server and desktop workloads
 ** '''Question : Should any other options should be added based on SLA work?'''
