@@ -69,6 +69,161 @@ No change.
 
 === Comments and Discussion ===
 <!-- Add a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
+Dmidecode retrieves a lot of parameters that can be helpful also, this is all the parameters list:
+(If will decide to add more values, we shell consider putting the values in a new host's tab)
+==== SYSTEM INFORMATION ====
+dmi_type - 1<BR>
+SKU Number - Not Specified<BR>
+UUID - E03DD601-5219-11CB-BB3F-892313086897<BR>
+Family - ThinkPad T420s<BR>
+Serial Number - R9M4N4G<BR>
+Version - ThinkPad T420s<BR>
+Wake-Up Type - Power Switch<BR>
+Product Name - 4174BH4<BR>
+dmi_handle - 0x0010<BR>
+dmi_size - 27<BR>
+Manufacturer - LENOVO<BR>
+
+==== BIOS INFORMATION ====
+NEC PC-98 - False<BR>
+EDD is supported - True<BR>
+PC Card (PCMCIA) is supported - False<BR>
+I2O boot - False<BR>
+3.5"/2.88 MB floppy services are supported (int 13h) - False<BR>
+BIOS Revision - 1.31<BR>
+ATAPI Zip drive boot - False<BR>
+Version - 8CET51WW (1.31 )<BR>
+BIOS is upgradeable - True<BR>
+Smart battery - False<BR>
+8042 keyboard services are supported (int 9h) - True<BR>
+BIOS shadowing is allowed - True<BR>
+BIOS ROM is socketed - False<BR>
+USB legacy - True<BR>
+APM is supported - False<BR>
+AGP - False<BR>
+PNP is supported - True<BR>
+VLB is supported - False<BR>
+Vendor - LENOVO<BR>
+ISA is supported - False<BR>
+Japanese floppy for Toshiba 1.2 MB is supported (int 13h) - False<BR>
+CGA/mono video services are supported (int 10h) - True<BR>
+Serial services are supported (int 14h) - True<BR>
+5.25"/360 KB floppy services are supported (int 13h) - False<BR>
+Address - 0xe0000<BR>
+ROM Size - 8192 KB<BR>
+Function key-initiated network boot - True<BR>
+Currently Installed Language - ['en-US']<BR>
+Runtime Size - 128 KB<BR>
+Targeted content distribution - False<BR>
+3.5"/720 KB floppy services are supported (int 13h) - True<BR>
+Relase Date - 11/29/2011<BR>
+BIOS boot specification - True<BR>
+MCA is supported - False<BR>
+PCI is supported - True<BR>
+5.25"/1.2 MB floppy services are supported (int 13h) - False<BR>
+dmi_handle - 0x002d<BR>
+Selectable boot is supported - True<BR>
+dmi_type - 13<BR>
+Japanese floppy for NEC 9800 1.2 MB is supported (int 13h) - False<BR>
+EISA is supported - False<BR>
+Print screen service is supported (int 5h) - True<BR>
+Boot from PC Card (PCMCIA) is supported - False<BR>
+Printer services are supported (int 17h) - True<BR>
+ESCD support is available - False<BR>
+dmi_size - 22<BR>
+Boot from CD is supported - True<BR>
+Installed Languages - 1<BR>
+ACPI - True<BR>
+LS-120 boot - False<BR>
+IEEE 1394 boot - False<BR>
+
+==== CACHE INFORMATION ====
+dmi_type - 7<BR>
+System Type - Data<BR>
+Socket Designation - L2-Cache<BR>
+Installed SRAM Type - [None, None, None, None, None, 'Synchronous', None]<BR>
+Level - 2<BR>
+Socketed - False<BR>
+Associativity - 8-way Set-associative<BR>
+Supported SRAM Type - [None, None, None, None, None, 'Synchronous', None]<BR>
+Enabled - True<BR>
+Maximum Size - 256 KB<BR>
+dmi_handle - 0x0003v
+Installed Size - 256 KB<BR>
+Location - Internal<BR>
+Error Correction Type - Single-bit ECC<BR>
+Speed - Unknown<BR>
+Operational Mode - Write Through<BR>
+dmi_size - 19<BR>
+
+==== PROCESSOR INFO ====
+Upgrade - ZIF Socket<BR>
+Socket Designation - CPU<BR>
+L2 Cache Handle - 0x0003<BR>
+Version - Intel(R) Core(TM) i5-2540M CPU @ 2.60GHz<BR>
+Type - Central Processor<BR>
+Core Count - 2<BR>
+Status - Populated:Enabled<BR>
+Vendor - Intel(R) Corporation<BR>
+Core Enabled - 2<BR>
+dmi_handle - 0x0001<BR>
+External Clock - 100<BR>
+Serial Number - Not Supported by CPU<BR>
+Current Speed - 2600<BR>
+dmi_size - 42<BR>
+L3 Cache Handle - 0x0004<BR>
+Part Number - None<BR>
+Asset Tag - None<BR>
+Signature - None<BR>
+L1 Cache Handle - 0x0002<BR>
+ID - a7 06 02 00 ff fb eb bf<BR>
+dmi_type - 4<BR>
+Family - <BR>
+Characteristics - ['64-bit capable']<BR>
+Voltage - 1.2 V<BR>
+Max Speed - 2600<BR>
+Thread Count - 4<BR>
+
+==== CHASSIS INFO ==== 
+dmi_type - 3<BR>
+Type - Notebook<BR>
+Power Supply State - Unknown<BR>
+Thermal State - Unknown<BR>
+Asset Tag - RH0003183<BR>
+Serial Number - R9M4N4G<BR>
+Version - Not Available<BR>
+Lock - Not Present<BR>
+Security Status - Unknown<BR>
+Boot-Up State - Unknown<BR>
+dmi_handle - 0x0012<BR>
+dmi_size - 21<BR>
+Manufacturer - LENOVO<BR>
+
+==== MEMORY INFO ====
+Use - System Memory<BR>
+Location - System Board Or Motherboard<BR>
+Type - <BR>
+Array Handle - 0x0005<BR>
+Number Of Devices - 2<BR>
+Serial Number - 340F5D7F<BR>
+Total Width - 64 bit<BR>
+Form Factor - SODIMM<BR>
+dmi_size - 15<BR>
+Manufacturer - Kingston<BR>
+Data Width - 64 bit<BR>
+Part Number - 99U5428-046.A00LF<BR>
+AssetTag - 9876543210<BR>
+Bank Locator - BANK 2<BR>
+Error Correction Type - None<BR>
+dmi_handle - 0x0005<BR>
+dmi_type - 16<BR>
+Maximum Capacity - 16 GB<BR>
+Set - None<BR>
+Error Information Handle - Not Provided<BR>
+Locator - ChannelB-DIMM0<BR>
+Type Detail - [None, None, None, None, None, None, 'Synchronous', None, None, None, None, None]<BR>
+Speed - 1333 MHz (0.8ns)<BR>
+Size - 4096 MB<BR>
 
 === Open Issues ===
 <!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
