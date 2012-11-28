@@ -15,9 +15,9 @@
 |-
 |os || os type ||  || y || ||
 |-
-|description || name || n || n || y || create instance
+|description || description || n || n || y || create instance
 |-
-|vds_group_id || vm cluster| n || y || y || change cluster
+|vds_group_id || vm cluster || n || y || y || change cluster
 |-
 |domain || directory services domain || || y || ||
 |-
@@ -25,7 +25,7 @@
 |-
 |num_of_monitors || number of monitors || || y || ||
 |-
-|is_initialized || internal. mark if vm was syspreped* || || y || ||
+|is_initialized || internal. mark if vm was syspreped || || y || ||
 |-
 |is_auto_suspend || legacy from auto-suspend feature, not in use || || y || ||
 |-
@@ -37,7 +37,7 @@
 |-
 |time_zone || time zone || || y || ||
 |-
-|is_stateless || is stateless || || y || ||
+|is_stateless || stateless flag || || y || ||
 |-
 |fail_back || legacy from fail-back feature, not in use || || y || ||
 |-
