@@ -18,22 +18,13 @@ oVirt is a [[Architecture | collection of projects]] which work together to prov
 ''More information on [[subprojects | oVirt subprojects]]''
 </div>
 <div class="span6">
+== oVirt Architecture ==
+[[File:Overall-arch.png|400px|oVirt architecture]]
+</div>
+</div>
 
 {{Developer documentation}}
-</div>
-</div>
 
-== Developing oVirt - checklist ==
 
-Stuff to be added to this page before switching.
-
-* oVirt architecture and projects
-* Getting the source code and compiling it
-* Submitting a patch
-* Release management
-* Feature roadmap
-* Tools and processes
-
-[[File:Overall-arch.png|400px|oVirt architecture]]
 
 [[Category:Developer]]
