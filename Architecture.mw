@@ -1,4 +1,4 @@
-[[File:Ovirt-1024x698.png|512px|right]]
+[[File:Ovirt-1024x698.png|border|512px|right]]
 
 = oVirt Architecture =
 
@@ -20,7 +20,7 @@ The different diagrams and descriptions below represent the architecture of the 
 The following diagram shows the different components in the oVirt project:
 
 
-[[File:Overall-arch.png|512px|right]]
+[[File:Overall-arch.png|border|512px|right]]
 
 
 These main components are:
@@ -58,7 +58,7 @@ Some features provided by the engine:
 The following diagram shows the different layers in the oVirt engine component:
 
 
-[[File:Engine-arch.png|512px|right]]
+[[File:Engine-arch.png|border|512px|right]]
 
 
 === Engine-Core Architecture ===
@@ -67,7 +67,7 @@ The following diagram shows the different layers in the oVirt engine component:
 The following diagram shows the different components in the engine-core:
 
 
-[[File:Engine-arch2.png|512px|left]]
+[[File:Engine-arch2.png|border|512px|left]]
 
 The main components in the engine core are:
 *DB Broker - responsible for all the DB related actions
@@ -89,7 +89,7 @@ VDSM covers all functionality required by oVirt Engine.
 #Scales linearly in data writers
 
 
-[[File:Vdsm-arch.png|512px|right]]
+[[File:Vdsm-arch.png|border|512px|right]]
 
 
 === Hooks mechanism ===
@@ -100,7 +100,7 @@ The “Hook” mechanism:
 
 The following diagram illustrates the Hook mechanism in the VM lifetime cycle:
 
-[[File:Hook-arch.png|512px|right]]
+[[File:Hook-arch.png|border|512px|right]]
 
 #The hook mechanism comes into place before VDSM initiates the VM startup using libvirt.
 #The hook changes the VM definition, and VDSM passes this definition to libvirt to start the VM.
@@ -180,7 +180,7 @@ Architectural details:
 #SSO for windows is based on a gina module for XP and a credential provider for windows 7
 #SSO for RHEL 6 is based on a PAM module with support for both KDE and Gnome
 
-[[File:Guest-agent-arch.png|512px|right]]
+[[File:Guest-agent-arch.png|border|512px|right]]
 
 
 [[Category:Architecture]]
