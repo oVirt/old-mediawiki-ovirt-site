@@ -187,8 +187,8 @@ Any advanced changes (outside of the basic overrides described) will change the 
 On selecting finish the virtual machine will be created<br>
 Based on permissions the user should be able to add disks (volumes) and nics to the virtual machine using the existing disks and networks sub-tabs.<br>
 
-'''Question : Should we prevent adding and removing logical networks?'''<br>
-'''Question : Should we prevent editing or removing template disks?'''<br>
+We should prevent adding and removing logical networks?<br>
+We should we prevent editing or removing template disks?<br>
 <br>
 
 '''Runtime''' 
