@@ -1,0 +1,14 @@
+
+== oVirt Kick-off Workshop ==
+
+The first oVirt Workshop was held over three days at Cisco's main campus in San Jose, California, from 1st – 3rd November 2011. We introduced the project, the technologies inside of the new projects, and had technical breakouts for learning and hacking.
+
+=== Materials from workshop ===
+
+* [[Workshop schedule]] – all the sessions, links to Etherpad, wiki, slides, and so forth.
+* [[Media: | ovirt-node]] – slides for oVirt Node talk.
+* [[Media:OVirt history and reports-20111102.odp | oVirt_history_and_reports]] (ODP) & [[Media:OVirt history and reports-20111102.pdf | oVirt_history_and_reports]] (PDF)
+* Notes on [[Build and Install Engine RPM | building and installing oVirt Engine from source]].
+* [[Media:OVirt VDSM 20111102.odp | ovirt-vdsm]] (ODP) & [[Media:OVirt VDSM 20111102.pdf  | ovirt-vdsm]] (PDF)
+* [[Media:OVirt VDSM Storage 20111102.odp  | ovirt-vdsm-storage]] (ODP) & [[Media:OVirt VDSM Storage 20111102.pdf | ovirt-vdsm-storage]] (PDF)
+* [[Media:Quantum Ovirt discussion-20111103.pdf | Quantum_Ovirt_discussion]] (PDF)
