@@ -1,14 +1,6 @@
 = Quantum IPAM integration =
 == Overview ==
 
-<!-- Quantum offers a few services in addition to a high-level abstraction of network management and pluggable architecture.
-which includes a DHCP server to serve the addresses.
-Quantum offers some layer 3 Network services, one of the services is IP Address Management (IPAM).
-On a very low-res, Quantum acts as a network manager where all the nodes are presumed to be linked together by some sort of L2 connectivity. 
-The Quantum Service is responsible for managing the networks, subnets, and ports on that "big network".
-One or more Quantum DHCP agents can be running on one of the nodes in the network, and receive notifications about the changes from the Quantum service.
--->
-
 Quantum offers layer 3 Network services which are not yet available in oVirt.
 
 This page is a proposal for oVirt-Quantum integration focused on leveraging the IP Address Management service offered by Quantum.
@@ -24,22 +16,10 @@ This page is a proposal for oVirt-Quantum integration focused on leveraging the 
 
 * DHCP Agent - The module responsible to configure dnsmask per network.
 
-* Layer 3 driver - The module responsible to create the network locally.
+* Layer 2 driver - The module responsible to create the network locally.
 
 * Queues - There are two of them, one is used for the DHCP Agent to get notifications and the other is used to sync the DHCP Agent and the Quantum service configuration upon startup/error.
 
-<!--
-'''Network creation'''
-
-When creating a network with subnet configured, the Quantum service sends a notification to the DHCP clients.
-The DHCP Agent calls the driver which in turn creates the network locally and returns a reference (handler) to the DHCP Agent.
-The DHCP Agent configures a dnsmasq per network
-
-'''Port creation'''
-
-When creating a port the quantum service allocates an IP address from the subnet range and sends a notification to the DHCP Agent with the mapping of MAC-IP address , the DHCP agent updates the dnsmasq configuration file and issues a reload command the configuration.
-
--->
 === Port creation dynamics ===
 
 V2 API: http://wiki.openstack.org/Quantum/APIv2-specification#Create_Port
@@ -64,7 +44,7 @@ Summary:
 Quantum's DHCP Agent syncs with the network/subnet/port state on it's start from the Quantum service.
 
 For each Network with DHCP enabled and defined subnet(s), the DHCP Agent:
-* Submits a network creation request to the layer 3 driver plugin.
+* Submits a network creation request to the layer 2 driver plugin.
 * Write port definitions (MAP + IP) to a conf file
 * Spawn a dnsmasq instance with the defined ranges (CIDRs) and the conf file
 
@@ -123,7 +103,7 @@ oVirt engine and Quantum Service with the "oVirt plugin" are running on a single
 The Quantum DHCP agent is running on the host with access to the network they want to allocate IP addresses on.
 We can have multiple DHCP Agents deployed on the various hosts in the data center.
 
-The Quantum DHCP agent uses a layer 3 driver. The driver is responsible for creating the network interface which the DHCP server is connected to.
+The Quantum DHCP agent uses a layer 2 driver. The driver is responsible for creating the network interface which the DHCP server is connected to.
 We'll create oVirt driver which will make the call if a DHCP Agent for a given network is required on the specific host.
 The driver will use a file written by VDSM to determine if the network should have DHCP on this host or not and act accordingly.
 
