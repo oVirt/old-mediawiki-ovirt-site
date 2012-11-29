@@ -16,7 +16,7 @@ This page is a proposal for oVirt-Quantum integration focused on leveraging the 
 
 * DHCP Agent - The module responsible to configure dnsmasq per network.
 
-* Layer 2 driver - The module responsible to create the network locally.
+* Interface driver - The module responsible to connect the DHCP to the network locally on the host.
 
 * Queues - There are two of them, one is used for the DHCP Agent to get notifications and the other is used to sync the DHCP Agent and the Quantum service configuration upon startup/error.
 
