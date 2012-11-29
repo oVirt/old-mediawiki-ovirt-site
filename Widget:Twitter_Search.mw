@@ -1,0 +1,43 @@
+<noinclude>__NOTOC__
+This widget allows you to embed '''[http://twitter.com/goodies/widget_search Twitter Search widget]''' (HTML version) on your wiki page.
+
+Created by [http://www.mediawikiwidgets.org/User:Sergey_Chernyshev Sergey Chernyshev]
+
+== Using this widget ==
+For information on how to use this widget, see [http://www.mediawikiwidgets.org/Twitter_Search widget description page on MediaWikiWidgets.org].
+
+== Copy to your site ==
+To use this widget on your site, just install [http://www.mediawiki.org/wiki/Extension:Widgets MediaWiki Widgets extension] and copy [{{fullurl:{{FULLPAGENAME}}|action=edit}} full source code] of this page to your wiki as '''{{FULLPAGENAME}}''' article.
+</noinclude><includeonly><!--{counter name="twittercounter" assign="twitblogincluded"}--><!--{if $twitblogincluded eq 1}--><script src="http://widgets.twimg.com/j/2/widget.js"></script><!--{/if}-->
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: '<!--{$query|escape:'quotes'}-->',
+  interval: 6000,
+  title: '<!--{$title|escape:'quotes'}-->',
+  subject: '<!--{$caption|escape:'quotes'}-->',
+  width: <!--{$width|default:250|validate:int}-->,
+  height: <!--{$height|default:300|validate:int}-->,
+  theme: {
+    shell: {
+      background: '<!--{$shell.background|escape:'quotes'|default:'#8ec1da'}-->',
+      color: '<!--{$shell.color|escape:'quotes'|default:'#ffffff'}-->'
+    },
+    tweets: {
+      background: '<!--{$tweets.background|escape:'quotes'|default:'#ffffff'}-->',
+      color: '<!--{$tweets.color|escape:'quotes'|default:'#444444'}-->',
+      links: '<!--{$tweets.links|escape:'quotes'|default:'#1985b5'}-->'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script></includeonly>
