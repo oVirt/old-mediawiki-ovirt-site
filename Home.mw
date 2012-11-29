@@ -11,22 +11,17 @@ __NOTOC__
 <div class="span3 pad-sides"><div style="text-align: center">[[File:Icon-kvm.png|alt=KVM based virtualization management]]</div><p style="text-align: center">oVirt is powered by the Open Source you know - KVM on Linux.</p></div>
 </div>
 
-<!--
 <div class="row">
-<div class="span4 offset1 well well-small muted"><div class="hero-unit"><center class="rotate-splash">a relevant<br>graphic here</center></div></div>
-
-<div class="span6">
-= Open your virtual datacenter =
-<div class="pad-sides">
-oVirt provides everything you need to control virtual machines, storage, and virtualized networks. 
-
-It is a virtualization platform with an easy-to-use web interface and is powered by the [[Licensing|open source]] you know: KVM on Linux.
-
-<span class="btn btn-action">[[Download|Start using oVirt now »]]</span>
+<div class="span3 offset1">
+----
+</div>
+<div class="span3"  style="text-align:center">
+<span class="btn btn-action btn-block">[[Download|Start using oVirt now »]]</span>
+</div>
+<div class="span3">
+----
 </div>
 </div>
-</div>
--->
 
 <div class="row">
 <div class="span4 pad-left pad-right-small">
