@@ -6,9 +6,9 @@ __NOTOC__
 </div>
 </div>
 <div class="row">
-<div class="span3 offset1 pad-sides"><div style="text-align: center">[[File:Icon-manage.png|alt=Manage your virtualized networks]]</div><p style="text-align: center">oVirt manages virtual machines, storage and virtualized networks.</p></div>
-<div class="span3 pad-sides"><div style="text-align: center">[[File:Icon-web.png|alt=Easy to use web interface]]</div><p style="text-align: center">oVirt is a virtualization platform with an easy-to-use web interface</p></div>
-<div class="span3 pad-sides"><div style="text-align: center">[[File:Icon-kvm.png|alt=KVM based virtualization management]]</div><p style="text-align: center">oVirt is powered by the Open Source you know - KVM on Linux.</p></div>
+<div class="span3 offset1 pad-sides"><div style="text-align: center">[[File:Icon-manage.png|alt=Manage your virtualized networks|link=]]</div><p style="text-align: center">oVirt manages virtual machines, storage and virtualized networks.</p></div>
+<div class="span3 pad-sides"><div style="text-align: center">[[File:Icon-web.png|alt=Easy to use web interface|link=]]</div><p style="text-align: center">oVirt is a virtualization platform with an easy-to-use web interface</p></div>
+<div class="span3 pad-sides"><div style="text-align: center">[[File:Icon-kvm.png|alt=KVM based virtualization management|link=]]</div><p style="text-align: center">oVirt is powered by the Open Source you know - KVM on Linux.</p></div>
 </div>
 
 <div class="row">
