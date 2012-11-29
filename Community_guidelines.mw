@@ -58,6 +58,7 @@ oVirt uses [http://gerrit.ovirt.org Gerrit] to manage code submissions.
 * In comments please be considerate toward the work which the patch submitter has done to submit the patch.
 *  For patch submitters: Please familiarise yourself with project coding conventions before submitting a patch. Coding conventions for [[Vdsm Developers#Code Style | VDSM]] are in the wiki, and are included in [[Building oVirt Engine/IDE | the Maven build process]] for oVirt Engine.
 
+<!--
 == Guideline Violations - 3 Strikes Method ==
 The point of this section is not to find opportunities to punish people, but we do need a fair way to deal with people who are making our community an unpleasant place.
 * First occurrence: Public reminder that the behavior is inappropriate according to our guidelines.
@@ -71,6 +72,7 @@ The point of this section is not to find opportunities to punish people, but we 
 * Extreme violations of a threatening, abusive, destructive or illegal nature will be addressed immediately and are not subject to 3 strikes.
 * Contact [[User:DNeary|Dave neary]] to report abuse or appeal violations (mistakes happen & will be corrected).
 
+-->
 
 ''These guidelines have been adapted from [http://wiki.meego.com/Community_guidelines the MeeGo Community]''
 
