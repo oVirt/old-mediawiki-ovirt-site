@@ -15,7 +15,7 @@ It supports the following actions without unplugging the Vnic, and it maintains 
 * Email: <alkaplan@redhat.com>
 
 === Current status ===
-[http://ovirt.org/wiki/Feature/DetailedNetworkWiring Network Wiring Detailed Design]
+[http://wiki.ovirt.org/Feature/DetailedNetworkLinking Network Linking Detailed Design]
 * Last update date: 04/11/2012
 
 === Introduction ===
