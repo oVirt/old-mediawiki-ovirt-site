@@ -3,7 +3,7 @@
 == Host's Bios Information ==
 
 === Summary ===
-When assigning new host to RHEV-M the engine gets general information about the host. This information includes Vdsm version, CPU units and more. This article describes the bios information that the host provides to RHEV-M, as described in the following bug ticket: [https://bugzilla.redhat.com/show_bug.cgi?id=867543 bz867543]
+When assigning new host to oVirt engine  the engine retrieves general information about the host. This information includes Vdsm version, CPU units and inc. This article describes the bios information that the host provides to oVirt engine.
 
 === Owner ===
 * Name: [[User:ybronhei| Yaniv Bronhaim]]
