@@ -2,9 +2,8 @@
 
 This document describes the different components in the oVirt engine domain infrastructure, for authenticating and querying to LDAP servers.
 The infrastructure supports:
-#Authenticating Active Directory, IPA and RHDS using either simple or gssapi authentication
+#Authenticating Active Directory, IPA and RHDS using GSSAPI authentication
 #Querying the directory using the LDAP protocol
-#Auto deducing the LDAP provider type
 #Easily adding new LDAP provider types
 #Easily adding new query types
 
