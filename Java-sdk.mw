@@ -211,7 +211,6 @@ TBD
 
 gerrit.ovirt.org:ovirt-engine-sdk-java
 
-
 == Deployment ==
 
 Till java-sdk project deployable by rpm, just compile it
