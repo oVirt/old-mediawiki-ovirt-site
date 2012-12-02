@@ -36,12 +36,12 @@ External Events can not use application variables, therefore no '$' expressions 
 
 == CRUD ==
 Adding ''deleted'' boolean field to audit_log with a default value of ''false''<br>
-Adding ''source'' varchar field to audit_log with a default value of ''oVirt'' [1]<br> 
+Adding ''origin'' varchar field to audit_log with a default value of ''oVirt'' [1]<br> 
 Adding ''custom_event_id'' integer field to audit_log with a default value of ''-1'' [2]<br>
 Adding ''event_flood_in_sec'' integer field to audit_log with a default value of ''30'' [3]<br>
 Adding ''custom_data'' text field to audit_log with a default value of empty string [4] <br>
 
-[1] ''source'' is a unique string that identifies the source adding an event<br>
+[1] ''origin'' is a unique string that identifies the origin adding an event<br>
 [2] ''custom_event_id'' is a sequential number that identifies the event/alert instance<br>
 [3] ''event_flood_in_sec'' value will not affect application events<br>
 [4] ''custom data'' value will be used to store any data about the event, (for example {a=xxx,b=12})<br>
@@ -72,7 +72,7 @@ Adding AddExternalEvent command<br>
 Adding AddExternalEventParameters with the following fields
    AuditLogSeverity [Mandatory]
    Message [Mandatory]
-   Source  [Mandatory]
+   Origin  [Mandatory]
    CustomEventId [Mandatory]
    CustomData [Mandatory]
    EventFloodInSec[[Optional] -- 30 sec if not defined
@@ -89,14 +89,14 @@ Adding AddExternalEventParameters with the following fields
 Adding support for searching events by:<br>
 
   deleted
-  source
+  origin
   custom_event_id
 
-External Events can be filtered using ''source != 'oVirt'''
+External Events can be filtered using ''origin != 'oVirt'''
 
 == Flow ==
 ''Add Event/Alert'' Flow: <br>
-Invoke ''..api/events/add'' API giving at least AuditLogType, Severity, source & CustomEventId <br>
+Invoke ''..api/events/add'' API giving at least AuditLogType, Severity, Origin & CustomEventId <br>
 When the Event/Alert is on a specific object, the object instance id should be set.<br>
 
 ''Delete Alert'' Flow: <br>
