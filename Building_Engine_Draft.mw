@@ -155,7 +155,7 @@ $ rm -rf data
 
 == Building oVirt-engine from source ==
 
-==== Clone oVirt-engine codebase ====
+=== Clone oVirt-engine codebase ===
 
 Use the <code>git</code> command to clone the engine repository into your home directory:
 
@@ -167,7 +167,7 @@ This will create a new <code>ovirt-engine</code> directory containing the cloned
 
 '''''Note:''' The above cloning is for read only, if you want to contribute see [[#Code contribution: Gerrit|this]].''
 
-==== Creating the database ====
+=== Creating the database ===
 
 Create the <code>$HOME/.pgpass</code> file containing the password of the database administrator. The content should be the following:
 
@@ -190,7 +190,7 @@ $ cd $HOME/ovirt-engine/backend/manager/dbscripts
 $ ./create_db_devel.sh -u postgres
 </pre>
 
-==== Build ====
+=== Build ===
 
 If you only want to build the engine core and then REST API then use the following commands:
 
@@ -220,7 +220,7 @@ $ export MAVEN_OPTS="-XX:MaxPermSize=128m"
 
 For advanced build notes, please visit [[Advanced oVirt Engine Build Notes]].
 
-==== Deploy ====
+=== Deploy ===
 
 The first deployment of the engine to the application server should use the <code>dep</code> and <code>setup</code> profiles:
 
