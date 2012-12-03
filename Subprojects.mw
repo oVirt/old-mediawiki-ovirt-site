@@ -189,7 +189,7 @@ use ovirt-engine-webadmin
 | Shahar Havivi<br />
 Oved Ourfali
 | [http://lists.ovirt.org/mailman/listinfo/engine-devel devel] [http://lists.ovirt.org/pipermail/engine-devel archive ] <br />[http://lists.ovirt.org/mailman/listinfo/engine-patches patches] [http://lists.ovirt.org/pipermail/engine-patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-commits commits] [http://lists.ovirt.org/pipermail/engine-commits archive] 
-| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] 
+| n/a
 | n/a
 |  git://gerrit.ovirt.org/sample-portals
 |- 
