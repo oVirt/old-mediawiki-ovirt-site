@@ -110,7 +110,7 @@ params = {
         'network': 'network name',                      <--- bridge name
         'linkActive': 'bool',
         'alias': <string>,      
-        'portMirroring': blue[,red],                          <--- The interface will mirror all red and blue bridge traffic
+        'portMirroring': blue[,red],                          <--- The interface will mirror all red and blue bridge traffic (if no network use empty list)
  }
 </pre>
 
