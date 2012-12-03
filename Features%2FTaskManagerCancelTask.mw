@@ -15,7 +15,7 @@ the whole command or task which is running at vdsm side, what  engine should do 
 
 === Current status ===
 * Target Release: 3.2
-* Status: Coding ( Engine-done, UI-coding, API-Not started )
+* Status: Coding ( Engine-Not started, UI-Not started, API-Not started )
 * Last updated date: 3/12/2012
 
 === Detailed Description ===
