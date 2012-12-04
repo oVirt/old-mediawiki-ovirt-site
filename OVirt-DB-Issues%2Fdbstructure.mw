@@ -1,8 +1,6 @@
 == Database structure and dependencies ==
 [[File:DB.png]]
 
-[[File:Rhevm-3-1.png]]
-
 == Jboss ==
 
 === Where do I define my db connection? ===
