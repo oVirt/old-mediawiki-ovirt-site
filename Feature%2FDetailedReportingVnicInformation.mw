@@ -59,7 +59,10 @@ VmGuestAgentInterface is stored to the database only as part of refresh VMs.
 ==== Engine Flows ====
 <span style="color:Teal">'''GetVmGuestAgentInterfaceForVmQuery'''</span> - A query to return the vNic's data for a specific vm by the VM's ID.<BR>
 
-<span style="color:Teal">'''VdsUpdateRunTimeInfo.refreshVms'''</span> - will refresh the vnic's data (as an optimization only if the data was changed). Update should be performed as a mass-operation.
+<span style="color:Teal">'''VdsUpdateRunTimeInfo.refreshVms'''</span> - will refresh the vnic's data (as an optimization only if the data was changed). Update should be performed as a mass-operation.<BR>
+* Populating the VMs IP addresses and VM guest agent interfaces is done by '''getVmStats''' and '''getAllVmStats'''
+** When the '''netIfaces''' element is reported by VDSM, it will be used both for populating the VM's IP addresses list on vm_dynamic(vm_ip) as well as the vm guest agent interfaces.
+** If '''netIfaces''' is not reported by VDSM (earlier VDSM versions), the VM's IP addresses list will be populate by '''guestIPs''' as done today.
 
 ==== VDSM API ====
 No changes for VDSM API.
