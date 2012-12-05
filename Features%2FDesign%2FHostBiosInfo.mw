@@ -36,7 +36,7 @@ This feature adds new host's sub-tab called Hardware-Information and modifies ge
 [[File:Bios.jpeg]]
 
 ==== VDSM Flow ====
-Each time Vdsm receives getCapabilities request Vdsm retrieves the bios information by using python-dmidecode utility. After collecting and arranging the information, Vdsm delivers it to engine by xml rpc.
+When Vdsm receives getCapabilities request, it retrieves the bios information by using python-dmidecode utility. After collecting and arranging the information, Vdsm delivers it to engine by xml rpc.
 
 ==== Engine Flow ====
 When gathering host's capabilities we receive host's bios details by VDSM API ( Although, Bios information stays constant, vdsm retrieves this information in each request without holding cache of this data  ) This information is written to the database to vds_dynamic table (as refer to the new update table 03_01_1530_add_vds_bios_info.sql).<BR>
