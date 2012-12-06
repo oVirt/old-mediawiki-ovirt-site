@@ -113,6 +113,7 @@ params = {
                        'alias': <string>,      
                        'portMirroring': blue[,red]}                         <---  If not specified, the current portMirroring keeps in effect. Otherwise, only the specified networks will be mirrored to the vnic, e.g., empty list -> unset any mirroring.
  }
+</pre>
 
 Vdsm would implement this using http://libvirt.org/html/libvirt-libvirt.html#virDomainUpdateDeviceFlags .
 
