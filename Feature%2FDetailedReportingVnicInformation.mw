@@ -31,7 +31,7 @@ The vNic device data from the guest contains interface name, IPv4 addresses, IPv
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
 |-
-|vm_id ||UUID ||not null ||The VM's ID, foreign key to vm_static.vm_guid 
+|vm_id ||UUID ||not null ||The VM's ID, '''foreign key''' to vm_static.vm_guid 
 |-
 |interface_name ||VARCHAR(50) ||null ||The vNic's name within the VM 
 |-
