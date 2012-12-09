@@ -1,3 +1,4 @@
+[[Category:Ovirt_guest_agent]]
 == An overview how the single sign on process works on Microsoft Windows&reg; systems  ==
 [[File:Ovirt-guest-agent-sso-windows.png]]
 # VDSM sends a 'login' message to the oVirt Guest Agent
