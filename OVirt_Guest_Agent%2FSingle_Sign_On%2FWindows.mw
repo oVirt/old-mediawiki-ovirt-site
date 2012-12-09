@@ -1,0 +1,7 @@
+== An overview how the single sign on process works on Microsoft Windows&reg; systems  ==
+[[File:Ovirt-guest-agent-sso-windows.png]]
+# VDSM sends a 'login' message to the oVirt Guest Agent
+# In case the "SAS" library is installed, the service will simulate a "Secure attention sequence" by issuing a SendSAS(0) call on the SAS library
+# The service then will send the credentials to a named Pipe ("\\\\.\\pipe\\VDSMPipe") via the CallNamedPipe system call
+# The plugin either GINA on Windows XP&reg; or the Credentials Provider on Windows 7&reg; will issue the login process with the credentials received.
+# If the login credentials are valid, the user is authenticated and the Desktop session started
