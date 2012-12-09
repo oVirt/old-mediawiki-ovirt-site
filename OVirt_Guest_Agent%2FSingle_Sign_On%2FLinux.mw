@@ -1,0 +1,11 @@
+[[File:Ovirt-guest-agent-sso-linux.png]]
+
+# VDSM sends a 'login' message to the oVirt Guest Agent
+# The oVirt Guest Agent daemon/service receives the message and creates a 6 character long random token
+# The Guest Agent creates a UNIX Domain Socket on '\x00/tmp/ovirt-cred-channel' and listens to it for 5 seconds to receive
+# The Guest Agent triggers the Credentials UserAuthenticated signal which the GDM/KDM plug-ins are subscribing to
+# Once triggered, the KDM/GDM plugin initiates a new login by using the gdm-ovirtcred pam stack
+# The pam module requests the Token from the GDM module
+# The pam module sends the Token to the ovirt-cred-channel UNIX Domain socket
+# The pam module receives the username/password combination and reaches the login information down the pam stack
+# If the login credentials are valid, the user is authenticated and the Desktop session started
