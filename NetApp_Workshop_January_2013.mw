@@ -1,6 +1,8 @@
-
+__NOTOC__
 <div class="row">
 <div class="span8">
+
+= NetApp Workshop 2013 =
 
 An oVirt Workshop is being held at the [http://maps.google.com/maps/place?cid=7052473688898245753&q=netapp+headquarters+sunnyvale&hl=en&t=h&cd=1&cad=src:ppiwlink&ei=PLyqT72BNsf9kAXkxpzeBA&sig2=DivLR8aVzWexkjnlAxpuGw&dtab=2 NetApp Campus, Sunnyvale, California], on January 22-24, 2013. 
 
@@ -10,8 +12,9 @@ oVirt workshops focus on introducing the project, the technologies inside of the
 <span class="btn btn-action btn-block">[http://ovirtnetapp2013.eventbrite.com Register for this event »]</span>
 </div>
 </div>
+
 <div class="row">
-<div class="span6">
+<div class="span6 pad-sides">
 == Call for Content ==
 We are actively seeking speakers for this workshop. We are interested in talks in the following areas:
 * Case studies of oVirt deployments
@@ -29,26 +32,26 @@ Please submit talk proposals for review by sending a message to workshop-pc@ovir
 
 Accepted speakers should plan to submit their slides to the workshop-pc@ovirt.org mailing list no later than close of business on Friday, 18 January 2013. 
 </div>
-<div class="span6">
+<div class="span6 pad-sides">
 == Event details ==
 
 On January 22, 2013, the oVirt workshop is pleased to welcome two key members of the NetApp team, Patrick Rogers, VP Solutions & Integrators Group, and David Dale, Industry Evangelist & Director Industry Standards. Patrick will give an opening keynote presentation on the importance of open source software to NetApp, while David will address NetApp, the oVirt project and cross-company collaboration to produce strategic wins. 
 
 An updated and more granular schedule will be posted in the coming weeks. In the interim, save these hours in your calendar:
 
-Tuesday, January  22, 2013
+=== Tuesday, January  22, 2013 ===
 * Continental breakfast served - 8:30 - 9:00 AM
 * Keynotes - 9:00 - 10:00 AM
 * Lunch - 12:15 - 1:15 PM 
 * Closing Remarks - 5:00 PM
 
-Wednesday, January 23, 2013
+=== Wednesday, January 23, 2013 ===
 * Continental breakfast served - 8:30 - 9:00 AM
 * Lunch - 12:15 - 1:15 PM 
 * Closing Remarks - 5:00 PM
 * Evening Reception at the Country Inn & Suites - 6:00 - 8:00 PM
 
-Thursday, January 24, 2013
+=== Thursday, January 24, 2013 ===
 * Continental breakfast served - 8:30 - 9:00 AM
 * Closing Remarks over Lunch - 1:00 PM
 
@@ -64,7 +67,7 @@ The event will be held over three days, broken roughly along these lines:
 
 === Venue ===
 
-This latest in the [[OVirt_Global_Workshops oVirt|Global Workshops Series]] will be hosted by NetApp at their [http://goo.gl/maps/KK7y8 Corporate Headquarters] in Sunnyvale, California, USA. Attendees will need to check in at Building 7 upon arrival.
+This latest in the [[OVirt_Global_Workshops|Global Workshops Series]] will be hosted by NetApp at their [http://goo.gl/maps/KK7y8 Corporate Headquarters] in Sunnyvale, California, USA. Attendees will need to check in at Building 7 upon arrival.
 
 === Lodging ===
 
