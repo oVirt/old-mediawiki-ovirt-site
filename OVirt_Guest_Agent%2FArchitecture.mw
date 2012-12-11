@@ -2,6 +2,7 @@
 ==The communication between oVirt guest agent and the oVirt engine ==
 [[File:Guest_Agent_Achitecture.png]]
 
+
 The engine directs requests for the guest agent to VDSM.
 
 VDSM communicates with the guest using a VirtIO channel using plain text commands in JSON format.
