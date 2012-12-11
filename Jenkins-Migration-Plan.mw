@@ -23,7 +23,7 @@ The following is a migration plan for [jenkins.ovirt.org] to a new physical serv
 
 '''----- till now no affect to exiting service or downtime -----''' 
 
-==  migration plan: ==
+==  migration plan ==
 # copy main configuration file (config.xml) 
 # disable slaves so jenkins.ovirt.org will continue running. 
 # add the 2nd phsical server as temp slave for testing
