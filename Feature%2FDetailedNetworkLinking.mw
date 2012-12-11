@@ -91,6 +91,17 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 ===== Unplug nic =====
 * Should be used just as internal command.
 
+===== More effected flows =====
+* ChangeVMClusterCommand
+* AddVmTemplateCommand
+* AddVmTemplateInterfaceCommand
+* UpdateVmCommand
+* ImportVmCommand
+* ImportVmTemplateCommand
+* OvfVm
+* OvfTemplate
+
+
 ===== Error codes =====
 Add translation to VDSM error codes:
 UPDATE_VNIC_FAILED = 'Failed to update VM Network Interface.'
