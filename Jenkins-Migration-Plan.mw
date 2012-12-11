@@ -7,23 +7,23 @@ The following is a migration plan for [jenkins.ovirt.org] to a new physical serv
 # add puppet classes to manage slaves
 # setup openid as authentication for server via puppet class
 
-== 1. install jenkins master server via exiting foreman (LTS) ==
+==  install jenkins master server via exiting foreman (LTS) ==
 # contacting alterway for root access to new servers. 
 # make sure to install all existing plugins from jenkins.ovirt.org 
 # enable apache server redirect port 8080 
 # verification stage: new server is running and accesible via ip x.x.x.x 
 
-== 2. copy jenkins user ssh key to new server -> to allow connection to services ==
+==  copy jenkins user ssh key to new server -> to allow connection to services ==
 # test gerrit access from new server 
 # test resources server (linode) access via ssh 
 
-== 3. add all existing slaves to foreman ==
+==  add all existing slaves to foreman ==
 # adding one by one, defining new hostgroup for each operating system.
 
 
 '''----- till now no affect to exiting service or downtime -----''' 
 
-== 4. migration plan: ==
+==  migration plan: ==
 # copy main configuration file (config.xml) 
 # disable slaves so jenkins.ovirt.org will continue running. 
 # add the 2nd phsical server as temp slave for testing
@@ -33,6 +33,6 @@ The following is a migration plan for [jenkins.ovirt.org] to a new physical serv
 # verify jobs 
 # detach existing slaves from jenkins.ovirt.org to new server 
 # change dns entry for new server to jenkins.ovirt.org and old server to jenkins-test.ovirt.org
-# verify all jobs works:
+# verify all jobs works
 * gerrit access
 * linode access
