@@ -1,5 +1,18 @@
-This page is going to be the landing page for "the wiki" - it will be a gateway to the various parts of ovirt.org that are wiki pages.
+__NOTOC__
 
-A wiki is defined as the collaboratively-written community documentation maintained in a wiki engine. (TODO: better definition)
-
+== How to use the oVirt Wiki ==
+<div class="row">
+<div class="span6">
+=== What is a wiki? ===
+A wiki is a website where any visitor with sufficient permissions can change the web pages, by editing them in place using a very simple syntax. To protect this website against "spam" edits, users are required to create an account and authenticate their email address before making edits to pages. In addition, a small number of pages - [[Home | the front page]], [[Download]], [[Documentation]], [[Community]] and [[Develop]] are protected - which means that only site admins may edit them.
+</div>
+<div class="span4">
+* [[Special:RequestAccount | Getting an account]]
+* [[Special:UserLogin | Logging in]]
+* [[Help:Editing | Editing pages]]
+* [[Community guidelines#Wiki contribution guidelines | Wiki community guidelines]]
+* [[Special:SpecialPages | Special pages]]
+* [[Website organisation | Wiki gardening and other website tasks]]
+</div>
+</div>
 [[Category:Wiki]]
