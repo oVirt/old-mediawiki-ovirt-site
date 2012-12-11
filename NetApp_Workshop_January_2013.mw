@@ -21,8 +21,7 @@ oVirt workshops focus on introducing the project, the technologies inside of the
 <div class="row">
 <div class="span12 pad-sides">
 == Call for Content ==
-</div></div>
-<div class="row">
+</div><!-- span 12 should force the rest to wrap; this is why we don't close the row and start a new one -->
 <div class="span6 pad-sides">
 We are actively seeking speakers for this workshop. We are interested in talks in the following areas:
 
