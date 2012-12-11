@@ -34,7 +34,7 @@ The proposal is to give the engine the knowledge of the host cores and threads, 
 ** add CPU hyperthreading info to Host status, General tab
 ** add UI element to set option in Add/Edit Cluster dialog
 *** not visible if cluster compatibility version < 3.2
-[[File:cpuovercommit.png]]
+[[File:cpuovercommit.png|600px]]
 * backend:
 ** add vds_groups.treat_threads_as_cores boolean attribute
 *** add column to database table
