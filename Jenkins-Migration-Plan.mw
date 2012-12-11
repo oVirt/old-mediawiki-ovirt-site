@@ -34,5 +34,5 @@ The following is a migration plan for [jenkins.ovirt.org] to a new physical serv
 # detach existing slaves from jenkins.ovirt.org to new server 
 # change dns entry for new server to jenkins.ovirt.org and old server to jenkins-test.ovirt.org
 # verify all jobs works
-:* gerrit access
-:* linode access
+::* gerrit access
+::* linode access
