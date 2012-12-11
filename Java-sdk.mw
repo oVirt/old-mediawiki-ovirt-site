@@ -19,17 +19,17 @@ __TOC__
 === Creating the proxy ===
 ----------------------------------------
 
-[[File:0jsdk.jpg]]
+[[File:0-jsdk.jpg]]
 
 ===  Listing all collections ===
 --------------------------------------------
 
-[[File:1jsdk.jpg]]
+[[File:1-jsdk.jpg]]
 
 === Listing collection's  methods ===
 -------------------------------------------------------
 
-[[File:2jdk.jpg]]
+[[File:2-jdk.jpg]]
 
 === Querying collection with oVirt search engine query & custom constraint ===
 -----------------------------------------------------------------------------------------------------------------------
@@ -39,22 +39,22 @@ TBD
 === Accessing resource methods and properties ===
 -----------------------------------------------------------------------------
 
-[[File:4jdk.jpg]]
+[[File:4-jdk.jpg]]
 
 === Creating resource ===
 --------------------------------------
 
-[[File:5jdk.jpg]]
+[[File:5-jdk.jpg]]
 
 === Accessing resource properties and sub-collections ===
 --------------------------------------------------------------------------------------
 
-[[File:6jdk.jpg]]
+[[File:6-jdk.jpg]]
 
 === Accessing sub-collection methods ===
 --------------------------------------------------------------
 
-[[File:7jdk.jpg]]
+[[File:7-jdk.jpg]]
 
 === Querying sub-collection by custom constraint. ===
 --------------------------------------------------------------------------------
@@ -64,12 +64,12 @@ TBD
 === Retrieving sub-collection resource. ===
 ----------------------------------------------------------------
 
-[[File:8jdk.jpg]]
+[[File:8-jdk.jpg]]
 
 === Accessing sub-collection resource properties and methods ===
 ---------------------------------------------------------------------------------------------------
 
-[[File:9jdk.jpg]]
+[[File:9-jdk.jpg]]
 
 
 == Examples ==
