@@ -91,7 +91,7 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 ===== Unplug nic =====
 * Should be used just as internal command.
 
-===== More effected flows =====
+===== Other effected flows =====
 * ChangeVMClusterCommand
 * AddVmTemplateCommand
 * AddVmTemplateInterfaceCommand
@@ -100,7 +100,6 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 * ImportVmTemplateCommand
 * OvfVm
 * OvfTemplate
-
 
 ===== Error codes =====
 Add translation to VDSM error codes:
