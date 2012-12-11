@@ -40,7 +40,7 @@ We are actively seeking speakers for this workshop. We are interested in talks i
 </div>
 
 <div class="span6 pad-sides">
-Please submit talk proposals for review by sending a message to [workshop-pc@ovirt.org workshop-pc@ovirt.org]. Your email should include your full name, speaker biography and your talk abstract. We will accept submissions through Friday, 14 December 2012 at 23:55 UTC. Speakers will be notified of acceptance by Friday, 21 December 2012.
+Please submit talk proposals for review by sending a message to [mailto:workshop-pc@ovirt.org workshop-pc@ovirt.org]. Your email should include your full name, speaker biography and your talk abstract. We will accept submissions through Friday, 14 December 2012 at 23:55 UTC. Speakers will be notified of acceptance by Friday, 21 December 2012.
 
 Accepted speakers should plan to submit their slides to the [mailto:workshop-pc@ovirt.org workshop-pc@ovirt.org mailing list] no later than close of business on Friday, 18 January 2013. 
 </div>
@@ -48,6 +48,7 @@ Accepted speakers should plan to submit their slides to the [mailto:workshop-pc@
 
 <div class="row">
 <div class="span6 pad-sides">
+
 == Event details ==
 
 On January 22, 2013, the oVirt workshop is pleased to welcome two key members of the NetApp team, Patrick Rogers, VP Solutions & Integrators Group, and David Dale, Industry Evangelist & Director Industry Standards. Patrick will give an opening keynote presentation on the importance of open source software to NetApp, while David will address NetApp, the oVirt project and cross-company collaboration to produce strategic wins. 
