@@ -30,6 +30,7 @@ The following is a migration plan for [jenkins.ovirt.org] to a new physical serv
 # add the 2nd phsical server as temp slave for testing
 # copy jobs configuration (tar.gz of current jobs dir)
 # copy builds (tar.gz and move it)
+# copy user database (since it's a small user db, we might want to recreate them using openid)
 # copy other imporant files (userContent?) 
 # verify jobs 
 # detach existing slaves from jenkins.ovirt.org to new server 
