@@ -36,7 +36,7 @@ javac - status is auto.
  link currently points to /usr/lib/jvm/java-1.7.0-openjdk.x86_64/bin/javac
 ...</nowiki>
 
-If the link does not point to the correct instance of the Java compiler then you must update it, for example:
+If the link does not point to the correct instance of the Java compiler, then you must update it.  For example:
  <nowiki>
 $> alternatives --set javac /usr/lib/jvm/java-1.7.0-openjdk.x86_64/bin/javac</nowiki>
 
