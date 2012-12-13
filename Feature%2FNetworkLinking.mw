@@ -69,7 +69,7 @@ The oVirt-engine's user will be able to configure the Vnic state to any of the m
 
 :* Edit
 ::* Menu
-:::* For cluster version 3.1 or upper- edit action will be enabled for VMs in status 'UP' (previously it was allowed only for VMs in 'Down' status).
+:::* Edit action will be enabled for VMs in status 'UP' (previously it was allowed only for VMs in 'Down' status).
 ::* Dialog
 :::* If the VM status is 'UP'
 ::::* If the Vnic is plugged "mac" and "type" editor should be disables with explanation tooltip ("In order to change 'MAC'/'type' please Unplug and then Plug again").
