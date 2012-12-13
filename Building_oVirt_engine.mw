@@ -42,7 +42,7 @@ $> alternatives --set javac /usr/lib/jvm/java-1.7.0-openjdk.x86_64/bin/javac</no
 
 === Installing git ===
 
-The ovirt-engine source code is stored in a GIT repository. As such GIT is required to obtain the latest source code.
+The ovirt-engine source code is stored in a GIT repository. As such, GIT is required to obtain the latest source code.
 
 '''Fedora'''
  <nowiki>#> yum install -y git</nowiki>
