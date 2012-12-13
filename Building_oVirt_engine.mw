@@ -178,7 +178,6 @@ Finally, check that the installed service runs:
 == Installing PostgreSQL ==
 
 [[Installing_PostgreSQL_DB]]
-
 <!--<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
 <span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 6</span></p>-->
 == Building oVirt-engine from source ==
