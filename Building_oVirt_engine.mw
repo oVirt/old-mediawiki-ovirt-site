@@ -286,7 +286,7 @@ $> make install_config</nowiki>
 
 == Testing ==
 
-Assuming JBoss is not running, it should be started:
+Assuming JBoss is not running, start it:
  <nowiki>
     #> service jboss-as start (or restart if you already started above for tests)
     #> ps ax | grep java</nowiki>
