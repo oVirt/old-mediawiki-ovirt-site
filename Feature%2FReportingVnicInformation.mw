@@ -86,7 +86,7 @@ Administrator Portal:
 A split view of the VM's Network Interfaces sub-tab will present the information reported by the Guest Agent:
 * When there is a match by MAC Address between the vNic's definition on management to the reported vNic by the Guest Agent.
 
-[[File:VmInterfaceSubTab.png]]
+[[File:VmInterfaceSubTab.png|1100px]]
 
 === Benefit to oVirt ===
 The feature is an enhancement of the oVirt engine vNic management:
