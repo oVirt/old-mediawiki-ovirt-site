@@ -8,9 +8,8 @@ Today we have different storage helpers in the engine which can be summarised in
 1. FCP<BR/>
 2. ISCSI, <BR/>
 3. BaseFS (Local FS, NFS, PosixFS)<BR/>
-<BR/><BR/>
-Each one of these helpers rules the connect/disconnect storage functionality with VDSM.
-<BR/><BR/>
+<BR/>
+Each one of these helpers rules the connect/disconnect storage functionality with VDSM.<BR/>
 The architecture today is described in the following schema:<BR/><BR/><BR/>
 [[File:ISCSIHelpers.png]]
 <BR/><BR/><BR/>
