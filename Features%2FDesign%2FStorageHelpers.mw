@@ -29,7 +29,7 @@ The following is a new architecture which is proposed to make the code be a bit 
 4. See if maybe FCP helper could be removed or at least be much more API leaner (All the methods in it return true).<BR/>
 <BR/>
 From the client programmer perspective the new architecture will force him to know whether he uses block storage or NFS storage, to call the right helper for connecting the storage to the VDSM.<BR/>
-This is also happens today, in a much more confusing way, since there are a lot of "dirty" APIs which does not reflect the true functionality of the storage type.<BR/>
+This is also happens today, in a much more confusing way, since there are a lot of "dirty" APIs which does not reflect the true functionality of the storage type that he use.<BR/>
 
 <!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
 * Email: mlipchuk@redhat.com
