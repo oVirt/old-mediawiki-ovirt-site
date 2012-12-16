@@ -131,6 +131,15 @@ We will use the existing events URL (.../api/events) and the existing Event busi
 7) Add tests<br>
 ''Note that no update is required.<br>''
 
+Example of add event 
+   <event>
+        <description>bla bla</description>
+        <severity>normal</severity>
+        <origin>EMC</origin>
+        <custom_event_id>1</custom_event_id>
+        <event_flood_in_sec>30</event_flood_in_sec>
+    </event>
+
 == User Experience ==
 <!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
 
