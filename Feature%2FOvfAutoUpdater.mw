@@ -56,7 +56,7 @@ vdc_options table:
 * Remove removeVmInSpm call in commands (removed vms/templates will be 'collected' automatically after removal in the next OvfAutoUpdater run).
 
 ==== NOTES ====
- VMs/Templates that are being/were updated during their processing by OvfAutoUpdater run won't be updated till the next OvfAutoUpdater run.
+ OVF'S of VMs/Templates that are being/were updated exactly during their processing by OvfAutoUpdater run will have their OVF updated in the storage the next OvfAutoUpdater run, DB updates will occur regulary.
 
 === Comments and Discussion ===
 
