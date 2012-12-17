@@ -34,7 +34,12 @@ UpdateVmDiskCommand
 DetachDiskFromVmCommand
 CreateCloneOfTemplateCommand
 AddVmTemplateDevice
-
+AddVmFromTemplateCommand
+CreateSnapshotFromTemplate
+AddVmFromSnapshotCommand
+AddVmAndCloneImageCommand
+OvfReader.readVmDevice() (already reads the readOnly property).
+OvfWriter.writeVmDeviceInfo() (already writes the readOnly property).
 
 
 Snapshot
