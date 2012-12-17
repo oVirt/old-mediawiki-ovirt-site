@@ -65,7 +65,7 @@ VmGuestAgentInterface is stored to the database only as part of refresh VMs.
 ** If '''netIfaces''' is not reported by VDSM (earlier VDSM versions), the VM's IP addresses list will be populate by '''guestIPs''' as done today.
 
 ==== Rest API ====
-Populating the VM's '''network_devices''' element under '''guest_info''' is implemented by mechanism introduced by [http://gerrit.ovirt.org/#/c/9018 "All-Content Header" patch]<BR>
+Populating the VM's '''network_devices''' element under '''guest_info''' is implemented by mechanism introduced by [http://gerrit.ovirt.org/#/c/9815 "All-Content Header" patch]<BR>
 Rest API will invoke GetVmGuestAgentInterfacesForVmQuery from the ''populate'' method of VM Resource ''BackendVmResource''' in order to populate the additional information of guest_info.<BR>
 A mapper should be created as well between VmGuestAgentInterface to the equivalent Rest API entity.
 
