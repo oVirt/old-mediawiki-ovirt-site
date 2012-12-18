@@ -95,6 +95,7 @@ It supports the following actions without unplugging the Vnic, maintaining the a
 * ChangeVMClusterCommand
 * AddVmTemplateCommand
 * AddVmTemplateInterfaceCommand
+* UpdateVmTemplateInterfaceCommand
 * UpdateVmCommand
 * ImportVmCommand
 * ImportVmTemplateCommand
