@@ -3,7 +3,9 @@
 <noinclude>
 <startfeed/>
 </noinclude>
-{{Event|name=[[NetApp Workshop January 2013 | oVirt Workshop at NetApp Headquarters]]|date=22-24 January 2013|location=Sunnyvale, California|lead=Details forthcoming}}
+{{Event|name=[[NetApp Workshop January 2013 | oVirt Workshop at NetApp Headquarters]]|date=22-24 January 2013|location=Sunnyvale, California|lead=
+<span class="btn btn-action">[http://ovirtnetapp2013.eventbrite.com Register now]</span><br/>
+[[NetApp Workshop January 2013#Event details| Agenda]]}}
 
 {{Event|name=[[Intel Workshop Marsh 2013 | oVirt Workshop at Intel Campus]]|date=20-21 March 2013|location=Shanghai, China|lead=Details forthcoming}}
 
