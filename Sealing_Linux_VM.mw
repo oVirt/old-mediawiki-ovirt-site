@@ -13,10 +13,10 @@ For Handling the above we have the process of sysprep. For guests with Windows O
 <li> flag the system for reconfiguring</li>
  # touch /.unconfigured
 <li> Remove ssh host keys:</li>
- # rm -rf /etc/ssh/ssh_host_*
+ # rm -i /etc/ssh/ssh_host_*
 <li> Set HOSTNAME=localhost.localdomain in /etc/sysconfig/network</li>
 <li> Remove UDEV rules:</li>
- # rm -rf /etc/udev/rules.d/70-*
+ # rm -i /etc/udev/rules.d/70-persistent*
 <li> Remove the HWADDR= line from /etc/sysconfig/network-scripts/ifcfg-*</li>
 <li> [optionally] Delete the logs from /var/log </li>
 <li> [Optionally] Delete the build logs from /root.</li>
