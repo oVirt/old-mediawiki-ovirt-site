@@ -1,6 +1,7 @@
 == What is oVirt? ==
 oVirt is a complete virtualization management platform, licensed and developed as open source software. oVirt builds on the powerful Kernel-based Virtual Machine (KVM) hypervisor, and on the RHEV-M management server released by Red Hat to the open source community. 
 
+[[File:OVirt VMs.png]]
 === oVirt compnents ===
 ==== oVirt node ====
 Highly scalable, Image-based, small-footprint (<200MB) hypervisor with minimized security footprint.  
