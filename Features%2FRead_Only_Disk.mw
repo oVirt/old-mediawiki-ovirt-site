@@ -4,7 +4,7 @@
 
 === Summary ===
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
-Add Read Only Disk Functionality to the engine.
+VDSM already has a read-only disk capability. This feature  adds that functionality to the engine as well.
 
 === Owner ===
 <!--This should link to your home wiki page so we know who you are-->
