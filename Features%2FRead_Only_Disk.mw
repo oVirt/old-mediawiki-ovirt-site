@@ -24,9 +24,9 @@ When adding/attaching a disk to a vm,  add a property of RO.  The RO property is
 vm_device table already has a read_only column. No update to the DB is needed.
 
 ====Backend====
-AddDiskCommand,  AttachDiskToVmCommand - Add the RO property and propagate until VMDevice creation.
-All relating Parameters classes should now contain this info. Therefore,  VmDiskOperationParameterBase will be added a new readOnly data member.
-ImagesHandler.addDiskToVm() -  will get the RO data and propagate it.
+AddDiskCommand,  AttachDiskToVmCommand - Add the RO property and propagate until VMDevice creation.<br/>
+All relating Parameters classes should now contain this info. Therefore,  VmDiskOperationParameterBase will be added a new readOnly data member.<br/>
+ImagesHandler.addDiskToVm() -  will get the RO data and propagate it.<br/>
 
 No changes need in:<br/>
 HotPlugDiskToVmCommand<br/>
@@ -42,15 +42,15 @@ OvfReader.readVmDevice() (already reads the readOnly property).<br/>
 OvfWriter.writeVmDeviceInfo() (already writes the readOnly property).<br/>
 
 =====Templates=====
-Currently templates will maintain the current disk RO property value with no editing option.
-When creating a VM from template, it's disks will inherit the disk RO property value with no editing option.
-Editing options to both phases can be added later on.
-This is an open issue, please comment if you think this should be dealt with in another way.
+Currently templates will maintain the current disk RO property value with no editing option.<br/>
+When creating a VM from template, it's disks will inherit the disk RO property value with no editing option.<br/>
+Editing options to both phases can be added later on.<br/>
+This is an open issue, please comment if you think this should be dealt with in another way.<br/>
 
 =====Snapshots=====
-There's no need to save the images of RO disk to the images table.
-There is, however, a need to update the ovf file so that it does include the RO disks' (images).
-Verified - the OvfReader does read the RO property, so no problem with snapshots uses.
+There's no need to save the images of RO disk to the images table.<br/>
+There is, however, a need to update the ovf file so that it does include the RO disks' (images).<br/>
+Verified - the OvfReader does read the RO property, so no problem with snapshots uses.<br/>
 
 ====UI====
 Changes will have to be made to RESTapi and uicommon in order to get the RO property value from the user.
