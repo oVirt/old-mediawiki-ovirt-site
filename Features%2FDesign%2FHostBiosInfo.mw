@@ -63,7 +63,7 @@ Under Hosts tab we have general information about the chosen host. In this tab y
 <BR>
 [[File:General-tab.jpeg]]
 <BR><BR>
-This feature adds new host's sub-tab called Hardware-Information and modifies general tab to Software-Information. Hardware-Information will display the following fields:<BR>
+This feature adds new host's sub-tab called BIOS Information. BIOS Information will display the following fields:<BR>
 [[File:Bios.jpeg]]
 
 ==== VDSM Flow ====
