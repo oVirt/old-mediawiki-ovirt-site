@@ -69,7 +69,7 @@ The following diagram shows the different layers in the oVirt engine component:
 The following diagram shows the different components in the engine-core:
 
 
-[[File:Engine-arch2.png|border|512px|left]]
+[[File:Engine-arch2.png|border|512px]]
 
 The main components in the engine core are:
 *DB Broker - responsible for all the DB related actions
