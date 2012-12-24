@@ -60,7 +60,7 @@ Some features provided by the engine:
 The following diagram shows the different layers in the oVirt engine component:
 
 
-[[File:Engine-arch.png|border|512px|right]]
+[[File:Engine-arch.png|border|512px]]
 
 
 === Engine-Core Architecture ===
