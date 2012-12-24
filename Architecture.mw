@@ -181,7 +181,7 @@ Architectural details:
 #SSO for windows is based on a gina module for XP and a credential provider for windows 7
 #SSO for RHEL 6 is based on a PAM module with support for both KDE and Gnome
 
-[[File:Guest-agent-arch.png|border|512px|right]]
+[[File:Guest-agent-arch.png|border|512px]]
 
 
 [[Category:Architecture]]
