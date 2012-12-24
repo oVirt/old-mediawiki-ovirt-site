@@ -102,7 +102,7 @@ The “Hook” mechanism:
 
 The following diagram illustrates the Hook mechanism in the VM lifetime cycle:
 
-[[File:Hook-arch.png|border|512px|right]]
+[[File:Hook-arch.png|border|512px]]
 
 #The hook mechanism comes into place before VDSM initiates the VM startup using libvirt.
 #The hook changes the VM definition, and VDSM passes this definition to libvirt to start the VM.
