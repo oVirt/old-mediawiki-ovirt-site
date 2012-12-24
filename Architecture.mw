@@ -91,7 +91,7 @@ VDSM covers all functionality required by oVirt Engine.
 #Scales linearly in data writers
 
 
-[[File:Vdsm-arch.png|border|512px|right]]
+[[File:Vdsm-arch.png|border|512px]]
 
 
 === Hooks mechanism ===
@@ -106,7 +106,6 @@ The following diagram illustrates the Hook mechanism in the VM lifetime cycle:
 
 #The hook mechanism comes into place before VDSM initiates the VM startup using libvirt.
 #The hook changes the VM definition, and VDSM passes this definition to libvirt to start the VM.
-
 
 == Admin Portal ==
 ...
