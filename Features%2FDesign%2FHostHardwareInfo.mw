@@ -1,0 +1,252 @@
+<!-- {{autolang|base=yes}} -->
+
+== Host's Hardware Information ==
+
+=== Summary ===
+When assigning new host to oVirt engine  the engine retrieves general information about the host. This information includes Vdsm version, CPU units and inc. This article describes the hardware information that the host provides to oVirt engine.
+
+=== Owner ===
+* Name: [[User:ybronhei| Yaniv Bronhaim]]
+
+* Email: ybronhei@redhat.com
+
+=== Current status ===
+* Target Release: 3.2
+* Status: Work In Progress
+* Last updated date: Nov 20 2012
+
+=== Detailed Description ===
+The following feature allows the user interface to present host's hardware information when adding new hypervisor. <BR>
+This information is taken by using dmidecode command, this command runs with root permissions over the host and returns the information with getVdsHardwareInfo API method. This returns the following fields[1]: <BR>
+ 1. Host Manufacturer - Manufacturer of the host's machine and hardware' vendor (e.g LENOVO)
+ 2. Host Version - For each host the manufacturer gives a unique name (e.g. Lenovo T420s)
+ 3. Host Product Name - ID of the product - same for all similar products (e.g 4174BH4)
+ 4. Host UUID - Unique ID for each host (e.g E03DD601-5219-11CB-BB3F-892313086897)
+ 5. Host Family - Type of host's CPU - (e.g Core i5)
+ 6. Host Serial Number - Unique ID for host's chassis (e.g R9M4N4G)
+<BR>
+The following parameters below are suggested to be added: 
+ 7. BIOS Revision
+ 8. BIOS Version
+ 9. BIOS is upgradable
+ 10. BIOS Vendor
+ 11. BIOS Release Date
+
+ 12. Processor Version
+ 13. Processor Core Count
+ 14. Processor Vendor
+ 15. Processor Core Enabled
+ 16. Processor Current Speed
+ 17. Processor Max Speed
+ 18. Processor Thread Count
+
+ 19. Chassis Asset Tag
+ 20. Chassis Serial Number
+ 21. Chassis Manufacturer
+
+ 22. Memory Serial Number
+ 23. Memory Total Width
+ 24. Memory Number of Devices
+ 25. Memory Manufacturer
+ 26. Memory Data Width
+ 27. Memory Error Correction Type
+ 28. Memory Maximum Capacity
+ 29. Memory Type Detail
+ 30. Memory Speed
+ 31. Memory Size
+
+[1] More parameters can be added on request.
+
+==== User Experience ====
+<!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
+Under Hosts tab we have general information about the chosen host. In this tab you see general information that was retrieved from the host:
+<BR>
+[[File:General-tab.jpeg]]
+<BR><BR>
+This feature adds new host's sub-tab called Hardware Information. Hardware Information will display the following fields:<BR>
+[[File:Bios.jpeg]]
+
+==== VDSM Flow ====
+When Vdsm receives getVdsHardwareInfo request, it retrieves the hardware information by using python-dmidecode utility. After collecting and arranging the information, Vdsm delivers it to engine by xml rpc.
+
+==== Engine Flow ====
+When refreshing host's capabilities we call to getVdsHardwareInfo, On update this information is written to the database to vds_dynamic table with other all host information.<BR>
+----<BR>
+Short explanation about vds tables: <BR>
+We have 3 tables that engine works with - vds_static, vds_dynamic, vds_statistics, all goes to one view that is called VDS<BR>
+vds_statistics includes fields that get updated every 2 sec (highest frequency)<BR>
+vds_static includes fields that get changed threw the UI like IP, CPU Cores (that can be specified by the user) and more configurable data.<BR>
+vds_dynamic includes host information that retrieved from specific vds<BR>
+<BR>
+Hardware information needs to be part of the vds dynamic information and retrieved in constants intervals or cases by API request from host (as get capabilities)<BR>
+----<BR>
+
+This information is mapped to Vds entity and kept there, when mapping to UI we use those parameters to build the Host entity.<BR>
+
+==== REST API ====
+The host's Hardware parameters is shown via engine rest API under host object as the following:<BR>
+ <hardware_information>
+  <manufacturer>Dell Inc.</manufacturer>
+  <version>01</version>
+  <serial_number>H2CQ95J</serial_number>
+  <product_name>OptiPlex 790</product_name>
+  <uuid>4C4C4544-0032-4310-8051-C8C04F39354A</uuid>
+  <family>Core i7</family>
+ </hardware_information>
+
+=== dmidecode Output ===
+==== System Information ====
+dmi_type - 1<BR>
+SKU Number - Not Specified<BR>
+UUID - E03DD601-5219-11CB-BB3F-892313086897<BR>
+Family - ThinkPad T420s<BR>
+Serial Number - R9M4N4G<BR>
+Version - ThinkPad T420s<BR>
+Wake-Up Type - Power Switch<BR>
+Product Name - 4174BH4<BR>
+dmi_handle - 0x0010<BR>
+dmi_size - 27<BR>
+Manufacturer - LENOVO<BR>
+
+==== Bios Information ====
+NEC PC-98 - False<BR>
+EDD is supported - True<BR>
+PC Card (PCMCIA) is supported - False<BR>
+I2O boot - False<BR>
+3.5"/2.88 MB floppy services are supported (int 13h) - False<BR>
+BIOS Revision - 1.31<BR>
+ATAPI Zip drive boot - False<BR>
+Version - 8CET51WW (1.31 )<BR>
+BIOS is upgradeable - True<BR>
+Smart battery - False<BR>
+8042 keyboard services are supported (int 9h) - True<BR>
+BIOS shadowing is allowed - True<BR>
+BIOS ROM is socketed - False<BR>
+USB legacy - True<BR>
+APM is supported - False<BR>
+AGP - False<BR>
+PNP is supported - True<BR>
+VLB is supported - False<BR>
+Vendor - LENOVO<BR>
+ISA is supported - False<BR>
+Japanese floppy for Toshiba 1.2 MB is supported (int 13h) - False<BR>
+CGA/mono video services are supported (int 10h) - True<BR>
+Serial services are supported (int 14h) - True<BR>
+5.25"/360 KB floppy services are supported (int 13h) - False<BR>
+Address - 0xe0000<BR>
+ROM Size - 8192 KB<BR>
+Function key-initiated network boot - True<BR>
+Currently Installed Language - ['en-US']<BR>
+Runtime Size - 128 KB<BR>
+Targeted content distribution - False<BR>
+3.5"/720 KB floppy services are supported (int 13h) - True<BR>
+Relase Date - 11/29/2011<BR>
+BIOS boot specification - True<BR>
+MCA is supported - False<BR>
+PCI is supported - True<BR>
+5.25"/1.2 MB floppy services are supported (int 13h) - False<BR>
+dmi_handle - 0x002d<BR>
+Selectable boot is supported - True<BR>
+dmi_type - 13<BR>
+Japanese floppy for NEC 9800 1.2 MB is supported (int 13h) - False<BR>
+EISA is supported - False<BR>
+Print screen service is supported (int 5h) - True<BR>
+Boot from PC Card (PCMCIA) is supported - False<BR>
+Printer services are supported (int 17h) - True<BR>
+ESCD support is available - False<BR>
+dmi_size - 22<BR>
+Boot from CD is supported - True<BR>
+Installed Languages - 1<BR>
+ACPI - True<BR>
+LS-120 boot - False<BR>
+IEEE 1394 boot - False<BR>
+
+==== Cache Information ====
+dmi_type - 7<BR>
+System Type - Data<BR>
+Socket Designation - L2-Cache<BR>
+Installed SRAM Type - [None, None, None, None, None, 'Synchronous', None]<BR>
+Level - 2<BR>
+Socketed - False<BR>
+Associativity - 8-way Set-associative<BR>
+Supported SRAM Type - [None, None, None, None, None, 'Synchronous', None]<BR>
+Enabled - True<BR>
+Maximum Size - 256 KB<BR>
+dmi_handle - 0x0003v
+Installed Size - 256 KB<BR>
+Location - Internal<BR>
+Error Correction Type - Single-bit ECC<BR>
+Speed - Unknown<BR>
+Operational Mode - Write Through<BR>
+dmi_size - 19<BR>
+
+==== Processor Information ====
+Upgrade - ZIF Socket<BR>
+Socket Designation - CPU<BR>
+L2 Cache Handle - 0x0003<BR>
+Version - Intel(R) Core(TM) i5-2540M CPU @ 2.60GHz<BR>
+Type - Central Processor<BR>
+Core Count - 2<BR>
+Status - Populated:Enabled<BR>
+Vendor - Intel(R) Corporation<BR>
+Core Enabled - 2<BR>
+dmi_handle - 0x0001<BR>
+External Clock - 100<BR>
+Serial Number - Not Supported by CPU<BR>
+Current Speed - 2600<BR>
+dmi_size - 42<BR>
+L3 Cache Handle - 0x0004<BR>
+Part Number - None<BR>
+Asset Tag - None<BR>
+Signature - None<BR>
+L1 Cache Handle - 0x0002<BR>
+ID - a7 06 02 00 ff fb eb bf<BR>
+dmi_type - 4<BR>
+Family - <BR>
+Characteristics - ['64-bit capable']<BR>
+Voltage - 1.2 V<BR>
+Max Speed - 2600<BR>
+Thread Count - 4<BR>
+
+==== Chassis Information ==== 
+dmi_type - 3<BR>
+Type - Notebook<BR>
+Power Supply State - Unknown<BR>
+Thermal State - Unknown<BR>
+Asset Tag - RH0003183<BR>
+Serial Number - R9M4N4G<BR>
+Version - Not Available<BR>
+Lock - Not Present<BR>
+Security Status - Unknown<BR>
+Boot-Up State - Unknown<BR>
+dmi_handle - 0x0012<BR>
+dmi_size - 21<BR>
+Manufacturer - LENOVO<BR>
+
+==== Memory Information ====
+Use - System Memory<BR>
+Location - System Board Or Motherboard<BR>
+Type - <BR>
+Array Handle - 0x0005<BR>
+Number Of Devices - 2<BR>
+Serial Number - 340F5D7F<BR>
+Total Width - 64 bit<BR>
+Form Factor - SODIMM<BR>
+dmi_size - 15<BR>
+Manufacturer - Kingston<BR>
+Data Width - 64 bit<BR>
+Part Number - 99U5428-046.A00LF<BR>
+AssetTag - 9876543210<BR>
+Bank Locator - BANK 2<BR>
+Error Correction Type - None<BR>
+dmi_handle - 0x0005<BR>
+dmi_type - 16<BR>
+Maximum Capacity - 16 GB<BR>
+Set - None<BR>
+Error Information Handle - Not Provided<BR>
+Locator - ChannelB-DIMM0<BR>
+Type Detail - [None, None, None, None, None, None, 'Synchronous', None, None, None, None, None]<BR>
+Speed - 1333 MHz (0.8ns)<BR>
+Size - 4096 MB<BR>
+
+[[Category:Feature]]
