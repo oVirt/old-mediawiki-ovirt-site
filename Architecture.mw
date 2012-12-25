@@ -134,6 +134,8 @@ REST Concepts:
 
 
 == CLI/SDK ==
+CLI and SDK are based on the REST api mentioned above.
+
 SDK:
 #Python based SDK to allow performing actions on the different entities
 #Complete protocol abstraction
@@ -150,7 +152,6 @@ CLI:
 #Highly descriptive help for each operation
 #Intuitive and easy to use
 #Auto-Generated
-
 
 == Reports Engine ==
 #Based on Jasper Reports
