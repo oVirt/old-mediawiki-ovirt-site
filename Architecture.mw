@@ -80,11 +80,10 @@ The main components in the engine core are:
 *Backend Bean - a Singleton bean responsible for running actions, queries and monitoring of the different entities
 
 == Host Agent (VDSM) ==
-VDSM covers all functionality required by oVirt Engine.
+VDSM is a component developed in Python, which covers all functionality required by oVirt Engine  for host, VM, networking and storage management.
+#The VDSM API is XML-RPC based (planned to move to REST API). This is how ovirt-engine communicates with VDSM.
 #Configures host, networking and shared storage
 #Uses libvirt for VM life cycle operations
-#Written in Python
-#The VDSM API is XML-RPC based (planned to move to REST API).
 #Multithreaded, multi-processes
 #Speaks with its guest agent via virtio-serial
 #Adds customized clustering support for LVM that scales to hundreds of nodes
@@ -101,12 +100,12 @@ VDSM covers all functionality required by oVirt Engine.
 #Allows oVirt to be extended for new KVM features before full integration is done
 #An easy way to test a new kvm/libvirt/linux feature
 
+#The hook mechanism is called before VDSM initiates the VM startup using libvirt.
+#The hook changes the VM definition, and VDSM passes this definition to libvirt to start the VM.
+
 The following diagram illustrates the Hook mechanism in the VM lifetime cycle:
 
 [[File:Hook-arch.png|border|512px]]
-
-#The hook mechanism comes into place before VDSM initiates the VM startup using libvirt.
-#The hook changes the VM definition, and VDSM passes this definition to libvirt to start the VM.
 
 == Admin Portal ==
 ...
