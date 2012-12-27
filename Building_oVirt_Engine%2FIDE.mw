@@ -83,7 +83,7 @@ http://www.jetbrains.com/idea/free_java_ide.html
 * Run IntelliJ (make sure you have set JAVA_HOME variable first)
 /yourIntelliJInstallLocation/bin/idea.sh
 * In order to open the ovirt-engine project, do:
-File-->Open Project
+  File-->Open Project
 
 Select the main pom.xml located at the root of the ovirt-engine directory.
 It should then open the project structure on the left pane.
@@ -92,13 +92,14 @@ It also detects automatically the project is working with Git and its settings, 
 
 * Eclipse code formatter - in order to be aligned with code formatting along the product, it is advised to work with the  code styling configuration file that is based on Eclipse.
 In order to use it in IntelliJ, please install the  Eclipse Code Formatter plugin:
-Settings --> IDE settings --> plugins --> Available, search for Eclipse Code Formatter and right click "Install".
-* After installation, go to: Settings --> Project Settings --> Eclipse Code Formatter
+  Settings --> IDE settings --> plugins --> Available, search for Eclipse Code Formatter and right click "Install".
+* After plugin installation, go to: 
+  Settings --> Project Settings --> Eclipse Code Formatter
 Import the code styling xml that is part of the ovirt-engine project:
 ovirt-engine/config/engine-code-format.xml
 Make sure the Import order section is set on "Manual configuration" with the following order (that follows latest Eclipse defaults) : java;javax;org;com;
 Example:
-[[File:Example.jpg]]
+[[File:IDEA-EclipseFormatter-Settings.png]]
 
 === Others ===
 * Same as Net Beans...
