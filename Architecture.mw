@@ -100,7 +100,6 @@ VDSM is a component developed in Python, which covers all functionality required
 #Allows administrators to define scripts to modify VM operation eg. Add extra options such as CPU pinning, watchdog device, direct LUN access, etc.
 #Allows oVirt to be extended for new KVM features before full integration is done
 #An easy way to test a new kvm/libvirt/linux feature
-
 #The hook mechanism is called before VDSM initiates the VM startup using libvirt.
 #The hook changes the VM definition, and VDSM passes this definition to libvirt to start the VM.
 
