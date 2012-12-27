@@ -33,6 +33,7 @@ These main components are:
 #Database - Postgres database is used by the engine to provide persistency for the configuration of the ovirt deployment.
 #Host agent (VDSM) - the oVirt engine communicates with VSDM  to request VM related actions on the nodes
 #Guest Agent - The guest agent runs inside the VM, and provides information on resource usage to the oVirt engine. Communication is done over a virtualised serial connection.
+# AD/IPA - directory services.  Engine uses them to receive information on users and groups to be used with ovirt's permissions mechanism. 
 #Reports Engine - generates reports on VM resource usage, using Jasper Reports
 #DWH (Data Warehouse) - The data warehouse component extracts and synthesizes data from the engine using Talend for later use in reports 
 #SPICE client - utility which allows users to access the VMs.
