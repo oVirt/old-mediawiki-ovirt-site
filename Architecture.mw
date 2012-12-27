@@ -107,10 +107,6 @@ The following diagram illustrates the Hook mechanism in the VM lifetime cycle:
 
 [[File:Hook-arch.png|border|512px]]
 
-== User Portal ==
-...
-
-
 == REST API ==
 RESTful API for integration with oVirt Engine:
 #REST interface exposed for all API functions
