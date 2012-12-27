@@ -115,7 +115,7 @@ In order to benefit from the Maven integration and build the project from within
 #Fill profiles if exist (for example - gwtdev,  gwt-admin, dep)
 #If you need to set any -D flags , it is available in the Runner tab
 Example:
-[[File:Maven- Configurations.png]]
+[[File:Maven-Configurations.png]]
 
 === Others ===
 * Same as Net Beans...
