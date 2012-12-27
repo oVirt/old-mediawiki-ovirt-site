@@ -117,6 +117,7 @@ In order to benefit from the Maven integration and build the project from within
 #If you need to set any -D flags , it is available in the Runner tab
 
 Now you can always select this configuration from the combo box in the main pane, and press "run" (the green triangle) - it is equivalent to running "mvn clean install ... " from the command line.
+
 Configuration example:
 [[File:Maven-Configurations.png]]
 
