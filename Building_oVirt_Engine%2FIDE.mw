@@ -92,7 +92,7 @@ It also detects automatically the project is working with Git and its settings, 
 
 * Eclipse code formatter - in order to be aligned with code formatting along the product, it is advised to work with the  code styling configuration file that is based on Eclipse.
 In order to use it in IntelliJ, please install the  Eclipse Code Formatter plugin:
-  Settings --> IDE settings --> plugins --> Available, search for Eclipse Code Formatter and right click "Install".
+  Settings --> IDE settings --> Plugins --> Available, search for Eclipse Code Formatter and right click "Install".
 * After plugin installation, go to: 
   Settings --> Project Settings --> Eclipse Code Formatter
 Import the code styling xml that is part of the ovirt-engine project:
