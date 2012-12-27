@@ -109,9 +109,9 @@ Example:
 *Maven configuration  (not mandatory=)
 In order to benefit from the Maven integration and build the project from within IntelliJ , go to :
   Run --> Edit configurations --> Add new configuration (select Maven)
-Fill the working directory (where the parent pom.xml is located) 
-Fill goals (for example - clean install)
-Fill profiles if exist (for example - gwtdev,  gwt-admin, dep)
+#Fill the working directory (where the parent pom.xml is located) 
+#Fill goals (for example - clean install)
+#Fill profiles if exist (for example - gwtdev,  gwt-admin, dep)
 
 === Others ===
 * Same as Net Beans...
