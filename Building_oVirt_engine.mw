@@ -354,6 +354,8 @@ The following builds the engine, rebuilds the admin console and then creates the
 
 * Code contribution to the oVirt-engine is done via Gerrit.<BR>
 ** More details can be found in [[Working_with_oVirt_Gerrit]].
+* All changes (patches) to the engine project are sent to the engine-patches mailing list (usually automatically by gerrit).<BR> 
+** please subscribe to [http://lists.ovirt.org/mailman/listinfo/engine-patches engine-patches mailing list]
 
 == Getting the latest ==
 
