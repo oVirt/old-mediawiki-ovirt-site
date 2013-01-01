@@ -84,8 +84,8 @@ Already has <tt>VDSM/managementBridgeName </tt> environment variable defined. If
 Most of the work lies here, where the output of <tt>getVdsCaps</tt> should be parsed, and a <tt>setupNetworks</tt> command should be transmitted after a new host is added to the data center.
 
 # start host deployment with
- ODEPLOY/forceReboot = False
- VDSM/managementBridgeName
+#* ODEPLOY/forceReboot = False
+#* VDSM/managementBridgeName undefined
 # after <tt>otopi</tt> finishes, start to poll host with <tt>getVdsCaps</tt>. If timeout expires, fail host deployment.
 # define <tt>ovirtmgmt</tt> on host
 ## if already defined, declare success.
