@@ -89,7 +89,7 @@ Most of the work lies here, where the output of <tt>getVdsCaps</tt> should be pa
 # after <tt>otopi</tt> finishes, start to poll host with <tt>getVdsCaps</tt>. If timeout expires, fail host deployment.
 # define <tt>ovirtmgmt</tt> on host
 ## if already defined, declare success.
-## acquire <tt>lastClientInterface</tt> and devise network definition for <tt>ovirtmgmt</tt>.
+## acquire <tt>lastClientInterface</tt> and devise network definition for <tt>ovirtmgmt</tt>. Simon suggested that the Engine learns the vlan ID of <tt>ovirtmgmt</tt> from the first host added to the DC, but with no consensus about this, Engine would use its DB definition.
 ## send <tt>setupNetworks</tt> with the new network definition.
 ## on success, send <tt>setSafeNetConfig</tt>. On failure show an event to the user. the host would be left unoperational, and may need manual network configuration.
 # if the user requested post-installation reboot, fence the newly-added host.
