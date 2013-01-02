@@ -9,6 +9,7 @@ Some projects use the same lists to facilitate communication and community growt
 | Resources
 | Board
 | Src
+| GitWeb
 |- 
 | api
 | Michael Pasternak<br />
@@ -19,6 +20,7 @@ Einav Cohen
 use ovirt-engine-api
 | n/a
 |  git://gerrit.ovirt.org/ovirt-engine 
+|  http://gerrit.ovirt.org/gitweb?p=ovirt-engine.git
 |- 
 | cli
 | Einav Cohen<br />
@@ -31,6 +33,7 @@ use ovirt-engine-python-sdk<br />
 use ovirt-engine-python-cli
 | n/a
 |  git://gerrit.ovirt.org/ovirt-engine-sdk 
+|  http://gerrit.ovirt.org/gitweb?p=ovirt-engine-sdk.git
 |- 
 | engine core
 | Itamar Heim<br />
@@ -58,6 +61,7 @@ Wiki
 | Itamar Heim<br />
 Livnat Peer
 |  git://gerrit.ovirt.org/ovirt-engine 
+|  http://gerrit.ovirt.org/gitweb?p=ovirt-engine.git
 |- 
 | guest agent
 | Barak Azulay
@@ -66,6 +70,7 @@ Livnat Peer
 use ovirt-guest-agent?
 | n/a
 |  git://gerrit.ovirt.org/ovirt-guest-agent 
+|  http://gerrit.ovirt.org/gitweb?p=ovirt-guest-agent.git
 |- 
 | dwh
 | Yaniv Dary<br />
@@ -78,6 +83,7 @@ Livnat Peer
 use ovirt-dwh
 | n/a
 |  git://gerrit.ovirt.org/ovirt-dwh 
+|  http://gerrit.ovirt.org/gitweb?p=ovirt-dwh.git
 |- 
 | packaging<br />
 &amp; installer
@@ -92,6 +98,7 @@ Juan Hernandez
 use ovirt-engine-installer
 | n/a
 |  git://gerrit.ovirt.org/ovirt-engine 
+|  http://gerrit.ovirt.org/gitweb?p=ovirt-engine.git
 |- 
 | node
 | Mike Burns<br />
@@ -102,6 +109,7 @@ Fabian Deutsch
 use ovirt-node
 | Perry Myers
 |  git://gerrit.ovirt.org/ovirt-node 
+|  http://gerrit.ovirt.org/gitweb?p=ovirt-node.git
 |- 
 | reports
 | Yaniv Dary<br />
@@ -111,6 +119,7 @@ Einav Cohen
 use ovirt-reports
 | n/a
 |  git://gerrit.ovirt.org/ovirt-reports 
+|  http://gerrit.ovirt.org/gitweb?p=ovirt-reports.git
 |- 
 | sdk
 | Einav Cohen<br />
@@ -123,6 +132,7 @@ use ovirt-engine-python-sdk<br />
 use ovirt-engine-python-cli
 | n/a
 |  git://gerrit.ovirt.org/ovirt-engine-sdk 
+|  http://gerrit.ovirt.org/gitweb?p=ovirt-engine-sdk.git
 |- 
 | tools
 | Livnat Peer<br />
@@ -141,6 +151,7 @@ ovirt-engine-log-collector<br />
 ovirt-engine-iso-uploader
 | n/a
 |  git://gerrit.ovirt.org/ovirt-engine 
+|  http://gerrit.ovirt.org/gitweb?p=ovirt-engine.git
 |- 
 | userportal
 | Einav Cohen<br />
@@ -154,6 +165,7 @@ Tomas Jelinek
 use ovirt-engine-userportal
 | n/a
 |  git://gerrit.ovirt.org/ovirt-engine 
+|  http://gerrit.ovirt.org/gitweb?p=ovirt-engine.git
 |- 
 | vdsm
 | Ayal Baron<br />
@@ -167,6 +179,7 @@ Igor Lvovsky
 use vdsm
 | Ayal Baron
 | git://gerrit.ovirt.org/vdsm 
+|  http://gerrit.ovirt.org/gitweb?p=vdsm.git
 |- 
 | webadmin
 | Einav Cohen<br />
@@ -184,6 +197,7 @@ Alona Kaplan
 use ovirt-engine-webadmin
 | n/a
 |  git://gerrit.ovirt.org/ovirt-engine 
+|  http://gerrit.ovirt.org/gitweb?p=ovirt-engine.git
 |- 
 | sample-portals
 | Shahar Havivi<br />
@@ -192,6 +206,7 @@ Oved Ourfali
 | n/a
 | n/a
 |  git://gerrit.ovirt.org/sample-portals
+|  http://gerrit.ovirt.org/gitweb?p=sample-portals.git
 |- 
 |}
 
