@@ -255,6 +255,8 @@ and reference from your project.
 
 12. upload artifacts to mvn repo
 
+13. Implement querying collections using custom constraint.
+
 == Change Log ==
 
 [[java-sdk-changelog]]
