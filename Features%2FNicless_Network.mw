@@ -22,6 +22,7 @@ Having a disconnected network may first seem to add complexity to VM placement. 
 === Benefit to oVirt ===
 * [[Feature/AllInOne|All-in-One]] use case: we'd like to have a complete oVirt deployment that does not rely on external resources, such as layer-2 connectivity or DNS.
 * Collaborative computing: an oVirt user may wish to have a group of VMs with heavy in-group secret communication, where only one of the VMs exposes an external web service. The in-group secret communication could be limited to a nic-less network, no need to let it spill outside.
+* Nic-less networks can be tunneled to remote network segments over IP, a layer 2 NIC may not be part of its definition.
 
 === Dependencies / Related Features ===
 <!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
