@@ -253,9 +253,9 @@ and reference from your project.
 
 12. add deployment capabilities 
 
-12. upload artifacts to mvn repo
+13. upload artifacts to mvn repo
 
-13. Implement querying collections using custom constraint.
+14. Implement querying collections using custom constraint.
 
 == Change Log ==
 
