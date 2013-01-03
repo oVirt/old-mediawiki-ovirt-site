@@ -69,7 +69,7 @@ If you need to use Maven2, you should be aware that on some distributions, parti
 Create your ~/.m2/ directory
  <nowiki>$> mkdir ~/.m2</nowiki>
 
-Use 
+Use the following command to create maven settings file
  <nowiki>
 $> cat > ~/.m2/settings.xml <<"EOT"
 <settings xmlns="http://maven.apache.org/POM/4.0.0"
