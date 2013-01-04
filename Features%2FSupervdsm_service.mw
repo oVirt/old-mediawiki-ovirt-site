@@ -44,26 +44,27 @@ Supervdsm should be responsible for all priviledged operations, but as supervdsm
 *supervdsm server process has 3 parts:
 # main thread
 # supervdsm server thread(the one starts supervdsmServer manager)
-# keep alive thread(let's assume this simple function will not cause exceptions)
+# keep alive thread(let's assume this simple function will not cause exceptions)<br />
+
 
 *exception flows need attention(also future test cases)：
 # one of supervdsm server export function raise error 
-expected result: raise to proxy caller
+#* expected result: raise to proxy caller 
 # supervdsm main thread killed when calling
-expected result: raise to proxy caller EOFError(current)</br>
-		   vdsm restart all over(because vdsm lost privilege)
+#* expected result: raise to proxy caller EOFError(now)
+#* vdsm restart all over, because vdsm lost privilege(future)
 # supervdsm main thread killed before call
-expected result:restart supervdsm and call(current)</br>
-		vdsm restart all over(because vdsm lost privilege)
+#* expected result:restart supervdsm and call(current)
+#* vdsm restart all over(future)
 # supervdsm server thread killed(not started) before call
-expected result: connection error will raised to proxy caller(current)</br>
-                          connection error and then vdsm restart all over
+#* expected result: connection error will raised to proxy caller(current)
+#* connection error and then vdsm restart all over(future)
 # supervdsm server thread killed(not started) when call
-expected result:current:TODO(/br)
-                         new:TODO
+#* expected result:current:TODO
+#* new:TODO
 # vdsm process died
-expected result:current: supervdsm server will kill itself(seconds delay, careful of regression, bug related:https://bugzilla.redhat.com/show_bug.cgi?id=890365)</br>
-                         future: supervdsm server will kill itself and restart all over
+#*expected result:current: supervdsm server will kill itself(seconds delay, careful of regression, bug related:https://bugzilla.redhat.com/show_bug.cgi?id=890365)<br/>
+#*future: supervdsm server will kill itself and restart all over
 
 ==Proposal comparison==
 == Benefit to oVirt ==
