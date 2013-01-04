@@ -41,10 +41,12 @@ Supervdsm should be responsible for all priviledged operations, but as supervdsm
 # supervdsm forks vdsm
 
 ==Exception flows to consider==
-*supervdsm server process has 3 parts:
+*supervdsm server process has 4 parts:
 # main thread
 # supervdsm server thread(the one starts supervdsmServer manager)
-# keep alive thread(let's assume this simple function will not cause exceptions)<br />
+# supervdsm server exported functions
+# keep alive thread(let's assume this simple function will not cause exceptions)
+item 1.2.4 mean supervdsm server framework problem, 1.2 need to be handled by restart supervdsmServer.
 
 
 *exception flows need attention(also future test cases)：
