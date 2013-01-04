@@ -24,6 +24,7 @@ Supervdsm should be responsible for all priviledged operations, but as supervdsm
 # when authentication error, re-launch, others just raise<br />
 
 
+
 *current problem<br />
 # unprivileged vdsm and proxy need to call previleged “sudo launch” and “sudo kill”<br />
 # redundent key between vdsm and supervdsm as they are parent and child<br />
@@ -35,9 +36,18 @@ Supervdsm should be responsible for all priviledged operations, but as supervdsm
 
 === Detailed Description ===
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
-Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better.
+*new proposal A:
+# vdsmd.init starts vdsm as root
+# vdsm forks supervdsm server and then drop privilege
+# when vdsm exit, supervdsm probe vdsm heart beat stop and exit
+# vdsm call supervdsm may discover supervdsm server exit, vdsm will exit itself and restart
 
+*new proposal B:
+# vdsmd.init starts supervdsm as root
+# supervdsm forks vdsm
 
+===Exception flows to consider===
+===Proposal comparison===
 === Benefit to oVirt ===
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
 What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?
