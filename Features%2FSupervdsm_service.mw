@@ -67,20 +67,34 @@ Supervdsm should be responsible for all priviledged operations, but as supervdsm
 #*future: supervdsm server will kill itself and restart all over
 
 ==Proposal comparison==
+*exception flows need attention(also future test cases)：
+# one of supervdsm server export function raise error 
+#* expected result: raise to proxy caller 
+# supervdsm main thread killed when calling
+#* expected result: raise to proxy caller EOFError(now)
+#* vdsm restart all over, because vdsm lost privilege(future)
+# supervdsm main thread killed before call
+#* expected result:restart supervdsm and call(current)
+#* vdsm restart all over(future)
+# supervdsm server thread killed(not started) before call
+#* expected result: connection error will raised to proxy caller(current)
+#* connection error and then vdsm restart all over(future)
+# supervdsm server thread killed(not started) when call
+#* expected result:current:TODO
+#* new:TODO
+# vdsm process died
+#*expected result:current: supervdsm server will kill itself(seconds delay, careful of regression, bug related:https://bugzilla.redhat.com/show_bug.cgi?id=890365)<br/>
+#*future: supervdsm server will kill itself and restart all over
+
 == Benefit to oVirt ==
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
-What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?
-
-
-== Dependencies / Related Features ==
-<!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
-
-What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature?
+# Clean vdsm priviledge usage
+# clean and stable vdsm/supervdsm exception flow 
 
 
 == Documentation / External references ==
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
-Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs.
+* TODO: paste corresponding bugzilla link and gerrit link here
 
 
 == Comments and Discussion ==
