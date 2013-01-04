@@ -30,13 +30,13 @@ Supervdsm should be responsible for all priviledged operations, but as supervdsm
 
 == Detailed Description ==
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
-*new proposal A:
+*new proposal A:[http://gerrit.ovirt.org/gitweb?p=vdsm.git;a=commit;h=976dbb13e6cd8136b12ed58ccd2a5176b730bddf patch for proposal A]
 # vdsmd.init starts vdsm as root
 # vdsm forks supervdsm server and then drop privilege
 # when vdsm exit, supervdsm probe vdsm heart beat stop and exit
 # vdsm call supervdsm may discover supervdsm server exit, vdsm will exit itself and restart
 
-*new proposal B:
+*new proposal B:[http://gerrit.ovirt.org/gitweb?p=vdsm.git;a=commit;h=033ef4bc73dbbb36dd8180049626e7f4cde56334 patch for proposal B]
 # vdsmd.init starts supervdsm as root
 # supervdsm forks vdsm
 
