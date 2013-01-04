@@ -26,8 +26,6 @@ Supervdsm should be responsible for all priviledged operations, but as supervdsm
 # redundent key between vdsm and supervdsm as they are parent and child<br />
 # vdsm call supervdsm exception flow problems<br />
 
-
-* Link to feature page in a specific release. That release may complete the feature, or parts of it. The complete scope of this feature in this release will be described in the release feature page
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 == Detailed Description ==
