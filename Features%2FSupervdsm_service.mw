@@ -68,10 +68,14 @@ Supervdsm should be responsible for all priviledged operations, but as supervdsm
 
 ==Proposal comparison==
 *exception flows need attention(also future test cases)：
+# first launch
+#* A: supervdsm server process lauched by priviledged vdsm, then vdsm drop priviledge
+#* B: supervdsm server process lauched by vdsmd.init
 # one of supervdsm server export function raise error 
-#* expected result: raise to proxy caller 
+#* A: just raise to Proxy Caller
+#* B:just raise to Proxy Calller
 # supervdsm main thread killed when calling
-#* expected result: raise to proxy caller EOFError(now)
+#* A: discover when call return EOFError and then restart 
 #* vdsm restart all over, because vdsm lost privilege(future)
 # supervdsm main thread killed before call
 #* expected result:restart supervdsm and call(current)
