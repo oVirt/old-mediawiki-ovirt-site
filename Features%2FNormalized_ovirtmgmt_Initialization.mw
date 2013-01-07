@@ -86,10 +86,14 @@ Most of the work lies here, where the output of <tt>getVdsCaps</tt> should be pa
 # start host deployment with
 #* ODEPLOY/forceReboot = False
 #* VDSM/managementBridgeName undefined
-# after <tt>otopi</tt> finishes, start to poll host with <tt>getVdsCaps</tt>. If timeout expires, fail host deployment.
+# after <tt>otopi</tt> finishes, start to poll host with <tt>getVdsCaps</tt> or <tt>ping</tt>. If timeout expires, fail host deployment.
+# installation ends here, by trying to activate the newly-added host.
+
+When a host is activated Engine should
+# call getVdsCaps
 # define <tt>ovirtmgmt</tt> on host
 ## if already defined, declare success.
-## acquire <tt>lastClientInterface</tt> and devise network definition for <tt>ovirtmgmt</tt>. Simon suggested that the Engine learns the vlan ID of <tt>ovirtmgmt</tt> from the first host added to the DC, but with no consensus about this, Engine would use its DB definition.
+## acquire <tt>lastClientInterface</tt> and devise network definition for <tt>ovirtmgmt</tt>. Simon suggested that the Engine learns the vlan ID of <tt>ovirtmgmt</tt> from the first host added to the DC, but with no consensus about this, Engine would use its DB definition. If <tt>lastClientInterface</tt> is none of host nic, bond or vlan, activation should fail. Activation fails also if it is a vlan with a mismatching vlan tag.
 ## send <tt>setupNetworks</tt> with the new network definition.
 ## on success, send <tt>setSafeNetConfig</tt>. On failure show an event to the user. the host would be left unoperational, and may need manual network configuration.
 # if the user requested post-installation reboot, fence the newly-added host.
