@@ -67,7 +67,7 @@ add the <cpu> output from virsh to your vm xml adding match='exact' to <cpu>
 == oVirt-Live-0.9.iso - beta version Jan 9th 2013 ==
 
 ==== Download ====
-http://resources.ovirt.org/releases/3.2/tools/ovirt-live-0.9.iso
+[http://resources.ovirt.org/releases/3.2/tools/ovirt-live-0.9.iso]
 
 ==== change-log ====
 Based on ovirt 3.2 nightly (git1a60fea)
