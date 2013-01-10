@@ -1,6 +1,6 @@
 <!-- {{autolang|base=yes}} -->
 
-== Templates 3.2 ==
+== Instance Types ==
 
 === Summary ===
 Enhancing oVirt template model to allow for more flexible options in creating virtual machines targeted at improving self service for the private cloud use cases.
@@ -12,14 +12,14 @@ Enhancing oVirt template model to allow for more flexible options in creating vi
 
 === Owner ===
 
-* Name: 
-* Email: 
+* Name: [[User:ofrenkel|Omer Frenkel]]
+* Email: [mailto:ofrenkel@redhat.com ofrenkel@redhat.com]
 * PM Requirements : [[User:ACathrow|Andrew Cathrow]]
 * Email: [mailto:acathrow@redhat.com acathrow@redhat.com]
 
 
 === Current status ===
-* Target Release: 3.2
+* Target Release: 3.3
 * Status: under design and discussion.
 
 === Detailed Description ===
@@ -152,7 +152,7 @@ This permission will ''not'' permit a user to edit the virtual machines instance
 ** Virtual Machine name 
 ** Description
 ** Instance type
-** Template 
+** Template / Image Type
 ** Stateless Image  (default is not stateless).<br>
 *** Provide a cluster setting allowing configuration of the default image state  handling - eg. stateful or stateless
 *** Note: The stateless setting is for the image (template disks) not for the whole virtual machine.
