@@ -144,11 +144,9 @@ The following table enumerates all the fields involved and also how they are rel
 |-
 | allow_console_reconnect || allow reconnect to console || Y || || N || || || N || || || Y || console reconnect || Y || N || N || User || 
 |-
-| cpu_pinning || cpu pinning || Y || || N || || || N || || || Y || || Y || || || empty || For future
+| cpu_pinning || cpu pinning || N || || N || || || N || || || Y || || Y || || || empty || For future
 |-
 | is_smartcard_enabled || smartcard enabled || Y || || N || || || Y || || || Y || || Y || N || N || Instance || 
-|-
-| instance_type_id || internal. link to instance type || N || || N || || || N || || || Y || || N || N || N || User || 
 |-
 | payload || payload (device, not in vm_static) || Y || || N || || || N || || || Y || || Y || N || N || User || 
 |-
@@ -163,6 +161,18 @@ The following table enumerates all the fields involved and also how they are rel
 | Balloon || payload (device, not in vm_static) || N || || N || || || Y || || || Y || || Y || Y || N || Instance || 
 |-
 | network interface || binding of NIC to logical network || N || || N || || || Y || || can be empty || Y || || N || N || N || Instance || 
+|-
+| instance_type_id || internal. link to vm's instance type || N || || N || || || N || || || Y || || N || N || N || User || 
+|-
+| image_type_id || internal. link to vm's image type || N || || N || || || N || || || Y || || N || N || N || User || 
+|-
+| host_cpu_flags || use host cpu flags || N || || N || || || N || || || Y || || Y || || || empty ||
+|-
+| db_generation || internal || N || || N || || || N || || || N || || N || || ||  ||
+|-
+| is_delete_protected || protection from accidental deletion || Y || || N || || || N || || || N || || N || || ||  ||
+|-
+| is_disabled || disabled-template (for templates only) || N || || N || || || N || || || N || || N || || ||  ||
 |-
 |}
 
