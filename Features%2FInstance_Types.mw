@@ -312,10 +312,6 @@ We should allow changing the instance type on a VM that is down<br>
 if we have defaults for server and desktops (clone disks vs. thin allocation),<br>
 changing instance type will not take affect on this.
 
-
-[[Vm_static_fields|List of fields for vm / template / instance type]]
-
-
 ==== REST API ====
 TBD as soon as the specific requirements will be clarified
 
