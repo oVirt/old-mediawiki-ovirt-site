@@ -161,11 +161,11 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 | Balloon || payload (device, not in vm_static) || N || || N || || || Y || || || Y || || || || || Instance || Not in GUI
 |-
-| network interface || binding of NIC to logical network || N || || N || || || Y || || can be empty || Y || || N || N || N || Instance || 
+| network interface || binding of NIC to logical network || N || || N || || || Y || || can be empty || Y || || N || Y || N || Instance || 
 |-
-| instance_type_id || internal. link to vm's instance type || N || || N || || || N || || || Y || || N || N || N || User || 
+| instance_type_id || internal. link to vm's instance type || N || || N || || || N || || || Y || || N || Y || N || User || 
 |-
-| image_type_id || internal. link to vm's image type || N || || N || || || N || || || Y || || N || N || N || User || 
+| image_type_id || internal. link to vm's image type || N || || N || || || N || || || Y || || N || Y || N || User || 
 |-
 | host_cpu_flags || use host cpu flags || N || || N || || || N || || || Y || || || || || empty || Not in GUI
 |-
