@@ -115,7 +115,7 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 | nice_level || vm nice level || Y || || N || || || N || || || Y || || Y || Y || N || User || 
 |-
-| default_boot_sequence || boot sequence || Y || || N || || || Y || || || Y || || N || Y || N || Instance || 
+| default_boot_sequence || boot sequence || Y || || N || || || Y || || || Y || || Y || Y || N || Instance || 
 |-
 | default_display_type || display type || Y || || N || || || Y || || || Y || || Y || Y || N || Instance || 
 |-
