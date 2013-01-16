@@ -95,7 +95,7 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 | is_auto_suspend || legacy from auto-suspend feature, not in use || D || || D || || || D || || || D || || || || || D || 
 |-
-| num_of_sockets || umber of sockets || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
+| num_of_sockets || umber of sockets || Y || || N || || || Y || || || Y || || N || Y || Y || Instance || 
 |-
 | cpu_per_socket || cpu per socket || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
 |-
