@@ -111,7 +111,7 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 | auto_startup || HA || Y || || N || || || Y || || || Y || || Y || Y || N || User || 
 |-
-| vm_type || vm type (server/desktop) || Y || || N || || || N || || || Y || || Y || Y || N || User || 
+| vm_type || vm type (server/desktop) || Y || || N || || || N || || || Y || || N || Y || N || User || 
 |-
 | nice_level || vm nice level || Y || || N || || || N || || || Y || || Y || Y || N || User || 
 |-
