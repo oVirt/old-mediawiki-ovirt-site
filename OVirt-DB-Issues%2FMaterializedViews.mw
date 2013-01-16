@@ -29,7 +29,7 @@ The Snapshot Materialized View definitions are stored in the materialized_views 
 ==Flow==
 1) Create the Materialized View by calling:
    '''CreateMaterializedView''' - if you are creating a new view
-   '''CreateMaterializedViewAs''' - If you want to preserve the original view name  in this case the original view will be renamed and the new Materialized View will have the original  view name.
+   '''CreateMaterializedViewAs''' - preserves the original view name, The original view will be renamed and the new Materialized View will have the original  view name.
 2) If your Snapshot Materialized View is my_mt you should create Stored Procedures:
     MtDropmy_mtIndexes - Drops indexes on my_mt
     MtCreatemy_mtIndexes - Creates needed indexes on my_mt
