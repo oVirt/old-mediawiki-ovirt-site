@@ -71,7 +71,7 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 ! !! !! Avail !! Comm !! Avail !! Perms !! Comm !! Avail !! Perms !! Comm !! Avail !! Perms !! Adv Only !! Basic User !! Marked !! On Create !! Comm
 |-
-| vm_guid || Internal unique ID || Y || || Y || || || Y || || || Y || || Y || || || Generated || 
+| vm_guid || Internal unique ID || Y || || Y || || || Y || || || Y || || || || || Generated || 
 |-
 | vm_name || name set by user for vm and template || N || || Y || || || Y || create instance || we could autogenerate a default if not passed || Y || || N || Y || N || User || 
 |-
