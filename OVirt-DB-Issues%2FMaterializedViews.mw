@@ -56,5 +56,3 @@ The Materilized Views are recreated in the post-upgrade step insuring that after
 ==Customization==
 In addition, you can create a file named create_materialized_views.sql under dbscripts/upgrade/post_upgrade/custom/
 This file may include other custom materialized views settings and is executed by the create/upgrade database scripts.
-
-NOTE : Materialized Views are automatically refreshed upon create/upgrade
