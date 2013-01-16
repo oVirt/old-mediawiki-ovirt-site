@@ -113,7 +113,7 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 | vm_type || vm type (server/desktop) || Y || || N || || || N || || || Y || || N || Y || N || User || 
 |-
-| nice_level || vm nice level || Y || || N || || || N || || || Y || || Y || Y || N || User || 
+| nice_level || vm nice level || Y || || N || || || N || || || Y || ||  || || || User || Not on GUI
 |-
 | default_boot_sequence || boot sequence || Y || || N || || || Y || || || Y || || Y || Y || N || Instance || 
 |-
