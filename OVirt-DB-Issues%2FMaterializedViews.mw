@@ -29,10 +29,10 @@ The Snapshot Materialized View definitions are stored in the materialized_views 
   avg_cost_ms         | integer                  | not null default 0
 
 '''mv_name''' is the Materialized View name<br>
-'''v_name'' is the original view name on which mv_name is based<br>
+'''v_name''' is the original view name on which mv_name is based<br>
 ''' refresh_rate_in_sec''' is the Materialized View refresh rate in seconds<br>
 ''' last_refresh''' is the timestamp of the last refresh<br>
-'''avg_cost_ms'' is the average cost of a refresh operation on the  Materialized View in miliseconds.<br>
+'''avg_cost_ms''' is the average cost of a refresh operation on the  Materialized View in miliseconds.<br>
 
 ==Flow==
 1) Create the Materialized View by calling:
