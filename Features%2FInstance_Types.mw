@@ -76,7 +76,7 @@ The following table enumerates all the fields involved and also how they are rel
 |-
 | mem_size_mb || Memory Size || Y || || N || || || Y || create instance || || Y || || Y || Y || Y || Instance || 
 |-
-| vmt_guid || Internal link to template object || N || || N || || || N || || || Y || || N || N || N || User || 
+| vmt_guid || Internal link to template object || N || || N || || || N || || || Y || || N || Y || N || User || 
 |-
 | OS || Operating System Type || Y || || Y || || || N || || || Y || || Y || Y || Y || Image || 
 |-
