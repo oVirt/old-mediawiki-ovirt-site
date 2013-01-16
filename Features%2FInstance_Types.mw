@@ -95,7 +95,7 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 | is_auto_suspend || legacy from auto-suspend feature, not in use || D || || D || || || D || || || D || || || || || D || 
 |-
-| num_of_sockets || umber of sockets || Y || || N || || || Y || || || Y || || N || Y || Y || Instance || 
+| num_of_sockets || umber of sockets || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
 |-
 | cpu_per_socket || cpu per socket || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
 |-
@@ -103,7 +103,7 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 | time_zone || time zone || Y || || N || || || N || || || Y || || Y || Y || Y || User || 
 |-
-| is_stateless || stateless flag || Y || || N || || || N || || || Y || || Y || Y || N || User || Needs to be set on per disk level as well
+| is_stateless || stateless flag || Y || || N || || || N || || || Y || || N || Y || N || User || Needs to be set on per disk level as well
 |-
 | fail_back || legacy from fail-back feature, not in use || D || || D || || || D || || || D || || || || || D || 
 |-
