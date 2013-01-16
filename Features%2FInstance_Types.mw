@@ -171,7 +171,7 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 | db_generation || internal || N || || N || || || N || || || N || || || || ||  || Not in GUI
 |-
-| is_delete_protected || protection from accidental deletion || Y || || N || || || N || || || N || || Y || Y || N || User ||
+| is_delete_protected || protection from accidental deletion || Y || || N || || || N || || || Y || || Y || Y || N || User ||
 |-
 | is_disabled || disabled-template (for templates only) || Y || || N || || || N || || || N || || N || || ||  ||
 |-
