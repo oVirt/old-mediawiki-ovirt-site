@@ -90,7 +90,7 @@ The following table enumerates all the fields involved and also how they are rel
 |-
 | num_of_monitors || number of monitors || Y || || N || || || Y || || || Y || || Y || N || N || User || 
 |-
-| is_initialized || internal. mark if vm was syspreped || N || || N || || || N || || || N || || Y || || || false || 
+| is_initialized || internal. mark if vm was syspreped || N || || N || || || N || || || N || || || || || false || 
 |-
 | is_auto_suspend || legacy from auto-suspend feature, not in use || D || || D || || || D || || || D || || || || || D || 
 |-
