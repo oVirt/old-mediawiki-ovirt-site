@@ -86,7 +86,7 @@ The following table enumerates all the fields involved and also how they are rel
 |-
 | domain || directory services domain || Y || || N || || || N || || || Y || || Y || Y || N || User || 
 |-
-| creation_date || internal. creation date || N || || N || || || N || || Y || N || || || || || || || 
+| creation_date || internal. creation date || N || || N || || || N || || Y || N || || || || || ||
 |-
 | num_of_monitors || number of monitors || Y || || N || || || Y || || || Y || || Y || N || N || User || 
 |-
