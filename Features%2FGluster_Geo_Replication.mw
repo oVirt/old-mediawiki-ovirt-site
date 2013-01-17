@@ -49,7 +49,7 @@ If the Passwordless SSH communication failed between the hosts at the time of  s
 The user will be given two choices 
 * '''Use a different privake key''' by providing the location of the key file. Passwordless SSH communication will be verified using this private key file.
 (or)
-* Provide the password of the user of remote host which is entered in the [[:File:Geo-Replication-Start]] dialog to setup Passwordless SSH.
+* Provide the password of the user of remote host which is entered in the [[:File:Geo-Replication-Start.png|Geo-Replication-Start]] dialog to setup Passwordless SSH.
 
 
 [[Category:Feature]]
