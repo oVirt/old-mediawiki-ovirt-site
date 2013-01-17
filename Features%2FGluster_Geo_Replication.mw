@@ -31,18 +31,7 @@ With this feature the user will be able to
 == Design ==
 === Start a new Geo-Replication Session ===
 [[File:Geo-Replication-Start.png]]
-=== Verifying Passwordless SSH Communication ===
-[[File:Geo-Replication-Start-Verifying-SSH.png]]
-=== Passwordless SSH Communication Successful ===
-[[File:Geo-Replication-Start-Verifying-SSH-Sucess.png]]
-=== Passwordless SSH Communication Failure ===
-[[File:Geo-Replication-Start-Verifying-SSH-Failed.png]]
-=== Using a different Private Key for SSH ===
-[[File:Geo-Replication-Start-Privatekey-Test.png]]
 === Setting up Passwordless SSH ===
 [[File:Geo-Replication-Start-SSH-Setup.png]]
-[[File:Geo-Replication-Start-SSH-Setup-Success.png]]
-=== Modified SSH and Gsync commands ===
-[[File:Geo-Replication-Start-User-Defined.png]]
 
 [[Category:Feature]]
