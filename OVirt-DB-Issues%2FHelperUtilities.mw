@@ -3,7 +3,7 @@
 The utility checks that all data inside the database is consistent and does not break any FK constraint<br>
 '''fkvalidaor.sh''' lists the found problems and can fix those problem is the '''-f''' switch is used
 
-==Usage==
+===Usage===
 Usage: fkvalidator.sh [-h] [-s SERVERNAME [-p PORT]] [-d DATABASE] [-u USERNAME] [-l LOGFILE] [-f] [-v]
         -s SERVERNAME - The database servername for the database  (def. localhost)
         -p PORT       - The database port for the database        (def. 5432)
