@@ -201,7 +201,19 @@ Minimalistic plugin host page: <code>/usr/share/ovirt-engine/ui-plugins/hello-fi
 TODO don't forget link to git repository
 
 === Real-world UI plugins ===
-TODO mention Oved's plugin, link to his blog post
+
+==== Foreman UI Plugin ====
+The purpose of this plugin is to allow administrators to see details on [http://theforeman.org/ Foreman] related entities (such as VMs).
+* Author: Oved Ourfali <ovedo@redhat.com>
+* Documentation: [http://ovedou.blogspot.co.il/2012/12/ovirt-foreman-ui-plugin.html Oved's blog post]
+* Foreman plugin source code: available from [https://github.com/oourfali/foreman_ovirt Oved's foreman_ovirt GitHub repository]
+* UI plugin source code: available from [[#Sample_UI_plugins|sample UI plugin repository]] as <code>foreman-plugin</code>
+
+==== Shell In A Box UI Plugin ====
+Using oVirt WebAdmin, make SSH connection to a host and emulate a terminal via [http://code.google.com/p/shellinabox/ Shell In A Box].
+* Author: Daniel Erez <derez@redhat.com>
+* Documentation: [http://derezvir.blogspot.co.il/2013/01/ovirt-webadmin-shellinabox-ui-plugin.html Daniel's blog post]
+* UI plugin source code: available from [[#Sample_UI_plugins|sample UI plugin repository]] as <code>shellbox-plugin</code>
 
 === References ===
 * [[Features/UIPluginsOriginalDesignNotes|Original design notes]]
