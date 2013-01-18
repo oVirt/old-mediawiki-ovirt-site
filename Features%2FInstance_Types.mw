@@ -149,7 +149,7 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 | is_smartcard_enabled || smartcard enabled || Y || || N || || || Y || || || Y || || Y || N || N || Instance || 
 |-
-| payload || payload (device, not in vm_static) || Y || || N || || || N || || || Y || || || || || User || Not in GUI
+| payload || payload (device, not in vm_static) || Y || || N || || || Y || || || Y || || || || || Instance || Not in GUI
 |-
 | storage domain || || || || || || || || || || || || || || || || 
 |-
