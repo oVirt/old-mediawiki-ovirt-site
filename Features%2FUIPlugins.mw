@@ -23,7 +23,7 @@ UI plugins integrate with WebAdmin directly on the client (web browser) using [h
 
 At key events during runtime, WebAdmin invokes individual plugins via [[#Supported_application_events|event handler functions]] representing WebAdmin → plugin communication. Even though WebAdmin supports multiple event handler functions, a plugin only declares functions which are of interest to its implementation. Each plugin must register relevant event handler functions as part of [[#Plugin_bootstrap_sequence|plugin bootstrap sequence]], before the plugin is put to use by WebAdmin.
 
-To facilitate plugin → WebAdmin communication, WebAdmin exposes [[#Supported_API_functions|plugin API]] as global (top-level) <code>pluginApi</code> JavaScript object for individual plugins to consume. Each plugin obtains specific <code>pluginApi</code> instance, allowing WebAdmin to control plugin API function invocation per each plugin with regard to [[#Plugin_lifecycle|plugin lifecycle]].
+To facilitate plugin → WebAdmin communication that drives UI extension, WebAdmin exposes [[#Supported_API_functions|plugin API]] as global (top-level) <code>pluginApi</code> JavaScript object for individual plugins to consume. Each plugin obtains specific <code>pluginApi</code> instance, allowing WebAdmin to control plugin API function invocation per each plugin with regard to [[#Plugin_lifecycle|plugin lifecycle]].
 
 === Discovering plugins ===
 Before a plugin can be [[#Loading_plugins|loaded]] and [[#Plugin_bootstrap_sequence|bootstrapped]] by WebAdmin, it has to be discovered by UI plugin infrastructure in the first place.
@@ -32,7 +32,7 @@ Before a plugin can be [[#Loading_plugins|loaded]] and [[#Plugin_bootstrap_seque
 [[File:Discovering-plugins.png|Discovering plugins]]
 
 
-[[#Plugin_descriptor|Plugin descriptor]] is the entry point to [[#Discovering_plugins|plugin discovery process]], containing important plugin meta-data as well as (optional) default plugin-specific configuration. As part of handling WebAdmin HTML page request (1), UI plugin infrastructure attempts to discover and load plugin descriptors from local file system (2). For each plugin descriptor, the infrastructure also attempts to load corresponding [[#Plugin_user_configuration|plugin user configuration]] used to override default plugin-specific configuration (if any) and tweak plugin runtime behavior. Note that providing plugin user configuration is completely optional. After loading descriptors and corresponding user configuration, oVirt Engine aggregates UI plugin data and embeds it into WebAdmin HTML page for runtime evaluation (3).
+[[#Plugin_descriptor|Plugin descriptor]] is the entry point to [[#Discovering_plugins|plugin discovery]] process, containing important plugin meta-data as well as (optional) default plugin-specific configuration. As part of handling WebAdmin HTML page request (1), UI plugin infrastructure attempts to discover and load plugin descriptors from local file system (2). For each plugin descriptor, the infrastructure also attempts to load corresponding [[#Plugin_user_configuration|plugin user configuration]] used to override default plugin-specific configuration (if any) and tweak plugin runtime behavior. Note that providing plugin user configuration is completely optional. After loading descriptors and corresponding user configuration, oVirt Engine aggregates UI plugin data and embeds it into WebAdmin HTML page for runtime evaluation (3).
 
 By default, plugin descriptors are expected to reside in <code>$ENGINE_USR/ui-plugins</code> directory, with a default mapping <code>ENGINE_USR=/usr/share/ovirt-engine</code> as defined by oVirt Engine local configuration. Plugin descriptors are expected to comply with [http://en.wikipedia.org/wiki/JSON JSON] format specification, with the addition of allowing Java/C++ style comments (both <code>/</code>+<code>*</code> and <code>//</code> varieties).
 
@@ -45,12 +45,12 @@ After a plugin has been [[#Discovering_plugins|discovered]] and its data embedde
 [[File:Loading-plugins.png|Loading plugins]]
 
 
-For each plugin, WebAdmin creates an HTML <code>iframe</code> element used to load [[#Plugin_host_page|plugin host page]] (1). Plugin host page is the entry point to [[#Plugin_bootstrap_sequence|plugin bootstrap process]], used to evaluate plugin code (JavaScript) within the context of the corresponding <code>iframe</code> element. UI plugin infrastructure supports serving plugin resource files, such as plugin host page, from local file system (2). Plugin host page gets loaded into the <code>iframe</code> element and the plugin code is evaluated (3). From this point forward, plugin communicates with WebAdmin via plugin API (4).
+For each plugin, WebAdmin creates an HTML <code>iframe</code> element used to load [[#Plugin_host_page|plugin host page]] (1). Plugin host page is the entry point to [[#Plugin_bootstrap_sequence|plugin bootstrap]] process, used to evaluate plugin code (JavaScript) within the context of the corresponding <code>iframe</code> element. UI plugin infrastructure supports serving plugin resource files, such as plugin host page, from local file system (2). Plugin host page gets loaded into the <code>iframe</code> element and the plugin code is evaluated (3). From this point forward, plugin communicates with WebAdmin via plugin API (4).
 
 By default, plugin resource files are expected to reside in <code>$ENGINE_USR/ui-plugins/<resourcePath></code> directory, with <code>resourcePath</code> value defined by the corresponding attribute in [[#Plugin_descriptor|plugin descriptor]].
 
 === Plugin descriptor ===
-Plugin descriptor is the entry point to [[#Discovering_plugins|plugin discovery process]], containing important plugin meta-data as well as (optional) default plugin-specific configuration.
+Plugin descriptor is the entry point to [[#Discovering_plugins|plugin discovery]] process, containing important plugin meta-data as well as (optional) default plugin-specific configuration.
 
 Following code snippet shows a sample plugin descriptor: <code>/usr/share/ovirt-engine/ui-plugins/myPlugin.json</code>
 <pre>
@@ -104,7 +104,7 @@ As part of [[#Discovering_plugins|discovering plugins]], UI plugin infrastructur
 * Resulting plugin configuration, accessible to the given plugin at runtime, will be <code>{ "band": "AC/DC", "score": 10 }</code>
 
 === Plugin host page ===
-Plugin host page is the entry point to [[#Plugin_bootstrap_sequence|plugin bootstrap process]], used to evaluate plugin code (JavaScript) within the context of the corresponding <code>iframe</code> element.
+Plugin host page is the entry point to [[#Plugin_bootstrap_sequence|plugin bootstrap]] process, used to evaluate plugin code (JavaScript) within the context of the corresponding <code>iframe</code> element.
 
 Following code snippet shows a sample plugin host page: <code>/usr/share/ovirt-engine/ui-plugins/my-files/start.html</code>
 <pre>
@@ -164,7 +164,7 @@ api.ready();
 </pre>
 
 === Plugin lifecycle ===
-TODO
+UI plugin infrastructure 
 
 === Supported application events ===
 TODO
