@@ -107,17 +107,17 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 | fail_back || legacy from fail-back feature, not in use || D || || D || || || D || || || D || || || || || D || 
 |-
-| dedicated_vm_for_vds || specific host for running vm || Y || || N || || || N || || || Y || || Y || Y || || null || 
+| dedicated_vm_for_vds || specific host for running vm || Y || || N || || || N || || || Y || || Y || Y || N || null || 
 |-
 | auto_startup || HA || Y || || N || || || Y || || || Y || || Y || Y || N || User || 
 |-
 | vm_type || vm type (server/desktop) || Y || || N || || || N || || || Y || || N || Y || N || User || 
 |-
-| nice_level || vm nice level || Y || || N || || || N || || || Y || ||  || || || User || Not on GUI
+| nice_level || vm nice level || Y || || N || || || N || || || Y || || Y || N || N || User || Currently not on GUI (but present in REST). Do we want it there?
 |-
 | default_boot_sequence || boot sequence || Y || || N || || || Y || || || Y || || Y || Y || N || Instance || 
 |-
-| default_display_type || display type || Y || || N || || || Y || || || Y || || Y || Y || N || Instance || 
+| default_display_type || display type(SPICE, VNC)|| Y || || N || || || Y || || || Y || || Y || Y || N || Instance || 
 |-
 | priority || priority || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
 |-
