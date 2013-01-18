@@ -41,8 +41,8 @@ For example “medium” including 1 virtual CPU and 4GB of memory.
 
 '''Image'''<br>
 Used to describe the virtual machine disk image. (Amazon uses the term AMI)
-This is the based operating system image including applications.
-The image is stateless, any changes made to the image.<br>
+This is the base operating system image including applications.
+The image is stateless, any changes made to the image are lost after stopping the virtual machine.<br>
 For example “Windows 2008R2 with SQLServer”
 
 '''Volume'''<br>
@@ -53,7 +53,6 @@ In these environments when provisioning a virtual machine a user picks an instan
 
 Typically the image is stateless, when the virtual machine is stopped all changes are lost.
 A user can add volumes to the virtual machines, which are persistent disks typically used as a data disk.
-
 
 ==== Design ====
 The following table enumerates all the fields involved and also how they are related to the entities. 
