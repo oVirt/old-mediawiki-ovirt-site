@@ -134,8 +134,8 @@ If a value in a line is a 'D', it means it is deprecated.
 | migration_support || migration support options || Y || || N || || || N || || || Y || || Y || Y || Y || true || 
 |-
 | userdefined_properties || custom properties || Y || || Y || || || Y || || || Y || || Y || N || N || merge || merge instance type and image by key with instance type taking priority
-|-pro
-| predefined_properties || custom properties || Y || || Y || || || Y || || || Y || || || || || merge || merge instance type and image by key with instance type taking priority. Not directly editable from GUI
+|-
+| predefined_properties || custom properties || Y || || Y || || || Y || || || Y || || Y || N || N || merge || merge instance type and image by key with instance type taking priority
 |-
 | min_allocated_mem || memory guaranteed || Y || || N || || || Y || || || Y || || Y || N || Y || Instance || 
 |-
