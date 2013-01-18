@@ -145,7 +145,7 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 | allow_console_reconnect || allow reconnect to console || Y || || N || || || N || || || Y || console reconnect || Y || N || N || User || 
 |-
-| cpu_pinning || cpu pinning || N || || N || || || N || || || Y || || Y || || || empty || For future
+| cpu_pinning || cpu pinning || N || || N || || || N || || || Y || || || || || empty || For future
 |-
 | is_smartcard_enabled || smartcard enabled || Y || || N || || || Y || || || Y || || Y || N || N || Instance || 
 |-
