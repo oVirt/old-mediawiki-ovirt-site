@@ -57,7 +57,7 @@ A user can add volumes to the virtual machines, which are persistent disks typic
 
 ==== Design ====
 The following table enumerates all the fields involved and also how they are related to the entities. The specific columns means:
-* '''Present''': this field is present on the entity
+* '''Present''': this field is present on the entity for user editing
 * '''Comm''': comment for the entity
 * '''Perms''': new permissions needed
 * '''Adv Only''': the new VM dialog will contain a button "Advanced Options". If the field is marked as Adv Only: Y than it is visible only after clicking this button
@@ -71,9 +71,9 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 ! !! !! Present !! Comm !! Present !! Perms !! Comm !! Present !! Perms !! Comm !! Present !! Perms !! Adv Only !! Basic User !! Marked !! On Create !! Comm
 |-
-| vm_guid || Internal unique ID || Y || || Y || || || Y || || || Y || || || || || Generated || 
+| vm_guid || Internal unique ID || N || || N || || || N || || || N || || || || || Generated || 
 |-
-| vm_name || name set by user for vm and template || N || || Y || || || Y || create instance || we could autogenerate a default if not passed || Y || || N || Y || N || User || 
+| vm_name || name set by user for vm and template || Y || || Y || || || Y || create instance || we could autogenerate a default if not passed || Y || || N || Y || N || User || 
 |-
 | mem_size_mb || Memory Size || Y || || N || || || Y || create instance || || Y || || Y || Y || Y || Instance || 
 |-
@@ -87,7 +87,7 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 | domain || directory services domain || Y || || N || || || N || || || Y || || Y || Y || N || User || 
 |-
-| creation_date || internal. creation date || N || || N || || || N || || Y || N || || || || || ||
+| creation_date || internal. creation date || N || || N || || || N || || || N || || || || || ||
 |-
 | num_of_monitors || number of monitors || Y || || N || || || Y || || || Y || || Y || N || N || User || 
 |-
