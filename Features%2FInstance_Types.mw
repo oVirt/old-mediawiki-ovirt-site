@@ -155,7 +155,7 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 | thin/clone || || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
 |-
-| sysprep || || N || || N || || || N || || || N || || || || || Instance || 
+| sysprep || || N || || N || || || N || || || N || || || || || || 
 |-
 | soundcard || payload (device, not in vm_static) || N || || N || || || Y || || || Y || || || || || Instance || Not in GUI. Setting should include soundcard type which is dependant on the OS.
 |-
