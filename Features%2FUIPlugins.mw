@@ -36,7 +36,7 @@ Before a plugin can be [[#Loading_plugins|loaded]] and [[#Plugin_bootstrap_seque
 
 By default, plugin descriptors are expected to reside in <code>$ENGINE_USR/ui-plugins</code> directory, with a default mapping <code>ENGINE_USR=/usr/share/ovirt-engine</code> as defined by oVirt Engine local configuration. Plugin descriptors are expected to comply with [http://en.wikipedia.org/wiki/JSON JSON] format specification, with the addition of allowing Java/C++ style comments (both <code>/</code>+<code>*</code> and <code>//</code> varieties).
 
-By default, plugin user configuration files are expected to reside in <code>$ENGINE_ETC/ui-plugins</code> directory, with a default mapping <code>ENGINE_ETC=/etc/ovirt-engine</code> as defined by oVirt Engine local configuration. Plugin user configuration files are expected to comply with same content format rules as plugin descriptors. Note that plugin user configuration files generally follow <code>$descriptorFileName-config.json</code> naming convention.
+By default, plugin user configuration files are expected to reside in <code>$ENGINE_ETC/ui-plugins</code> directory, with a default mapping <code>ENGINE_ETC=/etc/ovirt-engine</code> as defined by oVirt Engine local configuration. Plugin user configuration files are expected to comply with same content format rules as plugin descriptors. Note that plugin user configuration files generally follow <code><descriptorFileName>-config.json</code> naming convention.
 
 === Loading plugins ===
 After a plugin has been [[#Discovering_plugins|discovered]] and its data embedded into WebAdmin HTML page, WebAdmin will attempt to load the given plugin as part of application startup (unless configured otherwise).
@@ -47,7 +47,7 @@ After a plugin has been [[#Discovering_plugins|discovered]] and its data embedde
 
 For each plugin, WebAdmin creates an HTML <code>iframe</code> element used to load [[#Plugin_host_page|plugin host page]] (1). Plugin host page is the entry point to [[#Plugin_bootstrap_sequence|plugin bootstrap process]], used to evaluate plugin code (JavaScript) within the context of the corresponding <code>iframe</code> element. UI plugin infrastructure supports serving plugin resource files, such as plugin host page, from local file system (2). Plugin host page gets loaded into the <code>iframe</code> element and the plugin code is evaluated (3). From this point forward, plugin communicates with WebAdmin via plugin API (4).
 
-By default, plugin resource files are expected to reside in <code>$ENGINE_USR/ui-plugins/$resourcePath</code> directory, with <code>$resourcePath</code> value defined by the corresponding attribute in [[#Plugin_descriptor|plugin descriptor]].
+By default, plugin resource files are expected to reside in <code>$ENGINE_USR/ui-plugins/<resourcePath></code> directory, with <code>resourcePath</code> value defined by the corresponding attribute in [[#Plugin_descriptor|plugin descriptor]].
 
 === Plugin descriptor ===
 Plugin descriptor is the entry point to [[#Discovering_plugins|plugin discovery process]], containing important plugin meta-data as well as (optional) default plugin-specific configuration.
@@ -62,7 +62,7 @@ Following code snippet shows a sample plugin descriptor: <code>/usr/share/ovirt-
 
     // URL of plugin host page used to evaluate plugin code (required).
     // Using UI plugin infrastructure support to serve plugin resource files.
-    // This URL maps to $ENGINE_USR/ui-plugins/$resourcePath/start.html
+    // This URL maps to $ENGINE_USR/ui-plugins/<resourcePath>/start.html
     "url": "/webadmin/webadmin/plugin/MyPlugin/start.html",
 
     // Default configuration object associated with the plugin (optional).
