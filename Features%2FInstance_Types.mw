@@ -121,7 +121,7 @@ If a value in a line is a 'D', it means it is deprecated.
 |-
 | priority || priority || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
 |-
-| iso_path || cd || Y || || Y || || || N || || || Y || || Y || Y || N || Instance || 
+| iso_path || cd || Y || || Y || || || N || || || Y || || Y || Y || N || Image || 
 |-
 | origin || internal. where the vm was created || N || || N || || || N || || || N || || || || || Instance || 
 |-
