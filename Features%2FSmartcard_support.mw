@@ -18,9 +18,7 @@
 
 === Current status ===
 Pending review:
-* VDSM: http://gerrit.ovirt.org/#/c/8450/
-* Engine + Webadmin/Power User Portal: http://gerrit.ovirt.org/#/c/8484/
-* REST API: http://gerrit.ovirt.org/#/c/8512/
+finished
 
 === Requirements ===
 
