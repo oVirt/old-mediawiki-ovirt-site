@@ -1,8 +1,8 @@
 <!-- {{autolang|base=yes}} -->
 
-== Instance Types ==
+= Instance Types =
 
-=== Summary ===
+== Summary ==
 Enhancing oVirt template model to allow for more flexible options in creating virtual machines targeted at improving self service for the private cloud use cases.
 
 * Allow administrators to define hardware profiles (“Instance Types” or “Flavours”) 
@@ -10,7 +10,7 @@ Enhancing oVirt template model to allow for more flexible options in creating vi
 * Allow administrators and users, based on permissions, to create virtual machines from pre-defined images and hardware profiles.
 
 
-=== Owner ===
+== Owner ==
 
 * Name: [[User:ofrenkel|Omer Frenkel]]
 * Email: [mailto:ofrenkel@redhat.com ofrenkel@redhat.com]
@@ -18,20 +18,17 @@ Enhancing oVirt template model to allow for more flexible options in creating vi
 * Email: [mailto:acathrow@redhat.com acathrow@redhat.com]
 
 
-=== Current status ===
+== Current status ==
 * Target Release: 3.3
 * Status: under design and discussion.
 
-=== Detailed Description ===
-
+== Background ==
 In oVirt 3.1 the template definition includes both the hardware configuration and the image
 To support more cloud use cases we wish to separate the hardware configuration of the virtual machine from the actual image type.
 
 In a ''cloud'' use case the typical flow involves a user selecting the hardware configuration (for example “Small”  and the image (eg. RHEL 6.3 Web server”).
 
 The current model used by oVirt forces a user to select a template that includes both the hardware configuration and the image type.
-
-==== Background ====
 
 In many cloud platforms the following concepts and terminology are used:
 
@@ -58,7 +55,7 @@ A user can add volumes to the virtual machines, which are persistent disks typic
 The old template used in the oVirt until now. 
 Up to discussion: do we want to keep them or do we want to completely throw them away from the user interface?
 
-==== Design ====
+== Design ==
 The following table enumerates all the fields involved and also how they are related to the entities. 
 
 The specific columns means:
@@ -184,8 +181,8 @@ The specific values means:
 |-
 |}
 
-==== Entities' Details ====
-'''VM'''<br>
+== Entities' Details ==
+=== VM ===
 The "New Server" and "New Desktop" buttons in GUI will be replaced by a common '''New VM''' button with a combo box where you can choose from "Optimized for Server" and "Optimized for Desktop". 
 The exact meaning this switch:
 * '''Optimized for Server''': 
@@ -218,14 +215,14 @@ The summary information will contain the following:
 * Data Center
 * Cluster
 
-<br>'''Image'''<br>
+=== Image ===
 Will be created from an existing VM using the '''Create Image''' - similar to the way how the templates are created today.
 Opened question: Do we want them to be stateless in 3.3?
 
-<br>'''Volume'''<br>
+=== Volume ===
 Opened question: Do we want this to 3.3?
 
-<br>'''Instance Types (Flavors)'''<br>
+=== Instance Types (Flavors) ===
 A user should be able to create an instance type using a dialog similar to the '''New VM''' dialog. Here a user should be able to define their instance configuration.<br>
 For the exact editable field please see the table above.
 
@@ -268,7 +265,7 @@ For example adding quality of service parameters.<br>
 As a point of reference OpenStack includes parameters such as “rxtx quota” that allows the administrator to cap the maximum amount of network I/O permitting (for example an ISP capping a customer to 5GB).<br>
 Other use cases include specifying storage I/O priorty, network capping and throttling.<br>
 
-'''Templates (Images)'''<br>
+=== Templates ===
 The existing template mechanism can be used to handle ''Images''.
 
 '''Permissions'''<br>
@@ -276,7 +273,7 @@ A new permission ''Create instance'' should be added<br>
 This permission will allow a user to create a new virtual machine from an existing instance.<br>
 This permission will ''not'' permit a user to edit the virtual machines instance configuration only to use an existing instance definition.<br>
 
-==== Example User Workflow ====
+== Example User Workflow ==
 This is an example of the user workflow, how the new Instance Types approach would be used.
 
 1: Create a new '''Instance Type'''
@@ -289,7 +286,7 @@ This is an example of the user workflow, how the new Instance Types approach wou
 5: Edit ''Instance Type'' (e.g. added more memory to it)
 6: The change is reflected also on the VM after restarting it
 
-'''Runtime''' 
+== Runtime ==
 
 When a virtual machine is run the complete configuration should be constructed in the following method:<br>
 * The instance type is used to provide the hardware configuration for the VM.
@@ -310,7 +307,7 @@ We should allow changing the instance type on a VM that is down<br>
 if we have defaults for server and desktops (clone disks vs. thin allocation),<br>
 changing instance type will not take affect on this.
 
-==== REST API ====
+== REST API ==
 TBD as soon as the specific requirements will be clarified
 
 [[Category:Feature]]
