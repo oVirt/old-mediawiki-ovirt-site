@@ -65,7 +65,7 @@ On January 22, 2013, the oVirt workshop is pleased to welcome two key members of
 |-
 | 09:00-09:15 || Opening remarks	||
 |-
-| width=20%| 09:15-10:00 || width=50% | Introduction to UI plug-ins || width=30% | Vojtech Szocs (Red Hat)
+| width=20%| 09:15-10:00 || width=50% | Introduction to UI plug-ins || width=30% | Oved Ourfali (Red Hat)
 |-
 | 10:00-10:45 || NetApp Virtual Solutions Console for oVirt || Christopher Morrissey (NetApp)
 |-
@@ -77,7 +77,7 @@ On January 22, 2013, the oVirt workshop is pleased to welcome two key members of
 |-
 | 12:30-13:30 || colspan=2| Lunch
 |-
-| 13:30-14:15 || oVirt Network and Quantum || Speaker TBA
+| 13:30-14:15 || oVirt Network and Quantum || Itamar Heim (Red Hat)
 |-
 | 14:15-15:00 || VDSM Hooks || Ayal Baron (Red Hat)
 |-
