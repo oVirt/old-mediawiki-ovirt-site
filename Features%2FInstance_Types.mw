@@ -186,7 +186,7 @@ The specific values means:
 
 ==== Entities' Details ====
 '''VM'''<br>
-The "New Server" and "New Desktop" buttons in GUI will be replaced by a common "New VM" button with a combo box where you can choose from "Optimized for Server" and "Optimized for Desktop". 
+The "New Server" and "New Desktop" buttons in GUI will be replaced by a common '''New VM''' button with a combo box where you can choose from "Optimized for Server" and "Optimized for Desktop". 
 The exact meaning this switch:
 * '''Optimized for Server''': 
 ** does not have soundcard
@@ -200,6 +200,7 @@ This are only the default values which will be present in the GUI - the user can
 
 The following picture shows the '''New VM''' dialog in the basic form. This are the only values required to select in order to create a new VM.
 [[File:NewVmBasic.png]]
+<br>
 Please note the '''Assign Logical Networks''' part. It's meaning is, that the instance type defines the network interfaces. In this dialog the user is required to assign them to specific network (available on the selected cluster).
 
 The following picture shows the New VM dialog after clicking the '''Show Advanced Options''' dialog.
@@ -218,12 +219,15 @@ The summary information will contain the following:
 * Cluster
 
 <br>'''Image'''<br>
+Will be created from an existing VM using the '''Create Image''' - similar to the way how the templates are created today.
+Opened question: Do we want them to be stateless in 3.3?
 
 <br>'''Volume'''<br>
-Do we want it to 3.3?
+Opened question: Do we want this to 3.3?
 
 <br>'''Instance Types (Flavors)'''<br>
-A user should be able to create an instance type using a dialog similar to the ''new server/desktop'' dialog. Here a user should be able to define their instance configuration.<br>
+A user should be able to create an instance type using a dialog similar to the '''New VM''' dialog. Here a user should be able to define their instance configuration.<br>
+For the exact editable field please see the table above.
 
 A new set of permissions should be created:<br>
 * Create Instance
@@ -265,7 +269,7 @@ As a point of reference OpenStack includes parameters such as “rxtx quota” t
 Other use cases include specifying storage I/O priorty, network capping and throttling.<br>
 
 '''Templates (Images)'''<br>
-The existing template mechanism can be used to handle ''image types''.
+The existing template mechanism can be used to handle ''Images''.
 
 '''Permissions'''<br>
 A new permission ''Create instance'' should be added<br>
