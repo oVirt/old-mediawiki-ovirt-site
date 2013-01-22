@@ -198,12 +198,17 @@ The exact meaning this switch:
 ** is stateless
 This are only the default values which will be present in the GUI - the user can change them.
 
-'''Image'''<br>
 
-'''Volume'''<br>
+The following picture shows the New VM dialog after clicking the "Show Advanced Options" dialog.
+[[File:NewVmAdvanced.png]]
+<br>
+
+<br>'''Image'''<br>
+
+<br>'''Volume'''<br>
 Do we want it to 3.3?
 
-'''Instance Types (Flavors)'''<br>
+<br>'''Instance Types (Flavors)'''<br>
 A user should be able to create an instance type using a dialog similar to the ''new server/desktop'' dialog. Here a user should be able to define their instance configuration.<br>
 
 A new set of permissions should be created:<br>
