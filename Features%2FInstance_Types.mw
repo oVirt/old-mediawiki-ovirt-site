@@ -194,7 +194,7 @@ The exact meaning this switch:
 ** is not stateless
 * '''Optimized for Desktop''': 
 ** has soundcard
-** the image is used
+** the image is used (thin allocation)
 ** is stateless
 This are only the default values which will be present in the GUI - the user can change them.
 
