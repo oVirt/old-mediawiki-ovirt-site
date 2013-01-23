@@ -1,7 +1,7 @@
 == Watchdog support in Engine ==
 
 === Summary ===
-This feature adds [https://en.wikipedia.org/wiki/Watchdog_Card watchdog] support to engine.
+This feature adds [https://en.wikipedia.org/wiki/Watchdog_Card watchdog] support to engine. The feature will be available in server VM's and especially useful when used with high availability.
 
 === Owner ===
 
