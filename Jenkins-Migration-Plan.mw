@@ -1,4 +1,4 @@
-The following is a migration plan for [jenkins.ovirt.org] to a new physical server. 
+The following is a migration plan for [[jenkins.ovirt.org]] to a new physical server. 
 
 == prior testing: (before we have access to servers) ==
 # prior testing phase - test on new server before starting migration
@@ -38,3 +38,5 @@ The following is a migration plan for [jenkins.ovirt.org] to a new physical serv
 # verify all jobs works
 ::* gerrit access
 ::* linode access
+
+[[Category:Infrastructure]]
