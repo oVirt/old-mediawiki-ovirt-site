@@ -44,31 +44,17 @@ The tag <direct_address> will be added to the host resource /api/hosts/{host:id}
     </host>
 
 ==== UI Changes ====
-A new textbox named "direct ip" in both the add and edit host dialogs will be added.
-[[File:addHostEdited.png|1100px]]
+A new textbox named "Direct Address" in both the add and edit host dialogs will be added (in red):
 
+[[File:addHostEdited.png|600px]]
 
 == Open Issues ==
-# How to update the scheduled jobs - the current solution will be to use the scheduler's map to update things like interval size.
-# Which keys to define as reloadable, of the ones who demand work for fetching, such as parsing.
-
-<nics>
-        <nic id="56d6d62f-6af0-4c02-8500-4be041180031">
-            <name>nic1</name>
-            ...
-            <reported_data>
-                <rel="devices" href=/api/vms/{vm:id}/nics/xxx/devices>
-            <reported_data/>
-       <nic/>
-        ...
-    </nics>
 
 
 == Dependencies / Related Features ==
-Affected engine projects:
-* core
+Affected projects:
+* engine
 * Webadmin
-* User Portal
 
 == Documentation / External references ==
 
