@@ -45,13 +45,19 @@ The tag <direct_address> will be added to the host resource /api/hosts/{host:id}
 ==== UI Changes ====
 When admin clicks add host, the Advanced Parameters option will be added, and when opened will allow entering a direct address:
 
+Advanced Parameters closed:
+
 [[File:addHostClosed.png|600px]]
+
+Advanced Parameters opened:
 
 [[File:addHostOpened.png|600px]]
 
 When admin clicks reinstall for a host, the Advanced Parameters option will be added, and when opened will allow entering a direct address:
 
-[[installhostopened.png|600px]]
+Advanced Parameters opened:
+
+[[Installhostopened.png|600px]]
 
 == Open Issues ==
 
