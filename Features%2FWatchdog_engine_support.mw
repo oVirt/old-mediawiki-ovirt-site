@@ -24,6 +24,8 @@ This feature depends on the [[Add an option to create a watchdog device|VDSM sup
 
 === Documentation / External references ===
 
+For libvirt support, please see [http://libvirt.org/formatdomain.html#elementsWatchdog libvirt's documentation on watchdog support].
+
 ==== User Interface ====
 
 The watchdog support on the UI will be found on the new/edit VM/template window, on the high availablity tab, since mostly you need the watchdog in HA setups.
