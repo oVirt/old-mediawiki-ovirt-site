@@ -10,6 +10,11 @@ su -					## Or do all this with sudo, preferably
 <pre>
 useradd foo
 </pre>
+** ... or create the new user but add the user to one or more groups:
+<pre>
+useradd -g wheel foo  ## add to just one group
+useradd -G wheel,puppet ## add to more than one group
+</pre>
 * Create the user's password to activate the account; the user will not use this password to login, but they need it for 'sudo':
 <pre>
 passwd foo
