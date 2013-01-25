@@ -87,7 +87,7 @@ The specific values means:
 |-
 | mem_size_mb || Memory Size || Y || || N || || || Y || create instance || || Y || || Y || Y || Y || Instance || 
 |-
-| vmt_guid || Internal link to template object || N || || N || || || N || || || Y || || N || Y || N || User || 
+| vmt_guid || Internal link to template object || N || || N || || || N || || || Y || || Y || Y || N || User || If user picks custom template, than it appears on basic as well
 |-
 | OS || Operating System Type || Y || || Y || || || N || || || Y || || Y || Y || Y || Image || 
 |-
