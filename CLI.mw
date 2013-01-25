@@ -1,6 +1,5 @@
-oVirt CLI is a dynamic command line interface for the oVirt engine, 
+oVirt CLI is a dynamic, runtime interface discovering command line interface for the oVirt engine
 
-[[API - oVirt workshop November 2011 Notes|Notes from workshop in November 2011]].
 
 __TOC__
 
