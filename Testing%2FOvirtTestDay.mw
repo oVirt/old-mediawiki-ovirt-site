@@ -5,72 +5,41 @@ The purpose of test days initiative is to accomplish the following goals:
 * Get multiple engineers and stakeholders to have hands-on opportunity to learn more about Ovirt functionality and features.
 * Improve the quality of oVirt, towards its first release.
 * Establish a quality baseline.
-* While learning about the project, the stakeholders can come with their own test cases, in different categories:
-**General/Project installation
+* Introducing and validating new oVirt 3.2 features 
+* While learning about the project, the stakeholders can come with their own test cases, in different categories for regression testing:
+**installation/migration from 3.1
 **Storage
 **Networking
-**APIs
+**interfaces
 **Spice
 **User Interface
 **Tools
+
+in addition participate in exploring [[OVirt_3.2_release-management#Features|new features]] .
 
 ==Participants==
 
 Test Days are open to anyone. If you have your own setup we will provide all the software packages and the required information. Please refer  -  What to do as a participant - in the section below, if you're willing to participate please add yourself to the below table:
 {|border="1"
-! Name !! General !!Storage !! Networking !! APIs !!Spice !!User Interface !!Tools !!Distribution 
+! Name !! allInOne/distributed/migration from 3.1 !!Storage !! Networking !! APIs !!Spice !!User Interface !!Tools !!Distribution 
 |-
-| mgoldboi || V || V || Basic || Webadmin,CLI || V || ||  || Fedora16
+| mgoldboi  || clean install- AIO || NFS  || basic +  port mirroring|| python sdk  || V || admin+user-portal  ||  ||Fedora-18
 |-
-| mkrcmari || V ||  ||  ||  || V || ||  || Fedora16
-|-
-| djasa || V || V || Basic ||  || V || ||  || Fedora16
-|-
-| hateya || V || V || Basic || Webadmin,cli,python SDK || V || ||  || Fedora16
-|-
-| rvaknin || V || V || Basic ||  || V || ||  || Fedora16
-|-
-| atal || V || V || Basic ||  || V || ||  || Fedora16
-|-
-| aliguori || V || V || Basic ||  || V || ||  || Fedora16
-|-
-| sming|| V || V || Basic ||  || V || ||  || RHEL 6.2
-|-
-| aglitke || V || V || Basic || Webadmin,CLI,vdsm || V || V || || Fedora16
-|-
-| Pradeep|| V || V || Basic ||  || V || ||  || RHEL 6.2
-|-
-| wuzhy || V || V || Basic ||  || V ||  || || Fedora16
-|-
-| tdosek || V || V || Basic || Webadmin, Userportal || || V || || Fedora16
-|-
-| jlibosva || V || V || Basic || Webadmin || || V || V || Fedora16
-|-
-| jhenner ||   ||   || Basic || python SDK || ||   ||   || Fedora16
-|-
-| pstehlik || V ||  || Basic || ActiveDirectory || || V || V || Fedora16
-|-
-| zvi || V ||V  || Advanced || Webadmin || V|| V || V || Fedora16
-|-
-|dron || V ||V  || Advanced || Webadmin || V|| V || V || Fedora16
 |}
+
+
 
 ==Test Dates==
 
 The overall test dates are spread across multiple duration which are driven by the beta releases from the engineering. The following are the list of test days scheduled -
-*JAN 18th, 2012  - First Release
+*JAN 18th, 2012  - First Release (3.0)
+*Jun 14th, 2012 - Second Release (3.1)
+*JAN 29th, 2013  - Third Release (3.2)
 
-==Summary of Test Days Results==
-
-{|border="1"
-! Test Day !!No. Registered Participants !! total bugs !! bugs list 
-|- 
-| 18JAN    ||                            ||            ||
-|}
 
 ==Execution Plan and Guidelines==
 
-The following is the list of categories which we would like to focus on. However the scope is not limited and they are guidelines only. Feel free to extend it to the limitations of the software.
+The following is the list of categories which we would like to focus on.  this is basically regression testing:
 
 ===General===
 You need at least two physical servers to install and configure a basic yet complete oVirt environment with shared storage to exercise the following:
@@ -107,7 +76,7 @@ You need at least two physical servers to install and configure a basic yet comp
 |-
 | Use the General configuration as a base configuration ||
 |-
-| Create different types of storage domains (NFS, ISCSI, FC, local storage) with 2 or more data domains || FAILED in iscsi for following issues -- [https://bugzilla.redhat.com/show_bug.cgi?id=782432 782432] , [https://bugzilla.redhat.com/show_bug.cgi?id=781805 781805] , [https://bugzilla.redhat.com/show_bug.cgi?id=782864 782864] , [https://bugzilla.redhat.com/show_bug.cgi?id=783098]
+| Create different types of storage domains (NFS, ISCSI, FC, local storage) with 2 or more data domains || 
 |-
 | Install at least 2 VMs on each of the Data Centers ||
 |-
@@ -149,23 +118,23 @@ on this section we'll try to have default deployment with the different APIs
 {|border="1"
 ! Scenario !! Webadmin !! UserPortal !! Rest !! Python-SDK !! CLI
 |-
-| Create a data-center || || || || ||
+| Create a data-center || || || ||  ||
 |-
-| Create a cluster || || || || || [https://bugzilla.redhat.com/show_bug.cgi?id=782713 782713]
+| Create a cluster || || || || || 
 |-
-| Update cluster || || || || [https://bugzilla.redhat.com/show_bug.cgi?id=782828 782828] || 
+| Update cluster || || || || || 
 |-
-| Install a host || || ||[https://bugzilla.redhat.com/show_bug.cgi?id=782737 782737] || ||[https://bugzilla.redhat.com/show_bug.cgi?id=782734 782734],[https://bugzilla.redhat.com/show_bug.cgi?id=782734 782734]
+| Install a host || || || || ||
 |-
 | Create a storage domain on DC || || || || ||
 |-
 | Attach export/ISO domain to DC || || || || ||
 |-
-| Create vm || || [https://bugzilla.redhat.com/show_bug.cgi?id=782794 782794] || || ||
+| Create vm || || || || ||
 |-
-| Delete vm || || || || [https://bugzilla.redhat.com/show_bug.cgi?id=782830 782830] ||
+| Delete vm || || || || ||
 |- 
-| Import vm || [https://bugzilla.redhat.com/show_bug.cgi?id=782717 782717] || || || ||
+| Import vm || || || || ||
 |- 
 | Start/hibernate/resume/stop vm || || || || ||
 |-
@@ -175,9 +144,9 @@ on this section we'll try to have default deployment with the different APIs
 |-
 | Create vm from template || || || || ||
 |-
-| Sign out || [https://bugzilla.redhat.com/show_bug.cgi?id=782779 782779] || || || ||
+| Sign out || || || || ||
 |- 
-| General || || || || [https://bugzilla.redhat.com/show_bug.cgi?id=782891 782891] ||
+| General || || || ||  ||
 |}
 
 Python API of the above scenarios can be found in:
@@ -201,13 +170,15 @@ For details about configuration check http://www.ovirt.org/wiki/Testing/Spice
 | Install AutoCAD or any other graphic application a try to work with it (with QXL driver installed on VM) ||
 |}
 
+=== User Interface ===
+
+Webadmin: 
+
 === Node ===
 
-Pre-built node available [http://ovirt.org/releases/nightly/binary/ovirt-node-image-2.2.1-3.6.fc16.iso here].
+Pre-built node available [http://ovirt.org/releases/beta/binary/ovirt-node-iso-2.4.0-1.1.fc17.iso here].
 
 Please check [[Node_Release_Notes]] prior to testing for information on current known issues
-
-Apply workaround in [https://bugzilla.redhat.com/show_bug.cgi?id=782660 782660] before attempting to register to ovirt-engine
 
 {|border="1"
 ! Scenario !! Bugs
@@ -230,9 +201,9 @@ Apply workaround in [https://bugzilla.redhat.com/show_bug.cgi?id=782660 782660] 
 |-
 | Configure collectd||
 |-
-| Configure oVirt Engine hostname and port || FAILED -- [https://bugzilla.redhat.com/show_bug.cgi?id=782663 782663]
+| Configure oVirt Engine hostname and port || 
 |-
-| Configure admin password on oVirt Engine screen and add host through ovirt engine || FAILED -- [https://bugzilla.redhat.com/show_bug.cgi?id=782660 782660]
+| Configure admin password on oVirt Engine screen and add host through ovirt engine || 
 |-
 | Once registered, run vms on top of ovirt-node ||
 |-
@@ -240,11 +211,24 @@ Apply workaround in [https://bugzilla.redhat.com/show_bug.cgi?id=782660 782660] 
 |}
 
 ==Ovirt Information Details==
-Please refer the following document for hardware requirements,  installation procedure, software download location
+Beta RPMs for Fedora 18 are available from http://resources.ovirt.org/releases/beta/rpm/Fedora/18. In order to use it create a <code>/etc/yum.repos.d/ovirt-engine-beta.repo</code> file with the following content:
+
+<pre>
+[ovirt-beta]
+name=ovirt-beta
+baseurl=http://resources.ovirt.org/releases/beta/rpm/Fedora/18/
+enabled=1
+skip_if_unavailable=1
+gpgcheck=0
+</pre>
+
+The run <code>yum install ovirt-engine</code>.
+
+Please refer the following documents for more information on hardware requirements, installation procedure and software download locations:
 *http://ovirt.org/wiki/Installing_ovirt_from_rpm
 *http://ovirt.org/wiki/Installing_ovirt-node_from_rpm
 
-Please refer the following documents for Ovirt Installation guide, bits location, admin guide
+Please refer the following documents for Ovirt Installation guide, bits location and admin guide:
 *http://ovirt.org/wiki/Documentation
 
 Please refer the following document for 'virt-to-date' tool, simple tool for setting up local yum repo with all required packages and easy deployment.
@@ -264,6 +248,11 @@ In case you would like to test a product with a new test case, there is a templa
 ==Bug Reporting==
 * ovirt - https://bugzilla.redhat.com/enter_bug.cgi?product=oVirt
 * Spice - https://bugs.freedesktop.org/ under Spice product
+* VDSM - https://bugzilla.redhat.com/show_bug.cgi?id=831998
+
+Tracker bug for the release - https://bugzilla.redhat.com/881006
 
 ==Miscellaneous==
 IRC - #ovirt at irc.oftc.net
+
+==Current Issues==
