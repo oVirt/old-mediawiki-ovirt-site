@@ -71,41 +71,6 @@ Apache Maven 3.0.4
 ...
 </pre>
 
-=====Maven personal settings=====
-
-Create your <code>$HOME/.m2</code> directory (this is where maven stores your personal settings and the artifacts downloaded from internet repositories):
-
-<pre>
-$ mkdir $HOME/.m2
-</pre>
-
-Copy & paste the content below into the file <code>$HOME/.m2/settings.xml</code>:
-
-<pre>
-<settings
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-
-  <activeProfiles>
-    <activeProfile>oVirt</activeProfile>
-  </activeProfiles>
-
-  <profiles>
-    <profile>
-      <id>oVirt</id>
-      <properties>
-        <jbossHome>${env.HOME}/jboss-as-7.1.1.Final</jbossHome>
-      </properties>
-    </profile>
-  </profiles>
-
-</settings>
-</pre>
-
-* Do not omit the <code>activeProfiles</code> element in the above file, it is crucial.
-* Remember also to change the <code>jbossHome</code> property if you decide to install the application server to a directory different to the one suggested here.
-
 == Installing JBoss AS ==
 
 Note that in development environments you should install the application server using the zip files, not the distribution packages. The reason is that this allows the developer to use its own unprivileged user to run the application server without needing to use root privileges.
