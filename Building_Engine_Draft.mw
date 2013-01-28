@@ -153,26 +153,6 @@ $ rm -rf data
 <!--<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
 <span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 6</span></p>-->
 
-== Engine local configuration ==
-
-oVirt Engine has two methods with regard to its configuration:
-* global configuration, stored in the database
-* local configuration, stored on the local machine where Engine is deployed
-
-Follow these steps to set-up Engine local configuration in a development environment:
-* Define <code>ENGINE_DEFAULTS</code> environment variable that points to default configuration file
-<pre>
-$ export ENGINE_DEFAULTS="$HOME/ovirt-engine/backend/manager/conf/engine.conf.defaults"
-</pre>
-* Create custom configuration file (used to override default configuration)
-<pre>
-$ touch $HOME/myengine.conf
-</pre>
-* Define <code>ENGINE_VARS</code> environment variable that points to custom configuration file
-<pre>
-$ export ENGINE_VARS="$HOME/myengine.conf"
-</pre>
-
 == Building oVirt-engine from source ==
 
 === Clone oVirt-engine codebase ===
