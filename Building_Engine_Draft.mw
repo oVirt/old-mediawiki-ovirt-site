@@ -79,25 +79,6 @@ Note that in development environments you should install the application server 
 
 Download version 7.1.1 of JBoss AS 7 from [http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip here] then uncompress it in your home directory, the end result should be a <code>jboss-as-7.1.1.Final</code> directory.
 
-===Troubleshooting===
-
-# Some useful <code>JAVA_OPTS</code>, these can be manually added to the <code>bin/standalone.conf</code> script as required:
-## <code>-Xmx512m</code> - maximum Java heap size of 512 MiB
-## <code>-Xdebug</code> - include debugging
-# Run with <code>-b 0.0.0.0</code> to have it bind to all IP addresses (by default it binds to the 127.0.0.1 address only).
-# Make sure you've nothing bound to port 8700 or 8701.
-# For external connections, make sure your firewall allows 8700 incoming traffic.
-# If your machine has and selinux policy installed, make sure it will not block JBoss.
-# JBoss will bind to your host's name. Make sure it's resolvable by adding it to <code>/etc/hosts</code> or any other method.
-# You may wish to erase previous deployment (during development, if you encounter a situation where you work with the deployed application but it does not contain the expected behavior). In order to perform the cleanup, you must perform the following steps:
-<pre>
-$ cd $HOME/jboss-as-7.1.1.Final/standalone
-$ rm -rf deployments/engine.ear 
-$ rm -rf deployments/engine.ear.deployed 
-$ rm -rf tmp
-$ rm -rf data
-</pre>
-
 == Installing PostgreSQL ==
 
 [[Installing_PostgreSQL_DB]]
