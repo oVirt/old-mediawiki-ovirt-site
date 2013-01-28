@@ -128,7 +128,7 @@ $ ./create_db_devel.sh -u postgres
 To build with the default options use the following commands:
 
 <pre>
-$ cd $HOME/ovirt-engine
+$ cd $HOME/ovirt-engine/repository
 $ make
 </pre>
 
@@ -137,7 +137,7 @@ Please note that the first time that you build maven will need to download a lar
 Also, by default the above commands will build the the GUI applications for all the browsers (all the ''permutations'' in GWT jargon). This consumes a lot of resources and can take a very long time.  In you first build it can be interesting to build only for the browser that you will use to test. In order to do that add the following <code>EXTRA_BUILD_FLAGS</code> option to the make command:
 
 <pre>
-$ cd $HOME/ovirt-engine
+$ cd $HOME/ovirt-engine/repository
 $ make EXTRA_BUILD_FLAGS="-Dgwt.userAgent=gecko1_8"
 </pre>
 
@@ -159,7 +159,7 @@ This will build only for Firefox. For other browsers you can use the following v
 For example, if you want to build for Firefox and Chrome you can use the following commands:
 
 <pre>
-$ cd $HOME/ovirt-engine
+$ cd $HOME/ovirt-engine/repository
 $ make EXTRA_BUILD_FLAGS="-Dgwt.userAgent=gecko1_8,safari"
 </pre>
 
