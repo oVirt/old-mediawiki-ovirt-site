@@ -183,10 +183,10 @@ $ make install PREFIX=$HOME/ovirt-engine/installation
 
 == Testing ==
 
-First you need to start the engine. Go to the directory where you installed it (we are assuming <code>$HOME/engine</code> in this instructions), then to the <code>bin</code> subdirectory and run the <code>engine-service</code> script as follows:
+First you need to start the engine. Go to the directory where you installed it (we are assuming <code>$HOME/ovirt-engine/installation</code> in these instructions), then to the <code>bin</code> subdirectory and run the <code>engine-service</code> script as follows:
 
 <pre>
-$ cd $HOME/engine/bin
+$ cd $HOME/ovirt-engine/installation/bin
 $ ./engine-service start
 </pre>
 
