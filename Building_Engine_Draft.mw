@@ -190,15 +190,16 @@ $ rm $HOME/ovirt-engine/installation/share/ovirt-engine/modules/org/postgresql/m
 $ mvn org.apache.maven.plugins:maven-dependency-plugin:2.4:get -Dartifact=postgresql:postgresql:9.1-901.jdbc4 -Ddest=$HOME/ovirt-engine/installation/share/ovirt-engine/modules/org/postgresql/main/postgresql-jdbc.jar
 </pre>
 
-Create (<code> mkdir -p ...</code>) the following directories where the engine will store state, logs and temporary files:
+Create the following directories where the engine will store state, logs and temporary files:
 
 <pre>
-$HOME/ovirt-engine/installation/var/lib/ovirt-engine/content
-$HOME/ovirt-engine/installation/var/lib/ovirt-engine/deployments
-$HOME/ovirt-engine/installation/var/run
-$HOME/ovirt-engine/installation/var/cache/ovirt-engine
-$HOME/ovirt-engine/installation/var/lock/ovirt-engine
-$HOME/ovirt-engine/installation/var/log/ovirt-engine
+mkdir -p \
+$HOME/ovirt-engine/installation/var/lib/ovirt-engine/content \
+$HOME/ovirt-engine/installation/var/lib/ovirt-engine/deployments \
+$HOME/ovirt-engine/installation/var/run \
+$HOME/ovirt-engine/installation/var/cache/ovirt-engine \
+$HOME/ovirt-engine/installation/var/lock/ovirt-engine \
+$HOME/ovirt-engine/installation/var/log/ovirt-engine \
 $HOME/ovirt-engine/installation/var/tmp/ovirt-engine
 </pre>
 
