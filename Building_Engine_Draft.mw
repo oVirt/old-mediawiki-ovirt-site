@@ -90,13 +90,13 @@ Download version 7.1.1 of JBoss AS 7 from [http://download.jboss.org/jbossas/7.1
 
 === Clone oVirt-engine codebase ===
 
-Use the <code>git</code> command to clone the engine repository into your home directory:
+Use the <code>git</code> command to clone the engine repository into the <code>ovirt-engine/repository</code> inside your home directory:
 
 <pre>
-$ git clone git://gerrit.ovirt.org/ovirt-engine
+$ mkdir -p $HOME/ovirt-engine/repository
+$ cd $HOME/ovirt-engine
+$ git clone git://gerrit.ovirt.org/ovirt-engine repository
 </pre>
-
-This will create a new <code>ovirt-engine</code> directory containing the cloned repository.
 
 '''''Note:''' The above cloning is for read only, if you want to contribute see [[#Code contribution: Gerrit|this]].''
 
