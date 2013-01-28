@@ -119,7 +119,7 @@ $ chmod 0600 $HOME/.pgpass
 Now change into the directory where you cloned the <code>ovirt-engine</code> git repository, then change into the <code>backend/manager/dbscritps</code> directory and run the <code>create_db_devel.sh</code> script:
 
 <pre>
-$ cd $HOME/ovirt-engine/backend/manager/dbscripts
+$ cd $HOME/ovirt-engine/repository/backend/manager/dbscripts
 $ ./create_db_devel.sh -u postgres
 </pre>
 
