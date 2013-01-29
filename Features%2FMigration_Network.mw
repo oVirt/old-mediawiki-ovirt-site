@@ -10,7 +10,7 @@ Define a migration network role, and use such networks to carry migration data
 * Email: <danken@redhat.com>
 
 === Current status ===
-* Not yet scheduled to a specific release
+* oVirt-3.3
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 === Detailed Description ===
