@@ -212,6 +212,43 @@ Please check [[Node_Release_Notes]] prior to testing for information on current 
 | ||
 |}
 
+===SLA===
+{|border="1"
+! Scenario !! Bugs
+|-
+|Set DC Quota enforcement mode to 'Enforced'||
+|-
+|Create new Quota which limits storage||
+|-
+|Create new Quota which limits cpu and memory||
+|-
+|Define consumers for the quotas||
+|-
+|Asign the quotas to VMs and Disks||
+|-
+|Run VM with quota||
+|-
+|Move a disk||
+|-
+|Snapshot a vm (disk)||
+|-
+|Stop VM||
+|-
+|Commit snapshot||
+|-
+|See that quota usage makes sance ||
+|-
+|Open User Portal||
+|-
+|Log-in as a user defined as quota consumer||
+|-
+|Create VMs and Disks||
+|-
+|Run VMs||
+|-
+|Go to resources tab and see that quota usage makes sance ||
+|}
+
 ==Ovirt Information Details==
 Beta RPMs for Fedora 18 are available from http://resources.ovirt.org/releases/beta/rpm/Fedora/18. In order to use it create a <code>/etc/yum.repos.d/ovirt-engine-beta.repo</code> file with the following content:
 
