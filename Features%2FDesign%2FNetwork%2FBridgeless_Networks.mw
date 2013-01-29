@@ -101,3 +101,6 @@ all the non-optional networks attached.
  VDS_SET_NON_OPERATIONAL_VM_NETWORK_IS_BRIDGELESS=Host ${VdsName} does not comply with the cluster ${VdsGroupName} networks, the following VM networks are bridgeless: '${Networks}'
 *AppErrors.properties
  ACTION_TYPE_FAILED_NOT_A_VM_NETWORK=Failed ${action} ${type} the network/s ${Networks} is/are not a VM network.
+
+[[Category:Feature]]
+[[Category:Networking]]
