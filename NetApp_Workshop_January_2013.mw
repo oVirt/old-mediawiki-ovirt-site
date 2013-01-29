@@ -67,19 +67,19 @@ On January 22, 2013, the oVirt workshop is pleased to welcome two key members of
 |-
 | width=20%| 09:15-10:00 || width=50% | Introduction to UI plug-ins || width=30% | Oved Ourfali (Red Hat)
 |-
-| 10:00-10:45 || NetApp Virtual Solutions Console for oVirt || Christopher Morrissey (NetApp)
+| 10:00-10:45 || NetApp Virtual Solutions Console for oVirt ([[Media:VSC_on_oVirt.pdf | slides]]) || Christopher Morrissey (NetApp)
 |-
 | 10:45-11:00 || colspan=2| Coffee break
 |-
-| 11:00-11:45 || oVirt Storage and Live Storage Migration || Ayal Baron (Red Hat)
+| 11:00-11:45 || oVirt Storage and Live Storage Migration ([[Media:Ovirt-storage-and-live-storage-migration-1.odp | slides]]) || Ayal Baron (Red Hat)
 |-
 | 11:45-12:30 || oVirt Node - overview || Mike Burns (Red Hat)
 |-
 | 12:30-13:30 || colspan=2| Lunch
 |-
-| 13:30-14:15 || oVirt Network and Quantum || Itamar Heim (Red Hat)
+| 13:30-14:15 || oVirt Network and Quantum ([[Media:Ovirt-quantum-integration2.pdf | slides]]) || Itamar Heim (Red Hat)
 |-
-| 14:15-15:00 || VDSM Hooks || Ayal Baron (Red Hat)
+| 14:15-15:00 || VDSM Hooks ([[Media:OVirt-hooks-netapp-jan2013.odp | slides]]) || Ayal Baron (Red Hat)
 |-
 | 15:00-15:15 || colspan=2| Coffee break
 |-
