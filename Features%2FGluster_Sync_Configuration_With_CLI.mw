@@ -56,4 +56,10 @@ refreshLightWeightData() : Runs more frequently and syncs information that can b
 
 getGlusterRefreshRateHeavy(): Runs less frequently and syncs information that adds a significant overhead on GlusterFS. This refresh rate is controlled by configuration "GlusterRefreshRateHeavy" , with default value of 5 minutes
 
+===Import===
+[[File:Gluster-Sync-import.png]]
+
+===Detach===
+[[File:Gluster-Sync-detach.png]]
+
 [[Category:Feature]]
