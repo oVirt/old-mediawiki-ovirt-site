@@ -21,7 +21,7 @@ in addition participate in exploring [[OVirt_3.2_release-management#Features|new
 
 ==Participants==
 
-Test Days are open to anyone. If you have your own setup we will provide all the software packages and the required information. Please refer  -  What to do as a participant - in the section below, if you're willing to participate please add yourself to the below table:
+Test Days are open to anyone. If you have your own setup we will provide all the software packages and the required information. Please refer  -  [[Testing/OvirtTestDay#What to do as a participant|What to do as a participant]] - in the section below, if you're willing to participate please add yourself to the below table:
 {|border="1"
 ! Name !! allInOne/distributed/migration from 3.1 !!Storage !! Networking !! APIs !!Spice !!User Interface !!Tools !!Distribution 
 |-
