@@ -42,8 +42,8 @@ Handling of servers added (peer probed) from gluster CLI needs to be done in a d
 * User should be able to edit the server names (not hostname/ip) and provide root password for all these servers 
 * After user accepts the servers, providing root passwords for all of them, add all of them to the cluster
 ==== Detach ====
-* When user clicks on the 'detach' link, display a screen containing all the additional servers, along with their SSH fingerprints
-* User should be able to select one or more of these servers, and click on the 'detach' button
+* When user clicks on the 'detach' link, display a screen containing all the additional servers
+* User should be able to select one or more of these servers, and click on the 'Ok' button
 * This should trigger a 'gluster peer detach' command to remove the selected servers from the gluster cluster
 
 == Design ==
