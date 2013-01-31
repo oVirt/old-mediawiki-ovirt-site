@@ -76,6 +76,9 @@ You need at least two physical servers to install and configure a basic yet comp
 | Migrate Virtual Machines between the hypervisors ||
 |-
 | Collect log file using the log collector tool ||
+|-
+| Upgrade from 3.1 to 3.2 including Fedora upgrade ||   [https://bugzilla.redhat.com/show_bug.cgi?id=906270   906270]  
+|-
 |}
 
 ===Configuration===
