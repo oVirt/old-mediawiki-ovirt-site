@@ -60,7 +60,7 @@ The overall test dates are spread across multiple duration which are driven by t
 *JAN 31th, 2013  - Third Release (3.2)
 
 ==Execution Plan and Guidelines==
-for installation check: [[http://www.ovirt.org/Testing/OvirtTestDay#Ovirt_Information_Details Ovirt_Information_Details]]
+for '''installation''' check: [[http://www.ovirt.org/Testing/OvirtTestDay#Ovirt_Information_Details Ovirt_Information_Details]]
 The following is the list of categories which we would like to focus on.  this is basically regression testing:
 
 ===General===
