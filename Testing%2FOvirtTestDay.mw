@@ -139,15 +139,15 @@ make sure each of the configs can:
 
 ===Tools===
 *Basic operations on iso-uploader:
-# engine-iso-uploader list
-# engine-iso-uploader upload <iso> -i <iso-domain-name> -v -f
+# '''engine-iso-uploader list'''
+# '''engine-iso-uploader upload <iso> -i <iso-domain-name> -v -f'''
 
 * Basic operations on log-collector:
-# engine-log-collector list
-# engine-log-collector collect
+# '''engine-log-collector list'''
+# '''engine-log-collector collect'''
 
 *Basic operation on image-uploader
-engine-image-uploader --name=<new name here> -e <domain> upload my.ovf
+'''engine-image-uploader --name=<new name here> -e <domain> upload my.ovf'''
 
 ====New to v3.1:====
 *port mirroring: one can setup a VM that sniffs all IP traffic between VMs on a network on a host.
