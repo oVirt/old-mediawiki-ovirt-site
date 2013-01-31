@@ -82,6 +82,8 @@ You need at least two physical servers to install and configure a basic yet comp
 |-
 | Setup oVirt engine using either Active Directory or Local IPA, two hosts configured as hypervisors (Fedora / Ovirt-Node / other) with power management (Storage Domains - Data Domain / ISO Domain and Export Domain) ||
 |-
+| Setup oVirt engine  -  basic AIO flow || [https://bugzilla.redhat.com/show_bug.cgi?id=906544 906544]
+|-
 | Use ISO Uploader to populate images of OS and tools ||
 |-
 | Basic Network Configuration ||
