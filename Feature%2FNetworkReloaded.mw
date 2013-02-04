@@ -62,14 +62,12 @@ The relationship is as follows:
 A netinfo object would have a list of the top hierarchy objects and generate the info from that.
 
 ===== Bridge =====
-* ports,
+* ports: Could be nics, bonds or vlans,
 * name,
 * forward_delay,
 * stp,
 * priority,
-* IpLink,
-* IpAddress
-
+* IpConfig
 
 ===== Bond =====
 * name,
