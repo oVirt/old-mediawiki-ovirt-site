@@ -81,7 +81,7 @@ A netinfo object would have a list of the top hierarchy objects and generate the
 ===== Nic =====
 * name.
 * IpLink,
-* IpAddress.
+* IpConfig.
 
 ===== IpConfig =====
 * inet: List of IPv4 address information (addr + netmask + gateway/route),
