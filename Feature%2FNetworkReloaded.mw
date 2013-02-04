@@ -29,7 +29,7 @@ The main points are:
 |-
 | Define object oriented representations || Find the best class representations for the network primitives for our usage || 20%
 |-
-| Define internal API || Define the API that will establish the relationship between the new network representation and the multiple network backends. || 0%
+| Define internal API || Define the API that will establish the relationship between the new network representation and the multiple network backends. || 10%
 |-
 | Live Netinfo instance || Define a way to keep a netinfo.Netinfo instance updated based on the representations of the first point. || 10%
 |-
