@@ -91,6 +91,7 @@ A netinfo object would have a list of the top hierarchy objects and generate the
 ===== VLAN =====
 * Tag: The tag number of the VLAN.
 * Interface: A nic, bond or bridge that has the vlan on top.
+* IPConfing.
 
 ==== Define internal API ====
 The internal API should allow for an objectified network definition (from setupNetworks and/or rollback) to be applied consistently regardless of which backend provides it. That includes:
