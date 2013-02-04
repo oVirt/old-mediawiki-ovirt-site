@@ -151,7 +151,7 @@ The specific values means:
 |-
 | child_count || internal. for template, not in use? || N || || N || || || N || || || N || || || || || || 
 |-
-| quota_id || link to quota || N || || N || || || N || || || Y || || Y || Y || N || User || 
+| quota_id || link to quota || Y || || Y || || || N || || || Y || || N || Y || N || User || Merge of template and image with image taking priority
 |-
 | allow_console_reconnect || allow reconnect to console || Y || || N || || || N || || || Y || console reconnect || Y || N || N || User || 
 |-
