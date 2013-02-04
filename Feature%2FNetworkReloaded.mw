@@ -57,9 +57,9 @@ The relationship is as follows:
 # Bridge, Bonds, VLANs and Nics may have IpConfig information.
 # Bridges have ports that can be Bond, Nic and Vlan instances (or none, for nicless bridges).
 # Bonds have slaves that are Nic instances.
-# IpConfig objects contain information about the configured IPv4 and IPv6 addresses (they can have multiple of each), routes. TBD: find a proper home for mtu and link state or any other layer-2 specific property of a device.
-# Vlans can be set upon Nics, and bonds.
-# Each class contains the logic for validating the parameters received from the engine, this way, the responsibilities for wrong configuration detection are semantically localized.
+# IpConfig objects contain information about the configured IPv4 and IPv6 addresses (they can have multiple of each), routes. '''TBD''': find a proper home for mtu and link state or any other layer-2 specific property of a device.
+# Vlans can be set upon Nics and bonds.
+# Each class contains the logic for validating the parameters received from the engine, based on its current state and relations to other objects (e.g a change to a bridge may be disallowed due to its currently-connected nic). This way, the responsibilities for wrong configuration detection are semantically localized. 
 # Each object should be able to contribute its part in generating the information for getVdsCaps.
 
 A netinfo object would have a list of the top hierarchy objects and generate the info from that.
