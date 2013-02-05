@@ -1,0 +1,51 @@
+== Coredump support in VDSM ==
+
+=== Summary ===
+This feature adds [http://en.wikipedia.org/wiki/Core_dump] support to VDSM. 
+The feature will dump the core of a domain on a given file for analysis. It will be especially useful when used with high availability.
+
+=== Owner ===
+
+* Name: [[User:Shaohef|ShaoHe Feng]]
+* Email: <shaohef@linux.vnet.ibm.com>
+
+
+=== Current status ===
+* Status: the patch was under review.  [http://gerrit.ovirt.org/#/c/7329  dump the core of a VM].
+* Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
+
+=== Detailed Description ===
+
+
+=== Benefit to oVirt ===
+Users will be able to  dump the core of a VM on a given file when their VMs crash.  This will be especially important for highly available  servers.
+
+=== Dependencies / Related Features ===
+This feature depends on the libvirt  (already support)
+
+=== Documentation / External references ===
+
+For libvirt support, please see [http://libvirt.org/html/libvirt-libvirt.html#virDomainCoreDump libvirt's documentation on virDomainCoreDump API].
+
+==== User Interface ====
+
+def coreDump(self, to, params):
+    """  
+    dump a VM to a designated file.
+    :param to: a string designates the dump file 
+    :param params: a dictionary containing:
+        *post-action* - The action taken after core dump, which is
+                        'crash', 'live', or 'reset'.
+                        crash: crash the VM after core dump.
+                        live: perform a live core dump.
+                        reset: reset the VM after core dump.
+        *bypass-cache* - avoid file system cache when saving.
+        *memory-only* - dump VM's memory only.
+    """  
+
+=== Comments and Discussion ===
+
+Please comment on the [[Talk:Features/|Discussion page]].
+
+[[Category:Feature]]
+[[Category:VDSM]]
