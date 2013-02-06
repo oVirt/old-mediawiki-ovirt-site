@@ -32,7 +32,7 @@ The <tt>migrate</tt> verb should be extended with an additional parameter, speci
 * dstparams: hibernation volumes definition
 * mode: migration/hibernation
 * method: rotten legacy
-* ''New'': migration uri, according to http://libvirt.org/html/libvirt-libvirt.html#virDomainMigrateToURI2 such as <tt>tcp://<ip of migration network on remote node></tt>
+* dstqemu': dedicated migration address of destination host, according to http://libvirt.org/html/libvirt-libvirt.html#virDomainMigrateToURI2 such as <tt>tcp://<ip of migration network on remote node></tt>
 
 ==== Engine ====
 # Network definition.
