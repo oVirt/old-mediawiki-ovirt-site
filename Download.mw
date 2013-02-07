@@ -28,8 +28,11 @@ You can also [[porting oVirt | help us make oVirt easier to install everywhere]]
 <div class="span6">
 ;Software:
 :* Fedora 17 (for easy installation)
+; Recommended web browsers:
+:* Mozilla Firefox 17 or later
+:* Internet Explorer 
 ;Advanced; install [[Building oVirt engine | Engine]] and [[Node Building | Node]] from source:
-: Help [[porting oVirt | port oVirt]] to [http://www.debian.org Debian], [http://www.ubuntu.com Ubuntu], [http://www.opensuse.org OpenSuse] and other distributions
+: Help [[porting oVirt | port oVirt]] to [http://www.debian.org Debian], [http://www.ubuntu.com Ubuntu], [http://www.opensuse.org OpenSuse] and other distributions, or help [[supporting Chrome| support Chrome for the Engine]] 
 </div><!-- span -->
 </div><!-- row-fluid-->
 </div><!-- well -->
