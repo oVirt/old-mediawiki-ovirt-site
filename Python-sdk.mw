@@ -187,11 +187,6 @@ params lookup as shown in [2].
       in this case will be returned CpuTopology type.
 
 
-== Repository ==
-
-* git://gerrit.ovirt.org/ovirt-engine-sdk
-
-
 == Deployment ==
 
 === pypi ===
