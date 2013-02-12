@@ -1,5 +1,5 @@
 '''Introduction:'''
-The beans module is a job scheduler, and is essentially a wrapper around [http://quartz-scheduler.org/ Quartz], which is similar to Unix Cron jobs. 
+The beans module is a job scheduler, and is essentially a wrapper around [http://quartz-scheduler.org/ Quartz], which might be described as a beefier, platform-agnostic Cron jobs alternative that can be embedded in a Java project.
 
 The beans module is used extensively when monitoring hosts. The [[Backend modules vdsbroker|VDSBroker]] module's class VdsUpdateRunTimeInfo monitors hosts' CPU, memory usage and so on. A method of the IRSBrokerCommand  class monitors the SPM-host for storage related issues.
 
