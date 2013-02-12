@@ -93,7 +93,7 @@ The specific values means:
 |-
 | description || description set by user for vm and template || Y || || Y || || || Y || create instance ||  || Y || || N || Y || N || User || We could take from image if not passed
 |-
-| vds_group_id || vm cluster || Y || || N || || || N || change cluster || || Y || || N || Y || N || User || 
+| vds_group_id || vm cluster || Y || || N || || || Y || change cluster || || Y || || N || Y || N || User || 
 |-
 | domain || directory services domain || Y || || N || || || N || || || Y || || Y || Y || N || User || 
 |-
