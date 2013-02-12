@@ -1,12 +1,1 @@
-* [[Backend/dbscripts/upgrade]]
-* tools
-* modules/beans
-* modules/bll
-* modules/common
-* modules/compat
-* modules/dal
-* modules/restapi
-* modules/root
-* modules/searchbackend
-* modules/utils
-* modules/vdsbroker
+
