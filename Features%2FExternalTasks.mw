@@ -51,6 +51,14 @@ Solution should support setting percentage for the Task Started state<br>
                             |
                             -> Failed
 
+''' Operations '''
+ Adding a new task
+ Adding a nested sub-task to an existing task
+ Removing a task
+ Updating a task/sub-task status
+
+As in the Task Monitor that serves internal oVirt commands, Task should be displayed for a configurable time after competion and then vanished from the UI.
+
 === Benefit to oVirt ===
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
 The benefit of External Tasks injection is the ability to track tasks that are performed outside of oVirt or hybrid tasks when some of the sub-tasks are done by oVirt and some are external>br>
