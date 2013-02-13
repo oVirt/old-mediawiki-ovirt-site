@@ -43,10 +43,12 @@ Solution should support setting percentage for the Task Started state<br>
 '''Task Flow'''
    Waiting -> Started (x %) |
                             -> Completed
+                            |
                             -> Failed 
 '''Sub Task Flow'''
   Waiting -> Running        |
                             -> Completed
+                            |
                             -> Failed
 
 === Benefit to oVirt ===
