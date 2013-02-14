@@ -6,7 +6,7 @@
 
 === Summary ===
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
-Enable plug-in to inject tasks to the engine application using the API, change their statuses and track them from the UI.<br>
+Enable plug-in to inject tasks to the engine application using the REST API, change their statuses and track them from the UI.<br>
 A task may have other nesting sub-tasks under it.
 
 === Owner ===
