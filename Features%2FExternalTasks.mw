@@ -23,7 +23,7 @@ A task may have other nesting sub-tasks under it.
 
 === Use Case ===
 <!--* Link to feature page in a specific release. That release may complete the feature, or parts of it. The complete scope of this feature in this release will be described in the release feature page -->
-The main use case is for third party vendors, to integrate with RHEV-M. A vendor may have a set of external tasks that he may inject to the system in any flow. 
+The main use case is for third party vendors, to integrate with oVirt. A vendor may have a set of external tasks that he may inject to the system in any flow. 
 Multiple Vendors may integrate with the system at any given time.
 
 === Detailed Description ===
