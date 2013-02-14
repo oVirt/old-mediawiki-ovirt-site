@@ -43,7 +43,7 @@ You can also [[porting oVirt | help us make oVirt easier to install everywhere]]
 
 <div class="span10 offset1">
 
-== Quickstart guide ([http://fedoraproject.org/download-splash?file=http://download.fedoraproject.org/pub/fedora/linux/releases/17/Live/x86_64/Fedora-17-x86_64-Live-Desktop.iso Fedora 17]) ==
+== Quickstart guide ([http://fedoraproject.org/download-splash?file=http://download.fedoraproject.org/pub/fedora/linux/releases/18/Live/x86_64/Fedora-18-x86_64-Live-Desktop.iso Fedora 18]) ==
 
 Our recommended method of installing oVirt is to use the pre-built packages for Fedora. It makes installing oVirt very easy. Naturally, you can run any Linux distribution or several other operating systems (e.g. Windows) as guests inside of oVirt instances.
 
