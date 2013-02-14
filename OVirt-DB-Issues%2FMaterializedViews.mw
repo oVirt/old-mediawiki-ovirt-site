@@ -111,7 +111,7 @@ This is an example of how '''dbscripts/upgrade/post_upgrade/custom/create_materi
  /******************************************************************************************************
                           Snapshot Materialized Views Definitions Section
  ******************************************************************************************************/
- select CreateMaterializedViewAs('vds', 300);
+ select CreateCustomMaterializedViewAs('vds', 300);
  /******************************************************************************************************
                           Snapshot Materialized Views Index Definitions Section
  ******************************************************************************************************/
