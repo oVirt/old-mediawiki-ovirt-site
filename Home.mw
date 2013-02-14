@@ -31,11 +31,12 @@ oVirt version 3.2 was released on February 14, 2013 and contained several new fe
 
 
 <div class="pull-right">
-[[oVirt 3.1 release notes | Read the full release notes »]]
+[[oVirt 3.2 release notes | Read the full release notes »]]
 </div>
 </div>
 
 <div class="span8 pad-left-small pad-right">
+
 == Packed with features ==
 <div class="column-split">
 * choice of stand-alone Hypervisor or install-on-top of your existing Linux installation
