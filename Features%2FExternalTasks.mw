@@ -28,7 +28,7 @@ Multiple Vendors may integrate with the system at any given time.
 
 === Detailed Description ===
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
-Plug-ins using the API should be enable to inject and track external tasks to oVirt and see those tasks displayed in the oVirt UI.<br>
+Plug-ins using the REST API should be enable to inject and track external tasks to oVirt and see those tasks displayed in the oVirt UI.<br>
 Tasks may be nested<br>
 Tasks may run concurrently<br>
 Sub-Tasks of the same Task may run concurrently<br>
