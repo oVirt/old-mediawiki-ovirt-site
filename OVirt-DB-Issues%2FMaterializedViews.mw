@@ -37,6 +37,9 @@ The Snapshot Materialized View definitions are stored in the materialized_views 
 ''' refresh_rate_in_sec''' is the Materialized View refresh rate in seconds<br>
 ''' last_refresh''' is the timestamp of the last refresh<br>
 '''avg_cost_ms''' is the average cost of a refresh operation on the  Materialized View in miliseconds.<br>
+'''min_refresh_rate_in_sec ''' is the min refresh rate allowed when refresh is called with teh force flag<br>
+'''custom''' is a flag indicating if a Materialized View is custom<br>
+'''active''' is a flag indicating if a Materialized View is active<br>
 
 ==Flow==
 1) Create the Materialized View by calling:
