@@ -43,8 +43,11 @@ The Snapshot Materialized View definitions are stored in the materialized_views 
 
 ==Flow==
 1) Create the Materialized View by calling:
-   '''CreateMaterializedView''' - if you are creating a new view
-   '''CreateMaterializedViewAs''' - preserves the original view name, The original view will be renamed and the new Materialized View will have the original  view name.
+   '''CreateMaterializedView''' - if you are creating a new product view
+   '''CreateMaterializedViewAs''' - preserves the original view name, The original view will be renamed and the new product  Materialized View will have the original  view name.
+   '''CreateCustomMaterializedView''' - if you are creating a new custom view
+   '''CreateCustomMaterializedViewAs''' - preserves the original view name, The original view will be renamed and the new custom  Materialized View will have the original  view name.
+
 2) If your Snapshot Materialized View is my_mt you should create Stored Procedures:
     MtDropmy_mtIndexes - Drops indexes on my_mt
     MtCreatemy_mtIndexes - Creates needed indexes on my_mt
@@ -62,6 +65,10 @@ There are 4 additional functions :
    '''DropMaterializedView''' - Drops the Materialized View
    '''DropAllMaterializedViews''' - Drop all Materialized Views
    '''UpdateMaterializedViewRefreshRate''' - Updates the Materialized View refresh rate
+   '''UpdateMaterializedViewRefreshRate''' - Updates the Materialized View refresh rate
+   '''UpdateMaterializedViewMinRefreshRate''' - Updates the Materialized View minimal refresh rate
+   '''ActivateMaterializedView''' - activates/decativates a  Materialized View
+   '''ActivateAllMaterializedViews''' - activates/decativates all Materialized Views
 
 === Example of possible post_upgrade/0020_create_materialized_views.sql ===
 This file includes only product Materialized Views for Custom Materialized Views please refer to the '''Customization''' section<br>
