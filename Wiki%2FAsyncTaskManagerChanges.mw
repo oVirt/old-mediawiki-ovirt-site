@@ -1,0 +1,37 @@
+==  Async Tasks  improvements  ==
+
+=== Summary ===
+<!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
+This Wiki page is going to summarize required changes for Async Task mechanism.
+
+=== Owner ===
+<!--This should link to your home wiki page so we know who you are-->
+* Name: [[User: Yair Zaslavsky| Yair Zaslavsky]]
+<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
+* Email: yzaslavs@redhat.com
+
+
+=== Current status & Motivation ===
+<!--* Link to feature page in a specific release. That release may complete the feature, or parts of it. The complete scope of this feature in this release will be described in the release feature page -->
+We should invest an ongoing effort to improve our Async Tasks mechanism  at engine side. <BR>
+The following bullets present topics we should handle, based on current status + what we would like to obtain.
+* Modularization - all of Async Tasks code is located at BLL package. We should extract this to a different module/jar
+* Separation of the Async Tasks monitoring (i.e - job/step framework) from the Async Task Management part (AsyncTaskManager class and the VDSM tasks monitoring) - this should be revisited.
+* Task parameters - task parameters are actually parameters of parent commands that invoke the child commands that create the tasks. Upon endAction, there is a calculation at the parent command on the persisted parameters that re-creates the child command parameters and ends them as well.
+This mechanism is too complex and is error prone.
+We should instead persist the commands and their parameters - have a commands table, and for each command  keep its parameters. 
+* Command objects are re-created at endAction stage  -  the commands are created using Reflection and the parameters that are associate with the task - once again, this is error prone.
+We should reuse command objects, and consider having Commands repository (hold in memory structure to hold ) - commands should be retrieved and re-used from this in memory data structure using their identifier (i.e - command ID)
+* Simultaneous command group  vs sequential execution - Currently we have the live storage migration feature which uses the serial execution mechanism - the code of this mechanism should be modified according to other  improvements that are suggested in this page.
+* Provide a mechanism for a command to know the number of tasks it is supposed to create - see  [https://bugzilla.redhat.com/show_bug.cgi?id=873546 this bug] in order to not have a "premature end" of commands.
+* Support backwards compatibility of command parameters  - currently, due to the fact that Java is strongly typed + we have a hierarchy of command parameters. Changes to parameters classes may yield problems when performing system upgrade in cases where parameters information is persisted based on old parameters class structure, and needs to be deserialized in newer version with newer code of the class.
+
+=== Working on the changes ===
+* Working on the changes of this mechanism should be done in stages in such a way that we can graduately move commands , and not apply the changes to all commands at once.
+
+=== Feature tracking ====
+
+* Last updated date: Feb 17, 2013
+
+[[Category:Feature]]
+[[Category:Template]]
