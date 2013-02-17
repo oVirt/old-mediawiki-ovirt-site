@@ -65,6 +65,28 @@ Alternatively, if you don't want to modify your <code>$HOME/.m2/settings.xml</co
 $ mvn install -Dgwt.userAgent=gecko1_8,safari -Pgwt-admin
 </pre>
 
+New Note 39
+
+
+== Testing DAOs  ==
+By default, the DAO tests are not run during <code>mvn install</code>, since they require an actual PostgreSQL database to run on.
+In order to run them, you should follow these instructions.
+
+First, you must create a database to use for the tests. This database's credentials are defined in <code>$OVIRT_GIT/backend/manager/modules/dal/src/test/filters/pgsql.properties</code>. By default the tests are run on a database called <code>engine_test</code> by the <code>postgres</code> user (you can, of course, change these details in your own environment.
+To create this database, perform the following:
+<pre>
+$ cd $OVIRT_GIT/backend/manager/dbscripts
+$ ./create_db_devel.sh -d engine_test -u postgres
+</pre>
+
+In order to run the tests, you will have to enable the <code>enable-dao-tests</code> profile:
+<pre>
+$ cd $OVIRT_GIT/backend/manager/modules/dal
+$ mvn install -Penable-dao-tests
+</pre>
+
+Note: you may use the <code>enable-dao-tests</code> profile on higher levels than the <code>dal</code> module, such as when building the engine's root.
+
 == Skipping Unit Tests ==
 It is possible during development to speed up the build process by skipping the execution of unit tests,
 This can be done by adding the <code>-DskipTests</code> to your build command:
