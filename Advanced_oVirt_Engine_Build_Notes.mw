@@ -65,9 +65,6 @@ Alternatively, if you don't want to modify your <code>$HOME/.m2/settings.xml</co
 $ mvn install -Dgwt.userAgent=gecko1_8,safari -Pgwt-admin
 </pre>
 
-New Note 39
-
-
 == Testing DAOs  ==
 By default, the DAO tests are not run during <code>mvn install</code>, since they require an actual PostgreSQL database to run on.
 In order to run them, you should follow these instructions.
