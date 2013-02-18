@@ -1,0 +1,115 @@
+== Introduction ==
+An extensive or improper usage of database calls can cause an application performance bottleneck. The PostgreSQL database provides several tools, which can monitor or provide statistics for possible problems.
+Useful tools:
+# pg_statements_stat module
+# pg_top tool
+# database debug logging
+
+== pg_statements_stat module ==
+The '''pg_stat_statements''' module provides basic statistics of all SQL statements executed by a server. First, before usage, it must be activated.
+
+More information can be found here:
+* http://www.postgresql.org/docs/9.1/static/pgstatstatements.html
+
+Increase maximum shared memory used by the kernel (Fedora 17). Current values can be displayed:
+<pre>
+# cat /proc/sys/kernel/shmmax
+# 33554432
+# cat /proc/sys/kernel/shmall
+# 2097152
+</pre>
+Or  increase memory temporarily:
+<pre>
+# sysctl -w kernel.shmmax=134217728
+</pre>
+You can also increase the shared memory permanently by editing /etc/sysctl.conf file:
+<pre>
+kernel.shmmax=134217728
+kernel.shmall=2097152
+</pre>
+Reload to activate the changes:
+<pre>
+# sysctl -p
+</pre>
+
+Load pg_stat_module module to the database. Edit db configuration file:
+* /var/lib/pgsql/data/postgresql.conf
+<pre>
+shared_preload_libraries = 'pg_stat_statements'
+custom_variable_classes = 'pg_stat_statements'
+pg_stat_statements.max = 10000
+pg_stat_statements.track = all
+</pre>
+
+Restart the db service:
+<pre>
+# service postgresql restart
+# systemctl status postgresql
+</pre>
+
+3. Activate pg_stat_module
+<pre>
+$ psql engine -U postgres -c "CREATE EXTENSION pg_stat_statements;"
+</pre>
+
+Do not forget to deactivate the extention before the oVirt Engine db upgrade, else the upgrade is not possible:
+<pre>
+$ psql engine -U postgres -c "DROP EXTENSION pg_stat_statements;"
+</pre>
+
+From now you can watch the queries statistics by running:
+<pre>
+$ psql engine -U postgres -c "select query, calls, rows from pg_stat_statements() order by calls desc;"
+</pre>
+
+The statistics can be reset by the command:
+<pre>
+$ psql engine -U postgres -c "SELECT pg_stat_statements_reset();"
+</pre>
+
+== pg_top tool ==
+
+'''pg_top''' allows to monitor PostgreSQL processes. The usage is similar to Unix top command for monitoring of OS processes.
+Instalation on Fedora:
+<pre>
+# yum install pg_top
+</pre>
+
+Project site:
+* http://ptop.projects.pgfoundry.org/
+
+Usage:
+<pre>
+pg_top -U postgres -d engine -p 5432
+</pre>
+
+Purpose:
+# running SQL statement of a process
+# query plan of a currently running SQL statement
+# locks held by a process.
+# user table statistics
+# user index statistics
+
+== Database debug logging ==
+
+Edit PostgreSQL configuration file:
+<pre>
+# vi /var/lib/pgsql/data/postgresql.conf
+</pre>
+
+Set the following values inside the file:
+<pre>
+log_line_prefix = '%t %c %u ' # time sessionid user
+log_statement = 'all'  # none, ddl, mod, all
+</pre>
+
+Restart the service:
+<pre>
+# service postgresql restart
+</pre>
+
+And watch the log files:
+<pre>
+# cd /var/lib/pgsql/data/pg_log
+# tail -f postgresql-Wed.log
+</pre>
