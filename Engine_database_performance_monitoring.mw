@@ -47,7 +47,7 @@ Restart the db service:
 # systemctl status postgresql
 </pre>
 
-3. Activate pg_stat_module
+Activate pg_stat_module
 <pre>
 $ psql engine -U postgres -c "CREATE EXTENSION pg_stat_statements;"
 </pre>
