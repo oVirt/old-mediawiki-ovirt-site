@@ -48,19 +48,6 @@ of 'esc'+':' combination ;)
    Existing Maven Projects --> 
    browse into your engine sources direcotry and click OK</pre>
 
-* Change project settings to Resolve compilation errors
-
-<pre>
-restapi-definition ->  project ->  properties -> java build path ->  source ->  add source folder ->  target/generated-sources/xjc
-gwt-extentions ->  project ->  properties ->  java build path -> source ->  add source folder->  target/generated-sources/annotations
-gwt-common ->  project ->  properties ->  java build path -> source ->  add source folder->  target/generated-sources/annotations
-gwt-common -> project -> properties -> Projects -> Add -> common, compat and uicommon-web
-webadmin ->  project ->  properties ->  java build path -> source ->  add source folder->  target/generated-sources/{annotations,gwt}
-frontend ->  project ->  properties ->  java build path -> source ->  add source folder->  target/generated-sources/gwt
-uicompat -> project -> properties -> Projects -> Add -> common and compat
-generic-api -> project -> properties -> Projects -> Add -> common, compat and utils
-userportal-gwtp -> project ->  properties ->  java build path -> source ->  add source folder->  target/generated-sources/gwt,annotations
-</pre>
 * You may need to first build the project directly through maven as some referenced projects are auto generated. close eclipse, build with maven and open eclipse again.
 
 * Make sure that you import the engine code formatter into eclipse '''before''' starting development. The engine maven build uses [http://checkstyle.sourceforge.net checkstyle] to check coding standards. One of the standards checked is that the code should not contain tabs or trailing whitespaces. Since eclipse inserts tabs by default for code formatting, you can end up with a lot of compilation errors in command line maven build if you don't follow this (and the next) step.
