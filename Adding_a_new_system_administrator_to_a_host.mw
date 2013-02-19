@@ -15,6 +15,10 @@ useradd foo
 useradd -g wheel foo  ## add to just one group
 useradd -G wheel,puppet ## add to more than one group
 </pre> -->
+* If the system uses e.g. the <code>wheel</code> group for sudo permissions, add the user to the appropriate group for sudo permission:
+<pre>
+usermod -a -G wheel foo
+</pre>
 * Create the user's password to activate the account; the user will not use this password to login, but they need it for 'sudo':
 <pre>
 passwd foo
@@ -60,10 +64,6 @@ visudo					## Add the following stanza
 #* Allow root to run any commands anywhere
 root    ALL=(ALL)       ALL
 foo   ALL=(ALL)       ALL
-</pre>
-* If the system uses e.g. the 'wheel' group for sudo permissions, add the user to the appropriate group for sudo permission:
-<pre>
-usermod -a -G wheel foo
 </pre>
 * The final permissions:
 <pre>
