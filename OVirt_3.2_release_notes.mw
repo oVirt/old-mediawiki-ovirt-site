@@ -5,7 +5,31 @@ The oVirt Project is pleased to announce the availability of its third formal re
 = What's New? =
 
 The oVirt 3.2 release includes these notable changes.
+<!--
+==Headline Features==
+{| style="width: 100%"
+|- align="left"
+| <big>'''Live Storage Migration'''</big>
+You can now move running VMs along with their disks from one storage domain to another.
+Up til now, if you wanted to move a VM, you had to make sure it's powered off before trying to move it to another storage domain. Only then the "Move" option would be enabled.
+This meant, of course, that during the moving of the VM, it would be inaccessible for what could last a long time.  Now what you'll see when choosing a running VM, is the "Move" option enabled, enabling you to move the running to VM to another storage domain at your choosing. The strong impact of this new option is that users are now able to use the VM during the migration process, oblivious to it. This obviously means that any new data processed on the running VM during the migration processed is retained.
+|| <big>'''Live Snapshots'''</big>
+Live snapshots support is added in this release, meaning users can now create snapshots of a virtual machine while it's running.<br/> In past releases, your VM had to be powered off in order for you to be able to create a snapshot of it. The drawbacks of this limitation are clear.<br/> This new feature allows the user to create snapshots while VMs are running.
+|- align="left"
+| <big>'''Storage Domain Live Upgrade'''</big>
+As time goes by and new releases are published,  new features are added. Sometimes these new features cannot be incorporated into older Data Center formats.<br/>
+Up til now, you could enjoy these new features by one of two ways: either create a new Data Center with the new format, or deactivate a current one in order to upgrade it. Both solutions have their own drawbacks.<br/>
+Now Ovirt came up with this new feature, allowing upgrades from older Data Center formats to new ones, while the Data Center is active and VMs in it's storage domains are running.<br/>
+Now you and your VMs' users can keep on working while you upgrade your old formats Data Centers. When this process is over, you'll be able to enjoy the new version's features, without an interrupt to your work, and using the same storage domains and VMs you were already using, minimizing the headache involved in upgrades. 
+|| <big>'''UI Plugins'''</big>
+UI plugins can now be added to the Administration Portal (WebAdmin). When administrators want either to integrate with third party applications, or just add UI components to not supplied by oVirt to WebAdmin, they can just create their own set of UI extensions, package them, and distribute them as UI plugins. These plugins can then be used with oVirt Engine through WebAdmin. These are some of the supported main UI components you might want to add: main tabs, action buttons, context menue actions, sub-tabs. You may also add events to act upon on selection of certain objects.
+|- align="left"
+| <big>'''Smart Cards'''</big>
+Virtual Machines can now have enhanced security authentication using smart cards. Administrators can now enable support of smart cards per VM, allowing a smart card to be attached to it through a client. This option may be configured from all managing APIs: WebAdmin, User portal, REST API, and CLI.
+|}
 
+
+A more elaborate list of changes:-->
 == Installer ==
 * The Application Mode option has been added to the engine-setup script, which prompts users to configure the engine for virtualization management only, Gluster management only, or both. 
 * oVirt nodes and Fedora hosts can be registered to the oVirt engine from the administration portal without using the HTTP(s) protocol.
