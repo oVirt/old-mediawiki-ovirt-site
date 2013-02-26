@@ -27,6 +27,51 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 ! Otopi implementation
 ! Owner
 |-
+| Verify that root is the user executing the script
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
+|
+|-
+| Allow unprivileged user ro run a development installation
+|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done
+|
+|-
+| Allow logging
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
+|
+|-
+| Support AIO plugin
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+|Initialize MiniYum
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+|Handle second execution warning
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Handle loading and validating params from answer file
+|style="background-color: lightgreen;"| Done (--answer-file)
+|style="background-color: lightgreen;"| Done (--config-append)
+|
+|-
+| Mask input sets
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Log masked configuration
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
 | Set Max Shared Memory
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
