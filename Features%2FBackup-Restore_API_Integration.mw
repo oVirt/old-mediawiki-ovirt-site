@@ -62,7 +62,7 @@ File level restore can be performed in-guest or off-host. Mount the volumes of t
 # Unlock
 
 
-
+[[File:Tsm-int.JPG]]
 === User interface === 
 
 ==== This feature will be implemented in phases: ==== 
