@@ -28,212 +28,212 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 ! Owner
 |-
 | Set Max Shared Memory
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Check for supported Java VM
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | CA Generation
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Extract CA fingerprint
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Extract non password key for log collector
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |-
 | Extract non password key for Apache
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Extract SSH fingerprint
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Configure engine service - database
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Configure engine service - Java
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Configure engine service - Protocols
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Configure .pgpass file
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Encrypt DB Password
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Push the encrypted password into the local configuration file
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Start / Stop rhevm-etl service when needed
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Start / Stop rhevm-notifierd service when needed
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Upgrade engine database if already exist
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Install engine database if doesn't exist
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Set Application Mode (Both, Virt, Gluster)
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Update VDC Options
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Update default data center storage type
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Configure engine-log-collector
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Configure engine-iso-uploader
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Configure engine-image-uploader
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Configure PostgreSQL max_connections if using local DB
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Configure NFS exports for ISO Domain if requested
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Allow importing existing NFS ISO Domain
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Create new NFS ISO Domain
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Migrate existing NFS ISO exports from /etc/exports to /etc/exports.d/
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Set selinux context for NFS ISO mount points
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | set NFS/portmap ports by overriding /etc/sysconfig/nfs
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Enable the rpcbind and nfs services
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Load files (iso,vfd) from existing rpms to ISO domain
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Configure and enable iptables if requested
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Configure and enable FirewallD if requested
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Start / Stop Engine service when needed
-| Done
-| Done
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Enable httpd_can_network_connect selinux flag
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Backup old Apache httpd config when needed
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Configure Apache mod_ssl for using  engine apache keys
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Configure Apache for listening on requested HTTP port
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Configure Apache for listening on requested HTTPS port
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Configure Apache as proxy for the requests to the jboss service
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |-
 | Enable the httpd service
-| Done
-| Not implemented
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
 |
 |}
 
