@@ -37,6 +37,16 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |style="background-color: lightgreen;"| Done
 |
 |-
+| Checking total memory
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Generate answer file
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
+|
+|-
 | Allow logging
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
@@ -153,6 +163,11 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |
 |-
 | Support CONFIG_NFS option
+|style="background-color: lightgreen;"| Done
+|style="background-color:red;"| Not implemented
+|
+|-
+| Display summary in interactive mode
 |style="background-color: lightgreen;"| Done
 |style="background-color:red;"| Not implemented
 |
@@ -341,6 +356,11 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |style="background-color: red;"| Not implemented
 |
 |-
+| Check firewall managers installed in the system
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
 | Configure and enable iptables if requested
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
@@ -410,7 +430,6 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
 |
-
 |}
 
 === Detailed Description ===
