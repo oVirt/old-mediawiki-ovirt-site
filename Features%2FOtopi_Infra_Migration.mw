@@ -432,6 +432,125 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |
 |}
 
+==== engine-cleanup ====
+{| class="wikitable" border="1"
+|-
+! Feature
+! Existing implementation
+! Otopi implementation
+! Owner
+|-
+| Verify that root is the user executing the script
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Allow unprivileged user ro run a development cleanup
+|style="background-color: red;"| Not implemented
+|style="background-color: red;"| Not implemented
+|
+|-
+| Support unattended-clean option
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Support dont-drop-db option
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Support dont-remove-ca option
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Support remove-nfs-exports option
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Support remove-exported-content option
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Change working dir to the root directory
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Allow logging
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Ask user to proceed with cleanup in interactive mode
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Stop Engine service when needed
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Backup engine database if drop requested
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Drop engine database if requested
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Clean pgpass  if drop requested
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Clean sysctl configuration
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Backup CA if remove requested
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Remove CA  if requested
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Stop engine-notifierd when needed
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Clean ISO domain NFS exports if requested
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Clean ISO domain exported directories if requested
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Add info message to the user finalizing the  successful cleanup
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Add info message on where the logs are located
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|}
+
 === Detailed Description ===
 TBD
 
