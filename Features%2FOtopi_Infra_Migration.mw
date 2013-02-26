@@ -47,6 +47,36 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |style="background-color: red;"| Not implemented
 |
 |-
+| Support FIREWALL_MANAGER option
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Support OVERRIDE_HTTPD_CONFIG option
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Support HTTP_PORT option
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Support HTTPS_PORT option
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Support RANDOM_PASSWORDS option
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
+| Support MAC_RANGE option
+|style="background-color: lightgreen;"| Done
+|style="background-color: red;"| Not implemented
+|
+|-
 |Initialize MiniYum
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
