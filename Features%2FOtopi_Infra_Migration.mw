@@ -106,6 +106,54 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 | Done
 | Not implemented
 |-
+| Configure engine-log-collector
+| Done
+| Not implemented
+|-
+| Configure engine-iso-uploader
+| Done
+| Not implemented
+|-
+| Configure engine-image-uploader
+| Done
+| Not implemented
+|-
+| Configure PostgreSQL max_connections if using local DB
+| Done
+| Not implemented
+|-
+| Configure NFS exports for ISO Domain if requested
+| Done
+| Not implemented
+|-
+| Allow importing existing NFS ISO Domain
+| Done
+| Not implemented
+|-
+| Create new NFS ISO Domain
+| Done
+| Not implemented
+|-
+| Migrate existing NFS ISO exports from /etc/exports to /etc/exports.d/
+| Done
+| Not implemented
+|-
+| Set selinux context for NFS ISO mount points
+| Done
+| Not implemented
+|-
+| set NFS/portmap ports by overriding /etc/sysconfig/nfs
+| Done
+| Not implemented
+|-
+| Enable the rpcbind and nfs services
+| Done
+| Not implemented
+|-
+| Load files (iso,vfd) from existing rpms to ISO domain
+| Done
+| Not implemented
+|-
 |
 |
 |
