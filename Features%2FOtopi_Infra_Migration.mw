@@ -39,7 +39,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Checking total memory
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: yellow;"| Feedback <ref name="memcheck" />
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Generate answer file
@@ -431,6 +431,9 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |style="background-color: red;"| Not implemented
 |
 |}
+<references>
+<ref name="memcheck"> The option <code>--no-mem-check</code> is now <code>--otopi-environment="OVESETUP_SYSTEM/memCheck=bool:False"</code> </ref>
+</references>
 
 ==== engine-cleanup ====
 {| class="wikitable" border="1"
