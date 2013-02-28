@@ -349,7 +349,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 | Enable the rpcbind and nfs services
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
-|
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Load files (iso,vfd) from existing rpms to ISO domain
 |style="background-color: lightgreen;"| Done
