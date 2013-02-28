@@ -164,8 +164,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support CONFIG_NFS option
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
-|
+|style="background-color: yellow;"| Feedback
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Display summary in interactive mode
 |style="background-color: lightgreen;"| Done
@@ -343,12 +343,12 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | set NFS/portmap ports by overriding /etc/sysconfig/nfs
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: yellow;"| Feedback
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Enable the rpcbind and nfs services
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: yellow;"| Feedback
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Load files (iso,vfd) from existing rpms to ISO domain
