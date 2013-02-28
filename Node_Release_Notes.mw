@@ -1,5 +1,9 @@
 == oVirt Node Release Notes ==
 
+== 2.6.1 Release Notes ==
+* Fix for [https://bugzilla.redhat.com/show_bug.cgi?id=911699 CVE-2013-0293]
+* Updated vdsm and latest Fedora 18 packages
+
 == 2.6.0 Release Notes ==
 * Move to Fedora 18 base
 * Add new Setup UI (based on python-urwid)
