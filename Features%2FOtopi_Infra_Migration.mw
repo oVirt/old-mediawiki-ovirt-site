@@ -298,17 +298,17 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Configure engine-log-collector
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+| style="background-color: yellow;"| Feedback
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Configure engine-iso-uploader
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+| style="background-color: yellow;"| Feedback
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Configure engine-image-uploader
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+| style="background-color: yellow;"| Feedback
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Configure PostgreSQL max_connections if using local DB
