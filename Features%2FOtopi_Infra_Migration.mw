@@ -44,7 +44,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Generate answer file
 |style="background-color: lightgreen;"| Done
-|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done<ref name="generateanswer" />
 |
 |-
 | Allow logging
@@ -183,8 +183,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |
 |-
 | Handle loading and validating params from answer file
-|style="background-color: lightgreen;"| Done (--answer-file)
-|style="background-color: lightgreen;"| Done (--config-append)
+|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done<ref name="answer" />
 |
 |-
 | Mask input sets
@@ -344,7 +344,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 | set NFS/portmap ports by overriding /etc/sysconfig/nfs
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
-|
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Enable the rpcbind and nfs services
 |style="background-color: lightgreen;"| Done
@@ -433,6 +433,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |}
 <references>
 <ref name="memcheck"> The option <code>--no-mem-check</code> is now <code>--otopi-environment="OVESETUP_SYSTEM/memCheck=bool:False"</code> </ref>
+<ref name="generateanswer">The option <code>--gen-answer-file</code> is now <code>--generate-answer</code> </ref>
+<ref name="answer">The option <code>--answer-file</code> is now <code>--config-append</code> </ref>
 </references>
 
 ==== engine-cleanup ====
