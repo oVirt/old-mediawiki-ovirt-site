@@ -309,7 +309,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 | Configure engine-image-uploader
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
-|
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Configure PostgreSQL max_connections if using local DB
 |style="background-color: lightgreen;"| Done
