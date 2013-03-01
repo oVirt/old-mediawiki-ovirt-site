@@ -62,7 +62,7 @@ oVirt engine is using maven version 3.0.x. Building with maven 2 is not supporte
 
 '''Other'''
 
-If your operating system doesn't have a package for maven 3 you can download it from the [http://maven.apache.org/download.cgi maven web site] and install it manuall. First uncompress the downloaded file to your preferred directory, for example to your home directory:
+If your operating system doesn't have a package for maven 3 you can download it from the [http://maven.apache.org/download.cgi maven web site] and install it manually. First uncompress the downloaded file to your preferred directory, for example to your home directory:
 
 <pre>
 $> cd
