@@ -8,13 +8,14 @@ $> at the beginning of the command stands for execution as user.
 </nowiki>
 
 == Prerequisites ==
-#  Linux based operating system with support for OpenJDK 1.7.0, Maven 2 (3 recommended) and PostgreSQL 8.4.8 (or higher).
+#  Linux based operating system with support for OpenJDK 1.7.0, Maven 3 and PostgreSQL 8.4.8 (or higher).
 #  An Internet connection.
 
 Note that while this guide was written and tested using Fedora, other Linux Distributions can and have been used to build the ovirt-engine project. Where distribution specific packaging commands are specified in this guide - use the syntax that applies to your distribution.
 
 <!--<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
 <span style="background:#333333;color:#FFF;text-decoration:overline">$> Step 1</span></p>-->
+
 == Installing Build Tools ==
 === Installing OpenJDK ===
  
