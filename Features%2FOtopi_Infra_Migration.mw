@@ -129,12 +129,12 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support DB_HOST option
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
+|style="background-color: yellow;"| Feedback <ref name="dbhost" />
 |
 |-
 | Support DB_PORT option
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
+|style="background-color: yellow;"| Feedback <ref name="dbport" />
 |
 |-
 | Support DB_ADMIN option
@@ -441,6 +441,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 <ref name="httpsport">The option <code>HTTPS_PORT=443</code> is now <code>OVESETUP_CONFIG/httpsPort=int:443</code> </ref>
 <ref name="appmode">The option <code>APPLICATION_MODE=both</code> is now <code>OVESETUP_CONFIG/applicationMode=str:both</code> </ref>
 <ref name="orgname">The option <code>ORG_NAME=organization</code> is now <code>OVESETUP_PKI/organization=str:organization</code> </ref>
+<ref name="dbhost">The option <code>DB_HOST=localhost</code> is now <code>OVESETUP_DB/host=str:localhost</code> </ref>
+<ref name="dbhost">The option <code>DB_PORT=5432</code> is now <code>OVESETUP_DB/port=int:5432</code> </ref>
 </references>
 
 ==== engine-cleanup ====
