@@ -69,12 +69,12 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support HTTP_PORT option
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done<ref name="httpport" />
 |
 |-
 | Support HTTPS_PORT option
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done<ref name="httpsport" />
 |
 |-
 | Support RANDOM_PASSWORDS option
@@ -94,7 +94,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support HOST_FQDN option
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
+|style="background-color: lightgreen;"| Done<ref name="fqdn" />
 |
 |-
 | Support AUTH_PASS option
@@ -104,12 +104,12 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support ORG_NAME option
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
+|style="background-color: lightgreen;"| Done<ref name="orgname" />
 |
 |-
 | Support APPLICATION_MODE option
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
+|style="background-color: lightgreen;"| Done<ref name="appmode" />
 |
 |-
 | Support DC_TYPE option
@@ -436,6 +436,11 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 <ref name="generateanswer">The option <code>--gen-answer-file</code> is now <code>--generate-answer</code> </ref>
 <ref name="answer">The option <code>--answer-file</code> is now <code>--config-append</code> </ref>
 <ref name="confignfs">The option <code>CONFIG_NFS=yes</code> is now <code>OVESETUP_NFS/configure=bool:True</code> </ref>
+<ref name="fqdn">The option <code>HOST_FQDN=host</code> is now <code>OVESETUP_CONFIG/fqdn=str:host</code> </ref>
+<ref name="httpport">The option <code>HTTP_PORT=80</code> is now <code>OVESETUP_CONFIG/httpPort=int:80</code> </ref>
+<ref name="httpsport">The option <code>HTTPS_PORT=443</code> is now <code>OVESETUP_CONFIG/httpsPort=int:443</code> </ref>
+<ref name="appmode">The option <code>APPLICATION_MODE=both</code> is now <code>OVESETUP_CONFIG/applicationMode=str:both</code> </ref>
+<ref name="orgname">The option <code>ORG_NAME=organization</code> is now <code>OVESETUP_PKI/organization=str:organization</code> </ref>
 </references>
 
 ==== engine-cleanup ====
