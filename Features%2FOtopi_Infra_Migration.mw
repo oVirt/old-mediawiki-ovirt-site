@@ -149,7 +149,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support DB_SECURE_CONNECTION option
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
+|style="background-color: yellow;"| Feedback <ref name="dbsecure" />
 |
 |-
 | Support NFS_MP option
@@ -443,6 +443,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 <ref name="orgname">The option <code>ORG_NAME=organization</code> is now <code>OVESETUP_PKI/organization=str:organization</code> </ref>
 <ref name="dbhost">The option <code>DB_HOST=localhost</code> is now <code>OVESETUP_DB/host=str:localhost</code> </ref>
 <ref name="dbport">The option <code>DB_PORT=5432</code> is now <code>OVESETUP_DB/port=int:5432</code> </ref>
+<ref name="dbsecure">The option <code>DB_SECURE_CONNECTION=no</code> is now <code>OVESETUP_DB/secured=bool:False</code> </ref>
 </references>
 
 ==== engine-cleanup ====
