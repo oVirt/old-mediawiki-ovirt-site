@@ -155,7 +155,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 | Support NFS_MP option
 |style="background-color: lightgreen;"| Done
 |style="background-color:red;"| Not implemented
-|
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Support ISO_DOMAIN_NAME option
 |style="background-color: lightgreen;"| Done
@@ -164,7 +164,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support CONFIG_NFS option
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: yellow;"| Feedback<ref name="confignfs" />
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Display summary in interactive mode
@@ -435,6 +435,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 <ref name="memcheck"> The option <code>--no-mem-check</code> is now <code>--otopi-environment="OVESETUP_SYSTEM/memCheck=bool:False"</code> </ref>
 <ref name="generateanswer">The option <code>--gen-answer-file</code> is now <code>--generate-answer</code> </ref>
 <ref name="answer">The option <code>--answer-file</code> is now <code>--config-append</code> </ref>
+<ref name="confignfs">The option <code>CONFIG_NFS=yes</code> is now <code>OVESETUP_NFS/configure=bool:True</code> </ref>
 </references>
 
 ==== engine-cleanup ====
