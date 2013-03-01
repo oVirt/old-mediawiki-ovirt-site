@@ -154,13 +154,13 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support NFS_MP option
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
+|style="background-color: yellow;"| Feedback 
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Support ISO_DOMAIN_NAME option
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
-|
+|style="background-color: yellow;"| Feedback 
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Support CONFIG_NFS option
 |style="background-color: lightgreen;"| Done
@@ -323,13 +323,13 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Allow importing existing NFS ISO Domain
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+|style="background-color: yellow;"| Feedback 
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Create new NFS ISO Domain
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+|style="background-color: yellow;"| Feedback 
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Migrate existing NFS ISO exports from /etc/exports to /etc/exports.d/
 |style="background-color: lightgreen;"| Done
