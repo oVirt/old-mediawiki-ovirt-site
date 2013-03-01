@@ -442,7 +442,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 <ref name="appmode">The option <code>APPLICATION_MODE=both</code> is now <code>OVESETUP_CONFIG/applicationMode=str:both</code> </ref>
 <ref name="orgname">The option <code>ORG_NAME=organization</code> is now <code>OVESETUP_PKI/organization=str:organization</code> </ref>
 <ref name="dbhost">The option <code>DB_HOST=localhost</code> is now <code>OVESETUP_DB/host=str:localhost</code> </ref>
-<ref name="dbhost">The option <code>DB_PORT=5432</code> is now <code>OVESETUP_DB/port=int:5432</code> </ref>
+<ref name="dbport">The option <code>DB_PORT=5432</code> is now <code>OVESETUP_DB/port=int:5432</code> </ref>
 </references>
 
 ==== engine-cleanup ====
