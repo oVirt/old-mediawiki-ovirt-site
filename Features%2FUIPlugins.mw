@@ -209,6 +209,10 @@ This plugin brings integration with [http://www.nagios.org/ Nagios] or [https://
 * Installation documentation: https://labs.ovido.at/monitoring/wiki/ovirt-monitoring-ui-plugin:install
 * UI plugin source code: https://labs.ovido.at/monitoring/wiki/ovirt-monitoring-ui-plugin:svn
 
+<br/>
+[[File:Ovirt-monitoring hosts graph.png|thumb|none|Monitoring Details sub tab]]
+<br/>
+
 === Foreman UI Plugin ===
 The purpose of this plugin is to allow administrators to see details on [http://theforeman.org/ Foreman] related entities (such as VMs).
 * Author: Oved Ourfali <ovedo@redhat.com>
@@ -216,11 +220,19 @@ The purpose of this plugin is to allow administrators to see details on [http://
 * Foreman plugin source code: https://github.com/oourfali/foreman_ovirt
 * UI plugin source code: available from [[#Sample_UI_plugins|sample UI plugin repository]] as <code>foreman-plugin</code>
 
+<br/>
+[[File:Foreman view details.png|thumb|none|Foreman Details sub tab]]
+<br/>
+
 === Shell In A Box UI Plugin ===
 Using oVirt WebAdmin, make SSH connection to a host and emulate a terminal via [http://code.google.com/p/shellinabox/ Shell In A Box].
 * Author: Daniel Erez <derez@redhat.com>
 * Documentation: http://derezvir.blogspot.co.il/2013/01/ovirt-webadmin-shellinabox-ui-plugin.html
 * UI plugin source code: available from [[#Sample_UI_plugins|sample UI plugin repository]] as <code>shellinabox-plugin</code>
+
+<br/>
+[[File:ShellBox SubTab.png|thumb|none|Shell Box sub tab]]
+<br/>
 
 == References ==
 * [[Features/UIPluginsOriginalDesignNotes|Original design notes]]
