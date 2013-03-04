@@ -33,11 +33,7 @@ compatibility cases.
 To interact with libosinfo, a JNA standalone application, RMI capable,  will be used and the Ovirt Engine would have a the RMI client 
 invoking it, and controlling its life-cycle.
 
-
-<gallery>
-File:libosinfo_seq_diagram.png|libosinfo sequence diagram
-</gallery>
-
+[[File:libosinfo_diagram.png]]
 
 === Client and Server Lifecycle ===
 
