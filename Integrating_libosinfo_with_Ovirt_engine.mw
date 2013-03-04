@@ -140,7 +140,7 @@ plug the memory checks to libosinfo instead the use of Config values.
 *libosinfo project page on FedoraHosted
 https://fedorahosted.org/libosinfo/
 
-=== Dependencies / Related Features ===
+=== Dependencies ===
 
 {| class="wikitable" border="1"
 |-
@@ -158,6 +158,8 @@ https://fedorahosted.org/libosinfo/
 |-
 |}
 
+=== Related Features ===
+[http://www.ovirt.org/Features/Engine_support_for_PPC64|Engine support for PPC 64 bit]
 
 === TODO ===
 *add cpuArch to OVF reader/writer
