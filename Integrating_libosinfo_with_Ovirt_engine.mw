@@ -70,9 +70,8 @@ It exposes a simplified subset version of libosinfo API:
     long getRecommendedRam(String osId, CpuArch cpuArch);
 
 === Dependencies / Related Features ===
-ovirt should depend on libosinfo RPM which ships with Fedora 17 and RHEL 6.3
-# libosinfo package: libosinfo-0.0.4-2
-# libosinfo OS xml files location: /usr/share/libosinfo/data/oses
+Libosinfo packages
+# Fedora 17  - libosinfo-0.1.2
 
 === Code Chages ===
 ==== Project structure ====
