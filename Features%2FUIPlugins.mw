@@ -210,7 +210,7 @@ This plugin brings integration with [http://www.nagios.org/ Nagios] or [https://
 * UI plugin source code: https://labs.ovido.at/monitoring/wiki/ovirt-monitoring-ui-plugin:svn
 
 <br/>
-[[File:Ovirt-monitoring hosts graph.png|thumb|none|Monitoring Details sub tab]]
+[[File:Ovirt-monitoring hosts graph.png|Monitoring Details sub tab]]
 <br/>
 
 === Foreman UI Plugin ===
@@ -221,7 +221,7 @@ The purpose of this plugin is to allow administrators to see details on [http://
 * UI plugin source code: available from [[#Sample_UI_plugins|sample UI plugin repository]] as <code>foreman-plugin</code>
 
 <br/>
-[[File:Foreman view details.png|thumb|none|Foreman Details sub tab]]
+[[File:Foreman view details.png|Foreman Details sub tab]]
 <br/>
 
 === Shell In A Box UI Plugin ===
@@ -231,7 +231,7 @@ Using oVirt WebAdmin, make SSH connection to a host and emulate a terminal via [
 * UI plugin source code: available from [[#Sample_UI_plugins|sample UI plugin repository]] as <code>shellinabox-plugin</code>
 
 <br/>
-[[File:ShellBox SubTab.png|thumb|none|Shell Box sub tab]]
+[[File:ShellBox SubTab.png|Shell Box sub tab]]
 <br/>
 
 == References ==
