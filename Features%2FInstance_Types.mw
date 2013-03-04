@@ -181,6 +181,10 @@ The specific values means:
 |-
 | is_disabled || disabled-template (for templates only) || Y || || N || || || N || || || N || || || || || ||
 |-
+| vncKeyboardLayout || VNC specific keyboard layout || Y || || N || || || Y || || || N || || || ||  || Instance || Not in GUI, only in REST
+|-
+| tunnelMigration || use libvirt-to-libvirt communication || Y || || N || || || Y || || || N || || || ||  || Instance || Not in GUI, only in REST
+|-
 |}
 
 == Entities' Details ==
