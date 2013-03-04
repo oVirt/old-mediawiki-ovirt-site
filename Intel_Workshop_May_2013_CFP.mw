@@ -6,14 +6,14 @@ Ovirt strives to become the first and best truly open and comprehensive data cen
 The May 2013 oVirt workshop will be held at [https://maps.google.com/maps?q=No.+880+Zi+Xing+Road+Zizhu+Science+Park+Minhang,+Shanghai+200241+China&hl=en&sll=23.141807,113.324834&sspn=0.077662,0.153122&t=h&hq=No.+880+Zi+Xing+Road+Zizhu+Science+Park+Minhang,+Shanghai+200241+China&radius=15000&z=13 Intel's Shanghai Campus].  This workshop will be designed to encourage collaboration in our community, as well as help answer questions about the project from both a developer and user's perspective.  We look forward to seeing you there!
 
 == Suggested Topics ==
-Getting started developing oVirt
-oVirt for the systems administrator
-Where oVirt fits 
-Case studies on cost savings with oVirt and Open Source data center virtualization
-Troubleshooting oVirt
-Hardware optimations for virtualization
-oVirt Plugin development
-oVirt architecture from a security and best practices point of view. 
+* Getting started developing oVirt
+* oVirt for the systems administrator
+* Where oVirt fits in the enterprise
+* Case studies on cost savings with oVirt and Open Source data center virtualization
+* Troubleshooting oVirt
+* Hardware optimations for virtualization
+* oVirt Plugin development
+* oVirt architecture from a security and best practices point of view.
 
 ==Proposal Guidelines==
 
