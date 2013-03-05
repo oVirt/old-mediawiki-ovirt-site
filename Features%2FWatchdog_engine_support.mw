@@ -112,6 +112,7 @@ Please comment on the [[Talk:Features/Watchdog_engine_support|Discussion page]].
 # click on the new VM in the list
 # click '''edit'''
 # check if the watchdog device is set correctly
+# use the rest api to see if the VM has the watchdog card
 # click cancel
 # start the VM
 # click on the console icon to open SPICE console
