@@ -143,3 +143,15 @@ Depends:  [[#Create_template_with_watchdog_.28UI.29|Create vm with watchdog from
 # edit the newvly created VM
 # go to the '''high availability''' tab
 # check that the watchdog settings are the same as in the template
+
+==== Create vm with watchdog (REST-API) ====
+
+# use the rest api to create a vm with a <watchdog> tag ([[#REST Api changes|see above]])
+# check on the rest api if the watchdog card is persisted
+
+==== Add watchdog to existing VM (REST-API) ====
+
+# use the rest api to create a vm with a <watchdog> tag ([[#REST Api changes|see above]])
+# check on the rest api if the watchdog card is persisted
+
+==== Remove watchdog from VM (REST-API) ====
