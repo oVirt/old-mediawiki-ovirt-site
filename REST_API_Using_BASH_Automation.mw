@@ -21,9 +21,11 @@ It uses:
 The script has two parts:
 * general support routines (HTTP method call using curl client, XPath parser)
 * environment synchronization script
-For download:
+For download: 
 * rest_api_routines.sh
 * synch_env.sh
+Here: [[File:Rest_api_files.tar.gz]]
+
 The following sections contain snipples of code showing the creation of a host in the Engine.
 
 == General support routines ==
