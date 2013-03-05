@@ -413,8 +413,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Enter rpm versions into yum version-lock
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+|style="background-color: yellow;"| Feedback
+|[[User:Alourie| Alex Lourie]]
 |-
 | Add info message to the user finalizing the  successful install
 |style="background-color: lightgreen;"| Done
