@@ -93,3 +93,43 @@ Please comment on the [[Talk:Features/Watchdog_engine_support|Discussion page]].
 
 [[Category:Feature]]
 [[Category:SLA]]
+
+=== Test cases ===
+
+* detecting the watchdog
+** i6300esb is a pci device, the command ''`lspci | grep watchdog -i`'' in a guest linux OS will show you the watchdog card if it is installed
+** ib700: TODO
+
+==== Create VM with watchdog (UI) ====
+
+# Create a server VM
+# set VM name
+# click on "High Availability"
+# set watchdog card to ''''i6300esb''' and watchdog action to '''reset'''
+# save VM
+# click on the new VM in the list
+# click '''edit'''
+# check if the watchdog device is set correctly
+# click cancel
+# start the VM
+# click on the console icon to open SPICE console
+# boot any linux distribution on the VM
+# see if watchdog card is installed
+
+==== Create template with watchdog (UI) ====
+
+Dependens on [[#Create_VM_with_watchdog_(UI)]]
+
+# Create a server VM
+# set VM name
+# click on "High Availability"
+# set watchdog card to ''''i6300esb''' and watchdog action to '''reset'''
+# save VM
+# create template from vm
+# go to the templates tab
+# click on the newly created template
+# click on '''edit'''
+# click on '''high availablity'''
+# check if watchdog is set correctly
+
+=== Create vm with watchdog from template (UI) ===
