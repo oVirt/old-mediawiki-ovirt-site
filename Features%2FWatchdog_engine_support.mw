@@ -132,4 +132,14 @@ Dependens on [[#Create_VM_with_watchdog_(UI)]]
 # click on '''high availablity'''
 # check if watchdog is set correctly
 
-=== Create vm with watchdog from template (UI) ===
+==== Create vm with watchdog from template (UI) ====
+
+Depends:  [[#Create_template_with_watchdog_.28UI.29|Create vm with watchdog from template (UI)]]
+
+# go to the '''Virtual Machines''' tab
+# click on the '''new server''' button
+# select the template with watchdog as template
+# save the VM
+# edit the newvly created VM
+# go to the '''high availability''' tab
+# check that the watchdog settings are the same as in the template
