@@ -43,6 +43,7 @@ Vdsm should pass device custom properties to its hook scripts.
 === Documentation / External references ===
 * Benoit ML asking for per-vNIC custom properties: http://lists.ovirt.org/pipermail/users/2012-November/010857.html
 * '''TBD''' Quantum PoC
+* Almost any interesting hook for [https://bugzilla.redhat.com/show_bug.cgi?id=908656 hotplug disk] is going to require per-disk triggering proprty
 
 === Comments and Discussion ===
 
