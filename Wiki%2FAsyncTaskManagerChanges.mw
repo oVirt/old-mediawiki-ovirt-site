@@ -67,7 +67,7 @@ The service locator will also provide an Async Task Manager object to the BLL (h
 The following diagram shows the interface to be provided by AsyncTaskManager Module:
 
 
-[[File:AsynctTaskManagerClassDiagram.png‎]]
+[[File:Async_Task_Manager_class_diagram.png]]
 
 
 A task in the suggested design is used to monitor/control an asynchronous flow at an external system (i.e - SPM, Gluster, Cinder)
