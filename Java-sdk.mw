@@ -18,7 +18,15 @@ __TOC__
 === Creating the proxy ===
 ----------------------------------------
 
-[[File:0-1jsdk.jpg]]
+[[File:0-1jdk.jpg]]
+
+==== Authenticating using username and password ====
+
+[[File:0-1-1jdk.jpg]]
+
+==== Authenticating using sessionid ====
+
+[[File:0-1-2jdk.jpg]]
 
 ===  Listing all collections ===
 --------------------------------------------
