@@ -120,7 +120,7 @@ Targeted Ubuntu Version: '''Ubuntu Server 12.10'''
 |-
 | /sys/class/cpuid/ 
 | equivalent not found
-| change the code to use os.listdir('/sys/devices/system/cpu') and filter the result by pattern 'cpu[0-9]+'
+| change the code to use os.listdir('/sys/devices/system/cpu') and filter the result by pattern 'cpu[0-9]+'.  [http://gerrit.ovirt.org/#/c/12815/ Patch]
 |-
 | /etc/iscsi/initiatorname.iscsi 644
 | same file but permission is 600, vdsm cannot read it
@@ -152,10 +152,12 @@ Targeted Ubuntu Version: '''Ubuntu Server 12.10'''
 
 * bug in Ubuntu kill, parsing kill -9 -xxx will go wrong
 :::'''Workaround''': must use kill -9 -- -xxx
+:::[http://gerrit.ovirt.org/#/c/12817/ Patch]
 
 * udev problem
 :::There is a 85-lvm2.rules under Ubuntu /lib/udev/rules.d/, it sets the owner group of LV to "disk', preventing VDSM from chown-ing, reading, writing the LV. VDSM will chown the LV in the code and 12-vdsm-lvm.rules does this as well. However 85-lvm2.rules are run after 12-vdsm-lvm.rules, so the owner is always set by 85-lvm2.rules "root:disk" finally. In Fedora, there is no such 85-lvm2.rules, so there is no such problem.
 :::'''Workaround''':rename 12-vdsm-lvm.rules to 86-vdsm-lvm.rules, so that VDSM udev rules run after the default lvm rules.
+:::[http://gerrit.ovirt.org/#/c/12816/ Patch]
 
 = upstart vs. systemd =
 As https://wiki.ubuntu.com/systemd says, systemd is very incompatible with upstart, we should create upstart jobs for vdsm. We should not run systemd within or instead of upstart.
