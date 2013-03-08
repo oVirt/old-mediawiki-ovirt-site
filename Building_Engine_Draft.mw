@@ -277,6 +277,12 @@ Then you can connect with your debugger using port 8787.
 
 == Testing ==
 
+The script that starts the engine needs the <code>configobj</code> and <code>Cheetah.Template</code> modules, so before starting it you may need to isntall the packages containing them. In Fedora, for example, you can install them as follows:
+
+<pre>
+# yum install python-configobj python-cheetah
+</pre>
+
 First you need to start the engine. Go to the directory where you installed it (we are assuming <code>$HOME/ovirt-engine/installation</code> in these instructions), then to the <code>bin</code> subdirectory and run the <code>engine-service</code> script as follows:
 
 <pre>
