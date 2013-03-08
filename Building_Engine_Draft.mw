@@ -219,7 +219,7 @@ $HOME/ovirt-engine/installation/var/log/ovirt-engine \
 $HOME/ovirt-engine/installation/var/tmp/ovirt-engine
 </pre>
 
-Now you need to do some adjustments to the configuration file <code>$HOME/ovirt-engine/installation/etc/sysconfig/ovirt-engine</code>:
+Now you need to do some adjustments to the configuration file <code>$HOME/ovirt-engine/installation/etc/ovirt-engine/engine.conf</code>:
 
 1. Adjust the location of the Java virtual machine:
 
