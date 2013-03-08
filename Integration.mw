@@ -1,0 +1,41 @@
+== Responsibilities: ==
+=== ovirt-engine-setup===
+Maintainers:
+* Ofer Schreiber <oschreib@redhat.com>
+* Juan Antonio Hernandez Fernandez <jhernand@redhat.com>
+
+Outstanding contributes:
+* Alex Lourie <alourie@redhat.com>
+* Sandro Bonazzola <sbonazzo@redhat.com>
+
+===Tools===
+* log-collector
+* iso-uploader
+* image-uploader
+
+Maintainers:
+* Keith Robertson <kroberts@redhat.com>
+
+Outstanding contributes:
+* Alex Lourie <alourie@redhat.com>
+* Sandro Bonazzola <sbonazzo@redhat.com>
+* Kiril Nesenko <knesenko@redhat.com>
+
+===oVirt-live===
+wiki:  [[OVirt_Live]]
+
+Maintainers:
+* Moran Goldboim <mgoldboi@redhat.com>
+
+Outstanding contributes:
+* Ohad Basan <obasan@redhat.com>
+
+==oVirt 3.3 features==
+{| class="wikitable"
+|-
+! Feature !! Status !! Date
+|-
+| [[Features/Otopi_Infra_Migration|Otopi_Infra_Migration]] || style="background-color: orange;"| In Progress || 8/3/2013
+|-
+|  [[Features/Self_Hosted_Engine|Hosted_Engine]] || style="background-color: red;"|Started playing with poc || 8/3/2013
+|}
