@@ -100,6 +100,14 @@ use ovirt-engine-installer
 |  git://gerrit.ovirt.org/ovirt-engine 
 |  [http://gerrit.ovirt.org/gitweb?p=ovirt-engine.git gitweb]
 |- 
+| oVirt Live<br />
+| Ohad Basan<br />
+| [http://lists.ovirt.org/mailman/listinfo/users devel] [http://lists.ovirt.org/pipermail/users archive ] <br />[http://lists.ovirt.org/mailman/listinfo/engine-devel engine-devel]
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+| n/a
+|  git://gerrit.ovirt.org/ovirt-live
+|  [http://gerrit.ovirt.org/gitweb?p=ovirt-live.git gitweb]
+|- 
 | node
 | Mike Burns<br />
 Joey Boggs<br />
