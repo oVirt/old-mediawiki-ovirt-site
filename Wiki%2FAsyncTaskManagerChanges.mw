@@ -4,7 +4,7 @@
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
 This Wiki page is going to summarize required changes for Async Task mechanism.
 
-The current design is still a draft. There are other ideas for design for the task manager. 
+The current design is still a '''draft'''. There are other ideas for design for the task manager. 
 The motivations should guide us via the changes process.
 
 === Owner ===
