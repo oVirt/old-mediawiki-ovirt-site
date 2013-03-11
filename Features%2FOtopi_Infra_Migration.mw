@@ -39,7 +39,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Checking total memory
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback <ref name="memcheck" />
+|style="background-color: lightgreen;"| Done <ref name="memcheck" />
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Generate answer file
