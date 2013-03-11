@@ -378,8 +378,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Enable httpd_can_network_connect selinux flag
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+style="background-color: yellow;"| Feedback 
+|[[User:Alourie| Alex Lourie]]
 |-
 | Backup old Apache httpd config when needed
 |style="background-color: lightgreen;"| Done
