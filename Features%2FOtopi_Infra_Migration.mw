@@ -343,12 +343,12 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | set NFS/portmap ports by overriding /etc/sysconfig/nfs
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Enable the rpcbind and nfs services
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Load files (iso,vfd) from existing rpms to ISO domain
