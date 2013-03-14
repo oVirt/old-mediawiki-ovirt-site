@@ -261,14 +261,14 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |style="background-color: lightgreen;"| Done
 |
 |-
-| Start / Stop rhevm-etl service when needed
+| Start / Stop rhevm-etl / ovirt-engine-dwhd service when needed
 |style="background-color: lightgreen;"| Done
-|style="background-color: orange;"| In Progress
+| style="background-color: yellow;"| Feedback
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
-| Start / Stop rhevm-notifierd service when needed
+| Start / Stop rhevm-notifierd / engine-notifierd service when needed
 |style="background-color: lightgreen;"| Done
-|style="background-color: orange;"| In Progress
+| style="background-color: yellow;"| Feedback
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Upgrade engine database if already exist
