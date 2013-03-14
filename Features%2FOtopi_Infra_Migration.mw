@@ -353,8 +353,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Load files (iso,vfd) from existing rpms to ISO domain
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+|style="background-color: orange;"| In Progress
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |-
 | Check firewall managers installed in the system
 |style="background-color: lightgreen;"| Done
