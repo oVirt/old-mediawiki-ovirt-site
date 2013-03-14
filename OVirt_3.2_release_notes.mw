@@ -9,9 +9,9 @@ New RPMS are now uploaded for oVirt 3.2.1.  The updates included:
  ovirt-engine 3.2.1-1
 
 <big>'''oVirt Engine changes:'''</big>
-# Fixed bug blocking firewalld configuration when selinux was in enforcing mode
-# Small change in All-In-One
-# Minor patches at rest-api
+* Fixed bug blocking firewalld configuration when selinux was in enforcing mode
+* Small change in All-In-One
+* Minor patches at rest-api
 Also included in the oVirt Engine update are patches to enable EL6 builds. 
 
 ''To upgrade, please run engine-upgrade.''
