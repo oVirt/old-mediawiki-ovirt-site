@@ -107,12 +107,12 @@ Targeted Ubuntu Version: '''Ubuntu Server 12.10'''
 | change the path in the code and script
 |-
 | /var/lock/subsys/
-| equivalent not found
-| ignore or skip the related part in the code and script
+| /var/lock/
+| change the path in the code and script
 |-
 | /etc/sysconfig/libvirtd
-| equivalent not found
-| ignore or skip the related part in the code
+| /etc/default/libvirt-bin
+| change the path in the code and script
 |-
 | /usr/lib/udev/scsi_id
 | /lib/udev/scsi_id
