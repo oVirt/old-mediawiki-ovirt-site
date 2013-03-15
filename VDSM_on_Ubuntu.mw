@@ -116,11 +116,11 @@ Targeted Ubuntu Version: '''Ubuntu Server 12.10'''
 |-
 | /usr/lib/udev/scsi_id
 | /lib/udev/scsi_id
-| change the path in the code and script
+| change the path in the code and script [http://gerrit.ovirt.org/#/c/13086/ Patch]
 |-
 | /sys/class/cpuid/ 
 | equivalent not found
-| change the code to use os.listdir('/sys/devices/system/cpu') and filter the result by pattern 'cpu[0-9]+'.  [http://gerrit.ovirt.org/#/c/12815/ Patch]
+| change the code to use os.sysconf('SC_NPROCESSORS_ONLN')  [http://gerrit.ovirt.org/#/c/12815/ Patch]
 |-
 | /etc/iscsi/initiatorname.iscsi 644
 | same file but permission is 600, vdsm cannot read it
@@ -138,7 +138,8 @@ Targeted Ubuntu Version: '''Ubuntu Server 12.10'''
 * User and Group
 :::Fedora qemu process started by libvirt is qemu:qemu 
 :::Ubuntu qemu process started by libvirt is libvirt-qemu:kvm, and there is no group name qemu, only group kvm
-:::'''Workaround''': some code and scripts are changed to use the path and group in Ubuntu. [http://gerrit.ovirt.org/12915 Patch]
+:::'''Workaround''': some code and scripts are changed to use the path and group in Ubuntu.
+:::[http://gerrit.ovirt.org/12915 Patch]
 
 * Ubuntu does not mount configfs by default.
 :::'''Workaround''': configfs is used by LIO target, LIO target is used by iSCSI functional test, the user should mount the filesystem manually mount -t configfs configfs /sys/kernel/config/ .Now I modprobe the iscsi target module and mount configfs in run_tests.sh.in .
