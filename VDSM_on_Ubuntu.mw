@@ -87,6 +87,8 @@ Targeted Ubuntu Version: '''Ubuntu Server 12.10'''
 :::Fedora has daemon util function definition in /etc/init.d/functions, Ubuntu has start_daemon, the options are different, no equivalent to --user option in Fedora.
 :::If we can not define the running user, vdsm main programme will detect it and exit immediately
 :::'''Workaround''': use /usr/sbin/sudo -u vdsm to start respawn in the init script instead of start respawn directly
+:::The killproc() function in /etc/init.d/functions supports "-d delay" option,  /lib/lsb/init-functions does not.
+:::'''Workaround''': delete "-d" option from all invocation of killproc() in vdsmd.init.in.
 
 * Some functions namely "success" and "failure" do not exist in /lib/lsb/init-functions
 :::'''Workaround''': write empty "success" and "failure" functions in vdsmd.init.
