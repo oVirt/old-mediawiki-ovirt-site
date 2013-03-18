@@ -5,5 +5,6 @@ Because oVirt integrates closely with both the Hypervisor and guest operating sy
 
 Porting the guest agent and VDSM to Ubuntu is a high priority for the project.
 * [[Ubuntu/GuestAgent | Porting the Guest Agent]]
+* [[VDSM on Ubuntu]]
 
 [[Category:Developer]]
