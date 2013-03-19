@@ -46,7 +46,15 @@ In hooks scripts of per-device verbs, the properties would be passed as environm
 The reasoning behind the vmCreate behavior is that we should pass different properties for each device. At the stage that before_vm_create hook is executed, the alias of devices is not necessarily known, and the ordering of devices may be changed by other hooks. Thus we have no means to designate which property belong to which device - save for executing a different script for each device, passing that device's xml definition.
 
 ==== Engine ====
-'''TBD'''
+
+With this feature, Engine would keep track of per-device custom properties. This would be done by adding a field '''TBD:<fieldname>''' to the Vm device table. Currently we envisage custom properties per vNIC and vDisk only, but in the future it may make sense to extend the feature to other devices.
+
+===== Configure valid prps in vdc_options ====
+Not all custom properties are valid for every setups - they depend on the hooks installed on hosts. Therefore, just like with per-VM properties, a user would have to define the valid properties and their valid values in vdc_options. Note that properties are most likely to be valid for an interface, but invalid for a disk. Thus we would need to have two different entries '''TBD:<entrynames>''', or a more complex syntax such as
+<nowiki>
+{type=disk,property=regex,values=regex}
+</nowiki>
+to make it easier to add future device types.
 
 ==== GUI ====
 [[File:NetworkCustomProperties.png]]
@@ -55,6 +63,10 @@ The reasoning behind the vmCreate behavior is that we should pass different prop
 * Benoit ML asking for per-vNIC custom properties: http://lists.ovirt.org/pipermail/users/2012-November/010857.html
 * '''TBD''' Quantum PoC
 * Almost any interesting hook for [https://bugzilla.redhat.com/show_bug.cgi?id=908656 hotplug disk] is going to require per-disk triggering proprty
+
+===== REST =====
+
+'''TBD''' should be modelled after per-vm properties.
 
 === Comments and Discussion ===
 
