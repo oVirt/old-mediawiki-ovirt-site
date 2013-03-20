@@ -74,6 +74,9 @@ The decision to update all nodes in the trust status cache while one node's cach
 ==== REST API changes ====
 still under consideration.
 
+==== OVF relevant changes  ====
+still under consideration.
+
 === Benefit to oVirt ===
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
 This is a new feature, it will bring higher security level for data center managed with oVirt.
