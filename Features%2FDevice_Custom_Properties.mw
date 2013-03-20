@@ -4,9 +4,9 @@
 Define special parameters per VM virtual device, and pass them down to vdsm hooks when a VM is started or a device is plugged into the VM.
 
 === Owner ===
-* Name: [[User:Danken| Dan Kenigsberg]]
+* Name: [[User:amuller| Assaf Muller]]
 
-* Email: <danken@redhat.com>
+* Email: <amuller@redhat.com>
 
 === Current status ===
 * oVirt-3.3
