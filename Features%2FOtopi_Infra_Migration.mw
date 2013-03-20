@@ -26,375 +26,525 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 ! Existing implementation
 ! Otopi implementation
 ! Owner
+! Priority
+! Target date
 |-
 | Verify that root is the user executing the script
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
+|
+|
 |
 |-
 | Allow unprivileged user ro run a development installation
 |style="background-color: red;"| Not implemented
 |style="background-color: lightgreen;"| Done
 |
+|
+|
 |-
 | Checking total memory
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done <ref name="memcheck" />
 |[[User:SandroBonazzola| Sandro Bonazzola]]
+|
+|
 |-
 | Generate answer file
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done<ref name="generateanswer" />
+|
+|
 |
 |-
 | Allow logging
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
 |
+|
+|
 |-
 | Support AIO plugin
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
+|
+|Medium
 |
 |-
 | Support FIREWALL_MANAGER option
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
 |
+|High
+|
 |-
 | Support OVERRIDE_HTTPD_CONFIG option
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightblue;"| Not required<ref name="notneeded" />
+|
+|
 |
 |-
 | Support HTTP_PORT option
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done<ref name="httpport" />
 |
+|
+|
 |-
 | Support HTTPS_PORT option
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done<ref name="httpsport" />
+|
+|
 |
 |-
 | Support RANDOM_PASSWORDS option
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
 |
+|Medium
+|
 |-
 | Overriding given passwords with random
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
+|
+| Medium
 |
 |-
 | Support MAC_RANGE option
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
 |
+|Medium
+|
 |-
 | Support HOST_FQDN option
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done<ref name="fqdn" />
+|
+|
 |
 |-
 | Support AUTH_PASS option
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done<ref name="authpass"/>
 |
+|
+|
 |-
 | Support ORG_NAME option
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done<ref name="orgname" />
+|
+|
 |
 |-
 | Support APPLICATION_MODE option
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done<ref name="appmode" />
 |
+|
+|
 |-
 | Support DC_TYPE option
 |style="background-color: lightgreen;"| Done
 |style="background-color:red;"| Not implemented
 |
+|Low
+|
 |-
 | Support DB_REMOTE_INSTALL option
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
+|style="background-color: orange;"| In Progress
+|
+|Medium
 |
 |-
 | Support DB_LOCAL_PASS option
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
+|style="background-color: orange;"| In Progress
+|
+|Low
 |
 |-
 | Support DB_HOST option
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback <ref name="dbhost" />
+|style="background-color: lightgreen;"| Done
+|
+|
 |
 |-
 | Support DB_PORT option
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback <ref name="dbport" />
+|style="background-color: lightgreen;"| Done
+|
+|
 |
 |-
 | Support DB_ADMIN option
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
+|style="background-color: lightgreen;"| Done
+|
+|
 |
 |-
 | Support DB_REMOTE_PASS option
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
+|style="background-color: lightgreen;"| Done
+|
+|
 |
 |-
 | Support DB_SECURE_CONNECTION option
 |style="background-color: lightgreen;"| Done
 |style="background-color: yellow;"| Feedback <ref name="dbsecure" />
 |
+|
+|
 |-
 | Support NFS_MP option
 |style="background-color: lightgreen;"| Done
 |style="background-color: yellow;"| Feedback 
 |[[User:SandroBonazzola| Sandro Bonazzola]]
+|
+|
 |-
 | Support ISO_DOMAIN_NAME option
 |style="background-color: lightgreen;"| Done
 |style="background-color: yellow;"| Feedback 
 |[[User:SandroBonazzola| Sandro Bonazzola]]
+|
+|
 |-
 | Support CONFIG_NFS option
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done<ref name="confignfs" />
 |[[User:SandroBonazzola| Sandro Bonazzola]]
+|
+|
 |-
 | Display summary in interactive mode
 |style="background-color: lightgreen;"| Done
 |style="background-color:red;"| Not implemented
+|
+|Low
 |
 |-
 |Initialize MiniYum
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
 |
+|Medium
+|
 |-
 |Handle second execution warning
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
+|
+|Medium
 |
 |-
 | Handle loading and validating params from answer file
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done<ref name="answer" />
 |
+|
+|
 |-
 | Mask input sets
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
+|
+|Low
 |
 |-
 | Log masked configuration
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
 |
+|Low
+|
 |-
 | Set Max Shared Memory
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
+|
+|
 |
 |-
 | Check for supported Java VM
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
 |
+|
+|
 |-
 | CA Generation
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
+|
+|
 |
 |-
 | Extract CA fingerprint
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
 |
+|
+|
 |-
 | Extract non password key for log collector
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
+|
+|
 |-
 | Extract non password key for Apache
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
+|
+|
 |
 |-
 | Extract SSH fingerprint
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
 |
+|
+|
 |-
 | Configure engine service - database
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
+|
+|
 |
 |-
 | Configure engine service - Java
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
 |
+|
+|
 |-
 | Configure engine service - Protocols
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
+|
+|
 |
 |-
 | Configure .pgpass file
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
 |
+|
+|
 |-
 | Encrypt DB Password
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
+|
+|
 |
 |-
 | Push the encrypted password into the local configuration file
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
 |
+|
+|
 |-
 | Start / Stop rhevm-etl / ovirt-engine-dwhd service when needed
 |style="background-color: lightgreen;"| Done
 | style="background-color: yellow;"| Feedback
 |[[User:SandroBonazzola| Sandro Bonazzola]]
+|
+|
 |-
 | Start / Stop rhevm-notifierd / engine-notifierd service when needed
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
+|
+|
 |-
 | Upgrade engine database if already exist
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
+|
+|
 |
 |-
 | Install engine database if doesn't exist
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
 |
+|
+|
 |-
 | Set Application Mode (Both, Virt, Gluster)
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
+|
+|
 |
 |-
 | Update VDC Options
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
 |
+|
+|
 |-
 | Update default data center storage type
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
+|
+|Medium
 |
 |-
 | Configure engine-log-collector
 |style="background-color: lightgreen;"| Done
 | style="background-color: yellow;"| Feedback
 |[[User:SandroBonazzola| Sandro Bonazzola]]
+|
+|
 |-
 | Configure engine-iso-uploader
 |style="background-color: lightgreen;"| Done
 | style="background-color: yellow;"| Feedback
 |[[User:SandroBonazzola| Sandro Bonazzola]]
+|
+|
 |-
 | Configure engine-image-uploader
 |style="background-color: lightgreen;"| Done
 | style="background-color: yellow;"| Feedback
 |[[User:SandroBonazzola| Sandro Bonazzola]]
+|
+|
 |-
 | Configure PostgreSQL max_connections if using local DB
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
+|
+|Low
 |
 |-
 | Configure NFS exports for ISO Domain if requested
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
 |
+|Medium
+|
 |-
 | Allow importing existing NFS ISO Domain
 |style="background-color: lightgreen;"| Done
 |style="background-color: yellow;"| Feedback 
 |[[User:SandroBonazzola| Sandro Bonazzola]]
+|
+|
 |-
 | Create new NFS ISO Domain
 |style="background-color: lightgreen;"| Done
 |style="background-color: yellow;"| Feedback 
 |[[User:SandroBonazzola| Sandro Bonazzola]]
+|
+|
 |-
 | Migrate existing NFS ISO exports from /etc/exports to /etc/exports.d/
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
+|
+|Low
 |
 |-
 | Set selinux context for NFS ISO mount points
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
 |
+|Medium
+|
 |-
 | set NFS/portmap ports by overriding /etc/sysconfig/nfs
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
+|
+|
 |-
 | Enable the rpcbind and nfs services
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
+|
+|
 |-
 | Load files (iso,vfd) from existing rpms to ISO domain
 |style="background-color: lightgreen;"| Done
 |style="background-color: orange;"| In Progress
 |[[User:SandroBonazzola| Sandro Bonazzola]]
+|
+|
 |-
 | Check firewall managers installed in the system
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
+|
+|High
 |
 |-
 | Configure and enable iptables if requested
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
 |
+|High
+|
 |-
 | Configure and enable FirewallD if requested
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
+|
+|High
 |
 |-
 | Start / Stop Engine service when needed
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
 |
+|
+|
 |-
 | Enable httpd_can_network_connect selinux flag
 |style="background-color: lightgreen;"| Done
 |style="background-color: yellow;"| Feedback 
 |[[User:Alourie| Alex Lourie]]
+|
+|
 |-
 | Backup old Apache httpd config when needed
 |style="background-color: lightgreen;"| Done
 |style="background-color: yellow;"| Feedback
 |[[User:Alourie| Alex Lourie]]
+|
+|
 |-
 | Configure Apache mod_ssl for using  engine apache keys
 |style="background-color: lightgreen;"| Done
 |style="background-color: yellow;"| Feedback
 |[[User:Alourie| Alex Lourie]]
+|
+|
 |-
 | Configure Apache for listening on requested HTTP port
 |style="background-color: lightgreen;"| Done
 |style="background-color: yellow;"| Feedback
 |[[User:Alourie| Alex Lourie]]
+|
+|
 |-
 | Configure Apache for listening on requested HTTPS port
 |style="background-color: lightgreen;"| Done
@@ -405,30 +555,42 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |style="background-color: lightgreen;"| Done
 |style="background-color: yellow;"| Feedback
 |[[User:Alourie| Alex Lourie]]
+|
+|
 |-
 | Enable the httpd service
 |style="background-color: lightgreen;"| Done
 |style="background-color: yellow;"| Feedback
 |[[User:Alourie| Alex Lourie]]
+|
+|
 |-
 | Enter rpm versions into yum version-lock
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
 |[[User:Alourie| Alex Lourie]]
+|
+|
 |-
 | Add info message to the user finalizing the  successful install
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
+|
+|Low
 |
 |-
 | Print additional message to the user finalizing the  successful install
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
 |
+|Low
+|
 |-
 | Log a summary of the parameters
 |style="background-color: lightgreen;"| Done
 |style="background-color: red;"| Not implemented
+|
+|Low
 |
 |}
 <references>
@@ -445,6 +607,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 <ref name="dbport">The option <code>DB_PORT=5432</code> is now <code>OVESETUP_DB/port=int:5432</code> </ref>
 <ref name="dbsecure">The option <code>DB_SECURE_CONNECTION=no</code> is now <code>OVESETUP_DB/secured=bool:False</code> </ref>
 <ref name="authpass">The option <code>AUTH_PASS=...</code> is now <code>osetupcons.ConfigEnv.ADMIN_PASSWORD</code>
+<ref name="notneeded">This means that the function is not required in the new code design</code>
 </references>
 
 ==== engine-cleanup ====
