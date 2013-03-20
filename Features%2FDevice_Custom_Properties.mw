@@ -58,7 +58,7 @@ to make it easier to add future device types.
 [[File:NetworkCustomProperties.png]]
 
 
-===== REST =====
+==== REST ====
 
 '''TBD''' should be modelled after per-vm properties.
 
