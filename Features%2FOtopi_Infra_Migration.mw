@@ -171,14 +171,14 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support DB_HOST option
 |style="background-color: lightgreen;"| Done
-|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done<ref name="dbhost" />
 |
 |
 |
 |-
 | Support DB_PORT option
 |style="background-color: lightgreen;"| Done
-|style="background-color: lightgreen;"| Done
+|style="background-color: lightgreen;"| Done<ref name="dbport" />
 |
 |
 |
@@ -298,6 +298,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 | Extract non password key for log collector
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
+|
 |
 |
 |-
@@ -550,6 +551,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |style="background-color: lightgreen;"| Done
 |style="background-color: yellow;"| Feedback
 |[[User:Alourie| Alex Lourie]]
+|
+|
 |-
 | Configure Apache as proxy for the requests to the jboss service
 |style="background-color: lightgreen;"| Done
