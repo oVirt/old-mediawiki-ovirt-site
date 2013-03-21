@@ -73,8 +73,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support FIREWALL_MANAGER option
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+|style="background-color: orange;"| In Progress
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |High
 |
 |-
@@ -206,14 +206,14 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support NFS_MP option
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback 
+|style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
 |-
 | Support ISO_DOMAIN_NAME option
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback 
+|style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
@@ -409,21 +409,21 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Configure engine-log-collector
 |style="background-color: lightgreen;"| Done
-| style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
 |-
 | Configure engine-iso-uploader
 |style="background-color: lightgreen;"| Done
-| style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
 |-
 | Configure engine-image-uploader
 |style="background-color: lightgreen;"| Done
-| style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
@@ -444,22 +444,22 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Allow importing existing NFS ISO Domain
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback 
+|style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
 |-
 | Create new NFS ISO Domain
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback 
+|style="background-color: lightgreen;"| Done 
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
 |-
 | Migrate existing NFS ISO exports from /etc/exports to /etc/exports.d/
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+|style="background-color: lightgreen;"| Done
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |Low
 |
 |-
@@ -493,15 +493,15 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Check firewall managers installed in the system
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+|style="background-color: orange;"| In Progress
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |High
 |
 |-
 | Configure and enable iptables if requested
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+|style="background-color: orange;"| In Progress
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |High
 |
 |-
