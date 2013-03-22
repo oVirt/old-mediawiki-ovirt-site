@@ -34,6 +34,8 @@ Remote Attestation server performs host verification through following steps:
 
 4. Attestation server verifies those measurements against good/known database to determine hosts' trustworthiness
 
+[[File:figure7.jpg]]
+
 ==== Frontend changes ====
 Trusted compute pools support on the UI will be found on the new/edit VM/template window, besides, this feature will also support import /export for ovf relevant function (on going efforts).
 The latest status for UI changes have provides end user a choice of running a VM on a trusted host, includes create a new VM, edit an exited VM.
@@ -73,10 +75,10 @@ The decision to update all nodes in the trust status cache while one node's cach
 * procedure of InsertVmTemplate / UpdateVmTemplate modified accordingly to support VM template.
 
 ==== REST API changes ====
-still under consideration.
+under consideration.
 
-==== OVF relevant changes  ====
-still under consideration.
+==== OVF related changes  ====
+under consideration.
 
 === Benefit to oVirt ===
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
