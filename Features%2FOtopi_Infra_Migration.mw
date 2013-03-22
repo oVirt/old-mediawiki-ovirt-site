@@ -150,7 +150,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support DC_TYPE option
 |style="background-color: lightgreen;"| Done
-|style="background-color: orange;"| In Progress
+|style="background-color: yellow;"| Feedback
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |Medium
 |
@@ -402,7 +402,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Update default data center storage type
 |style="background-color: lightgreen;"| Done
-|style="background-color: orange;"| In Progress
+|style="background-color: yellow;"| Feedback
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |Medium
 |
@@ -465,8 +465,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Set selinux context for NFS ISO mount points
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+|style="background-color: orange;"| In Progress
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |Medium
 |
 |-
