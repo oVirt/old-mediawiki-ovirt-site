@@ -507,8 +507,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Configure and enable FirewallD if requested
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+|style="background-color: orange;"| In Progress
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |High
 |
 |-
