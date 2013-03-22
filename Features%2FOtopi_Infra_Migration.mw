@@ -150,9 +150,9 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support DC_TYPE option
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
-|
-|Low
+|style="background-color: orange;"| In Progress
+|[[User:SandroBonazzola| Sandro Bonazzola]]
+|Medium
 |
 |-
 | Support DB_REMOTE_INSTALL option
@@ -402,8 +402,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Update default data center storage type
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+|style="background-color: orange;"| In Progress
+|[[User:SandroBonazzola| Sandro Bonazzola]]
 |Medium
 |
 |-
