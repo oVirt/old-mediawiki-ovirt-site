@@ -204,6 +204,13 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |
 |
 |-
+| Support local DB creation
+|style="background-color: lightgreen;"| Done
+|style="background-color: orange;"| In Progress
+|[[User:AlexLourie| Alex Lourie]]
+|
+|
+|-
 | Support NFS_MP option
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done
@@ -521,35 +528,35 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Enable httpd_can_network_connect selinux flag
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback 
+|style="background-color: lightgreen;"| Done 
 |[[User:Alourie| Alex Lourie]]
 |
 |
 |-
 | Backup old Apache httpd config when needed
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:Alourie| Alex Lourie]]
 |
 |
 |-
 | Configure Apache mod_ssl for using  engine apache keys
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:Alourie| Alex Lourie]]
 |
 |
 |-
 | Configure Apache for listening on requested HTTP port
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:Alourie| Alex Lourie]]
 |
 |
 |-
 | Configure Apache for listening on requested HTTPS port
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:Alourie| Alex Lourie]]
 |
 |
@@ -563,7 +570,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Enable the httpd service
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:Alourie| Alex Lourie]]
 |
 |
