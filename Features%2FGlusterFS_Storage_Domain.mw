@@ -18,7 +18,7 @@ VMs created using this domain exploit the QEMU's gluster block backend aka QEMU-
 * '''QEMU-GlusterFS integration'''       : Done. Available in upstream qemu.
 * '''libvirt enablement for Gluster'''   : Done. Available in upstream libvirt
 * '''GLUSTERFS_DOMAIN support in VDSM''' :  Done. Available in upstream vdsm
-* '''oVirt Engine / UI support'''        : WIP @ [http://gerrit.ovirt.org/8837] or see glusterfs topic branch in [http://gerrit.ovirt.org]
+* '''oVirt Engine / UI support'''        : Done. Available in upstream oVirt
 
 == Detailed Description ==
 
@@ -101,6 +101,8 @@ glusterfs, glusterfs-server and glusterfs-fuse rpm packages must be installed.
 == Future Work ==
 
 GlusterFS as a VDSM repository engine.
+Support for GlusterFS volume backed by Block backend (Block Device translator)
+GlusterFS enablement for json-rpc VDSM API
 
 == Open Issues ==
 
