@@ -92,7 +92,15 @@ Currnely only "onTaskEnded" method is implemented.
 
 
 
+==== Command Manager ====
 
+Command Manager is a new class that is responsible for creating tasks, caching command entities, recieving callbacks from taskmgr and returning status of tasks.
+
+# Creating new tasks :  Most of the code from AsyncTaskManager will be moved to command manager. A new interface Task is passed into the taskmgr from the CommandManager.
+# Caching commands : Command Entities which contain the parameters, command id and parent command id are cached using CommandEntityDAO. CommandEntityDAOImpl uses ehcache to cache command entities.
+# DecoratedCommand : We use the decorator pattern to intercept endAction on the command and call handleEndActionResult which was previously called from EntityAsyncTask.
+# CallBack : A new interface with one method endAction. The Command Manager implements this interface and registers itself with the taskmgr. When the command ends the taskmgr calls the endAction method on the callback. 
+# Poller : A new interface Poller with methods for returning the status of tasks. CommandManager implements this interface and returns statuses by calling RunVdsCommand.
 
 
 
