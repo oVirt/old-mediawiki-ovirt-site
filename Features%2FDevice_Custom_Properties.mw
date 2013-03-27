@@ -1,7 +1,7 @@
 == Device Custom Properties ==
 
 === Summary ===
-Define special parameters per VM virtual device, and pass them down to vdsm hooks when a VM is started or migrated, and when a device is plugged or unplugged into the VM.
+Define special parameters per VM virtual device, and pass them down to vdsm hooks when a VM is started or migrated, and when a device is plugged or unplugged from the VM.
 
 === Owner ===
 * Name: [[User:amuller| Assaf Muller]]
