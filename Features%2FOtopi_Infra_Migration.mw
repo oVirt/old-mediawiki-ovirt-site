@@ -101,14 +101,14 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support RANDOM_PASSWORDS option
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightblue;"| Not required<ref name="noneed" />
 |
 |Medium
 |
 |-
 | Overriding given passwords with random
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightblue;"| Not required<ref name="noneed" />
 |
 | Medium
 |
