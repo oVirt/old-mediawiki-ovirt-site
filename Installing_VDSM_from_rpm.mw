@@ -8,7 +8,7 @@ execute the following command as root:
  <nowiki>
 yum install -y bridge-utils</nowiki>
 
-== Configuring Ovirt's Repository ==
+== Configuring oVirt's Repository ==
 Execute the following command:
  <nowiki>
 sudo yum install http://ovirt.org/releases/ovirt-release-fedora.noarch.rpm
