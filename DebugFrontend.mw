@@ -23,17 +23,19 @@ $ export JBOSS_HOME=/usr/local/dev/ovirt-jboss-as
 $ export ENGINE_DEFAULTS=$OVIRT_HOME/backend/manager/conf/engine.conf.defaults
 </pre>
 
-You should also do full oVirt build prior to debugging, with WebAdmin and/or UserPortal GWT compilation enabled:
+You should also do full oVirt build prior to debugging, with WebAdmin and/or UserPortal GWT compilation enabled<code>*</code>:
 <pre>
 $ cd $OVIRT_HOME
 $ mvn clean install -Pdep,gwt-admin,gwt-user -Dgwt.compiler.localWorkers=8
 </pre>
 
+<code>*</code> You'll be able to debug given Frontend application via Development Mode only if the application was compiled for at least 2 different browsers.
+
 Notes:
 * <code>dep</code> profile deploys oVirt Engine to JBoss AS, e.g. <code>$JBOSS_HOME/standalone/deployments/engine.ear</code>
 * <code>gwt-admin</code> profile enables WebAdmin GWT compilation (optional)
 * <code>gwt-user</code> profile enables UserPortal GWT compilation (optional)
-* <code>gwt.compiler.localWorkers</code> should match the number of CPU cores for parallelizing GWT compilation (optional)
+* <code>gwt.compiler.localWorkers</code> should match the number of processors available for parallelizing GWT compilation (optional)
 
 === Step 1 - Launching Development Mode ===
 Make sure JBoss AS is running and launch Development Mode for the given Frontend application:
@@ -145,7 +147,7 @@ A: Make sure your browser is officially supported by GWT Developer Plugin. Alter
 
 ''Q: The web page is blank after navigating to debug URL.''
 
-A: Make sure to do full oVirt build prior to debugging for all web browsers, e.g. without specifying <code>gwt.userAgent</code> property.
+A: Make sure to do full oVirt build prior to debugging for at least 2 different browsers, e.g. without specifying <code>gwt.userAgent</code> property (compile for all supported browsers).
 
 
 ''Q: Client-side logs are not persisted on Engine, e.g. <code>$JBOSS_HOME/standalone/log/engine/engine-ui.log</code>.''
