@@ -38,9 +38,6 @@ For libvirt support, please see [http://libvirt.org/formatdomain.html#elementsWa
 
 The watchdog support on the UI will be found on the new/edit VM/template window, on the high availablity tab, since mostly you need the watchdog in HA setups.
 
-[[File:Neweditserverhawatchdogdisabled.png]]
-
-[[File:Neweditserverhawatchdogenabled.png]]
 
 You can also find a user interface live demo on [https://www.youtube.com/watch?v=-dJLmLxXn4o youtube]
 
