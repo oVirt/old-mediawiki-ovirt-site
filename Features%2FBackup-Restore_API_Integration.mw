@@ -55,12 +55,13 @@ File level restore can be performed in-guest or off-host. Mount the volumes of t
 # Lock disk  
 # Live snapshot  
 # qemunbd,with temp snap  
-# Optional: Attach disk to VM 
+# Map the qemunbd device to the backup server (Optional: Attach disk to VM)
 
 ==== Teardown backup disk ==== 
-# Detach 
-# Stop qemunbd 
-# Unlock
+# Detach the qemunbd device
+# Stop qemunbd (this should delete the temp snap?)
+# Unlock disk
+# Remove backup snapshot
 
 
 [[File:Tsm-int.JPG]]
