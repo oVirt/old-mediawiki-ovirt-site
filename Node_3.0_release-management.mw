@@ -1,0 +1,47 @@
+== Timeline ==
+
+''' These are tentative planning dates and may change'''
+
+* General availability: '''TBD'''
+** Beta release: '''TBD'''
+** Feature freeze: '''TBD'''
+** Test Day: '''TBD'''
+** RC Build: '''TBD'''
+
+== Tracker Bug ==
+
+* [https://bugzilla.redhat.com/show_bug.cgi?id=ovirt-node-2.7 Tracker ovirt-node-2.7]
+
+== Release Criteria  ==
+
+Tracker bug: https://bugzilla.redhat.com/show_bug.cgi?id=ovirt-node-2.7
+
+=== General ===
+* All sources must be available on ovirt.org
+
+=== MUST ===
+* '''MUST''': No blockers on the lower level components - libvirt, lvm,device-mapper,qemu-kvm, Jboss, postgres, iscsi-initiator  
+* '''MUST''': TUI installation woks
+* '''MUST''': Automated installation (via PXE) works
+* '''MUST''': Upgrade from previous release
+* '''MUST''': Reinstall
+* '''MUST''': Login to the TUI
+* '''MUST''': No regressions from 2.6 Release
+
+=== SHOULD ===
+* '''SHOULD''': Uninstall
+* '''SHOULD''': Updated installation guide available
+* '''SHOULD''': Automated tests for the requirements above
+
+== Features ==
+
+Features being considered for inclusion/already in master:
+
+* New TUI installer
+* Universal image
+* New upgrade tool
+* ...
+
+[[Category:Node]]
+[[Category:Releases]]
+[[Category:Release management]]
