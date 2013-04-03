@@ -115,8 +115,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support MAC_RANGE option
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+| style="background-color: yellow;"| Feedback
+|[[User:AlexLourie| Alex Lourie]]
 |Medium
 |
 |-
@@ -206,7 +206,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support local DB creation
 |style="background-color: lightgreen;"| Done
-|style="background-color: orange;"| In Progress
+| style="background-color: yellow;"| Feedback
 |[[User:AlexLourie| Alex Lourie]]
 |
 |
