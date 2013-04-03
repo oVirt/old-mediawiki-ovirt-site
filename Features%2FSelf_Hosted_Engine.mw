@@ -13,9 +13,8 @@ The ability to run the Engine as a VM on the hosts that are managed by this Engi
 
 
 === Current status ===
-* Still being discussed
+* Initial POC devel
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
-
 
 === Detailed Description ===
 This feature will deal with two main issues:
