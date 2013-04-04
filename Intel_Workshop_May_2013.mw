@@ -55,11 +55,11 @@ On May 8th, 2013, The oVirt workshop is pleased to announce we'll be trying some
 === Wednesday, May 8th, 2013 - oVirt / Gluster Integration Track ===
 
 {|
-! Time !! Title !! Speaker
+! Time !! Title !! Speaker 
 |-
 |  08:30-09:00 || colspan=2|  Opening remarks and Keynote 
 |-
-| 09:00-10:00 || Gluster Community Overview and Roadmap || John Mark Walker (Red Hat)
+| width=20%| 09:00-10:00 || width=50% | Gluster Community Overview and Roadmap || width=30% | John Mark Walker (Red Hat)
 |-
 | 10:00-11:00 || Gluster Architecture Overview || To be announced
 |-
