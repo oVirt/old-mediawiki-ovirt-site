@@ -100,7 +100,7 @@ The integration of network providers into oVirt will be incremental. The followi
 <!-- What events should be reported when using this feature. -->
 
 = Dependencies / Related Features and Projects =
-Please see the [[Features/Quantum_Integration feature page]].
+Please see the [[Features/Quantum_Integration|feature page]].
 
 = Documentation / External references =
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
