@@ -3,7 +3,7 @@
 = SPICE Proxy =
 
 == Summary ==
-Let the users define a proxy which will be used by SPICE client to connect to the guest.
+Let the users define a proxy which will be used by SPICE client to connect to the guest. It is useful when the user (e.g. using user portal) is outside of the network where the hypervisors are.
 
 == Detailed Description ==
 Currently, the only possibility to define a SPICE proxy is using the engine-config tool globally for the whole application. Example:
