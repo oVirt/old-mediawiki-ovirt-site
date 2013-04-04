@@ -1,30 +1,20 @@
-= Overview =
-A network provider is an external provider that can provide networking capabilities for consumption by oVirt hosts and/or virtual machines.
-The network provider has the knowledge about the networks that it manages, and works autonomously from oVirt.
-The provider should enable integration on 3 points:
-* Discovery of networks
-* Provisioning of networks
-* Provisioning of virtual NICs on the network
 
-= Required capabilities =
-== Network discovery ==
-There should be a way for oVirt to discover what networks are available on the provider.
-An oVirt user could then decide to import a network, that is provided by the provider, as a new one into a data center, or attach it to an existing data center network, marking that the network is also provided by this provider (in addition to any other provider that provides it).
+= Summary =
+We intend to add support for OpenStack Quantum as a network provider. Please see further details in [[Features/Quantum_Integration]]
 
-Currently, the engine assumes that the networks provided by the provider are available on all hosts in the data center, but it might be possible to have this capability added so that we would be able to query the host and see if it is providing networks for a given provider.
+= Owner =
 
-== Network provisioning ==
-The network can be exported from oVirt into the network provider, which means a user will be able to add the network to Quantum via oVirt, instead of using the Quantum API directly.
-However, from that moment on it will be as if the network was discovered from the provider - i.e. if it goes out of sync, that's OK from oVirt's perspective.
+* Name: [[User:Mkolesni| Mike Kolesnik]]
 
-== Virtual NIC provisioning ==
-The network provider should be able to provision a virtual NIC's data (name, MAC, etc) on a network that it provides.
-oVirt would send the virtual NIC details over to the provider, and it should return the NIC connection details.
-These connection details should be used when the VM is  run, or the NIC is plugged.
+* Email: <mkolesni@redhat.com>
 
-There should also be an option to "un-provision" a virtual NIC so that is being provisioned by the provider.
 
-= Integrating external providers =
+= Current status =
+* Target Release: oVirt 3.3
+* Status: Implementation
+* Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
+
+= Detailed Description =
 The integration of network providers into oVirt will be incremental. The following phases outline the general guidelines and considerations.
 
 == Phase 1 - Tech Preview ==
@@ -96,6 +86,32 @@ The integration of network providers into oVirt will be incremental. The followi
 === Auto-Discovery of networks  ===
 * An external provider would be set up as the provider of networking for a DC, such that any network defined on the provider will be discovered by oVirt and automatically set-up on the DC.
 
+== User Experience ==
+<!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
+<!-- GUI mockups should also be added here to make it more clear -->
+
+== Installation/Upgrade ==
+<!-- Describe how the feature will effect new installation or existing one. -->
+
+== User work-flows ==
+<!-- Describe the high-level work-flows relevant to this feature. -->
+
+== Events ==
+<!-- What events should be reported when using this feature. -->
+
+= Dependencies / Related Features and Projects =
+Please see the [[Features/Quantum_Integration feature page]].
+
+= Documentation / External references =
+<!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
+
+= Comments and Discussion =
+
+
+= Open Issues =
+<!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
+
+
 = Proof of Concept =
 A POC was done with the proposed ideas in "Phase 1" section, integrating [https://wiki.openstack.org/wiki/Quantum Openstack Quantum] as an external network provider.
 the POC is available for review & testing.
@@ -124,3 +140,5 @@ http://www.youtube.com/watch?v=yXqN17KktjE
 
 === The 2nd part (VM connectivity) ===
 http://www.youtube.com/watch?v=uW3vrY2Y3xc
+
+[[Category:DetailedFeature]]
