@@ -115,7 +115,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support MAC_RANGE option
 |style="background-color: lightgreen;"| Done
-| style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:AlexLourie| Alex Lourie]]
 |Medium
 |
@@ -157,14 +157,14 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support DB_REMOTE_INSTALL option
 |style="background-color: lightgreen;"| Done
-|style="background-color: orange;"| In Progress
+|style="background-color: lightgreen;"| Done
 |
 |Medium
 |
 |-
 | Support DB_LOCAL_PASS option
 |style="background-color: lightgreen;"| Done
-|style="background-color: orange;"| In Progress
+|style="background-color: lightgreen;"| Done
 |
 |Low
 |
@@ -234,7 +234,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Display summary in interactive mode
 |style="background-color: lightgreen;"| Done
-|style="background-color:red;"| Not implemented
+|style="background-color:orange;"| In progress
 |
 |Low
 |
@@ -262,14 +262,14 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Mask input sets
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: orange;"| In Progress
 |
 |Low
 |
 |-
 | Log masked configuration
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: orange;"| In Progress
 |
 |Low
 |
@@ -437,7 +437,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Configure PostgreSQL max_connections if using local DB
 |style="background-color: lightgreen;"| Done
-|style="background-color: orange;"| In Progress
+|style="background-color: lightgreen;"| Done
 |[[User:AlexLourie | Alex Lourie]]
 |Low
 |
@@ -563,7 +563,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Configure Apache as proxy for the requests to the jboss service
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:Alourie| Alex Lourie]]
 |
 |
