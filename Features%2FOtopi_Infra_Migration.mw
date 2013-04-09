@@ -248,7 +248,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 |Handle second execution warning
 |style="background-color: lightgreen;"| Done
-| style="background-color: yellow;"| Feedback
+|style="background-color: lightblue;"| Not required<ref name="noneed" />
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |Medium
 |
