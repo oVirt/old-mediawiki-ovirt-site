@@ -234,7 +234,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Display summary in interactive mode
 |style="background-color: lightgreen;"| Done
-|style="background-color:orange;"| In progress
+|style="background-color:lightgreen;"| Done
 |
 |Low
 |
