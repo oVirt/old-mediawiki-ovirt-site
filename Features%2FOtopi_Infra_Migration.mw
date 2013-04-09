@@ -584,21 +584,21 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Add info message to the user finalizing the  successful install
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done
 |
 |Low
 |
 |-
 | Print additional message to the user finalizing the  successful install
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done
 |
 |Low
 |
 |-
 | Log a summary of the parameters
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done
 |
 |Low
 |
