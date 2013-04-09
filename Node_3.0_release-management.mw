@@ -10,11 +10,11 @@
 
 == Tracker Bug ==
 
-* [https://bugzilla.redhat.com/show_bug.cgi?id=ovirt-node-2.7 Tracker ovirt-node-2.7]
+* [https://bugzilla.redhat.com/show_bug.cgi?id=ovirt-node-3.0 Tracker ovirt-node-3.0]
 
 == Release Criteria  ==
 
-Tracker bug: https://bugzilla.redhat.com/show_bug.cgi?id=ovirt-node-2.7
+Tracker bug: https://bugzilla.redhat.com/show_bug.cgi?id=ovirt-node-3.0
 
 === General ===
 * All sources must be available on ovirt.org
