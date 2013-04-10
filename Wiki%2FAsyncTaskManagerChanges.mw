@@ -112,7 +112,7 @@ End of the flow command will be executed when all tasks that were initiated by t
 
 
 
-[File:Async_task_manager_command_mamanger_phase1.png]
+[[File:Async_task_manager_command_mamanger_phase1.png]]
 
 
 The changes from the current implementation are:
