@@ -199,7 +199,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support DB_SECURE_CONNECTION option
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback <ref name="dbsecure" />
+|style="background-color: lightgreen;"| Done <ref name="dbsecure" />
 |
 |
 |
@@ -234,7 +234,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Display summary in interactive mode
 |style="background-color: lightgreen;"| Done
-|style="background-color:lightgreen;"| Done
+|style="background-color: lightgreen;"| Done
 |
 |Low
 |
