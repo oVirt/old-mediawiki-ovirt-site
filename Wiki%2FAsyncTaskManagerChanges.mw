@@ -95,7 +95,7 @@ Each flow command that uses "coordination by flow command" should be marked (eit
 Indicating that a Command Entity should be created for the command and persisted for it using CommandEntityDAO.
 For example - for a flow of RemoveVM, the commands table (see further explanations) will have the records for the following commands -
 RemoveVM, RemoveAllVMImages (child of RemoveVM),  N instances of RemoveImage (children of RemoveVM, one per image).
-The decision on which "end of command coordination" policy should be used can be passed to the child commands using the ExecutionContext of the command.
+The decision on which "end of command coordination" policy should be used can be passed to the child commands using the CommandContext of the command.
 
 For each  command that participates in a flow that used "coordination by flow command"  the command entity will be kept in the command cache of the Command Coordinator.
 For each command that participates in a flow that uses "coordination by entity" - the SPM task will be kept at multiTasksByEnitites structure (as in the existing code).
@@ -104,7 +104,6 @@ When a task ends , either  "SPMASyncTask.onTaskEndSuccess" or "SPMAsyncTask.onTa
 These methods will check if  there is an entry for the child command that created the task at the commands cache - if the check is positive, "coordination by flow" will be used, otherwise "coordination by entity" will be used.
 
 [[File:Async_task_manager_command_mamanger_phase1.png]]
-
 
 ====  Changed entities  ====
 
