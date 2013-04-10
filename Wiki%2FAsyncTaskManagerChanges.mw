@@ -92,32 +92,33 @@ Currnely only "onTaskEnded" method is implemented.
 
 
 
-==== Command Manager ====
+==== Command Coordinator  ====
 
-Command Manager is a new class that is responsible for creating tasks, caching command entities, recieving callbacks from taskmgr and returning status of tasks.
-
+Command Coordinator is a new class that is responsible for creating tasks, caching command entities, recieving callbacks from taskmgr and returning status of tasks.
+The work on the command coordinator will be iterative as well, and this WIKI page will change accordingly.
+Currently Command Coordinator will accomplish it roles the following way:
 # Creating new tasks :  Most of the code from AsyncTaskManager will be moved to command manager. A new interface Task is passed into the taskmgr from the CommandManager.
 # Caching commands : Command Entities which contain the parameters, command id and parent command id are cached using CommandEntityDAO. CommandEntityDAOImpl uses ehcache to cache command entities.
-# DecoratedCommand : We use the decorator pattern to intercept endAction on the command and call handleEndActionResult which was previously called from EntityAsyncTask.
+# DecoratedCommand : We use the decorator pattern to intercept endAction on the command and call handleEndActionResult which was previously called from EntityAsyncTask
 # CallBack : A new interface with one method endAction. The Command Manager implements this interface and registers itself with the taskmgr. When the command ends the taskmgr calls the endAction method on the callback. 
-# Poller : A new interface Poller with methods for returning the status of tasks. CommandManager implements this interface and returns statuses by calling RunVdsCommand.
+# Poller : A new interface Poller with methods for returning the status of tasks. SPMPoller  implements this interface and returns statuses by calling RunVdsCommand.
 
-[[File:CommandManager_class_diagram.png]]
+Phase 1 changes "end of command coordination"  from "coordination by entity" to "coordination by flow command ID".#
+#Coordination by entity - this means that all tasks that are related to a given entity (VM, TEMPLATE, DISK) should be ended before the command that initiated the flow that created the tasks (will be addressed as the "flow command") is ended.
+The coordination by entity principal is used from previous version, and was introduced prior to the introduction of Command ID (during the development of the compensation feature at 3.0).
+
+#Coordination by flow command - this means that all tasks will have access to information on the command that initiated the flow that created them.
+End of the flow command will be executed when all tasks that were initiated by the flow are complete (of course, failure or success of tasks affects failure of success of the end of the flow command).
+
+
+
+[[File:Async_task_manager_command_mamanger_phase1.png]
 
 
 The changes from the current implementation are:
 # Parameters - the task entity will no longer have parameters - as they are the parameters of the "Root command" (I.E - the parameters of the command which is first in the hierarchy )
 #  Both the direct parent and the root command Id are kept
 # SPMAsyncTask should eventually be removed - all its logic should be moved to the AsyncTaskManager implementation and the CommandManager.
-
-
-
-
-
-
-
-
-
 
 === Working on the changes ===
 * Working on the changes of this mechanism should be done in stages in such a way that we can graduately move commands , and not apply the changes to all commands at once.
