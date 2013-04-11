@@ -367,7 +367,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Start / Stop rhevm-etl / ovirt-engine-dwhd service when needed
 |style="background-color: lightgreen;"| Done
-| style="background-color: yellow;"| Feedback
+| style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
