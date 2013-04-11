@@ -2,7 +2,7 @@
 
 === Summary ===
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
-This feature converts the generic oVirt Node image into an image customized use with oVirt Engine.
+This feature converts the generic oVirt Node image into an image with support for Puppet provisioning.
 
 
 === Owner ===
