@@ -92,7 +92,7 @@ Most of the work lies here, where the output of <tt>getVdsCaps</tt> should be pa
 When a host is activated Engine should
 # call getVdsCaps
 # check if management network <tt>ovirtmgmt</tt> configured on host
-## if already defined, persist network topology, confirm network compliance and declare success.
+## if already defined, confirm network compliance and declare success.
 ## else acquire <tt>lastClientInterface</tt> and devise network definition for <tt>ovirtmgmt</tt>. Simon suggested that the Engine learns the vlan ID of <tt>ovirtmgmt</tt> from the first host added to the DC, but with no consensus about this, Engine would use its DB definition of network as configured on DC level. If <tt>lastClientInterface</tt> is none of host nic, bond or vlan, activation should fail. Activation fails also if it is a vlan with a mismatching vlan tag.
 ## send <tt>setupNetworks</tt> with the new management network definition with the  <tt>lastClientInterface</tt> only.
 ## on success, send <tt>setSafeNetConfig</tt>. On failure show an event to the user. the host would be left non-operational, and may need manual network configuration.
