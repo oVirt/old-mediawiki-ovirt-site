@@ -39,7 +39,7 @@ Features being considered for inclusion/already in master:
 
 * [[Features/Universal Image]]
 * [[Features/Node upgrade tool]]
-* Software iSCSI support
+*[[Features/Node software iscsi root]]
 * Puppet configuration management (''open'')
 * Swap enhancements (''open'', partially)
 * TUI
