@@ -111,7 +111,7 @@ The specific values means:
 |-
 | usb_policy || usb policy || Y || || N || || || Y || || || Y || || Y || N || N || User || 
 |-
-| time_zone || time zone || Y || || N || || || N || || || Y || || Y || Y || Y || User || 
+| time_zone || time zone || Y || || N || || || N || || || Y || || Y || Y || N || User || 
 |-
 | is_stateless || stateless flag || Y || || N || || || N || || || Y || || N || Y || N || User || Needs to be set on per disk level as well
 |-
@@ -186,7 +186,7 @@ The specific values means:
 | tunnelMigration || use libvirt-to-libvirt communication || N || || N || || || Y || || || || || || ||  || Instance || Not in GUI
 |-
 |}
- 
+
 == Entities' Details ==
 === VM ===
 The "New Server" and "New Desktop" buttons in GUI will be replaced by a common '''New VM''' button with a combo box where you can choose from "Optimized for Server" and "Optimized for Desktop". 
