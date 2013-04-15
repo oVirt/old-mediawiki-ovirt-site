@@ -7,7 +7,7 @@ This feature allows connecting to VM console from the engine frontend without th
 This feature adds to the engine the possibility of serving configuration files for console viewer on the client system. The user can then associate corresponding viewer application to this file (using MIME type registration in browser).
 
 == Configuration ==
- engine-config -s ClientConsoleMode=value
+ engine-config -s ClientConsoleModeDefault=value
 
 where value is a string that can be Plugin, Native or Auto. This settings will affect behavior of the connect-to-console button on the frontend.
  Plugin - current behavior. The browser plugin is used for connecting to the console.
