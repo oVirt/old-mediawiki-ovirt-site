@@ -45,7 +45,7 @@ Features being considered for inclusion/already in master:
 * TUI
 ** [[Features/Urwid TUI | Features/New installer]]
 ** [[Features/Node ipv6 support]](''open'')
-** Diagnostics page
+** [[Features/Node Diagnostic Page | Diagnostics page]]
 * Compatibility
 ** Fedora 18
 ** Fedora 19 (''targeted'', once it's released)
