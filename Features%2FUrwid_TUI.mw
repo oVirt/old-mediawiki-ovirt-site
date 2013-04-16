@@ -38,7 +38,6 @@ besides that it offers a better user experience.
 === Dependencies / Related Features ===
 <!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
 
-* [[Features/Node_vdsm_plugin|Node VDSM Plugin]]
 * Affected Packages
 ** ovirt-node
 * New Package for the UI
@@ -53,7 +52,7 @@ besides that it offers a better user experience.
 
 This below adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page
 
-* Refer to [[Talk:Universal Image]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
+* Refer to [[Talk:Urwid TUI]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 
 [[Category:Feature]]
 [[Category:Template]]
