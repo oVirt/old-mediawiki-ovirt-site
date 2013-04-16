@@ -55,6 +55,7 @@ Features being considered for inclusion/already in master:
 
 === Virt ===
 * [[Features/RAM Snapshots]]
+* [[Features/noVNC console]]
 
 === Infra ===
 * [[Features/Device Custom Properties]]
