@@ -43,7 +43,7 @@ Features being considered for inclusion/already in master:
 * Puppet configuration management (''open'')
 * Swap enhancements (''open'', partially)
 * TUI
-** New installer
+** [[Features/Urwid TUI | Features/New installer]]
 ** [[Features/Node ipv6 support]](''open'')
 ** Diagnostics page
 * Compatibility
