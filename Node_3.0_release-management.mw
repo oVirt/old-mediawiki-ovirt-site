@@ -39,8 +39,8 @@ Features being considered for inclusion/already in master:
 
 * [[Features/Universal Image]]
 * [[Features/Node upgrade tool]]
-*[[Features/Node software iscsi root]]
-* Puppet configuration management (''open'')
+* [[Features/Node software iscsi root]]
+* [[Features/Node Puppet Plugin | Puppet configuration management (''open'')]]
 * Swap enhancements (''open'', partially)
 * TUI
 ** [[Features/Urwid TUI | Features/New installer]]
