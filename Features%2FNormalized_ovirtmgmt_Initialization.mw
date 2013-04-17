@@ -10,7 +10,7 @@ Generate <tt>ovirtmgmt</tt> network based on DC definitions using <tt>setupNetwo
 * Email: <danken@redhat.com>
 
 === Current status ===
-* Not yet scheduled to a specific release
+* Feature is merged (14/1/2013)
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 === Detailed Description ===
