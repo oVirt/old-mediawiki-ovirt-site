@@ -156,7 +156,8 @@ Add a trust flag into cluster entity. If end user wants to create a trusted clus
 Admin can activate an untrusted host manually after getting a positive response from attestation server manually. This is optional as host’s status changes only under the conditional of reboot, host’s reboot and invoke InitVdsOnUpCommand will call attestation server again.
 
 In the UI there is an "Activate" option. What still needs to be added is the checking with the attestation server to make sure that whether this host is trusted and this cluster is defined as 'Trusted'. If so, only trusted host will succeed in the activate command (a proper Audit Log error in case the host failed to activate due to trust issue.)
-Check logic will be added in VdsManager:activate (). Code path is “ovirt-engine/backend/manager/modules/vdsbroker/src/main/java/org/ovirt/engine/core/vdsbroker/” where the re-activation process begins.
+Check logic will be added in VdsManager:activate (). 
+Code path is “ovirt-engine/backend/manager/modules/vdsbroker/src/main/java/org/ovirt/engine/core/vdsbroker/” where the re-activation process begins.
 
 3.	Import / Export support (OVF)
 
@@ -174,10 +175,10 @@ Key relevant modification includes api.xsd and VmMapper.java.
 ==== Database change ====
 Trust cluster need a new property named as “trusted_cluster_flag” to indicate this is a trusted cluster. Relevant tables / views include dwh_cluster_configuration_history_view, vds_groups, we may need modify insert_data.sql to modify the property of the default cluster.
 
-==== Test case ====
+=== Test case ===
 Define later
 
-==== High Availability ====
+=== High Availability ===
 Not to implement in the first version.
 
 
