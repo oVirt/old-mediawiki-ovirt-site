@@ -99,6 +99,10 @@ The following Guest OS drivers are available:
  </disk>
 
 ==== UI ====
+===== Add Disk =====
+[[File:virtio-scsi-adddisk.png]]
+===== New Role =====
+[[File:virtio-scsi-role.png]]
 
 ==== Sequence diagram ====
 [[File:virtio-scsi_sequence-diagram.png]]
