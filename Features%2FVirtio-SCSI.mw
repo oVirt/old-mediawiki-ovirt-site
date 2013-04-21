@@ -129,7 +129,7 @@ Virtio-SCSI will the following abilities to oVirt:
 * A filter mechanism is need to be able to define filters for SG_IO commands to allow an administrator to define what privileged commands should be permitted for a given process.
 This should not require the process to run as root.
 * Filtered vs. unfiltered sg commands (i.e. the mechanism is currently all or nothing – can't filter specific commands).
-   Filtering is done on a disk level (not on a VM level).
+   Filtering is done on disk level (not on VM level).
 * Mapping of disk vs. lun in libvirt to disk image and direct lun appropriately.
 
 === Open Issues ===
