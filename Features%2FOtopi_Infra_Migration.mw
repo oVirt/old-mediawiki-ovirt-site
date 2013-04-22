@@ -73,7 +73,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support FIREWALL_MANAGER option
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |High
 |
@@ -500,21 +500,21 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Check firewall managers installed in the system
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |High
 |
 |-
 | Configure and enable iptables if requested
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |High
 |
 |-
 | Configure and enable FirewallD if requested
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |High
 |
