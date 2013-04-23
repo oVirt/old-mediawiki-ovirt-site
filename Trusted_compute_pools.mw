@@ -87,7 +87,7 @@ under consideration.
 
 ==== Approach 2: trust property in cluster level policy (WIP) ====
 ===== Frontend changes =====
-Add a trust flag into cluster entity. If end user wants to create a trusted cluster, the radio box must be selected. 
+Add a trust flag into cluster entity. If end user wants to create a trusted cluster, the "trusted" check box must be selected. 
 
 [[File:figure8.jpg]]
 
