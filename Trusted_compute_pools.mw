@@ -85,7 +85,7 @@ under consideration.
 ===== OVF related changes =====
 under consideration.
 
-==== Approach 2: trust property in cluster level policy ====
+==== Approach 2: trust property in cluster level policy (WIP) ====
 ===== Frontend changes =====
 Add a trust flag into cluster entity. If end user wants to create a trusted cluster, the radio box must be selected. 
 
