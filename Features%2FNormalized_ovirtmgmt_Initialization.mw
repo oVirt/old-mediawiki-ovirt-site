@@ -5,9 +5,9 @@ Generate <tt>ovirtmgmt</tt> network based on DC definitions using <tt>setupNetwo
 
 === Owner ===
 
-* Name: [[User:Danken| Dan Kenigsberg]]
+* Name: [[User:masayag| Moti Asayag]]
 
-* Email: <danken@redhat.com>
+* Email: <masayag@redhat.com>
 
 === Current status ===
 * Feature is merged (14/1/2013)
