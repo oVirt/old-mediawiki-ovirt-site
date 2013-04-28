@@ -62,12 +62,12 @@ Backup logic:
 
 Restore:
 Phase one (BASH)
-1. Request user to run engine-setup
-2. Override DB and PKI directories
+ 1. Request user to run engine-setup
+ 2. Override DB and PKI directories
 
 Phase two (??)
-1. Gather all needed information from the backup
-2. Run otopi based ovirt-engine-setup with special parameters (use pgdump, don't create new PKI)
+ 1. Gather all needed information from the backup
+ 2. Run otopi based ovirt-engine-setup with special parameters (use pgdump, don't create new PKI)
 
 === Benefit to oVirt ===
 * Easy to use backup utility
