@@ -6,7 +6,7 @@
 A simple utility to create and restore a complete ovirt-engine environment.
 
 === Owner ===
-* Name: [[User:oschreibOfer Schreiber]]
+* Name: [[User:oschreib|Ofer Schreiber]]
 * Email: <oschreib@redhat.com>
 
 === Current status ===
@@ -26,30 +26,23 @@ In design
 ! Priority
 ! Target date
 |-
-| Verify that root is the user executing the script
+| TBD
 |style="background-color: lightgreen;"| Done
-|style="background-color: lightgreen;"| Done
-|
-|
-|
-|-
-| Allow unprivileged user ro run a development installation
 |style="background-color: red;"| Not implemented
-|style="background-color: lightgreen;"| Done
 |
 |
 |
 |-
-| Checking total memory
+| TBD
 |style="background-color: lightgreen;"| Done
 |style="background-color: lightgreen;"| Done <ref name="memcheck" />
-|[[User:SandroBonazzola| Sandro Bonazzola]]
+|[[User:Oschreib| Ofer Schreiber]]
 |
 |
 |}
 
 <references>
-<ref name="memcheck"> The option <code>--no-mem-check</code> is now <code>--otopi-environment="OVESETUP_SYSTEM/memCheck=bool:False"</code> </ref>
+<ref name="TBD"> Placeholder </ref>
 
 </references>
 
