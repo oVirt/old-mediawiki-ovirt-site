@@ -630,17 +630,17 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Verify that root is the user executing the script
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: red;"| Not implemented <ref name="cleanuproot" />
 |
 |-
 | Allow unprivileged user ro run a development cleanup
 |style="background-color: red;"| Not implemented
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Support unattended-clean option
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Support dont-drop-db option
@@ -665,22 +665,22 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Change working dir to the root directory
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Allow logging
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Ask user to proceed with cleanup in interactive mode
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Stop Engine service when needed
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Backup engine database if drop requested
@@ -690,17 +690,17 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Drop engine database if requested
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done<ref name="dbdrop"/>
 |
 |-
 | Clean pgpass  if drop requested
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Clean sysctl configuration
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done
 |
 |-
 | Backup CA if remove requested
@@ -735,9 +735,14 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Add info message on where the logs are located
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
+|style="background-color: lightgreen;"| Done
 |
 |}
+
+<references>
+<ref name="cleanuproot">only if we did not install in development mode</ref>
+<ref name="dbdrop">database is not dropped but all objects within are dropped, should be revisit when [https://bugzilla.redhat.com/show_bug.cgi?id=951923 bug#951923] is resolved.
+</references>
 
 === Detailed Description ===
 TBD
