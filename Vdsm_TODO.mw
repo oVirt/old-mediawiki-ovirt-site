@@ -9,7 +9,7 @@
 
 * have a logrotate-dependent logrotate.conf that works on Fedora and EL equally well.
 
-* Configure vdsm to use syslog -- done by Mark Wu, but now we need to stop trashing the console.
+* <strike>Configure vdsm to use syslog , but now we need to stop trashing the console</strike> -- done by Mark Wu.
 
 * Simplify the SysV init script, split most of its code to a "[http://gerrit.ovirt.org/295 vdsm-tool]". vdsm-tool should assume responsibility on hairy stuff such as [http://bugzilla.redhat.com/547424 configuring multipath], which should not be the business of Vdsm proper.
 
