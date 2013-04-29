@@ -5,8 +5,8 @@ Define special parameters per VM virtual device, and pass them down to vdsm hook
 
 === Owner ===
 * Name: [[User:amuller| Assaf Muller]]
-
 * Email: <amuller@redhat.com>
+* IRC: amuller at #ovirt (irc.oftc.net)
 
 === Current status ===
 * oVirt-3.3
