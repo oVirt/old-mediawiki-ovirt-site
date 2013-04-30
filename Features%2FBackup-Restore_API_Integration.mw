@@ -57,6 +57,12 @@ File level restore can be performed in-guest or off-host. Mount the volumes of t
 # detach disk (symmetric to attach disk)
 # teardown backup disk (symmetric to prepare backup disk)
 # delete snap - This can only be called if VM is down today and is not mandatory in any event.  Once we have live merge, it should be policy driven ( user should be able to choose whether to keep or delete)
+==== Following API calls will be needed for restore – ==== 
+# create vm (vmconfig)
+# prepare restore (hostid)
+# attach disk()
+# tear down restore()
+#detach disk()
 
 ==== Prepare backup disk ==== 
 # Lock disk  
