@@ -45,6 +45,8 @@
 == refactoring ==
 * In vm.py, libvirtvm.py, clientIF.py  there is a mess of prepare*Path functions (end their respective teardowns), which is too complex to fathom. We have to convert all drive specifications (PDIV,GUID,path) into Drive object at the API entry.
 
+* We store VM configuration/state in 3 different places: vm.conf (and its on-disk persistency), vm object and its vm.devices[], and within libvirt. This creates a hell of inconsistency problems. Think of Vdsm crashing right after hotpluggin a new disk. The added disk would not be monitored by Vdsm post-restart and not even by destination vdsm if the VM is migrated.
+
 * lvm.PV.guid is devicemapper-owned piece of information; lvm has nothing to do with it, and jumps through [http://gerrit.ovirt.org/2940 hoops] to produce it. Instead, it should be produced by devicemapper and consumed directly by blockSD.
 
 * Define an API.VMState "enumeration" and use API.VMState.UP instead of the string 'Up'.
