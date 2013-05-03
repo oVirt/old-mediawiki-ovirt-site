@@ -6,6 +6,14 @@
 
 {{Event|name=[//wiki.centos.org/Events/Dojo/Antwerp2013 CentOS Dojo in Antwerp, Getting Started with oVirt]|date=8 April 2013|location=Antwerp, Belgium|lead=An Introduction to oVirt [https://speakerdeck.com/vincentvdk/ovirt-introduction-and-overview Presentation] by Vincent Van Der Kussen explaining what oVirt is about and why its generating so much excitement in the virtualised infrastructure space. }}
 
+{{Event|name=[[FOSDEM 2013 | oVirt at FOSDEM 2013]]|date=22-24 January 2013|location=Brussels, Belgium|lead=
+oVirt was out in force for [//fosdem.org/2013/ FOSDEM 2013]. Itamar Heim and Dave Neary were co-chairs for the organisation of the [//fosdem.org/2013/schedule/track/virtualisation/ Virtualization DevRoom], a track which featured a number of [[FOSDEM 2013 | oVirt presentations]], an oVirt stand, and a large contingent of the oVirt team.}}
+
+
+{{Event|name=[[NetApp Workshop January 2013 | oVirt Workshop at NetApp Headquarters]]|date=22-24 January 2013|location=Sunnyvale, California|lead=
+In January 2013 we had a very successful oVirt workshop and board meeting in Sunnyvale, on the NetApp campus.
+[[NetApp Workshop January 2013#Event details| Browse the agenda]]}}
+
 {{Event|name=[https://events.linuxfoundation.org/events/kvm-forum oVirt Workshop at Linux Con Europe]|date=7-9 November 2012|location=Barcelona, Spain|lead=Co-located with the KVM Forum, the oVirt Workshop in Barcelona was a three day event covering user, developer and integrator topics for oVirt.
 
 The [[LinuxCon Europe workshop schedule | agenda and slides]] are now available online.}}
