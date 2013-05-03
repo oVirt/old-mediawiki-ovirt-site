@@ -4,6 +4,8 @@
 <startfeed/>
 </noinclude>
 
+{{Event|name=[//wiki.centos.org/Events/Dojo/Antwerp2013 CentOS Dojo in Antwerp, Getting Started with oVirt]|date=8 April 2013|location=Antwerp, Belgium|lead=An Introduction to oVirt [https://speakerdeck.com/vincentvdk/ovirt-introduction-and-overview Presentation] by Vincent Van Der Kussen explaining what oVirt is about and why its generating so much excitement in the virtualised infrastructure space. }}
+
 {{Event|name=[https://events.linuxfoundation.org/events/kvm-forum oVirt Workshop at Linux Con Europe]|date=7-9 November 2012|location=Barcelona, Spain|lead=Co-located with the KVM Forum, the oVirt Workshop in Barcelona was a three day event covering user, developer and integrator topics for oVirt.
 
 The [[LinuxCon Europe workshop schedule | agenda and slides]] are now available online.}}
@@ -12,7 +14,7 @@ The [[LinuxCon Europe workshop schedule | agenda and slides]] are now available 
 
 {{Event|name=[https://events.linuxfoundation.org/events/linuxcon Linux Con North America|date=28 August 2012|location=San Diego, California|lead=Co-hosted with the premier Linux conference in North America, [https://events.linuxfoundation.org/events/linuxcon/ovirt-gluster-workshops video and presentations] from the oVirt Workshop are now online.}}
 
-{{Event|name=[https://events.linuxfoundation.org/events/linuxcon-japan/ovirt-gluster-workshops oVirt Workshop at Linux Con Japan] |date=8 June 2012|location=Yokohoma, Japan}}
+{{Event|name=[//events.linuxfoundation.org/events/linuxcon-japan/ovirt-gluster-workshops oVirt Workshop at Linux Con Japan] |date=8 June 2012|location=Yokohoma, Japan}}
 
 {{Event|name=[[News/Beijing oVirt Workshop | oVirt Workshop Beijing, March 2012]] |date=20 March 2012|location=Beijing, China|lead=The 2nd oVirt community workshop was held successfully in Beijing on 21st March. More than 100 developers across the world gathered in Beijing to share their experience in oVirt development.}}
 
