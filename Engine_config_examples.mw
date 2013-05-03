@@ -31,7 +31,7 @@ Where:
 # engine-config -s AdminPassword=superNewPassword
 # service jboss-as restart </nowiki>
 
-Or for an interactive password prompt
+For Ovirt 3.2 or later
  <nowiki>
 # engine-config -s AdminPassword=interactive
-# service jboss-as restart </nowiki>
+# service ovirt-engine restart </nowiki>
