@@ -31,6 +31,7 @@ Where:
 # engine-config -s AdminPassword=superNewPassword
 # service jboss-as restart </nowiki>
 
+Or for an interactive password prompt
  <nowiki>
 # engine-config -s AdminPassword=interactive
 # service jboss-as restart </nowiki>
