@@ -30,3 +30,7 @@ Where:
  <nowiki>
 # engine-config -s AdminPassword=superNewPassword
 # service jboss-as restart </nowiki>
+
+ <nowiki>
+# engine-config -s AdminPassword=interactive
+# service jboss-as restart </nowiki>
