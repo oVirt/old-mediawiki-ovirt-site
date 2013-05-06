@@ -1,3 +1,25 @@
 This page describes the process for becoming a member of the Infrastructure team (a [[Becoming a maintainer|maintainer]].)
 
+=== Step 1: Get involved ===
+
+The Infrastructure team primarily uses three resources to get stuff done:
+* [http://lists.ovirt.org/mailman/listinfo/infra The infra mailing list] for asynchronous communication
+* [https://fedorahosted.org/ovirt/report/1 oVirt infra trac] for issue tracking
+* [[Infrastructure team meetings | The weekly infra team meeting]] on IRC for synchronous discussion and review of action items
+
+In general, the team hangs out on the general #oVirt IRC channel on OFTC.
+
+A great first step to getting involved in the Infrastructure team is to introduce yourself on the mailing list, and to start attending the team meetings, if it's possible for you.
+
+In step 1, you should [[Category:Infrastructure | get familiar with the team work presses]] and [[Infrastructure team administrators | its members]], the skills we have, the infrastructure we use (like [[/Infrastructure git repository | git]] and [[Infrastructure Puppet details | puppet]]) and [[Infrastructure team task list | the things we have on our agenda to accomplish]]. Perhaps you have the time and skills to make suggestions as to how something might be accomplished, or research possible solutions to a problem and make a proposal, to allow other team members to put a solution in place quickly? Perhaps you've noticed something which can be improved, and you would like to add an issue to our Trac instance to help ensure it gets done.
+
+=== Step 2: Propose changes - build trust ===
+
+After a few weeks attending our meetings and/or participating in the mailing list, you will begin to build trust in the team. Patch proposals, and showing good judgement in the changes you propose, will accelerate the trust process.
+
+Because we use virtualized infrastructure, the natural next step is to [[Adding a new system administrator to a host | become an administrators of a virtual machine]]  to install a new service for the project. As an apprentice administrator, the service will be in incubation for a period of time, during which your administration and promotion of the service will be observed.
+
+After an incubation period, whose length will depend on the quality and quantity of your contributions, and your cultural fit with the team, you will become [[Category:Infrastructure#Team | a core team member]]. Congratulations!
+
 [[Category:Infrastructure]]
+[[Category:Infrastructure documentation]]
