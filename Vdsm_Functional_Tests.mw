@@ -32,6 +32,20 @@ Install the latest python-rtslib and Linux kernel. The python-rtslib is for the 
 Not needed.
 
 ==== GlusterFS storage tests ====
+* Install the latest GlusterFS RPMs.
+:: You can download the .repo file to /etc/yum.repos.d from the [http://download.gluster.org/pub/gluster/glusterfs/qa-releases/3.4.0alpha/ GlusterFS official site].
+* Start glusterd system service
+* Setup testing volume
+::Prepare the backend
+<pre>mkdir /testGlusterBrick && chmod 777 /testGlusterBrick</pre>
+::Start gluster shell by running the command '''gluster'''
+<pre>
+gluster> volume create testvol uvdsm2:/testGlusterBrick
+gluster> volume start testvol
+gluster> volume set testvol server.allow-insecure on
+</pre>
+* Edit /etc/glusterfs/glusterd.vol
+::Add "option rpc-auth-allow-insecure on" and save.
 
 ==== NFS storage tests ====
 Start nfs-server system service.
