@@ -74,7 +74,7 @@ If the above didn't help try also removing <BR/>
 These files should be located under workspace.
 
 === IntelliJ ===
-* Install IntelliJ (there is a community edition)  - good stable version is 10.5.x, but there are also 11 and 12 now available.
+* Install IntelliJ (there is a community edition)  
 http://www.jetbrains.com/idea/free_java_ide.html
 * Run IntelliJ (make sure you have set JAVA_HOME variable first)
 /yourIntelliJInstallLocation/bin/idea.sh
