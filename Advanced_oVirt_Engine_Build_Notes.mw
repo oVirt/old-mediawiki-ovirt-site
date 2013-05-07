@@ -34,7 +34,7 @@ This can be done by overriding the <code>gwt.userAgent</code> property. We recom
 * Build oVirt Engine and enable the <code>gwtdev</code> profile:
 
 <pre>
-$ mvn install -Pgwtdev,gwt-admin
+$ mvn install -Pdep,gwtdev,gwt-admin
 </pre>
 
 This will instruct GWT to generate 1 permutation for Firefox browser only. If you need to build for other browsers you can use the following values inside the <code>gwt.userAgent</code> property:
