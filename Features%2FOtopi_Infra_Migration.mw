@@ -751,7 +751,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Stop engine-notifierd when needed
 |style="background-color: lightgreen;"| Done
-| style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
