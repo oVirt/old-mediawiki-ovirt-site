@@ -7,10 +7,9 @@ The ability to run the Engine as a VM on the hosts that are managed by this Engi
 
 
 === Owner ===
-* Dan Yasny: [[User:Dyasny| Dyasny]]
+* Sean Cohen: [[User:scohen| scohen]]
 
-* Email: <dyasny@redhat.com>
-
+* Email: <scohen@redhat.com>
 
 === Current status ===
 * Initial POC devel
