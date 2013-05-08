@@ -7,9 +7,15 @@ The ability to run the Engine as a VM on the hosts that are managed by this Engi
 
 
 === Owner ===
-* Sean Cohen: [[User:scohen| scohen]]
+* Featue Owner: Sean Cohen: [[User:scohen| scohen]]
 
 * Email: <scohen@redhat.com>
+
+* Engine Component owner: Moran Goldboim
+
+* Email: <mgoldboi@redhat.com>
+
+* VSDM Component owner:
 
 === Current status ===
 * Initial POC devel
