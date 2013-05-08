@@ -73,8 +73,8 @@ $> tar xvf apache-maven-3.0.5-bin.tar.gz
 Make sure that the maven ''bin'' directory is the first in your path, otherwise you will be using the version of maven provided by your operating system:
 
 <pre>
-$> PATH=$HOME/apache-maven-3.0.5/bin:$HOME
-$> export path
+$> PATH=$HOME/apache-maven-3.0.5/bin:$PATH
+$> export PATH
 </pre>
 
 Please validate mvn is in the path and that it is version 3 or greater:
