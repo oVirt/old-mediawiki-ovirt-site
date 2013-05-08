@@ -127,7 +127,7 @@ Example for variables in this file:
  <nowiki>
  export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk.x86_64
  export JBOSS_HOME=/usr/share/jboss-as
- export PATH=$HOME/apache-maven-3.0.5/bin:$HOME
+ export PATH=$HOME/apache-maven-3.0.5/bin:$PATH
  </nowiki>
 
 <!--<p style="border:1px solid #AAA;background:#f3f3f3;padding:100;font-size:150%;line-height:2">
