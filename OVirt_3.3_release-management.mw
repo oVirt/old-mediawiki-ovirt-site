@@ -60,6 +60,7 @@ Features being considered for inclusion/already in master:
 
 === Infra ===
 * [[Features/Device Custom Properties]]
+* [[Features/ExternalTasks]]
 
 === Networking ===
 * [[Features/Migration Network]]
