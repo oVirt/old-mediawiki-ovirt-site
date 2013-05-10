@@ -632,8 +632,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Verify that root is the user executing the script
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented <ref name="cleanuproot" />
-|
+|style="background-color: orange;"| In Progress<ref name="cleanuproot" />
+||[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
 |-
@@ -667,8 +667,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support remove-nfs-exports option
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+|style="background-color: orange;"| In Progress
+||[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
 |-
@@ -758,8 +758,8 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Clean ISO domain NFS exports if requested
 |style="background-color: lightgreen;"| Done
-|style="background-color: red;"| Not implemented
-|
+|style="background-color: orange;"| In Progress
+||[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
 |-
