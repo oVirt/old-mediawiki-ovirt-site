@@ -1,0 +1,157 @@
+= Development Environment =
+
+<b>Please notice:</b> Most updated certified documentation is available within source tree at [http://gerrit.ovirt.org/gitweb?p=ovirt-engine.git;a=blob;f=README.developer;hb=HEAD README.developer].
+
+This page is mostly to absorb community experience into the certified procedures.
+
+== Prerequisites ==
+
+=== RPM based ===
+
+Set up nightly repository <code>/etc/yum.repos.d/ovirt-nightly.repo</code>, replace <code>Fedora/18</code> with your distribution name and version (if available):
+ <nowiki>[ovirt-nightly]
+name=ovirt-nightly
+baseurl=http://resources.ovirt.org/releases/nightly/rpm/Fedora/18/
+enabled=1
+gpgcheck=0
+priority=1
+protect=1</nowiki>
+
+Install 3rd party packages:
+ <nowiki># yum install git java-devel maven openssl postgresql-server \
+    python-m2crypto python-psycopg2 python-cheetah python-daemon \
+    jboss-as</nowiki>
+
+Install ovirt packages:
+ <nowiki># yum install ovirt-host-deploy</nowiki>
+
+Make sure openjdk is the java preferred:
+ <nowiki># alternatives --config java</nowiki>
+
+=== Debian based ===
+
+Install 3rd party packages:
+ <nowiki># apt-get install git openjdk-7-jdk maven openssl postgresql \
+    python-m2crypto python-psycopg2 python-cheetah python-daemon \
+    jboss-as</nowiki>
+
+Download jboss-as-7.1.1 from [http://www.jboss.org/jbossas/downloads/ jboss site] and extract to $HOME.
+
+Install ovirt packages:
+  TODO
+
+Make sure openjdk is the java preferred:
+ <nowiki># update-alternatives --config java</nowiki>
+
+=== Database ===
+
+Based on your distribution it may be that you require to initialize the database.
+
+ <nowiki>Fedora: # postgresql-setup initdb
+Gentoo: # emerge --config postgresql-server</nowiki>
+
+Configure PostgreSQL to accept network connection by locating <code>pg_hba.conf</code> file, locations includes:
+{| class="wikitable"
+|-
+|Fedora||/var/lib/pgsql/data/pg_hba.conf
+|-
+|Debian||/etc/postgresql/*/main/pg_hba.conf
+|-
+|Gentoo||/etc/postgresql-*/pg_hba.conf
+|}
+
+Locate: 127.0.0.1/32 and ::1/128 and allow password authentication.
+ <nowiki># IPv4 local connections:
+host    all             all             127.0.0.1/32            password
+# IPv6 local connections:
+host    all             all             ::1/128                 password</nowiki>
+
+Restart PostgreSQL service for definitions to take effect.
+
+Create database and user, usually using the following commands as root:
+ <nowiki>su - postgres -c "psql -d template1 -c \"create user engine password 'engine';\""
+su - postgres -c "psql -d template1 -c \"create database engine owner engine;\""</nowiki>
+
+It basically logins into PostgreSQL database using privileged user, creates a user and creates a database owned by the user.
+
+=== Source ===
+
+Checkout source:
+ <nowiki>cd $HOME
+$ git clone git://gerrit.ovirt.org/ovirt-engine</nowiki>
+
+== Usage ==
+
+Once prerequisites are in place, you are ready to build and use ovirt-engine.
+
+Build product and install at <code>$HOME/ovirt-engine</code>, execute the following as unprivileged user while residing within source repository:
+ <nowiki>$ make install-dev PREFIX="$HOME/ovirt-engine"</nowiki>
+
+Build may be customized, refer to [http://gerrit.ovirt.org/gitweb?p=ovirt-engine.git;a=blob;f=README.developer;hb=HEAD README.developer] for farther information.
+
+Setup product by executing the following command and replying to questions, if you followed the database creation above then your database user is 'engine', its password is 'engine' and the database name is 'engine':
+ <nowiki>$ $HOME/ovirt-engine/bin/engine-setup-2</nowiki>
+
+If jboss is installed at alternate location, add the following while JBOSS_HOME contains the location: <code>--jboss-home="${JBOSS_HOME}"</code>
+
+When product is successfully set up, execute the ovirt-engine service:
+ <nowiki>$ $HOME/ovirt-engine/share/ovirt-engine/services/ovirt-engine.py start</nowiki>
+
+The service will not exit as long as engine is up, to stop press <Ctrl>C.
+
+Access your engine using:
+* http://localhost:8080
+* https://localhost:8443
+
+Debug port is available via port <code>8787</code>, to be used by Eclipse or any other debugger. 
+
+When performing code change which do not touch modify database, there is no need to re-execute the setup, just execute:
+ <nowiki>$ make install-dev PREFIX="$HOME/ovirt-engine"</nowiki>
+
+And start the engine service.
+
+== Advanced Usage ==
+
+=== Enable Unit Tests ===
+
+ <nowiki>make install-dev PREFIX="$HOME/ovirt-enigne" BUILD_TEST_FLAGS=""</nowiki>
+
+=== Enable DAO Tests ===
+
+Update <code>backend/manager/modules/dal/src/test/filters/pgsql.properties</code> with your database details.
+
+ <nowiki>make install-dev PREFIX="$HOME/ovirt-engine" BUILD_TEST_FLAGS="-P enable-dao-tests"</nowiki>
+
+= Packaging =
+
+== RPM packaging ==
+
+Build system supports standard RPM packaging out of source tarball.
+
+Create source tarball by executing:
+ <nowiki>make dist</nowiki>
+
+Install build dependencies, replacing <code>@x@</code> with file names, this should be executed second time only if build dependencies are changed:
+ <nowiki>rpmbuild -ts @tarball@
+yum-builddep @srpm@</nowiki>
+
+Build RPMS:
+ <nowiki>rpmbuild -tb @tarball@</nowiki>
+
+RPM customization is supported refer to [http://gerrit.ovirt.org/gitweb?p=ovirt-engine.git;a=blob;f=ovirt-engine.spec.in;hb=HEAD ovirt-engine.spec.in].
+
+{| class="wikitable"
+|-
+!Variable||Default||Description||Usage
+|-
+|ovirt_build_quick||0||build as quickly as we can||syntax checks
+|-
+|ovirt_build_minimal||0||minimal build||development fully functional for firefox only
+|-
+|ovirt_build_gwt||1||gwt enablement||build or skip
+|-
+|ovirt_build_locales||1||build extra locales||production build
+|}
+
+Example:
+ <nowiki>rpmbuild -D"ovirt_build_minimal 1" -tb @tarball@</nowiki>
