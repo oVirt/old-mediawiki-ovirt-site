@@ -94,11 +94,9 @@ Proposal C is intuitive, easier, and less  complex than both A and B proposals. 
 # Clean vdsm priviledge usage
 # Clean and stable vdsm/supervdsm exception flow and races
 
-
 == Documentation / External references ==
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
 * TODO: paste corresponding bugzilla link and gerrit link here
-
 
 == Comments and Discussion ==
 
