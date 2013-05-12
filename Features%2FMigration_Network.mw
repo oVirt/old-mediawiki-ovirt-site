@@ -52,8 +52,8 @@ Note that the migration protocol requires Vdms-Vdsm and libvirt-libvirt communic
 
 ==== Screen shots ====
 [[File:EditMigration.png]]
+[[File:MigrationSubTab.png|1200px]]
 [[File:MigrationSetupNetwork.png]]
-[[File:MigrationSubTab.png]]
 
 === Development Phases ===
 ==== First phase ====
