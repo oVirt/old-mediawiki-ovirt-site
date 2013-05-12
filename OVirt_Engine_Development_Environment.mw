@@ -155,3 +155,6 @@ RPM customization is supported refer to [http://gerrit.ovirt.org/gitweb?p=ovirt-
 
 Example:
  <nowiki>rpmbuild -D"ovirt_build_minimal 1" -tb @tarball@</nowiki>
+
+[[Category:Engine]]
+[[Category:How to]]
