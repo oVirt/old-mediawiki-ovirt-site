@@ -21,50 +21,33 @@ The Qos properties (like the other NIC properties) will be kept in migration and
 
 
 == Backend ==
-
+The new fields will be added to the NetworkInterface object (to support future reuse in physical NICs and other network interfaces). Fields values will be seved in DB and ovf.
 === Classes ===
 
-'''''org.ovirt.engine.core.bll.quota.QuotaManager:'''''  A class which manages the quota views and memory delta tables. This class will be revisited and redesigned. <BR/>
-'''consume(QuotaConsumptionParametrs params):'''  This will be the main API of the QuotaManager. Any quota Consumption will call this method. Parameters are taken from 
-CommandBase and the consuming command.  The return value is a boolean - telling if the consumption was possible. Both storage resources and vds resources will be asked in the same
-QuotaConsumptionParametrs Object. That way the QuotaManager could validate and set all the resources required for the command (will make the external rollback redundant). <BR/>
-'''rolback(QuotaConsumptionParametrs params):''' The same as consume(), only reverting all of the consume/release done by the same parameters.
-
-'''''org.ovirt.engine.core.bll.quota.QuotaConsumptionParameters:''''' The object passed to the QuotaManager on each consume/release call.<BR/>
-'''storage_pool id:''' Every cunsume/release call can handle only one storage_pool (DC).<BR/>
-'''canDoActionMesseges:''' Used for returning canDoAction messeges back to the command.<BR/>
-'''auditLoggableBase:''' Used in order to allow logging to the auditLog using the command itself.<BR/>
-'''List of QuotaStorageConsumptionParameter:''' Holds a single entry. the basic consumption unit.<BR/>
-'''List of QuotaVdsConsumptionParameter:''' Holds a single entry. the basic consumption unit.<BR/>
-
-'''''org.ovirt.engine.core.bll.quota.QuotaStorageConsumptionParameter:''''' A single entry. The basic consumption unit for storage.<BR/>
-'''quotaId:''' The ID of the quota.<BR/>
-'''action type:''' Consume or release (This allows to consume some resources while releasing others, all in the same call to consume()). <BR/>
-'''storageDomainId:''' ID of the storage domain (the asked resource).<BR/>
-'''requestedStorageGB:''' The requested storage in GB.<BR/>
-
-'''''org.ovirt.engine.core.bll.quota.QuotaVdsConsumptionParameter:''''' A single entry. the basic consumption unit for cluster. <BR/>
-'''quotaId:''' The ID of the quota.<BR/>
-'''action type:''' Consume or release (This allows to consume some resources while releasing others, all in the same call to consume()). <BR/>
-'''vdsGroupId:''' ID of the vds group (cluster) (the asked resource).<BR/>
-'''requestedCpu:''' The requested number of vCPUs.<BR/>
-'''requestedMem:''' The requested Memory.<BR/>
+'''''engine.core.common.businessentities.network.NetworkInterface'''''  - add fields: inboundAverage(Integer),  inboundPeak(Integer), inboundBurst(Long), outboundAverage(Integer),  outboundPeak(Integer), outboundBurst(Long)<BR/>
+'''''engine.core.vdsbroker.vdsbroker.VmInfoBuilder''''' - add support to the QoS properties<BR/>
+'''''engine.core.utils.ovf.OvfWriter''''  - add support to the QoS properties<BR/>
+'''''engine.core.utils.ovf.OvfReader''''  - add support to the QoS properties<BR/>
+'''''engine.core.dao.network.VmNetworkInterfaceDao'''''  - add support to the QoS properties<BR/>
 
 === DB Change ===
-In order to support quota on duplicate image stored on different storage domains, the quota_id column will move from "images" table to "image_storage_domain_map" table.
-
-'''image_storage_domain_map'''  - Represents the properties of the Quota configured on the DC.
+Add support to the QoS properties by adding 6 columns to the '''vm_interface'''  - Represents the properties of the virtual NIC
 {|class="wikitable sortable"
-!border="1"| Column Name ||Column Type ||Null? / Default ||Definition 
+!border="1"| Column Name ||Column Type ||Null? / Default 
 |-
-|image_id ||UUID ||not null ||Image Id 
+|inbound_average ||Integer || 
 |-
-|storage_domain_id ||UUID ||not null ||Storage domain id
+|inbound_peak ||Integer || 
 |-
-|quota_id ||UUID || ||Quota id 
+|inbound_burst||Bigint || 
+|-
+|outbound_average ||Integer || 
+|-
+|outbound_peak ||Integer || 
+|-
+|outbound_burst ||Bigint || 
 |-
 |}
-
 
 == Tests ==
 
