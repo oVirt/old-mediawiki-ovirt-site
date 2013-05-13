@@ -12,7 +12,7 @@
 * Email: <alkaplan@redhat.com>
 
 === Current status ===
-* Last updated: {{May}} {{9}}, {{2013}}
+* Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 === Detailed Description ===
 In our RHEV installation we are going to have a lot of  Networks/VLAN's in a cluster. This means that when adding a host to this cluster, it means a lot of work adding all the different networks. 
