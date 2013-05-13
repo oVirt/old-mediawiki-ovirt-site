@@ -61,6 +61,7 @@ Features being considered for inclusion/already in master:
 === Infra ===
 * [[Features/Device Custom Properties]]
 * [[Features/ExternalTasks]]
+* [[Features/Supervdsm_service]]
 
 === Networking ===
 * [[Features/Migration Network]]
