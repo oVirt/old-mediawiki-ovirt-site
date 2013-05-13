@@ -13,6 +13,7 @@ host's default gateway.
 
 === Current Status ===
 * oVirt-3.3
+* No patches currently submitted to VDSM or the Engine. Solution currently being researched at the VDSM side, work not assigned yet at the Engine side.
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 === Why do we need multiple gateways? ===
