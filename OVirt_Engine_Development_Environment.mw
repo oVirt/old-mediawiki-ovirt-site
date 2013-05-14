@@ -26,7 +26,8 @@ Install ovirt packages:
  <nowiki># yum install ovirt-host-deploy</nowiki>
 
 Make sure openjdk is the java preferred:
- <nowiki># alternatives --config java</nowiki>
+ <nowiki># alternatives --config java
+# alternatives --config javac</nowiki>
 
 === Debian based ===
 
