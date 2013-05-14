@@ -19,7 +19,7 @@ protect=1</nowiki>
 
 Install 3rd party packages:
  <nowiki># yum install git java-devel maven openssl postgresql-server \
-    python-m2crypto python-psycopg2 python-cheetah python-daemon \
+    m2crypto python-psycopg2 python-cheetah python-daemon \
     jboss-as</nowiki>
 
 Install ovirt packages:
