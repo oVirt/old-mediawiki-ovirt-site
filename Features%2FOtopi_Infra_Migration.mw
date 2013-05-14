@@ -660,7 +660,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support dont-remove-ca option
 |style="background-color: lightgreen;"| Done
-|style="background-color: orange;"| In Progress
+|style="background-color: yellow;"| Feedback
 ||[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
@@ -744,7 +744,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Remove CA  if requested
 |style="background-color: lightgreen;"| Done
-|style="background-color: orange;"| In Progress
+|style="background-color: yellow;"| Feedback
 ||[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
