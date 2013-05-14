@@ -44,7 +44,7 @@ Features being considered for inclusion/already in master:
 * Swap enhancements (deferred to 3.1)
 * TUI
 ** [[Features/Urwid TUI | Features/New installer]]
-** [[Features/Node ipv6 support]] (deferred to 3.1)
+** [[Features/Node ipv6 support]]
 ** [[Features/Node Diagnostic Page | Diagnostics page]]
 * Compatibility
 ** Fedora 18
