@@ -102,7 +102,7 @@ On May 9th, 2013, The oVirt workshop will also have two tracks running.  The Dev
 {|
 ! Time !! Title !! Speaker
 |-
-| width=20%| 09:00-10:00 || width=50% | oVirt-node overview || width=30% | Ying Cui and Guohua Ouyang (Red Hat)
+| width=20%| 09:00-10:00 || width=50% | [http://www.ovirt.org/images/e/e4/Shaghai-oVirt-node.pdf oVirt-node overview] || width=30% | Ying Cui and Guohua Ouyang (Red Hat)
 |-
 | 10:00-11:00 ||  Support oVirt on Ubuntu  || Zhengsheng Zhou (IBM)
 |-
