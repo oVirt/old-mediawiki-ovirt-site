@@ -95,7 +95,7 @@ The following Guest OS drivers are available:
 ===== Create/Update a DirectLUN Disk =====
  <disk>
    ...
-   <interface>virtio-scsi</interface>
+   <interface>virtio_scsi</interface>
    <sgio>unfiltered</sgio>
    ...
  </disk>
