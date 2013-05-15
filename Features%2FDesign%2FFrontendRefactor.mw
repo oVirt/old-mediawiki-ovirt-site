@@ -62,6 +62,8 @@ This is to document the things we need to test in the unit test suite.
 * Make sure that the query started event is raised.
 * Make sure that the query complete event is raised once the query completes regardless of success/failure.
 ===== RunPublicQuery =====
+* Make sure that you can run the query even if you are not logged in
+
 ===== RunMultipleQueries =====
 * Make sure the correct queries are called based on the query type.
 * Make sure parameters are passed correctly.
