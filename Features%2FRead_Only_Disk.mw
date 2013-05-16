@@ -31,7 +31,7 @@ AddDiskCommand,  AttachDiskToVmCommand - Add the RO property and propagate until
 All relating Parameters classes should now contain this info. Therefore,  VmDiskOperationParameterBase will be added a new readOnly data member.<br/>
 ImagesHandler.addDiskToVm() -  will get the RO data and propagate it.<br/>
 
-No changes need in:<br/>
+No changes needed in:<br/>
 HotPlugDiskToVmCommand<br/>
 UpdateVmDiskCommand<br/>
 DetachDiskFromVmCommand<br/>
