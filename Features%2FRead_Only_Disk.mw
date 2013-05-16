@@ -51,7 +51,7 @@ Disks properties can be changed when creating a vm from template as it is.<br/>
 
 =====Snapshots=====
 There's no need to save the images of RO disk to the images table.<br/>
-There is, however, a need to update the ovf file so that it does include the RO disks' (images).<br/>
+There is, however, a need to update the ovf file so that it does include the RO disks (images).<br/>
 Verified - the OvfReader does read the RO property, so no problem with snapshots uses.<br/>
 
 ====UI====
