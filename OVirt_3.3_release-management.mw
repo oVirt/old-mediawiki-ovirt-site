@@ -72,7 +72,7 @@ Features being considered for inclusion/already in master:
 === Infra ===
 * [[Features/Device Custom Properties]]
 * [[Features/ExternalTasks]]
-* [[Features/Supervdsm_service]]
+* [[Features/Supervdsm_service]]:  http://gerrit.ovirt.org/#/c/11051/ - Tested, Waiting for reviews and comments
 
 === Networking ===
 * [[Features/Migration Network]]
