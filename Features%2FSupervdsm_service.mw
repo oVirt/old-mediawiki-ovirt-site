@@ -12,6 +12,10 @@ Supervdsm is responsible for all privileged operations. Currently Supervdsm is m
 * Email: <ybronhei@redhat.com>
 
 == Current status ==
+* Considering using dbus implementation for communication between the services.
+* Authentication method  is limited to only using hardcoded auth code that saved in file.
+
+== Background ==
 *current solution<br />
 # Vdsmd.init start vdsm with user “vdsm” <br />
 # Launch supervdsm when it is not running by sudo command<br />
