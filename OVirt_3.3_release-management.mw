@@ -95,7 +95,7 @@ http://gerrit.ovirt.org/#/c/13640/
 * Edit NFS, Posix connection properties in REST (not ready yet)
 * Edit ISCSI connection properties in webadmin UI (not ready yet)
 * Edit ISCSI connection properties in REST (not ready yet)
-* [[Features/Read_Only_Disk| RO Disks ]] (not ready yet)
+* [[Features/Read_Only_Disk| Read Only Disks ]] (not ready yet)
 
 === SLA & Scheduling ===
 * [[Features/oVirt_scheduler]] Wrapping scheduling functionalities as a separate package
