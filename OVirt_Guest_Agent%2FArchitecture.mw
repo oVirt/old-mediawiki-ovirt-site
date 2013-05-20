@@ -1,6 +1,6 @@
 [[Category:Ovirt guest agent]]
 ==The communication between oVirt guest agent and the oVirt engine ==
-[[File:Guest_Agent_Achitecture.png]]
+[[File:Guest_Agent_Achitecture.png|200px]]
 
 
 The engine directs requests for the guest agent to VDSM.
