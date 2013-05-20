@@ -57,11 +57,6 @@ Add support to the QoS properties by adding 6 columns to the '''vm_interface''' 
 
 
 === Expected unit-tests ===
-# QuotaManager - consume quota
-# QuotaManager - release quota
-# QuotaManager - rollback quota
-# QuotaManager - clear quota cache
-# Check quota interface is implemented where VdcActionType suggests it should
 
 == Special considerations ==
 
