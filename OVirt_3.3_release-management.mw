@@ -84,7 +84,7 @@ Features being considered for inclusion/already in master:
 * [[Features/Network Security Groups]]
 
 === Storage ===
-* Online Virtual Drive Resize
+* [[Features/Online_Virtual_Drive_Resize|Online Virtual Drive Resize]]
 * Adding VDSM hook for hotplug a disk
 * Separating "Move" vm operation to "Copy" and "Delete" operations to improve VM availability
 * VirtIO-SCSI
