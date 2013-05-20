@@ -98,6 +98,9 @@ When a host is activated Engine should
 ## on success, send <tt>setSafeNetConfig</tt>. On failure show an event to the user. the host would be left non-operational, and may need manual network configuration.
 # if the user requested post-installation reboot, fence the newly-added host.
 
+==== ovirt-node ====
+Still needs '''TODO''': drop bridge-creation logic from <tt>ovirt-node</tt>.
+
 === Documentation / External references ===
 
 * mailing-list discussion about this feature: http://lists.ovirt.org/pipermail/arch/2012-December/001101.html
