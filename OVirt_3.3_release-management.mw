@@ -87,15 +87,9 @@ Features being considered for inclusion/already in master:
 * [[Features/Online_Virtual_Drive_Resize|Online Virtual Drive Resize]]
 * [[Features/Virtio-SCSI|Virtio-SCSI]]
 * [[Features/Read_Only_Disk| Read Only Disks ]] (Work in Progress)
+* [[Features/Edit_Connection_Properties|Edit Connection Properties]]
 * Adding VDSM hook for hotplug a disk
 * Separating "Move" vm operation to "Copy" and "Delete" operations to improve VM availability
-*Edit  NFS connection properties in webadmin UI
-http://gerrit.ovirt.org/#/c/12372/
-* Edit Posix connection properties in webadmin UI
-http://gerrit.ovirt.org/#/c/13640/
-* Edit NFS, Posix connection properties in REST (not ready yet)
-* Edit ISCSI connection properties in webadmin UI (not ready yet)
-* Edit ISCSI connection properties in REST (not ready yet)
 
 === SLA & Scheduling ===
 * [[Features/oVirt_scheduler]] Wrapping scheduling functionalities as a separate package
