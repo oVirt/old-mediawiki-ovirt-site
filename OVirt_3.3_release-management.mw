@@ -84,12 +84,14 @@ Features being considered for inclusion/already in master:
 * [[Features/Network Security Groups]]
 
 === Storage ===
-* [[Features/Online_Virtual_Drive_Resize|Online Virtual Drive Resize]]
-* [[Features/Virtio-SCSI|Virtio-SCSI]]
+* [[Features/Online_Virtual_Drive_Resize|Enable online virtual drive resize]]
+* [[Features/Virtio-SCSI|Virtio-SCSI support]]
 * [[Features/Read_Only_Disk| Read Only Disks ]]
 * [[Features/Edit_Connection_Properties|Edit Connection Properties]]
 * Adding VDSM hook for hotplug a disk
 * Separating "Move" vm operation to "Copy" and "Delete" operations to improve VM availability
+* Backup and Restore API for Independent Software Vendors 
+* Allow resign/force re-election of SPM
 
 === SLA & Scheduling ===
 * [[Features/oVirt_scheduler]] Wrapping scheduling functionalities as a separate package
