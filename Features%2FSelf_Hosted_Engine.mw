@@ -42,7 +42,7 @@ This feature will deal with two main issues:
 * ovirt-node should have a TUI for the initial deployment and configuration of the Engine VM
 
 
-=== Bootstaping ===
+=== Bootstraping ===
 
 ==== RPM level ====
 * package should require vdsm enabling the host to be an hypervisor
@@ -123,7 +123,6 @@ This feature will deal with two main issues:
 ==== Limitations ====
 * NFS/Gluster FS
 * RHEV-H not supported
-
 
 === Deployment ===
 * Initial setup will involve creating the Engine VM (libvirt based), then, the Engine VM should be started, configured and updated.
