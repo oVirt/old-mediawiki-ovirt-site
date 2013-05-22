@@ -42,7 +42,7 @@ This feature will deal with two main issues:
 * ovirt-node should have a TUI for the initial deployment and configuration of the Engine VM
 
 
-=== Bootstraping ===
+== Detailed Description ==
 
 ==== RPM level ====
 * package should require vdsm enabling the host to be an hypervisor
