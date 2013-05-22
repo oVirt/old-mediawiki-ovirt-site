@@ -667,7 +667,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support remove-nfs-exports option
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 ||[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
@@ -758,7 +758,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Clean ISO domain NFS exports if requested
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 ||[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
@@ -772,7 +772,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Add info message to the user finalizing the  successful cleanup
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 ||[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
