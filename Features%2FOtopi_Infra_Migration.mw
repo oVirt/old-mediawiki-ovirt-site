@@ -674,7 +674,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support remove-exported-content option
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 ||[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
@@ -765,7 +765,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Clean ISO domain exported directories if requested
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 ||[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
