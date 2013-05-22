@@ -653,7 +653,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support dont-drop-db option
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 ||[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
@@ -709,7 +709,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Backup engine database if drop requested
 |style="background-color: lightgreen;"| Done
-|style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 ||[[User:SandroBonazzola| Sandro Bonazzola]]
 |
 |
