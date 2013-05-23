@@ -148,7 +148,7 @@ Features being considered for inclusion/already in master:
 ! Test page
 |-
 | Virt
-|[[Features/RAM Snapshots]]
+|[[Features/RAM Snapshots|RAM Snapshots]]
 | ?
 | ?
 | ?
@@ -156,7 +156,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | Virt
-|[[Features/noVNC console]]
+|[[Features/noVNC console|noVNC console]]
 | ?
 | ?
 | ?
@@ -164,7 +164,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | Virt
-|[[Features/GlusterFS_Storage_Domain]]
+|[[Features/GlusterFS_Storage_Domain|GlusterFS Storage Domain]]
 | ?
 | ?
 | ?
@@ -172,7 +172,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | Infra
-|[[Features/Device Custom Properties]]
+|[[Features/Device Custom Properties|Device Custom Properties]]
 | ?
 | ?
 | ?
@@ -180,7 +180,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | Infra
-|[[Features/ExternalTasks]]
+|[[Features/ExternalTasks|ExternalTasks]]
 | ?
 | ?
 | ?
@@ -188,7 +188,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | Infra
-| [[Features/Supervdsm_service]]
+| [[Features/Supervdsm_service|Supervdsm service]]
 | ?
 | ?
 | ?
@@ -196,7 +196,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | Networking
-|[[Features/Migration Network]]
+|[[Features/Migration Network|Migration Network]]
 | ?
 | ?
 | ?
@@ -204,7 +204,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | Networking
-|[[Features/Normalized ovirtmgmt Initialization]]
+|[[Features/Normalized ovirtmgmt Initialization|Normalized ovirtmgmt Initialization]]
 | ?
 | ?
 | ?
@@ -212,7 +212,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | Networking
-|[[Features/Quantum_Integration]]
+|[[Features/Quantum_Integration|Quantum Integration]]
 | ?
 | ?
 | ?
@@ -220,7 +220,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | Networking
-|[[Feature/NetworkReloaded]]
+|[[Feature/NetworkReloaded|NetworkReloaded]]
 | ?
 | ?
 | ?
@@ -228,7 +228,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | Networking
-|[[Features/Multiple Gateways]]
+|[[Features/Multiple Gateways|Multiple Gateways]]
 | ?
 | ?
 | ?
@@ -236,7 +236,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | Networking
-|[[Features/Network Labels]]
+|[[Features/Network Labels|Network Labels]]
 | ?
 | ?
 | ?
@@ -244,7 +244,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | Networking
-|[[Features/Network Security Groups]]
+|[[Features/Network Security Groups|Network Security Groups]]
 | ?
 | ?
 | ?
@@ -308,7 +308,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | SLA
-|[[Features/oVirt_scheduler]]
+|[[Features/oVirt_scheduler|oVirt scheduler]]
 | ?
 | ?
 | ?
@@ -316,7 +316,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | SLA
-|[[Features/Scheduling_API]]
+|[[Features/Scheduling_API|Scheduling API]]
 | ?
 | ?
 | ?
@@ -324,7 +324,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | SLA
-|[[Features/Watchdog_engine_support]]
+|[[Features/Watchdog_engine_support|Watchdog engine support]]
 | ?
 | ?
 | ?
@@ -332,7 +332,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | Gluster
-|[[Features/Gluster Hooks Management]]
+|[[Features/Gluster Hooks Managemen|Gluster Hooks Management]]
 | ?
 | ?
 | ?
@@ -340,7 +340,7 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 | Gluster
-|[[Features/Gluster Services Management]]
+|[[Features/Gluster Services Management|Gluster Services Management]]
 | ?
 | ?
 | ?
