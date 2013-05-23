@@ -275,8 +275,8 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Watchdog_engine_support|Watchdog engine support]]
 | ?
 | [[User:LHornyak|lhornyak@redhat.com]]
-| ?
-| ?
+| style="background-color: orange;"| orange
+| [[Watchdog engine support#Test_cases]]
 | ?
 |
 |-
