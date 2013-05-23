@@ -273,7 +273,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | SLA
 |[[Features/Watchdog_engine_support|Watchdog engine support]]
-| ?
+| Must
 | [[User:LHornyak|lhornyak@redhat.com]]
 | style="background-color: orange;"| orange - rest api missing
 | ?
