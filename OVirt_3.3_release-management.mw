@@ -136,7 +136,7 @@ Features being considered for inclusion/already in master:
 * Frontend Clean-up/Refactoring (at least partial/first phase) [[Features/Design/FrontendRefactor]]
 * Upgrade GWT(P) dependencies
 
-
+== Features Status Table ==
 {| class="wikitable" border="1"
 |-
 ! Functional team
@@ -396,3 +396,19 @@ Features being considered for inclusion/already in master:
 | ?
 |-
 |}
+
+=== Feature Table Mapping ===
+==== Release priority: ====
+*Must - feature absense will delay the release
+*Should - feature absense won't delay the release
+==== Status mapping: ====
+<pre style="color: red">
+* Red  - Feature isn't in code base yet.</pre>
+<pre style="color: orange">
+* Orange  -  Feature is in code base but not completed yet.</pre>
+<pre style="color: lightgreen">
+* Green  - Feature is in code base and ready for testing.</pre>
+==== Target Date ====
+date complete feature is merged in code base
+==== Test Page ====
+base description on how to test the new feature - should be relevant for test day
