@@ -319,11 +319,11 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | Integration
 |[[Features/Otopi_Infra_Migration|Otopi Infra Migration]]
 | Must
-| sbonazzo@redhat.com
-| style="background-color: lightgreen;"| Green
+| [[User:SandroBonazzola| sbonazzo@redhat.com]]
+| style="background-color: orange;"| Orange
 | 30/5/2013
 | ?
-|
+|Does not support upgrade from previous installations
 |-
 | Integration
 |[[Features/Self_Hosted_Engine|Self Hosted Engine]]
