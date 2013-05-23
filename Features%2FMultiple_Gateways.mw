@@ -50,26 +50,33 @@ http://www.policyrouting.org/iproute2-toc.html
 ==== Manual Configuration Example ====
 The zeus02 host is connected via eth0 to one router, and via eth1 (bridged over ovirtmgmt) to another router. We configured the display network on the eth0 NIC.
 
-The ip address on eth0:
-[[File:Example.jpg]]
+'''The ip address on eth0:'''
 
-The ip address on ovirtmgmt:
-[[File:Example.jpg]]
+[[File:Eth0 ip.png]]
 
-A list of the host's routing tables:
-[[File:Example.jpg]]
+'''The ip address on ovirtmgmt:'''
 
-The routing table setup for eth0:
-[[File:Example.jpg]]
+[[File:Ovirtmgmt ip.png]]
 
-The routing table setup for ovirtmgmt:
-[[File:Example.jpg]]
+'''A list of the host's routing tables:'''
 
-The rules which tell the host when to use each routing table:
-[[File:Example.jpg]]
+[[File:Rt_tables.png]]
 
-And finally, here's the host's main routing table. Note that in this configuration is '''never used''', however it still has some significance during an upgrade process. This will be explained later in the upgrade section of this document.
-[[File:Example.jpg]]
+'''The routing table setup for eth0:'''
+
+[[File:Eth0 table.png]]
+
+'''The routing table setup for ovirtmgmt:'''
+
+[[File:Ovirtmgmt table.png]]
+
+'''The rules which tell the host when to use each routing table:'''
+
+[[File:Ip rule.png]]
+
+And finally, here's the host's main routing table. Note that in this configuration the main routing table is '''never used''', however it still has some significance during an upgrade process. This will be explained later in the upgrade section of this document.
+
+[[File:Ip route.png]]
 
 ==== Automatic solution ====
 * One bash script that installs rules, table
