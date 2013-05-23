@@ -300,20 +300,20 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | Node
 | [[Features/Universal Image|Universal Node Image]]
-| ?
-| ?
-| ?
-| ?
+| Must
+| mburns@redhat.com
+| style="background-color: lightgreen;"| Green
+| Now
 | ?
 |
 |-
 | Node
 | [[Features/Node vdsm plugin|Node VDSM Plugin]]
-| ?
-| ?
-| ?
-| ?
-| ?
+| Must
+| mburns
+| style="background-color: lightgreen;"| Green
+| 2013-05-31
+| [[Features/Node_vdsm_plugin#Testing]]
 |
 |-
 | Integration
