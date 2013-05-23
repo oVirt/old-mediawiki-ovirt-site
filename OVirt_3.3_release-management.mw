@@ -276,8 +276,8 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | [[User:LHornyak|lhornyak@redhat.com]]
 | style="background-color: orange;"| orange - rest api missing
-| [[Features/Watchdog engine support#Test_cases|Test cases]]
 | ?
+| [[Features/Watchdog engine support#Test_cases|Test cases]]
 |
 |-
 | Gluster
@@ -336,18 +336,27 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | UX
 | User Portal performance improvements for IE8
+| Must
 | ?
-| ?
-| ?
-| ?
+| style="background-color: lightgreen;"| Green
+| Now
 | ?
 |
 |-
 | UX
+| Branding Support
+| Should
+| awels@redhat.com
+| style="background-color: Red;"| Red
+| 31/06/2013
+| ?
+| Code complete, just needs final review and final dev testing before handing to QA
+|-
+| UX
 | [[Features/Design/FrontendRefactor|FrontendRefactor]]
-| ?
-| ?
-| ?
+| Should
+| awels@redhat.com
+| style="background-color: Red;"| Red
 | ?
 | ?
 |
