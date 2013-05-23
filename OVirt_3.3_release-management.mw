@@ -71,6 +71,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 ! Status
 ! Target date
 ! Test page
+! Remarks
 |-
 | Virt
 |[[Features/RAM Snapshots|RAM Snapshots]]
@@ -79,6 +80,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Virt
 |[[Features/noVNC console|noVNC console]]
@@ -87,6 +89,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Virt
 |[[Features/GlusterFS_Storage_Domain|GlusterFS Storage Domain]]
@@ -95,6 +98,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Infra
 |[[Features/Device Custom Properties|Device Custom Properties]]
@@ -103,6 +107,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Infra
 |[[Features/ExternalTasks|ExternalTasks]]
@@ -111,6 +116,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Infra
 | [[Features/Supervdsm_service|Supervdsm service]]
@@ -119,6 +125,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Networking
 |[[Features/Migration Network|Migration Network]]
@@ -127,6 +134,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Networking
 |[[Features/Normalized ovirtmgmt Initialization|Normalized ovirtmgmt Initialization]]
@@ -135,6 +143,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Networking
 |[[Features/Quantum_Integration|Quantum Integration]]
@@ -143,6 +152,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Networking
 |[[Feature/NetworkReloaded|NetworkReloaded]]
@@ -151,6 +161,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Networking
 |[[Features/Multiple Gateways|Multiple Gateways]]
@@ -159,6 +170,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Networking
 |[[Features/Network Labels|Network Labels]]
@@ -167,6 +179,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Networking
 |[[Features/Network Security Groups|Network Security Groups]]
@@ -175,6 +188,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Storage
 |[[Features/Virtio-SCSI|Virtio-SCSI support]]
@@ -183,6 +197,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Storage
 |[[Features/Read_Only_Disk| Read Only Disks]]
@@ -191,6 +206,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Storage
 |[[Features/Edit_Connection_Properties|Edit Connection Properties]]
@@ -199,6 +215,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Storage
 |Adding VDSM hook for hotplug a disk
@@ -207,6 +224,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Storage
 |Separating "Move" vm operation to "Copy" and "Delete" operations to improve VM availability
@@ -215,6 +233,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Storage
 |Backup and Restore API for Independent Software Vendors 
@@ -223,6 +242,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Storage
 |Allow resign/force re-election of SPM
@@ -231,6 +251,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | SLA
 |[[Features/oVirt_scheduler|oVirt scheduler]]
@@ -239,6 +260,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | SLA
 |[[Features/Scheduling_API|Scheduling API]]
@@ -247,6 +269,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | SLA
 |[[Features/Watchdog_engine_support|Watchdog engine support]]
@@ -255,6 +278,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Gluster
 |[[Features/Gluster Hooks Managemen|Gluster Hooks Management]]
@@ -263,6 +287,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Gluster
 |[[Features/Gluster Services Management|Gluster Services Management]]
@@ -271,6 +296,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Node
 | [[Features/Universal Image|Universal Node Image]]
@@ -279,6 +305,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Node
 | [[Features/Node vdsm plugin|Node VDSM Plugin]]
@@ -287,6 +314,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | Integration
 |[[Features/Otopi_Infra_Migration|Otopi Infra Migration]]
@@ -295,6 +323,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | style="background-color: lightgreen;"| Green
 | 30/5/2013
 | ?
+|
 |-
 | Integration
 |[[Features/Self_Hosted_Engine|Self Hosted Engine]]
@@ -303,6 +332,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | style="background-color: Red;"| Red
 |20/6/2013
 | ?
+|
 |-
 | UX
 | User Portal performance improvements for IE8
@@ -311,6 +341,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 | UX
 | [[Features/Design/FrontendRefactor|FrontendRefactor]]
@@ -319,6 +350,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 | ?
+|
 |-
 |}
 
