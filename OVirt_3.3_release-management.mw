@@ -165,18 +165,18 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | Networking
 |[[Features/Multiple Gateways|Multiple Gateways]]
-| ?
-| ?
-| ?
-| ?
-| ?
+| Must
+| [[User:amuller| Assaf Muller]]
+| style="background-color: Red;"| Red - no code written
+| 2013-06-24
+| [[Features/Multiple_Gateways#Testing]]
 |
 |-
 | Networking
 |[[Features/Network Labels|Network Labels]]
 | ?
 | ?
-| ?
+| style="background-color: Red;"| Red - feature not defined properly
 | ?
 | ?
 |
