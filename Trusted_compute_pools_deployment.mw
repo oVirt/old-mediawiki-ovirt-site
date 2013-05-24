@@ -84,12 +84,12 @@ User may want to configure vdc_options to override the default values, these con
 
 SecureConnectionWithOATServers
 
-PollUri
-AttestationTruststore
-AttestationPort
-AttestationTruststorePass
-AttestationServer
-AttestationFirstStageSize
+PollUri<br>
+AttestationTruststore<br>
+AttestationPort<br>
+AttestationTruststorePass<br>
+AttestationServer<br>
+AttestationFirstStageSize<br>
  
 For example, specify attestation server with domain name, please follow these script:
 
