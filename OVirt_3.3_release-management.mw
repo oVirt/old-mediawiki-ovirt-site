@@ -128,7 +128,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |
 |-
 | Networking
-|[[Features/Migration Network|Migration Network]]
+|[[Features/Normalized ovirtmgmt Initialization|Normalized ovirtmgmt Initialization]]
 | ?
 | ?
 | ?
@@ -137,7 +137,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |
 |-
 | Networking
-|[[Features/Normalized ovirtmgmt Initialization|Normalized ovirtmgmt Initialization]]
+|[[Features/Migration Network|Migration Network]]
 | Must
 | [[User:alkaplan| Alona Kaplan]]
 | style="background-color: lightgreen;"| Green
