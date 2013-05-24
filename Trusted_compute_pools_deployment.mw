@@ -5,6 +5,7 @@ This is a manual for how to deploy trusted compute pools feature in oVirt.
 === Owner ===
 <!--This should link to your home wiki page so we know who you are-->
 * Name: [[User:gwei3 | Gang Wei]]
+* Last updated date: May 24, 2013
 
 <!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
 * Email: <gang.wei@intel.com>
@@ -14,7 +15,7 @@ This is a manual for how to deploy trusted compute pools feature in oVirt.
 Two approaches (all-in-one package, yum install) are provided to deploy Attestation Service; Install via yum command will be available after oat package is merged in fedora 18 repository.
 
 ==== Install basic packages in RHEL (for all-in-one approach) ====
-yum -y install httpd
+ yum -y install httpd
 yum -y install mysql mysql-server
 yum -y install php php-mysql
 yum -y install openssl
