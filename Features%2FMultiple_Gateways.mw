@@ -103,7 +103,7 @@ A significant advantage of the currently proposed implementation is that no API 
 Currently, only when setting the management network, a gateway may be specified. With this feature, each network with static address may have a gateway, that would control source routing for that address.
 
 === Testing ===
-* Set up networking as described in [[#Why_do_we_need_multiple_gateways]]. Most importantly, place your spice client outside of the hosts' own subnet.
+* Set up networking as described [[#Why_do_we_need_multiple_gateways.3F| above]]. Most importantly, place your spice client outside of the hosts' own subnet.
 * Verify that spice traffic travels through the designated host.
 * Test the above both with static addresses and with DHCP.
 
