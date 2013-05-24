@@ -81,17 +81,29 @@ bash oat_os -a -h HOSTNAME_OF_OAT-APPRAISER '{Name: OS_NAME, Version: OS_VERSION
 
 === Configuration in oVirt Engine === 
 User may want to configure vdc_options to override the default values, these configurations include:<br>
-options                                                                                                      default value<br>
-SecureConnectionWithOATServers                                                  true <br>
-PollUri                                                                                     AttestationService/resources/PollHosts <br>
-AttestationTruststore                                                                     TrustStore.jks<br>
-AttestationPort                                                                                        8443<br>
-AttestationTruststorePass                                                               password<br>
-AttestationServer                                                                               oat-server<br>
-AttestationFirstStageSize                                                                     10<br>
- 
-For example, specify attestation server with domain name, please follow these script:
 
- insert into vdc_options (option_name, option_value) values (' AttestationServer','oat-server');
+{| class="wikitable"
+|-
+! options !! default value
+|-
+| SecureConnectionWithOATServers || true 
+|-
+| PollUri || AttestationService/resources/PollHosts
+|-
+| AttestationTruststore|| TrustStore.jks
+|-
+| AttestationPort || 8443
+|-
+| AttestationServer || oat-server
+|-
+| AttestationServer || oat-server
+|-
+| AttestationTruststorePass || password
+|-
+| AttestationFirstStageSize || 10
+|}
 
+
+For example, specify attestation server with domain name, please follow these script<br>:
+ insert into vdc_options (option_name, option_value) values (' AttestationServer','oat-server');<br>
  update vdc_options set option_value = ‘oat-server. ***.com’ where option_name = 'AttestationServer'
