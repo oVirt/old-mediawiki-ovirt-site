@@ -74,8 +74,8 @@ http://sourceforge.net/projects/tboot/files/oat/oat-1.6.0-1.fc18.src.rpm
 * Yum Install oat-commandtool package from fedora18 repository.
  yum install oat-commandtool
 
-Find 11 commands in “/usr/bin” directory, normally, at least OEM, OS, MLE, and HOST information should be added to Attestation Server’s database.
-exmaple (execute this command in "/usr/bin" directory):
+Find 11 commands in “/usr/bin” directory, at least OEM, OS, MLE, and HOST information should be added to Attestation Server’s database.<br>
+Exmaple (execute this command in "/usr/bin" directory):<br>
 Generate certification:
  bash oat_cert  -h oatserver.*.com 
 
