@@ -80,8 +80,8 @@ Add OS example:
 bash oat_os -a -h HOSTNAME_OF_OAT-APPRAISER '{Name: OS_NAME, Version: OS_VERSION, Description: DESCRIPTION}'
 
 === Configuration in oVirt Engine === 
-User may want to configure vdc_options to override the default values, these configurations include:
-options                                                                                                      default value
+User may want to configure vdc_options to override the default values, these configurations include:<br>
+options                                                                                                      default value<br>
 SecureConnectionWithOATServers                                                  true <br>
 PollUri                                                                                     AttestationService/resources/PollHosts <br>
 AttestationTruststore                                                                     TrustStore.jks<br>
