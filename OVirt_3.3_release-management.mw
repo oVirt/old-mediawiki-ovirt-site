@@ -138,11 +138,11 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | Networking
 |[[Features/Normalized ovirtmgmt Initialization|Normalized ovirtmgmt Initialization]]
+| Must
+| [[User:alkaplan| Alona Kaplan]]
+| style="background-color: lightgreen;"| Green
 | ?
-| ?
-| ?
-| ?
-| ?
+| [[Features/Migration_Network#Testing]]
 |
 |-
 | Networking
