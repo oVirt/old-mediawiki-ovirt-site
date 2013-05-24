@@ -26,7 +26,7 @@ Two approaches (all-in-one package, yum install) are provided to deploy Attestat
 Build rpm package based on the source rpm package and install oat-appraiser package. Follow this link to get the source package.
 
 http://sourceforge.net/projects/tboot/files/oat/oat-1.6.0-1.fc18.src.rpm
-*  Yum Install oat server package from fedora18 repository.
+*  Yum Install oat server package from fedora18 repository (not available now).
  yum install oat-appraiser
 
 ==== Generate Client Files ====
