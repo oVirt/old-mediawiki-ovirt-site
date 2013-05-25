@@ -129,12 +129,12 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | Networking
 |[[Features/Normalized ovirtmgmt Initialization|Normalized ovirtmgmt Initialization]]
+| Must
+| [[User:masayag| Moti Asayag]]
+| style="background-color: Orange;"|Orange - In progress, partially merged
 | ?
 | ?
-| ?
-| ?
-| ?
-|
+| Missing documentation of the feature, which is crucial because of the behavioural change this feature introduces.
 |-
 | Networking
 |[[Features/Migration Network|Migration Network]]
@@ -147,21 +147,21 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | Networking
 |[[Features/Quantum_Integration|Quantum Integration]]
+| Should
+| [[User:mkolesni| Michael Kolesnik]]
+| style="background-color: Orange;"|Orange - In progress, partially merged
 | ?
 | ?
 | ?
-| ?
-| ?
-|
 |-
 | Networking
 |[[Feature/NetworkReloaded|NetworkReloaded]]
+| Optional - see comment
+|  [[User:asegurap| Antoni Segura Puimedon]]
+| style="background-color: Orange;"|Orange - In progress, partially merged
 | ?
 | ?
-| ?
-| ?
-| ?
-|
+| This feature is mostly about code refactoring and enabling a pluggable network configuration implementation. This feature should not hold back the release.
 |-
 | Networking
 |[[Features/Multiple Gateways|Multiple Gateways]]
@@ -174,7 +174,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | Networking
 |[[Features/Network Labels|Network Labels]]
-| ?
+| Optional - see comment
 | ?
 | style="background-color: Red;"| Red - feature not defined properly
 | ?
@@ -183,12 +183,12 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | Networking
 |[[Features/Network Security Groups|Network Security Groups]]
+|  Optional - see comment
+| ?
+| style="background-color: Red;"| Red - feature not defined properly
 | ?
 | ?
-| ?
-| ?
-| ?
-|
+| I suggest we postpone this feature as we are not clear on the scope yet.
 |-
 | Storage
 |[[Features/Virtio-SCSI|Virtio-SCSI support]]
