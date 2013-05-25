@@ -179,7 +179,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | style="background-color: Red;"| Red - feature not defined properly
 | ?
 | ?
-|
+| I suggest we postpone this feature as we are not clear on the scope yet.
 |-
 | Networking
 |[[Features/Network Security Groups|Network Security Groups]]
