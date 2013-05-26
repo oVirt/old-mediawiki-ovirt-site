@@ -102,12 +102,13 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | Infra
 |[[Features/Device Custom Properties|Device Custom Properties]]
+| must
+|[[User:mperina| Martin Perina]]  - infra
+[[User:amuller| Assaf Muller]]  - network
+| style="background-color: Orange;"|Orange - In progress, , see comment
 | ?
 | ?
-| ?
-| ?
-| ?
-|
+| This feature is spread over infra network and storage.  The infra aspect is covered by Martin, the network part is covered by Assaf and the storage part is not covered ATM.
 |-
 | Infra
 |[[Features/ExternalTasks|ExternalTasks]]
