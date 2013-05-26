@@ -342,9 +342,9 @@ We can later consider a priory queue to give advantage to VMs that are likely to
 | 
 | 
 |-
-| filter_priority
-| int
-| When should be executed in chain (lowest is highest priority)
+| filter_sequence
+| int/enum
+| execute filter first, last or no-order (for performance reasons)
 | 
 |-
 | cost_function_selected
@@ -355,11 +355,6 @@ We can later consider a priory queue to give advantage to VMs that are likely to
 | factor
 | int
 | 
-| 
-|-
-| cost_function_priority
-| int
-| When should be executed in chain (lowest is highest priority)
 | 
 |-
 | balance_selected
