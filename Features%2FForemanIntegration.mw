@@ -42,7 +42,7 @@ Screenshot 3 - Selecting a host. The name and address were updated automatically
 
 Screenshot 4 - All the details that the host provider set, are updated automatically. The host address is grayed out. All the rest is editable.
 
-[[File:Selected-host-properties.png]]
+[[File:Select-host-properties.png]]
 
 
 ''' Implementation Notes '''
