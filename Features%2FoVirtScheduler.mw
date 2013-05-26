@@ -52,7 +52,7 @@ Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is ma
 # External code.
 
 === Detailed Design ===
-[[Features/oVirtSchedulerAPI oVirtSchedulerAPI]]
+[[ Features/oVirtSchedulerAPI ]]
 
 [[Category:Feature]]
 [[Category:SLA]]
