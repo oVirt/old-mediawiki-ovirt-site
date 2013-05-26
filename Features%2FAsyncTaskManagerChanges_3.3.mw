@@ -28,7 +28,7 @@ For oVirt 3.3 we would like to improve the current SPM tasks mechanism in the fo
 * Improving the mechanism for determining whether endAction (the last step of command invocation in case the command/its children created tasks)  should be run.
 
 === Detailed Description ===
-====Better handling of engine/vdsm crashes in cases of mismatch in the number of tasks (expected vs actual running tasks). ====
+===='''Better handling of engine/vdsm crashes in cases of mismatch in the number of tasks (expected vs actual running tasks)'''. ====
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
 A parent command (for example - RemoveVmCommand) may create child commands that each one of them in turn creates a task (for example - RemoveImageCommand is a child command
 that is responsible for creating a task at VDSM for removing one of the images associated with the VM).
