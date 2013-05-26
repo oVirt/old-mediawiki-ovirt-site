@@ -106,7 +106,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[User:mperina| Martin Perina]]  - infra
 [[User:amuller| Assaf Muller]]  - network
 | style="background-color: Orange;"|Orange - In progress, , see comment
-| ?
+| 2013-06-03
 | ?
 | This feature is spread over infra network and storage.  The infra aspect is covered by Martin, the network part is covered by Assaf and the storage part is not covered ATM.
 |-
