@@ -37,7 +37,7 @@ RemoveVM is run on a VM with 4 disks.
 After 2 out of the 4 disks are created at VDSM, and stored at engine, engine crashes. 
 Engine restarts, the command ends successfully although 2 out of the 4 disks were not removed.
 
-* Explanation of problem:
+* Detailed explanation of problem:
 A parent command (for example - RemoveVmCommand) may create child commands that each one of them in turn creates a task (for example - RemoveImageCommand is a child command
 that is responsible for creating a task at VDSM for removing one of the images associated with the VM).
 The tasks information is kept at database at async_tasks table, and is used if engine crashes in order to restore association between tasks and commands and coordinate the endAction execution when all the tasks for the parent command have ended.
