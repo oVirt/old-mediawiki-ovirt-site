@@ -27,7 +27,7 @@ on the host and then opened a new Spice console. Network data can reach the host
 host's default gateway, which is the gateway defined on ovirtmgmt, reached via eth0. The return traffic will reach R1, but
 R1 doesn't have a route to the user's laptop and thus the packets will be dropped at R1. In other words, Spice won't work.
 
-More simply put, pings won't work from the user's laptop to the oVirt host. The traffic will reach the host successfully,
+More simply put, pings won't work from the user's laptop to the oVirt host, assuming they are not located on the same network. The traffic will reach the host successfully,
 but all return traffic will be routed through the host's default gateway via eth0. The packets will reach R1 and will then
 be dropped as R1 cannot route to the user's laptop.
 
