@@ -142,7 +142,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | Must
 | [[User:masayag| Moti Asayag]]
 | style="background-color: Orange;"|Orange - In progress, partially merged
-| ?
+| 2013-06-03
 | ?
 | Missing documentation of the feature, which is crucial because of the behavioural change this feature introduces.
 |-
@@ -157,10 +157,10 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | Networking
 |[[Features/Quantum_Integration|Quantum Integration]]
-| Should
+| Must
 | [[User:mkolesni| Michael Kolesnik]]
 | style="background-color: Orange;"|Orange - In progress, partially merged
-| ?
+| 2013-06-16
 | ?
 | ?
 |-
