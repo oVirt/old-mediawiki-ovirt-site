@@ -84,7 +84,7 @@ Add a custom_properties field to api.xsd for NICs and disks:
 <custom_property value="true" name="sap_agent"/><br />
 </custom_properties>
 
-And subsequently fix the NicMapper to map properly from VmInterface to NIC.
+And subsequently fix the NicMapper to map properly from VmInterface to NIC and vice versa.
 
 ===== Backwards Compatibility =====
 As this is a 3.3 feature, all 3.2 (and down) cluster related entities should not be allowed (at the GUI level ) to customize device properties.
