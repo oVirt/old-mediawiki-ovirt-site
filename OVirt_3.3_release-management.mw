@@ -143,8 +143,8 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | [[User:masayag| Moti Asayag]]
 | style="background-color: Orange;"|Orange - In progress, partially merged
 | 2013-06-03
-| ?
-| Missing documentation of the feature, which is crucial because of the behavioural change this feature introduces.
+| [[Features/Normalized_ovirtmgmt_Initialization#Testing]]
+|
 |-
 | Networking
 |[[Features/Migration Network|Migration Network]]
