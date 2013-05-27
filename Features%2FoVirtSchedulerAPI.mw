@@ -258,7 +258,6 @@ We can later consider a priory queue to give advantage to VMs that are likely to
 | 
 |}
 
-
 ==== policy table ====
 {| class="wikitable" border="1"
 |-
@@ -311,7 +310,6 @@ We can later consider a priory queue to give advantage to VMs that are likely to
 |}
 
 * policy_id can be added to cluster table (I prefer not).
-
 
 ==== policy-policy unit table ====
 
