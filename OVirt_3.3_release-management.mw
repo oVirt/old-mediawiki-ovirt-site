@@ -202,9 +202,9 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | Storage
 |[[Features/Virtio-SCSI|Virtio-SCSI support]]
-| ?
-| ?
-| ?
+| Optional
+| [[User:derez|Daniel Erez]]
+| style="background-color: red;"| Red - Patches in Gerrit
 | ?
 | ?
 |
