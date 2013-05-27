@@ -197,6 +197,12 @@ Cover all methods for installing a host in oVirt Engine
 | Installation failed, host in Non-Operational status, event log informs wrong nic for mgmt network
 |
 |
+|-
+| Negative: New host installation with non-responsive VDSM
+| Add host to cluster 3.1 and above, after Termination message appears, shutdown VDSM on the host
+| Installation failed, host in Non-Responsive status, event log informs error communicating with VDSM
+|
+|
 |}
 
 === Documentation / External references ===
