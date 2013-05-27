@@ -204,7 +204,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Virtio-SCSI|Virtio-SCSI support]]
 | Optional
 | [[User:derez|Daniel Erez]]
-| style="background-color: red;"| Red - Patches in Gerrit
+| style="background-color: orange;"| Orange - In progress, not submitted
 | ?
 | ?
 |
