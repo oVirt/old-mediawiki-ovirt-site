@@ -1,0 +1,36 @@
+<!-- {{autolang|base=yes}} -->
+
+== Disk Hooks <!-- The name of your feature --> ==
+
+=== Summary ===
+<!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
+Adding VDSM hooking points before and after disk's hot plug and hot unplug.  These hooks enable the running of guest-level operations on the disks when they're plugged/unplugged.
+
+=== Owner ===
+<!--This should link to your home wiki page so we know who you are-->
+* Name: [[User:vvolansk|Vered Volansky]]
+* Email: vered@redhat.com
+
+=== Current status ===
+* Target Release: 3.3
+* Status: done
+* Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}
+
+=== Detailed Description ===
+<!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
+This feature adds four hooking points to vdsm, for before and after a disk's hot plug and unplug from a VM.<br/>
+These hooking ponts are named:<br/>
+1. before_disk_hotplug<br/>
+2. after_disk_hotplug<br/>
+3. before_disk_hotunplug<br/>
+4. after_disk_hotunplug<br/>
+
+The above hooking points are defined in vdsm/hooks.py, and used in vdsm/libvirtvm.py.
+
+=== Benefit to oVirt ===
+<!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
+The feature allows customers to add their own functionality before hot-plugging and hot-unplugging disks.<br/> This can be done by adding scripts performing custom behaviour.<br/>
+More details regarding the actual usage can be found [[VDSM-Hooks|here]] and [https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Virtualization/3.0/html/Administration_Guide/VDSM_Hooks.html/ here].
+
+
+[[Category:Feature]]
