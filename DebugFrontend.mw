@@ -44,6 +44,7 @@ $ mvn gwt:debug -Pgwtdev,gwt-admin,gwt-user -Dgwt.noserver=true
 </pre>
 
 Notes:
+* Example for $GWT_APP_DIR :  ovirt-engine/frontend/webadmin/modules/webadmin
 * <code>gwt:debug</code> launches Development Mode via gwt-maven-plugin
 * <code>gwtdev</code> profile adds extra Java sources and resources necessary for debugging, so that changes in related Frontend projects (<code>uicommonweb</code>, <code>gwt-common</code> etc.) are reflected in Development Mode for new debugging sessions
 * <code>gwt.noserver</code> tells Development Mode that the application is already deployed on JBoss AS (don't use embedded Jetty instance to serve application content)
@@ -51,15 +52,22 @@ Notes:
 You should see following output in console: <code>Listening for transport dt_socket at address: 8000</code>
 
 === Step 2 - Connecting to Development Mode from Java IDE ===
-In Eclipse, create new debug configuration via "Run | Debug Configurations | Remote Java Application | New launch configuration":
+In Eclipse  create new debug configuration via "Run | Debug Configurations | Remote Java Application | New launch configuration":
 * In Connect tab:
 ** Project: choose WebAdmin or UserPortal project that you previously imported into Eclipse
 ** Host: <code>localhost</code>
 ** Port: <code>8000</code>
 * In Source tab:
 ** Click "Add | Java Project" and choose related Frontend projects: <code>uicommonweb</code>, <code>gwt-common</code>
-
 Click "Apply" and "Debug", so that Eclipse now connects to Development Mode, which spawns Development Mode GUI.
+
+Alternatively, in Intellij:
+* Run/Debug configurations --> Edit configurations
+* Add new configuration of type Remote
+* In the new configuration, fill in fields: host : localhost, port : 8000
+* Press Apply, OK
+* Select the new created configuration and press Debug.
+
 
 [[File:GWT_Development_Mode.png|GWT Development Mode]]
 
