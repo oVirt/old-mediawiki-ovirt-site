@@ -1,4 +1,4 @@
-== oVirt Scheduler [WIP] ==
+== oVirt Scheduler ==
 === Summary ===
 As long oVirt is progressing and continue to gather features, there is an ever growing actual need for better scheduling: configurable, <br />
 customized and flexible, both in the programmatic and functionality levels.<br />
