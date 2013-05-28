@@ -99,8 +99,8 @@ When a host is activated Engine should
 # if the user requested post-installation reboot, fence the newly-added host.
 
 ==== ovirt-node ====
-Still needs '''TODO''': drop bridge-creation logic from <tt>ovirt-node</tt>.
-[https://bugzilla.redhat.com/show_bug.cgi?id=967866 ovirt-node bug for allowing bridgeless network]
+Still needs '''TODO''': drop bridge-creation logic from <tt>ovirt-node</tt>.<br>
+There is an open bug for ovirt-node for allowing bridgeless networks: [https://bugzilla.redhat.com/show_bug.cgi?id=967866 Bug 967866]
 
 ==== Behavioral Changes ====
 
