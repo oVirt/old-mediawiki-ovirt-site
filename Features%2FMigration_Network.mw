@@ -96,6 +96,53 @@ Note that the migration protocol requires Vdms-Vdsm and libvirt-libvirt communic
 |
 |Test for:  regular network, bridgeless network, bridgeless network, VLAN, bond
 |-
+|-
+|higher MTU
+|1) Create network with MTU=9000<br />
+2) Assign migration role to the network<br />
+3) Attach the network to the host (do not forget to setup IP)<br />
+4) Migrate VMs between nodes<br />
+|<br />
+<br />
+<br />
+4) migration succesfull, MTU 9000 is used (verify by tcpdump or some other network tool)<br />
+|
+|
+|Test for:  regular network, bridgeless network, bridgeless network, VLAN, bond
+|-
+|-
+|remove dedicated migration network
+|1) remove dedicated migration network/s<br />
+2) migrate VMs<br />
+|1)networks removed<br />
+2)VMs successfully migrate over management network<br />
+|
+|
+|Test for:  regular network, bridgeless network, bridgeless network, VLAN, bond
+|-
+|-
+|wrong / missing IPs
+|1) Assign migration role to the network<br />
+2) Attach the network to the host<br />
+3) Set IP just for one host <br />
+4) Migrate VMs between nodes<br />
+5) Set wrong IP/netmask on one of the hosts<br />
+6) Migrate VMs between nodes<br />
+|1) -<br />
+2) -<br />
+3) IP set
+:3a) IF the destination host is the one with the ip- should succeed<br />
+:3b) IF the destination has dhcp set as boot protocol- it also should succeed<br />
+4) -<br />
+5) wrong IP set<br />
+6) - 
+:6a) If the destination host has wrong ip on the migration network- should fail. <br />
+:6b) If the origin host- should succeed.<br />
+|
+|
+|Test for:  regular network, bridgeless network, bridgeless network, VLAN, bond
+|-
+
 |}
 
 === Known Limitations ===
