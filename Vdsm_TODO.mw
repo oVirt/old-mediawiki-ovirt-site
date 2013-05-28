@@ -32,7 +32,7 @@
 * let Vdsm install and run on hosts with no iscsid (report that iscsi is missing to Engine?)
 
 * <strike>add hooks for device hotplug</strike> done.
-* <strike>add hooks for device update http://bugzilla.redhat.org/893576</strike> done.
+* <strike>add hooks for device update http://bugzilla.redhat.com/893576</strike> done.
 
 * add hooks for network operations
 
