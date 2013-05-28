@@ -142,6 +142,12 @@ Cover all methods for installing a host in oVirt Engine
 | 
 |
 |-
+| New 3.0 host installation
+| Add host to a 3.0 system
+| Host should show up in Engine (with management network as bridge)
+| 
+|
+|-
 | New host (with plan interface+static ip only) installation
 | Add host to a 3.1 and above system
 | Host should show up in Engine
