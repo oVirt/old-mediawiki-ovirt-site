@@ -395,7 +395,7 @@ Action Groups:
 
 === UI ===
 [[File:clusterPolicyList.png]]
-* Policies will be configured on a system level in configure screen.
+* Policies will be configured on a system level in configure dialog, much like Roles.
 [[File:ClusterPolicy.png]]
 * pencil button, is used to update the custom property of the unit, derived from plugin's config default_value (optional)
 [[File:attach_cluster_policy.png]]
