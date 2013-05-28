@@ -92,6 +92,15 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |
 |-
 | Virt
+|[[Features/Non Plugin RDP Invocation|Non Plugin RDP Invocation]]
+| ?
+| ?
+| style="background-color: lightgreen;"| Green
+| ?
+| ?
+|
+|-
+| Virt
 |[[Features/Instance Types|Instance Types]]
 | ?
 |[[User:tjelinek| Tomas Jelinek]]
