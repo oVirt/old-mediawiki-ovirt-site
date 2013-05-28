@@ -28,4 +28,9 @@ the edit button is now enabled for storage domains that are in maintenance state
 In that case, name and description are disabled for edit.
 For iscsi currently there is no option to edit the connection (target) details in webadmin UI.
 
+== REST ==
+
+== Database ==
+Storage connections are managed in storage_server_connections table.
+
 [[Category:Feature]]
