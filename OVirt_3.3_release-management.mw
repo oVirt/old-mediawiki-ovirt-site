@@ -210,10 +210,10 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |
 |-
 | Storage
-|[[Features/Read_Only_Disk| Read Only Disks]]
-| ?
-| ?
-| ?
+|[[Features/Read_Only_Disk|Read Only Disks]]
+| Optional
+| [[User:vvolansk|Vered Volansky]]
+| style="background-color: orange;"| Orange - In progress, not submitted
 | ?
 | ?
 |
@@ -228,10 +228,10 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |
 |-
 | Storage
-|Adding VDSM hook for hotplug a disk
+|[[Features/Disk_Hooks|Adding VDSM hooks for hotplugging/unplugging a disk]]
 | ?
-| ?
-| ?
+| [[User:vvolansk|Vered Volansky]]
+| style="background-color: lightgreen;"| Green
 | ?
 | ?
 |
@@ -417,7 +417,7 @@ Features being considered for inclusion/already in master:
 * [[Features/Virtio-SCSI|Virtio-SCSI support]]
 * [[Features/Read_Only_Disk| Read Only Disks ]]
 * [[Features/Edit_Connection_Properties|Edit Connection Properties]]
-* [[Features/Disk_Hooks|Adding VDSM hooks for plugging/hotplugging a disk]]
+* [[Features/Disk_Hooks|Adding VDSM hooks for hotplugging/unplugging a disk]]
 * Separating "Move" vm operation to "Copy" and "Delete" operations to improve VM availability
 * Backup and Restore API for Independent Software Vendors 
 * Allow resign/force re-election of SPM
