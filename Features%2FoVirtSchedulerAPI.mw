@@ -394,9 +394,13 @@ Action Groups:
 2) Attach Policy to a Cluster: will be part of cluster add/new command, currently a permission for those command is sufficient.
 
 === UI ===
-[[File:ClusterPolicy.png]]
 [[File:clusterPolicyList.png]]
+* Policies will be configured on a system level in configure screen.
+[[File:ClusterPolicy.png]]
+* pencil button, is used to update the custom property of the unit, derived from plugin's config default_value (optional)
 [[File:attach_cluster_policy.png]]
+* custom properties values are derived from policy configuration.
+
 === REST  ===
 * In Progress
 
