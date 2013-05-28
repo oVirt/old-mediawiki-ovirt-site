@@ -206,7 +206,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Support local DB creation
 |style="background-color: lightgreen;"| Done
-| style="background-color: yellow;"| Feedback
+|style="background-color: lightgreen;"| Done
 |[[User:AlexLourie| Alex Lourie]]
 |
 |
@@ -262,7 +262,7 @@ A complete re-write of engine-setup, engine-cleanup, engine-upgrade and AIO plug
 |-
 | Mask input sets
 |style="background-color: lightgreen;"| Done
-|style="background-color: orange;"| In Progress
+|style="background-color: lightgreen;"| Done
 |
 |Low
 |
