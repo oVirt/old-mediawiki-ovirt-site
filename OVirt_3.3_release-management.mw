@@ -220,30 +220,30 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | Storage
 |[[Features/Edit_Connection_Properties|Edit Connection Properties]]
-| ?
-| ?
-| ?
-| ?
+| Must
+| [[User:abonas|Alissa Bonas]]
+| style="background-color: red;"| Red - Work in Progress
+| 2013-06-30
 | ?
 |
 |-
 | Storage
 |[[Features/Disk_Hooks|Adding VDSM hooks for hotplugging/unplugging a disk]]
-| ?
+| Optional
 | [[User:vvolansk|Vered Volansky]]
 | style="background-color: lightgreen;"| Green
-| ?
-| ?
+| 
+| 
 |
 |-
 | Storage
 |Separating "Move" vm operation to "Copy" and "Delete" operations to improve VM availability
-| ?
-| ?
-| ?
-| ?
-| ?
-|
+| Optional
+| [[User:laravot|Liron Aravot]]
+| style="background-color: orange;"| Orange
+| 
+| 
+| The code is ready but not merged yet
 |-
 | Storage
 |Backup and Restore API for Independent Software Vendors 
