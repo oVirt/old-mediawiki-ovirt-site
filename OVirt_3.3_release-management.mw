@@ -292,21 +292,21 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | Gluster
 |[[Features/Gluster Hooks Managemen|Gluster Hooks Management]]
+| Should
+| sabose@redhat.com
+| style="background-color: orange;"| orange 
+| 31/05/2013
 | ?
-| ?
-| ?
-| ?
-| ?
-|
+| Patches are under review upstream
 |-
 | Gluster
-|[[Features/Gluster Services Management|Gluster Services Management]]
+|[[Features/Gluster Swift Management|Gluster Swift Management]]
+|Should
+| sabose@redhat.com
+| style="background-color: orange;"| orange 
+| 31/05/2013
 | ?
-| ?
-| ?
-| ?
-| ?
-|
+| Gluster Swift configuration will not be covered in this release
 |-
 | Node
 | [[Features/Universal Image|Universal Node Image]]
