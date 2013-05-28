@@ -87,17 +87,21 @@ Signature
 * A user may provide a filter and/or a cost function. We strongly advice on making sure the selected balancing policy is aligned with the filters and cost functions lists. A cost function is a good way to correlate the logic. A filter may be used if filtering out over-utilized hosts is needed in scheduling process.
 For example: for power saving policy, a CPU load cost-function is needed.
 * Performance/implementation open-issue: split balance into 2 methods:
+
 Host BalanceHosts(Host[], properties)
+
 <VM, Host[]> BalanceVM(VM[], properties)
+
 Currently the user is responsible to fetch the relevant VMs. 
+
 Code sample:
-    balance(hosts[], vms[], properties) {
+    balance(hosts[], properties) {
         max_host = max(hosts, key=lambda host: host['usage_mem_percent']))
         vms_on_host = filter(key=lambda vm: vm['run_on_host'] = max_host['id'], vms)
-        vm = return vms_on_host[0]
-        return vm
+        vm = vms_on_host[random(vms_on_host.size)]
+        non_utilized_hosts =filter(key=lambda host: host['usage_mem_percent'] > properties['mem_threshold'], hosts)
+        return <vm, non_utilized_hosts>
     }
-
 
 === Design ===
 Cluster's policy will have a set of filters, cost functions and a single balancing logic implementation. To allow easy coupling between the logic of these three, a single class will be provided.
@@ -392,7 +396,7 @@ Action Groups:
 === UI ===
 [[File:ClusterPolicy.png]]
 [[File:clusterPolicyList.png]]
-
+[[File:attach_cluster_policy.png]]
 === In Progress ===
 # REST
 
