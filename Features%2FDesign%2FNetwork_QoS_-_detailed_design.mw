@@ -54,19 +54,27 @@ Once inbound/outbound was enabled all three field must be filled (This will be v
 If QoS properties were set in the network dialog as preset for all VNICs - these setting will appear in the VNIC. The user can override them in the VNIC dialog.
 
 == Backend ==
-The new fields will be added to the NetworkInterface object (to support future reuse in physical NICs and other network interfaces). Fields values will be seved in DB and ovf.
-=== Classes ===
+A new entity will be created (NetworkQoS) which will hold the QoS properties.
+NetworkQoS field will be added to NetworkInterface object and Network object. Fields values will be seved in DB and ovf.
 
-'''''engine.core.common.businessentities.network.NetworkInterface'''''  - add fields: inboundAverage(Integer),  inboundPeak(Integer), inboundBurst(Long), outboundAverage(Integer),  outboundPeak(Integer), outboundBurst(Long)<BR/>
+=== Classes ===
+'''''engine.core.common.businessentities.network.NetworkQoS'''' - new entity with fields: inboundAverage(Integer),  inboundPeak(Integer), inboundBurst(Long), outboundAverage(Integer),  outboundPeak(Integer), outboundBurst(Long)<BR/>
+'''''engine.core.common.businessentities.network.NetworkInterface'''''  - add fields: networkQoS(NetworkQoS)<BR/>
+'''''engine.core.common.businessentities.network.Network''''' - add fields: networkQoS(NetworkQoS)<BR/>
 '''''engine.core.vdsbroker.vdsbroker.VmInfoBuilder''''' - add support to the QoS properties<BR/>
 '''''engine.core.utils.ovf.OvfWriter''''  - add support to the QoS properties<BR/>
 '''''engine.core.utils.ovf.OvfReader''''  - add support to the QoS properties<BR/>
-'''''engine.core.dao.network.VmNetworkInterfaceDao'''''  - add support to the QoS properties<BR/>
+'''''engine.core.dao.network.VmNetworkQoSDao'''''  - new Dao<BR/>
+'''''engine.core.dao.network.VmNetworkInterfaceDao'''''  - add support to the NetworkQoS field<BR/>
+'''''engine.core.dao.network.VmNetworkDao'''''  - add support to the NetworkQoS field<BR/>
 
 === DB Change ===
-Add support to the QoS properties by adding 6 columns to the '''vm_interface'''  - Represents the properties of the virtual NIC
+Add NetworkQoS table with  7 columns.
+
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default 
+|-
+|id ||UUID || 
 |-
 |inbound_average ||Integer || 
 |-
@@ -82,6 +90,8 @@ Add support to the QoS properties by adding 6 columns to the '''vm_interface''' 
 |-
 |}
 
+Add network_QoS_id(UUID | null)  to the '''vm_interface''' table - Represents the properties of the virtual NIC.
+Add network_QoS_id(UUID | null)  to the '''network'''  table.
 
 - alternatively, we can save average,peak,burst values in one string field, but we expect future uses to include mathematical calculations on the values.
 
