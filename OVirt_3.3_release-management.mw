@@ -267,8 +267,8 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/oVirt_scheduler|oVirt scheduler]]
 | Must
 | [[User:GChaplik|gchaplik@redhat.com]]
-| ?
-| ?
+| style="background-color: orange;"| orange - in progress
+| 1/7/2013
 | ?
 |
 |-
@@ -276,8 +276,8 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Scheduling_API|Scheduling API]]
 | Must
 | [[User:GChaplik|gchaplik@redhat.com]]
-| ?
-| ?
+| style="background-color: orange;"| orange - in progress
+| 1/7/2013
 | ?
 |
 |-
