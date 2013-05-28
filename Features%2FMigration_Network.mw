@@ -121,6 +121,48 @@ Note that the migration protocol requires Vdms-Vdsm and libvirt-libvirt communic
 |Test for:  regular network, bridgeless network, bridgeless network, VLAN, bond
 |-
 |-
+|migrate to host without migration network (this test requires 2 hosts)
+|1) Assign migration role to the network<br />
+2) Attach the network to '''one''' host (do not forget IP)<br />
+3) Migrate VMs between nodes<br />
+|1) Role assigned <br />
+2) Network attached <br />
+3) Manual migration should be possible, even if node does not have migration network (management network will be used)<br />
+|
+|
+|Test for:  regular network, bridgeless network, bridgeless network, VLAN, bond
+|-
+|-
+|remove dedicated migration network
+|1) remove dedicated migration network/s<br />
+2) migrate VMs<br />
+|1)networks removed<br />
+2)VMs successfully migrate over management network<br />
+|
+|
+|Test for:  regular network, bridgeless network, bridgeless network, VLAN, bond
+|-
+|-
+|migration network interface failure 
+|1) Assign migration role to the network<br />
+2) Attach the network to cluster as required<br />
+3) Attach the network to hosts (do not forget to setup IPs)<br />
+4) Take down migration interface on one host<br />
+5) Change the migration network to non-rquired<br />
+6) Reactivate the host<br />
+7)Migrate VMs between nodes</br>
+|1) migration role assigned<br />
+2) network attached to cluster<br />
+3) network attached to host<br />
+4) host goes non-opertational<br />
+5) - <br />
+6) host UP (migration interface still down)<br />
+7) migration fails<br />
+|
+|
+|Test for:  regular network, bridgeless network, bridgeless network, VLAN, bond
+|-
+|-
 |wrong / missing IPs
 |1) Assign migration role to the network<br />
 2) Attach the network to the host<br />
