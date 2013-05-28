@@ -265,8 +265,8 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | SLA
 |[[Features/oVirt_scheduler|oVirt scheduler]]
-| ?
-| ?
+| Must
+| [[User:GChaplik|gchaplik@redhat.com]]
 | ?
 | ?
 | ?
@@ -274,8 +274,8 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | SLA
 |[[Features/Scheduling_API|Scheduling API]]
-| ?
-| ?
+| Must
+| [[User:GChaplik|gchaplik@redhat.com]]
 | ?
 | ?
 | ?
