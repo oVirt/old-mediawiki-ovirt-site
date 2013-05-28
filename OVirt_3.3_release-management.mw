@@ -447,7 +447,7 @@ Features being considered for inclusion/already in master:
 * [[Features/Edit_Connection_Properties|Edit Connection Properties]]
 * [[Features/Disk_Hooks|Adding VDSM hooks for hotplugging/unplugging a disk]]
 * Separating "Move" vm operation to "Copy" and "Delete" operations to improve VM availability
-* Backup and Restore API for Independent Software Vendors 
+* [[Features/Backup-Restore_API_Integration|Backup and Restore API for Independent Software Vendors]] 
 * Allow resign/force re-election of SPM
 
 === SLA & Scheduling ===
