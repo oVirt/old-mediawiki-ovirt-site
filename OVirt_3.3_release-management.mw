@@ -85,11 +85,11 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | Virt
 |[[Features/noVNC console|noVNC console]]
 | ?
+| |[[User:FKobzik| Frantisek Kobzik]]
+| style="background-color: Orange;"| Orange
 | ?
 | ?
 | ?
-| ?
-|
 |-
 | Virt
 |[[Features/Non Plugin RDP Invocation|Non Plugin RDP Invocation]]
@@ -98,7 +98,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | style="background-color: lightgreen;"| Green
 | ?
 | ?
-|
+| TODO - wiki page.
 |-
 | Virt
 |[[Features/Instance Types|Instance Types]]
