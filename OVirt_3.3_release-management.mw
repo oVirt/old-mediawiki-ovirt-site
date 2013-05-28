@@ -92,6 +92,16 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |
 |-
 | Virt
+|[[Features/Instance Types|Instance Types]]
+| ?
+|[[User:tjelinek| Tomas Jelinek]]
+[[User:ofrenkel| Omer Frenkel]]
+|style="background-color: Red;"|Red
+| ?
+| ?
+|UI and Engine in progress, update instance type with running vms still not implemented, no rest api
+|-
+| Virt
 |[[Features/GlusterFS_Storage_Domain|GlusterFS Storage Domain]]
 | ?
 | ?
