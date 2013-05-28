@@ -262,21 +262,21 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | style="background-color: orange;"| Orange
 | 
 | 
-| The code is ready but not merged yet
+| The code is ready but not integrated yet
 |-
 | Storage
-|Backup and Restore API for Independent Software Vendors 
+|[[Features/Backup-Restore_API_Integration|Backup and Restore API for Independent Software Vendors]] 
+| Optional
+| Developed by IBM 
+| style="background-color: red;"| Red - Work in Progress
+ | ?
 | ?
-| ?
-| ?
-| ?
-| ?
-|
+| IBM guys are working on this feature, need to verify their status
 |-
 | Storage
 |Allow resign/force re-election of SPM
-| ?
-| ?
+| Optional
+| [[User:tal|Tal Nisan]]
 | ?
 | ?
 | ?
