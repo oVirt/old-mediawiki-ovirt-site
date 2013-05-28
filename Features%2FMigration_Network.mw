@@ -160,7 +160,7 @@ Note that the migration protocol requires Vdms-Vdsm and libvirt-libvirt communic
 |Test for:  regular network, bridgeless network, VLAN, bond
 |-
 |-
-|remove dedicated migration network
+|Remove dedicated migration network
 |1) Remove dedicated migration network/s<br />
 2) Migrate VMs<br />
 |1) Networks removed<br />
@@ -170,7 +170,7 @@ Note that the migration protocol requires Vdms-Vdsm and libvirt-libvirt communic
 |Test for:  regular network, bridgeless network, VLAN, bond
 |-
 |-
-|migration network interface failure 
+|Migration network interface failure 
 |1) Assign migration role to the network<br />
 2) Attach the network to cluster as required<br />
 3) Attach the network to hosts (do not forget to setup IPs)<br />
