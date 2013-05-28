@@ -276,7 +276,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | SLA
 |[[Features/oVirt_scheduler|oVirt scheduler]]
 | Must
-| [[User:GChaplik|gchaplik@redhat.com]]
+| [[User:GChaplik|Gilad Chaplik@redhat.com]]
 | style="background-color: orange;"| orange - in progress
 | 1/7/2013
 | ?
@@ -285,9 +285,18 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | SLA
 |[[Features/Scheduling_API|Scheduling API]]
 | Must
-| [[User:GChaplik|gchaplik@redhat.com]]
+| [[User:GChaplik|Gilad Chaplik]]
 | style="background-color: orange;"| orange - in progress
 | 1/7/2013
+| ?
+|
+|-
+| SLA
+|[[Features/Design/Network_QoS|Network QoS]]
+| Must
+| [[User:OMasad|Ofri Masad]]
+| style="background-color: red;"| red - in design
+| 16/6/2013
 | ?
 |
 |-
