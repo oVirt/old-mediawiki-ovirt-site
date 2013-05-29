@@ -36,7 +36,6 @@ and soft constraints to get the optimal host for that request at this point of t
 # The scheduling process will take all relevant hosts and run them through the relevant filters
 ## Note that from one filter to another the host number may decrease
 ## Filter order is meaningless
-
 # The filtered host list will then be used as an input to the relevant cost functions, which will create a cost table
 ## The cost table indicates the host with the lowest cost, which is the optimal solution for the given request.
 ## Cost function results may be prioritized using a factor.
