@@ -256,7 +256,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |
 |-
 | Storage
-|Separating "Move" vm operation to "Copy" and "Delete" operations to improve VM availability
+|[[Features/MoveAsCopyAndDelete|Separating "Move" vm operation to "Copy" and "Delete" operations to improve VM availability]]
 | Optional
 | [[User:laravot|Liron Aravot]]
 | style="background-color: orange;"| Orange
