@@ -179,15 +179,9 @@ Cover all methods for installing a host in oVirt Engine
 | 
 |
 |-
-| New 3.0 host installation
-| Add host to a 3.0 system
-| Host should show up in Engine, ovirtmgmt on host is non-VM network.
-| 
-|
-|-
-| New ovirt-node installation (ovirtmgmt is a vm network)
+| New ovirt-node installation (ovirtmgmt is a VM network)
 | Add ovirt-node to a 3.1 system
-| Host should show up in Engine, ovirtmgmt on host is non-VM network.
+| Host should show up in Engine, ovirtmgmt on host is a VM network.
 | 
 |
 |-
