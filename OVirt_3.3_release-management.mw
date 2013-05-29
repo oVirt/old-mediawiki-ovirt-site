@@ -143,7 +143,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | Must
 | [[User:emesika |  Eli Mesika]]
 |  style="background-color: Orange;"|Orange - In progress, not submitted
-| ?
+|  2013-06-06
 | | [[Features/ExternalTasks#Testing ]]
 | Only backend side done, Missing API implementation and testing
 |-
