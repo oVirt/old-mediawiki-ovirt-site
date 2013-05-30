@@ -196,7 +196,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Normalized ovirtmgmt Initialization|Normalized ovirtmgmt Initialization]]
 | Must
 | [[User:masayag| Moti Asayag]]
-| style="background-color: Orange;"|Orange - In progress, partially merged
+| style="background-color: lightgreen;"| Green
 | 2013-06-03
 | [[Features/Normalized_ovirtmgmt_Initialization#Testing]]
 |
