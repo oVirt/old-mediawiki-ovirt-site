@@ -85,7 +85,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | Virt
 |[[Features/noVNC console|noVNC console]]
 | ?
-| |[[User:FKobzik| Frantisek Kobzik]]
+|[[User:FKobzik| Frantisek Kobzik]]
 | style="background-color: Orange;"| Orange
 | ?
 | ?
@@ -94,7 +94,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | Virt
 |[[Features/Non Plugin RDP Invocation|Non Plugin RDP Invocation]]
 | ?
-| |[[User:FKobzik| Frantisek Kobzik]]
+|[[User:FKobzik| Frantisek Kobzik]]
 | style="background-color: lightgreen;"| Green
 | ?
 | ?
@@ -109,6 +109,42 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 | ?
 |UI and Engine in progress, update instance type with running vms still not implemented, no rest api
+|-
+| Virt
+|[[Integrating_libosinfo_with_Ovirt_engine|OS Info]]
+| ?
+|[[User:rgolan| Roy Golan]]
+|style="background-color: Orange;"|Orange
+| May 31st
+| ?
+|
+|-
+| Virt
+|[[Features/Console_connection_settings_dialog_in_portals|Redesigned Display Options dialog]]
+| ?
+|[[User:fkobzik| Frantisek Kobzik]]
+| style="background-color: lightgreen;"| Green
+| 
+| ?
+|
+|-
+| Virt
+|[[Features/EmulatedMachine|EmulatedMachine]]
+| ?
+|[[User:rgolan| Roy Golan]]
+|style="background-color: Orange;"|Orange
+| May 31st
+| ?
+| automatically use the right emulated machine type for QEMU
+|-
+| Virt
+|[[Features/SpiceHTML5|SPICE HTML5 client integration]]
+| ?
+|[[User:fkobzik| Frantisek Kobzik]]
+| style="background-color: Red;"| Red
+| ?
+| ?
+|
 |-
 | Virt
 |[[Features/GlusterFS_Storage_Domain|GlusterFS Storage Domain]]
