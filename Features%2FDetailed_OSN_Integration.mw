@@ -113,6 +113,43 @@ The integration of network providers into oVirt will be incremental. The followi
 == User work-flows ==
 <!-- Describe the high-level work-flows relevant to this feature. -->
 
+=== OpenStack Networking & Identity (Keystone) installation ===
+All the components need to be installed, and set to run on startup.
+
+==== Configure Keystone ====
+# Install keystone
+## Steps described at: http://docs.openstack.org/developer/keystone/installing.html#installing-from-packages-fedora
+## And: http://fedoraproject.org/wiki/Getting_started_with_OpenStack_on_Fedora_17#Initial_Keystone_setup
+# Configure quantum in keystone
+## Steps described at: http://docs.openstack.org/grizzly/openstack-network/admin/content/keystone.html
+### Add quantum service
+### Add quantum admin user
+
+Note: get_id function is:
+ function get_id () {
+     echo `"$@" | grep ' id ' | awk '{print $4}'`
+ }
+
+==== Configure Quantum manager ====
+# Install quantum manger
+## Steps described at: http://docs.openstack.org/trunk/openstack-network/admin/content/install_fedora.html
+### Install quantum plugin
+### Run plugin self configuration (This will create the DB)
+### Configure /etc/quantum/quantum.conf:
+#### Choose rabbit / qpid by un-commenting the corresponding values
+#### Un-comment notification_driver = quantum.openstack.common.notifier.list_notifier
+### Configure /etc/quantum/plugin.ini:
+#### Fill correct IP in sql_connection
+#### Change: tenant_network_type = vlan
+#### Edit: network_vlan_ranges = <label>:<tag start>:<tag end>,physnet1:1000:2999
+
+=== Agent installation on host ===
+# Install quantum plugin (same plugin as in the manager)
+# Configure the quantum manger IP (rabbit_host =)
+# Run plugin self configuration (for creating the link of plugin.ini to the specific config)
+# When using Linux Bridge only:
+## Override file for creating a tap connected to dummy bridge
+
 == Events ==
 <!-- What events should be reported when using this feature. -->
 
