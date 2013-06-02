@@ -38,7 +38,7 @@ In the scope of this feature, in order to allow editing the connection's details
 the edit button is now enabled for storage domains that are in maintenance state as well. 
 In that case, name and description are disabled for edit.
 
-For iSCSI currently there is no option to edit the connection (target) details in webadmin UI.
+For iSCSI there will not be an option (in the scope of this feature) to edit the connection (target) details in webadmin UI.
 
 == REST ==
 In order to allow editing connections, a new root resource will be introduced that will allow add/edit/delete/get of connections to storage. 
