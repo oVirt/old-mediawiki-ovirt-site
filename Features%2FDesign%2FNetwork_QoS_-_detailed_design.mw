@@ -86,13 +86,13 @@ Add NetworkQoS table with  7 columns.
 |-
 |inbound_peak ||Integer || 
 |-
-|inbound_burst||Bigint || 
+|inbound_burst||Integer || 
 |-
 |outbound_average ||Integer || 
 |-
 |outbound_peak ||Integer || 
 |-
-|outbound_burst ||Bigint || 
+|outbound_burst ||Integer || 
 |-
 |}
 
