@@ -10,6 +10,7 @@ It aims to merge all configuration items from the Config (currently vdc_options 
 === Current status ===
 * WIP, patches submitted gerrit.ovirt.org/#/q/topic:osinfo,n,z.  >90% implemented and verified.last bits of searchengine integration
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
+* Target Release: 3.3
 
 === History ===
 Engine is keeping a '''VmOsType.java''' enum to list some of the OS capabilities such as 64 bit support. other capabilities are kept in the DB as lists, based upon<br />
