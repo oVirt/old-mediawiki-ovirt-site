@@ -128,7 +128,6 @@ Others:
 *See: http://libvirt.org/formatnetwork.html#elementsConnect for documentation of the Host level network QoS XML.
 
 == Comments and Discussion ==
-* Traffic shaping using the Network QoS feature will be available only for oVirt networks at this stage.
 
 
 [[Category:SLA]]
