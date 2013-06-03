@@ -111,7 +111,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |UI and Engine in progress, update instance type with running vms still not implemented, no rest api
 |-
 | Virt
-|[[Integrating_libosinfo_with_Ovirt_engine|OS Info]]
+|[[OS_info|OS Info]]
 | ?
 |[[User:rgolan| Roy Golan]]
 |style="background-color: Orange;"|Orange
