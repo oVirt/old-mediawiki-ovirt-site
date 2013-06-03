@@ -85,9 +85,6 @@ The first four count as NetDevices. The relationship is as follows:
 ==== Nic is a NetDevice ====
 Nothing on top of NetDevice
 
-==== Alias ====
-* Users have shown interest in the likes of <tt>eth0:4</tt>. We should find out if this is really required of oVirt.
-
 ==== IpConfig ====
 * inet: IPv4 address information (addr + netmask + gateway/route),
 * bootproto: whether it should use dhcp (dynamic) or static ip configuration.
