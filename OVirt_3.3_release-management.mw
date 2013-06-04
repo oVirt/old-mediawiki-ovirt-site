@@ -303,11 +303,11 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | Storage
 |[[Features/Backup-Restore_API_Integration|Backup and Restore API for Independent Software Vendors]] 
 | Optional
-| Sharad Mishra
+| Deepak C Shetty (vdsm) & Sharad Mishra (engine)
 | style="background-color: red;"| Red - Work in Progress
  | ?
 | ?
-| IBM guys are working on this feature, need to verify their status
+| Still in the early stages of development
 |-
 | Storage
 |Allow resign/force re-election of SPM
