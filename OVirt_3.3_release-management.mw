@@ -148,11 +148,11 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 | Virt
 |[[Features/GlusterFS_Storage_Domain|GlusterFS Storage Domain]]
-| ?
-| ?
-| ?
-| ?
-| ?
+| Must
+| Deepak C Shetty (vdsm) & Sharad Mishra (engine)
+| style="background-color: lightgreen;"| Green
+| 
+| Coming soon
 |
 |-
 | Infra
