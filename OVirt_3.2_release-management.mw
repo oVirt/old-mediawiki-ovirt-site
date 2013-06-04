@@ -67,6 +67,7 @@ Features being considered for inclusion/already in master:
 ** [[Features/Gluster_Volume_Performance_Statistics | Gluster Volume Performance Statistics]]
 ** [[Features/Gluster_Sync_Configuration_With_CLI | Configuration sync with Gluster CLI]]
 ** [[Features/GlusterVolumeAdvancedDetails | Monitoring Gluster Volumes and Bricks]]
+** [[Features/Performance_And_Scalability | Performance and Scalability]]
 * Node
 ** [[Features/TUIredesign | TUI redesign]]
 ** [[Features/NodeAutomation | Node automation]] work -- refactor git repo to make standard python tools work
