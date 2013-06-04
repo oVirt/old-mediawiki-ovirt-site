@@ -8,7 +8,7 @@ The feature introduces the ability to edit (update) connection properties of an 
     Name: Alissa Bonas
     Email: <abonas@redhat.com>
 
-=== Current Status === 
+=== Current Status and tasks === 
 Updated June 4 2013
 * Edit  NFS connection properties in webadmin UI - ready (http://gerrit.ovirt.org/#/c/12372/)
 * Edit Posix connection properties in webadmin UI -ready  (http://gerrit.ovirt.org/#/c/13640/)
