@@ -7,8 +7,8 @@ This wiki page focuses on the design of storage I/O bandwidth  Service Level Agr
 
 ==Current Status==
 *Status: design
-*Last updated:  3 June
-* patchset 
+*Last updated:  5 June
+* patchset
 
 ==Detailed Description==
 In VDSM, each storage domain backend only provides limited IO bandwidth capability. If bandwidth become scarce resource, the efficiency of vm  IO operations will be affected by other vms. This is not the situation we want, and therefore we need to limit the bandwidth usage to allocate the bandwidth in a better way.  
