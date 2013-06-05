@@ -29,7 +29,7 @@ to achieve that we need a config value, per version with a list of supported emu
 ==== New Host field ====
 new "emulatedMachines" field will be added to vds_dynamic table. 
  vds_dynamic.emulated_machines
-==== Cluster field ====
+==== New Cluster field ====
 A cluster entity will be added by a new field - emulatedMachine. <br/>
  vds_group.emulated_machine default NULL varchar(255)
 The default is NULL which means the value would be set once a host during the first refresh would have<br/>
