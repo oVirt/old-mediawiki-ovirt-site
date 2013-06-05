@@ -59,6 +59,9 @@ consider this pseudo-code:
  if (!operational)
      set host non operationl, reason = UNSUPPORTED_EMULATION_MODE
 
+==== New UI subtab field (readonly) ====
+TODO A sketch of cluster subtab
+
 === Benefit to oVirt ===
 
 === Documentation / External references ===
