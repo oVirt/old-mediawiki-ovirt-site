@@ -75,7 +75,7 @@ Is it proper to use total_bytes_sec to describe vDisk bandwidth and tune this va
 How to generate minimum IO limit?  
 
 ===Quota(advanced feature)===
-==== Disk bandwidth quota
+==== Disk bandwidth quota====
 As the design in http://www.ovirt.org/Features/Quota, quota provides the administrator a logic mechanism for managing resources allocation for users and groups in the Data Centre.  You need to create the relevant quota, and define the user as a quota consumer .
 
 We would like to add one kind of quota for disk bandwidth IO control.
@@ -114,7 +114,7 @@ As in the quota design, quota object parameters modifications can result in exce
 
 *removing a user from the list of users permitted to use the quota 
 
-All the above will not cause a resource deallocation. However, users will not be able to exceed the quota limitations again after the resources are released.  Also, if a user was removed from the list of permitted users it won't result in an immediate interruptive action. However, that user won't be able to use this quota again, unless permitted to.  
+All the above will not cause a resource deallocation. However, users will not be able to exceed the quota limitations again after the resources are released.  Also, if a user was removed from the list of permitted users it won't result in an immediate interruptive action. However, that user won't be able to use this quota again, unless permitted to.
 
 ===Functionality===
 Basic:
