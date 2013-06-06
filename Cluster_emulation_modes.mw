@@ -33,7 +33,7 @@ new "emulatedMachines" field will be added to vds_dynamic table.
 A cluster entity will be added by a new field - emulatedMachine. <br/>
  vds_group.emulated_machine default NULL varchar(255)
 The default is NULL which means the value would be set once a host during the first refresh would have<br/>
-its reported emulatedMachines list match against the Config Value<br/
+its reported emulatedMachines list match against the Config Value<br/>
 
 ==== New NON_OPERATIONAL reason ====
  NonOperationalReason
