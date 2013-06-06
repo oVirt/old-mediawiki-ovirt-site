@@ -142,18 +142,19 @@ After selecting a network the Profile selection box will be populated with all p
 
 == Backend ==
 We define a new entity: NetworkProfile.<br />
+The NetworkProfile will be added as a property of NetworkInterface.
 
 see : [[http://www.ovirt.org/Features/Design/Network_QoS_-_detailed_design Implementation details]] for detailed design
 
 === DB Change ===
-
+Adding a new table, network_profiles
 see : [[http://www.ovirt.org/Features/Design/Network_QoS_-_detailed_design Implementation details]] for detailed design
 
 === REST API ===
 Not supported in this version
 
 === VDSM ===
-VDSM will not be affected by the Network Profiles. The engine will encapsulate this abstraction and will keep 
+VDSM will not be affected by the Network Profiles. The engine will encapsulate this abstraction and will keep
 
 == Tests ==
 
