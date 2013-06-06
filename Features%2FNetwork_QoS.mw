@@ -123,6 +123,14 @@ Custom properties (Selection box and +/- buttons)
 '''Add/Edit Profile dialog"
 <IMAGE>
 
+The Add/Edit VNIC dialog will be added a Profile selection box.<br />
+The network which will be available for selection in the Network selection box will only be networks which the user have a permission to use at least on of their profiles.<br />   
+After selecting a network the Profile selection box will be populated with all profiles of the selected network which the user have permission to use.
+
+'''Profile Selection'''
+[[File:Profile_selection.png]]
+
+
 == Backend ==
 We define a new entity: NetworkProfile.<br />
 
