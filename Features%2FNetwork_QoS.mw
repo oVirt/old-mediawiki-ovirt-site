@@ -118,6 +118,8 @@ supported actions: add, edit, remove
 The sub tab will include a right pane which will hold "Permissions"/"Consumers" tab where the user will define the user which can use the selected profile.<br />
 supported action: add / remove
 
+In The Virtual Machine sub-tab (under the Network main tab) "Profile" column will be added to the table. <br />
+
 '''Profiles sub tab'''<br />
 [[File:Network_profiles.png]]
 
