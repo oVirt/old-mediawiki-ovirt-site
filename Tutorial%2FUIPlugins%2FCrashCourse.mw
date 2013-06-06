@@ -9,7 +9,7 @@ The ''oVirt Space Shooter'' plugin we will create is based on [https://github.co
 
 No prior [http://en.wikipedia.org/wiki/JavaScript JavaScript] programming experience is required, just make sure you have an oVirt Engine [http://www.ovirt.org/Installing_ovirt-engine_from_rpm up and running] on your system. Oh, and once we're done creating our plugin, be prepared to blast some aliens!
 
-TODO add download link for complete plugin
+Download complete plugin: [[media:Space-shooter-ui-plugin-06062013.tar.gz|oVirt Space Shooter]] (6.6.2013)
 
 == Level 1: I Can Has UI Plugin ==
 Our journey starts in <code>/usr/share/ovirt-engine/ui-plugins</code> directory, home of plugin meta-data and other plugin resources. Let's go ahead and create [[Features/UIPlugins#Plugin_descriptor|descriptor]] for our plugin inside this directory:
@@ -141,7 +141,7 @@ We moved plugin code to <code>body</code> due to Modernizr usage, but other than
 
 Reload WebAdmin in your browser, log in and see what happens! Don't spend too much time playing the game, though. There's always more to learn.
 
-TODO screenshot
+[[File:OVirt_Space_Shooter_1.png]]
 
 == Level 3: Data Center Under Attack ==
 Opening new modal dialog upon login is just too easy. What if the aliens from outer space wanted to invade your precious Data Centers? Let's make this happen and move the battle from generic dialog into Data Center main tab in WebAdmin.
@@ -322,13 +322,13 @@ Remember the missing <code>init</code> function used inside our <code>UiInit</co
 
 Instead of showing new modal dialog with game content right away, the <code>init</code> function adds new ''action button'' to Data Center main tab via <code>api.addMainTabActionButton</code>. Think of action button as a button located in corresponding main tab's upper panel. For example, ''New'', ''Edit'' and ''Remove'' are all action buttons living inside Data Center main tab. Each action button usually gets reflected into context menu for given main tab, but there can be exceptions.
 
-TODO screenshot of DC action buttons + context menu items
+[[File:OVirt_Space_Shooter_2.png]]
 
 In our case, we want the ''Protect DataCenter from Alien Invasion'' button to be visible only via context-menu item, so we customize <code>location</code> within <code>addMainTabActionButton</code> options. Each time item selection changes in Data Center main tab, <code>isEnabled</code> callback will be fired to determine whether the button should be enabled or disabled. In case the button is enabled, <code>onClick</code> callback will be fired when a user clicks the button. Note that both callbacks receive currently selected items (entities) as function <code>arguments</code>.
 
 The <code>openDialog</code> function is pretty much straight-forward, we just pass some extra options to customize the dialog and add some buttons to it. On the other hand, <code>cheatGame</code> shows an interesting pattern - utilizing two-way communication between game and plugin by invoking function (<code>winGame</code>) on game content's <code>Window</code> object.
 
-TODO screenshot
+[[File:OVirt_Space_Shooter_3.png]]
 
 == Secret Level: Making Things Configurable ==
 Blasting through waves of aliens is nice, but what if someone accessed WebAdmin from a remote machine? Assuming WebAdmin would be exposed at https://engine-machine:8080, someone would need to modify <code>allowedMessageOrigins</code> inside plugin host page to ensure that communication between game and plugin works properly. Of course, we could still use <code>*</code> as the value for <code>allowedMessageOrigins</code> to accept <code>message</code> events from any origin, however doing this would open back door for malicious JavaScript to exploit our plugin.
@@ -377,7 +377,7 @@ Accessing plugin configuration at runtime is as easy as calling <code>api.config
 	});
 </pre>
 
-== Level 4: Final Touches ==
+== Level 4: Insert Coin And Keep The Score ==
 Let's add one more feature to our plugin: the ability to track score (games won) per each Data Center via custom sub tab under Data Center main tab. Heroic deeds of admins blasting through waves of aliens shouldn't be forgotten, right?
 
 
@@ -518,7 +518,7 @@ Score for Data Center <span id='dataCenterName'>?</span>: <span id='score'>?</sp
 
 And we're done! Take a break from coding and play the game to see new score and ranking feature in action.
 
-TODO screenshot
+[[File:OVirt_Space_Shooter_4.png]]
 
 == Mission Accomplished ==
 Congratulations! You've made it past all the levels, you should have a pretty good understanding of UI plugins now.
