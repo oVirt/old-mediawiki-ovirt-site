@@ -143,7 +143,7 @@ After selecting a network the Profile selection box will be populated with all p
 '''Profile Selection'''<br />
 [[File:Profile_selection.png]]
 
-== Backend ==
+=== Backend ===
 We define a new entity: NetworkProfile.<br />
 The NetworkProfile will be added as a property of NetworkInterface.
 
