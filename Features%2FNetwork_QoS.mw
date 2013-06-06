@@ -126,7 +126,9 @@ A new dialog will be created for add/edit profile. the dialog will include the f
 * Port mirroring (check box) 
 * Inbound QoS (3 text boxes) 
 * Outbound QoS (3 text boxes) 
-* Custom properties (Selection box and +/- buttons) 
+* Custom properties (Selection box and +/- buttons) <br />
+- In clusters supporting version 3.2 or lower the QoS and Custom properties fields will be visible but disabled.
+
 
 '''Add/Edit Profile dialog"<br />
 <IMAGE>
