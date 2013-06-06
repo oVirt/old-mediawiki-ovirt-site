@@ -169,8 +169,11 @@ Affected ovirt projects:
 * Webadmin
 * User Portal
 
-Others:
+Others projects:
 * vdsm
+
+Affected features:
+* Custom properties
 
 == Documentation / External references ==
 *See: http://libvirt.org/formatdomain.html#elementQoS for documentation of the VM level network QoS XML.
