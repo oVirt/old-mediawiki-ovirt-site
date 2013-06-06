@@ -27,7 +27,8 @@ to achieve that we need a config value, per version with a list of supported emu
  ClusterEmulationModes(3.3,"rhel6.4.0, pc-1.0")
 
 ==== New Host field ====
-new "emulatedMachines" field will be added to vds_dynamic table. 
+new "supportedEmulatedMachines" field will be added to VDS entitu and vds_dynamic table. 
+ VDS.supportedEmulatedMachines
  vds_dynamic.supported_emulated_machines
 
 ==== New Cluster field ====
