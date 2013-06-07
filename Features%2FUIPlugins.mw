@@ -198,7 +198,7 @@ UI plugin infrastructure maintains a common lifecycle to control execution of in
 ;INITIALIZING
 : The plugin is being initialized by calling <code>UiInit</code> event handler function. The <code>UiInit</code> function will be called just once during the lifetime of a plugin, before calling other event handler functions.
 
-;IN_USE
+;IN USE
 : The <code>UiInit</code> function completed successfully, we can now call other event handler functions as necessary. The plugin is in use.
 
 ;FAILED
@@ -231,6 +231,12 @@ TODO
 * closeDialog
 * loginUserName
 * loginUserId
+
+== Resources and tutorials ==
+* Tutorial: [[Tutorial/UIPlugins/CrashCourse|oVirt Space Shooter]]
+* Presentation slides: [[Media:UI_Plugins_PoC_Overview_2012.pdf|UI Plugins PoC Overview]] (October 2012)
+* Presentation slides: [[Media:UI_Plugins_at_oVirt_Workshop_Sunnyvale_2013.pdf|UI Plugins at oVirt Workshop Sunnyvale]] (January 2013)
+* Miscellaneous: [[Features/UIPluginsOriginalDesignNotes|Original Design Notes]], [[Media:Ui-plugin-figures.tar.gz|UI Plugin Figures]]
 
 == UI plugin cheat sheet ==
 Minimal plugin descriptor:
@@ -265,7 +271,7 @@ Minimal plugin host page:
 </pre>
 
 == Sample UI plugins ==
-Repository hosting sample UI plugins: <code>git://gerrit.ovirt.org/samples-uiplugins</code> ([http://gerrit.ovirt.org/gitweb?p=samples-uiplugins.git Gerrit web])
+Repository hosting sample UI plugins: git://gerrit.ovirt.org/samples-uiplugins ([http://gerrit.ovirt.org/gitweb?p=samples-uiplugins.git Gerrit web])
 
 == Real-world UI plugins ==
 
@@ -300,9 +306,6 @@ Using oVirt WebAdmin, make SSH connection to a host and emulate a terminal via [
 <br/>
 [[File:ShellBox SubTab.png|Shell Box sub tab]]
 <br/>
-
-== References ==
-* [[Features/UIPluginsOriginalDesignNotes|Original design notes]]
 
 == Comments and discussion ==
 * Refer to [[Talk:Features/UIPlugins|UI plugins discussion page]].
