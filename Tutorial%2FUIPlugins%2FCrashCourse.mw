@@ -353,7 +353,7 @@ To make things a bit more configurable, let's add new configuration option right
 </pre>
 
 
-The <code>config</code> attribute is completely optional and can be used to contain default (plugin-specific) configuration. '''Users shouldn't modify plugin descriptor directly''' - if you need to override default configuration, create [[Features/UIPlugins#Plugin_user_configuration_.28optional.29|plugin user configuration]] inside <code>/etc/ovirt-engine/ui-plugins</code> directory (using <code>-config</code> suffix):
+The <code>config</code> attribute is completely optional and can be used to contain default (plugin-specific) configuration. '''Users shouldn't modify plugin descriptor directly''' - if you need to override default configuration, create [[Features/UIPlugins#Plugin_user_configuration|plugin user configuration]] inside <code>/etc/ovirt-engine/ui-plugins</code> directory (using <code>-config</code> suffix):
 
 
 <code>/etc/ovirt-engine/ui-plugins/space-shooter-config.json</code>
