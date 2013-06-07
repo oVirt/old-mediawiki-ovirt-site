@@ -86,7 +86,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/noVNC console|noVNC console]]
 | ?
 |[[User:FKobzik| Frantisek Kobzik]]
-| style="background-color: Orange;"| Orange
+| style="background-color: lightgreen;"| Green
 | ?
 | ?
 | ?
@@ -133,7 +133,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 |[[User:rgolan| Roy Golan]]
 |style="background-color: Orange;"|Orange
-| May 31st
+| June 17th
 | ?
 | automatically use the right emulated machine type for QEMU
 |-
@@ -141,8 +141,8 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/SpiceHTML5|SPICE HTML5 client integration]]
 | ?
 |[[User:fkobzik| Frantisek Kobzik]]
-| style="background-color: Red;"| Red
-| ?
+|style="background-color: Orange;"|Orange
+| June 17th
 | ?
 |
 |-
