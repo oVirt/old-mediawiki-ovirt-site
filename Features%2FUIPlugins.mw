@@ -193,7 +193,7 @@ UI plugin infrastructure maintains a common lifecycle to control execution of in
 : The <code>iframe</code> element has been attached to DOM, causing plugin host page to be fetched asynchronously in the background. We are waiting for the plugin to report back as ready.
 
 ;READY
-: The plugin has indicated that it is ready for use. We expect the event handler object (object containing [[#Application_event_reference|event handler functions]]) to be registered by now. While in plugin invocation context<code>*</code>, proceed with plugin initialization. Otherwise, initialize plugin upon entering plugin invocation context.
+: The plugin has indicated that it is ready for use. We expect the event handler object (object containing [[#Application_event_reference|event handler functions]]) to be registered by now. While in plugin invocation context<code>*</code>, proceed with plugin initialization. Otherwise, initialize the plugin upon entering next invocation context.
 
 ;INITIALIZING
 : The plugin is being initialized by calling <code>UiInit</code> event handler function. The <code>UiInit</code> function will be called just once during the lifetime of a plugin, before calling other event handler functions.
@@ -204,7 +204,7 @@ UI plugin infrastructure maintains a common lifecycle to control execution of in
 ;FAILED
 : An uncaught exception escaped while calling plugin event handler function, indicating internal error within plugin code. The <code>iframe</code> element has been detached from DOM. The plugin is removed from service.
 
-<code>*</code> Plugin invocation context starts when user logs into WebAdmin and ends when user logs out. Processing [[#Application_event_reference|event handler functions]] as well as [[#API_function_reference|plugin API]] calls is constrained by this context, i.e. plugins are in effect only while user remains authenticated in WebAdmin.
+<code>*</code> Plugin invocation context starts when user logs into WebAdmin and ends when user logs out. Processing [[#Application_event_reference|event handler functions]] as well as [[#API_function_reference|plugin API]] calls is constrained by this context, i.e. plugins are in effect only while user stays authenticated in WebAdmin.
 
 == Application event reference ==
 TODO
