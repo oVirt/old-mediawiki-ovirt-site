@@ -1,16 +1,18 @@
-== Guest Reboot (preview) ==
+= Guest Reboot (preview) =
 
-=== Summary ===
+== Summary ==
 
 Support reboot in both engine and vdsm. Enable users to restart guest with single command.
 
-=== Detailed description ===
+== Detailed description ==
 
-==== Current Condition ====
+=== Current Condition ===
 
-The current behavior in the engine requires the user who wishes to reboot VM to wait until the VM is <tt>Down</tt>, then press run and wait until it is <tt>Up</tt> again.  Adding a new button/REST action (with configurable behavior, see later) would solve this issue.
+The current behavior in the engine requires the user who wishes to reboot VM to wait until the VM is <tt>Down</tt>, then press run and wait until it is <tt>Up</tt> again. 
 
-==== Proposed changes ====
+Adding a new button/REST action (with configurable behavior, see later) would solve this issue.
+
+=== Proposed changes ===
 
 * Frontend 
 * REST
@@ -18,6 +20,8 @@ The current behavior in the engine requires the user who wishes to reboot VM to 
 * VDSM
 * Guest Agent
 
-=== Owner === 
+== Possible Issues ==
+
+== Owner == 
 * Name: [[User:Mbetak|Martin Betak]]
 * Email: <mbetak@redhat.com>
