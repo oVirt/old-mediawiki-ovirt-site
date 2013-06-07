@@ -20,7 +20,7 @@ Adding a new button/REST action (with configurable behavior, see later) would so
 * Backend
 * VDSM
 * Guest Agent
-:Support additional boolean parameter in the desktopShutdown call determining wether we want normal shutdown (<tt>reboot=False</tt>) or reboot (<tt>reboot=True</tt>). 
+:Support additional boolean parameter in the desktopShutdown call determining wether we want normal shutdown (<tt>reboot=False</tt>) or reboot. 
 :This is the simplest change as it boils down to passing -h or -r flag to the underlying script performing the shutdown.
 
 == Possible Issues ==
