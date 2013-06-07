@@ -232,8 +232,14 @@ TODO
 * loginUserName
 * loginUserId
 
-== Resources and tutorials ==
-* Tutorial: [[Tutorial/UIPlugins/CrashCourse|oVirt Space Shooter]]
+== Tutorials ==
+
+=== [[Tutorial/UIPlugins/CrashCourse|oVirt Space Shooter]] ===
+Simple tutorial that walks you through the basics of creating your first UI plugin (includes complete plugin ready for download)
+
+[[File:OVirt_Space_Shooter_3.png|link=Tutorial/UIPlugins/CrashCourse|oVirt Space Shooter]]
+
+== Resources  ==
 * Presentation slides: [[Media:UI_Plugins_PoC_Overview_2012.pdf|UI Plugins PoC Overview]] (October 2012)
 * Presentation slides: [[Media:UI_Plugins_at_oVirt_Workshop_Sunnyvale_2013.pdf|UI Plugins at oVirt Workshop Sunnyvale]] (January 2013)
 * Miscellaneous: [[Features/UIPluginsOriginalDesignNotes|Original Design Notes]], [[Media:Ui-plugin-figures.tar.gz|UI Plugin Figures]]
