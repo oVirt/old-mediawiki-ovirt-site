@@ -103,13 +103,10 @@ Is it proper to use total_bytes_sec to describe vDisk bandwidth and tune this va
 ===Functionality===
 Basic:
 Admin can created the SD profile and grant  to users
+
 Users can select the profile for a specific vDisk when a VM is created . These elements are kept in migration.
-This requires support of this in VDSM API: create VM, hot plug and update VM device. Dynamic setting these elements should also be supported.
 
-
-
-
-
+Support in VDSM API: create VM, hot plug and update VM device. Dynamic setting these elements should also be supported.
 
 ==Documentation / External references==
 http://libvirt.org/formatdomain.html#elementsDisks
