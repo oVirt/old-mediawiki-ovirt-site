@@ -134,7 +134,7 @@ A new dialog will be created for add/edit profile. the dialog will include the f
 
 
 '''Add/Edit Profile dialog"<br />
-<IMAGE>
+[[File:Vnic_profile.png]]
 
 The Add/Edit VNIC dialog will be added a Profile selection box.<br />
 The network which will be available for selection in the Network selection box will only be networks which the user have a permission to use at least on of their profiles.<br />   
@@ -142,6 +142,7 @@ After selecting a network the Profile selection box will be populated with all p
 
 '''Profile Selection'''<br />
 [[File:Profile_selection.png]]
+
 === Permissions ===
 In current implementation two roles are defined for networks:
 * NetworkAdmin - can create/remove/edit/assign to cluster/configure for VM/ configure for Template on '''Network''' entity
