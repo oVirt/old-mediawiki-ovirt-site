@@ -54,7 +54,7 @@ Note - connections subresource for lun disks is not in scope for 3.3
 It will be possible to create a new connection without adding a storage domain along with it, and only later reference it from any domain by providing the connection id.
 
 === Delete connection ===
-Deletion of connection will be possible only if no storage domain is connected to it (orphan connection).
+Deletion of connection will be possible only if no storage domain is referencing it (orphan connection).
 
 === Update existing connection (PUT) === 
 It will be possible to update connection details when storage domain connected to it is in maintenance state. Most of connection fields can be updated (such as path/iqn/address/port/user/password) - each storage type has its relevant set of fields, id of connection will be immutable.
