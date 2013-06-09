@@ -1,7 +1,7 @@
 <!-- {{autolang|base=yes}} -->
 
 == General ==
-Supervdsm is responsible for all privileged operations. Currently Supervdsm is managed (started and restarted) by unprivileged process 'vdsm'. To perform that, Vdsm process runs privileged operations, manage process that runs as root, and communicate with it by external UDS. All that leads to races between new and old instances of the process. Aim of this feature is to get Vdsm to be a pure unprivileged process and simplify the handling of crashes and re-establish communication between Vdsm and Supervdsm after failures.
+Supervdsm is responsible for all privileged operations. Currently Supervdsm is managed (started and restarted) by unprivileged process 'vdsm' and vdsm starts up by init service manager. To perform that, Vdsm process runs privileged operations, manage process that runs as root, and communicate with it by external UDS. All that leads to races between new and old instances of the process. Aim of this feature is to get Vdsm to be a pure unprivileged deamon and simplify the handling of crashes and re-establish communication between Vdsm and Supervdsm after failures.
 
 == Owner ==
 <!--This should link to your home wiki page so we know who you are-->
@@ -11,38 +11,32 @@ Supervdsm is responsible for all privileged operations. Currently Supervdsm is m
 * Email: <lvroyce@linux.vnet.ibm.com>
 * Email: <ybronhei@redhat.com>
 
-== Current status ==
-* Considering using dbus implementation for communication between the services.
-* Authentication method  is limited to only using hardcoded auth code that saved in file.
-
-== Background ==
+== Background - History until 3.3 ==
 *current solution<br />
-# Vdsmd.init start vdsm with user “vdsm” <br />
-# Launch supervdsm when it is not running by sudo command<br />
-# Vdsm tries to call supervdsm<br />
-# When authentication error, re-launch (kill old instance and initiate new one), other errors just raise<br />
-# When vdsm dies, supervdsm distinguish it and kill itself automatically, next vdsm instance starts new supervdsm process<br/>
+# Vdsm deamon script starts vdsm with user “vdsm” <br />
+# Vdsm process launches supervdsm process when it is not running by sudo command<br />
+# Vdsm tries to send uds packets to supervdsm to establish communication <br />
+# When authentication error is raised, vdsm tries to re-launch (kill old instance and initiate new one)<br />
+# When vdsm crashes, supervdsm distinguish it and kill itself automatically, next vdsm instance starts new supervdsm process<br/>
 [[File:First launch.jpeg]][[File:Normal call.jpeg]]    [[File:Auth error.jpeg]] 
-*Current problems<br />
+*Current flow errors <br />
 # Unprivileged vdsm and proxy need to call previleged “sudo launch” and “sudo kill”<br />
-# Redundent key between vdsm and supervdsm as they are parent and child<br />
+# Redundant key between vdsm and supervdsm as they are parent and child<br />
 # Error handling cause races between old and new instance of supervdsm and vdsm<br />
-
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 == Proposed changes ==
-<!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
 *Proposal A:[http://gerrit.ovirt.org/gitweb?p=vdsm.git;a=commit;h=976dbb13e6cd8136b12ed58ccd2a5176b730bddf patch for proposal A]
-# Vdsmd.init starts vdsm as root
+# Vdsm init script starts vdsm as root
 # Vdsm forks supervdsm server and then drop privilege
-# When vdsm exit, supervdsm probe vdsm heart beat stop and exit
+# When vdsm exits, supervdsm probe vdsm heart beat stop and exit
 # Vdsm call supervdsm may discover supervdsm server exit, vdsm will exit itself and restart
 
 *Proposal B:[http://gerrit.ovirt.org/gitweb?p=vdsm.git;a=commit;h=033ef4bc73dbbb36dd8180049626e7f4cde56334 patch for proposal B]
-# vdsmd.init starts supervdsm as root
-# supervdsm forks vdsm as child process
-# when vdsm dies, supervdsm kill itself and start over again
-# when supervdsm, vdsm distinguish that and kill itself
+# Vdsm init script starts supervdsm as root
+# Supervdsm forks vdsm as child process
+# When vdsm dies, supervdsm kill itself and start over again
+# When supervdsm, vdsm distinguish that and kill itself
 
 *proposal C:[http://gerrit.ovirt.org/#/c/11051/ patch for proposal C] -> '''Selected solution.'''
 # Vdsmd.init starts vdsm as vdsm user
@@ -52,15 +46,12 @@ Supervdsm is responsible for all privileged operations. Currently Supervdsm is m
 
 ==Exception flows to consider==
 *Exception flows:
-# One of supervdsm server export function raise error 
-#* expected result: raise to proxy caller 
-# Supervdsm main thread died during a call (need to test)
-#* expected result: raise to proxy caller EOFError
-#* supervdsm restarts automatically and vdsm call to the same function again
-# supervdsm main thread killed before call
-#* expected result:restart supervdsm and call
-# vdsm crash
-#*supervdsm stays up and vdsm re-establish communication to supervdsm socket
+# One of Supervdsm server export function raise error 
+#* Expected result: Raise to proxy caller, supervdsm restarts automatically without trying to call the same function again. The proxy caller should handle exceptions specifically.
+# Supervdsm main thread died during a call or before call
+#* Expected result: Raise to proxy caller related exception. Supervdsm proxy caller should handle exceptions specifically.
+# Vdsm crash
+#*supervdsm stays up and vdsm re-establish communication to supervdsm socket after restart.
 
 ==Proposal comparison==
 *Exception flows need attention：
@@ -93,19 +84,8 @@ As we can see from the above, proposal B will involve more complex logic when su
 Proposal C is intuitive, easier, and less  complex than both A and B proposals. The main odd is that every code update of vdsm we need restart both services, as they both share same code.
 
 == Benefit to oVirt ==
-<!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
 # Clean vdsm priviledge usage
 # Clean and stable vdsm/supervdsm exception flow and races
-
-== Documentation / External references ==
-<!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
-* TODO: paste corresponding bugzilla link and gerrit link here
-
-== Comments and Discussion ==
-
-This below adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page
-
-* Refer to [[Talk:Your feature name]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 
 [[Category:Feature]]
 [[Category:Vdsm]]
