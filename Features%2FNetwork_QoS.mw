@@ -77,7 +77,7 @@ see : [[http://www.ovirt.org/Features/Design/Network_QoS_-_detailed_design Imple
 The UI for setting of  QoS properties will be added to the Add/Edit Profile dialog.<br />
 
 '''Add/Edit Profile dialog'''<br />
-<IMAGE>
+[[File:Vnic_profile.png]]
 
 The network administrator could enable/disable the QoS properties (for each inbound / outbound).  Disabled QoS will mean no limitation on the traffic in this direction<br />
 Once inbound/outbound was enabled all three field must be filled (This will be verified before allowing to close the dialog).<br />
