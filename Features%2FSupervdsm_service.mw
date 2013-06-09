@@ -47,8 +47,8 @@ Supervdsm is responsible for all privileged operations. Currently Supervdsm is m
 *proposal C:[http://gerrit.ovirt.org/#/c/11051/ patch for proposal C] -> '''Selected solution.'''
 # Vdsmd.init starts vdsm as vdsm user
 # Supervdsmd.init starts supervdsm as root
-# Both services are managed by respawn and start over again after crash
-# When vdsm cannot connect to supervdsm socket, it restarts supervdsm service 3 tries
+# Both services are managed by service manager and restart after a crash.
+# No need to handle broken connection. When supervdsm or vdsm fails to start an automatically restart takes care of establishing recommunication.
 
 ==Exception flows to consider==
 *Exception flows:
