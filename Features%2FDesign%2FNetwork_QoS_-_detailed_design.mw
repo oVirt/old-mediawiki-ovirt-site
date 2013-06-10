@@ -43,17 +43,17 @@ Add NetworkQoS table with  7 columns.
 |-
 |id ||UUID || 
 |-
-|inbound_average ||Integer || 
+|inbound_average ||Integer || Null
 |-
-|inbound_peak ||Integer || 
+|inbound_peak ||Integer || Null
 |-
-|inbound_burst||Integer || 
+|inbound_burst||Integer || Null
 |-
-|outbound_average ||Integer || 
+|outbound_average ||Integer || Null
 |-
-|outbound_peak ||Integer || 
+|outbound_peak ||Integer || Null
 |-
-|outbound_burst ||Integer || 
+|outbound_burst ||Integer || Null
 |-
 |}
 
