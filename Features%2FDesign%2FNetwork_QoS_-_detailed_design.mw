@@ -57,9 +57,6 @@ Add NetworkQoS table with  7 columns.
 |-
 |}
 
-Add network_QoS_id(UUID | null)  to the '''vm_interface''' table - Represents the properties of the virtual NIC.<br />
-Add network_QoS_id(UUID | null) and network_QoS_default_for_vnic_id(UUID | null) to the '''network'''  table.<br />
-
 === REST API ===
 Not supported in this version
 
