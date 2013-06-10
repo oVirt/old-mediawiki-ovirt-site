@@ -10,7 +10,7 @@ The storage types that are in scope of this feature are: NFS, Posix, local, iSCS
     Email: <abonas@redhat.com>
 
 === Current Status and tasks === 
-Updated June 8 2013
+Updated June 10 2013
 ==== GUI ====
 * Edit  NFS connection properties in webadmin UI - ready (http://gerrit.ovirt.org/#/c/12372/)
 * Edit Posix connection properties in webadmin UI -ready  (http://gerrit.ovirt.org/#/c/13640/)
