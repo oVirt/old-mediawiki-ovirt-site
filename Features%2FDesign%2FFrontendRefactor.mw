@@ -49,6 +49,8 @@ The current implementation has the following methods exposed to the outside worl
 * We need to make sure that the new design doesn't break any existing functionality, so we should write a unit test suite for the existing implementation (if possible) and use that to measure if the new implementation meets our needs.
 * We need to implement the new design in such a way that it can easily be unit tested, unlike the current implementation.
 
+[[Category:Design]]
+
 == Unit test testSuite ==
 This is to document the things we need to test in the unit test suite.
 ===== RunQuery =====
