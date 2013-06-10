@@ -100,7 +100,7 @@ Add vnic_profiles table with  7 columns.
 |-
 |qos_id ||UUID || Null ||
 |-
-|port_mirroring ||Boolean || Null ||
+|port_mirroring ||Boolean || Null || moved from network_interface
 |-
 |custom_properties ||String || Null ||
 |-
