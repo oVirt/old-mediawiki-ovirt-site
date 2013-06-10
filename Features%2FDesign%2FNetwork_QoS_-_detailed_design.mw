@@ -36,7 +36,7 @@ A NetworkQoS object will be added as a property of the VnicProfile entity.
 '''''engine.core.dao.network.VmVnicProfileDao'''''  - add support to the NetworkQoS field<BR/>
 
 === DB Change ===
-Add NetworkQoS table with  7 columns.
+Add network_qos table with  7 columns.
 
 {|class="wikitable sortable"
 !border="1"| Column Name ||Column Type ||Null? / Default 
