@@ -37,7 +37,7 @@ UpdateVmDiskCommand (step 2) - new disk read-only state is being read correctly 
 * The following commands don't need any changes, but it should be verified that they don't affect the read-only setting and that UI isn't broken as a result:
 HotPlugDiskToVmCommand- verify that hot-plug after hot-unplug is consistent with read-only value before unplugging.<br/>
 DetachDiskFromVmCommand<br/>
-AddVmTemplateDevice - verify new disk's read-only state is the same as template's.<br/>
+AddVmTemplateCommand - verify new disk's read-only state is the same as template's.<br/>
 AddVmFromTemplateCommand - verify disk's read-only state in new vm is the same as template's.<br/>
 AddVmFromSnapshotCommand - verify disk's read-only state in new vm is the same as snapshot's.<br/>
 AddVmAndCloneImageCommand - verify new disk's read-only state is the same as original disk.<br/>
