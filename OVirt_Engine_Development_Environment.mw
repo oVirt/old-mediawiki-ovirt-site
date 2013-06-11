@@ -34,7 +34,7 @@ Make sure openjdk is the java preferred:
 Install 3rd party packages:
  <nowiki># apt-get install git openjdk-7-jdk maven openssl postgresql \
     python-m2crypto python-psycopg2 python-cheetah python-daemon \
-    jboss-as</nowiki>
+    jboss-as unzip</nowiki>
 
 Download jboss-as-7.1.1 from [http://www.jboss.org/jbossas/downloads/ jboss site] and extract to $HOME.
 
