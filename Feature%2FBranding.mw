@@ -20,7 +20,7 @@ Popup windows include anything that allows you create/edit/update a particular e
 * Header center image (repeated)
 
 As illustrated by the following image:<br />
-[[File:popup-window-border.png]]
+[[File:popup-window-border.png]]<br />
 
 As the oVirt default branding is itself a branding theme you can look at the oVirt branding in packaging/branding/ovirt.branding in the source tree to see which css classes are available. The classes for the popup window are in ovirt_common.css and gwt_common.css
 ==== Login Screen ====
@@ -32,7 +32,7 @@ The user portal and web admin share the same login screen, so in the default bra
 * Text in the header center
 
 As illustrated by the following image:<br />
-[[File:login-window.png]]
+[[File:login-window.png]]<br />
 As the oVirt default branding is itself a branding theme you can look at the oVirt branding in packaging/branding/ovirt.branding in the source tree to see which css classes are available. The classes for the login window are in ovirt_common.css and gwt_common.css
 ==== User portal main header ====
 The user portal main header has the following attributes that can be changed:
@@ -43,7 +43,7 @@ The user portal main header has the following attributes that can be changed:
 * Text right above the 'logged in user' label.
 
 As illustrated by the following image:<br />
-[[File:User_portal_header.png]]
+[[File:User_portal_header.png]]<br />
 As the oVirt default branding is itself a branding theme you can look at the oVirt branding in packaging/branding/ovirt.branding in the source tree to see which css classes are available. The classes for the user portal header are in ovirt_user_portal.css
 ==== Web admin main header ====
 The web admin main header has the following attributes that can be changed:
@@ -53,20 +53,21 @@ The web admin main header has the following attributes that can be changed:
 * Text to the right of the logo
 
 As illustrated by the following image:<br />
-[[File:Wed_admin_header.png]]
+[[File:Wed_admin_header.png]]<br />
 As the oVirt default branding is itself a branding theme you can look at the oVirt branding in packaging/branding/ovirt.branding in the source tree to see which css classes are available. The classes for the user portal header are in ovirt_webadmin.css
 ==== Tabbing elements ====
 There are two types of tabbing elements in the user portal. The main page tabbing elements (to switch between basic and extended) and the tabs on the left side of the screen when you have the extended tab selected. The following attributes can be changed:
 * Active tab
 * Inactive tab
 As illustrated by the following image:<br />
-[[File:User_portal_tab.png]]
+[[File:User_portal_tab.png]]<br />
 A lot of pop-up windows will have a tabbing element on it as well these elements are common between the user portal and web admin interfaces. The following attributes can be changed:
 * Active tab
 * Inactive tab
 As illustrated by the following image:<br />
-[[File:User_portal_tab_popup.png]]
+[[File:User_portal_tab_popup.png]]<br />
 As the oVirt default branding is itself a branding theme you can look at the oVirt branding in packaging/branding/ovirt.branding in the source tree to see which css classes are available. The classes for the tabbing elements are in ovirt_common.css and ovirt_user_portal.css
+
 == Adding new brandable styles ==
 === CSS ===
 Because this is a GWT application most of the styles are compiled into the application when the application is build. As part of this process the style class names are obfuscated and they change each time the  application is build. GWT provides some guidance on how to solve this problem [https://developers.google.com/web-toolkit/doc/latest/DevGuideClientBundle#External_and_legacy_scopes here]. In order to add new brand-able style classes the following will have to be considered:
