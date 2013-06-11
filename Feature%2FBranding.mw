@@ -70,11 +70,12 @@ As the oVirt default branding is itself a branding theme you can look at the oVi
 
 == Adding new brandable styles ==
 === CSS ===
-Because this is a GWT application most of the styles are compiled into the application when the application is build. As part of this process the style class names are obfuscated and they change each time the  application is build. GWT provides some guidance on how to solve this problem [https://developers.google.com/web-toolkit/doc/latest/DevGuideClientBundle#External_and_legacy_scopes here]. In order to add new brand-able style classes the following will have to be considered:
+Because this is a GWT application most of the styles are compiled into the application when the application is built. As part of this process the style class names are obfuscated and they change each time the  application is build. GWT provides some guidance on how to solve this problem [https://developers.google.com/web-toolkit/doc/latest/DevGuideClientBundle#External_and_legacy_scopes here]. In order to add new brand-able style classes the following will have to be considered:
 * Any class name you define needs to marked with @external
 * All the class names should start with obrand_ this is signify to theme authors that the class can be used to override styles.
 * Any images normally cannot be changed with a style sheet, so we cheated a little and used style sheets to set the background image on an image tag. In order to not display a broken image icon you need to set the src of the image to something transparent and small. Luckily GWT provides an image like that already in 'clear.cache.gif'
 * Other than this any normal style properties can be set in your external style sheet.
+
 === Text messages ===
 GWT provides a mechanism that allows you to define messages for your application and have them automatically translated during the compile process if you have provided a proper translation in a standard Java properties file. GWT provides a 'Messages' and 'Constants' interface for this purpose. Since the translations are compiled into the application during compile time this does not allow one to use an external file to override particular messages. In order to solve this we pass a messages Javascript object to the GWT application using the host page. This object is then processed and used to override some predefined messages.
 
