@@ -312,7 +312,7 @@ gerrit.ovirt.org:ovirt-engine-sdk-java
 
 15. implement unique treatment for COLLECTION2ENTITY pattern exceptions
 
-16. implement logger in codegen
+16. implement logger in codegen 
 
 17. add deployment capabilities 
 
@@ -321,6 +321,8 @@ gerrit.ovirt.org:ovirt-engine-sdk-java
 19. Implement querying collections using custom constraint.
 
 20. in doc change parameters format to javaDoc style (done)
+
+21. make API.java thread safe
 
 == Change Log ==
 
