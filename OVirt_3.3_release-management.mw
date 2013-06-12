@@ -78,7 +78,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 |[[User:ahadas| Arik Hadas]]
 |style="background-color: Orange;"|Orange - In progress, , see comment
-| ?
+| June 17th
 | ?
 |vdsm part was pushed, engine part is still on progress - handling memory snapshots on export/import operations remained, REST part didn't start
 |-
