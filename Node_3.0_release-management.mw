@@ -43,6 +43,7 @@ Features being considered for inclusion/already in master:
 * [[Features/Node Puppet Plugin | Puppet configuration management]]
 * Swap enhancements (deferred to 3.1)
 * [[Features/Node/Bridgeless Networking | Bridgeless Networking]]
+* [[Features/Node/NIC Bonding | NIC Bonding]]
 * TUI
 ** [[Features/Urwid TUI | Features/New installer]]
 ** [[Features/Node ipv6 support]]
