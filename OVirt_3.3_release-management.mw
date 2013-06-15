@@ -256,7 +256,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |
 |-
 | Storage
-|[[Features/Edit_Connection_Properties|Edit Connection Properties]]
+|[[Features/Manage_Storage_Connections|Manage Storage Connections]]
 | Must
 | [[User:abonas|Alissa Bonas]]
 | style="background-color: red;"| Red - Work in Progress
