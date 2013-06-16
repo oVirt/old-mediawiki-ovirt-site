@@ -4,7 +4,7 @@
 
 === Summary ===
 
-[https://launchpad.net/cloud-init/ Cloud-init] [1] is a tool used to perform initial setup on cloud nodes, including networking, SSH keys, timezone, user data injection, and more.  It is a service that runs on the guest, and supports various Linux distributions including Fedora, RHEL, and Ubuntu.
+[https://launchpad.net/cloud-init/ Cloud-init] <ref name="project_page"/> is a tool used to perform initial setup on cloud nodes, including networking, SSH keys, timezone, user data injection, and more.  It is a service that runs on the guest, and supports various Linux distributions including Fedora, RHEL, and Ubuntu.
 
 Integrating support for it into oVirt will help facilitate provisioning of virtual machines.  It's already in wide use by cloud software such as OpenStack (via Heat) as well as providers such as Amazon, and its capabilities are a natural fit in our environment.
 
@@ -27,9 +27,9 @@ The package currently supports Fedora, RHEL, Debian, and Ubuntu (and compatible 
 
 After package installation, cloud-init will start during the boot process and looks for various "data sources" that supply it with instructions on what to configure.  These sources can be local configuration data stored on the VM itself, an attached block device (config disk) identified by a specific volume labels and directory structure, or a metadata server accessible via the network at a predefined IP address.  We'll be using a config disk, which will allow the engine to create and attach data to the VMs dynamically based on user preferences, as well as allowing a user to attach their own already-prepared config disks.
 
-Note that there are multiple config disk types supported by cloud-init, each with their own varying structures and capabilities.  We are most interested in using [http://bazaar.launchpad.net/~cloud-init-dev/cloud-init/trunk/view/head:/doc/sources/configdrive/README.rst config-drive version 2] [2], which is also in supported by OpenStack.
+Note that there are multiple config disk types supported by cloud-init, each with their own varying structures and capabilities.  We are most interested in using [http://bazaar.launchpad.net/~cloud-init-dev/cloud-init/trunk/view/head:/doc/sources/configdrive/README.rst config-drive version 2] <ref name=config_drive_2/>, which is also in supported by OpenStack.
 
-Once cloud-init discovers a data source, it scans it for meta-data and user-data.  Generally, meta-data contains information about the cloud that is passed to the guest (instance identification, network setup, etc [3]), whereas user-data contains instructions on provisioning the specific system in question (usernames/passwords to configure, timezone, custom scripts to run, packages to install, files to inject, etc [4]).  If cloud-init has not previously seen the supplied instance identifier (i.e. this is a new configuration), it will proceed to set up the system accordingly.  The end result is a system with all basic provisioning complete before the first login.
+Once cloud-init discovers a data source, it scans it for meta-data and user-data.  Generally, meta-data contains information about the cloud that is passed to the guest (instance identification, network setup, etc <ref name=metadata_example/>), whereas user-data contains instructions on provisioning the specific system in question (usernames/passwords to configure, timezone, custom scripts to run, packages to install, files to inject, etc <ref name=userdata_example/>).  If cloud-init has not previously seen the supplied instance identifier (i.e. this is a new configuration), it will proceed to set up the system accordingly.  The end result is a system with all basic provisioning complete before the first login.
 
 In summary, a typical workflow for using cloud-init in oVirt to assist in guest provisioning might involve:
 * Create new VM
@@ -157,10 +157,12 @@ Related features:
 
 === Documentation / External References ===
 
-# Cloud-init documentation: https://launchpad.net/cloud-init/
-# Config-Drive version 2 readme: http://bazaar.launchpad.net/~cloud-init-dev/cloud-init/trunk/view/head:/doc/sources/configdrive/README.rst
-# OpenStack meta-data example: http://docs.openstack.org/trunk/openstack-compute/admin/content/config-drive.html
-# User-data example: http://bazaar.launchpad.net/~cloud-init-dev/cloud-init/trunk/view/head:/doc/examples/cloud-config.txt
+<references>
+# <ref name="project_page">Cloud-init documentation: https://launchpad.net/cloud-init/</ref>
+# <ref name="config_drive_2">"Config-Drive version 2 readme: http://bazaar.launchpad.net/~cloud-init-dev/cloud-init/trunk/view/head:/doc/sources/configdrive/README.rst</ref>
+# <ref name="metadata_example">OpenStack meta-data example: http://docs.openstack.org/trunk/openstack-compute/admin/content/config-drive.html</ref>
+# <ref name="userdata_example">User-data example: http://bazaar.launchpad.net/~cloud-init-dev/cloud-init/trunk/view/head:/doc/examples/cloud-config.txt</ref>
+<references>
 
 === Comments and Discussion ===
 
