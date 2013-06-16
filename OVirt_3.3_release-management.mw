@@ -277,10 +277,10 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/MoveAsCopyAndDelete|Separating "Move" vm operation to "Copy" and "Delete" operations to improve VM availability]]
 | Optional
 | [[User:laravot|Liron Aravot]]
-| style="background-color: orange;"| Orange
+| style="background-color: lightgreen;"| Green
 | 
 | 
-| The code is ready but not integrated yet
+| Done
 |-
 | Storage
 |[[Features/Backup-Restore_API_Integration|Backup and Restore API for Independent Software Vendors]] 
