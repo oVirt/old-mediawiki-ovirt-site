@@ -443,6 +443,7 @@ Features being considered for inclusion/already in master:
 * [[Features/RAM Snapshots]]
 * [[Features/noVNC console]]
 * [[Features/GlusterFS_Storage_Domain]]
+* [[Features/Cloud-Init_Integration]]
 
 === Infra ===
 * [[Features/Device Custom Properties]]
