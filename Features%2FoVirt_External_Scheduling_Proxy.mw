@@ -28,6 +28,7 @@ The service will be started by the installer, and the engine will be able to com
 
 === Benefit to oVirt ===
 
+The external scheduler will allow system administrators to extend the scheduling logic by writing host selection filters in python.
 
 === Dependencies / Related Features ===
 
