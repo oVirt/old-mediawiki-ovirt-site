@@ -32,7 +32,10 @@ The external scheduler will allow system administrators to extend the scheduling
 
 === Dependencies / Related Features ===
 
-This feature is building on the [[Features/oVirtSchedulerAPI|oVirt scheduler API]] feature.
+This feature is building on 
+* [[Features/oVirtSchedulerAPI|oVirt scheduler API]] feature.
+
+This feature will also allow new feaures to build on it.
 
 === Documentation / External references ===
 
