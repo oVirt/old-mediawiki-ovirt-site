@@ -36,7 +36,7 @@ This feature is building on the [[oVirtSchedulerAPI|oVirt sceduler API]] feature
 
 === Documentation / External references ===
 
-==== Discover ====
+==== discover ====
 
 Engine and external scheduler API:
 * Discover(void): returns a JSON containing all available policy units and configurations (configuration is optional).
