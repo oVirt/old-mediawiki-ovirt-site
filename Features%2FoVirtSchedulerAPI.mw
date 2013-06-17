@@ -416,7 +416,7 @@ The service will be started by the installer, and the engine will be able to com
  listerning port=# (18781)
  ssl=true/false (true)
  plugins_path=/path ($PYTHONPATH/ovirt_scheduler/plugins)
-Additionally for every python plugin an optional config file can be added (etc/ovirt/scheduler/plugins/{NAME}.conf).
+* Additionally for every python plugin an optional config file can be added (etc/ovirt/scheduler/plugins/{NAME}.conf).
 
 ==== External Daemon RPCs ====
 Engine and external scheduler API:
