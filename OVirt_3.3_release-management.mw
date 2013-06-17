@@ -155,6 +155,15 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | http://www.ovirt.org/Features/GlusterFS_Storage_Domain#Testing
 |
 |-
+| Virt
+|[[Features/Cloud-Init_Integration|Cloud-Init Integration]]
+| ?
+| [[User:Gpadgett|Greg Padgett]]
+| style="background-color: Red;"| Red
+| ?
+| ?
+| Initial patches reviewed, working on incorporating feedback
+|-
 | Infra
 |[[Features/Device Custom Properties|Device Custom Properties]]
 | must
