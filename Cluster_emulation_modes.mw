@@ -40,7 +40,7 @@ its reported emulatedMachines list match against the Config Value<br/>
 ==== New NON_OPERATIONAL reason ====
  NonOperationalReason
   ...,
-  UNSUPPORTED_EMULATION_MODE;
+ EMULATED_MACHINES_INCOMPATIBLE_WITH_CLUSTER ;
 
 ==== HandleVdsCpuFlagsOrClusterChangedCommand ====
 
