@@ -1,6 +1,6 @@
 <!-- {{autolang|base=yes}} -->
  
-= Foreign_Menu_Using_REST =
+= Foreign Menu Using REST =
  
 == Summary ==
 Provide a REST API on oVirt side which would be used by SPICE client to enrich the client by foreign menu and also to call the oVirt engine if some menu item is selected.
