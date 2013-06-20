@@ -153,6 +153,7 @@ Note: get_id function is:
 ## Override file for creating a tap connected to dummy bridge
 
 === Linuxbridge Agent installation steps ===
+
  yum install -y openstack-quantum-linuxbridge
  LB_CONF=/etc/quantum/plugins/linuxbridge/linuxbridge_conf.ini
  Q_CONF=/etc/quantum/quantum.conf
@@ -161,13 +162,13 @@ Note: get_id function is:
  # configuring QPID host
  /usr/bin/openstack-config --set ${Q_CONF} DEFAULT rpc_backend quantum.openstack.common.rpc.impl_qpid
  /usr/bin/openstack-config --set ${Q_CONF} DEFAULT qpid_hostname ${QPID_HOST}
- if [ [ -n "$qpid_username" ]]; then
+ if <nowiki>[[ -n "$qpid_username" ]]</nowiki>; then
      /usr/bin/openstack-config --set ${Q_CONF} DEFAULT qpid_username $qpid_username
  fi
- if [ [ -n "$qpid_password" ]]; then
+ if <nowiki>[[ -n "$qpid_password" ]]</nowiki>; then
      /usr/bin/openstack-config --set ${Q_CONF} DEFAULT qpid_password $qpid_password
  fi
- if [ [ -n "$qpid_port" ]]; then
+ if <nowiki>[[ -n "$qpid_port" ]]</nowiki>; then
      /usr/bin/openstack-config --set ${Q_CONF} DEFAULT qpid_port $qpid_port
  fi
  # edit /etc/quantum/plugin.ini physical_interface_mappings
