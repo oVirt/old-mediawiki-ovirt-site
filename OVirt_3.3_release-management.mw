@@ -77,10 +77,10 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/RAM Snapshots|RAM Snapshots]]
 | ?
 |[[User:ahadas| Arik Hadas]]
-|style="background-color: Orange;"|Orange - In progress, , see comment
-| June 17th
+|style="background-color: Orange;"|Orange -on review
+| June 25th
 | ?
-|vdsm part was pushed, engine part is still on progress - handling memory snapshots on export/import operations remained, REST part didn't start
+|vdsm part was pushed, engine part patches on review - handling memory snapshots on export/import operations remained, REST part didn't start
 |-
 | Virt
 |[[Features/noVNC console|noVNC console]]
@@ -89,7 +89,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | style="background-color: lightgreen;"| Green
 | ?
 | ?
-| ?
+| pending Alon Bar-Lev's certificate generation
 |-
 | Virt
 |[[Features/Non Plugin RDP Invocation|Non Plugin RDP Invocation]]
@@ -106,17 +106,17 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[User:tjelinek| Tomas Jelinek]]
 [[User:ofrenkel| Omer Frenkel]]
 |style="background-color: Red;"|Red
+| Jun 25th
 | ?
-| ?
-|UI and Engine in progress, update instance type with running vms still not implemented, no rest api
+| will be there partially - only redesigned Edit VM dialog and typeahead listboxes
 |-
 | Virt
 |[[OS_info|OS Info]]
 | ?
 |[[User:rgolan| Roy Golan]]
 |style="background-color: Orange;"|Orange
-| May 31st
-| ?
+| Jun 25th
+| on review
 |
 |-
 | Virt
@@ -133,17 +133,17 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 |[[User:rgolan| Roy Golan]]
 |style="background-color: Orange;"|Orange
-| June 17th
+| June 27th
 | ?
-| automatically use the right emulated machine type for QEMU
+| automatically use the right emulated machine type for QEMU. On review
 |-
 | Virt
 |[[Features/SpiceHTML5|SPICE HTML5 client integration]]
 | ?
 |[[User:fkobzik| Frantisek Kobzik]]
 |style="background-color: Orange;"|Orange
-| June 17th
-| ?
+| June 25th
+| packaging remains
 |
 |-
 | Virt
