@@ -202,7 +202,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | Submitted upstream, missing backport to rhev
 |-
 | Infra
-| [[Features/Automatic_Fencing#Automatic_Fencing_in_oVirt_3.3|SSH Soft Fencing]]
+|[[Automatic_Fencing#Automatic_Fencing_in_oVirt_3.3|SSH Soft Fencing]]
 | Should
 | [[User:mperina | Martin Perina]]
 |  style="background-color: Orange;"|Orange - In progress, not submitted
