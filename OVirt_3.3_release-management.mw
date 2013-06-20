@@ -348,20 +348,21 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | Gluster
 |[[Features/Gluster Hooks Management|Gluster Hooks Management]]
 | Should
-| sabose@redhat.com
-| style="background-color: orange;"| orange 
-| 31/05/2013
+| [[User:Sahina|Sahina Bose]]
+| style="background-color: lightgreen;"| green 
+| 17/06/2013
 | ?
-| Patches are under review upstream
+| 
 |-
 | Gluster
 |[[Features/Gluster Swift Management|Gluster Swift Management]]
 |Should
-| sabose@redhat.com
+| [[User:Sahina|Sahina Bose]], avishwan@redhat.com (vdsm)
 | style="background-color: orange;"| orange 
-| 31/05/2013
+| 28/06/2013
 | ?
-| Gluster Swift configuration will not be covered in this release
+| Vdsm patches submitted, to be merged 
+
 |-
 | Node
 | [[Features/Universal Image|Universal Node Image]]
