@@ -259,7 +259,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Virtio-SCSI|Virtio-SCSI support]]
 | Optional
 | [[User:derez|Daniel Erez]]
-| style="background-color: orange;"| Orange - In progress, not submitted
+| style="background-color: lightgreen;"| Green
 | ?
 | [[Features/Virtio-SCSI#Testing]]
 |
