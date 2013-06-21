@@ -68,7 +68,8 @@ add the <cpu> output from virsh to your vm xml adding match='exact' to <cpu>
 ===oVirt-Live-1.0.iso - Feb 21th 2013 ===
 
 ==== Download ====
-[http://resources.ovirt.org/releases/3.2/tools/ovirt-live-1.0.iso Download oVirt Live 1.0]
+* Fedora 18 based: [http://resources.ovirt.org/releases/3.2/tools/ovirt-live-1.0.iso Download oVirt Live 1.0]
+* EL6 based: [http://resources.ovirt.org/releases/3.2/tools/ovirt-live-el6.iso Download oVirt Live 1.0]
 
 ==== change-log ====
 Based on oVirt 3.2 final
