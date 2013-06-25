@@ -298,13 +298,13 @@ gerrit.ovirt.org:ovirt-engine-sdk-java
 
 8. implement client validation
 
-9. allow setters generation for collection based fields in org.ovirt.engine.sdk.entities
+9. allow setters generation for collection based fields in org.ovirt.engine.sdk.entities 
 
 10. implement in collection.get(name) search using engine.search
 
 11. implement  timeout in SDK constructor
 
-12. implement sdk debug mode
+12. implement sdk debug mode  (done)
 
 13. remove @SuppressWarnings("unused") from decorators
 
@@ -322,7 +322,7 @@ gerrit.ovirt.org:ovirt-engine-sdk-java
 
 20. in doc change parameters format to javaDoc style (done)
 
-21. make API.java thread safe
+21. make API.java thread safe  (done)
 
 == Change Log ==
 
