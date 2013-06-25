@@ -19,6 +19,9 @@ Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is ma
 * Supports Python (we may be able to allow others as well).
 
 ===API===
+
+Note on pending resources: whatever usage data is passed over to the engine, it must pass over the used and the pending resources together.
+
 ====Schedule====
 Called by Engine's commands: Run VM and Migrate VM- replaces current VdsSelector logic.
 ===== Filter =====
