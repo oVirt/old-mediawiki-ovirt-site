@@ -419,23 +419,22 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |
 |-
 | UX
-| Branding Support
+|[[Feature/Branding|Branding Support]]
 | Should
 | awels@redhat.com
-| style="background-color: Red;"| Red
-| 31/06/2013
-| ?
-| Code complete, just needs final review and final dev testing before handing to QA
+| style="background-color: lightgreen;"| Green
+| June 11, 2013
+| -
+|
 |-
 | UX
 | [[Features/Design/FrontendRefactor|FrontendRefactor]]
 | Should
 | awels@redhat.com
 | style="background-color: Red;"| Red
-| ?
-| ?
+| July 31, 2013
+| (code change)
 |
-|-
 |}
 
 === Feature Table Mapping ===
