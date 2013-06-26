@@ -404,7 +404,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Self_Hosted_Engine|Self Hosted Engine]]
 | Should
 | sbonazzo@redhat.com
-| style="background-color: Red;"| Red
+| style="background-color: orange;"| Orange
 |15/7/2013
 | ?
 |code base is ready - waiting for git repo from infra taem.
