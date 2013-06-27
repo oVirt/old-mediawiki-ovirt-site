@@ -121,7 +121,7 @@ To rebuild everything use:
 
 === Enable Unit Tests ===
 
- <nowiki>$ make install-dev PREFIX="$HOME/ovirt-enigne" BUILD_UT=1
+ <nowiki>$ make install-dev PREFIX="$HOME/ovirt-enigne" BUILD_UT=1</nowiki>
 
 === Enable DAO Tests ===
 
