@@ -26,7 +26,7 @@
 
 * run unit and functional tests on reviewed patches (before submission).
 
-* add a unit test for domxml generation, with several examplary vmParams.
+* add more cases to vmTests.testBuildCmdLine: add more examplary vmParams and their domxml.
 
 * make <tt>getAllVolumesTests</tt> more meaningful, not only counting the number of volumes, but testing the image structure.
 
