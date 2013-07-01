@@ -250,7 +250,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Multiple Gateways|Multiple Gateways]]
 | Must
 | [[User:amuller| Assaf Muller]]
-| style="background-color: Green;"| mostly done (though selinux kills dhcp support for multigw)
+| style="background-color: lightgreen;"| mostly done (though selinux kills dhcp support for multigw)
 | 2013-06-09
 | [[Features/Multiple_Gateways#Testing]]
 |
