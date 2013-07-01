@@ -318,6 +318,15 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 |
 |-
+| Storage
+| [[Features/DiskAlignment|Disks Block Alignment]]
+| Optional
+| [[User:fsimonce|Federico Simoncelli]]
+| style="background-color: orange;"| Orange - In progress
+| 
+| 
+| VDSM patches merged, Engine/Webadmin in review
+|-
 | SLA
 |[[Features/oVirt_scheduler|oVirt scheduler]]
 | Must
@@ -493,6 +502,7 @@ Features being considered for inclusion/already in master:
 * [[Features/MoveAsCopyAndDelete|Separating "Move" vm operation to "Copy" and "Delete" operations to improve VM availability]] 
 * [[Features/Backup-Restore_API_Integration|Backup and Restore API for Independent Software Vendors]] 
 * Allow resign/force re-election of SPM
+* [[Features/DiskAlignment|Disks Block Alignment]]
 
 === SLA & Scheduling ===
 * [[Features/oVirt_scheduler]] Wrapping scheduling functionalities as a separate package
