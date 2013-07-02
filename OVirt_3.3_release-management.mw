@@ -205,10 +205,10 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Automatic_Fencing#Automatic_Fencing_in_oVirt_3.3|SSH Soft Fencing]]
 | Should
 | [[User:mperina | Martin Perina]]
-|  style="background-color: Orange;"|Orange - In progress, not submitted
-| 2013-06-20
+|  style="background-color: lightgreen;"|Green
+| 2013-07-02
 | http://www.ovirt.org/Automatic_Fencing#Automatic_Fencing_in_oVirt_3.3
-| Patches sent for review, testing in progress
+| Merged
 |-
 | Networking
 |[[Features/Normalized ovirtmgmt Initialization|Normalized ovirtmgmt Initialization]]
