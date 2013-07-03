@@ -455,7 +455,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |
 |-
 | UX
-| GWT(P) Upgrade
+| [[Features/GWT_Platform_Upgrade|GWT Platform Upgrade]]
 | Should
 | vszocs@redhat.com
 | style="background-color: Red;"| Red
