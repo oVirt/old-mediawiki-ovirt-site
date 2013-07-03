@@ -132,7 +132,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/EmulatedMachine|EmulatedMachine]]
 | ?
 |[[User:rgolan| Roy Golan]]
-|style="background-color: Green;"|Green
+|style="background-color: lightgreen;"|Green
 | June 27th
 | ?
 | automatically use the right emulated machine type for QEMU. On review
