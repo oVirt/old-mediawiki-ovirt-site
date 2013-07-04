@@ -189,6 +189,10 @@ None.
 
 ==== For Approach 2 ====
 Define later
-
+* Create trusted cluster
+# Login webadmin
+# Open "cluster" page
+# Click "New" button to open the new cluster window
+# Check "Enable Trusted Service" checkbox and click  "OK"
 
 [[Category:Feature]]
