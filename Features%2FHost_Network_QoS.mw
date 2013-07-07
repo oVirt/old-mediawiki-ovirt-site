@@ -1,4 +1,4 @@
-==Network traffic shaping==
+=Network traffic shaping=
 
 === Summary ===
 In order to provide better control of networks traffic, we need to define traffic boundaries for incoming and outgoing traffic. 
@@ -31,3 +31,17 @@ of 40 Mbps.
 Shaping network traffic is useful for network administrators, where they can provide a different class of service according
 to the different kind of usages they need to satisfy. It might be also useful to limit the bandwidth of a [[Features/Migration_Network|migration network]] or in general
 to every network who could possibly saturate the overall interface bandwidth.
+
+=User experience=
+
+TBD
+
+=Implementation=
+
+TBD
+
+= Comments and Discussion =
+* Refer to [[Talk:Network Traffic Shaping]]
+* On the arch@ovirt.org mailing list.
+
+[[Category:Feature]]
