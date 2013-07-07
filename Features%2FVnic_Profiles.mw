@@ -75,8 +75,6 @@ The Network QoS feature includes two main parts:
 * VNIC Profiles
 The two parts will be developed in parallel 
 
-see : ___ for detailed design 
-
 === Upgrade ===
 Upgrade process will include automatic creation of two Profiles for each network, one with Port mirroring enabled and the other with port mirroring disabled. In case no VNIC are using a specific network with/without port mirroring - only the relevant profiles will be created.<br />
 A vnic connected to a network x in 3.2 will automatically be connected to the correlating profile in 3.3 (according to the port mirroring settings).<br />
@@ -88,7 +86,7 @@ The sub tab will show the available Profiles for each network. Columns will be:
 * Name - string
 * Port Mirroring - Boolean 
 * Inbound QoS - formatted string
-* outbound QoS - formatted string<br />
+* outbound QoS - formatted string
 supported actions: add, edit, remove
 
 The sub tab will include a right pane which will hold "Permissions"/"Consumers" tab where the user will define the user which can use the selected profile.<br />
