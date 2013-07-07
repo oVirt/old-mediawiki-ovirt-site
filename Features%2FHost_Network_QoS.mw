@@ -49,7 +49,7 @@ A new role icon should be associated with the network in Logical Networks list a
 
 ==Backend==
 
-We should reuse the entity NetworkQoS as defined in [[http://www.ovirt.org/Features/Design/Network_QoS_-_detailed_design#Backend |Network QoS for Vnic]].
+We should reuse the entity NetworkQoS and network_qos database table as defined in [[http://www.ovirt.org/Features/Design/Network_QoS_-_detailed_design#Backend |Network QoS for Vnic]].
 
 ==DB Change==
 
