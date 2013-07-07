@@ -48,10 +48,8 @@ VNIC Profiles could not be deleted from the engine as long as one or more VM/Tem
 * Changing the profile a VM is using while the VM is running should behave like dynamic wiring (changing the VM network while it is running).
 * Hot-plug of a vnic will will use will use the updated profile connected to the VNIC. 
 
-
 ==== Removing a Network ====
 * Should remove all profiles on that network
-
 
 ==== VM snapshot/import/export ====
 * We should handle VMs that are pointing to a network directly for backward compatibility.
