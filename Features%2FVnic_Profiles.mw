@@ -54,8 +54,8 @@ VNIC Profiles could not be deleted from the engine as long as one or more VM/Tem
 
 ==== Adding a Network ====
 * When adding a network, a user can provide an option to create a vNic Profile for it.
-Question: Is it s default profile ? what are its properties ?
-Question: What about 'Public Use' option ? Are they still relevant in the context of adding new networks or we should eliminate them and move it only to 'Add vNic Profile' dialog? 
+Question: Is it s default profile ? what are its properties ? <br>
+Question: What about 'Public Use' option ? Are they still relevant in the context of adding new networks or we should eliminate them and move it only to 'Add vNic Profile' dialog?
 
 ==== Updating a Network ====
 When a network role is modified to be a 'non-VM network', all vNic profiles associated with it should be deleted.
