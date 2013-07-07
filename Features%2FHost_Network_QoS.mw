@@ -34,7 +34,15 @@ to every network who could possibly choke/saturate the overall interface bandwid
 
 =User experience=
 
-TBD
+A user can define traffic shaping either during creation of a logical network or when editing a network's parameters during a Setup Host Networks task (see images below):
+
+[[File:new_lnetwork_bandwidth.png]]
+
+Selecting the checkbox (Incoming/Outgoing or both) a user can specify the needed parameters.
+
+[[File:edit_lnetwork_bandwidth.png]]
+
+A new role icon should be associated with the network in Logical Networks list and the "Setup Host Networks" UI and in case it uses traffic shaping.
 
 =Implementation=
 
