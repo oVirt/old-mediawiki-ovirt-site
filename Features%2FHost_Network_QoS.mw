@@ -25,7 +25,7 @@ both types of traffic  can be shaped independently. Shaping a network traffic re
 
 For example defining a network "Students" with outbound traffic defined with average, burst and peak respectively  20, 200, 40
 means that traffic will flow at 20 Mbps on average and the interface will be able to send a maximum of 200 Mb at the peak speed
-of 40 Mbps. 
+of 40 Mbps, for the shaped network.
 
 ===Benefit to Ovirt===
 Shaping network traffic is useful for network administrators, where they can provide a different class of service according
