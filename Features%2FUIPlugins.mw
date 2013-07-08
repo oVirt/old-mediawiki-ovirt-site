@@ -234,8 +234,8 @@ TODO
 
 == Tutorials ==
 
-=== [[Tutorial/UIPlugins/CrashCourse|oVirt Space Shooter]] ===
-Simple tutorial that walks you through the basics of creating your first UI plugin (includes complete plugin ready for download)
+=== UI Plugins Crash Course ===
+The [[Tutorial/UIPlugins/CrashCourse|oVirt Space Shooter]] tutorial walks you through the basics of creating your first UI plugin.
 
 [[File:OVirt_Space_Shooter_3.png|link=Tutorial/UIPlugins/CrashCourse|oVirt Space Shooter]]
 
@@ -265,13 +265,13 @@ Minimal plugin host page:
 <pre>
 <!DOCTYPE html><html><head>
 
-<script type="text/javascript">
-    var api = parent.pluginApi('MinimalPlugin');
-    api.register({
-        UiInit: function() { window.alert('Hello world!'); }
-    });
-    api.ready();
-</script>
+    <script type="text/javascript">
+        var api = parent.pluginApi('MinimalPlugin');
+        api.register({
+            UiInit: function() { window.alert('Hello world!'); }
+        });
+        api.ready();
+    </script>
 
 </head><body></body></html>
 </pre>
@@ -289,7 +289,7 @@ This plugin brings integration with [http://www.nagios.org/ Nagios] or [https://
 * UI plugin source code: https://labs.ovido.at/monitoring/wiki/ovirt-monitoring-ui-plugin:svn
 
 <br/>
-[[File:Ovirt-monitoring hosts graph.png|Monitoring Details sub tab]]
+[[File:Ovirt-monitoring hosts graph.png|link=https://labs.ovido.at/monitoring/wiki/ovirt-monitoring-ui-plugin|Monitoring Details sub tab]]
 <br/>
 
 === Foreman UI Plugin ===
@@ -300,7 +300,7 @@ The purpose of this plugin is to allow administrators to see details on [http://
 * UI plugin source code: available from [[#Sample_UI_plugins|sample UI plugin repository]] as <code>foreman-plugin</code>
 
 <br/>
-[[File:Foreman view details.png|Foreman Details sub tab]]
+[[File:Foreman view details.png|link=http://ovedou.blogspot.co.il/2012/12/ovirt-foreman-ui-plugin.html|Foreman Details sub tab]]
 <br/>
 
 === Shell In A Box UI Plugin ===
@@ -310,7 +310,7 @@ Using oVirt WebAdmin, make SSH connection to a host and emulate a terminal via [
 * UI plugin source code: available from [[#Sample_UI_plugins|sample UI plugin repository]] as <code>shellinabox-plugin</code>
 
 <br/>
-[[File:ShellBox SubTab.png|Shell Box sub tab]]
+[[File:ShellBox SubTab.png|link=http://derezvir.blogspot.co.il/2013/01/ovirt-webadmin-shellinabox-ui-plugin.html|Shell Box sub tab]]
 <br/>
 
 == Comments and discussion ==
