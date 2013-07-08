@@ -138,7 +138,7 @@ NOTE: the permissions used below besides the direct one, and the VM/Template one
 * The user has user permissions on a Template with a VNIC using the VNIC Profile
 * The user has user permissions on the System object
 
-== Networks ==
+==== Networks ====
 * The user has permission on a VNIC profile that's part of this network
 
 === GUI (VNIC Profiles) ===
