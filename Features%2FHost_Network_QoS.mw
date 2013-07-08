@@ -34,7 +34,7 @@ to every network who could possibly choke/saturate the overall interface bandwid
 
 =User experience=
 
-A user can define traffic shaping either during creation of a logical network or when editing a network's parameters during a Setup Host Networks task (see images below):
+A user can define traffic shaping during creation of a logical network. Traffic shaping can be redefined when attaching a logical network to the physical host interfaces during a Setup Host Networks task (see images below):
 
 [[File:new_lnetwork_bandwidth.png]]
 
