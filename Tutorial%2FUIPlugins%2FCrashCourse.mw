@@ -14,7 +14,7 @@ Download complete plugin: [[Media:Space-shooter-ui-plugin-06062013.zip|oVirt Spa
 
 If you have any questions or find any issues, send your feedback to [[User:Vszocs|Vojtech Szocs]] <vszocs@redhat.com>
 
-== Level 1: I Can Has UI Plugin? ==
+== Level 1: Hello UI Plugins ==
 Our journey starts in <code>/usr/share/ovirt-engine/ui-plugins</code> directory, home of plugin meta-data and other plugin resources. Let's go ahead and create [[Features/UIPlugins#Plugin_descriptor|descriptor]] for our plugin inside this directory:
 
 
