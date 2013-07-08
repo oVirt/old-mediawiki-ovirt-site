@@ -38,6 +38,18 @@ OVIRT_BOND_OPTIONS
 </pre>
 The created bond device can then be modified like any other device (e.g. a VLAN can be assigned)
 
+The introduction of bonds opens up a wider range of network configruations which can be setup using the setup UI, e.g.:
+<pre>
+direct layout
+-------------
+bond0     slaves=ens1, ens2
+bond0.42  slaves=ens1, ens2
+
+bridged layout
+--------------
+brbond0   bridge-slave=bond0
+brbond0   bridge-slave=bond0.42
+</pre>
 
 === Benefit to oVirt ===
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
