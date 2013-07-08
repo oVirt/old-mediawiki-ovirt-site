@@ -58,7 +58,7 @@ Following table lists UI technology components with their current (in use) and t
 | Editor driver generator is more strict when checking subeditor paths to resolve getter and setter methods
 | Modify @Path annotation values, i.e. @Path("OS") for getOS and setOS methods
 |-
-| Eeferred binding generators locate relevant resources via ClassLoader.getResource(String) method
+| Preferred binding generators locate relevant resources via ClassLoader.getResource(String) method
 | Ensure resources such as src/main/resources are included on the classpath for GWT compilation
 |-
 | GWT provides HTML5 drag'n'drop classes as part of DOM client API
