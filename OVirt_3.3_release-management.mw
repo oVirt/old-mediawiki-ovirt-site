@@ -190,7 +190,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |  style="background-color: Orange;"|Orange - In progress, not submitted
 |  2013-06-25
 | | [[Features/ExternalTasks#Testing ]]
-|  backend and API side done, Missing API testing
+|  backend and API side done including testing, waiting for review
 |-
 | Infra
 | [[Features/Supervdsm_service|Supervdsm service]]
