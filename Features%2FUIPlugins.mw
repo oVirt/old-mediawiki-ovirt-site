@@ -207,30 +207,170 @@ UI plugin infrastructure maintains a common lifecycle to control execution of in
 <code>*</code> Plugin invocation context starts when user logs into WebAdmin and ends when user logs out. Processing [[#Application_event_reference|event handler functions]] as well as [[#API_function_reference|plugin API]] calls is constrained by this context, i.e. plugins are in effect only while user stays authenticated in WebAdmin.
 
 == Application event reference ==
-TODO
-* UiInit
-* UserLogin
-* UserLogout
-* RestApiSessionAcquired
-* <Entity>SelectionChange
-* MessageReceived
+{| class="wikitable" width="100%"
+|+ Supported event handler functions
+|-
+! style="width:10%;" | Function
+! style="width:20%;" | Arguments
+! Description
+|-
+| colspan="3" |
+=== Core functions ===
+|-
+| <code>UiInit</code>
+| N/A
+| Called by the infrastructure as part of plugin initialization. The <code>UiInit</code> function will be called just once during the lifetime of a plugin, before calling other event handler functions. This function is a good place for one-time UI extensions via [[#API_function_reference|plugin API]].
+|-
+| colspan="3" |
+=== User information ===
+|-
+| <code>UserLogin</code>
+| <code>userNameWithDomain</code> (string) <br/> <code>userId</code> (string)
+| Called after a user logs into WebAdmin.
+|-
+| <code>UserLogout</code>
+| N/A
+| Called after a user logs out of WebAdmin.
+|-
+| colspan="3" |
+=== Main tab item selection ===
+|-
+| <code>{EntityType}SelectionChange</code>
+| objects representing items currently selected in given main tab
+| Called when item selection changes in given main tab. Replace <code>{EntityType}</code> with one of [[#Entity_type_reference|supported entity types]].
+|-
+| colspan="3" |
+=== REST API integration ===
+|-
+| <code>RestApiSessionAcquired</code>
+| <code>sessionId</code> (string)
+| Called upon acquiring oVirt Engine [[REST-Api|REST API]] [[Features/RESTSessionManagement|persistent session]] after each successful login. The <code>sessionId</code> represents a REST API session bound to current (WebAdmin) user and shared between all plugins. The session is acquired with reasonably long timeout (360 minutes) and won't be closed after logout.
+|-
+| colspan="3" |
+=== Cross-window messaging ===
+|-
+| <code>MessageReceived</code>
+| <code>data</code> (string or object) <br/> <code>sourceWindow</code> (window object)
+| Called when another window (i.e. custom content contributed by a plugin) sends a message to WebAdmin (top-level) window via HTML5 [http://en.wikipedia.org/wiki/Web_Messaging postMessage] API. In order to receive messages via <code>MessageReceived</code> function, a plugin must configure <code>allowedMessageOrigins</code> via [[#API_option_reference|API options]].
+|}
 
 == API function reference ==
-TODO
-* register
-* ready
-* options
-* configObject
-* addMainTab
-* addSubTab
-* setTabContentUrl
-* setTabAccessible
-* addMainTabActionButton
-* showDialog
-* setDialogContentUrl
-* closeDialog
-* loginUserName
-* loginUserId
+{| class="wikitable" width="100%"
+|+ Supported API functions
+|-
+! style="width:10%;" | Function
+! style="width:20%;" | Arguments
+! style="width:40%;" | Description
+! Example
+|-
+| colspan="4" |
+=== Core functions ===
+|-
+| <code>options</code>
+|-
+| <code>register</code>
+|-
+| <code>ready</code>
+|-
+| <code>configObject</code>
+|-
+| colspan="4" |
+=== User information ===
+|-
+| <code>loginUserName</code>
+|-
+| <code>loginUserId</code>
+|-
+| colspan="4" |
+=== Main and sub tabs ===
+|-
+| <code>addMainTab</code>
+|-
+| <code>addSubTab</code>
+|-
+| <code>setTabContentUrl</code>
+|-
+| <code>setTabAccessible</code>
+|-
+| <code>addMainTabActionButton</code>
+|-
+| <code>addSubTabActionButton</code>
+|-
+| colspan="4" |
+=== Dialogs ===
+|-
+| <code>showDialog</code>
+|-
+| <code>setDialogContentUrl</code>
+|-
+| <code>closeDialog</code>
+|}
+
+== API option reference ==
+{| class="wikitable" width="100%"
+|+ Supported plugin API options
+|-
+! style="width:10%;" | Option
+! style="width:20%;" | Default value
+! Description
+|-
+| colspan="3" |
+=== Cross-window messaging ===
+|-
+| <code>allowedMessageOrigins</code> (string or string array)
+| empty array
+| Defines allowed source [http://en.wikipedia.org/wiki/Same_origin_policy#Origin_determination_rules origins] from which HTML5 <code>message</code> events will be accepted and passed to <code>MessageReceived</code> event handler function. The value can be either a string (single origin) or a string array (multiple origins). <code>*</code> translates to "any origin", as per HTML5 [http://en.wikipedia.org/wiki/Web_Messaging postMessage] specification.
+|}
+
+== Entity type reference ==
+{| class="wikitable" width="100%"
+|+ Supported entity types
+|-
+! Name
+! Object representation (exposed attributes)
+|-
+| <code>DataCenter</code>
+| <code>id</code> (string) <br/> <code>name</code> (string)
+|-
+| <code>Cluster</code>
+| <code>id</code> (string) <br/> <code>name</code> (string)
+|-
+| <code>Host</code>
+| <code>id</code> (string) <br/> <code>name</code> (string) <br/> <code>hostname</code> (string)
+|-
+| <code>Network</code>
+| <code>id</code> (string) <br/> <code>name</code> (string)
+|-
+| <code>Storage</code>
+| <code>id</code> (string) <br/> <code>name</code> (string)
+|-
+| <code>Disk</code>
+| <code>id</code> (string)
+|-
+| <code>VirtualMachine</code>
+| <code>id</code> (string) <br/> <code>name</code> (string) <br/> <code>ipaddress</code> (string)
+|-
+| <code>Pool</code>
+| <code>id</code> (string) <br/> <code>name</code> (string)
+|-
+| <code>Template</code>
+| <code>id</code> (string) <br/> <code>name</code> (string)
+|-
+| <code>GlusterVolume</code>
+| <code>id</code> (string) <br/> <code>name</code> (string)
+|-
+| <code>Provider</code>
+| <code>id</code> (string) <br/> <code>name</code> (string)
+|-
+| <code>User</code>
+| <code>id</code> (string) <br/> <code>username</code> (string) <br/> <code>domain</code> (string)
+|-
+| <code>Quota</code>
+| <code>id</code> (string) <br/> <code>name</code> (string)
+|-
+| <code>Event</code>
+| <code>id</code> (string)
+|}
 
 == Tutorials ==
 
@@ -264,7 +404,6 @@ Minimal plugin host page:
 <code>/usr/share/ovirt-engine/ui-plugins/minimal-resources/start.html</code>
 <pre>
 <!DOCTYPE html><html><head>
-
     <script type="text/javascript">
         var api = parent.pluginApi('MinimalPlugin');
         api.register({
@@ -272,7 +411,6 @@ Minimal plugin host page:
         });
         api.ready();
     </script>
-
 </head><body></body></html>
 </pre>
 
