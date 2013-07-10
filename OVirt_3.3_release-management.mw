@@ -159,10 +159,10 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Cloud-Init_Integration|Cloud-Init Integration]]
 | ?
 | [[User:Gpadgett|Greg Padgett]]
-| style="background-color: Red;"| Red
+| style="background-color: Orange;"| Orange
 | ?
 | ?
-| Initial patches reviewed, working on incorporating feedback
+| Initial patches reviewed, expecting merge in couple of days. REST at risk and may not make the deadline
 |-
 | Infra
 |[[Features/Device Custom Properties|Device Custom Properties]]
