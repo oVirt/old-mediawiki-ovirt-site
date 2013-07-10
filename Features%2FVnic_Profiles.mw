@@ -187,6 +187,9 @@ After selecting a network the Profile selection box will be populated with all p
 '''Profile Selection'''<br />
 [[File:Profile_selection.png]]
 
+'''Add New Logical Network dialog'''<br/>
+[[File:New_netwrok_profiles.png]]
+
 === Permissions ===
 In current implementation two roles are defined for networks:
 * NetworkAdmin - can create/remove/edit/assign to cluster/configure for VM/ configure for Template on '''Network''' entity
