@@ -158,11 +158,7 @@ Following table lists UI technology components with their current (in use) and t
 | Modify AbstractView & AbstractPopupView to utilize ViewImpl.initWidget and ViewImpl.asWidget methods
 |-
 | Ginjector is now [https://github.com/ArcBees/GWTP/wiki/Bootstrapping#extending-the-generated-ginjector auto-generated] by GWTP generator, but we still reference Ginjector (ClientGinjector) in application code
-| <b><span style="color:red">Decide how to solve the issue with Ginjector usage since GWTP auto-generated Ginjector isn't exposed to application code anymore</span></b>
-* plan A: [https://groups.google.com/forum/#!topic/gwt-platform/83jzljpEcHs ask GWTP developers] and hope for a quick fix
-* plan B: refactor application code to eliminate Ginjector usage
-** all classes @Inject-ing ClientGinjector can @Inject specific dependencies instead
-** all classes using ClientGinjectorProvider.instance can use ClientGinjectorProvider.eventBus (for example) - utilize GIN requestStaticInject on ClientGinjectorProvider
+| All classes @Inject-ing ClientGinjector now @Inject specific dependencies instead, abstract classes working with ClientGinjector now work with specific dependencies instead. All classes using ClientGinjectorProvider.instance.getEventBus now use ClientGinjectorProvider.getEventBus (for example) - utilize GIN requestStaticInject on ClientGinjectorProvider.
 |-
 | [https://github.com/ArcBees/GWTP/wiki/Bootstrapping#entrypoint EntryPoint-less bootstrap] is supported, we can now use MvpWithEntryPoint instead of Mvp module
 | Modify GwtCommon.gwt.xml to inherit com.gwtplatform.mvp.MvpWithEntryPoint instead of com.gwtplatform.mvp.Mvp and remove WebAdmin / UserPortal GWT EntryPoint classes
