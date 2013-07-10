@@ -376,10 +376,10 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Gluster Hooks Management|Gluster Hooks Management]]
 | Should
 | [[User:Sahina|Sahina Bose]]
-| style="background-color: lightgreen;"| green 
+| style="background-color: orange;"| Orange 
 | 17/06/2013
 | ?
-| 
+| REST API to be merged
 |-
 | Gluster
 |[[Features/Gluster Swift Management|Gluster Swift Management]]
@@ -388,7 +388,8 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | style="background-color: orange;"| orange 
 | 28/06/2013
 | ?
-| Vdsm patches submitted, to be merged 
+| Vdsm patches submitted, to be merged, REST API to be done
+
 
 |-
 | Node
