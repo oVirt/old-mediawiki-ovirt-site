@@ -288,7 +288,7 @@ Check which clusters are supported
 Check if a CPU is supported
 Check is two different CPUs are compatible
 
-'''All these changes were placed on the code and tested to do not create bugs on the functionality. The system will work with no changes for the final user.'''''Italic text''
+'''All these changes were placed on the code and tested to do not create bugs on the functionality. The system will work with no changes for the final user.'''
 
 
 '''6. Changes in the CpuFlagsManagerHandler class'''
