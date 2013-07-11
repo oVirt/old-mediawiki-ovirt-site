@@ -161,7 +161,7 @@ Following table lists UI technology components with their current (in use) and t
 | All classes @Inject-ing ClientGinjector now @Inject specific dependencies instead, abstract classes working with ClientGinjector now work with specific dependencies instead. All classes using ClientGinjectorProvider.instance.getEventBus now use ClientGinjectorProvider.getEventBus (for example) - utilize GIN requestStaticInject on ClientGinjectorProvider.
 |-
 | [https://github.com/ArcBees/GWTP/wiki/Bootstrapping#entrypoint EntryPoint-less bootstrap] is supported, we can now use MvpWithEntryPoint instead of Mvp module
-| Modify GwtCommon.gwt.xml to inherit com.gwtplatform.mvp.MvpWithEntryPoint instead of com.gwtplatform.mvp.Mvp and remove WebAdmin / UserPortal GWT EntryPoint classes
+| Modify GwtCommon.gwt.xml to inherit com.gwtplatform.mvp.MvpWithEntryPoint instead of com.gwtplatform.mvp.Mvp and remove WebAdmin & UserPortal GWT EntryPoint classes
 |-
 | [https://github.com/ArcBees/GWTP/wiki/Bootstrapping#tabinfo @TabInfo methods] now support any @Inject-able types, we should use this to reduce coupling with ClientGinjector
 | Modify all static @TabInfo methods to use specific dependencies instead of ClientGinjector
@@ -172,6 +172,10 @@ Following table lists UI technology components with their current (in use) and t
 ! Priority
 ! Description
 ! Notes
+|-
+| <span style="color:red">CodeCleanup</span>
+| Get rid of deprecated ClientGinjectorProvider classes in WebAdmin & UserPortal
+| Refactor code in order not to rely on ClientGinjectorProvider static methods so that we can get rid of ClientGinjectorProvider classes entirely.
 |-
 | <span style="color:green">NiceToHave</span>
 | [https://github.com/ArcBees/GWTP/wiki/Bootstrapping#creating-a-bootstrapper Bootstrapper] and [https://github.com/ArcBees/GWTP/wiki/Bootstrapping#creating-a-prebootstrapper PreBootstrapper] hooks to customize application bootstrap
