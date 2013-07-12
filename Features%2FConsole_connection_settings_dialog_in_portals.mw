@@ -1,5 +1,9 @@
 = Console settings dialog in Webadmin and User Portal =
 
+== Owner ==
+ * Name: [[User:Fkobzik|Frank Kobzik]]
+* Email: [mailto:fkobzik@redhat.com fkobzik@redhat.com]
+
 == Description/status ==
 This feature has these aims:
 # to extract the console settings dialog from User Portal and use it in Webadmin as well - MERGED
