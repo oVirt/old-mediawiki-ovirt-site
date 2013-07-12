@@ -1,5 +1,3 @@
-= noVNC console in oVirt  =
-
 == Summary ==
 The aim of this feature is to make it possible to connect to VM consoles using
 HTML 5 VNC client called "noVNC" in browsers supporting websockets and HTML5
@@ -63,13 +61,11 @@ After the proxy receives the data, it establishes the vnc connection.
 
 == Location of the websockets server ==
 
-There are three possible places where the websocket server can run:
-# On the machine where engine runs
-# On single machine where engine does not run
-# (On each host)
-
-The implementation support each of these scenarios, the behavior in the 
-engine is set in vdc_options. 
+There are three possible places where the websocket server can run (The implementation support each of these scenarios, the behavior in the 
+engine is set in vdc_options):
+# On the machine where engine runs (Option WebSocketProxyConfig: Engine:port)
+# On single machine where engine does not run  (Option WebSocketProxyConfig: ip/hostname:port, where ip/hostname specify the host where the proxy runs)
+# (On each host  (Option WebSocketProxyConfig: Host:port)).
 
 == Security considerations ==
 The websocket server runs on a specific port and allows clients to connect to
