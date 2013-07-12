@@ -92,13 +92,13 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | 
 |-
 | Virt
-|[[Features/Non Plugin RDP Invocation|Non Plugin RDP Invocation]]
+|[[Features/Non_plugin_console_invocation|Non Plugin RDP Invocation]]
 | ?
 |[[User:FKobzik| Frantisek Kobzik]]
 | style="background-color: lightgreen;"| Green
 | ?
-| ?
-| TODO - wiki page.
+| TODO ADD
+| 
 |-
 | Virt
 |[[Features/Instance Types|Instance Types - VM Dialog Redesing]]
