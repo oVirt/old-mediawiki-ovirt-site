@@ -77,10 +77,10 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/RAM Snapshots|RAM Snapshots]]
 | ?
 |[[User:ahadas| Arik Hadas]]
-|style="background-color: Orange;"|Orange -on review
+| style="background-color: lightgreen;"| Green
 | June 25th
 | ?
-|vdsm part meged, engine part patches should be in soon - handling memory snapshots on export/import operations remained, REST part on review - at risk for feature complete
+| Merged
 |-
 | Virt
 |[[Features/noVNC console|noVNC console]]
