@@ -45,7 +45,7 @@ The Network QoS will be added as sub tab of Data Center (administrator port6al o
 The QoS name and all 6 properties will be viewed in the table. 
 
 '''Add/Edit Network QoS dialog'''<br />
-[[File:File:Qos_neq_dialog.png]]
+[[File:Qos_neq_dialog.png]]
 The Add/Edit Network QoS dialog will include text field for name and six text fields for the values.<br />
 The administrator could enable/disable the QoS properties (for each inbound / outbound).  Disabled QoS will mean no limitation on the traffic in this direction<br />
 Once inbound/outbound was enabled all three field must be filled (This will be verified before allowing to close the dialog). The Peak and Burst fields will be automatically filled when entering Average value (and could be edited manually).<br />
