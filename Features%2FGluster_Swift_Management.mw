@@ -249,6 +249,7 @@ Note :Unknown state can be seen by making an server go into non responsive state
 ** Click on the clusters tab and select the cluster to see the status.
 ** Verify that in the General sub tab of a cluster Gluster Swift status will be shown "DOWN" by default.
 
+
 *  Validate UI of Manage link
 ** should have cluster created and nodes attached to it.
 ** Click on the clusters tab and select default cluster.
