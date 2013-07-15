@@ -112,7 +112,7 @@ http://www.ovirt.org/wiki/Talk:Features/Gluster_Hooks_Management
 * Click on the "Gluster Hooks" sub-tab which will list all the hooks in the cluster.
 * Select any disabled Hook and click on "Enable"
 
-''' Expected Results: '''
+:'' Expected Results: ''
 :# Enable button/option should be seen (for disabled hooks) when viewing the list of hooks
 :# Should be able to click on enable button/option so that the hook is enabled on all nodes in the cluster
 :# Event message should be generated for the above action
@@ -121,17 +121,17 @@ http://www.ovirt.org/wiki/Talk:Features/Gluster_Hooks_Management
 
 ''' * Test case 2:- Disable Hook '''
 
-''' Expected Results: '''
+:'' Expected Results: ''
 
 
 ''' * Test case 3:-  View content of hook containing ASCII '''
 
-''' Expected Results: '''
+:'' Expected Results: ''
 
 
 ''' * Test case 4-  Resolve Conflicts : Missing (Copy the hook to all the servers)'''
 
-''' Expected Results: '''
+:'' Expected Results: ''
 
 
 ''' * Test case 5:- List all Hooks '''
