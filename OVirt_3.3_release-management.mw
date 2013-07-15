@@ -419,15 +419,6 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | ?
 |upgrade is almost there.
 |-
-| Integration
-|[[Features/Self_Hosted_Engine|Self Hosted Engine]]
-| Should
-| sbonazzo@redhat.com
-| style="background-color: orange;"| Orange
-|15/7/2013
-| ?
-|code base is ready - waiting for git repo from infra taem.
-|-
 | UX
 | User Portal performance improvements for IE8
 | Must
