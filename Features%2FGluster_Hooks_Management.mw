@@ -169,5 +169,24 @@ http://www.ovirt.org/wiki/Talk:Features/Gluster_Hooks_Management
 ''' Expected Results: '''
 
 
+''' * Test case 12:-  Try to ENABLE a hook in a cluster having atleast one server in UP state'''
+
+''' Expected Results: '''
+
+
+''' * Test case 13:-  Resolve Conflicts : Missing (Remove the missing hook)'''
+
+''' Expected Results: '''
+
+
+''' * Test case 14:-  Create all 3 Conflicts: Content + Status + Missing'''
+
+''' Expected Results: '''
+
+
+''' * Test case 15:-  Resolve all 3 Conflicts: Content + Status + Missing'''
+
+''' Expected Results: '''
+
 
 [[Category:Feature]]
