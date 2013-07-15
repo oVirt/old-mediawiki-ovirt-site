@@ -349,8 +349,8 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Design/Network_QoS|Network QoS]]
 | Must
 | [[User:OMasad|Ofri Masad]]
-| style="background-color: orange;"| orange - in review
-| 15/7/2013
+| style="background-color: lightgreen;"| waiting for VNIC Profiles 
+| 
 | ?
 |
 |-
@@ -358,8 +358,8 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Watchdog_engine_support|Watchdog engine support]]
 | Must
 | [[User:LHornyak|lhornyak@redhat.com]]
-| style="background-color: orange;"| orange - only rest api missing
-| 15/7/13
+| style="background-color: lightgreen;"| 
+| 
 | [[Features/Watchdog engine support#Test_cases|Test cases]]
 |
 |-
@@ -367,8 +367,8 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Trusted_compute_pools|Trusted compute pools]]
 | Must
 | [[User:OMasad]]
-| style="background-color: lightgreen;"| green 
-| 1/7/13
+| style="background-color: lightgreen;"|  
+| 
 | [[Trusted_compute_pools#Test_cases]]
 |
 |-
