@@ -120,14 +120,25 @@ http://www.ovirt.org/wiki/Talk:Features/Gluster_Hooks_Management
 
 
 ''' * Test case 2:- Disable Hook '''
+* Create and Enable one or more hooks using the step [3] in Setup
+* Click on "Clusters" and select a <Cluster>
+* Click on the "Gluster Hooks" sub-tab and it lists the hooks in the cluster
+* Select any Hook and click on "Disable"
 
 :'' Expected Results: ''
+:# Disable button should be seen (for enabled hooks) when viewing the list of hooks
+:# Should get a confirmation pop-up window
+:# Event message should be generated for the above action
+:# The status of the Hook should now be changed to "Disabled"
 
 
-''' * Test case 3:-  View content of hook containing ASCII '''
+''' * Test case 3:-  View content of hooks '''
+* Click on "Clusters" and select a <Cluster>
+* Click on the "Gluster Hooks" sub-tab and it lists the hooks in the cluster
+* Select the created Hook with type 'Text' and click on "View Content"
 
 :'' Expected Results: ''
-
+:# Content of the hook can be viewed in a pop-up ONLY if the hook content type is 'Text'.
 
 ''' * Test case 4-  Resolve Conflicts : Missing (Copy the hook to all the servers)'''
 
