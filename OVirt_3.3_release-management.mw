@@ -414,10 +414,10 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Otopi_Infra_Migration|Otopi Infra Migration]]
 | Must
 | [[User:SandroBonazzola| sbonazzo@redhat.com]]
-| style="background-color: orange;"| Orange
+| style="background-color: green;"| Green
 | 29/6/2013
 | ?
-|upgrade is almost there.
+|
 |-
 | UX
 | User Portal performance improvements for IE8
