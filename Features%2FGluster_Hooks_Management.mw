@@ -151,8 +151,6 @@ http://www.ovirt.org/wiki/Talk:Features/Gluster_Hooks_Management
 * Check for Status Conflict:
 * If there are conflicts in hook scripts across the servers in the cluster, click on "Resolve Conflicts". This will open a new window for conflict resolution.
 * Now resolve the Content Conflict either by:
-
- 
 ** Applying the content of the hook from one of the servers                                      OR
 ** Applying the content of the hook from the engine copy
 
@@ -164,7 +162,6 @@ Verify that the content conflicts are successfully resolved after performing the
 * Check for Status Conflict:
 * If there are conflicts in hook scripts across the servers in the cluster, click on "Resolve Conflicts". This will open a new window for conflict resolution.
 * Now resolve the Status Conflict by:
-
 ** Changing the hook status to either "Disable" or "Enable"  in the "Resolve Conflicts" pop-up
 
 ''' Expected Results: '''
@@ -175,12 +172,10 @@ Verify that the content conflicts are successfully resolved after performing the
 * Check for Content and Status Conflict:
 * If there are conflicts in hook scripts across the servers in the cluster, click on "Resolve Conflicts". This will open a new window for conflict resolution.
 * Now resolve the Content Conflict either by:
-
 ** Applying the content of the hook from one of the servers                                         OR
 ** Applying the content of the hook from the engine copy
 
 * Now resolve the Status Conflict either by:
-
 ** Changing the hook status to either "Disable" or "Enable"  in the "Resolve Conflicts" pop-up                                        OR
 ** Manually fixing it from the back-end by renaming the file with prefix "K" or "S" as required.
 
@@ -192,8 +187,7 @@ Verify that the content conflicts are successfully resolved after performing the
 * Check for Missing Conflict:
 * Select the hook having conflict and click on "Resolve Conflicts". This will open a new window for conflict resolution.
 * Now resolve the Missing Conflict by selecting:
-
- ** Copy the hook to all the servers
+** Copy the hook to all the servers
 
 :'' Expected Results: ''
 :# Verify that the Missing conflict is successfully resolved after performing the corresponding actions and the hook is copied to all the servers
@@ -214,6 +208,7 @@ Verify that the content conflicts are successfully resolved after performing the
 * Select the appropriate Resolve Actions for all 3 types of conflicts and click on OK
 
 ''' Expected Results: '''
-:#All the conflicts shoiuld be successfully resolved
+:#All the conflicts should be successfully resolved
+
 
 [[Category:Feature]]
