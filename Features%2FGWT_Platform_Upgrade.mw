@@ -61,7 +61,7 @@ Following table lists UI technology components with their current (in use) and t
 | Deferred binding generators locate relevant resources via ClassLoader.getResource(String) method
 | Ensure resources such as src/main/resources are included on the classpath for GWT compilation
 |-
-| GWT provides HTML5 drag'n'drop classes as part of DOM client API
+| GWT now provides HTML5 drag'n'drop classes as part of DOM client API
 | Remove DnD classes that were originally copied from GWT 2.4 trunk, remove DnDPanel and modify subclasses to extend FocusPanel, utilize Element.setDraggable(String) method for controlling DnD behavior
 |}
 
@@ -70,6 +70,10 @@ Following table lists UI technology components with their current (in use) and t
 ! Priority
 ! Description
 ! Notes
+|-
+| <span style="color:red">CodeCleanup</span>
+| Get rid of primitive-to-string type conversions when using GWT Editor framework
+| Refactor code such as TemplateGeneralModelForm.doEdit method which currently does TextBoxLabel.setText(x) where x is String converted from a primitive value, i.e. Integer.toString(value). Instead of using TextBoxLabel, we should use NumberLabel or BooleanLabel.
 |-
 | <span style="color:green">NiceToHave</span>
 | [http://code.google.com/p/google-web-toolkit/issues/detail?id=188 #188] Scrolling DataGrid: The new DataGrid widget supports vertical scrolling with a fixed header (above) and footer (below)
