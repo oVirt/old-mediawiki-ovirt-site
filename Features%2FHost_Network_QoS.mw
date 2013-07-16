@@ -38,8 +38,6 @@ for bandwidth shaped networks.
 
 ==Backend / DB Change==
 
-We should reuse the entity NetworkQoS and network_qos database table as defined in [[http://www.ovirt.org/Features/Design/Network_QoS_-_detailed_design#Backend |Network QoS for Vnic]].
-
 ==Rest API==
 
 TBD.
