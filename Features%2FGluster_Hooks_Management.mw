@@ -144,14 +144,14 @@ http://www.ovirt.org/wiki/Talk:Features/Gluster_Hooks_Management
 * Click on "Sync"
 
 :'' Expected Results: ''
-:# Verify that the manually created hooks are getting synced and listed in the UI succesfully.
+:# Verify that the manually created hooks are getting synced and listed in the UI successfully.
 
 
 ''' * Test case 5:- Resolve Conflicts : Content '''
 * Check for Status Conflict:
 * If there are conflicts in hook scripts across the servers in the cluster, click on "Resolve Conflicts". This will open a new window for conflict resolution.
 * Now resolve the Content Conflict either by:
-** Applying the content of the hook from one of the servers                                      OR
+** Applying the content of the hook from one of the servers '' OR ''
 ** Applying the content of the hook from the engine copy
 
 ''' Expected Results: '''
@@ -172,11 +172,11 @@ Verify that the content conflicts are successfully resolved after performing the
 * Check for Content and Status Conflict:
 * If there are conflicts in hook scripts across the servers in the cluster, click on "Resolve Conflicts". This will open a new window for conflict resolution.
 * Now resolve the Content Conflict either by:
-** Applying the content of the hook from one of the servers                                         OR
+** Applying the content of the hook from one of the servers '' OR ''
 ** Applying the content of the hook from the engine copy
 
 * Now resolve the Status Conflict either by:
-** Changing the hook status to either "Disable" or "Enable"  in the "Resolve Conflicts" pop-up                                        OR
+** Changing the hook status to either "Disable" or "Enable"  in the "Resolve Conflicts" pop-up  '' OR ''
 ** Manually fixing it from the back-end by renaming the file with prefix "K" or "S" as required.
 
 ''' Expected Results: '''
@@ -197,7 +197,7 @@ Verify that the content conflicts are successfully resolved after performing the
 * Check for Missing Conflict:
 * Select the hook having conflict and click on "Resolve Conflicts". This will open a new window for conflict resolution.
 * Now resolve the Missing Conflict by selecting:
- * Remove the missing hook
+** Remove the missing hook
 
 ''' Expected Results: '''
 :# Verify that the Missing conflict is successfully resolved and the hooks is removed from the Gluster Hooks tab
