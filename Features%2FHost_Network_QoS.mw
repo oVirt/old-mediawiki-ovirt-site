@@ -16,7 +16,7 @@ attributes.
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 ===Detailed description===
-The user should be able to select one of the available Network QoS or create a new Network QoS during creation of a new logical network.
+The user (admin /network admin) should be able to select one of the available Network QoS or create a new Network QoS if the available ones don't satisfy his needs, during creation of a new logical network.
 
 ===Benefit to Ovirt===
 Shaping network traffic is useful for network administrators, where they can provide a different class of service according
