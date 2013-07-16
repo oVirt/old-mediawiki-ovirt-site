@@ -1,7 +1,7 @@
 =Network traffic shaping=
 
 === Summary ===
-In order to provide  traffic control of a network, we need to define  boundaries for incoming and outgoing traffic.  This goal is achieved by defining inbound and outbound traffic (as defined in [[Features/Network_QoS#Detailed_Description Network QoS]])  for an abstract network entity.
+In order to provide  traffic control for a network, we need to define  boundaries for incoming and outgoing traffic.  This goal is achieved by defining inbound and outbound traffic (as defined in [[Features/Network_QoS#Detailed_Description Network QoS]])  for an abstract network entity.
 
 === Owner ===
 * Name: [[User:gvallarelli| Giuseppe Vallarelli]]
