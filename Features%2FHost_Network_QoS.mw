@@ -37,6 +37,8 @@ for bandwidth shaped networks.
 =Implementation=
 
 ==Backend / DB Change==
+A change in the network_qos table and in the related business entities might be needed in order to make a distinction of quality of service related to a vnic or to a network.
+
 ==Classes (not complete list yet)==
 ''Reuse:''
 * '''engine.core.common.businessentities.network.NetworkQoS'''
