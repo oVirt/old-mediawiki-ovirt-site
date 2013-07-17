@@ -479,7 +479,9 @@ Features being considered for inclusion/already in master:
 * [[Features/Device Custom Properties]]
 * [[Features/ExternalTasks]]
 * [[Features/Supervdsm_service]]
-* [http://www.ovirt.org/Java-sdk Features/Java SDK]
+* [[Features/Java_SDK]]
+
+http://www.ovirt.org/Features/JavaSDK
 
 === Networking ===
 * [[Features/Migration Network]]
