@@ -40,6 +40,7 @@ for bandwidth shaped networks.
 ==Classes (not complete list yet)==
 ''Reuse:''
 * '''engine.core.common.businessentities.network.NetworkQoS'''
+* '''engine.core.dao.network.NetworkQoSDao'''
 
 ''Update:''
 * '''engine.core.common.businessentities.network.Network''' - add field networkQos (NetworkQos)
