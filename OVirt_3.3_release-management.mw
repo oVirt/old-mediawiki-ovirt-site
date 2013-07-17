@@ -351,8 +351,8 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Scheduling_API|Scheduling API]]
 | Must
 | [[User:GChaplik|Gilad Chaplik]]
-| style="background-color: orange;"| orange - in review
-| 15/7/2013
+| style="background-color: red;"| orange - in review
+| 
 | ?
 |
 |-
@@ -360,7 +360,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Design/Network_QoS|Network QoS]]
 | Must
 | [[User:OMasad|Ofri Masad]]
-| style="background-color: lightgreen;"| waiting for VNIC Profiles 
+| style="background-color: red;"| waiting for vNIC Profiles implementation
 | 
 | ?
 |
