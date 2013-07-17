@@ -469,6 +469,7 @@ Features being considered for inclusion/already in master:
 * [[Features/Device Custom Properties]]
 * [[Features/ExternalTasks]]
 * [[Features/Supervdsm_service]]
+* [[Features/Java_SDK]]
 
 === Networking ===
 * [[Features/Migration Network]]
