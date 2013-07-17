@@ -34,7 +34,33 @@ With this feature the user will be able to
 Geo-replication feature is designed to enable creation and maintenance of geo-replication sessions across clusters in GlusterFS. A geo-replication session can be setup between a GlusterFS managed master cluster and remote (slave) GlusterFS managed cluster.
 
 === Entity Description ===
-<TBD>
+
+==== Geo Replication Slave ====
+This entity stores the details of remote (slave) for a geo-replication setup.
+* Master Cluster Id
+* Master Host Id
+* Slave Host IP
+
+==== Gluster Geo Replication ====
+This entity stores the details of the individual geo-replication sessions
+* Master Cluster Id
+* Master Host Id
+* Slave Host IP
+* Master Volume Name
+* Slave Volume Name
+
+==== Gluster GEo Replication Status ====
+This entity stores the status of individual geo-replication sessions maintained in oVirt engine
+* Master Cluster Id
+* Master Host Id
+* Master Volume Name
+* Slave Host IP
+* Slave Volume Name
+* Status - Valid values from GlusterGeoRepStatus
+** Stable
+** Faulty
+** Initializing
+** Not Started
 
 === User Experience ===
 ==== Setting up Password less SSH ====
