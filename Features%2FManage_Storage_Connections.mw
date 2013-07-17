@@ -13,7 +13,7 @@ The new connection details should be of the same storage type as the original co
     Email: <abonas@redhat.com>
 
 === Current Status and tasks === 
-Updated July 15 2013
+Updated July 17 2013
 ==== GUI ====
 * Edit  NFS connection properties in webadmin UI - ready  http://gerrit.ovirt.org/#/c/12372/
 * Edit Posix connection properties in webadmin UI -ready  http://gerrit.ovirt.org/#/c/13640/
