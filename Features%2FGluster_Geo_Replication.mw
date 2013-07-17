@@ -75,7 +75,6 @@ The user will be given two choices
 * Provide the password of the user in remote host which is entered in the [[:File:Geo-Replication-Start.png|Geo-Replication-Start]] dialog to setup password less SSH.
 
 ==== Create a  new Geo-Replication Session ====
-<TBD>
 
 ==== View All Geo-Replication Sessions ====
 A new sub tab will be added to the Volumes main tab in oVirt webadmin UI which will list all the geo-replication sessions for the selected volume.
@@ -95,10 +94,10 @@ A new action named '''Start''' will be shown in the '''Geo-Replication''' tab. O
 * If the user wants to override the default configuration, he/she can deselect '''Use Default''' checkbox and provide different configuration. In this case no password less SSH verification will be made. 
 
 ==== Stop a Geo-Replication Session ====
-<TBD>
 
 ==== Remove a Geo-Replication Session ====
-<TBD>
+
+==== Configurations of Geo-Replication Session ====
 
 == Dependencies / Related Features and Projects ==
 
