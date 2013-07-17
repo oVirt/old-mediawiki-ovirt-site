@@ -213,7 +213,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |-
 
 | Infra
-|[http://www.ovirt.org/Java-sdk Java SDK]
+|[[Features/Java_SDK|Java SDK (a Java bindings to oVirt engine)]]
 | Must
 |[[User:Michael pasternak| Michael Pasternak]] 
 | style="background-color: lightgreen;"|Green - Merged
