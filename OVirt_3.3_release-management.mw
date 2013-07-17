@@ -211,6 +211,16 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | http://www.ovirt.org/Automatic_Fencing#Automatic_Fencing_in_oVirt_3.3
 | Merged
 |-
+
+| Infra
+|[http://www.ovirt.org/Java-sdk Java SDK]
+| Must
+|[[User:Michael pasternak| Michael Pasternak]] 
+| style="background-color: lightgreen;"|Green - Merged
+| 
+|  http://www.ovirt.org/Features/Java_SDK_3.3#Testing
+| Merged
+|-
 | Networking
 |[[Features/Normalized ovirtmgmt Initialization|Normalized ovirtmgmt Initialization]]
 | Must
