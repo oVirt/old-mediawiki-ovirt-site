@@ -507,6 +507,7 @@ Features being considered for inclusion/already in master:
 * [[Features/Backup-Restore_API_Integration|Backup and Restore API for Independent Software Vendors]] 
 * Allow resign/force re-election of SPM
 * [[Features/DiskAlignment|Disks Block Alignment]]
+* [[Features/Glance_Integration|Integration with Glance]]
 
 === SLA & Scheduling ===
 * [[Features/oVirt_scheduler]] Wrapping scheduling functionalities as a separate package
