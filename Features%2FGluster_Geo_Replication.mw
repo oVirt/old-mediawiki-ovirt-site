@@ -81,9 +81,11 @@ Valid configuration categories would be maintained as an enum GlusterConfigurati
 Valid configuration sub categories would be maintained as an enum GlusterConfigurationSubTypes. This enum maintains enclosing main configuration category as a parameter.
 
 === User Experience ===
+==== All the existing Slaves  ===
+[[File:geo_replication_slave2_subtab.png]]
+
 ==== Add/Attach a new Slave Cluster ====
 Password less SSH communication should be enabled between one node of the master cluster and one node of slave cluster before creating a geo-replication session between the identified master and slave clusters.
-
 [[File:geo_replication_slave1_new.png]]
 
 ==== Create a  new Geo-Replication Session ====
