@@ -211,7 +211,6 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | http://www.ovirt.org/Automatic_Fencing#Automatic_Fencing_in_oVirt_3.3
 | Merged
 |-
-
 | Infra
 |[[Features/Java_SDK|Java SDK]]
 | Must
@@ -219,6 +218,15 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | style="background-color: lightgreen;"|Green - Merged
 | 
 |  http://www.ovirt.org/Features/Java_SDK_3.3#Testing
+| Merged
+|-
+| Infra
+|[[Features/Ssh_Abilities|SSH Abilities]]
+| Should
+|[[User:ybronhei | Yaniv Bronhaim]] 
+| style="background-color: lightgreen;"|Green
+| 2013-07-17
+| http://www.ovirt.org/Features/Ssh_Abilities#Testing
 | Merged
 |-
 | Networking
@@ -480,6 +488,7 @@ Features being considered for inclusion/already in master:
 * [[Features/ExternalTasks]]
 * [[Features/Supervdsm_service]]
 * [[Features/Java_SDK]]
+* [[Features/Ssh_Abilities]]
 
 === Networking ===
 * [[Features/Migration Network]]
