@@ -63,6 +63,11 @@ This entity stores the status of individual geo-replication sessions maintained 
 ** INITIALIZING
 ** NOT_STARTED
 
+==== Geo Replication Config ====
+This entity stores the configuration details of a geo-replication session
+* Config Name
+* Config Value
+
 === User Experience ===
 ==== Setting up Password less SSH ====
 Password less SSH communication should be enabled between one node of the master cluster and one node of remote (slave) cluster before creating a geo-replication session between the identified master and slave clusters.
