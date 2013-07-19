@@ -432,10 +432,10 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | Integration
 |[[Features/Otopi_Infra_Migration|Otopi Infra Migration]]
 | Must
-| [[User:SandroBonazzola| sbonazzo@redhat.com]]
+| [[User:SandroBonazzola| Sandro Bonazzola]]
 | style="background-color: lightgreen;"| Green
 | 29/6/2013
-| ?
+| [[Features/Otopi_Infra_Migration#Basic_Testing]]
 |
 |-
 | UX
