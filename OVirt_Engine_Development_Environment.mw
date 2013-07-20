@@ -133,7 +133,7 @@ Now your updated artifact is in place.
 
 === Enable Unit Tests ===
 
- <nowiki>$ make install-dev PREFIX="$HOME/ovirt-enigne" BUILD_UT=1</nowiki>
+ <nowiki>$ make install-dev PREFIX="$HOME/ovirt-engine" BUILD_UT=1</nowiki>
 
 === Enable DAO Tests ===
 
