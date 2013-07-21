@@ -129,7 +129,7 @@ It will only be possible to update connection details when all storage domains r
     </host>
  </storage>
 
-=== Add new storage domain with existing storage connection (POST) ===
+=== Add new file (nfs/posix/local) storage domain with existing storage connection (POST) ===
 http://host:port/api/storagedomains
 
  <storage_domain>
