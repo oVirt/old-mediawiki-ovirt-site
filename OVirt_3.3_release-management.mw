@@ -296,7 +296,7 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Manage_Storage_Connections|Manage Storage Connections]]
 | Must
 | [[User:abonas|Alissa Bonas]]
-| style="background-color: red;"| Red - Work in Progress
+| style="background-color: orange;"| Orange - Work in Progress, partially merged
 | 2013-06-30
 | ?
 |
