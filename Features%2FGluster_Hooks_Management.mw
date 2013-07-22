@@ -13,8 +13,9 @@ To read more about gluster hooks http://www.gluster.org/community/documentation/
 
 ===Current Status ===
 
-* Status: In Development
+* Status: Completed
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
+* Available in: version 3.3
 
 === Design ===
 
