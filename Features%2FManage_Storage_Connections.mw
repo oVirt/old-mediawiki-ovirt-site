@@ -160,7 +160,7 @@ lun_id can be the same or change during lun replication (setup dependent) - in t
 TBD
 
 ==  Testing == 
-# NFS - edit in webadmin UI:
+1. NFS - edit in webadmin UI:
 <br>Preparation:  copy the contents of the storage domain manually from the current path to the new (target) path
 <br>Scenario:
 ** maintenance the data domain
@@ -169,7 +169,7 @@ TBD
 ** edit NFS advanced options: retransmissions, timeout
 ** activate the domain
 
-# Posix - edit in webadmin UI:
+2. Posix - edit in webadmin UI:
 <br>Preparation:  copy the contents of the storage domain manually from the current path to the new (target) path
 <br>Scenario:
 ** maintenance the data domain
