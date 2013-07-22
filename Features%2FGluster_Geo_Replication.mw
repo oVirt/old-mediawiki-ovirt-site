@@ -41,11 +41,12 @@ Geo-replication feature is designed to enable creation and maintenance of geo-re
 ==== Geo Replication Slave ====
 This entity stores the details of remote (slave) for a geo-replication setup.
 {| class="wikitable"
+|+ gluster_geo_rep_slaves
 !Column name !! Type !! description !! Nullable
 |-
-|  Master_Cluster_Id || UUID  || Id of the Master Cluster || No
+|  Vds_Group_Id || UUID  || Id of the Master Cluster || No
 |-
-| Master_Host_Id || UUID || Host of a Master Cluster || No
+| Server_Id || UUID || Host of the Master Cluster || No
 |-
 | Slave_Host_IP || String || Host part of remote/slave cluster || No
 |-
