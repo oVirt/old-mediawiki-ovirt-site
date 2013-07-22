@@ -4,11 +4,11 @@ This feature allows the administrator to create, modify and delete the configura
 Currently all the entities maintain its own ways for maintenance of configurations. This feature would standardize the way the configurations are maintained for entities. On top of this generic way for maintenance of configurations, the specific entities maintenance options can optionally have mechanism for modification and deletion of the configurations.
 
 ==Owner==
-*Feature owner: Shubhendu Tripathi <shtripat@redhat.com>
-**GUI Component owner: Kanagaraj Mayilsamy <kmayilsa@redhat.com>
-**Engine Component owner: Shubhendu Tripathi <shtripat@redhat.com>
+*Feature owner: 
+**GUI Component owner: 
+**Engine Component owner: 
 **VDSM Component owner: 
-**QA Owner: Sudhir Dharanendraiah <sdharane@redhat.com>
+**QA Owner: 
 
 == Current Status ==
 
