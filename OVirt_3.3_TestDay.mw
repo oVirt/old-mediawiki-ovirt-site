@@ -1,0 +1,301 @@
+== 3.3 Features Test Status Table ==
+{| class="wikitable" border="1"
+|-
+! Functional team
+! Feature
+! Owner
+! Status
+! Test page
+! Tested By/ Distro
+! BZs
+! remarks
+|-
+| Virt
+|[[Features/RAM Snapshots|RAM Snapshots]]
+|[[User:ahadas| Arik Hadas]]
+| style="background-color: lightgreen;"| Green
+| http://www.ovirt.org/Features/RAM_Snapshots#Testing
+| 
+|
+|
+|-
+| Virt
+|[[Features/noVNC console|noVNC console]]
+|[[User:FKobzik| Frantisek Kobzik]]
+| style="background-color: lightgreen;"| Green
+| http://www.ovirt.org/Features/noVNC_console#Testing
+| 
+|
+|
+|-
+| Virt
+|[[Features/Non_plugin_console_invocation|Non Plugin RDP Invocation]]
+|[[User:FKobzik| Frantisek Kobzik]]
+| style="background-color: lightgreen;"| Green
+| http://www.ovirt.org/Features/Non_plugin_console_invocation#RDP
+| 
+|
+|
+|-
+| Virt
+|[[Features/Instance Types|Instance Types - VM Dialog Redesing]]
+|[[User:tjelinek| Tomas Jelinek]]
+[[User:ofrenkel| Omer Frenkel]]
+|style="background-color: lightgreen;"|Green
+| http://www.ovirt.org/Features/Instance_Types#Testing
+|
+|
+|
+|-
+| Virt
+|[[OS_info|OS Info]]
+|[[User:rgolan| Roy Golan]]
+|style="background-color: lightgreen;"|Green
+| http://wiki.ovirt.org/OS_info#Testing
+|
+|
+|
+|-
+| Virt
+|[[Features/Console_connection_settings_dialog_in_portals|Redesigned Display Options dialog]]
+|[[User:fkobzik| Frantisek Kobzik]]
+| style="background-color: lightgreen;"| Green
+| 
+|
+|
+|
+|-
+| Virt
+|[[Features/EmulatedMachine|EmulatedMachine]]
+|[[User:rgolan| Roy Golan]]
+|style="background-color: lightgreen;"|Green
+| http://www.ovirt.org/Cluster_emulation_modes#Testing
+|
+|
+| 
+|-
+| Virt
+| [[Features/SpiceHTML5|SPICE HTML5 client integration]]
+| [[User:fkobzik| Frantisek Kobzik]]
+| style="background-color: lightgreen;"|Green
+|  http://www.ovirt.org/Features/SpiceHTML5#Testing
+|
+|
+|
+|-
+| Virt
+| [[Features/GlusterFS_Storage_Domain|GlusterFS Storage Domain]]
+| Deepak C Shetty (vdsm) & Sharad Mishra (engine)
+| style="background-color: lightgreen;"| Green
+| http://www.ovirt.org/Features/GlusterFS_Storage_Domain#Testing
+|
+|
+|
+|-
+| Infra
+| [[Features/Device Custom Properties|Device Custom Properties]]
+| [[User:mperina| Martin Perina]]  - infra  [[User:amuller| Assaf Muller]]  - network
+| style="background-color: lightgreen;"| Green
+| 
+|
+|
+|
+|-
+| Infra
+| [[Features/AsyncTaskManagerChanges_3.3|Async task manager changes]]
+| [[User:Yair Zaslavsky| Yair Zaslavsky]] 
+| style="background-color: lightgreen;"|Green - Merged
+|  http://www.ovirt.org/Features/AsyncTaskManagerChanges_3.3#Testing
+|
+|
+|
+|-
+| Infra
+| [[Features/ExternalTasks|ExternalTasks]]
+| [[User:emesika |  Eli Mesika]]
+| style="background-color: lightgreen;"| Green
+| [[Features/ExternalTasks#Testing ]]
+|
+|
+|
+|-
+| Infra
+| [[Features/Supervdsm_service|Supervdsm service]]
+| [[User:ybronhei | Yaniv Bronhaim]]
+| style="background-color: lightgreen;"| Green
+| http://www.ovirt.org/Features/Supervdsm_service
+|
+|
+| 
+|-
+| Infra
+|[[Automatic_Fencing#Automatic_Fencing_in_oVirt_3.3|SSH Soft Fencing]]
+| [[User:mperina | Martin Perina]]
+|  style="background-color: lightgreen;"|Green
+| http://www.ovirt.org/Automatic_Fencing#Automatic_Fencing_in_oVirt_3.3
+|
+|
+| 
+|-
+| Infra
+|[[Features/Java_SDK|Java SDK]]
+|[[User:Michael pasternak| Michael Pasternak]] 
+| style="background-color: lightgreen;"|Green - Merged
+|  http://www.ovirt.org/Features/Java_SDK_3.3#Testing
+|
+|
+| 
+|-
+| Infra
+|[[Features/Ssh_Abilities|SSH Abilities]]
+|[[User:ybronhei | Yaniv Bronhaim]] 
+| style="background-color: lightgreen;"|Green
+| http://www.ovirt.org/Features/Ssh_Abilities#Testing
+|
+|
+| 
+|-
+| Networking
+|[[Features/Normalized ovirtmgmt Initialization|Normalized ovirtmgmt Initialization]]
+| [[User:masayag| Moti Asayag]]
+| style="background-color: lightgreen;"| Green
+| [[Features/Normalized_ovirtmgmt_Initialization#Testing]]
+|
+|
+|
+|-
+| Networking
+|[[Features/Migration Network|Migration Network]]
+| [[User:alkaplan| Alona Kaplan]]
+| style="background-color: lightgreen;"| Green
+| [[Features/Migration_Network#Testing]]
+|
+|
+|
+|-
+| Networking
+|[[Features/Multiple Gateways|Multiple Gateways]]
+| [[User:amuller| Assaf Muller]]
+| style="background-color: lightgreen;"| mostly done (though selinux kills dhcp support for multigw)
+| [[Features/Multiple_Gateways#Testing]]
+|
+|
+|
+|-
+| Storage
+|[[Features/Virtio-SCSI|Virtio-SCSI support]]
+| [[User:derez|Daniel Erez]]
+| style="background-color: lightgreen;"| Green
+| [[Features/Virtio-SCSI#Testing]]
+|
+|
+|
+|-
+| Storage
+|[[Features/Manage_Storage_Connections|Manage Storage Connections]]
+| [[User:abonas|Alissa Bonas]]
+| style="background-color: orange;"| orange - Work in Progress
+| [[Features/Manage_Storage_Connections#Testing]]
+|
+|
+|
+|-
+| Storage
+|[[Features/Disk_Hooks|Adding VDSM hooks for hotplugging/unplugging a disk]]
+| [[User:vvolansk|Vered Volansky]]
+| style="background-color: lightgreen;"| Green
+| 
+|
+|
+|
+|-
+| Storage
+|[[Features/MoveAsCopyAndDelete|Separating "Move" vm operation to "Copy" and "Delete" operations to improve VM availability]]
+| [[User:laravot|Liron Aravot]]
+| style="background-color: lightgreen;"| Green
+| 
+|
+|
+| 
+|-
+| SLA
+|[[Features/Watchdog_engine_support|Watchdog engine support]]
+| [[User:LHornyak|lhornyak@redhat.com]]
+| style="background-color: lightgreen;"| 
+| [[Features/Watchdog engine support#Test_cases|Test cases]]
+|
+|
+|
+|-
+| SLA
+|[[Trusted_compute_pools|Trusted compute pools]]
+| [[User:OMasad]]
+| style="background-color: lightgreen;"|  
+| [[Trusted_compute_pools#Test_cases]]
+|
+|
+|
+|-
+| Gluster
+|[[Features/Gluster Hooks Management|Gluster Hooks Management]]
+| [[User:Sahina|Sahina Bose]]
+| style="background-color: orange;"| Orange 
+| [[Features/Gluster Hooks Management#Test_Cases|Gluster Hooks Management Testing]]
+|
+|
+| 
+|-
+| Gluster
+|[[Features/Gluster Swift Management|Gluster Swift Management]]
+| [[User:Sahina|Sahina Bose]], avishwan@redhat.com (vdsm)
+| style="background-color: orange;"| orange 
+| [[Features/Gluster Swift Management#Test_Cases ]]
+|
+|
+| 
+|-
+| Node
+| [[Features/Universal Image|Universal Node Image]]
+| mburns@redhat.com
+| style="background-color: lightgreen;"| Green
+| 
+|
+|
+|
+|-
+| Node
+| [[Features/Node vdsm plugin|Node VDSM Plugin]]
+| mburns
+| style="background-color: lightgreen;"| Green
+| [[Features/Node_vdsm_plugin#Testing]]
+|
+|
+|
+|-
+| Integration
+|[[Features/Otopi_Infra_Migration|Otopi Infra Migration]]
+| [[User:SandroBonazzola| Sandro Bonazzola]]
+| style="background-color: lightgreen;"| Green
+| [[Features/Otopi_Infra_Migration#Basic_Testing|Test cases]]
+|
+|
+|
+|-
+| UX
+| User Portal performance improvements for IE8
+| vszocs@redhat.com, awels@redhat.com
+| style="background-color: lightgreen;"| Green
+| 
+|
+|
+|
+|-
+| UX
+|[[Feature/Branding|Branding Support]]
+| awels@redhat.com
+| style="background-color: lightgreen;"| Green
+| 
+|
+|
+|
+|}
