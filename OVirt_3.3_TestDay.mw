@@ -81,7 +81,8 @@ You need at least two physical servers to install and configure a basic yet comp
 |}
 
 ===Storage===
-{|border="1"
+{| class="wikitable" border="1"
+|-
 ! Scenario !! Bugs
 |-
 | Use the General configuration as a base configuration ||
