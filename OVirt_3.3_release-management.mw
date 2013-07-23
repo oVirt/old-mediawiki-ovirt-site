@@ -160,10 +160,10 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Cloud-Init_Integration|Cloud-Init Integration]]
 | ?
 | [[User:Gpadgett|Greg Padgett]]
-| style="background-color: Red;"| Red
+| style="background-color: lightgreen;"| Green
 | Jul 25
-| ?
-| Initial patches reviewed, REST patch is blocking the rest of the patches, so nothing's in ATM
+| http://www.ovirt.org/Features/Cloud-Init_Integration#Testing
+| Only available with UI, no REST implementation yet.
 |-
 | Infra
 |[[Features/Device Custom Properties|Device Custom Properties]]
