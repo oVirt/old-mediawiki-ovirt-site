@@ -107,7 +107,7 @@ the expected result should be something similar to:
 </pre>
 
 = Comments and Discussion =
-* Refer to [[Talk:Network Traffic Shaping]]
+* Refer to [[Talk: Host Network Traffic Shaping]]
 * On the arch@ovirt.org mailing list.
 
 [[Category:Feature]]
