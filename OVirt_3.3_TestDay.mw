@@ -68,7 +68,8 @@ You need at least two physical servers to install and configure a basic yet comp
 |}
 
 ===Configuration===
-{|border="1"
+{| class="wikitable" border="1"
+|-
 ! Scenario !! Bugs
 |-
 | Configure high availability for virtual machines which are running mission critical workloads, so they  will be restarted on another host if hardware failure occurs ||
