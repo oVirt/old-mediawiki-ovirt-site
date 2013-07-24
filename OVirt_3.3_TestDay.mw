@@ -641,7 +641,7 @@ Tracker bug for the release - https://bugzilla.redhat.com/881006
 | EL6
 |-
 | [[User:SandroBonazzola|SandroBonazzola]]
-| [[Features/Normalized_ovirtmgmt_Initialization|Normalized_ovirtmgmt_Initialization]]
+| [[Features/Normalized_ovirtmgmt_Initialization|Normalized_ovirtmgmt_Initialization]], Network Base config
 | Fedora 19, oVirt Node
 |-
 | [[User:Amureini|Amureini]]
