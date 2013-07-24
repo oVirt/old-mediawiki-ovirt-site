@@ -37,6 +37,10 @@ restored to a disk, or mounted as a virtual volume for an individual file restor
 
 === File level restore === 
 File level restore can be performed in-guest or off-host. Mount the volumes of the VM backup as a virtual volume. Then, copy the files that you want to restore.
+==== Full restore to source VM ==== 
+====  Full restore to a new VM ==== 
+====  Single file level restore (Typically to source VM, or other VM) ====
+
 === Full restore to source VM ===
 === Full restore to a new VM ===
 === Single file level restore (Typically to source VM, or other VM) ===
