@@ -600,4 +600,8 @@ Tracker bug for the release - https://bugzilla.redhat.com/881006
 | [[User:SandroBonazzola|SandroBonazzola]]
 | [[Features/Normalized_ovirtmgmt_Initialization|Normalized_ovirtmgmt_Initialization]]
 | Fedora 19, oVirt Node
+|-
+| [[User:Amureini|Amureini]]
+| [[Features/AsyncTaskManagerChanges 3.3]]
+| EL6
 |}
