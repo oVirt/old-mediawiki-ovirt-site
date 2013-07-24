@@ -3,6 +3,11 @@ In this wiki we will introduce all the steps needed in the REST API side in orde
 Examples on each step are based on work done in  [http://gerrit.ovirt.org/#/c/16159 patch] for the Extrenal Tasks [http://www.ovirt.org/Features/ExternalTasks RFE]
 
 == Creating BE in api.xsd ==
+First, we will have do define the new BE in the api.xsd<br>
+This is a XML meta-data file that helps to generate the new BE classes.<br>
+In the example we will see a new ''Job'' entity and a new "Step" entity<br>
+There is an heirarchy between "Job" and "Step" , A "Job" can contain several tests.<br>
+Also, keep in mind that steps can be nested, we will get to that later.
 
 == Working with nested entities (i.e disks under a vm , steps under a job etc.) ==
 
