@@ -69,7 +69,7 @@ Fedora 19: If the ovirtmgmt bridge is not successfully installed during initial 
 | http://www.ovirt.org/Features/noVNC_console#Testing
 | [[User:Ecohen|Einav Cohen]] / Fedora 19
 |
-|
+| tested only test case 2; encountered problems; notes were sent to feature owner.
 |-
 | Virt
 |VNC keyboard layout per VM 
