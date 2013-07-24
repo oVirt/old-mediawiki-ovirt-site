@@ -271,20 +271,20 @@
 | Gluster
 |[[Features/Gluster Hooks Management|Gluster Hooks Management]]
 | [[User:Sahina|Sahina Bose]]
-| style="background-color: orange;"| Orange 
+| style="background-color: lightgreen;"| Green
 | [[Features/Gluster Hooks Management#Test_Cases|Gluster Hooks Management Testing]]
 |
 |
-| 
+| Available in UI. No REST API yet
 |-
 | Gluster
 |[[Features/Gluster Swift Management|Gluster Swift Management]]
 | [[User:Sahina|Sahina Bose]], avishwan@redhat.com (vdsm)
-| style="background-color: orange;"| orange 
+| style="background-color: lightgreen;"| Green 
 | [[Features/Gluster Swift Management#Test_Cases ]]
 |
 |
-| 
+| Available in UI. No REST API yet
 |-
 | Node
 | [[Features/Universal Image|Universal Node Image]]
