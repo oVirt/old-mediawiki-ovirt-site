@@ -180,7 +180,8 @@ Fedora 19: If the ovirtmgmt bridge is not successfully installed during initial 
 | style="background-color: red;"| Red
 | http://www.ovirt.org/Features/ForemanIntegration
 | |[[User:eedri| Eyal Edri]]
-|
+| |{{BZ|988001}} <br> {{BZ|988012}} <br>
+| Tested on fedora19
 |-
 | Infra
 | [[Features/AsyncTaskManagerChanges_3.3|Async task manager changes]]
