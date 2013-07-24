@@ -200,8 +200,8 @@ Cover all methods for installing a host in oVirt Engine
 | Negative: New host installation with non-responsive VDSM
 | Add host to cluster 3.1 and above, after Termination message appears, shutdown VDSM on the host
 | Installation failed, host in Non-Responsive status, event log informs error communicating with VDSM
-|
-|
+| verified
+|Fedora 19, nightly - git0c5620a, 3.3 cluster
 |}
 
 === Documentation / External references ===
