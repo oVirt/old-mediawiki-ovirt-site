@@ -252,8 +252,8 @@ Fedora 19: If the ovirtmgmt bridge is not successfully installed during initial 
 | [[User:alkaplan| Alona Kaplan]]
 | style="background-color: lightgreen;"| Green
 | [[Features/Migration_Network#Testing]]
-|
-|
+| [[User:APuimedo| Antoni Segura Puimedon]]/Fedora 19
+| {{BZ|988024}}
 |
 |-
 | Networking
