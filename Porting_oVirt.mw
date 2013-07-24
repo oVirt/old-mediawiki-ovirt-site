@@ -1,6 +1,11 @@
 
 Because oVirt integrates closely with both the Hypervisor and guest operating systems running on the Hypervisor, there is some porting and integration work required to enable oVirt Engine to manage nodes running on operating systems other than Fedora, CentOS and Red Hat Enterprise Linux. The main work involved is related to porting and integrating [[:Category:Vdsm | VDSM]], [http://libvirt.org/ libvirt] and their dependencies to the new distribution for the hypervisor, and ensuring that the [[Guest Agent]], [http://www.linux-kvm.org/page/Virtio virtio] and [http://spice-space.org/ SPICE] integrate correctly on guests.
 
+== Gentoo ==
+
+* [https://github.com/alonbl/ovirt-overlay Overlay]
+* [http://wiki.gentoo.org/wiki/OVirt Wiki]
+
 == Ubuntu ==
 
 Porting the guest agent and VDSM to Ubuntu is a high priority for the project.
