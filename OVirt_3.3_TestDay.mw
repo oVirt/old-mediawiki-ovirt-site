@@ -97,6 +97,16 @@
 |
 |-
 | Virt
+|[[Features/Cloud-Init_Integration|Cloud-Init Integration]]
+| [[User:Gpadgett|Greg Padgett]]
+[[User:Ofrenkel|Omer Frenkel]]
+| style="background-color: lightgreen;"| Green
+| http://www.ovirt.org/Features/Cloud-Init_Integration#Testing
+| 
+|
+| Only available with UI, no REST implementation yet.
+|-
+| Virt
 | [[Features/GlusterFS_Storage_Domain|GlusterFS Storage Domain]]
 | Deepak C Shetty (vdsm) & Sharad Mishra (engine)
 | style="background-color: lightgreen;"| Green
