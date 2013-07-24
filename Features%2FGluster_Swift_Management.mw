@@ -78,8 +78,14 @@ Periodic sync job will report if service status changes in a server.
 === Dependencies / Related Features and Projects ===
 <!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? Add a link to the feature description for relevant features. -->
 
-=== Test Cases ===
+=== Testing ===
 
+====  Prerequisites ====
+
+# Engine - setup with Gluster or Both application mode, in order to create clusters with gluster service enabled.
+# Two or more servers to be added to cluster. The servers should have the gluster repo added so that while engine bootstraps host, the gluster rpms can be installed. 
+
+====  Test Cases  ====
 * Verify Swift Status at cluster level.
 ** Should have a cluster with "gluster service" enabled created and servers attached to it.
 ** Should have gluster-swift package installed on the servers.
@@ -156,7 +162,6 @@ Periodic sync job will report if service status changes in a server.
 ** Verify that Status column of  all the services shows "UP" .
 ** Verify for the following message for all the services present in the server.
 *#Status of service <Service Type> on server <server Name> changed from Down to Up. Updating in engine now.
-
 
 === Documentation / External references ===
 * http://www.gluster.org/community/documentation/index.php/GlusterFS_Swift
