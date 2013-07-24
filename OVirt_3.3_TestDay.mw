@@ -121,7 +121,7 @@ Fedora 19: If the ovirtmgmt bridge is not successfully installed during initial 
 | http://www.ovirt.org/Features/Instance_Types#Testing
 | Alexander Wels
 |
-|
+|Ran all the tests and couldn't find any problems not mentioned above (Fedora 19 engine/Fedora 19 host)
 |-
 | Virt
 |[[OS_info|OS Info]]
