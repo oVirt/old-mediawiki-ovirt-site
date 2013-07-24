@@ -13,9 +13,9 @@ To read more about gluster swift integration, see http://www.gluster.org/communi
 
 ===Current Status ===
 
-* Status: In Development
+* Status: Completed
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
-* Planned for future : Gluster Swift configuration
+* Available In : version 3.3
 
 === Design ===
 Gluster Swift Services Management has been designed to manage any group of services belonging to a service type. For instance, the Service Type for Gluster Swift is GLUSTER_SWIFT and the services are gluster-swift-proxy, gluster-swift-container, gluster-swift-object and gluster-swift-account.
