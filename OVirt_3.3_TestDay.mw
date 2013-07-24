@@ -195,6 +195,15 @@
 |
 |
 |-
+| Networking
+|[[Features/Quantum_Integration|Quantum Integration]]
+| [[User:mkolesni| Mike Kolesnik]]
+| style="background-color: lightgreen;"| Green
+| [[Features/Quantum_Integration#Testing]]
+|
+|
+|
+|-
 | Storage
 |[[Features/Virtio-SCSI|Virtio-SCSI support]]
 | [[User:derez|Daniel Erez]]
