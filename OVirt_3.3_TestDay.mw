@@ -263,8 +263,9 @@ Fedora 19: If the ovirtmgmt bridge is not successfully installed during initial 
 | [[User:masayag| Moti Asayag]]
 | style="background-color: lightgreen;"| Green
 | [[Features/Normalized_ovirtmgmt_Initialization#Testing]]
-|[[User:SandroBonazzola|Sandro Bonazzola]]/Fedora 19,oVirt Node
-|[https://bugzilla.redhat.com/show_bug.cgi?id=987813 987813], [https://bugzilla.redhat.com/show_bug.cgi?id=987832 987832], [https://bugzilla.redhat.com/show_bug.cgi?id=987950 987950]
+|[[User:SandroBonazzola|Sandro Bonazzola]]/Fedora 19,oVirt Node  <br><br><br>|[[User:Mpavlik|Martin Pavlik]]/Fedora 19
+
+|[https://bugzilla.redhat.com/show_bug.cgi?id=987813 987813], [https://bugzilla.redhat.com/show_bug.cgi?id=987832 987832], [https://bugzilla.redhat.com/show_bug.cgi?id=987950 987950] <br>{{BZ|988004}} <br>{{BZ|988017}} <br>
 |
 |-
 | Networking
