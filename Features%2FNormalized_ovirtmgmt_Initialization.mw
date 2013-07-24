@@ -140,8 +140,8 @@ Cover all methods for installing a host in oVirt Engine
 | New host (with plan interface+dhcp only) installation
 | Add host to a 3.1 and above system
 | Host should show up in Engine
-| 
-|
+| [https://bugzilla.redhat.com/show_bug.cgi?id=987813 BZ# 987813]
+| Fedora 19, nightly - git0c5620a, 3.3 cluster
 |-
 | New 3.0 host installation
 | Add host to a 3.0 cluster
