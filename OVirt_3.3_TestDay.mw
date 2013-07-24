@@ -81,6 +81,16 @@ Fedora 19: If the ovirtmgmt bridge is not successfully installed during initial 
 |
 |-
 | Virt
+|multiple VMs from pool to user
+|[[User:mbetak| Martin Betak]]
+|style="background-color: lightgreen;"|Green
+| 
+|[[User:Maor Lipchuk| Maor Lipchuk]]
+|{{BZ|988056}} <br> {{BZ|988051}} <br> {{BZ|988036}}<br>
+(Not related to this feature) -  {{BZ|987822}} 
+|
+|-
+| Virt
 |[[Features/Non_plugin_console_invocation|Non Plugin RDP Invocation]]
 |[[User:FKobzik| Frantisek Kobzik]]
 | style="background-color: lightgreen;"| Green
