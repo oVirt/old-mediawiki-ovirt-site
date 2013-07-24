@@ -89,7 +89,7 @@ Fedora 19: If the ovirtmgmt bridge is not successfully installed during initial 
 |{{BZ|987845}} <br> {{BZ|987846}} <br> {{BZ|987854}}<br>
 {{BZ|987858}} <br> {{BZ|987864}} <br> {{BZ|987883}} <br>
 {{BZ|987897}} <br> {{BZ|987906}} <br> {{BZ|987908}}<br>
-{{BZ|987930}}
+{{BZ|987930}} <br> {{BZ|987957}}
 |
 |-
 | Virt
