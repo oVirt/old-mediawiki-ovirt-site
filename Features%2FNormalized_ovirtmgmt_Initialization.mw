@@ -164,8 +164,8 @@ Cover all methods for installing a host in oVirt Engine
 | New host (with ovirtmgmt exists) installation
 | Add host to a 3.1 and above system
 | Host should show up in Engine
-| 
-|
+| verified
+|Fedora 19, nightly - git0c5620a, 3.3 cluster
 |-
 | New host (with nic + networks on other nics) installation
 | Add host to a 3.1 and above system
