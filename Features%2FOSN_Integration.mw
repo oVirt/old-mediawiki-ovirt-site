@@ -86,15 +86,23 @@ In order to test the feature follow these steps:
 |
 |-
 | Add provider validation
-| In the Add provider dialog click OK
+| In the Add provider dialog, clear all fields and click OK
 |
-* The "name", "provider type", "url" fields should be painted red
+* The "name" and "url" fields should be painted red
 * The dialog should remain open
 | 
 | Enter the provider name
 |-
+| Plugin Type
+| Select the "OpenStack Network" provider type
+|
+* The "Plugin Type" field should appear and be empty.
+* When clicking on it, the options "Linux Bridge" and "Open vSwitch" should appear.
+|
+|
+|-
 | Agent left tab
-| Select a "Openstack Network" provider type
+| Pick one of the two preset "Plugin Type" values.
 | The "Agent Configuration" left tab should appear
 | 
 |
@@ -137,6 +145,12 @@ In order to test the feature follow these steps:
 | 
 | Fill the fields with the values you want sent to the hosts
 |-
+| Field consistency
+| Pick different values in the "Provider Type" and/or "Plugin Type" fields, then go back to "OpenStack Network" and "Linux Bridge".
+| Make sure the original values you filled in other fields haven't changed.
+|
+|
+|-
 | Saving the provider
 | Click "OK"
 |
@@ -170,13 +184,35 @@ In order to test the feature follow these steps:
 * The import networks dialog should open
 * The provider should be selected and greyed out
 * There should be a list of networks from the provider
+* The two arrow buttons should be disabled.
 | 
+|
+|-
+| Choosing networks to be imported
+|
+* Select several networks in the top table.
+* Click the "arrow down" button.
+|
+* Upon selection, the "arrow down" button should be enabled.
+* Upon clicking, the selected networks should be moved from the top table to the bottom one.
+* Selection in both tables should be cleared, and both buttons disabled.
+|
+|
+|-
+| Cancelling network import
+|
+* Select several networks in the bottom table.
+* Click the "arrow up" button.
+|
+* Upon selection, the "arrow up" button should be enabled.
+* Upon clicking, the selected networks should be moved from the bottom table back to the top one.
+* Selection in both tables should be cleared, and both buttons disabled.
+|
 |
 |-
 | Importing a network
 |
 * Select a network from the provider and click the "arrow down" button
-* Edit the network name
 * Select a DC
 * Click OK
 |
@@ -185,6 +221,17 @@ In order to test the feature follow these steps:
 * The network should be automatically attached to all the clusters in the DC
 ** The attachment should be as a non-required, without any of the roles (display, migration)
 | 
+|
+|-
+| Import networks from Networks tab
+|
+* Head to the "System" node in the system tree.
+* Click on the "Networks" main tab.
+* Click the "Import" button.
+|
+* The same dialog should open as before, only now a provider can be freely selected in the list box.
+* Repeat earlier import tests, and make sure the results are the same.
+|
 |
 |-
 | Add new network on provider dialog
@@ -240,7 +287,9 @@ In order to test the feature follow these steps:
 |
 * Add a VM
 * Add a vNIC to the VM on the network you created
-| The vNIC should be on the external network
+|
+* The vNIC should be on the external network
+* See that "port mirroring" (in advanced parameters) is disabled.
 | 
 |
 |-
@@ -254,6 +303,14 @@ In order to test the feature follow these steps:
 ** The new bridge has an interface tap***
 ** Optionally, check the XML in the VDSM logs to see the device that was created for the vNIC
 | 
+|
+|-
+| vNIC properties on running VM
+| Pick the vNIC you added in the VM/interfaces subtab, and edit it.
+|
+* The network list box should be disabled.
+* The "hot plug" radio button should be disabled.
+|
 |
 |-
 | Stopping the VM
