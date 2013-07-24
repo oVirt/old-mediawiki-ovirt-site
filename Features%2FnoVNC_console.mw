@@ -114,9 +114,19 @@ Prerequisities: Browser that has proper websockets and postmessage support (test
 *** Y is the port of the proxy
 * Set up the websocket proxy:
 ** Install the websocket proxy from the package (ovirt-engine-websocket-proxy)
-** Configure it in the /etc/ovirt-engine/ovirt-websocket-proxy.conf.d/10-setup.conf (see [[Examples]])
-**# Please bear in mind that the certificate (<tt>SSL_CERTIFICATE</tt> (or their CA) must be recognized client browsers
-**# If the <tt>FORCE_DATA_VERIFICATION=True</tt>, then the <tt>CERT_FOR_DATA_VERIFICATION</tt> must be the engine's certificate (engine uses its key to sign tickets for websocket proxy).
+** Generate certificates for the proxy on the engine machine
+**# Run <tt>/usr/share/ovirt-engine/bin/pki-enroll-pkcs12.sh --name=websocket-proxy-standalone --password=$CONST_CA_PASS$ --subject=/C=$C$/O=$O$/CN=$CN$</tt>, substitute $VARS$ according to these rules:
+**#* $CONST_CA_PASS$ can be read from /usr/share/ovirt-engine/scripts/basedefs.py
+**#* $C$, $O$ and $CN$ variables can be  $openssl x509 -text -in ca.pem  | grep Issuer
+**#* (Example:<tt>/usr/share/ovirt-engine/bin/pki-enroll-pkcs12.sh --name=websocket-proxy-standalone --password=mypass --subject=/C=US/O=company/CN=company.com</tt>)
+**#* Now the key and certificate pair should be generated in /etc/pki/ovirt-engine/keys and /etc/pki/ovirt-engine/certs respectively.
+**# After this you need to convert the key and certificate since python doesn't like PKCS #12 (you will need the password from previous command since following commands ask for it).
+**#*<tt>openssl pkcs12 -in /etc/pki/ovirt-engine/keys/websocket-proxy-standalone.p12 -nokeys > websocket-proxy-standalone.cer</tt>
+**#*<tt>openssl pkcs12 -in /etc/pki/ovirt-engine/keys/websocket-proxy-standalone.p12 -nocerts -nodes > websocket-proxy-standalone.key</tt>
+**# Finally, copy these files and also engine certificate file (/etc/pki/ovirt-engine/certs/engine.cer) to machine with websocket proxy.
+**# Configure it in the /etc/ovirt-engine/ovirt-websocket-proxy.conf.d/10-setup.conf (see [[Examples]])
+**#* (Please bear in mind that the certificate (<tt>SSL_CERTIFICATE</tt> (or their CA) must be recognized client browsers.)
+
 ** Run the proxy 
 * Set up a VM as usual, set its Display Type to VNC and run it.
 * In Console Options dialog, select 'noVNC'
