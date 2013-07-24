@@ -123,8 +123,8 @@ Prerequisities: Browser that has proper websockets and postmessage support (test
 **# After this you need to convert the key and certificate since python doesn't like PKCS #12 (you will need the password from previous command since following commands ask for it).
 **#*<tt>openssl pkcs12 -in /etc/pki/ovirt-engine/keys/websocket-proxy-standalone.p12 -nokeys > websocket-proxy-standalone.cer</tt>
 **#*<tt>openssl pkcs12 -in /etc/pki/ovirt-engine/keys/websocket-proxy-standalone.p12 -nocerts -nodes > websocket-proxy-standalone.key</tt>
-**# Finally, copy these files and also engine certificate file (/etc/pki/ovirt-engine/certs/engine.cer) to machine with websocket proxy.
-**# Configure it in the /etc/ovirt-engine/ovirt-websocket-proxy.conf.d/10-setup.conf (see [[Examples]])
+**# Finally, copy these files and also engine certificate file (<tt>/etc/pki/ovirt-engine/certs/engine.cer</tt>) to machine with websocket proxy.
+**# Configure it in the <tt>/etc/ovirt-engine/ovirt-websocket-proxy.conf.d/10-setup.conf</tt> (see below).
 **#* (Please bear in mind that the certificate (<tt>SSL_CERTIFICATE</tt> (or their CA) must be recognized client browsers.)
 
 ** Run the proxy 
