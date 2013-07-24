@@ -36,7 +36,10 @@ of the VM disks. All data is backed up at the disk block level. The data can the
 restored to a disk, or mounted as a virtual volume for an individual file restore. These backups are managed and retained according to storage policies set up by the backup machine administrator. 
 
 === File level restore === 
-File level restore can be performed in-guest or off-host. Mount the volumes of the VM backup as a virtual volume. Then, copy the files that you want to restore. 
+File level restore can be performed in-guest or off-host. Mount the volumes of the VM backup as a virtual volume. Then, copy the files that you want to restore.
+=== Full restore to source VM ===
+=== Full restore to a new VM ===
+=== Single file level restore (Typically to source VM, or other VM) ===
 
 === High level flow of Backup Process === 
 
