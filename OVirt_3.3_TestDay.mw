@@ -165,12 +165,20 @@ Fedora 19: If the ovirtmgmt bridge is not successfully installed during initial 
 |[[User:laravot| laravot]]
 |
 |
-|-| Infra
+|-
+| Infra
 | [[Features/Device Custom Properties|Device Custom Properties]]
 | [[User:mperina| Martin Perina]]  - infra  [[User:amuller| Assaf Muller]]  - network
 | style="background-color: lightgreen;"| Green
 | 
 |
+|
+|-
+| Infra
+| [[Features/Foreman Integration|Foreman Integration]]
+| [[User:ovedo| Over Orvalli]]  - Projects
+| style="background-color: red;"| Red
+| http://www.ovirt.org/Features/ForemanIntegration
 |
 |
 |-
