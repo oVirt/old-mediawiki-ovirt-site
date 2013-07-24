@@ -655,4 +655,9 @@ Tracker bug for the release - https://bugzilla.redhat.com/881006
 | [[User:ahadas|ahadas]]
 | [[Features/Online_Virtual_Drive_Resize|Online_Virtual_Drive_Resize]]
 | Fedora 19
+|-
+| [[User:mtayer|mtayer]]
+| [[bz#866319]], [[bz#854369]] - both are small cli features
+| Fedora 19
+
 |}
