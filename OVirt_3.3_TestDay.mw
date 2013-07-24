@@ -67,7 +67,7 @@ Fedora 19: If the ovirtmgmt bridge is not successfully installed during initial 
 |style="background-color: lightgreen;"|Green
 | 
 |[[User:Yair Zaslavsky| Yair Zaslavsky]]
-|
+|{{BZ|987941}} <br> {{BZ|987952}}
 |
 |-
 | Virt
