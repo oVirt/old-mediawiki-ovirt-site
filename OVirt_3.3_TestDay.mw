@@ -9,7 +9,7 @@
 *Update the  Participants section.  
 *Go a head and  [[OVirt_3.3_TestDay#Installation_notes| install ovirt ]]
 *Accomplish the goals set in objective section ,  run the tests,  update the test matrix.
-*Running into any issues - [[Community | Try to get answer ]] or  [https://bugzilla.redhat.com/enter_bug.cgi?product=oVirt| open a BZ]
+*Running into any issues - [[Community | Try to get answer ]] or  [https://bugzilla.redhat.com/enter_bug.cgi?product=oVirt open a BZ]
 
 ==Installation notes==
 * make sure you have either a fedora 19 or centos 6.4 machine installed.
