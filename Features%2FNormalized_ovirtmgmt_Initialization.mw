@@ -182,14 +182,14 @@ Cover all methods for installing a host in oVirt Engine
 | New ovirt-node installation (ovirtmgmt is a VM network)
 | Add ovirt-node to a 3.1 system
 | Host should show up in Engine, ovirtmgmt on host is a VM network.
-| 
-|
+| [https://bugzilla.redhat.com/show_bug.cgi?id=987950 BZ #987950]
+|Fedora 19, nightly - git0c5620a, 3.3 cluster and 3.2 cluster
 |-
 | New ovirt-node installation (ovirtmgmt is a non-vm network)
 | Add ovirt-node to a 3.1 system
 | Host should show up in Engine, ovirtmgmt on host is a VM network and marked is 'out-of-sync'
-| 
-|
+| [https://bugzilla.redhat.com/show_bug.cgi?id=987950 BZ #987950]
+|Fedora 19, nightly - git0c5620a, 3.3 cluster and 3.2 cluster
 |-
 | Negative: New host with bridge (other than ovirtmgmt) installation 
 | Add host to cluster 3.1 and above
