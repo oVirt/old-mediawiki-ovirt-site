@@ -1,7 +1,7 @@
 = REST API - Adding a new BE =
 == Creating BE in api.xsd ==
 
-== working with nested entities (i.e disks under a vm , steps under a job etc.) ==
+== Working with nested entities (i.e disks under a vm , steps under a job etc.) ==
 
 == Adding Mappers ==
 
