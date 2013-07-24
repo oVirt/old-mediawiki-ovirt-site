@@ -59,6 +59,15 @@
 |
 |-
 | Virt
+|VNC keyboard layout per VM 
+|[[User:mbetak| Martin Betak]]
+|style="background-color: lightgreen;"|Green
+| 
+|[[User:Yair Zaslavsky| Yair Zaslavsky]]
+|
+|
+|-
+| Virt
 |[[Features/Non_plugin_console_invocation|Non Plugin RDP Invocation]]
 |[[User:FKobzik| Frantisek Kobzik]]
 | style="background-color: lightgreen;"| Green
