@@ -148,6 +148,14 @@ Fedora 19: If the ovirtmgmt bridge is not successfully installed during initial 
 |
 |-
 | Infra
+| Predictable host timeouts for ha/fencing
+| [[User:juan| Juan Hernandez]] 
+| style="background-color: lightgreen;"| Green
+| 
+|[[User:laravot]]
+|
+|
+|-| Infra
 | [[Features/Device Custom Properties|Device Custom Properties]]
 | [[User:mperina| Martin Perina]]  - infra  [[User:amuller| Assaf Muller]]  - network
 | style="background-color: lightgreen;"| Green
