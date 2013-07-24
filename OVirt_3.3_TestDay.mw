@@ -74,9 +74,9 @@
 |style="background-color: lightgreen;"|Green
 | http://www.ovirt.org/Features/Instance_Types#Testing
 | Alissa
-|{BZ|987845} ,987846,987854,<br>
-987858,987864,987883,<br>
-987897,987906,987908,<br>
+|{{BZ|987845}} ,{{BZ|987846}},{{BZ|987854}},<br>
+{{BZ|987858}},{{BZ|987864}},{{BZ|987883}},<br>
+{{BZ|987897}},{{BZ|987906}},{{BZ|987908}},<br>
 |
 |-
 | Virt
