@@ -202,7 +202,7 @@
 | style="background-color: lightgreen;"| Green
 | [[Features/Normalized_ovirtmgmt_Initialization#Testing]]
 |[[User:SandroBonazzola|Sandro Bonazzola]]/Fedora 19,oVirt Node
-|
+|[https://bugzilla.redhat.com/show_bug.cgi?id=987813 987813], [https://bugzilla.redhat.com/show_bug.cgi?id=987832 987832]
 |
 |-
 | Networking
