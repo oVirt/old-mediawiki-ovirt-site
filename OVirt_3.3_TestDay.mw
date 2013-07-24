@@ -146,7 +146,7 @@ Fedora 19: If the ovirtmgmt bridge is not successfully installed during initial 
 | style="background-color: lightgreen;"| Green
 | http://www.ovirt.org/Features/Cloud-Init_Integration#Testing
 | pstehlik (F19)
-|
+| {{BZ|987960}} {{BZ|987971}} {{BZ|988008}}
 | Only available with UI, no REST implementation yet.
 |-
 | Virt
