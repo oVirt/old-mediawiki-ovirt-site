@@ -219,7 +219,7 @@ Fedora 19: If the ovirtmgmt bridge is not successfully installed during initial 
 | style="background-color: lightgreen;"| Green
 | [[Features/ExternalTasks#Testing ]]
 | Vojtech Szocs / Fedora 19
-|
+| {{BZ|988082}} <br> {{BZ|988086}} <br> {{BZ|988087}} <br> {{BZ|988088}} <br> {{BZ|988094}}
 |
 |-
 | Infra
