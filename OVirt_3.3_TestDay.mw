@@ -282,9 +282,9 @@ Fedora 19: If the ovirtmgmt bridge is not successfully installed during initial 
 | [[User:amuller| Assaf Muller]]
 | style="background-color: lightgreen;"| Green
 | [[Features/Multiple_Gateways#Testing]]
+| [[User:Dcaroest| David Caro Estévez]]/Fedora 19
 |
-|
-|
+| Tested only on Fedora 19 with two nics on different vlans
 |-
 | Networking
 |[[Features/Quantum_Integration|Quantum Integration]]
