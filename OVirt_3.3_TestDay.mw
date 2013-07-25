@@ -684,4 +684,8 @@ Tracker bug for the release - https://bugzilla.redhat.com/881006
 | [[User:mtayer|emsika]]
 | Compressing DWH DB backup
 | Fedora 19
+|-
+| [[User:Ofrenkel|ofrenkel]]
+| Select host as SPM
+| Fedora 19
 |}
