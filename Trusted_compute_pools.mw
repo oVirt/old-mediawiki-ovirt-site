@@ -137,7 +137,7 @@ Dependens on [[#Create a trusted cluster]]
 
 ==== Reboot the trusted host ====
 Dependens on [[#Create a trusted cluster]] , and [[#Add a trusted host]]
-# go to the "Hosts" tab
+# go to the '''Hosts''' tab
 # reboot the host in the trusted cluster(s) manually
 # after the host start, right click '''Confirm 'Host has been rebooted''''
 # check whether the host is '''Up''' status
