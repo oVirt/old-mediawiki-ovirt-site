@@ -102,7 +102,6 @@ None.
 * Refer to [[Talk:Trusted compute pools]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 
 === Test cases ===
-==== For Approach 2 ====
 * Create trusted cluster
 # Login webadmin
 # Open "cluster" page
