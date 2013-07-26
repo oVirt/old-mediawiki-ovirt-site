@@ -37,7 +37,6 @@ Remote Attestation server performs host verification through following steps:
 
 4. Attestation server verifies those measurements against good/known database to determine hosts' trustworthiness
 
-[[File:figure7.jpg]]
 [[File:figure10.jpg]]
 
 By far, we got following implementation approach for TCP feature:
