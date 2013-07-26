@@ -153,7 +153,8 @@ Dependens on [[#Create a trusted cluster]] , and  [[#Add an untrusted host]]
 Dependens on [[#Create a trusted cluster]] , [[#Add a trusted host]], and  [[#Add an untrusted host]]
 # make sure there are at least two hosts in the trusted cluster(s), and one is trusted and the other is untrusted
 # restart the engine service
-# back to the ''' Hosts''' tab,  and check the hosts' status in trusted cluster(s). (trusted one: nonoperational-> Up  & untrusted one: nonoperational)
+# back to the ''' Hosts''' tab,  and check the hosts' status. 
+# the trusted host(s) status change from '''Nonoperational''' to '''Up'''; the untrusted host(s) is always '''Nonoperational'''
 
 ==== Create a truster cluster via restful API ====
 # Exec command: curl -v -u "admin@internal:abc123" -H "Content-type: application/xml" -d '<cluster><name>my_trust_cluster</name><data_center><name>"Default"</name></data_center> <version minor="2"    major="3"/> <cpu id="Intel SandyBridge Family"/><trusted_service>true</trusted_service></cluster>' 'http://engine.***.com:80/api/clusters'
