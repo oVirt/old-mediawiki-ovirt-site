@@ -180,6 +180,6 @@ Dependens on  [[#Create a trusted cluster]] , and [[#Add a trusted host]]
 # Open '''Storage''' tab, import a new template
 
 ==== Run the exported VM ====
-# Open "Virtual Machines" page, choose the exported VM
-# Right click the VM and run this VM
+# open '''Virtual Machines''' tab, choose the exported VM
+# right click the VM and run this VM
 [[Category:Feature]]
