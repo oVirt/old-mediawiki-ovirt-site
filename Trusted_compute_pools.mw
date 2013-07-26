@@ -116,6 +116,8 @@ None.
 # select '''Enable Virt Service''' checkbox
 # select '''Enable Trusted Service''' checkbox
 # click  ok
+# if user has not configured the attestation server, check whether to give the user a notification
+# make sure configure correctly it, then click ok
 
 ==== Add a trusted host ====
 Dependens on [[#Create a trusted cluster]]
