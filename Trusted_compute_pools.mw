@@ -176,8 +176,8 @@ Dependens on  [[#Create a trusted cluster]] , and [[#Add a trusted host]]
 # go to '''Storage''' tab,   import a new trusted VM
 
 ==== Export template ====
-# Open "Template" page, choose the template and click "Export"
-# Open "Storage" page, import a new template
+# Open '''Template''' tab, choose the template and click '''Export'''
+# Open '''Storage''' tab, import a new template
 
 ==== Run the exported VM ====
 # Open "Virtual Machines" page, choose the exported VM
