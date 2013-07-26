@@ -101,18 +101,22 @@ None.
 * Refer to [[Talk:Trusted compute pools]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 
 === Test cases ===
-* Create trusted cluster
-# Login webadmin
-# Open "cluster" page
-# Click "New" button to open the new cluster window
-# Check "Enable Trusted Service" checkbox and click  "OK"
-* Add one trusted node
-# Login webadmin
-# Open the "host" page
-# Click "New" button to open the new host page
-# Choose a trusted cluster from the dropdown list with label "Host Cluster" and click "OK"
-* Add one untrusted node
-# Login webadmin
+* Create a trusted cluster
+# go to the '''Clusters''' tab
+# click on the '''New''' button
+# set cluster name
+# select '''Enable Virt Service''' checkbox
+# select '''Enable Trusted Service''' checkbox
+# click  "OK" button
+
+* Add a trusted host
+Dependens on [[Create a trusted cluster]]
+# go to the '''Hosts''' tab
+# click on '''New''' button
+# select a trusted cluster as a cluster and click "OK"
+<br>
+
+* Add an untrusted node
 # Open the "host" page
 # Click "New" button to open the new host page
 # Choose a trusted cluster from the dropdown list with label "Host Cluster" and click "OK"
