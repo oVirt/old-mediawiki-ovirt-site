@@ -159,7 +159,7 @@ Dependens on  [[#Create a trusted cluster]] , and [[#Add a trusted host]]
 # choose a trusted cluster as a cluster, here you need make sure the trusted host is '''Up''' status
 # click ok
 
-===== Export a VM ====
+==== Export a VM ====
 # open  '''Virtual Machines''' tab
 # right click the trusted host and choose '''Export'''
 # go to '''Storage''' tab,   import a new trusted VM
