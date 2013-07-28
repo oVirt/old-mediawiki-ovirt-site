@@ -131,6 +131,7 @@ Extract keys:
  openssl pkcs12 -in websocket-proxy-standalone.p12 -nocerts -nodes -out websocket-proxy-standalone.key
  chown ovirt:ovirt *
  chmod 0600 *
+Note: You may have to create user ovirt.
 
 Configure service: /etc/ovirt-engine/ovirt-websocket-proxy.conf.d/10-setup.conf
  PROXY_PORT=6100
