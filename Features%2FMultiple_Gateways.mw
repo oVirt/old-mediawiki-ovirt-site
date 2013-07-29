@@ -12,7 +12,7 @@ This feature will enable the user to define a gateway per logical network.
 
 === Current Status ===
 * oVirt-3.3
-* No patches currently submitted to VDSM or the Engine. Solution currently being researched at the VDSM side, work not assigned yet at the Engine side.
+* Merged, bug fix stage
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 === Why do we need multiple gateways? ===
