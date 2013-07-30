@@ -106,7 +106,7 @@ It will be possible to create a new connection without adding a storage domain a
   </storage>
 
 <br>Example of request body - Posix
-<storage>
+  <storage>
     <type>posixfs</type>
     <address>multipass.lab.somecompanyname.com</address>
     <path>/export/storagedata/username/dataNewData</path>
