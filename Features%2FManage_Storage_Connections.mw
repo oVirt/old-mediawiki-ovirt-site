@@ -140,12 +140,12 @@ It will only be possible to update connection details when all storage domains r
 <br>Connection  ID however, will be immutable.
 <br>Example body - changing the address:
 
- <storage>   
+ <storageconnection>   
    <address>dhcp-1-120.my.lab.a.com</address>
    <host>
        <name>MyHost</name>
     </host>
- </storage>
+ </storageconnection>
 
 === Add new file (nfs/posix/local) storage domain with existing storage connection (POST) ===
 http://host:port/api/storagedomains
