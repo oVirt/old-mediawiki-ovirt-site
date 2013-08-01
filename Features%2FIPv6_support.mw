@@ -28,8 +28,6 @@ With growing importance of protocol IPv6 there is need to provide this functiona
 ==== Vdsm ====
 * New class  'netmodels.IPv6'. Similar like netmodels.IPv4, for address validation and representation
 ** This brings changes in class netmodels.IpConfig, configNetwork.objectivizeNetwork
-* There is need to change configNetwork.setupNetworks verb also, because we had to add ipv6 triplet (address, netmask, gateway)
-** so change of vdsmapi-schema.json@SetupNetworkNetAttributes (add ipv6), vdsmapi-schema.json@NetworkOptions
 * Ifcfg files have to have IPv6 capabilities as are described here http://www.cyberciti.biz/faq/rhel-redhat-fedora-centos-ipv6-network-configuration/
 ** ifcfg.ConfigWriter._createConfFile(),
 * Iproute2 configurator (http://gerrit.ovirt.org/#/c/15301/) looks like there shouldn't be made any changes?
@@ -39,6 +37,11 @@ With growing importance of protocol IPv6 there is need to provide this functiona
 ** jsonRpcUtils.getFreePort() [AF_INET nad 0.0.0.0],
 ** jsonRpcUtils._tcpServerConstructor() [there should be distinction of using 'localhost' and localhost6]
 ** jsonRpcUtils._protonServerConstructor()[127.0.0.1]
+
+==== Vdsm api ====
+* There is need to change configNetwork.setupNetworks verb also, because we had to add ipv6 triplet (address, netmask, gateway)
+** so change of vdsmapi-schema.json@SetupNetworkNetAttributes (add ipv6), vdsmapi-schema.json@NetworkOptions
+TBD
 
 ==== Ovirt-Engine GUI====
 In the GUI of engine there will be need to change this items:
@@ -57,6 +60,8 @@ Fields that can contain IPv6 address:
 There is also need to say that each nic which we address have more than one IPv6 address, therefore we should enable inserting multiple addresses.
 
 Interesting attribute of address is its scope. The scope can be determined from the address. There stays a question if we want explicitly tell user the scope of address or it is redundant information to him.
+
+
 
 ==== Pending patches ====
 On the Vdsm side there are this pending patches http://gerrit.ovirt.org/#/q/status:open+project:vdsm+branch:master+topic:ipv6_support,n,z .
