@@ -168,6 +168,7 @@ This interface defines the call back interface for operations. It contains an on
 The list version of the operation call back. This one is used when the operation expects a list of results.
 
 ====== VdcUserCallback ======
+Call back for user operations. This is used when the user logs in and logs out.
 
 ====== OperationProcessor ======
 
