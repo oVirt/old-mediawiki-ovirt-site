@@ -161,6 +161,18 @@ This is the container for a specific operation. Each operation defines the follo
 # The callback to call once the operation completes. The callback defines both a success and a failure method which can be called depending on the outcome of the operation.
 # A flag that determines if this is a public operation, in other words if you don't have to logged in to execute the operation.
 
+====== VdcOperationCallback ======
+
+====== VdcOperationCallbackList ======
+
+====== VdcUserCallback ======
+
+====== OperationProcessor ======
+
+====== CommunicationProvider ======
+
+====== GWTRPCCommunicationProvider ======
+
 ===== Special considerations =====
 # When the user logs out the queue is purged and any outstanding operations are completed but no callbacks are called.
 # If the user is not logged in, then no operations are allowed into the queue, except for the logon operation.
