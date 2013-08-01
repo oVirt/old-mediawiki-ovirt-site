@@ -24,7 +24,6 @@ This feature enable to connect to vdsm and ovirt-engine via IPv6 protocol.
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
 With growing importance of protocol IPv6 there is need to provide this functionality in Ovirt.  This feature enable IPv6 at the Vdsm and Ovirt-engine side, so the users won't need to use IPv4 anymore. 
 
-
 === Changes in code===
 ==== Vdsm ====
 * New class  'netmodels.IPv6'. Similar like netmodels.IPv4, for address validation and representation
@@ -50,6 +49,10 @@ Fields that can contain IPv6 address:
 ** gateway - regular IPv6 address
 * address of nics in network interfaces - this should be just basic content of cell of table, so arbitrary string
 * add/import storage address
+
+There is also need to say that each nic which we address have more than one IPv6 address, therefore we should enable inserting multiple addresses.
+
+Interesting attribute of address is its scope. The scope can be determined from the address. There stays a question if we want explicitly tell user the scope of address or it is redundant information to him.
 
 ==== Pending patches ====
 On the Vdsm side there are this pending patches http://gerrit.ovirt.org/#/q/status:open+project:vdsm+branch:master+topic:ipv6_support,n,z .
