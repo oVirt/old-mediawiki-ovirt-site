@@ -98,22 +98,22 @@ It will be possible to create a new connection without adding a storage domain a
 <b>Example</b> <br> http://host:port/api/storageconnections
 <br>Request type is POST
 <br>Example of request body - NFS
- <storageconnection>
+ <storage_connection>
     <type>nfs</type>
     <address>multipass.lab.somecompanyname.com</address>
     <path>/export/storagedata/username/data20</path>
     <host>
         <name>Host111</name>
      </host>
-  </storageconnection>
+  </storage_connection>
 
 <br>Example of request body - Posix
-  <storageconnection>
+  <storage_connection>
     <type>posixfs</type>
     <address>multipass.lab.somecompanyname.com</address>
     <path>/export/storagedata/username/dataNewData</path>
     <vfs_type>nfs</vfs_type>
-  </storageconnection>
+  </storage_connection>
 
 === Delete connection (DELETE) ===
 Deletion of connection will be possible only if no storage domain  nor lun disks is referencing it (orphan connection).
