@@ -162,6 +162,7 @@ This is the container for a specific operation. Each operation defines the follo
 # A flag that determines if this is a public operation, in other words if you don't have to logged in to execute the operation.
 
 ====== VdcOperationCallback ======
+This interface defines the call back interface for operations. It contains an onSuccess and onFailure method.
 
 ====== VdcOperationCallbackList ======
 
