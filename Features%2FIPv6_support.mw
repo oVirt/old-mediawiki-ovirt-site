@@ -24,7 +24,7 @@ This feature enable to connect to vdsm and ovirt-engine via IPv6 protocol.
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
 With growing importance of protocol IPv6 there is need to provide this functionality in Ovirt.  This feature enable IPv6 at the Vdsm and Ovirt-engine side, so the users won't need to use IPv4 anymore. 
 
-====Vdsm api ===
+=== Vdsm api ===
 * Schemas that contains only IPv4 not IPv6 addresses
 ** @NetworkOptions
 ** @SetupNetworkNetAttributes
@@ -48,7 +48,7 @@ TBD
 ** jsonRpcUtils._tcpServerConstructor() [there should be distinction of using 'localhost' and localhost6]
 ** jsonRpcUtils._protonServerConstructor()[127.0.0.1]
 
-==== Ovirt-Engine GUI====
+==== Ovirt-Engine GUI ====
 In the GUI of engine there will be need to change this items:
 * ipAddressValidation - add recognition of IPv6 address
 * hosAddressValidation - same as ip
