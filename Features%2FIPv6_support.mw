@@ -25,14 +25,28 @@ This feature enable to connect to vdsm and ovirt-engine via IPv6 protocol.
 With growing importance of protocol IPv6 there is need to provide this functionality in Ovirt.  This feature enable IPv6 at the Vdsm and Ovirt-engine side, so the users won't need to use IPv4 anymore. 
 
 === Vdsm api ===
-* Schemas that contains only IPv4 not IPv6 addresses
-** @NetworkOptions
-** @SetupNetworkNetAttributes
-** @Host.fenceNode
-** @VmDefinition
-** @RunningVmStats
-TBD
-
+* @NetworkOptions
+** add optional fields: '*ipv6addr', '*ipv6netmask', '*ipv6gateway'
+<pre>
+{'type': 'NetworkOptions',
+ 'data': {'*ipaddr': 'str', '*netmask': 'str', '*gateway': 'str',
+          '*ipv6addr': 'str', '*ipv6netmask': 'str', '*ipv6gateway': 'str',
+          '*bootproto': 'str', '*delay': 'uint', '*onboot': 'str',
+          '*bondingOptions', 'str',
+          '*qosInbound': 'BandwidthParams',
+          '*qosOutbound': 'BandwidthParams'}}
+</pre>
+* @SetupNetworkNetAttributes
+** add optional fields: '*ipv6addr', '*ipv6netmask', '*ipv6gateway'
+<pre>
+{'type': 'SetupNetworkNetAttributes',
+ 'data': {'*vlan': 'str', '*bonding': 'str', '*nic': ['str'], '*ipaddr': 'str',
+          '*netmask': 'str', '*gateway': 'str',  '*ipv6addr': 'str', 
+          '*ipv6netmask': 'str', '*ipv6gateway': 'str',  '*bootproto': 'str',
+          '*delay': 'uint', '*onboot': 'bool', '*remove': 'bool',
+          '*qosInbound': 'BandwidthParams',
+          '*qosOutbound': 'BandwidthParams'}}
+</pre>
 
 === Changes in code===
 ==== Vdsm ====
