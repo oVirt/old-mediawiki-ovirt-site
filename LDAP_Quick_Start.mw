@@ -1,4 +1,7 @@
-== LDAP Quick Start ==
+Ovirt manager uses external directory services for user authentication and information.
+When a directory server is attached to the manger (using engine-manage-domain), existing users from it
+can be added as ovirt users and assigned different roles and permissions.
+
 The purpose of this page is
 # Provide quick installation instructions of a simple a LDAP stack.
 # Explain the basic concepts of LDAP with ovirt-engine context in mind.
