@@ -400,16 +400,6 @@ Tracker bug: https://bugzilla.redhat.com/918494
 | 17/06/2013
 | [[Features/Gluster Hooks Management#Test_Cases|Gluster Hooks Management Testing]]
 | REST API to be merged
-|-
-| Gluster
-|[[Features/Gluster Swift Management|Gluster Swift Management]]
-|Should
-| [[User:Sahina|Sahina Bose]], avishwan@redhat.com (vdsm)
-| style="background-color: orange;"| orange 
-| 28/06/2013
-| [[Features/Gluster Swift Management#Test_Cases ]]
-|  REST API submitted, to be merged
-
 
 |-
 | Node
