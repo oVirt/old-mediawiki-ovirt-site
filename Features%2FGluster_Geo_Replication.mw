@@ -63,10 +63,15 @@ The user needs to select the '''Fingerprint Verified''' before submitting the de
 The user can select the Geo-Replication destination which needs to be removed and click on '''Remove''' action to remove it.  Removing a geo-replication session is allowed only if doesn't have any geo-replication sessions configured.
 
 ==== Re-establish password less communication with destination host====
-The below dialog provides a mechanism for re-establishing a broken password less communication between source and destination cluster hosts. It captures the details again and enables password less communication between a host of source cluster and a host of destination cluster.
+The below dialog provides a mechanism for re-establishing a broken password less communication between source and destination cluster hosts. It captures the details again and enables password less communication between a host of source cluster and a host of destination cluster. 
 
 [[File:Georepdest3reestablish.png]]
 
+==== View Geo-Replication Sessions ====
+
+[[File:Georepdest4sessions.png]]
+
+==== Test password less communication ====
 Testing the validity/availability of a destination is possible using the action "Test". Administrator can re-establish a broken source/destination communication as well using the action "Re-establish".
 
 ==== Create a  new Geo-Replication Session ====
