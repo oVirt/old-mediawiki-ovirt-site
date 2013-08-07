@@ -196,6 +196,11 @@ User may want to configure vdc_options to overwrite the default values, these co
  update vdc_options set option_value = ‘oat-server. ***.com’ where option_name = 'AttestationServer'
 
 =Trusted Compute Pools deployment (OAT 2.0) =
+== Owner ==
+* Name: [[User:gwei3 | Gang Wei]]
+* Last updated date: Aug 7, 2013
+* Email: <gang.wei@intel.com>
+
 ==Deploy Attestation Service==
 Refer to https://github.com/OpenAttestation/OpenAttestation/wiki/OAT-%282.0%29-Packages-Installation
 
