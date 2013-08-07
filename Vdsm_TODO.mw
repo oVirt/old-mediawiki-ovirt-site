@@ -40,7 +40,7 @@
 
 * add hooks for network operations
 
-* Add configurable QoS controls on vnics http://libvirt.org/formatdomain.html#elementQoS
+* <strike>Add configurable QoS controls on vnics http://libvirt.org/formatdomain.html#elementQoS</strike>
 
 * Use tmpfile.d when needed.
 
