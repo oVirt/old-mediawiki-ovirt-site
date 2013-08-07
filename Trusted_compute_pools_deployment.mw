@@ -218,8 +218,8 @@ http://oatserver.*.com:8080/TrustDashBoard/home.html
 
 ==Configuration in oVirt Engine==
 *Copy "TrustStore.jks" from attestation server to engine server.
-scp oatserver.*.com:/etc/intel/cloudsecurity/ovirt.jks /usr/share/TrustStore.jks
+  scp oatserver.*.com:/etc/intel/cloudsecurity/ovirt.jks /usr/share/TrustStore.jks
 *Configure attestation server
   update vdc_options set option_value = ‘oat-server. ***.com’ where option_name = 'AttestationServer'
 *Configure attestation port
-update vdc_options set option_value = 8181 where option_name = ' AttestationPort'
+  update vdc_options set option_value = 8181 where option_name = ' AttestationPort'
