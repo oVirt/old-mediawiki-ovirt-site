@@ -108,12 +108,20 @@ Note that this dialog '''should''' be able to report multiple IPv6 addresses per
 Interesting attribute of address is its scope (link-local or global). The scope can be determined from the address. There stays a question if we want explicitly tell user the scope of address or it is redundant information to him, as well as whether link-local addresses are important to report.
 
 === REST API ===
-REST API now contains a record called "ip" which already has the attribute "version" (4 or 6 at the moment). Record "ip" is present in following records:
+REST API now contains a record called "ip" which already has the attribute "version" (4 or 6 at the moment). Record "ip" is present in following records (file ovirt-engine/backend/manager/modules/restapi/interface/definition/src/main/resources/api.xsd):
 * ips - container of "ip"
 * Network
 * HostNic
 ** we can perform two action with HostNic: attach and detach
 Both Network and HostNic '''should''' use "ips" rather than a single "ip", so they can contain multiple addresses with selected version.
+
+Actions that will be affected (where IP is optional or mandatory argument) with change of records (from the file ovirt-engine/backend/manager/modules/restapi/interface/definition/src/main/resources/rsdl_metadata.yaml):
+* Network
+** /api/networks/{network:id}|rel=update
+** /api/networks|rel=add
+* HostNic
+** /api/hosts/{host:id}/nics/{nic:id}|rel=update
+** /api/hosts/{host:id}/nics/setupnetworks|rel=setupnetworks
 
 Records that contains "address" as string, should be tested they work with IPv6 TESTONLY:
 * Agent
