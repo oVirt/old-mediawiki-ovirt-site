@@ -201,6 +201,7 @@ you can refer to https://github.com/OpenAttestation/OpenAttestation/wiki/OAT-%28
 ==Deploy Host Agent on VDS==
 ===Install Fedora for Legacy Boot===
 refer to [[1.3.1 Install Fedora for Legacy Boot]]
+[[Configuration in oVirt Engine]]
 
 ===Enable Intel® TXT in BIOS===
 ===Install TPM Driver===
