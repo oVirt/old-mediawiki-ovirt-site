@@ -25,6 +25,34 @@ See: [[Features/Gluster_Volume_Asynchronous_Tasks_Management| Gluster Volume Asy
 ** Returns the Step entities associated with an external task id
 *** used to update status of step when external task status changes.
 
+==== Entity Changes ====
+<big>gluster_volumes</big>
+{| class="wikitable" border="1"
+|-
+! Column
+! Type
+! Change
+! Description
+|-
+| taskid
+| int, nullable
+| Addition
+| stores the gluster task id for operation in progress on volume.
+|}
+
+<big>gluster_volume_bricks</big>
+{| class="wikitable" border="1"
+|-
+! Column
+! Type
+! Change
+! Description
+|-
+| taskid
+| int, nullable
+| Addition
+| stores the gluster task id for operation in progress on brick.
+|}
 === Class Diagram ===
 [[File:GlusterAsyncTaskClassDiagram.png]]
 
