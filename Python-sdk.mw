@@ -290,10 +290,11 @@ codegen
 
 === sdk ===
 
-* supporting several proxy instances in application (i.e cache peer proxy instance)
+* supporting several proxy instances in application (done)
+
+* refactor caching mechanism
 
 * refactoring internal exceptions for better error handling on client side
-
 
 == Change Log ==
 
