@@ -56,7 +56,7 @@ Once started, a rebalance volume or remove-brick can be stopped while in progres
 * User can check the detailed status of the rebalance operation using Rebalance --> Status, which will invoke the following UI
 [[File:Vol rebalance status.png]]
 
-* To stop, the rebalance operation, user can use the Rebalance --> Stop option, which will display the current status of rebalance operation and ask for confirmation, as below:
+* To stop, the rebalance operation, user can use the Rebalance --> Stop option, which will ask for confirmation and once stopped display the  status of rebalance operation as below:
 [[File:Stop vol rebalance.png]]
 
 === Remove Brick ===
@@ -74,6 +74,8 @@ Once started, a rebalance volume or remove-brick can be stopped while in progres
 * User can check the detailed status of the migrate brick operation using Migrate --> Status (it will invoke a UI similar to volume rebalance status)
 
 * To stop the data migration for migrate brick while in progress, the can use the Migrate --> Stop option
+
+ If a user initiates a remove-brick operation from gluster CLI, it will be mapped to a Migrate Data operation on the brick.
 
 == Detailed Design ==
 
