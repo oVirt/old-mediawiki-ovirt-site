@@ -23,7 +23,7 @@ pls note: <br>
 * Install all-in-one package
 Download [http://gwei3.fedorapeople.org/package_review/oat/v1/oat-appraiser-1.6.0-1.fc18.x86_64.rpm oat-appraiser] rpm package, and then
  # rpm -i oat-appraiser-1.6.0-1.fc18.x86_64.rpm
-*  Yum Install oat server package from fedora19 repository (not available yet).
+*  Yum Install oat server package from fedora19 repository.
  # yum install oat-appraiser
 *  make sure tomcat is running after package installation, otherwise,  start tomcat service manually.
  # service tomcat6 status (check status)
