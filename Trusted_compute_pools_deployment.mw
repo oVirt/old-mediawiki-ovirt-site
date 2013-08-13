@@ -25,7 +25,7 @@ pls note: <br>
 Download rpm package here, [http://gwei3.fedorapeople.org/package_review/oat/v1/oat-appraiser-1.6.0-1.fc18.x86_64.rpm oat-appraiser]
 
 ==== Open Attestation (1.6) packages in fedora 19 repository ====
-# yum install oat-appraiser
+ # yum install oat-appraiser
 
 ==== Open Attestation (2.0) bundled with jar packages ====
 Refer to https://github.com/OpenAttestation/OpenAttestation/wiki/OAT-%282.0%29-Packages-Installation
