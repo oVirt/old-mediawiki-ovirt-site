@@ -53,7 +53,7 @@ The below dialog captures the details and creates the geo-replication session be
 
 [[File:Georepsession2new.png]]
 
-The user can manually enter the '''Volume''' or click on '''Show Volumes''' to fetch the list of existing volumes in the cluster and select a volume from that list.
+The user can manually enter the '''Volume''' or click on '''Show Volumes''' to fetch the list of existing volumes in the destination cluster and select a volume from that list.
 
 [[File:Georepsession2newvolumes.png]]
 
