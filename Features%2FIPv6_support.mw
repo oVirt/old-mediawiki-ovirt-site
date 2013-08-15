@@ -180,6 +180,7 @@ By implementing this feature oVirt will be prepared for users that are using IPv
 
 === Documentation / External references ===
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
+* Presentation for Ovirt networking team [[File:Ipv6-session.odp]]
 
 === Testing ===
 ==== Vdsm ====
