@@ -95,7 +95,7 @@ A more elaborate list of changes:-->
 === Integration  ===
 * [[Features/Otopi_Infra_Migration|Otopi Infra Migration]] involves a complete rewrite of the engine-setup, engine-cleanup, engine-upgrade and All-in-One plugin using otopi.
 
-* [[Features/Self_Hosted_Engine|Self Hosted Engine]] enables administrators to run the Engine as a VM on the hosts that are managed by this Engine, in an HA configuration, when the Engine VM can start on any of the hosts.  The ability to run the Engine as a VM on the hosts that are managed by this Engine, in an HA configuration, when the Engine VM can start on any of the hosts.  
+* [[Features/Self_Hosted_Engine|Self Hosted Engine]] enables administrators to run the Engine as a VM on the hosts that are managed by this Engine, in an HA configuration, when the Engine VM can start on any of the hosts.
 
 [[Category:Releases]] 
 [[Category:Release management]]
