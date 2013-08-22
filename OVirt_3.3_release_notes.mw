@@ -86,8 +86,8 @@ A more elaborate list of changes:-->
 * [[Features/Gluster Hooks Management|Gluster Hooks Management]] allows users to manage Gluster hooks (Volume lifecycle extensions) from oVirt Engine. Read more about Gluster hooks at the [http://www.gluster.org/community/documentation/index.php/Features/Hooks Gluster project site].
 
 === Node  ===
-* [[Features/Universal Image|Universal Node Image]] makes the ovirt-node image generic for use with non-oVirt Projects
-* [[Features/Node vdsm plugin|Node VDSM Plugin]] extract all vdsm and oVirt Engine specific code from ovirt-node into a plugin
+* [[Features/Universal Image|Universal Node Image]] converts the oVirt Node image into a generic image that can be customized for many different projects using Node Plugins.
+* [[Features/Node vdsm plugin|Node VDSM Plugin]] converts the generic oVirt Node image into an image customized use with oVirt Engine.
 * oVirt Node works on a different asynchronous release schedule from the rest of oVirt.  
 ** At the time of the oVirt 3.3 release, the current version of ovirt-node will be 3.0.0.  
 ** Feature for oVirt node 3.0.0 can be found on the [[Node_3.0_release-management|oVirt Node 3.0.0 release page]]
