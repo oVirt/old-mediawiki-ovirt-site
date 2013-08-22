@@ -1,0 +1,53 @@
+== Timeline ==
+
+''' These are tentative planning dates and may change'''
+
+* General availability: 2013-11-01
+** Beta release: 2013-10-7
+** Feature freeze: 2013-10-7
+** Test Day: '''TBD'''
+** RC Build: 2013-10-21
+
+== Tracker Bug ==
+
+* [https://bugzilla.redhat.com/show_bug.cgi?id=ovirt-node-3.1 Tracker ovirt-node-3.1]
+
+== Release Criteria  ==
+
+Tracker bug: https://bugzilla.redhat.com/show_bug.cgi?id=ovirt-node-3.1
+
+=== General ===
+* All sources must be available on ovirt.org
+
+=== MUST ===
+* '''MUST''': No blockers on the lower level components - libvirt, lvm,device-mapper,qemu-kvm, Jboss, postgres, iscsi-initiator  
+* '''MUST''': TUI installation woks
+* '''MUST''': Automated installation (via PXE) works
+* '''MUST''': Upgrade from previous release
+* '''MUST''': Reinstall
+* '''MUST''': Login to the TUI
+* '''MUST''': No regressions from 3.0 Release
+
+=== SHOULD ===
+* '''SHOULD''': Uninstall
+* '''SHOULD''': Updated installation guide available
+* '''SHOULD''': Automated tests for the requirements above
+
+== Features ==
+
+Features being considered for inclusion/already in master:
+
+* [[Features/Node/PackageRefactoring]] - To meet the new demands of imagfac and friends.
+* [[Features/Node/StorageAndInstallerModuleRewrite]] - Rewrite the storage and installer module to make them testable.
+* [[Features/Node/OpenVSwitchSupport]] - Support OpenVSwitch.
+* [[Features/Node/PluginLiveInstall]] - To allow instalation of plugins at runtime.
+* [[Features/Node/PublicAPI]] - To publish supported features and initiate basic services.
+* [[Features/Node/KimchiPlugin]] - (http://github.com/kimchi-project/kimchi) for standalone use cases
+* Compatibility
+** Fedora 19
+** Fedora 20 / rawhide
+** EL6
+
+[[Category:Node]]
+[[Category:Releases]]
+[[Category:Release management]]
