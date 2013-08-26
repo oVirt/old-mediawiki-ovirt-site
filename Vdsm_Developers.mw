@@ -1,6 +1,6 @@
 ==Installing required packages==
 
-Note: If you are working on RHEL 6, please make sure you have defined EPEL yum repository (for installing python-ordereddict and pyton-pthreading), and make sure you take http://danken.fedorapeople.org/python-pep8-1.3.3-3.el6.noarch.rpm (older pep8 versions have a bug that's tickled by vdsm).
+RHEL 6 users must add EPEL yum repository for installing python-ordereddict and pyton-pthreading.
 
  <nowiki>
 [epel]
@@ -13,6 +13,10 @@ enabled=1
 gpgcheck=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
  </nowiki>
+
+RHEL 6 users should install this version of pep8. Older pep8 versions have a bug that's tickled by vdsm.
+
+ <nowiki>yum install http://danken.fedorapeople.org/python-pep8-1.3.3-3.el6.noarch.rpm </nowiki>
 
 Fedora users should verify the following packages are installed before attempting to build:
 
