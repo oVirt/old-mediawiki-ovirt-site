@@ -39,5 +39,5 @@ psql engine -U postgres -c "UPDATE vdc_options set option_value = 'false' where 
 psql engine -U postgres -c "UPDATE vdc_options set option_value = 'false' where option_name = 'UseSecureConnectionWithServers'"
 </nowiki>
 
-When you are done with the table updates, restart ovirt engine:
+And restart oVirt service if running: 
  <nowiki>service ovirt-engine restart</nowiki>
