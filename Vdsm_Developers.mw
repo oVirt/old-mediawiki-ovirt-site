@@ -46,6 +46,18 @@ Vdsm automatically builds using the latest tagged version. If you want to explic
 ==Building with hooks support==
  ./autogen.sh --system && ./configure  --enable-hooks && make rpm
 
+== Basic installation ==
+ cd ~/rpmbuild/RPMS
+ yum install x86_64/* noarch/vdsm-xml* noarch/vdsm-cli*
+
+If needed, enable the vdsm service:
+ <nowiki>chkconfig vdsmd on</nowiki>
+
+Finally start the vdsmd service:
+ <nowiki>service vdsmd start</nowiki>
+
+'''Note: if you want to connect this host to ovirt-engine, see [[OVirt_-_connecting_development_vdsm_to_ovirt_engine]].'''
+
 ==Code Style==
 
 * Variables and arguments are in mixedCase
@@ -76,18 +88,6 @@ General development discussions are in <tt>vdsm-devel@lists.fedorahosted.org</tt
 [[Category:Vdsm]]
 [[Category:Documentation]]
 [[Category:Development environment]]
-
-== Basic installation ==
- cd ~/rpmbuild/RPMS
- yum install x86_64/* noarch/vdsm-xml* noarch/vdsm-cli*
-
-If needed, enable the vdsm service:
- <nowiki>chkconfig vdsmd on</nowiki>
-
-Finally start the vdsmd service:
- <nowiki>service vdsmd start</nowiki>
-
-'''Note: if you want to connect this host to ovirt-engine, see [[OVirt_-_connecting_development_vdsm_to_ovirt_engine]].'''
 
 == Creating local yum repo to test vdsm changes  ==
 
