@@ -396,10 +396,10 @@ Tracker bug: https://bugzilla.redhat.com/918494
 |[[Features/Gluster Hooks Management|Gluster Hooks Management]]
 | Should
 | [[User:Sahina|Sahina Bose]]
-| style="background-color: orange;"| Orange 
+| style="background-color: lightgreen;"| Green
 | 17/06/2013
 | [[Features/Gluster Hooks Management#Test_Cases|Gluster Hooks Management Testing]]
-| REST API to be merged
+| 
 
 |-
 | Node
