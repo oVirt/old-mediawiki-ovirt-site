@@ -81,6 +81,12 @@ General development discussions are in <tt>vdsm-devel@lists.fedorahosted.org</tt
  cd ~/rpmbuild/RPMS
  yum install x86_64/* noarch/vdsm-xml* noarch/vdsm-cli*
 
+If needed, enable the vdsm service:
+ <nowiki>chkconfig vdsmd on</nowiki>
+
+Finally start the vdsmd service:
+ <nowiki>service vdsmd start</nowiki>
+
 == Creating local yum repo to test vdsm changes  ==
 
 1) First you will need to generate the rpm with your changes, from the vdsm source directory:
