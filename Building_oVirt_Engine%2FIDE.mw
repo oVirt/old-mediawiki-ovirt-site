@@ -128,7 +128,6 @@ Configuration example:
 === Others ===
 * Same as Net Beans...
 * [[Backend with jrebel]]
-* [[OVirt - disable SSL in VDSM]]
 
 ===Troubleshooting===
 * The following problem was encountered in eclipse, but is probably not confined to a specific IDE:
