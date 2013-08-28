@@ -3,7 +3,8 @@ By default ovirt engine will try to install vdsm and configure host SSL keys whe
 == Disable installVds option in ovirt engine ==
 
 Run this command:
- <nowiki>psql engine -U engine -c "UPDATE vdc_options set option_value = 'false' where option_name = 'InstallVds'"</nowiki>
+ <nowiki>
+su - postgres -c "psql engine -c \"UPDATE vdc_options set option_value = 'false' where option_name = 'InstallVds'\"</nowiki>
  
 And restart oVirt service if running:
  <nowiki>service ovirt-engine restart</nowiki>
