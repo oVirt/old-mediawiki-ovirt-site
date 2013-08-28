@@ -12,3 +12,4 @@ This page was created as a result of a [[http://lists.ovirt.org/pipermail/engine
 :<sub>We will need to consider which state needs to be replicated.
 # Quartz. DB configuration for Quartz should enable High Availability.
 # Database. DB clustering should be out of scope of this task.
+[Eli] We may consider that as well , please see [http://www.openscg.com/postgresql-ha-automatic-failover/  PostgresSQL HA]
