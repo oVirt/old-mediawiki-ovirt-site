@@ -7,6 +7,7 @@ The oVirt Project is pleased to announce the availability of its fourth formal r
 ==OpenStack Integration==
 * [[Features/Quantum_Integration|Neutron Integration]] adds support for using OpenStack Neutron as an external network provider, which can provide networking capabilities for consumption by oVirt hosts and/or virtual machines. For more information, watch this deep dive [http://www.youtube.com/watch?v=S16AfFylcHk presentation on oVirt / Neutron integration].
 * [[Features/Glance_Integration|Glance Integration]] allows oVirt users to consume, export and share images with Glance. These images are exposed as oVirt Templates. For more information, watch this deep dive [http://www.youtube.com/watch?v=_Nyi1xyiQnY presentation on oVirt / Glance integration].
+* [[Features/Cloud-Init_Integration|Cloud-Init Integration]] facilitates provisioning of virtual machines by enabling oVirt to perform initial setup (including networking, SSH keys, timezone, user data injection, and more) of guest instances configured with cloud-init.
 
 ==Enhanced Gluster Support==
 * [[Features/GlusterFS_Storage_Domain|GlusterFS Storage Domain]] is a new storage domain and data center type which uses gluster as the storage backend. VMs created using this domain take advantage of QEMU's gluster block backend for improved performance.
@@ -25,7 +26,6 @@ The oVirt Project is pleased to announce the availability of its fourth formal r
 === Virt ===
 * [[Features/RAM Snapshots|RAM Snapshots]] enable users to save (and later restore) the memory state of a VM when creating a live snapshot.
 * [[Features/noVNC console|noVNC console]] integration makes it possible to connect to VM consoles using the HTML 5 VNC client called "noVNC" in browsers supporting websockets and the HTML5 postMessage function (webkit browsers, Firefox, IE > 10).
-* [[Features/Cloud-Init_Integration|Cloud-Init Integration]] facilitates provisioning of virtual machines by enabling oVirt to perform initial setup (including networking, SSH keys, timezone, user data injection, and more) of guest instances configured with cloud-init.
 
 === Infra ===
 
@@ -62,7 +62,8 @@ The oVirt Project is pleased to announce the availability of its fourth formal r
 
 === Integration  ===
 * [[Features/Otopi_Infra_Migration|Otopi Infra Migration]] involves a complete rewrite of the engine-setup, engine-cleanup, engine-upgrade and All-in-One plugin using otopi.
-* [[Features/Self_Hosted_Engine|Self Hosted Engine]] enables administrators to run the Engine as a VM on the hosts that are managed by this Engine, in an HA configuration, when the Engine VM can start on any of the hosts. <div class="alert alert-info">This feature is not included in oVirt 3.3, but will be added in an upcoming release</div> 
+* [[Features/Self_Hosted_Engine|Self Hosted Engine]] enables administrators to run the Engine as a VM on the hosts that are managed by this Engine, in an HA configuration, when the Engine VM can start on any of the hosts.
+** <div class="alert alert-info">This feature is not included in oVirt 3.3, but will be added in an upcoming release</div> 
 
 === UX Enhancements ===
 * User Portal performance improvements for IE8
@@ -79,5 +80,4 @@ In anticipation of the 3.3 release, a number of deep dive presentations into 3.3
 * Network QoS / vNIC Profiles presentation [[File:vnic_profiles.odp]]
 
 [[Category:Documentation]]
-
 [[Category:Releases]]
