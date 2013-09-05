@@ -60,4 +60,4 @@
 The oVirt guest agent can be compiled and run on Ubuntu, without SSO and with a few workarounds. It can perform the guest OS information collecting. To try it, clone the following git repo and run ./ubuntuInstall.sh in your Ubuntu guest.
 [https://github.com/edwardbadboy/ovirtagent-ubuntu demo git repo]
 
-There are binary packages available on [https://launchpad.net/~zhshzhou/+archive/vdsm-ubuntu%5D launchpad PPA]. These packages are just for demo.
+There are binary packages available on [https://launchpad.net/~zhshzhou/+archive/vdsm-ubuntu launchpad PPA]. These packages are just for demo.
