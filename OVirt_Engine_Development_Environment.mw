@@ -50,9 +50,6 @@ Make sure openjdk is the java preferred:
 
 === Database ===
 
-On Fedora 19,  you need to enable postgresql service:
- <nowiki># chkconfig postgresql on </nowiki>
-
 Based on your distribution it may be that you require to initialize the database.
 
  <nowiki>Fedora: # postgresql-setup initdb
@@ -79,7 +76,18 @@ local   all             all                                     ident
 </nowiki>
 
 Restart PostgreSQL service for definitions to take effect:
- <nowiki>service postgresql restart</nowiki>
+
+{| class="wikitable"
+|-
+|-
+|Fedora||# systemctl restart postgresql.service
+|-
+|RHEL||#service postgresql restart
+|-
+|Gentoo||# /etc/init.d/postgresql-* start
+|}
+
+You may consider set the postgresql service to start at boot.
 
 Create database and user, usually using the following commands as root:
  <nowiki>su - postgres -c "psql -d template1 -c \"create user engine password 'engine';\""
