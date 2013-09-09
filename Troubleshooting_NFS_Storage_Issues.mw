@@ -101,7 +101,8 @@ the tcp window size parameters of your server are larger than the wsize and rsiz
 Fedora 19 as a hypervisor node these parameters are set to 1 MB.
  
  <nowiki> # df
-10.10.30.253:/var/nas3/ovirt on /rhev/data-center/mnt/10.10.30.253:_var_nas3_ovirt type nfs (...,vers=3,rsize=1048576,wsize=1048576,...)
+...
+10.10.30.253:/var/nas3/ovirt on /rhev/data-center/mnt/10.10.30.253:_var_nas3_ovirt type nfs (...,rsize=1048576,wsize=1048576,...)
 ...
  </nowiki>
 
