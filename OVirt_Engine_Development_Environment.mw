@@ -81,8 +81,7 @@ Locate: 127.0.0.1/32 and ::1/128 and allow "password" authentication for IPv4 an
 # IPv4 local connections:
 host    all             all             127.0.0.1/32            password
 # IPv6 local connections:
-host    all             all             ::1/128                 password
-</nowiki>
+host    all             all             ::1/128                 password</nowiki>
 
 Restart PostgreSQL service for definitions to take effect:
 
