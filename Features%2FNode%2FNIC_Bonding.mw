@@ -19,7 +19,7 @@ This feature will allow Node to create NIC bonds, either through the UI or using
 
 === Current status ===
 <!-- * Link to feature page in a specific release. That release may complete the feature, or parts of it. The complete scope of this feature in this release will be described in the release feature page -->
-* Status: '''In Progress'''
+* Status: '''Done'''
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 === Detailed Description ===
