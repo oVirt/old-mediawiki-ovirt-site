@@ -8,7 +8,7 @@ and heartbeat will serve as the cluster management system.
 
 [[File:drbd_pacemaker_iscsi_ovirt.png]]
 
-For the full guide is available as .pdf. Download '''High-Availability oVirt-Cluster with iSCSI-Storage''' from [http://www.linbit.com/en/downloads/tech-guides LINBIT's tech-guide page].
+The full guide is available as .pdf. Download '''High-Availability oVirt-Cluster with iSCSI-Storage''' from [http://www.linbit.com/en/downloads/tech-guides LINBIT's tech-guide page].
 
 === Owner ===
 
