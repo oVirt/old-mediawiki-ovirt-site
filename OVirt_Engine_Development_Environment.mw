@@ -236,11 +236,11 @@ Example:
 
 = Troubleshooting =
 
-== Before you begin ===
+== Before you begin ==
 
 Check if all prerequisites are installed, refer to [[#Prerequisites|prerequisites]]
 
-=== IBM JDK ===
+== IBM JDK ==
 
 There is [https://code.google.com/p/google-web-toolkit/issues/detail?id=7530 issues] when building oVirt engine using the IBM JDK.
 
