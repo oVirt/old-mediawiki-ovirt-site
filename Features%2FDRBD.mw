@@ -52,9 +52,9 @@ A data replication technology built directly into the oVirt nodes. This for sure
 When it is clear how to integrate DRBD on the nodes, managing DRBD replication links by the web-user interface will become of interest.
 
 === Documentation / External references ===
-[http://www.drbd.org/users-guide-8.4/ DRBD documentation for 8.4.x]<br />
-[http://wiki.qemu.org/Features/PostCopyLiveMigration post copy live migration]
-[[Features/DRBD/solution_for_2_nodes|Working solution for 2 nodes]]
+* [http://www.drbd.org/users-guide-8.4/ DRBD documentation for 8.4.x]
+* [http://wiki.qemu.org/Features/PostCopyLiveMigration post copy live migration]
+* [[Features/DRBD/solution_for_2_nodes|Working solution for 2 nodes]]
 
 === Comments and Discussion ===
 * Refer to [[Talk:DRBD]]
