@@ -12,6 +12,7 @@
 
 === Current status ===
 * Right now this is in planing stage. We need to discuss two possible approaches with people that are interested in that.
+* There is a perfectly working [[Features/DRBD/solution_for_2_nodes|solution for 2 nodes]].
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}
 
 === Detailed Description ===
