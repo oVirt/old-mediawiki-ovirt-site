@@ -42,10 +42,9 @@ For instance, in the VmInfoBuilder.java, an architecture specific code similar t
     strategy.addCdromAddress(struct);
 </pre>
 
-And in the VmInfoBuilder object the method would make use of the appropriate arch strategy logic
+And in the VmInfoBuilder object the method would make use of the appropriate arch strategy logic:
 
 <pre>
-
     public class ArchStrategyFactory {
         private static final EnumMap<ArchitectureType, ArchStrategy> architectureArchStrategyMap =	new EnumMap<ArchitectureType, ArchStrategy>(ArchitectureType.class);
 
