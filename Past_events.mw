@@ -4,6 +4,10 @@
 <startfeed/>
 </noinclude>
 
+{{Event|name=[http://softwarelivre.org/fisl14/ Forum Internacional Software Livre]|date=3-6 July 2013|location=Porto Alegre, Brazil|lead=The oVirt community [http://dougsland.livejournal.com/122744.html was out in force at FISL14], where notably Theron Conrey presented oVirt and Gluster, and we had an oVirt community BOF, Marcelo Mello and Amador Pahim presented oVirt and [http://spacewalk.redhat.com/ Spacewalk] working together,  and Douglas Landgraf, Amador and Marcelo Barbosa presented improvements in oVirt 3.2.
+
+In addition, there was a presentation on OpenShift from Fabiano Franz and KVM from Ademar Reis to complete a successful cloud track.}}
+
 {{Event|name=[//wiki.centos.org/Events/Dojo/Antwerp2013 CentOS Dojo in Antwerp, Getting Started with oVirt]|date=8 April 2013|location=Antwerp, Belgium|lead=An Introduction to oVirt [https://speakerdeck.com/vincentvdk/ovirt-introduction-and-overview Presentation] by Vincent Van Der Kussen explaining what oVirt is about and why its generating so much excitement in the virtualised infrastructure space. }}
 
 {{Event|name=[[FOSDEM 2013 | oVirt at FOSDEM 2013]]|date=22-24 January 2013|location=Brussels, Belgium|lead=
