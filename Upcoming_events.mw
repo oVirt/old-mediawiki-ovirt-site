@@ -3,7 +3,13 @@
 <noinclude>
 <startfeed/>
 </noinclude>
-{{Event|name=[http://softwarelivre.org/fisl14/ Forum Internacional Software Livre]|date=3-6 July 2013|location=Porto Alegre, Brazil|lead=Come and watch the great lineup of presenters for FISL14 and make sure to catch multiple presentations on oVirt!}}
+{{Event|name=[//events.linuxfoundation.org/events/cloudopen-north-america CloudOpen North America]|date=September 16 - 18, 2013|location=New Orleans, LA|lead=[Theron Conrey] will present a solution for converged storage and compute infrastructure built on oVirt and Gluster, and [Greg Padgett of Red Hat] will walk you through all of the features oVirt supports to help guarantee its users a high level of service, including memory ballooning, CPU pinning of VMs, support for disk, network, memory and compute quotas, and rule-based scheduling of VM deployment for optimal placement}}
+
+{{Event|name=[//events.linuxfoundation.org/events/kvm-forum KVM Forum/oVirt Developers Summit]|date=October 21 - 23, 2013|location=Edinburgh, Scotland|lead=The oVirt developer community will be hosting their annual developer summit during [[KVM Forum 2013]] this year. During the oVirt developer summit, you can influence the future technical direction of the project during developer meetings, where we will discuss and set the project roadmap for the near future. In addition, there are some great oVirt and KVM management talks planned in the new management track of the KVM Forum. Check out [[KVM Forum 2013 | the dedicated wiki page]] for more detail}}
+
+{{Event|name=[//events.linuxfoundation.org/events/cloudopen-europe LinuxCon Europe/CloudOpen Europe]|date=October 21 - 23, 2013|location=Edinburgh, Scotland|lead=Co-located with the [[KVM Forum 2013]], CloudOpen Europe and LinuxCon Europe will also see a significant oVirt showing. We have a number of oVirt related presentations, and it's a great opportunity to meet the oVirt team on the Red Hat stand. oVirt presentations at the event are featured in the [Red Hat community calendar] and on the [[KVM Forum 2013]] page}}
+
+{{Event|name=[//www.openworldforum.org/en/ Open World Forum]|date=October 3-5 2013|location=Paris, France|lead=Dave Neary of Red Hat will present how oVirt fits into the big picture of running an open hybrid cloud, featuring traditional virtualization, private infrastructure as a service, and public cloud, using free software.}}
 <noinclude>
 <endfeed/>
 
