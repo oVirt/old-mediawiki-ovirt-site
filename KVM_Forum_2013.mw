@@ -48,7 +48,7 @@ There is also a two-hour tutorial on the scripting and extensibility features of
 Day 3 of the KVM Forum will see one track dedicated to the oVirt developers summit, featuring some presentations on the state of oVirt, and a number of working sessions where we will discuss the future direction of the project and plan the roadmap for upcoming releases. All oVirt users and developers are welcome at these sessions - to participate you need to register for the KVM Forum.
 == Presentations ==
 
-There are three oVirt talks in oVirt developer meeting:
+There are three oVirt talks in oVirt developer meeting, all taking place on Wednesday October 23 in the morning:
 * The State of oVirt (Itamar Heim)
 * oVirt hosted engine: the egg that hosts its parent chicken (Doron
 Fediuck)
