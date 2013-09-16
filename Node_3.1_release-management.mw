@@ -44,6 +44,7 @@ Features being considered for inclusion/already in master:
 * [[Features/Node/PluginLiveInstall]] - To allow instalation of plugins at runtime.
 * [[Features/Node/FeaturePublishing]] - A method to publish high-level features added by plugins
 * [[Features/Node/KimchiPlugin]] - (http://github.com/kimchi-project/kimchi) for standalone use cases
+* [[Features/Node/I18N]] - Add gettext support to make Node translatable (includes English and Chinese translations)
 * Compatibility
 ** Fedora 19
 ** Fedora 20 / rawhide
