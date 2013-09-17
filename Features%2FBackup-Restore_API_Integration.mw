@@ -27,8 +27,9 @@ Full VM backup can be implemented for example by using the following oVirt capab
 #  Detach the disk snapshots that were attached in (4) from the virtual appliance  -  (added capabillity to oVirt as part of the Backup API)
 
 ==== Example for VM backup ====
-1. Navigate to the wanted disk snapshot from REST by accessing:<BR>
+1. Navigate to the wanted disk snapshot from REST by accessing: ([[Features/Backup-Restore_API_Integration#Get_disk_snapshot_data|Example]])<BR>
 SERVER:PORT:/api/vms/GUID/snapshots/GUID/disks
+
 
 2. POST the copied disk with the disk id and the snapshot id:<BR>
    http://SERVER:PORT/api/vms/GUID/disks/
