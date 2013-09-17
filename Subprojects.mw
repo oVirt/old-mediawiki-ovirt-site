@@ -232,6 +232,46 @@ Oved Ourfali
 |  git://gerrit.ovirt.org/sample-portals
 |  [http://gerrit.ovirt.org/gitweb?p=sample-portals.git gitweb]
 |- 
+| ovirt-scheduler-proxy
+| Martin Sivak<br />
+Doron Fediuck
+| [http://lists.ovirt.org/mailman/listinfo/engine-devel devel] [http://lists.ovirt.org/pipermail/engine-devel archive ] <br />[http://lists.ovirt.org/mailman/listinfo/engine-patches patches] [http://lists.ovirt.org/pipermail/engine-patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-commits commits] [http://lists.ovirt.org/pipermail/engine-commits archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use ovirt-scheduler-proxy
+| n/a
+|  git://gerrit.ovirt.org/ovirt-scheduler-proxy.git
+|  [http://gerrit.ovirt.org/gitweb?p=ovirt-scheduler-proxy.git gitweb]
+|- 
+| ovirt-hosted-engine-ha
+| Greg Padgett<br />
+Martin Sivak<br />
+Doron Fediuck
+| [http://lists.ovirt.org/mailman/listinfo/engine-devel devel] [http://lists.ovirt.org/pipermail/engine-devel archive ] <br />[http://lists.ovirt.org/mailman/listinfo/engine-patches patches] [http://lists.ovirt.org/pipermail/engine-patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-commits commits] [http://lists.ovirt.org/pipermail/engine-commits archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use ovirt-hosted-engine-ha
+| n/a
+|  git://gerrit.ovirt.org/ovirt-hosted-engine-ha.git
+|  [http://gerrit.ovirt.org/gitweb?p=ovirt-hosted-engine-ha.git gitweb]
+|- 
+| ovirt-hosted-engine-setup
+| Sandro Bonazzola<br />
+Alex Lourie
+| [http://lists.ovirt.org/mailman/listinfo/engine-devel devel] [http://lists.ovirt.org/pipermail/engine-devel archive ] <br />[http://lists.ovirt.org/mailman/listinfo/engine-patches patches] [http://lists.ovirt.org/pipermail/engine-patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-commits commits] [http://lists.ovirt.org/pipermail/engine-commits archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use ovirt-hosted-engine-setup
+| n/a
+|  git://gerrit.ovirt.org/ovirt-hosted-engine-setup.git
+|  [http://gerrit.ovirt.org/gitweb?p=ovirt-hosted-engine-setup.git gitweb]
+|- 
+| mom
+| Adam Litke
+| [http://lists.ovirt.org/mailman/listinfo/engine-devel devel] [http://lists.ovirt.org/pipermail/engine-devel archive ] <br />[http://lists.ovirt.org/mailman/listinfo/engine-patches patches] [http://lists.ovirt.org/pipermail/engine-patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/engine-commits commits] [http://lists.ovirt.org/pipermail/engine-commits archive] 
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
+use mom
+| n/a
+|  git://gerrit.ovirt.org/mom.git
+|  [http://gerrit.ovirt.org/p/mom.git gitweb]
+|- 
 |}
 
 '''oVirt projects still in incubation'''
@@ -243,14 +283,6 @@ Oved Ourfali
 | Resources
 | Board
 | Src
-|- 
-| Mom
-| Adam Litke
-| [http://lists.ovirt.org/mailman/listinfo/mom-devel devel] [http://lists.ovirt.org/pipermail/mom-devel archive]
-| [http://github.com/aglitke/mom/wiki wiki] <br />[http://github.com/aglitke/mom/ documentation] <br />[http://www.ibm.com/developerworks/linux/library/l-overcommit-kvm-resources/index.html/ proposal]<br />[https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla]<br />
-use ovirt-mom<br />[http://www.linux-kvm.org/wiki/images/e/e8/2010-forum-litke-kvmforum2010.pdf PDF presso]
-| N/A
-|  git://gerrit.ovirt.org/mom
 |- 
 | Nomad
 | Isaac Christoffersen<br />
