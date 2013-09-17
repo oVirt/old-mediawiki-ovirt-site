@@ -18,6 +18,15 @@ Backup & Restore API will can be driven by API while some functionallities would
 Backup/Restore software from ISV will drive these APIs.
  
 == VM Backup/Restore possible flows ==
+=== General functionality === 
+Ovirt provides the user the ability to create snapshot on every VM in its setup.<BR>
+This snapshot reflects the VM configuration and its disks data as it was in a specific point in time.<BR>
+For each image in the VM a new volume in being created and it is based on the previous volume which becomes R/O and associated with the new snapshot.<BR>
+<BR>
+The snapshot feature is being used by the backup API.<BR>
+
+
+
 === Full VM backups === 
 Full VM backup can be implemented for example by using the following oVirt capabillities:
 #  Take a vm snapshot for the vm targeted for backup  - (existing oVirt REST API operation)
