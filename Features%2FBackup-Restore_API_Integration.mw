@@ -32,6 +32,7 @@ SERVER:PORT:/api/vms/GUID/snapshots/GUID/disks
 
 2. POST the copied disk with the disk id and the snapshot id:<BR>
    http://SERVER:PORT/api/vms/GUID/disks/
+[[File:FileRestDesc.jpeg]]
 
 When creating a disk you will have to pass the the disk id and the snapshot id such as the following example:
   <disk id="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx">
@@ -43,7 +44,7 @@ After copying the data from the disk detach the disk snapshot from the VM using 
  URL indicates to the specific disk in the VM: 
       http://SERVER:PORT/api/vms/GUID/disks/GUID
  Body=<action><detach>true</detach></action>
-[[File:DetachDisk.jpeg]] 
+[[File:DetachDisk.jpeg]]
 
 === Full VM restore === 
 #  Create disks for restore
