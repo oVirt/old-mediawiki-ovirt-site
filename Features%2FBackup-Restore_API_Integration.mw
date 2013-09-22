@@ -136,7 +136,6 @@ Complete API providing abillity to do full , file-level & incremental backups/re
 * http://www.ovirt.org/Features/Design/LiveMerge
 
 == Appendix ==
-=== Example for backup disk ===
 ==== Get disk snapshot data ====
 Navigate to the wanted disk snapshot from REST by accessing:
 [[File:FileRestDesc.jpeg]]
@@ -148,6 +147,10 @@ POST the copied disk with the disk id and the snapshot id:
 ==== Detach disk from backup VM ====
 After the backup VM copy the data from the disk, detach the disk snapshot from the VM using the REST :
 [[File:DetachDisk.jpeg]]
+
+==== Add disk from scratch ====
+Adding a disk from scratch for restore VM
+[[File:AddDiskFromScratch.png]]
 
 === Comments and Discussion === 
 [[Category:Feature]]
