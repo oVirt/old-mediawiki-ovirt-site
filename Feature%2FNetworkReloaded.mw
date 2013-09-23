@@ -192,8 +192,7 @@ We've defined two new terms:
 * Persistent configuration - During the 'setSafeConfig' verb we copy the running configuration from one folder to another. Any changes made between 'setSafeConfig' received from the engine are only reflected in the running configuration.
 
 # The persistent configuration is used for networking persistence on host reboot.
-# The running configuration is used for rollbacks - We know the state of the running configuration before the start of an add or delNetwork, and we know
-what was added or deleted, and so we can use the diff to revert any changes using setupNetworks itself. (Note: As of 23/09/2013 this part is still unimplemented and is under debate).
+# The running configuration is used for rollbacks - We know the state of the running configuration before the start of an add or delNetwork, and we know what was added or deleted, and so we can use the diff to revert any changes using setupNetworks itself. (Note: As of 23/09/2013 this part is still unimplemented and is under debate).
 # We also use the running configuration to perform lookups of the current networking configuration.
 
 ==== Implementation Details ====
@@ -206,11 +205,9 @@ And setting:
 # When VDSM gets a new setupNetworks, it breaks it into a series of addNetwork and delNetwork (Currently editNetwork is done via a del followed by an add). After each successful add or del network we then persist the new network and bond changes, represented by dictionary and written to disk via json serialization to:
 #* /var/run/vdsm/netconf/nets/
 #* /var/run/vdsm/netconf/bonds/
-
 # After setSafeConfig we atomically copy:
 #* var/run/vdsm/netconf/nets/* -> /var/lib/vdsm/persistence/netconf/nets
 #* var/run/vdsm/netconf/bonds/* ->/var/lib/vdsm/persistence/netconf/bonds
-
 # Split vdsm-restore-net service to:
 #* vdsm-remove-net-persistence (before network.service): Deletes all the persistence done by the configurator and also removes libvirt's  persistent vdsm networks. For ifcfg that would be:
 #** Remove all the ifcfg-* files that have the newly defined vdsm header: "# This file was created by vdsm. Do not edit it, as it is not persisted across reboots."
