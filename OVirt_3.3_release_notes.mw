@@ -37,6 +37,7 @@ To find out more about features which were added in previous oVirt releases, che
 
 * [[Features/Supervdsm_service|SuperVDSM Service]] enables Vdsm to be run as an unprivileged daemon, thereby simplifying the handling of crashes and the process of re-establishing communication between Vdsm and Supervdsm after failures.
 * [[Features/Ssh_Abilities|Public Key SSH Authentication]] is now available as a means of conducting authentication for host-deploy and node upgrade operations, supplementing the existing user/password mechanism.
+* [[Features/JavaSDK|Java Software Development Kit]] is now available.
 
 === Networking ===
 * [[Features/Migration Network|Migration Networks]] enable administrators to assign networks for carrying migration data.
