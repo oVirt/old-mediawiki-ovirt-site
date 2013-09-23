@@ -1,3 +1,4 @@
+<!-- {{autolang|base=yes}} -->
 oVirt CLI is a dynamic, runtime interface discovering command line interface for the oVirt engine
 
 
@@ -689,3 +690,4 @@ That will install lxml, because EPEL's python-lxml is not yet up to the version 
 Michael Pasternak: mpastern@redhat.com
 
 [[Category:CLI]]
+[[Category:Feature]]
