@@ -1,3 +1,4 @@
+<!-- {{autolang|base=yes}} -->
 oVirt Python-SDK is auto-generated software development kit for the oVirt engine api.
 
 __TOC__
@@ -319,3 +320,4 @@ Michael Pasternak: mpastern@redhat.com
 
 
 [[Category:SDK]]
+[[Category:Feature]]
