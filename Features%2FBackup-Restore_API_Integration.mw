@@ -7,7 +7,7 @@ Backup and Restore will be REST API driven (and not GUI/User driven).
 === Owner === 
 * Feature owner: Ayal Baron <abaron@redhat.com>  
 * Engine Component owner: Liron Aravot <laravot@redhat.com> Maor Lipchuk <mlipchuk@redhat.com>
-* VDSM Component owner: Deepak C Shetty <deepakcs@linux.vnet.ibm.com>
+* VDSM Component owner: Federico Simoncelli <fsimonce@redhat.com>
 
 === Detailed Description === 
 The Backup API provides set of operations that can be used for implemenating backup solution for VMs/Data using oVirt.
