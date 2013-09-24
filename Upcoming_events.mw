@@ -3,8 +3,6 @@
 <noinclude>
 <startfeed/>
 </noinclude>
-{{Event|name=[//events.linuxfoundation.org/events/cloudopen-north-america CloudOpen North America]|date=September 16 - 18, 2013|location=New Orleans, LA|lead=[http://sched.co/16MPGf8 Theron Conrey] will present a solution for converged storage and compute infrastructure built on oVirt and Gluster, and [http://sched.co/15MTG28 Greg Padgett of Red Hat] walks you through features oVirt supports to guarantee quality of service to its users, including memory ballooning, CPU pinning, support for quotas, and rule-based scheduling of VM deployment}}
-
 {{Event|name=[//www.openworldforum.org/en/ Open World Forum]|date=October 3-5 2013|location=Paris, France|lead=Dave Neary of Red Hat will present how oVirt fits into the big picture of running an open hybrid cloud, featuring traditional virtualization, private infrastructure as a service, and public cloud, using free software.}}
 
 {{Event|name=[//events.linuxfoundation.org/events/kvm-forum KVM Forum/oVirt Developers Summit]|date=October 21 - 23, 2013|location=Edinburgh, Scotland|lead=The oVirt developer community will be hosting their annual developer summit during [[KVM Forum 2013]] this year. There are some great oVirt talks planned in the new management track of the KVM Forum. Then during the oVirt developers summit, you can influence the future technical direction of the project during developer meetings. Check out [[KVM Forum 2013 | the dedicated wiki page]] for more detail}}
