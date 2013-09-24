@@ -89,8 +89,7 @@ use ovirt-dwh
 &amp; installer
 | Ofer Schreiber<br />
 Barak Azulay<br />
-Eyal Edri<br />
-Juan Hernandez
+Eyal Edri
 | [http://lists.ovirt.org/mailman/listinfo/users devel] [http://lists.ovirt.org/pipermail/users archive ] <br />[http://lists.ovirt.org/mailman/listinfo/patches patches] [http://lists.ovirt.org/pipermail/patches archive] <br />[http://lists.ovirt.org/mailman/listinfo/commits commits] [http://lists.ovirt.org/pipermail/commits archive] 
 | [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
 use ovirt-engine-installer
