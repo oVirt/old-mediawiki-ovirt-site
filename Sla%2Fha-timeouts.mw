@@ -1,0 +1,53 @@
+== SLA: HA timeouts explained ==
+
+=== Summary ===
+This page provides information on the various arguments used for to identify and<br />
+handle connectivity issues for highly available VMs, both in previous and current oVirt versions.
+
+=== Description ===
+There are several parameters that control monitoring and reaction behavior for<br />
+highly available VMs (vdsConnectionTimeout and vdsRetries have been added in 3.2);
+
+* VDSAttemptsToResetCount
+* TimeoutToResetVdsInSeconds
+* vdsTimeout
+* vdsConnectionTimeout
+* vdsRetries
+
+'''VDSAttemptsToResetCount''' controls how many consecutive VDSM operations<br />
+have to fail to consider a host a candidate for fencing. Default value is '''2'''.
+
+'''TimeoutToResetVdsInSeconds''' controls how long a host has to be failing<br />
+(VDSM operations failing continuously) to consider it a candidate for fencing.
+
+Both above parameters have to be evaluated as true to actually initiate fencing of a host,<br />
+ie- both exceeded.
+
+'''vdsTimeout''' controls how long the engine waits for a VDSM operation to<br />
+complete, its default value is '''180s''' (3 minutes). This value shouldn't be<br />
+changed, as some VDSM operations require that time to complete.
+
+'''vdsConnectionRetries''' controls how long the engine waits for a connection<br />
+to VDSM to complete. Its default value is 180s (3 minutes). This value should be<br />
+reduced, and in fact its default value has already been changed to '''2s''' in 3.3.
+
+'''vdsRetries''' controls how many times failed VDSM operations should be<br />
+retried. Its default value is 3.
+
+With these default values a host that goes completely down and doesn't respond<br />
+at all will take at least 6 minutes to be fenced: the reason is that any operation will<br />
+take those 6 minutes because we retry them 3 times ('''vdsRetries'''), each time it<br />
+takes approx 63s ('''vdsTimeout''', the kernel cuts to 63s any value larger than that),<br />
+and we need 2 consecutive failures to start fencing: 63sec * 3 * 2 ~ 6min.
+
+For a more predictable fencing the following parameters need to be changed:
+<br />
+<nowiki># engine-config -s vdsConnectionTimeout=2</nowiki>
+<br />
+<nowiki># engine-config -s vdsRetries=0</nowiki>
+
+With this settings the host should be fenced approx '''1 minute''' after it stops responding,<br />
+and this happens because now the '''VDSAttemptsToResetCount''' and '''TimeoutToResetVdsInSeconds'''<br />
+are really taken into account and not masked by the low level timeouts.
+
+[[Category:SLA]]
