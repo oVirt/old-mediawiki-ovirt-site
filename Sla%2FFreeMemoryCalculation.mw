@@ -1,4 +1,4 @@
-== SLA: Free Memory Calculations ==
+== SLA: Free memory calculations explained ==
 
 === Summary ===
 This page explains how the engine calculates free memory available on a host.
