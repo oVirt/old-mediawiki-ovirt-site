@@ -42,9 +42,8 @@ and we need 2 consecutive failures to start fencing: 63sec * 3 * 2 ~ 6min.
 
 For a more predictable fencing the following parameters need to be changed:
 <br />
-<nowiki># engine-config -s vdsConnectionTimeout=2</nowiki>
-<br />
-<nowiki># engine-config -s vdsRetries=0</nowiki>
+ <nowiki># engine-config -s vdsConnectionTimeout=2
+# engine-config -s vdsRetries=0</nowiki>
 
 With this settings the host should be fenced approx '''1 minute''' after it stops responding,<br />
 and this happens because now the '''VDSAttemptsToResetCount''' and '''TimeoutToResetVdsInSeconds'''<br />
