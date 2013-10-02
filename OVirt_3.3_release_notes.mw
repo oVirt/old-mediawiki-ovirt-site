@@ -87,6 +87,7 @@ In anticipation of the 3.3 release, a number of deep dive presentations into 3.3
 * Network QoS / vNIC Profiles presentation [[File:VNIC_Profiles.odp]]
 * Scheduling in oVirt 3.3 deep dive [[File:Scheduler-Deep-Dive-oVirt.pdf]]
 * Hosted engine deep dive [[File:Hosted Engine Deep Dive.pdf]]
+* Packaging [[File:ovirt 3.3 - packaging.pdf]]
 
 [[Category:Documentation]]
 [[Category:Releases]]
