@@ -14,3 +14,5 @@ No need for a yum update or reboot.
 
 Install packstack:
 sudo yum install -y openstack-packstack
+
+packstack --allinone (On the controller host)
