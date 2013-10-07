@@ -159,7 +159,7 @@ Related features:
 <references>
 # <ref name="project_page">Cloud-init documentation: https://launchpad.net/cloud-init/</ref>
 # <ref name="config_drive_2">Config-Drive version 2 readme: http://bazaar.launchpad.net/~cloud-init-dev/cloud-init/trunk/view/head:/doc/sources/configdrive/README.rst</ref>
-# <ref name="metadata_example">OpenStack meta-data example: http://docs.openstack.org/trunk/openstack-compute/admin/content/config-drive.html</ref>
+# <ref name="metadata_example">OpenStack meta-data example: http://docs.openstack.org/grizzly/openstack-compute/admin/content/config-drive.html</ref>
 # <ref name="userdata_example">User-data example: http://bazaar.launchpad.net/~cloud-init-dev/cloud-init/trunk/view/head:/doc/examples/cloud-config.txt</ref>
 </references>
 
