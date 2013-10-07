@@ -35,6 +35,12 @@ And change the tunnel ranges to:
 
 CONFIG_NEUTRON_OVS_TUNNEL_RANGES=1:1000
 
+Finally change:
+
+CONFIG_NEUTRON_OVS_TUNNEL_IF=<ethX>
+
+To the device which faces the compute nodes.
+
 Now run:
 packstack --answer-file=<file name>
 
