@@ -44,7 +44,7 @@
 
 * <strike>Add configurable QoS controls on vnics http://libvirt.org/formatdomain.html#elementQoS</strike>
 
-* Use tmpfile.d when needed.
+* <strike>Use tmpfile.d when needed.</strike>
 
 * use <interface type='network'>. In the future, this would allow us to migrate a VM from a bridge-based network to funkier types of networks defined in http://libvirt.org/formatnetwork.html http://gerrit.ovirt.org/#/c/9441/
 
