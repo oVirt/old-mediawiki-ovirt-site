@@ -31,6 +31,8 @@ $ openssl passwd -salt 42 ovirt
 ** /var/log/ovirt-node.log
 ** /var/log/ovirt-node.debug.log (when running the installer or setup in debug mode)
 ** /tmp/ovirt.log (in rare cases)
+* Engine related
+** /var/log/vdsm*
 
 == Shell access ==
 * '''Warning''' -- Changes you make from the shell are not persistent by default and will be lost if you reboot the host
