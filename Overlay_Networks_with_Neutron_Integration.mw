@@ -71,3 +71,10 @@ oVirt can install the layer 2 agent on the host if external provider is selected
 To install layer 2 ovs agent follow the instructions on (Until the bug is fixed):
 http://www.ovirt.org/Features/Detailed_Quantum_Integration#OVS_Agent_installation_steps
 When the bug is fixed simply select external provider when adding the host.
+Edit:
+/etc/neutron/neutron.conf
+Under [agent]
+Change:
+root_helper = sudo quantum-rootwrap /etc/quantum/rootwrap.conf
+To:
+root_helper = sudo neutron-rootwrap /etc/neutron/rootwrap.conf
