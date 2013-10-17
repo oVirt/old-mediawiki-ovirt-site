@@ -56,6 +56,10 @@ The oVirt 3.1 release includes these notable changes.
 <!-- DIDN'T GET REQUIRED INFO, NO FEATURE PAGE FOUND:
 * new custom hook in vdsm: set vm ticket
 * '''vnc details screen (need to see if made ovirt 3.1)'''-->
+* "windows" and "linux" OS Types are removed from the OS repository as they have no real use.  This will break import of those OSs. To fix the import its enough to add to  ''$PREFIX/etc/ovirt-engine/osinfo.conf.d/20-import-export-linux-windows-fix.properties'' 
+  20-import-export-linux-windows-fix.properties:
+  backwardCompatibility.linux = 5
+  backwardCompatibility.windows = 1
 
 == SLA ==
 
