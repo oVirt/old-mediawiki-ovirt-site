@@ -3,7 +3,7 @@
 == Multiple Monitor Via Siignle PCI==
 
 === Summary ===
-Ability to channel Spice display up to 4 different PCI channels
+Ability to channel Spice display protocol up to 4 different PCI channels in a single VM
 
 === Owner ===
 Shahar Havivi,
