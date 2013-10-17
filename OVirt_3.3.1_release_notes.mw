@@ -113,6 +113,7 @@ Users can now limit the inbound and outbound network traffic on a virtual NIC le
 {{BZ|988036}} - We get enum instead of a message when user tries to run more VMs from the User portal then he has permissions to<br>
 {{BZ|988043}} - edit vm - unnecessary update of nics is performed and appears in event log<br>
 {{BZ|988056}} - We should have maximum value for Maximum number of VMs per user<br>
+{{BZ|988067}} - [REST-API] Adding a cluster with incomplete version fails with exception<br>
 {{BZ|988082}} - [ExternalTasks] Cannot add sub-step under existing (parent) step<br>
 {{BZ|988086}} - [ExternalTasks] When adding new step, type is always EXECUTING<br>
 {{BZ|988087}} - [ExternalTasks] When adding new step, state is always STARTED<br>
