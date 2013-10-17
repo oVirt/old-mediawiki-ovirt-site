@@ -104,8 +104,8 @@ setups.
 
 ==Bugs fixed==
 ===oVirt Engine===
-{{BZ|785555}} - [ovirt][engine][webadmin][RFE] - domain selection list in login screen should be sorted alphabetically<br>
-{{BZ|787578}} - PRD33 - RFE: add support for multiple monitors on QXL device (single device with more RAM)<br>
+{{BZ|785555}} - domain selection list in login screen should be sorted alphabetically<br>
+{{BZ|787578}} - support for multiple monitors on QXL device (single device with more RAM)<br>
 {{BZ|858952}} - webadmin [Tree]: when "x" main tab is displayed and "x1" (type "x") item is selected on the tree, hide "New" + "Remove" actions, and disable Name editing of the item.<br>
 {{BZ|881055}} - [RHEVM] [backend] [Host Networking] [TEXT] Bridged network rhevm is attached to multiple interfaces: <UNKNOWN> on Host<br>
 {{BZ|886788}} - ovirt-engine-backend: No event for ticket VM command<br>
@@ -169,7 +169,7 @@ setups.
 {{BZ|982050}} - VM UUID is not shown prominently in Web UI<br>
 {{BZ|982527}} - Disk entries remain in database after deleting the datacenter<br>
 {{BZ|982604}} - Fence via second power management not working<br>
-{{BZ|983120}} - PRD33 - Provide MoTD on logon screen<br>
+{{BZ|983120}} - Provide MoTD on logon screen<br>
 {{BZ|983132}} - [RHEVM] [webadmin] sync network button does not appear when network gets out of sync with host<br>
 {{BZ|983443}} - [engine-backend] engine fails to revert a failed cloneImage task, after that, user cannot do anything on the system<br>
 {{BZ|984586}} - Cannot start a VM with USB Native - Exit message: internal error Could not format channel target type.<br>
