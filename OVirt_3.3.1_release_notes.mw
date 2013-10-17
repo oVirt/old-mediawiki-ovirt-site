@@ -1,0 +1,338 @@
+{{DISPLAYTITLE:oVirt 3.3.1 release notes}}
+
+The oVirt Project is pleased to announce the availability of oVirt 3.3.1.
+
+oVirt is an open source alternative to VMware vSphere, and provides an awesome KVM management interface for multi-node virtualization.
+
+To find out more about features which were added in previous oVirt releases, check out the [[oVirt 3.3 release notes]], [[oVirt 3.2 release notes]] and [[oVirt 3.1 release notes]].
+For a general overview of oVirt, read [[oVirt 3.0 Feature Guide | the oVirt 3.0 feature guide]] and the [[about oVirt]] page.
+
+= What's New in 3.3.1? =
+
+==Vnic Profiles==
+The [[Features/Vnic_Profiles|vnic profiles]] feature was developed as a requirement for the Network QoS feature.
+Users can now limit the inbound and outbound network traffic on a virtual NIC level by applying profiles which define custom properties such as port mirroring or quality of service (QoS).
+
+==Bugs fixed==
+===oVirt Engine===
+{{BZ|785555}} - [ovirt][engine][webadmin][RFE] - domain selection list in login screen should be sorted alphabetically<br>
+{{BZ|787578}} - PRD33 - RFE: add support for multiple monitors on QXL device (single device with more RAM)<br>
+{{BZ|858952}} - webadmin [Tree]: when "x" main tab is displayed and "x1" (type "x") item is selected on the tree, hide "New" + "Remove" actions, and disable Name editing of the item.<br>
+{{BZ|881055}} - [RHEVM] [backend] [Host Networking] [TEXT] Bridged network rhevm is attached to multiple interfaces: <UNKNOWN> on Host<br>
+{{BZ|886788}} - ovirt-engine-backend: No event for ticket VM command<br>
+{{BZ|891634}} - engine: rerun of HA vm fails when vm's pid is killed during live storage migration<br>
+{{BZ|892642}} - Disk permission don't disappear after disk is deleted(is shown as 'null(Disk)').<br>
+{{BZ|905383}} - Database functions not fully optimized<br>
+{{BZ|906817}} - [User Portal] A user with PowerUserRole|NetworkUser on DC doesn't see own diskless templates when creating new VM<br>
+{{BZ|911071}} - UI event notification - host events - "Host state...Storage Domain" event text overlaps it's following.<br>
+{{BZ|912758}} - mouse cursor wrongfully changes to progress-icon upon login failure due to validation error (e.g. empty username and/or password)<br>
+{{BZ|921462}} - [TEXT][engine] CancellationException is logged as ERROR even though it is expected<br>
+{{BZ|923100}} - User who can't manipulate users, can add user if he has manipulate_permission action group.<br>
+{{BZ|923197}} - [user-portal] User has insufficient permissions on url /domain/domain_id/users<br>
+{{BZ|923343}} - [RHEVM] [UI] redundant scroll bar in VM migration dialog<br>
+{{BZ|924762}} - [Network Tab] the cluster pane is missing the required field per cluster when creating/editing a logical network<br>
+{{BZ|947474}} - rhevm-config | no validation when setting MacPoolRanges<br>
+{{BZ|947805}} - engine [UPGRADE]: reinitialize a pool which is format 3 domains with domain which is format 1 will upgrade the MTD in vdsm but engine will leave the domain as format 1<br>
+{{BZ|949484}} - Underscores in tag names break tags<br>
+{{BZ|949551}} - ovirt-engine-backend: Add external event error messages need to be improved [TEXT]<br>
+{{BZ|949557}} - ovirt-engine-webadmin-portal : user who added external events does not appear in UI<br>
+{{BZ|950023}} - webadmin: edit of master domain will show domain format as v2 when domain is in v1 format<br>
+{{BZ|951928}} - [webadmin] All LUNs from each target listed under all targets<br>
+{{BZ|952147}} - Race between VM migration and other virt/storage operations<br>
+{{BZ|953532}} - engine [UPGRADE]: when connectivity is restored to all the hosts after upgrade hosts moves to non-operational for compatibility version mismatch<br>
+{{BZ|955573}} - RHEVM-RESTAPI power management types are not updated.<br>
+{{BZ|957492}} - engine: cannot move an inactive disk attached to a vm if live storage migration is in progress on a second disk attached to the same vm<br>
+{{BZ|957494}} - engine: move of inactive disk is blocked on unrelated live ops (live migration of the vm, live storage migration, etc)<br>
+{{BZ|958726}} - [REST-API] Throw error when the value of url 'max' param is not convertible to int<br>
+{{BZ|959879}} - [REST-API] Update of power management by sending entire host representation is ignored<br>
+{{BZ|960063}} - check DB objects before upgrade (owner engine)<br>
+{{BZ|960448}} - engine: cannot run unlock_entity on multiple objects<br>
+{{BZ|960831}} - QueryData2 generates slow SQL for AuditLog with no parameters<br>
+{{BZ|962177}} - [rhevm-dwh] - ETL Reports error when a Single Host in setup is Non-Responsive ("ETL service sampling has encountered an error")<br>
+{{BZ|962560}} - Search query "sortby" return some wrongly sorted results<br>
+{{BZ|966003}} - Changing vmpool's quota is ignored.<br>
+{{BZ|966619}} - [RHEVM][backend] VM NewPool-1 was restarted on Host <UNKNOWN><br>
+{{BZ|966980}} - backup.sh return code always 0 even on error<br>
+{{BZ|967604}} - engine: AutoRecovery of host fails and host is set as NonOperational when export domain continues to be reported with error code 358<br>
+{{BZ|967628}} - When an export of a template fails, the leftovers on the export domain are not cleaned<br>
+{{BZ|968190}} - [RHEVM][backend] cannot assign VLAN to bond which is named other than bond[0-4]<br>
+{{BZ|968362}} - webadmin: after ovirt-engine restart, if we do not reload the UI before log in, CanDoAction alerts will not appear for the user<br>
+{{BZ|968958}} - Refactor unnecessary while loop in JndiAction class<br>
+{{BZ|969767}} - engine: unexpected exception error when trying to hotplug a disk when its domain is in maintenance<br>
+{{BZ|970085}} - Run Once - do not offer network device if the card is unplugged<br>
+{{BZ|970635}} - It's impossible to update the tagged network on DC to become untagged through API<br>
+{{BZ|970900}} - [RHEVM][webadmin][TEXT] wrong capitalization of VNIC/NIC on Networks -> Virtual Machines subtab<br>
+{{BZ|971695}} - webadmin: Events main tab: When applying an Events search filter (which results in few items) by hitting "Enter" - duplicate entries are shown.<br>
+{{BZ|973911}} - REST allow adding a VM nics with the same mac<br>
+{{BZ|973971}} - REST allow adding nics with special characters<br>
+{{BZ|974101}} - [engine-web-admin] engine reports that host cannot join to cluster due to rhev compatibility version issues when it should report about the real issue, which is vdsm compatiblity versions in it's DB<br>
+{{BZ|974172}} - Changing Quota from Disabled to Audit is triggering the "Enforcing" warning message.<br>
+{{BZ|975380}} - Unable to search on domain for users with some search options.<br>
+{{BZ|975786}} - VM migration fails when required network, configured with migration usages is turned down<br>
+{{BZ|975886}} - It's impossible to detach the network from NIC by dragging it out<br>
+{{BZ|977440}} - Share the engine's os info with DWH through a translation table<br>
+{{BZ|978268}} - Unable to put a host into maintenance because VMs previously managed by vdsm are running on the host<br>
+{{BZ|979751}} - java.lang.NullPointerException when sending setupNetwork command without interface attached to network<br>
+{{BZ|980066}} - GUI: Assign/Unassign Networks tab should be changed to more descriptive name<br>
+{{BZ|980486}} - Attaching a network to a host's nic inherits the host nic's IP to the new network<br>
+{{BZ|980813}} - [Admin Portal] there's twice 'Default OS' value in 'Operating System' selection box<br>
+{{BZ|982003}} - [engine-backend] Null Pointer Exception for action CreateAllSnapshotsFromVm after failure in create snapshot<br>
+{{BZ|982050}} - VM UUID is not shown prominently in Web UI<br>
+{{BZ|982527}} - Disk entries remain in database after deleting the datacenter<br>
+{{BZ|982604}} - Fence via second power management not working<br>
+{{BZ|983120}} - PRD33 - Provide MoTD on logon screen<br>
+{{BZ|983132}} - [RHEVM] [webadmin] sync network button does not appear when network gets out of sync with host<br>
+{{BZ|983443}} - [engine-backend] engine fails to revert a failed cloneImage task, after that, user cannot do anything on the system<br>
+{{BZ|984586}} - Cannot start a VM with USB Native - Exit message: internal error Could not format channel target type.<br>
+{{BZ|984927}} - [webadmin] Host appears twice in hosts view<br>
+{{BZ|985008}} - Failed to create a VM from a template, image is in locked state forever<br>
+{{BZ|985623}} - unable to add to an AD domain (Exception message is: Comparison method violates its general contract!)<br>
+{{BZ|985635}} - Changing email address for event notification results in error "User is already subscribed to this event with the same Notification method"<br>
+{{BZ|986961}} - spmStop is failing with a SecureError<br>
+{{BZ|987294}} - Adding provider with wrong name close add provider window<br>
+{{BZ|987427}} - [RHSC] Add brick displays an improper message while adding a brick to the volume.<br>
+{{BZ|987783}} - Live Storage Migration attempted on an unplugged disk of a running VM (instead of a simple cold move)<br>
+{{BZ|987819}} - Template selector in pool popup is not refreshed<br>
+{{BZ|987830}} - External events' audit logs has not records in AuditLogMessages.properties<br>
+{{BZ|987862}} - guide button at top navigation bar in user and admin portals opens portal selection page<br>
+{{BZ|987875}} - Error when selecting host as SPM in uninitialized data center<br>
+{{BZ|987889}} - when selecting a bookmark, the only main tabs that should appear are the ones displayed when "System" is selected in the system tree (i.e. without Quota, Providers, Dashboard)<br>
+{{BZ|987907}} - The VM subtree doesn't display the VM tab. It changes the name of the tree but doesn't display the VMs tab content<br>
+{{BZ|987910}} - OK'ing in the new host dialog with an empty SSH port creates an unresponsive power management dialog<br>
+{{BZ|987939}} - engine-setup after partial engine-cleanup fails<br>
+{{BZ|987941}} - Error message should be changed when trying to set VNC keyboard layout for suspended VM<br>
+{{BZ|987943}} - Text is unreadable due to spillover in the "Add Event Notification" dialog<br>
+{{BZ|987945}} - [oVirt] [glance] Provider type should be spelled "OpenStack"<br>
+{{BZ|987952}} - engine-config should return the list of possible VNC keyboard layouts<br>
+{{BZ|987967}} - Error dialog while editing Network QoS has $(type) in output<br>
+{{BZ|987985}} - vm - 'run once' icon is not displayed,  instead the regular "up" icon is displayed<br>
+{{BZ|987993}} - [oVirt] [foreman] Adding default config fails<br>
+{{BZ|987994}} - Live snapshot leaves disks with no name on storage domains<br>
+{{BZ|988018}} - [engine-webadmin] user cannot perform any operation under VM tab from the tree pane on UI<br>
+{{BZ|988033}} - Updating host's cluster leads to cloning the host<br>
+{{BZ|988036}} - We get enum instead of a message when user tries to run more VMs from the User portal then he has permissions to<br>
+{{BZ|988043}} - edit vm - unnecessary update of nics is performed and appears in event log<br>
+{{BZ|988056}} - We should have maximum value for Maximum number of VMs per user<br>
+{{BZ|988082}} - [ExternalTasks] Cannot add sub-step under existing (parent) step<br>
+{{BZ|988086}} - [ExternalTasks] When adding new step, type is always EXECUTING<br>
+{{BZ|988087}} - [ExternalTasks] When adding new step, state is always STARTED<br>
+{{BZ|988088}} - [ExternalTasks] Step cannot be ended as not successful<br>
+{{BZ|988094}} - [ExternalTasks] Cannot end existing job<br>
+{{BZ|988259}} - [Admin Portal] Cannot update VM properties - Field timeZone can not be updated when status is Up<br>
+{{BZ|988305}} - SshSoftFencing has no task description<br>
+{{BZ|988306}} - Vm is trying to run on host which is in maintenance<br>
+{{BZ|988361}} - No order of jobs via start time under /api/jobs<br>
+{{BZ|988425}} - [GUI]When creating bond with setupNetwork default bond name should be proposed (for example bond0)<br>
+{{BZ|988453}} - can't add host to engine when all hosts in cluster are in Install Failed state<br>
+{{BZ|989221}} - vms_sp.sql argument error in InsertVm function<br>
+{{BZ|989493}} - Failed manually set SPM Priority - Field sshPort can not be updated when status is Up<br>
+{{BZ|989898}} - [Neutron] can select external provider for new network only if creating network in network main tab<br>
+{{BZ|989916}} - RunVmOnce transaction timeout on updating vds memory<br>
+{{BZ|990059}} - Strange behavior when trying to add VM without existing data domain<br>
+{{BZ|990100}} - Creating multiple network with the same name<br>
+{{BZ|990543}} - Template removal leaves record in async_tasks table<br>
+{{BZ|990612}} - network from external network provider shouldn't be displayed in setupNetwork.<br>
+{{BZ|990938}} - [RHEVM][TEXT] improve error message displayed in GUI when obtaining IP from DHCP fails<br>
+{{BZ|990962}} - No REST API to import/export images from Glance<br>
+{{BZ|991040}} - Neutron | import network | import button should be enable only if imported list in not empty<br>
+{{BZ|991042}} - webadmin: login: in case of login error, error-message key is displayed (instead of error-message value)<br>
+{{BZ|991081}} - Red Hat Storage nodes, attached to 'Gluster Enabled Cluster', are shown in drop-down box for choosing host, while removing Storage Domain<br>
+{{BZ|991729}} - [engine-backend] host cannot be activated after it had been updated to maintenance in DB, while engine has never got the response for DisconnectStoragePool<br>
+{{BZ|991797}} - storage domain creation fails if its storage connection is not mounted<br>
+{{BZ|991800}} - Cannot add users from API using a principal name (user@domain) format when using an open ldap domain<br>
+{{BZ|992960}} - Cannot log into User Portal - login page is stuck after being submitted<br>
+{{BZ|992993}} - [RHEVM] [ux] Migration Options field is too narrow in New Virtual Machine dialog<br>
+{{BZ|993111}} - [engine-backend] when attaching a local ISO domain from one host, engine does not send ConnectStorageServer to other cluster's hosts<br>
+{{BZ|993117}} - java.lang.ClassCastException when updating direct LUN disk.<br>
+{{BZ|993123}} - REST-API doesn't return statistics for VLAN tagged interfaces<br>
+{{BZ|993148}} - "Is shareable" option not updated when changing disk's allocation policy between Preallocated and Thin Provision.<br>
+{{BZ|993645}} - During create snapshot get unuseful check box “Save Memory”<br>
+{{BZ|993698}} - engine-setup is not storing an answer to the "Do you want to install with memory less than recommended?" question<br>
+{{BZ|993776}} - VM fails to start due to duplicate device ID<br>
+{{BZ|994129}} - [Admin Portal] RunOnce Cloud-init Error / interfaces.BackendLocal.RunAction(org.ovirt.engine.core.common.acti on.VdcActionType,org.ovirt.engine.core.common.action.VdcActionParametersBase): javax.ejb.EJBException: JBAS014580: Unexpected Error<br>
+{{BZ|994191}} - [rhevm-manage-domains] /var/log/ovirt-engine/engine-manage-domains.log doesn't exist<br>
+{{BZ|994219}} - engine-install with all-in-one fails if ssh is configure for non-standard port<br>
+{{BZ|994247}} - VM failed to start running after changing the interface of bootable disk in UI.<br>
+{{BZ|994463}} - Failed attached Export Storage Domain - Could not obtain lock<br>
+{{BZ|994604}} - Users cannot log into UserPortal<br>
+{{BZ|994719}} - Newly added Cluster policy populates the list in random position<br>
+{{BZ|994860}} - VM image stays locked when creating template and closing engine<br>
+{{BZ|995011}} - Gateway blank for non-management networks<br>
+{{BZ|995048}} - [RHEVM][backend] Error "MAC address is required" shows on editing VM description<br>
+{{BZ|995501}} - [host-deploy] block concurrent installation for same host<br>
+{{BZ|995754}} - webadmin [Tree]: fix hardcoded non-i18n strings in tree context info messages<br>
+{{BZ|996005}} - ImportVmTemplateParameters fails (Unexpected token)<br>
+{{BZ|996496}} - GWT: Tooltip not shown on overflowing content when hovering over cell<br>
+{{BZ|996568}} - CanDoAction on UpdateVmInterfaceCommand when creating VM from template.<br>
+{{BZ|996612}} - [RHEVM][webadmin] Edit Logical Network dialog has insufficient size<br>
+{{BZ|996931}} - [Admin Portal] Configure Local Storage has odd UI style<br>
+{{BZ|996934}} - Force remove of data center fails<br>
+{{BZ|996962}} - [engine-config] /var/log/ovirt-engine/engine-config.log doesn't exist<br>
+{{BZ|997370}} - Installation fails with message of "Failed to execute stage 'Misc configuration': Command '/usr/share/ovirt-engine/dbscripts/create_schema.sh' failed to execute"<br>
+{{BZ|997401}} - [engine-backend] engine fails with ClassCastException during FullListVdsCommand when it detect a running VM that does not exist in DB<br>
+{{BZ|997422}} - Problems in ListModelTypeAheadListBoxEditor<br>
+{{BZ|997542}} - SSH Port in Edit host is always 22<br>
+{{BZ|997547}} - wrong favicon.ico of ovirt instead of rhev<br>
+{{BZ|997901}} - "Migrating" status icon needs adjustment, Image for disabled "Suspend" button is too contrasted<br>
+{{BZ|997910}} - Cannot get snapshots collection via API after live snapshot creation<br>
+{{BZ|998386}} - [Local] Failed add a host via “Guide Me” on Local Data Center<br>
+{{BZ|998479}} - Updated user information in OpenLDAP are not propagated to engine<br>
+{{BZ|998634}} - vnic_profile_id gets lost when snapshot is previewed<br>
+{{BZ|998705}} - When selecting an active VM the console button is not enabled immediately<br>
+{{BZ|998907}} - canDoAction fails when removing imported vm from export domain<br>
+{{BZ|998921}} - [upgrade] correctly detect if packages can be rollbacked<br>
+{{BZ|998938}} - GuideMe AddHost does not pass OverrideFirewall<br>
+{{BZ|998997}} - SPM priority doesn't affect the SPM selection<br>
+{{BZ|999048}} - VM permissions entries remain in database after force deleting data-center<br>
+{{BZ|999283}} - It's impossible to create/change the VNIC profile to an empty one<br>
+{{BZ|999461}} - SetupNetworks fails during host installation<br>
+{{BZ|999550}} - [RHEVM][webadmin] When creating a VM from template, the dialog presents incorrect VNIC profiles<br>
+{{BZ|999630}} - [RHEVM-ENGINE] Host selection is override if host can't run VM<br>
+{{BZ|999640}} - REST-API: Adding and updating host by the API missing supported parameters<br>
+{{BZ|999799}} - Network QoS burst units should be MB<br>
+{{BZ|999812}} - RestAPI URI template style query  for 'users' and 'disks' resources do not work.<br>
+{{BZ|999879}} - Initial Run subsection not present by default at Run Once dialog<br>
+{{BZ|999896}} - When RuntimeException occurs at endAction, the endAction part will be rerun over and over again<br>
+{{BZ|999951}} - AddVmTemplateCommand failes - null value in column "device_id" violates not-null constraint<br>
+{{BZ|999964}} - Unclear completion message in engine-setup esp for upgrades<br>
+{{BZ|999977}} - [TEXT] Change Virtio -> VirtIO in Edit VM dialog for VirtIO console<br>
+{{BZ|1000039}} - Change multi-monitor setting in VM Console option dialog<br>
+{{BZ|1000049}} - RHEV installer should install and configure rhevm-websocket-proxy<br>
+{{BZ|1000068}} - [TEXT] change "Cannot run VM. The VM status is illegal." to "Cannot run VM. The VM is already running"<br>
+{{BZ|1000222}} - [ALL_LANG][Admin Portal] Better to list the remove items in 'Remove Network QoS' dialog.<br>
+{{BZ|1000224}} - [ALL_LANG][Admin Portal] Unlocalized string 'Role ... on User ...' in 'Remove Permission' dialog.<br>
+{{BZ|1000278}} - [ja_JP][Admin Portal] Word 'Public' broken into two lines in 'Profiles' panel of 'New Logical Network' dialog.<br>
+{{BZ|1000285}} - [ALL_LANG][Admin Portal] Up-Down buttons' text displayed as garbage string in 'Import Networks' dialog.<br>
+{{BZ|1000297}} - [ALL_LANG][Admin Portal] Should display the VM name instead of 'null' in 'Remove Network Interface(s)' dialog.<br>
+{{BZ|1000306}} - [ALL_LANG][Admin Portal] Should display the template name instead of 'null' in 'Remove Network Interface(s)' dialog.<br>
+{{BZ|1000399}} - Not possible to change quota of disk in enforced mode.<br>
+{{BZ|1000789}} - Failed to create VM from template without any image disks<br>
+{{BZ|1000801}} - Although when creating network with profile you check "Public" checkbox, the "Permission" for everyone is not created<br>
+{{BZ|1000804}} - Inconsistency in naming of Profile usages<br>
+{{BZ|1000810}} - It's impossible to start VM (or hotplug) when VNIC profile on the VM has QOS configured only on Inbound or only on Outbound<br>
+{{BZ|1000824}} - Failed Migrate VM - NullPointerException<br>
+{{BZ|1000871}} - A very minor typo found while translating [TEXT]<br>
+{{BZ|1000883}} - [ja_JP][Admin Portal] Overlapped string 'Interface Mappings' in 'Agent Configuration' pane of 'Add or Edit Provider' dialogs.<br>
+{{BZ|1000964}} - [rhevm] Backend - Template - Cannot change "optimized for" to Desktop<br>
+{{BZ|1000968}} - [ja_JP][User Portal] String 'Remote Desktop' broken into two lines in 'Console Options' dialog.<br>
+{{BZ|1001000}} - It's impossible to create or edit VNIC profile on VM Interface Profile tab with DC 3.2 and engine 3.3<br>
+{{BZ|1001017}} - Quota resources are not counted correctly when vm with snaphots is removed.<br>
+{{BZ|1001068}} - Importing VM to DC without original VNIC profile can arbitrary put VNIC profile with port mirroring on its network when it shouldn't<br>
+{{BZ|1001079}} - Pollution with same event in engine.log - Failed to invoke scheduled method OnTimer: java.lang .reflect.InvocationTargetException<br>
+{{BZ|1001105}} - Permission for everyone are not reflected on specific user<br>
+{{BZ|1001115}} - fence_apc_snmp VdsFenceOptionMapping uses unsupported secure option<br>
+{{BZ|1001159}} - [rhevm] Backend - Webadmin - Cluster Properties dialog box - Disable "+" when no more keys are available<br>
+{{BZ|1001172}} - Hitting the refresh button doesn't refresh the disks list on UserPortal<br>
+{{BZ|1001182}} - [rhevm] Webadmin - unable to choose a policy different than 'none'<br>
+{{BZ|1001410}} - [ALL_LANG][Admin Portal] Unlocalized string 'User: with Role: ' in 'Remove System Permission(s)' dialog.<br>
+{{BZ|1001415}} - [zh_CN][Admin Portal] Translated string of 'Last' broken into two lines in the 'Enabled Filters' field of 'Edit Cluster Policy' dialog.<br>
+{{BZ|1001546}} - [de_DE, es_ES][RHEVM3.3][Admin Portal] - Indentation error found on New Network QoS page under Data Center Tab<br>
+{{BZ|1001554}} - [de_De][RHEVM3.3][Admin Portal] - Misplaced 'Help' tooltip of Virtual Machin Migrate page under Host tab<br>
+{{BZ|1001557}} - [fr_FR][Admin Portal] Help icon button misaligned in 'Attach ISO Library' dialog.<br>
+{{BZ|1001572}} - PM options for secondary agent are not saved<br>
+{{BZ|1001851}} - [fr_FR][Admin Portal] Garbage string displayed in the tooltips of '#path' column name in 'Edit Domain' -> 'Targets>LUNs' pane.<br>
+{{BZ|1001853}} - [fr_FR][ja_JP][Admin Portal] String 'Any Host in Cluster' broken into two lines in 'Run Virtual Machines(s)' dialog.<br>
+{{BZ|1001857}} - [fr_FR][Admin Portal] String broken into two lines in 'New Network Interface' dialog.<br>
+{{BZ|1001874}} - [en_US][ALL_LANG] [User Portal] Better to use question sentence 'Are you sure you want to remove the following items?' instead of 'Template(s)' in 'Remove Template(s)' dailog.<br>
+{{BZ|1002093}} - External scheduler balancing don't work due to ClassCastException.<br>
+{{BZ|1002171}} - Policy creation dialog: fields reset when changing options<br>
+{{BZ|1002281}} - Network QoS parameters aren't sent to vdsm on nic hotplug<br>
+{{BZ|1002353}} - error message in engine.log regarding a 404 response when attempting to read "/doc/ovirt-engine/manual/DocumentationPath.csv"<br>
+{{BZ|1002483}} - VnicProfiles action groups are missing in RolesTreeView<br>
+{{BZ|1002588}} - UserVmManager has import_export_vm permission, but there is no such action in UserPortal.<br>
+{{BZ|1002664}} - Failures to remove images from an import domain result in imported images on data domains being marked as illegal.<br>
+{{BZ|1002695}} - [User portal] Windows 7 x64 is launched with emulated AC97 sound card instead of Intel HDMA<br>
+{{BZ|1002749}} - AIO installer fails at local host installation with 3.3rc2 packages<br>
+{{BZ|1002804}} - rhevm-setup uninstalls rhevm on failure if user chose to continue with inability to rollback<br>
+{{BZ|1002854}} - engine-setup fails to install when Gluster only mode is selected<br>
+{{BZ|1002902}} - no way to select a cluster in new pool dialog<br>
+{{BZ|1003241}} - [engine-web-admin] "Select Host to be used" on remove storage domain window should be greyed out in case user do not choose "Format Domain" option when removing an unattached ISO/export domain<br>
+{{BZ|1003282}} - [RHEVM-ENGINE] wrong error when updating host IP address using REST API<br>
+{{BZ|1003506}} - [vdsm] after a failure in moveImage, deleteImage task won't be cleaned on vdsm<br>
+{{BZ|1003523}} - [engine] vnic_profile_id is not copied to new vm when cloning vm from snapshot<br>
+{{BZ|1003609}} - [frontend] no way to set empty network profile<br>
+{{BZ|1003649}} - It is impossible to hotplug a disk if the previous hotplug failed<br>
+{{BZ|1003775}} - <product__info> is missing 'name' and 'vendor' fields in rest<br>
+{{BZ|1003779}} - Add/remove VNICs in new VM dialog<br>
+{{BZ|1003787}} - Creating VNIC profile with "Allow all user..."  checkbox checked results in Null(Network) permissions under Users permissions<br>
+{{BZ|1003796}} - [rhevm] Webadmin - Events - Search box with value "Events: Templates =*" gives error (Exception message is StatementCallback)<br>
+{{BZ|1003839}} - Not possible to remove vm or re-assign quota of vm disk, when vm had assigned quota which no longer exists.<br>
+{{BZ|1003869}} - engine-backup --mode=restore fails on unrecognized option<br>
+{{BZ|1003881}} - VNIC profile aren't exposed as a subcollection from  a single network resource<br>
+{{BZ|1003902}} - [engine-backend] [text-only] [external-provider] import of rhos image using glance over rhev fails with: "Unable to get the disk image from the provider proxy: java.lang.RuntimeException: Unable to recognize QCOW2 format"<br>
+{{BZ|1004005}} - ISO Domain set-up during run of 'rhevm-setup' fails to attach to Data Center<br>
+{{BZ|1004014}} - CPU pinning not properly loaded to WA portal Virtual Machine tab<br>
+{{BZ|1004066}} - Host: Exit message: internal error No more available PCI addresses<br>
+{{BZ|1004395}} - ISO Domain set-up during run of 'engine-setup' fails to attach to Data Center<br>
+{{BZ|1004582}} - Host name is not valid: The following addreses: 192.168.100.7 can't be mapped to non loopback devices on this host<br>
+{{BZ|1004675}} - [Admin Portal] Attempt to add a 3.2 host into 3.3 env fails but the host cannot be removed<br>
+{{BZ|1004677}} - Not possible to select quota, which is assigned to specific storage.<br>
+{{BZ|1004695}} - emulated machine reset on cluster compatibility level change<br>
+{{BZ|1005481}} - [engine-backend] [external-provider] there is no indicator by engine about failure in DownloadImage<br>
+{{BZ|1005544}} - engine.log doesn't include log on custom properties.<br>
+{{BZ|1005548}} - Can't set QoS from edit network window<br>
+{{BZ|1005562}} - RHEVM-RESTAPI: "Start" vm sent as run once<br>
+{{BZ|1005689}} - [Admin Portal] New server VM has 'Disable strict user checking' disabled/unchecked by default<br>
+{{BZ|1005749}} - REST-API: Disallow endless authentication session<br>
+{{BZ|1005846}} - Creating a new VM, the "Virtual Disk" configuration never updates that the new disk was created.<br>
+{{BZ|1006282}} - [rhevm] Webadmin - Tags - Create new tag reveals two new tabs - Provider & VM Interface Profiles<br>
+{{BZ|1006326}} - Audit logs must be added to guest alignment  feature.<br>
+{{BZ|1006400}} - [engine-backend] [external-provider] disk gets stuck in 'Locked' state when importing an image which had been deleted from glance<br>
+{{BZ|1006402}} - Uninformative error message when trying to do disk alignment on disk that has snapshots while VM is running.<br>
+{{BZ|1006708}} - gluster - deactivate UFO/SWIFT on cluster for 3.3<br>
+{{BZ|1006762}} - Adding job with auto_cleared false, not working correct<br>
+{{BZ|1006811}} - Unable to copy template's disk from one storage domain to another.<br>
+{{BZ|1006878}} - [engine-backend] [external-provider] NullPointerException when trying to force destroy a glance storage domain on RHEVM<br>
+{{BZ|1007279}} - Edit network | Webadmin should create a default vnic profile when network is changed from non-vm to vm network<br>
+{{BZ|1007280}} - UserTemplateBaseVm role has a wrong name<br>
+{{BZ|1007282}} - Vm try to run on host with overloaded RAM when only RAM filter is used. And vm is pinned to overloaded host.<br>
+{{BZ|1007286}} - Add/Edit network | profile name should be grayed out when network is non-vm<br>
+{{BZ|1007443}} - ovirt-engine-notifier cannot be stopped properly<br>
+{{BZ|1007506}} - [RHEVM] [webadmin] [UI] Remove custom MAC address checkbox and Example text from Blank Template NIC<br>
+{{BZ|1007751}} - [RHS-C] warning: user ovirt does not exist - using root / warning: group ovirt does not exist - using root<br>
+{{BZ|1007784}} - Windows template created on 3.2 setup has Single PCI checked after import to 3.3<br>
+{{BZ|1008153}} - When pintohost filter is active, then vm which is not pinned fail to migrate.<br>
+{{BZ|1008523}} - Scroll bar is missing when picking up a VNIC profile during VM creation<br>
+{{BZ|1008975}} - [ovirt-engine-notifier] - Mail - Cannot send mails with SSL  ("Connection refused")<br>
+{{BZ|1008999}} - Gateway field can be updated for non-rhevm network on 3.2 and 3.1 Cluster and it should not exist on such a Cluster<br>
+{{BZ|1009298}} - [RHEVM] [backend] it is not possible to create new VM without vNIC<br>
+{{BZ|1009599}} - Install fails due to relation "tags_vm_pool_map" already exist<br>
+{{BZ|1009807}} - [ja_JP][Admin Portal] Networks tab -> Import Networks window -> "Network Provider" is not aligned with dropdown box due to insufficient space<br>
+{{BZ|1009863}} - Java update breaks ovirt-engine start<br>
+{{BZ|1009986}} - GUI / welcome page: locale drop down is not clickable when the page contains a scroll-bar<br>
+{{BZ|1009990}} - [AIO] Host does not resolve on NON loopback<br>
+{{BZ|1010856}} - [Admin Portal] Network interface name is already in use<br>
+{{BZ|1011116}} - Update NIC doesn't actually update the NIC if only network is passed (without passing VNIC profile)<br>
+{{BZ|1011435}} - NPE when updating a cluster compatibility version<br>
+{{BZ|1011437}} - Administration Portal, not Administrator Portal in main RHEVM page<br>
+{{BZ|1011474}} - Shutting down a vm after creating a snapshots causes async task to get stuck<br>
+{{BZ|1011486}} - [RHEVM] cannot assign bridgeless rhevm and VLAN network to the same host NIC<br>
+{{BZ|1011547}} - [RHEVM] run once returns error 500<br>
+{{BZ|1011569}} - Cannot remove an iscsi storage connection not attached to any storage domain<br>
+{{BZ|1011853}} - /etc/sysconfig/nfs sets variables that are not used by the nfs service<br>
+{{BZ|1012032}} - [RHEVM][webadmin] make network profile name check behavior consistent within GUI<br>
+{{BZ|1012330}} - Product key in sysprep.inf is empty in spite of correct ProductKey* and OS type being set<br>
+{{BZ|1012455}} - rhevm cobertura instrumentation fails automated tests<br>
+{{BZ|1012821}} - [RHEVM] [webadmin] [text] misleading help text in Create New Bond dialog<br>
+{{BZ|1012826}} - Gluster Host force remove is not working<br>
+{{BZ|1013341}} - DB upgrade from 3.2 to 3.3 fails<br>
+{{BZ|1013347}} - /etc/sysconfig/nfs is deleted on cleanup<br>
+{{BZ|1013491}} - oVirt+Neutron: IP lost when shutting down the instance<br>
+{{BZ|1013998}} - Fix 'Wair for Launch" typo<br>
+{{BZ|1014012}} - engine-setup creates a new database if postgresql is down<br>
+{{BZ|1014013}} - if Migration Network is VLAN-tagged, traffic flows to management network<br>
+{{BZ|1014115}} - engine-setup sometimes logs passwords<br>
+{{BZ|1014546}} - [UserPortal][AdminPortal] Use of Guest IP address in the UserPortal instead of FQDN causing IE-based RDP client domain name mismatch<br>
+{{BZ|1014661}} - Required network checkbox selection not working properly when creating new network from Cluster tab<br>
+{{BZ|1014700}} - No way to remove disabled external plugins<br>
+{{BZ|1015037}} - engine-cleanup after manual db remove exits with a non-helpful message<br>
+{{BZ|1015154}} - Run Once doesn't respect custom domain value<br>
+{{BZ|1015170}} - [engine] Unable to remove snapshot after detaching disk from vm<br>
+{{BZ|1015574}} - List of applications is not populated in RHEV-M for guests<br>
+{{BZ|1015872}} - Edit VM Disk causes NullPointerException<br>
+{{BZ|1016826}} - Cannot set disk interface in user portal<br>
+{{BZ|1016982}} - [oVirt][Neutron] External network not blocked for hot updating<br>
+{{BZ|1019618}}}} - REST-API: Inconsistent schema implementation in PayloadFile<br>
+
+[[Category:Documentation]]
+[[Category:Releases]]
