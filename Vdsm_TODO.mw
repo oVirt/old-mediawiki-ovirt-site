@@ -65,8 +65,8 @@
 
 * Define an API.VMState "enumeration" and use API.VMState.UP instead of the string 'Up'.
 
-* factor betterPopen and betterThreading out of vdsm. They deserve a pipy review under the names [https://pypi.python.org/pypi/cpopen cPopen] and [http://pypi.python.org/pypi/pthreading pthreading] respectively.
-https://bugzilla.redhat.com/show_bug.cgi?id=903246
+* <strike>factor betterPopen and betterThreading out of vdsm. They deserve a pipy review under the names [https://pypi.python.org/pypi/cpopen cPopen] and [http://pypi.python.org/pypi/pthreading pthreading] respectively.
+https://bugzilla.redhat.com/show_bug.cgi?id=903246</strike>
 
 * factor the task framework out of storage. Networking may need it, too.
 
