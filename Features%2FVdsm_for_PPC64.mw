@@ -103,18 +103,24 @@ http://www.ovirt.org/Vdsm_Developers#Basic_installation
 * Create the '50-fake.conf' file:
 
 https://github.com/oVirt/ovirt-host-deploy/blob/master/README
+
+<pre>
 /etc/ovirt-host-deploy.conf.d/50-fake.conf
 [environment:enforce]
 VDSM/checkVirtHardware=bool:False
 VDSM/configOverride=bool:False
- 
+</pre> 
+
 * Create the file '50-development.conf':
 
 https://github.com/oVirt/ovirt-host-deploy/blob/master/README
+
+<pre>
 /etc/ovirt-host-deploy.conf.d/50-development.conf
 [environment:enforce]
 VDSM/configOverride=bool:False
- 
+</pre> 
+
 * Enable the fake mode in the vdsm.conf file:
 /etc/vdsm/vdsm.conf
 fake_kvm_support = True
