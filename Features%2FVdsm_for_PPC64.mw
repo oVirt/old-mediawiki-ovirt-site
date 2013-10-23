@@ -122,10 +122,12 @@ VDSM/configOverride=bool:False
 </pre> 
 
 * Enable the fake mode in the vdsm.conf file:
+<pre>
 /etc/vdsm/vdsm.conf
 fake_kvm_support = True
 fake_kvm_architecture = ppc64
- 
+</pre> 
+
 * Execute the command:
 systemctl restart vdsmd.service
 
