@@ -33,6 +33,9 @@ $ openssl passwd -salt 42 ovirt
 ** /tmp/ovirt.log (in rare cases)
 * Engine related
 ** /var/log/vdsm*
+* Gluster related
+** /var/log/vdsm*
+** /var/log/glusterfs*
 
 == Shell access ==
 * '''Warning''' -- Changes you make from the shell are not persistent by default and will be lost if you reboot the host
