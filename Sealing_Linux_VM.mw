@@ -14,7 +14,8 @@ For Handling the above we have the process of sysprep. For guests with Windows O
  # touch /.unconfigured
 <li> Remove ssh host keys:</li>
  # rm -i /etc/ssh/ssh_host_*
-<li> Set HOSTNAME=localhost.localdomain in /etc/sysconfig/network</li>
+<li> Optionally, for environments where a host cannot determine its own name via DNS based lookups:  </li>
+  # echo "HOSTNAME=localhost.localdomain" >> /etc/sysconfig/network
 <li> Remove UDEV rules:</li>
  # rm -i /etc/udev/rules.d/70-persistent*
 <li> Remove the HWADDR= line from /etc/sysconfig/network-scripts/ifcfg-*</li>
