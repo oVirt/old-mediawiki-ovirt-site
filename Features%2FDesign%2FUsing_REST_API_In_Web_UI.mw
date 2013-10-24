@@ -39,7 +39,7 @@ The primary goal of utilizing [[REST-Api|Engine REST API]] in oVirt web UI is to
 * not using Java <code>BackendLocal</code> interface directly, i.e. abstract away from query/action concept used internally by Engine backend
 
 
-The secondary goal of this effort is to provide implementation utilizing Engine REST API in a way that allows reuse by any JavaScript-based web application, be it oVirt web UI, [[Features/UIPlugins|UI plugins] or any other application.
+The secondary goal of this effort is to provide implementation utilizing Engine REST API in a way that allows reuse by any JavaScript-based application, be it oVirt web UI, [[Features/UIPlugins|UI plugins]] or any other web application.
 
 == Design Proposal ==
 Engine REST API is described by <code>rsdl_metadata.yaml</code> (RESTful operations) and <code>api.xsd</code> (resource types) within <code>restapi-definition</code> module.
