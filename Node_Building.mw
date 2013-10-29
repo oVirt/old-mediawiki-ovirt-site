@@ -116,6 +116,18 @@ The oVirt project is using [http://www.jenkins-ci.org Jenkins] for CI.
 
 There are [http://jenkins.ovirt.org/view/ovirt_node/ several jobs related to Node] which also build per-commit and nightly builds.
 
+= Adding a plugin to a build =
+Plugins are a way to extend oVirt Node ISOs. To add a plugin to an existing image proceed like this:
+# Prepare or get the plugin rpm
+# Download the prepared repo files
+## fedora: http://resources.ovirt.org/releases/node-base/edit-node.repo
+## el6: http://resources.ovirt.org/releases/node-base/edit-node-el6.repo
+# Edit the ISO using `edit-node`:
+## `ovirt-node/tools/edit-node --repo edit-node.repo --install <package-name> <iso-name>`
+<pre>
+$ ovirt-node/tools/edit-node --repo edit-node.repo --install ovirt-node-plugin-vdsm ovirt-node-iso-3.0.2-1.0.0.fc19.iso
+</pre>
+
 = Where to go from now =
 
 Now that you've got an oVirt Node ISO you can use
