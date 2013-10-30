@@ -50,7 +50,6 @@ The Benefit to oVirt users will be an easy-to-use backup-restore capabilities, a
 The main idea will be to make sure the ovfs were all persisted to the required location according to the type and that later on the system can be restored as a whole, as well as partial systems (when the user picks certain Vms, and not the whole system).<br/>
 Tests should be done on each Backup Provider separately, followed by backup and restore tests on a system with several Backup Providers.
 
-
 === Comments and Discussion ===
 * Refer to [[Talk:Backup_Provider]] 
 
