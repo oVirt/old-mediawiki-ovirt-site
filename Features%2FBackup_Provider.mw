@@ -22,8 +22,9 @@ One system may be configured with several Backup Providers.<br/>
 Finally we will add the restore functionality, which is currently missing from the code altogether.
 ====Phase 1====
 Extract the current code into a Backup Provider.<br/>
-The backup will be on the system level, applied to all DC's in the system as default, with the option to do it for only one DC.
+The backup will be on the system level, applied to all DCs in the system as default, with the option apply for only one DC.
 The code extraction will result in one specific Provider of type MSD.
+
 ====Phase 2====
 * Persist the ovf to the following different locations (in addition to MSD):
 ** Local FS - We may want to persist the ovfs to a DB. Other than the relative simplicity of using SQL rather than FS hierarchy for the ovf files, another motivation for this metod is the fact that we need to display all VMs to the user when restoring (The user  may want to pick which VMs he wants to restore). For this, we need VM identities, specifically names. Since Guids aren't enough it might be simplest to use a DB to hold the some more data on the ovf.
