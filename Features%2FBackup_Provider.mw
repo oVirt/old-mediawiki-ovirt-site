@@ -38,26 +38,20 @@ The code extraction will result in one specific Backup Provider of type MSD.
 This feature will allow actual Backing up and Restoring oVirt systems. Current Backup doesn't actually backup the system, mainly since there's no restore.
 Other than the obvious most needed restore, this feature will arrange the Backup into a Provider,  allowing the user to set and use it easily.
 Adding the varied Provider types will add diversity to the system. Specifically adding the called-for local FS Backup Provider.
-The Benefit to oVirt users will be an easy-to-use backup-restore capabilities, at system level.<br/>
+The Benefit to oVirt users will be an easy-to-use backup-restore capabilities, at system level.
 
 === Dependencies / Related Features ===
 <!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
 
-What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature?
-
-
 === Documentation / External references ===
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
-Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs.
 
 === Testing ===
+The main idea will be to make sure the ovfs were all persisted to the required location according to the type and that later on the system can be restored as a whole, as well as partial systems (when the user picks certain Vms, and not the whole system).<br/>
+Tests should be done on each Backup Provider separately, followed by backup and restore tests on a system with several Backup Providers.
 
-Explain how this feature may be tested by a user or a quality engineer. List relevant use cases and expected results.
 
 === Comments and Discussion ===
-
-This below adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page
-
-* Refer to [[Talk:Your feature name]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
+* Refer to [[Talk:Backup_Provider]] 
 
 [[Category:Feature]]
