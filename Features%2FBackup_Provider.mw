@@ -35,9 +35,10 @@ The code extraction will result in one specific Backup Provider of type MSD.
 * Attach existing Backup Provider.  For example, should a user stop backup and then want to re-attach it. The user should also be able to add an existing Backup Provider (with data) to a new system. In this case the user should be prompted whether to pick up from latest backup or start from scratch.
 
 === Benefit to oVirt ===
-<!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
-What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?
-
+This feature will allow actual Backing up and Restoring oVirt systems. Current Backup doesn't actually backup the system, mainly since there's no restore.
+Other than the obvious most needed restore, this feature will arrange the Backup into a Provider,  allowing the user to set and use it easily.
+Adding the varied Provider types will add diversity to the system. Specifically adding the called-for local FS Backup Provider.
+The Benefit to oVirt users will be an easy-to-use backup-restore capabilities, at system level.<br/>
 
 === Dependencies / Related Features ===
 <!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
