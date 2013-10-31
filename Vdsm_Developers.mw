@@ -61,7 +61,7 @@ When building from source, you should enale the ovirt-beta repository, to satisf
 
  <nowiki>
  cd ~/rpmbuild/RPMS
- yum install --enablerepo=ovirt-beta x86_64/* noarch/vdsm-xml* noarch/vdsm-cli*</nowiki>
+ yum install --enablerepo=ovirt-beta x86_64/* noarch/vdsm-xml* noarch/vdsm-cli* noarch/vdsm-python-zombiereaper*</nowiki>
 
 If needed, enable the vdsm service:
  <nowiki>chkconfig vdsmd on</nowiki>
