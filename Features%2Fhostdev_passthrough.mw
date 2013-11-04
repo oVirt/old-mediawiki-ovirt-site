@@ -1,0 +1,19 @@
+== VM device PCI passthrough ==
+
+=== Summary ===
+This feature will allow VDSM to assign pci device to guest using passthrough
+
+=== Owner ===
+* Name: [[User:Martin Polednik| Martin Polednik]]
+* Email: <mpoledni@redhat.com>
+
+=== Current status ===
+* Last updated date: Mon Nov 04 2013
+TODO
+
+=== Detailed Description ===
+TODO
+
+=== Notes ===
+TODO
+[[Category:Feature]]
