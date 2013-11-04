@@ -19,7 +19,7 @@
 
 * <strike>require only what we actually use in libvirt, instead of the whole libvirt.rpm.</strike> done in Vdsm and mom. http://gerrit.ovirt.org/#/c/15760/
 
-* make vdsm.rpm noarch by moving safelease to its own rpm
+* vdsm/sampling.py: stop storing self._ifids and _rates in the thread. Rate can sit in the interfaces dict per sample.
 
 == Testing ==
 * <strike>write an automatic script that runs on each and every new change to gerrit, and adds an insulting comment if <tt>pyflakes</tt> fails for the new change.</strike> Thanks, Robert!
