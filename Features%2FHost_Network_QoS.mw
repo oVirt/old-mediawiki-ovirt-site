@@ -15,7 +15,7 @@ This feature provides means by which to control the traffic of a specific networ
 
 === Current Status ===
 * Status: design
-* Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
+* Last updated: November 4th, 2013.
 
 === Detailed Description ===
 Generally speaking, network QoS (Quality of Service) in oVirt could be applied on a variety of different levels:
