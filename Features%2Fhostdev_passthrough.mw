@@ -5,7 +5,7 @@ This feature will allow VDSM to assign pci device to guest using passthrough
 
 === Owner ===
 * Name: [[User:Martin Polednik| Martin Polednik]]
-* Email: <mpoledni@redhat.com>
+* Email: [mailto:mpoledni@redhat.com mpoledni@redhat.com]
 
 === Current status ===
 * Last updated date: Mon Nov 05 2013
