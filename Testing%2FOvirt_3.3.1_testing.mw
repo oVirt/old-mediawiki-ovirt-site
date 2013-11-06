@@ -17,7 +17,7 @@ If you're willing to participate please add yourself to the below table:
 {|border="1"
 ! Name !! part tested !!Storage !! Networking !! Distribution !! Bugs
 |-
-| Sandro Bonazzola  || engine-setup , clean install || NFS  || basic || Fedora-19 ||
+| [[User:SandroBonazzola|SandroBonazzola]]  || engine-setup , clean install || NFS  || basic || Fedora-19 ||
 |-
-| Sandro Bonazzola  || engine-setup , upgrade from 3.3.0 || NFS  || basic || Fedora-19 ||
+| [[User:SandroBonazzola|SandroBonazzola]]  || engine-setup , upgrade from 3.3.0 || NFS  || basic || Fedora-19 ||
 |-
