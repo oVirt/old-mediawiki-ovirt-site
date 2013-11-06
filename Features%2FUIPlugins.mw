@@ -426,18 +426,15 @@ api.addSubTabActionButton('Host', 'Event', 'Custom Button', {
 |-
 | <code>showDialog</code>
 | title, dialogToken, contentUrl, width, height, options
-| TODO DESC
-| TODO EXAMPLE
+| TODO DESC + EXAMPLE
 |-
 | <code>setDialogContentUrl</code>
 | dialogToken, contentUrl
-| TODO DESC
-| TODO EXAMPLE
+| TODO DESC + EXAMPLE
 |-
 | <code>closeDialog</code>
 | dialogToken
-| TODO DESC
-| TODO EXAMPLE
+| TODO DESC + EXAMPLE
 |}
 
 == API option reference ==
