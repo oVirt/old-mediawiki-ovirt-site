@@ -244,7 +244,7 @@ UI plugin infrastructure maintains a common lifecycle to control execution of in
 |-
 | <code>{EntityType}SelectionChange</code>
 | <code><span style="color:magenta">arguments</span></code>
-| Called when item selection changes in the given main tab. Replace <code>{EntityType}</code> with name of desired entity. Refer to [[#Entity_type_reference|supported entity types]] for details.
+| Called when item selection changes in the given main tab. Replace <code>{EntityType}</code> with name of desired entity. Refer to [[#Entity_type_reference|entity types]] for details on supported entity names and their object representations.
 |-
 | colspan="3" |
 === REST API integration ===
@@ -257,10 +257,10 @@ UI plugin infrastructure maintains a common lifecycle to control execution of in
 === Cross-window messaging ===
 |-
 | <code>MessageReceived</code>
-| <code>{<span style="color:blue">string</span>|<span style="color:green">object</span>} data</code> <br/> <code><span style="color:green">object</span> sourceWindow</code>
+| <code><span style="color:green">object</span> data</code> <br/> <code><span style="color:green">object</span> sourceWindow</code>
 | Called when another <code>Window</code> (i.e. custom UI contributed by a plugin) sends message to WebAdmin <code>Window</code> via HTML5 [http://en.wikipedia.org/wiki/Web_Messaging postMessage] API. In a typical scenario, custom UI living in <code>iframe</code> context sends message to WebAdmin (parent) <code>Window</code> which in turn dispatches the message to individual plugins. Refer to <code>allowedMessageOrigins</code> in [[#API_option_reference|API options]] for details on customizing origins from which messages will be accepted. The <code>sourceWindow</code> can be used to establish two-way communication between plugin code and sender's <code>Window</code> object.
 |}
-<code>*</code> If specified, <code><span style="color:magenta">arguments</span></code> represent the built-in (implicit) JavaScript function argument array.
+<code>*</code> If specified, <code><span style="color:magenta">arguments</span></code> represent the implicit JavaScript [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments function argument object].
 
 == API function reference ==
 {| class="wikitable" width="100%"
@@ -268,28 +268,61 @@ UI plugin infrastructure maintains a common lifecycle to control execution of in
 |-
 ! style="width:10%;" | Function
 ! style="width:20%;" | Arguments
-! style="width:40%;" | Description
-! Example
+! Description
 |-
-| colspan="4" |
+| colspan="3" |
 === Core functions ===
 |-
-| <code>options</code>
-|-
 | <code>register</code>
+| <code><span style="color:green">object</span> eventHandlerObject</code>
+| Registers the event handler object, i.e. object containing [[#Application_event_reference|event handler functions]] which facilitate WebAdmin → plugin communication. The <code>register</code> function must be called with valid <code>eventHandlerObject</code> before calling <code>ready</code> function. The <code>eventHandlerObject</code> must be an object declaring event handler functions as its properties, or an empty object. After the <code>eventHandlerObject</code> has been set for given plugin, calling <code>register</code> function has no effect.
+<pre>
+api.register({
+    UiInit: function() {
+        api.addSubTab('Host', 'Special Host Tab', 'special-host-tab',
+            '/ovirt-engine/webadmin/plugin/ExamplePlugin/special-host-tab.html');
+        api.setTabAccessible('special-host-tab', false);
+    },
+    HostSelectionChange: function() {
+        var specialHostSelected = arguments.length == 1
+            && arguments[0].name.indexOf('special') != -1;
+        api.setTabAccessible('special-host-tab', specialHostSelected);
+    }
+});
+</pre>
+|-
+| <code>options</code>
+| <code><span style="color:green">object</span> apiOptionsObject</code>
+| Provides custom API options that affect specific features of plugin API, overriding default API options. The <code>options</code> function can be called anytime during the lifetime of a plugin. Refer to [[#API_option_reference|API options]] for details.
+<pre>
+api.options({
+    allowedMessageOrigins: ['http://one.com', 'https://two.org']
+});
+</pre>
 |-
 | <code>ready</code>
+| -
+| Notifies the infrastructure to proceed with plugin initialization, calling <code>UiInit</code> event handler function (if defined) as soon as the plugin invocation context is entered (refer to [[#Plugin_lifecycle|plugin lifecycle]] for details). The <code>register</code> function must be called with valid <code>eventHandlerObject</code> before calling <code>ready</code> function, otherwise the <code>ready</code> function has no effect.
+<pre>
+api.ready();
+</pre>
 |-
 | <code>configObject</code>
+| -
+| Returns the runtime plugin configuration object containing custom configuration (if any) merged on top of default configuration (if any). Refer to [[#Plugin_user_configuration|plugin user configuration]] for details. In case neither the default nor custom configuration is available for given plugin, the <code>configObject</code> function returns an empty object.
+<pre>
+var conf = api.configObject();
+var favoriteBand = conf.band || '';
+</pre>
 |-
-| colspan="4" |
+| colspan="3" |
 === User information ===
 |-
 | <code>loginUserName</code>
 |-
 | <code>loginUserId</code>
 |-
-| colspan="4" |
+| colspan="3" |
 === Main and sub tabs ===
 |-
 | <code>addMainTab</code>
@@ -304,7 +337,7 @@ UI plugin infrastructure maintains a common lifecycle to control execution of in
 |-
 | <code>addSubTabActionButton</code>
 |-
-| colspan="4" |
+| colspan="3" |
 === Dialogs ===
 |-
 | <code>showDialog</code>
