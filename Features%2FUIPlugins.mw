@@ -280,7 +280,7 @@ UI plugin infrastructure maintains a common lifecycle to control execution of in
 api.register({
     UiInit: function() {
         api.addSubTab('Host', 'Special Host Tab', 'special-host-tab',
-            '/ovirt-engine/webadmin/plugin/ExamplePlugin/special-host-tab.html');
+            '/ovirt-engine/webadmin/plugin/ExamplePlugin/special-tab.html');
         api.setTabAccessible('special-host-tab', false);
     },
     HostSelectionChange: function() {
@@ -316,35 +316,128 @@ var favoriteBand = conf.band || '';
 </pre>
 |-
 | colspan="3" |
-=== User information ===
+===  Authentication ===
 |-
 | <code>loginUserName</code>
+| -
+| Returns user name and domain of currently logged in user, following <code>user@domain</code> convention.
+<pre>
+var userNameWithDomain = api.loginUserName();
+var domain = userNameWithDomain.substring(userNameWithDomain.indexOf('@') + 1);
+</pre>
 |-
 | <code>loginUserId</code>
+| -
+| Returns [http://en.wikipedia.org/wiki/Universally_unique_identifier UUID] of currently logged in user.
+<pre>
+var userId = api.loginUserId();
+</pre>
 |-
 | colspan="3" |
 === Main and sub tabs ===
 |-
 | <code>addMainTab</code>
+| <code><span style="color:blue">string</span> label</code> <br/> <code><span style="color:blue">string</span> historyToken</code> <br/> <code><span style="color:blue">string</span> contentUrl</code> <br/> <code><span style="color:blue">string</span> options</code>
+| Adds new main tab with content provided from given URL. All arguments are required except for <code>options</code>. The <code>label</code> is the text displayed on tab header. The <code>historyToken</code> serves as unique identifier of the tab, with its value reflected in tab header URL. Recommended <code>historyToken</code> format is <code>letters-with-dashes</code>. The <code>contentUrl</code> is passed to <code>src</code> attribute of <code>iframe</code> element which renders tab content. The <code>options</code> can be undefined, null or object containing additional tab options:
+* <code>alignRight</code> - controls horizontal tab header alignment, default value is <code>false</code>
+<pre>
+api.addMainTab('Custom Tab One', 'custom-tab-one',
+    '/ovirt-engine/webadmin/plugin/ExamplePlugin/one.html'
+);
+api.addMainTab('Custom Tab Two, 'custom-tab-two',
+    '/ovirt-engine/webadmin/plugin/ExamplePlugin/two.html',
+    {
+        alignRight: true
+    }
+);
+</pre>
 |-
 | <code>addSubTab</code>
+| <code><span style="color:blue">string</span> entityTypeName</code> <br/> <code><span style="color:blue">string</span> label</code> <br/> <code><span style="color:blue">string</span> historyToken</code> <br/> <code><span style="color:blue">string</span> contentUrl</code> <br/> <code><span style="color:blue">string</span> options</code>
+| Adds new sub tab with content provided from given URL. All arguments are required except for <code>options</code>. Semantics of <code>label</code>, <code>historyToken</code>, <code>contentUrl</code> and <code>options</code> are identical to ones declared by <code>addMainTab</code> function. The <code>entityTypeName</code> identifies existing main tab to which the newly added sub tab should be associated (only standard main tabs are supported). Refer to [[#Entity_type_reference|entity types]] for details on supported entity names.
+<pre>
+api.addSubTab('Host', 'Custom Host Tab One', 'custom-host-tab-one',
+    '/ovirt-engine/webadmin/plugin/ExamplePlugin/host-one.html'
+);
+api.addSubTab('Host', 'Custom Host Tab Two, 'custom-host-tab-two',
+    '/ovirt-engine/webadmin/plugin/ExamplePlugin/host-two.html',
+    {
+        alignRight: true
+    }
+);
+</pre>
 |-
 | <code>setTabContentUrl</code>
+| <code><span style="color:blue">string</span> historyToken</code> <br/> <code><span style="color:blue">string</span> contentUrl</code>
+| Updates the content URL of given (main or sub) tab. Semantics of <code>historyToken</code> and <code>contentUrl</code> are identical to ones declared by <code>addMainTab</code> function. The <code>setTabContentUrl</code> function works only for tabs added through plugin API.
+<pre>
+api.setTabContentUrl('custom-tab',
+    '/ovirt-engine/webadmin/plugin/ExamplePlugin/tab-content.html');
+</pre>
 |-
 | <code>setTabAccessible</code>
+| <code><span style="color:blue">string</span> historyToken</code> <br/> <code><span style="color:orange">boolean</span> tabAccessible</code>
+| Controls the accessibility of given (main or sub) tab. Semantics of <code>historyToken</code> is identical to one declared by <code>addMainTab</code> function. If <code>tabAccessible</code> is <code>false</code>, corresponding tab header will be hidden in WebAdmin UI and attempts to reveal the given tab manually by manipulating URL will be denied. The <code>setTabAccessible</code> function works only for tabs added through plugin API.
+<pre>
+api.setTabAccessible('custom-tab', false);
+</pre>
 |-
 | <code>addMainTabActionButton</code>
+| <code><span style="color:blue">string</span> entityTypeName</code> <br/> <code><span style="color:blue">string</span> label</code> <br/> <code><span style="color:green">object</span> actionButtonInterface</code>
+| Adds new button to the action panel and/or context menu for the given main tab. Semantics of <code>entityTypeName</code> is identical to one declared by <code>addSubTab</code> function. The <code>label</code> is the text displayed on button. The <code>actionButtonInterface</code> is an object containing (optional) functions and values that override default button behavior:
+* <code>onClick</code> - function called when user clicks the button, arguments are items currently selected in given main tab, no-op by default
+* <code>isEnabled</code> - function called to determine whether the button should be enabled (clickable), arguments are items currently selected in given main tab, returns <code>true</code> by default
+* <code>isAccessible</code> - function called to determine whether the button should be accessible (visible), arguments are items currently selected in given main tab, returns <code>true</code> by default
+* <code>location</code> - controls button location in action panel and main tab's context menu, supported values:
+** <code>OnlyFromContext</code> - button available only from context menu
+** <code>OnlyFromToolBar</code> - button available only from action panel
+** <code>ContextAndToolBar</code> - button available from both action panel and context menu (default value)
+<pre>
+api.addMainTabActionButton('Host', 'Custom Button', {
+    onClick: function() {
+        var selectedHost = arguments[0];
+        var specialHostSelected = selectedHost.name.indexOf('special') != -1;
+        api.setTabAccessible('custom-tab', specialHostSelected);
+    },
+    isEnabled: function() {
+        return arguments.length == 1;
+    }
+});
+</pre>
 |-
 | <code>addSubTabActionButton</code>
+| <code><span style="color:blue">string</span> mainTabEntityTypeName</code> <br/> <code><span style="color:blue">string</span> subTabEntityTypeName</code> <br/> <code><span style="color:blue">string</span> label</code> <br/> <code><span style="color:green">object</span> actionButtonInterface</code>
+| Adds new button to the action panel and/or context menu for the given sub tab. Semantics of <code>label</code> and <code>actionButtonInterface</code> are identical to ones declared by <code>addMainTabActionButton</code> function. The <code>mainTabEntityTypeName</code> and <code>subTabEntityTypeName</code> together identify existing sub tab to which the newly added button should be associated (only standard sub tabs are supported). Refer to [[#Entity_type_reference|entity types]] for details on supported entity names.
+<pre>
+api.addSubTabActionButton('Host', 'Event', 'Custom Button', {
+    onClick: function() {
+        var selectedHostEvent = arguments[0];
+        var specialHostEventSelected = selectedHostEvent.message.indexOf('special') != -1;
+        api.setTabAccessible('custom-tab', specialHostEventSelected);
+    },
+    isEnabled: function() {
+        return arguments.length == 1;
+    }
+});
+</pre>
 |-
 | colspan="3" |
 === Dialogs ===
 |-
 | <code>showDialog</code>
+| title, dialogToken, contentUrl, width, height, options
+| TODO DESC
+| TODO EXAMPLE
 |-
 | <code>setDialogContentUrl</code>
+| dialogToken, contentUrl
+| TODO DESC
+| TODO EXAMPLE
 |-
 | <code>closeDialog</code>
+| dialogToken
+| TODO DESC
+| TODO EXAMPLE
 |}
 
 == API option reference ==
