@@ -1,0 +1,21 @@
+== Summary ==
+This feature enables control over graphics server that is run on VMs. TODO
+
+== Current situation ==
+
+== Owner ==
+* Name: [[User:Fkobzik|Frank Kobzik]]
+* Email: [mailto:fkobzik@redhat.com fkobzik@redhat.com]
+
+== Status ==
+* VDSM
+* Engine backend
+* Engine frontend
+
+== Benefit to oVirt ==
+* Enhancing the possibilities of connecting to the console in oVirt
+* Enrich the VM control possibilites
+
+== Details ==
+
+[[Category:Feature]]
