@@ -80,10 +80,10 @@ Download the game and put its files under <code>/usr/share/ovirt-engine/ui-plugi
 
 
 Plugin file structure should now look like this:
-* <code>/usr/share/ovirt-engine/ui-plugins/space-shooter.json</code>
-* <code>/usr/share/ovirt-engine/ui-plugins/space-shooter-resources/game/...</code>
-* <code>/usr/share/ovirt-engine/ui-plugins/space-shooter-resources/modernizr.custom.js</code>
-* <code>/usr/share/ovirt-engine/ui-plugins/space-shooter-resources/start.html</code>
+* <code>/usr/share/ovirt-engine/ui-plugins/space-shooter.json</code> - plugin descriptor
+* <code>/usr/share/ovirt-engine/ui-plugins/space-shooter-resources/game/...</code> - game files
+* <code>/usr/share/ovirt-engine/ui-plugins/space-shooter-resources/modernizr.custom.js</code> - Modernizr library
+* <code>/usr/share/ovirt-engine/ui-plugins/space-shooter-resources/start.html</code> - plugin host page
 
 
 Let's open plugin host page and add some more JavaScript:
@@ -353,9 +353,13 @@ The <code>config</code> attribute is completely optional and can be used to cont
 
 <code>/etc/ovirt-engine/ui-plugins/space-shooter-config.json</code>
 <pre>
+{
+	...
 	"config": {
 		"allowedOrigins": ["http://127.0.0.1:8080", "https://engine-machine:8765"]
 	}
+	...
+}
 </pre>
 
 
