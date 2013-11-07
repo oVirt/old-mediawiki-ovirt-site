@@ -261,8 +261,8 @@ UI plugin infrastructure maintains a common lifecycle to control execution of in
 === Cross-window messaging ===
 |-
 | <code>MessageReceived</code>
-| <code><span style="color:green">object</span> data</code> <br/> <code><span style="color:green">object</span> sourceWindow</code>
-| Called when another <code>Window</code> (i.e. custom UI contributed by a plugin) sends message to WebAdmin <code>Window</code> via HTML5 [http://en.wikipedia.org/wiki/Web_Messaging postMessage] API. In a typical scenario, custom UI living in <code>iframe</code> context sends message to WebAdmin (parent) <code>Window</code> which in turn dispatches the message to individual plugins. Refer to <code>allowedMessageOrigins</code> in [[#API_option_reference|API options]] for details on customizing origins from which messages will be accepted. The <code>sourceWindow</code> can be used to establish two-way communication between plugin code and sender's <code>Window</code> object.
+| <code><span style="color:blue">string</span></code> or <code><span style="color:green">object</span> data</code> <br/> <code><span style="color:green">object</span> sourceWindow</code>
+| Called when another <code>Window</code> (i.e. custom UI contributed by a plugin) sends message to WebAdmin <code>Window</code> via HTML [http://en.wikipedia.org/wiki/Web_Messaging postMessage] API. In a typical scenario, custom UI living in <code>iframe</code> context sends message to WebAdmin (parent) <code>Window</code> which in turn dispatches the message to individual plugins. Refer to <code>allowedMessageOrigins</code> in [[#API_option_reference|API options]] for details on customizing origins from which messages will be accepted. The <code>sourceWindow</code> can be used to establish two-way communication between plugin code and sender's <code>Window</code> object. Note that some browsers might support only <code><span style="color:blue">string</span></code> values when passing data through HTML postMessage API.
 |}
 <code>*</code> If specified, <code><span style="color:magenta">arguments</span></code> represent the implicit JavaScript [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments function argument object].
 
@@ -423,7 +423,7 @@ api.addSubTabActionButton('Host', 'Event', 'Custom Button', {
     }
 });
 </pre>
-<span style="color:red">Limitation:</span> <code>subTabEntityTypeName</code> currently supports only <code>Event</code> value.
+'''Limitation:''' <code>subTabEntityTypeName</code> currently supports only <code>Event</code> value.
 |-
 | colspan="3" |
 === Dialogs ===
@@ -481,67 +481,69 @@ api.closeDialog('custom-dialog');
 {| class="wikitable" width="100%"
 |+ Supported plugin API options
 |-
-! style="width:10%;" | Option
+! style="width:20%;" | Option
 ! style="width:20%;" | Default value
 ! Description
 |-
 | colspan="3" |
 === Cross-window messaging ===
 |-
-| <code>allowedMessageOrigins</code> (string or string array)
+| <code><span style="color:blue">string</span></code> or <code><span style="color:blue">string[]</span> allowedMessageOrigins</code>
 | empty array
-| Defines allowed source [http://en.wikipedia.org/wiki/Same_origin_policy#Origin_determination_rules origins] from which HTML5 <code>message</code> events will be accepted and passed to <code>MessageReceived</code> event handler function. The value can be either a string (single origin) or a string array (multiple origins). <code>*</code> translates to "any origin", as per HTML5 [http://en.wikipedia.org/wiki/Web_Messaging postMessage] specification.
+| Defines [http://en.wikipedia.org/wiki/Same_origin_policy#Origin_determination_rules origins] from which HTML <code>message</code> events will be accepted and dispatched to plugin via <code>MessageReceived</code> event handler function. The value can be a string (single origin) or a string array (multiple origins). <code>*</code> translates to "any origin", as per HTML [http://en.wikipedia.org/wiki/Web_Messaging postMessage] specification. Refer to <code>MessageReceived</code> function for details on cross-window messaging workflow.
 |}
 
 == Entity type reference ==
 {| class="wikitable" width="100%"
 |+ Supported entity types
 |-
-! Name
-! Object representation (exposed attributes)
+! style="width:20%;" | Name
+! Attributes exposed by object representation<code>*</code>
 |-
 | <code>DataCenter</code>
-| <code>id</code> (string) <br/> <code>name</code> (string)
+| <code><span style="color:blue">string</span> name</code>
 |-
 | <code>Cluster</code>
-| <code>id</code> (string) <br/> <code>name</code> (string)
+| <code><span style="color:blue">string</span> name</code>
 |-
 | <code>Host</code>
-| <code>id</code> (string) <br/> <code>name</code> (string) <br/> <code>hostname</code> (string)
+| <code><span style="color:blue">string</span> name</code> <br/> <code><span style="color:blue">string</span> hostname</code>
 |-
 | <code>Network</code>
-| <code>id</code> (string) <br/> <code>name</code> (string)
+| <code><span style="color:blue">string</span> name</code>
 |-
 | <code>Storage</code>
-| <code>id</code> (string) <br/> <code>name</code> (string)
+| <code><span style="color:blue">string</span> name</code>
 |-
 | <code>Disk</code>
-| <code>id</code> (string)
+| -
 |-
 | <code>VirtualMachine</code>
-| <code>id</code> (string) <br/> <code>name</code> (string) <br/> <code>ipaddress</code> (string)
+| <code><span style="color:blue">string</span> name</code> <br/> <code><span style="color:blue">string</span> ipaddress</code>
 |-
 | <code>Pool</code>
-| <code>id</code> (string) <br/> <code>name</code> (string)
+| <code><span style="color:blue">string</span> name</code>
 |-
 | <code>Template</code>
-| <code>id</code> (string) <br/> <code>name</code> (string)
+| <code><span style="color:blue">string</span> name</code>
 |-
 | <code>GlusterVolume</code>
-| <code>id</code> (string) <br/> <code>name</code> (string)
+| <code><span style="color:blue">string</span> name</code>
 |-
 | <code>Provider</code>
-| <code>id</code> (string) <br/> <code>name</code> (string)
+| <code><span style="color:blue">string</span> name</code>
 |-
 | <code>User</code>
-| <code>id</code> (string) <br/> <code>username</code> (string) <br/> <code>domain</code> (string)
+| <code><span style="color:blue">string</span> username</code> <br/> <code><span style="color:blue">string</span> domain</code>
 |-
 | <code>Quota</code>
-| <code>id</code> (string) <br/> <code>name</code> (string)
+| <code><span style="color:blue">string</span> name</code>
 |-
 | <code>Event</code>
-| <code>id</code> (string)
+| <code><span style="color:blue">string</span> correlationId</code> <br/> <code><span style="color:blue">string</span> message</code> <br/> <code><span style="color:blue">string</span> callStack</code> <br/> <code><span style="color:blue">string</span> customEventId</code> <br/> <code><span style="color:blue">string</span> toString</code>
 |}
+
+<code>*</code> all representations expose <code><span style="color:blue">string</span> id</code> attribute which maps to [http://en.wikipedia.org/wiki/Universally_unique_identifier UUID] of the given entity.
 
 == Tutorials ==
 
@@ -574,7 +576,10 @@ Minimal plugin host page:
 
 <code>/usr/share/ovirt-engine/ui-plugins/minimal-resources/start.html</code>
 <pre>
-<!DOCTYPE html><html><head>
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
     <script type="text/javascript">
         var api = parent.pluginApi('MinimalPlugin');
         api.register({
@@ -582,7 +587,8 @@ Minimal plugin host page:
         });
         api.ready();
     </script>
-</head><body></body></html>
+</body>
+</html>
 </pre>
 
 == Sample UI plugins ==
@@ -633,6 +639,6 @@ Using oVirt WebAdmin, make SSH connection to a host and emulate a terminal via [
 <br/>
 
 == Comments and discussion ==
-* Refer to [[Talk:Features/UIPlugins|UI plugins discussion page]].
+* Refer to [[Talk:Features/UIPlugins|discussion page]].
 
 [[Category:Feature]]
