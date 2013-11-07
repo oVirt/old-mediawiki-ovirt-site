@@ -121,15 +121,15 @@ Following code snippet shows a sample plugin host page:
 <head>
     <!--
         Load additional scripts or other resources as necessary (1)
-        <script type="text/javascript" src="/ovirt-engine/webadmin/plugin/ExamplePlugin/js/useful-library.js"></script>
+        <script type='text/javascript' src='/ovirt-engine/webadmin/plugin/ExamplePlugin/js/useful-library.js'></script>
     -->
-    <script type="text/javascript">
+    <script type='text/javascript'>
         // Plugin code, evaluated within HTML head section (2)
     </script>
 </head>
 
 <body>
-    <script type="text/javascript">
+    <script type='text/javascript'>
         // Plugin code, evaluated within HTML body section (3)
     </script>
 </body>
@@ -138,7 +138,7 @@ Following code snippet shows a sample plugin host page:
 </pre>
 
 
-Prior to evaluating actual plugin code, host page can load dependent scripts or other resources as necessary (1). Plugin code can be evaluated either within <code>head</code> (2) or <code>body</code> (3) section of the HTML document. In addition to embedding plugin code inline into host page, code can be also loaded asynchronously as external script, i.e. <code><script type="text/javascript" src="..."></code>. There are no specific rules on how to load plugin code within the host page, the only requirement is that loading host page HTML document should evaluate plugin code eventually.
+Prior to evaluating actual plugin code, host page can load dependent scripts or other resources as necessary (1). Plugin code can be evaluated either within <code>head</code> (2) or <code>body</code> (3) section of the HTML document. In addition to embedding plugin code inline into host page, code can be also loaded asynchronously as external script, i.e. <code><script type='text/javascript' src='...'></code>. There are no specific rules on how to load plugin code within the host page, the only requirement is that loading host page HTML document should evaluate plugin code eventually.
 
 Note that WebAdmin [[#Loading_plugins|loads]] the given plugin via hidden HTML <code>iframe</code> element. This has following implications:
 * Plugin code runs within the context of the corresponding <code>iframe</code> element, i.e. not in WebAdmin (top-level) context
@@ -580,7 +580,7 @@ Minimal plugin host page:
 <html>
 <head></head>
 <body>
-    <script type="text/javascript">
+    <script type='text/javascript'>
         var api = parent.pluginApi('MinimalPlugin');
         api.register({
             UiInit: function() { window.alert('Hello world!'); }
