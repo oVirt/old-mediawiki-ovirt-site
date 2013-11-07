@@ -423,7 +423,7 @@ api.addSubTabActionButton('Host', 'Event', 'Custom Button', {
     }
 });
 </pre>
-'''Limitation:''' <code>subTabEntityTypeName</code> currently supports only <code>Event</code> value, see [https://bugzilla.redhat.com/1028124 RFE ticket].
+<hr/> '''Limitation:''' <code>subTabEntityTypeName</code> currently supports only <code>Event</code> value, see [https://bugzilla.redhat.com/1028124 RFE ticket].
 |-
 | colspan="3" |
 === Dialogs ===
@@ -490,7 +490,7 @@ api.closeDialog('custom-dialog');
 |-
 | <code><span style="color:blue">string</span></code> or <code><span style="color:blue">string[]</span> allowedMessageOrigins</code>
 | empty array
-| Defines [http://en.wikipedia.org/wiki/Same_origin_policy#Origin_determination_rules origins] from which HTML <code>message</code> events will be accepted and dispatched to plugin via <code>MessageReceived</code> event handler function. The value can be a string (single origin) or a string array (multiple origins). <code>*</code> translates to "any origin", as per HTML [http://en.wikipedia.org/wiki/Web_Messaging postMessage] specification. Refer to <code>MessageReceived</code> function for details on cross-window messaging workflow.
+| Defines [http://en.wikipedia.org/wiki/Same_origin_policy#Origin_determination_rules origins] from which HTML <code>message</code> events will be accepted and dispatched to plugin via <code>MessageReceived</code> event handler function. The value can be a string (single origin) or a string array (multiple origins). <code>*</code> translates to "any origin", as per HTML [http://en.wikipedia.org/wiki/Web_Messaging postMessage] specification. Refer to <code>MessageReceived</code> function for details on cross-window messaging workflow. <hr/> '''Limitation:''' plugins currently have to customize <code>allowedMessageOrigins</code> value to accept messages that originate from content served through UI plugin infrastructure, i.e. plugin resource files requested as <code>/ovirt-engine/webadmin/plugin/<pluginName>/path/to/file</code>. Since Engine origin is generally considered safe, <code>allowedMessageOrigins</code> default value should be changed to Engine origin, see [https://bugzilla.redhat.com/972226 RFE ticket].
 |}
 
 == Entity type reference ==
