@@ -423,7 +423,7 @@ api.addSubTabActionButton('Host', 'Event', 'Custom Button', {
     }
 });
 </pre>
-'''Limitation:''' <code>subTabEntityTypeName</code> currently supports only <code>Event</code> value.
+'''Limitation:''' <code>subTabEntityTypeName</code> currently supports only <code>Event</code> value, see [https://bugzilla.redhat.com/1028124 RFE ticket].
 |-
 | colspan="3" |
 === Dialogs ===
