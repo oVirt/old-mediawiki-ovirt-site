@@ -213,6 +213,10 @@ UI plugin infrastructure maintains a common lifecycle to control execution of in
 
 <code>*</code> Plugin invocation context starts when user logs into WebAdmin and ends when user logs out. Processing [[#Application_event_reference|event handler functions]] as well as [[#API_function_reference|plugin API]] calls is constrained by this context, i.e. plugins are in effect only while user stays authenticated in WebAdmin UI.
 
+== Terms used in API reference ==
+=== JavaScript interface object ===
+: Object implementing a contract (interface) by declaring corresponding functions. Unlike the traditional concept of interface abstract type in object-oriented languages, an interface object doesn't necessarily have to declare all functions of the given interface in order to "implement" such interface. In fact, an empty object can be used as a valid interface object. Missing functions will be treated as empty (no-op) functions with default return values, as defined by the contract of such functions. An interface object can "implement" multiple interfaces simply by declaring functions of those interfaces.
+
 == Application event reference ==
 {| class="wikitable" width="100%"
 |+ Supported event handler functions
@@ -284,9 +288,8 @@ api.register({
         api.setTabAccessible('special-host-tab', false);
     },
     HostSelectionChange: function() {
-        var specialHostSelected = arguments.length == 1
-            && arguments[0].name.indexOf('special') != -1;
-        api.setTabAccessible('special-host-tab', specialHostSelected);
+        var isSpecial = arguments.length == 1 && arguments[0].name.indexOf('special') != -1;
+        api.setTabAccessible('special-host-tab', isSpecial);
     }
 });
 </pre>
@@ -337,8 +340,8 @@ var userId = api.loginUserId();
 === Main and sub tabs ===
 |-
 | <code>addMainTab</code>
-| <code><span style="color:blue">string</span> label</code> <br/> <code><span style="color:blue">string</span> historyToken</code> <br/> <code><span style="color:blue">string</span> contentUrl</code> <br/> <code><span style="color:blue">string</span> options</code>
-| Adds new main tab with content provided from given URL. All arguments are required except for <code>options</code>. The <code>label</code> is the text displayed on tab header. The <code>historyToken</code> serves as unique identifier of the tab, with its value reflected in tab header URL. Recommended <code>historyToken</code> format is <code>letters-with-dashes</code>. The <code>contentUrl</code> is passed to <code>src</code> attribute of <code>iframe</code> element which renders tab content. The <code>options</code> can be undefined, null or object containing additional tab options:
+| <code><span style="color:blue">string</span> label</code> <br/> <code><span style="color:blue">string</span> historyToken</code> <br/> <code><span style="color:blue">string</span> contentUrl</code> <br/> <code><span style="color:green">object</span> options</code>
+| Adds new main tab with content provided from given URL. All arguments are required except for <code>options</code>. The <code>label</code> is the text displayed on tab header. The <code>historyToken</code> serves as unique identifier of the tab, with its value reflected in tab header URL. Recommended <code>historyToken</code> format is <code>letters-with-dashes</code>. The <code>contentUrl</code> is passed to <code>src</code> attribute of the <code>iframe</code> element which renders tab content. The <code>options</code> can be undefined, null or object containing additional tab options:
 * <code>alignRight</code> - controls horizontal tab header alignment, default value is <code>false</code>
 <pre>
 api.addMainTab('Custom Tab One', 'custom-tab-one',
@@ -353,7 +356,7 @@ api.addMainTab('Custom Tab Two, 'custom-tab-two',
 </pre>
 |-
 | <code>addSubTab</code>
-| <code><span style="color:blue">string</span> entityTypeName</code> <br/> <code><span style="color:blue">string</span> label</code> <br/> <code><span style="color:blue">string</span> historyToken</code> <br/> <code><span style="color:blue">string</span> contentUrl</code> <br/> <code><span style="color:blue">string</span> options</code>
+| <code><span style="color:blue">string</span> entityTypeName</code> <br/> <code><span style="color:blue">string</span> label</code> <br/> <code><span style="color:blue">string</span> historyToken</code> <br/> <code><span style="color:blue">string</span> contentUrl</code> <br/> <code><span style="color:green">object</span> options</code>
 | Adds new sub tab with content provided from given URL. All arguments are required except for <code>options</code>. Semantics of <code>label</code>, <code>historyToken</code>, <code>contentUrl</code> and <code>options</code> are identical to ones declared by <code>addMainTab</code> function. The <code>entityTypeName</code> identifies existing main tab to which the newly added sub tab should be associated (only standard main tabs are supported). Refer to [[#Entity_type_reference|entity types]] for details on supported entity names.
 <pre>
 api.addSubTab('Host', 'Custom Host Tab One', 'custom-host-tab-one',
@@ -369,7 +372,7 @@ api.addSubTab('Host', 'Custom Host Tab Two, 'custom-host-tab-two',
 |-
 | <code>setTabContentUrl</code>
 | <code><span style="color:blue">string</span> historyToken</code> <br/> <code><span style="color:blue">string</span> contentUrl</code>
-| Updates the content URL of given (main or sub) tab. Semantics of <code>historyToken</code> and <code>contentUrl</code> are identical to ones declared by <code>addMainTab</code> function. The <code>setTabContentUrl</code> function works only for tabs added through plugin API.
+| Updates the content URL of given (main or sub) tab. Semantics of <code>historyToken</code> and <code>contentUrl</code> are identical to ones declared by <code>addMainTab</code> function. The <code>setTabContentUrl</code> function works only for tabs added via plugin API.
 <pre>
 api.setTabContentUrl('custom-tab',
     '/ovirt-engine/webadmin/plugin/ExamplePlugin/tab-content.html');
@@ -377,14 +380,14 @@ api.setTabContentUrl('custom-tab',
 |-
 | <code>setTabAccessible</code>
 | <code><span style="color:blue">string</span> historyToken</code> <br/> <code><span style="color:orange">boolean</span> tabAccessible</code>
-| Controls the accessibility of given (main or sub) tab. Semantics of <code>historyToken</code> is identical to one declared by <code>addMainTab</code> function. If <code>tabAccessible</code> is <code>false</code>, corresponding tab header will be hidden in WebAdmin UI and attempts to reveal the given tab manually by manipulating URL will be denied. The <code>setTabAccessible</code> function works only for tabs added through plugin API.
+| Controls the accessibility of given (main or sub) tab. Semantics of <code>historyToken</code> is identical to one declared by <code>addMainTab</code> function. If <code>tabAccessible</code> is <code>false</code>, corresponding tab header will be hidden in WebAdmin UI and attempts to reveal the given tab manually by manipulating URL will be denied. The <code>setTabAccessible</code> function works only for tabs added via plugin API.
 <pre>
 api.setTabAccessible('custom-tab', false);
 </pre>
 |-
 | <code>addMainTabActionButton</code>
 | <code><span style="color:blue">string</span> entityTypeName</code> <br/> <code><span style="color:blue">string</span> label</code> <br/> <code><span style="color:green">object</span> actionButtonInterface</code>
-| Adds new button to the action panel and/or context menu for the given main tab. Semantics of <code>entityTypeName</code> is identical to one declared by <code>addSubTab</code> function. The <code>label</code> is the text displayed on button. The <code>actionButtonInterface</code> is an object containing (optional) functions and values that override default button behavior:
+| Adds new button to the action panel and/or context menu for the given main tab. Semantics of <code>entityTypeName</code> is identical to one declared by <code>addSubTab</code> function. The <code>label</code> is the text displayed on button. The <code>actionButtonInterface</code> is an [[#JavaScript_interface_object|interface object]] that overrides button behavior via following properties:
 * <code>onClick</code> - function called when user clicks the button, arguments are items currently selected in given main tab, no-op by default
 * <code>isEnabled</code> - function called to determine whether the button should be enabled (clickable), arguments are items currently selected in given main tab, returns <code>true</code> by default
 * <code>isAccessible</code> - function called to determine whether the button should be accessible (visible), arguments are items currently selected in given main tab, returns <code>true</code> by default
@@ -396,8 +399,8 @@ api.setTabAccessible('custom-tab', false);
 api.addMainTabActionButton('Host', 'Custom Button', {
     onClick: function() {
         var selectedHost = arguments[0];
-        var specialHostSelected = selectedHost.name.indexOf('special') != -1;
-        api.setTabAccessible('custom-tab', specialHostSelected);
+        var isSpecial = selectedHost.name.indexOf('special') != -1;
+        api.setTabAccessible('custom-tab', isSpecial);
     },
     isEnabled: function() {
         return arguments.length == 1;
@@ -412,29 +415,66 @@ api.addMainTabActionButton('Host', 'Custom Button', {
 api.addSubTabActionButton('Host', 'Event', 'Custom Button', {
     onClick: function() {
         var selectedHostEvent = arguments[0];
-        var specialHostEventSelected = selectedHostEvent.message.indexOf('special') != -1;
-        api.setTabAccessible('custom-tab', specialHostEventSelected);
+        var isSpecial = selectedHostEvent.message.indexOf('special') != -1;
+        api.setTabAccessible('custom-tab', isSpecial);
     },
     isEnabled: function() {
         return arguments.length == 1;
     }
 });
 </pre>
+<span style="color:red">Limitation:</span> <code>subTabEntityTypeName</code> currently supports only <code>Event</code> value.
 |-
 | colspan="3" |
 === Dialogs ===
 |-
 | <code>showDialog</code>
-| title, dialogToken, contentUrl, width, height, options
-| TODO DESC + EXAMPLE
+| <code><span style="color:blue">string</span> title</code> <br/> <code><span style="color:blue">string</span> dialogToken</code> <br/> <code><span style="color:blue">string</span> contentUrl</code> <br/> <code><span style="color:blue">string</span> width</code> <br/> <code><span style="color:blue">string</span> height</code> <br/> <code><span style="color:green">object</span> options</code>
+| Shows new dialog with content provided from given URL. All arguments are required except for <code>options</code>. The <code>title</code> is the text displayed on dialog header. The <code>dialogToken</code> serves as unique identifier of the dialog. The <code>dialogToken</code> can be null in case the plugin doesn't need to reference the dialog after showing it, i.e. in case the dialog is meant to be closed via close icon or by pressing Escape key. Recommended <code>dialogToken</code> format is <code>letters-with-dashes</code>. The <code>contentUrl</code> is passed to <code>src</code> attribute of the iframe element which renders dialog content. The <code>width</code> and <code>height</code> are used to define dialog dimensions in CSS units. The <code>options</code> can be undefined, null or object containing additional dialog options:
+* <code>buttons</code> - array defining buttons to display in dialog's footer area, empty by default, each element is an [[#JavaScript_interface_object|interface object]] that overrides button behavior via following properties:
+** <code>label</code> - controls text displayed on button, default value is empty string
+** <code>onClick</code> - function called when user clicks the button, no arguments, no-op by default
+* <code>resizeEnabled</code> - controls whether the dialog can be resized with mouse, default value is <code>false</code>
+* <code>closeIconVisible</code> - controls whether the close icon (located in right-hand part of dialog header) is visible, default value is <code>true</code>
+* <code>closeOnEscKey</code> - controls whether the dialog can be closed by pressing Escape key, default value is <code>true</code>
+<pre>
+api.showDialog('Custom Dialog One', 'custom-dialog-one',
+    '/ovirt-engine/webadmin/plugin/ExamplePlugin/dialog-one.html',
+    '640px', '480px'
+);
+api.showDialog('Custom Dialog Two', 'custom-dialog-two',
+    '/ovirt-engine/webadmin/plugin/ExamplePlugin/dialog-two.html',
+    '640px', '480px',
+    {
+        buttons: [
+            {
+                label: 'Close',
+                onClick: function() {
+                    api.closeDialog('custom-dialog-two');
+                }
+            }
+        ],
+        resizeEnabled: true,
+        closeIconVisible: false,
+        closeOnEscKey: false
+    }
+);
+</pre>
 |-
 | <code>setDialogContentUrl</code>
-| dialogToken, contentUrl
-| TODO DESC + EXAMPLE
+| <code><span style="color:blue">string</span> dialogToken</code> <br/> <code><span style="color:blue">string</span> contentUrl</code>
+| Updates the content URL of given dialog. Semantics of <code>dialogToken</code> and <code>contentUrl</code> are identical to ones declared by <code>showDialog</code> function. The <code>setDialogContentUrl</code> function has no effect if the given dialog is already closed. The <code>setDialogContentUrl</code> function works only for dialogs shown via plugin API.
+<pre>
+api.setDialogContentUrl('custom-dialog',
+    '/ovirt-engine/webadmin/plugin/ExamplePlugin/dialog-content.html');
+</pre>
 |-
 | <code>closeDialog</code>
-| dialogToken
-| TODO DESC + EXAMPLE
+| <code><span style="color:blue">string</span> dialogToken</code>
+| Closes the given dialog. Semantics of <code>dialogToken</code> is identical to one declared by <code>showDialog</code> function. Once closed, the dialog is destroyed.
+<pre>
+api.closeDialog('custom-dialog');
+</pre>
 |}
 
 == API option reference ==
