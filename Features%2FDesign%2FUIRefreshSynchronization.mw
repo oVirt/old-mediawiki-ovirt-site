@@ -8,9 +8,9 @@ Solve UI consistency issues related to the UI not being updated when certain act
 * Email: <awels@redhat.com>
 
 == Current status ==
-* In progress: Solution implementation in initial stages, dependent on merge of [[Features/Design/FrontendRefactor]]
-* In progress: Identify existing issues
-* In progress: Design solution based on the existing issue.
+* '''Complete''': Solution implementation in initial stages, dependent on merge of [[Features/Design/FrontendRefactor]]
+* '''Complete''': Identify existing issues
+* In progress: Design solution based on the existing issues.
 
 = Existing problems =
 
