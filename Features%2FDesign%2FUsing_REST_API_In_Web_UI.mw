@@ -49,7 +49,11 @@ Engine REST API is described by <code>api.xsd</code> (resource types) and <code>
 
 === SDK Requirements ===
 
-TODO
+* '''simplicity''' - above anything else
+* '''meaningful conventions''' - because things shouldn't be complicated too far beyond their [http://en.wikipedia.org/wiki/Essential_complexity essential complexity]
+* '''backward compatibility''' - because SDK should work with older REST API versions too
+* '''testability''' - employ consistent unit/behavior test convention (excluding any generated parts)
+* '''extensibility''' - because SDK should evolve and improve over time
 
 === SDK Structure ===
 
@@ -73,11 +77,31 @@ JavaScript SDK would consist of two API layers:
 
 
 JavaScript SDK would support the notion of backward compatibility with regard to version provided by REST API. In practice, this would mean:
-* SDK version X + Engine version X+1 → rely on backward compatibility of REST API
-* SDK version X + Engine version X-1 → use appropriate low-level API namespace mapping to older REST API version
+* SDK version <code>X</code> + Engine version <code>X+1</code> → rely on backward compatibility of REST API
+* SDK version <code>X</code> + Engine version <code>X-1</code> → use appropriate low-level API namespace mapping to older REST API version
 
 
-In both cases mentioned above, web application using JavaScript SDK should still work.
+In both cases mentioned above, web applications using JavaScript SDK should still work.
+
+=== SDK Technology Proposal ===
+
+Utilize [http://nodejs.org/ Node.js] platform to invoke tools suitable for JavaScript development:
+
+
+* '''Common Tools'''
+** [http://gruntjs.com/ Grunt] to automate task execution, such as running tests and producing output JavaScript
+** [http://karma-runner.github.io/ Karma] to establish productive testing environment where a code change yields instant feedback
+** [http://lisperator.net/uglifyjs/ UglifyJS] to optimize and minify output JavaScript
+** [https://github.com/jsdoc3/jsdoc JSDoc] to generate SDK API documentation from source code
+
+
+* '''Source Option A''' - CoffeeScript
+** [http://coffeescript.org/ CoffeeScript] to avoid intricacies of JavaScript language (CoffeeScript compiles to JavaScript)
+** [http://www.coffeelint.org/ CoffeeLint] to detect problems and enforce common code conventions
+
+
+* '''Source Option B''' - vanilla JavaScript
+** [http://www.jshint.com/ JSHint] to detect problems and enforce common code conventions
 
 === Client Consumption ===
 
