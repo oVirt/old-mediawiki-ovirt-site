@@ -247,6 +247,7 @@ setups.
 {{BZ|994191}} - [rhevm-manage-domains] /var/log/ovirt-engine/engine-manage-domains.log doesn't exist<br>
 {{BZ|994219}} - engine-install with all-in-one fails if ssh is configure for non-standard port<br>
 {{BZ|994247}} - VM failed to start running after changing the interface of bootable disk in UI.<br>
+{{BZ|994454}} - [engine-backend] LocalAdminPassword exception after RHEVM host reboot<br>
 {{BZ|994463}} - Failed attached Export Storage Domain - Could not obtain lock<br>
 {{BZ|994604}} - Users cannot log into UserPortal<br>
 {{BZ|994719}} - Newly added Cluster policy populates the list in random position<br>
@@ -363,6 +364,7 @@ setups.
 {{BZ|1004677}} - Not possible to select quota, which is assigned to specific storage.<br>
 {{BZ|1004695}} - emulated machine reset on cluster compatibility level change<br>
 {{BZ|1005481}} - [engine-backend] [external-provider] there is no indicator by engine about failure in DownloadImage<br>
+{{BZ|1005533}} - Upgrade script missing field in vm_template<br>
 {{BZ|1005544}} - engine.log doesn't include log on custom properties.<br>
 {{BZ|1005548}} - Can't set QoS from edit network window<br>
 {{BZ|1005562}} - RHEVM-RESTAPI: "Start" vm sent as run once<br>
@@ -371,6 +373,7 @@ setups.
 {{BZ|1005846}} - Creating a new VM, the "Virtual Disk" configuration never updates that the new disk was created.<br>
 {{BZ|1006282}} - [rhevm] Webadmin - Tags - Create new tag reveals two new tabs - Provider & VM Interface Profiles<br>
 {{BZ|1006326}} - Audit logs must be added to guest alignment  feature.<br>
+{{BZ|1006340}} - [Admin Portal] OS type is wrong when importing VM with RHEV origin from an export domain<br>
 {{BZ|1006400}} - [engine-backend] [external-provider] disk gets stuck in 'Locked' state when importing an image which had been deleted from glance<br>
 {{BZ|1006402}} - Uninformative error message when trying to do disk alignment on disk that has snapshots while VM is running.<br>
 {{BZ|1006708}} - gluster - deactivate UFO/SWIFT on cluster for 3.3<br>
@@ -427,6 +430,9 @@ setups.
 {{BZ|1016826}} - Cannot set disk interface in user portal<br>
 {{BZ|1016982}} - [oVirt][Neutron] External network not blocked for hot updating<br>
 {{BZ|1019618}} - REST-API: Inconsistent schema implementation in PayloadFile<br>
-
+{{BZ|1019862}} - Import Template(s) window shows loading but never timeout nor shows information to import the template.<br>
+{{BZ|1020277}} - problems in engine-backup.sh<br>
+{{BZ|1020294}} - last pull of translations from Zanata for rhev-m 3.3 product.
+{{BZ|1022942}} - Creating VM from Foreman fails with oVirt 3.3.1 beta.
 [[Category:Documentation]]
 [[Category:Releases]]
