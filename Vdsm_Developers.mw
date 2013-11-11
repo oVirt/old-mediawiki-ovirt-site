@@ -57,11 +57,17 @@ Vdsm automatically builds using the latest tagged version. If you want to explic
 
 == Basic installation ==
 
-When building from source, you should enale the ovirt-beta repository, to satisfy dependencies that are not available yet in the release repository.
+When building from source, you should enable the ovirt-beta repository, to satisfy dependencies that are not available yet in the release repository.
 
  <nowiki>
  cd ~/rpmbuild/RPMS
  yum install --enablerepo=ovirt-beta x86_64/* noarch/vdsm-xml* noarch/vdsm-cli* noarch/vdsm-python-zombiereaper*</nowiki>
+
+Before starting the VDSM service for the first time, you must configure and
+restart libvirt service:
+ <nowiki>
+   vdsm-tool libvirt-configure
+   vdsm-tool libvirt-configure-services-restart</nowiki>
 
 If needed, enable the vdsm service:
  <nowiki>chkconfig vdsmd on</nowiki>
