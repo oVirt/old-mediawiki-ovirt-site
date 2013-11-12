@@ -3,6 +3,8 @@
 === Summary ===
 This feature provides means by which to control the traffic of a specific network through a host's physical interface. It is a natural extension of the [[Features/Network_QoS|VM Network QoS]] feature, which provided the same functionality for a VM network through a VM's virtual interface.
 
+You may also refer to the [[Features/Host_Network_QoS|simple feature page]].
+
 === Owner ===
 * Name: Lior Vernia
 * E-mail: lvernia@redhat.com
