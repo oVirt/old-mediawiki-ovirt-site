@@ -1,4 +1,4 @@
-An example showing how to migrate an existing engine installation to [[Features/Self_Hosted_Engine | Self Hosted Engine]], using backup/restore.
+An example showing how to migrate an existing engine installation to [[Features/Self_Hosted_Engine | Self Hosted Engine]], using [[Ovirt-engine-backup | backup/restore]].
 
 == Preparations ==
 
