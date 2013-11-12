@@ -4,6 +4,12 @@
 <startfeed/>
 </noinclude>
 
+{{Event|name=[//events.linuxfoundation.org/events/kvm-forum KVM Forum/oVirt Developers Summit]|date=October 21 - 23, 2013|location=Edinburgh, Scotland|lead=The oVirt developer community will be hosting their annual developer summit during [[KVM Forum 2013]] this year. There are some great oVirt talks planned in the new management track of the KVM Forum. Then during the oVirt developers summit, you can influence the future technical direction of the project during developer meetings. Check out [[KVM Forum 2013 | the dedicated wiki page]] for more detail}}
+
+{{Event|name=[//events.linuxfoundation.org/events/cloudopen-europe LinuxCon Europe/CloudOpen Europe]|date=October 21 - 23, 2013|location=Edinburgh, Scotland|lead=Co-located with the [[KVM Forum 2013]], [//events.linuxfoundation.org/events/cloudopen-europe CloudOpen Europe and LinuxCon Europe] also have a significant oVirt presence. We have a number of oVirt related presentations, and it's a great opportunity to meet the oVirt team on the Red Hat stand. oVirt presentations at the event are featured in the [[KVM Forum 2013]] page}}
+
+{{Event|name=[//www.openworldforum.org/en/ Open World Forum]|date=October 3-5 2013|location=Paris, France|lead=Dave Neary of Red Hat will present how oVirt fits into the big picture of running an open hybrid cloud, featuring traditional virtualization, private infrastructure as a service, and public cloud, using free software.}}
+
 {{Event|name=[http://softwarelivre.org/fisl14/ Forum Internacional Software Livre]|date=3-6 July 2013|location=Porto Alegre, Brazil|lead=The oVirt community [http://dougsland.livejournal.com/122744.html was out in force at FISL14], where notably Theron Conrey presented oVirt and Gluster, and we had an oVirt community BOF, Marcelo Mello and Amador Pahim presented oVirt and [http://spacewalk.redhat.com/ Spacewalk] working together,  and Douglas Landgraf, Amador and Marcelo Barbosa presented improvements in oVirt 3.2.
 
 In addition, there was a presentation on OpenShift from Fabiano Franz and KVM from Ademar Reis to complete a successful cloud track.}}
