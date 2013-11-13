@@ -432,7 +432,7 @@ setups.
 {{BZ|1019618}} - REST-API: Inconsistent schema implementation in PayloadFile<br>
 {{BZ|1019862}} - Import Template(s) window shows loading but never timeout nor shows information to import the template.<br>
 {{BZ|1020277}} - problems in engine-backup.sh<br>
-{{BZ|1020294}} - last pull of translations from Zanata for rhev-m 3.3 product.
+{{BZ|1020294}} - last pull of translations from Zanata for rhev-m 3.3 product.<br>
 {{BZ|1022942}} - Creating VM from Foreman fails with oVirt 3.3.1 beta.
 [[Category:Documentation]]
 [[Category:Releases]]
