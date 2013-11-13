@@ -1,22 +1,16 @@
-Edit Provisioned Networks
-
-== Your Feature Name <!-- The name of your feature --> ==
+== Edit Provisioned Networks ==
 
 === Summary ===
-The feature allows the administrator to modify a network (i.e. vlan-id, mtu) which is already provisioned by hosts and to apply the network changes to all of the hosts within the data-center to which the network is assigned.
+The feature allows the administrator to modify a network (i.e. vlan-id, mtu) which is already provisioned by the hosts and to apply the network changes to all of the hosts within the data-center to which the network is assigned.
 
 === Owner ===
 * Name: Moti Asayag
 * Email: <masayag@redhat.com>
 
 === Current status ===
+* On Design
 * Planned for ovirt-engine-3.4
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}
-
-=== Detailed Description ===
-<!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
-Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better.
-
 
 === Benefit to oVirt ===
 Having this feature simplifies significantly the maintenance of hosts within the system: <br>
@@ -26,8 +20,11 @@ In addition, the feature reduces the risk of having hosts network configuration 
 === Detailed Description ===
 A new property 'apply' will be added to 'Update Network' command which triggers the hosts network configuration sync with the update network definition.<br>
 The 'UpdateNetworkCommand' will be changed to a non-transactive. Its execution will be consisted of 2 steps:<br>
-1. Updating the network logical definition on the DB and handles vnic profile accordingly (remove all if network changed to non-vm network).
-2. Applying the network changes by executing a 'setup network' command for each host which the network is assigned to.
+# Updating the network logical definition on the DB and handles vnic profile accordingly (remove all if network changed to non-vm network).
+# Applying the network changes by executing a 'setup network' command for each host which the network is assigned to.
+The Setup Networks command will use the 'sync network' for the modified network. <br>
+A dedicated multiple action runner will be added to run the 'Setup Networks' commands in parallel. <br>
+Updating the network is blocked for network which is used by VMs. As part of the feature we should permit the change only for networks that aren't used by VMs or the VMs are down.
 
 ==== User Experience ====
 A checkbox will be added to the 'Edit Network' dialog with caption 'Apply network change to all hosts'.<br>
@@ -37,27 +34,28 @@ Modifying the network name is permitted, but it will not be applied to hosts. Th
 We may consider as a lower priority to allow the user to specify the list of hosts on which to apply the changes instead of the entire hosts.
 
 ==== REST ====
-Editing the network is done on rest via:
-  api/networks/{network:id}
-By providing the optional element apply:
+Editing the network is done on rest via PUT method on:
+  api/networks/{network:id}/
+By providing the optional element ''apply'' (default is ''false''):
   <network>
+      ...
       <apply>true</apply>
   </network>
-  
+
 ==== Events ====
-<!-- What events should be reported when using this feature. -->
-What events should be reported when using this feature.
+If the can-do-action of the 'Setup Networks' command fails, an event log should be reported including the host names. <br>
+Each host individually will have its own logging for the 'Setup network' command. <br>
 
 === Dependencies / Related Features ===
 The feature is purely engine-side related. It doesn't depended on any other package.<br>
 A reuse of a mass-operations on host should be consider for network labels.
 
 === Testing ===
-1. To test the feature, a setup should include at least one host within the data-center having a network 'red' attached to on of its interfaces.
-  * Edit the logical network definition of network 'red' (i.e. change vlan-id)
-  * Mark the 'apply to all hosts' checkbox
-  * Approve the command.
-  * Verify network 'red' was modified correctly on the relevant data-center's hosts.
+To test the feature, a setup should include at least one host within the data-center having a network 'red' attached to on of its interfaces.
+# Edit the logical network definition of network 'red' (i.e. change vlan-id)
+# Mark the 'apply to all hosts' checkbox
+# Approve the command.
+# Verify network 'red' was modified correctly on the relevant data-center's hosts.
 
 [[Category:Feature]]
 [[Category:Template]]
