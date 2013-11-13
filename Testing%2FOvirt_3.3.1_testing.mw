@@ -21,7 +21,7 @@ If you're willing to participate please add yourself to the below table:
 |-
 | [[User:SandroBonazzola|SandroBonazzola]]  || engine-setup , upgrade from 3.3.0 || NFS  || basic || Fedora-19 ||
 |-
-| [[User:Sven|Sven]]  || engine-setup || local Storage  || basic || CentOS 6.4 || {{BZ|1023739}} {{BZ|1029584}}
+| [[User:Sven|Sven]]  || engine-setup || local Storage  || v-lan, qos || CentOS 6.4 || {{BZ|1023739}} {{BZ|1029584}}
 |-
 | [[User:Jbrooks|Jbrooks]]  || AIO || local Storage  || basic || Fedora 19 || 
 |-
