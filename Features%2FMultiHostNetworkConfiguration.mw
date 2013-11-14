@@ -24,7 +24,8 @@ The 'UpdateNetworkCommand' will be changed to a non-transactive. Its execution w
 # Applying the network changes by executing a 'setup network' command for each host which the network is assigned to.
 The Setup Networks command will use the 'sync network' for the modified network. <br>
 A dedicated multiple action runner will be added to run the 'Setup Networks' commands in parallel. <br>
-Updating the network is blocked for network which is used by VMs. As part of the feature we should permit the change only for networks that aren't used by VMs or the VMs are down.
+Updating the network is blocked for network which is used by VMs. As part of the feature we should permit the change only for networks that aren't used by VMs or the VMs are down.<br>
+The feature will be enabled only for 3.1 clusters and above since it relies on the 'Setup Networks' which introduced in 3.1.
 
 ==== User Experience ====
 A checkbox will be added to the 'Edit Network' dialog with caption 'Apply network change to all hosts'.<br>
