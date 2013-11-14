@@ -109,7 +109,7 @@ setups.
 =Known issues=
 The Vdsm rebase during ovirt-3.3.1 caused an unintended change in
 how gluster storage domains are implemented: Instead of using glusterfs,
-it is using gluster-fuse.
+it is using gluster-fuse. {{BZ|1022961}}
 
 This change has a positive side effect: {{BZ|1017289}} - "Snapshots on
 GlusterFS w/ libgfapi enabled" makes it impossible to use gluster VMs
@@ -117,7 +117,6 @@ with snapshots on ovirt-3.3.0; that should be possible now.
 
 If you would like to maintain the former behavior, you can apply a
 hackish patch http://gerrit.ovirt.org/21151/ to your Vdsms.
-
 
 =Bugs fixed=
 ==oVirt Engine==
