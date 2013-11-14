@@ -333,6 +333,7 @@ setups.
 {{BZ|1002171}} - Policy creation dialog: fields reset when changing options<br>
 {{BZ|1002281}} - Network QoS parameters aren't sent to vdsm on nic hotplug<br>
 {{BZ|1002353}} - error message in engine.log regarding a 404 response when attempting to read "/doc/ovirt-engine/manual/DocumentationPath.csv"<br>
+{{BZ|1023739}} - Cannot create same Local SD path on different Hosts<br>
 {{BZ|1002483}} - VnicProfiles action groups are missing in RolesTreeView<br>
 {{BZ|1002588}} - UserVmManager has import_export_vm permission, but there is no such action in UserPortal.<br>
 {{BZ|1002664}} - Failures to remove images from an import domain result in imported images on data domains being marked as illegal.<br>
@@ -393,6 +394,7 @@ setups.
 {{BZ|1008975}} - [ovirt-engine-notifier] - Mail - Cannot send mails with SSL  ("Connection refused")<br>
 {{BZ|1008999}} - Gateway field can be updated for non-rhevm network on 3.2 and 3.1 Cluster and it should not exist on such a Cluster<br>
 {{BZ|1009298}} - [RHEVM] [backend] it is not possible to create new VM without vNIC<br>
+{{BZ|1009391}} - Change multi-monitor setting in VM Console option dialog for 3.2 compatible cluster
 {{BZ|1009599}} - Install fails due to relation "tags_vm_pool_map" already exist<br>
 {{BZ|1009807}} - [ja_JP][Admin Portal] Networks tab -> Import Networks window -> "Network Provider" is not aligned with dropdown box due to insufficient space<br>
 {{BZ|1009863}} - Java update breaks ovirt-engine start<br>
@@ -433,6 +435,8 @@ setups.
 {{BZ|1019862}} - Import Template(s) window shows loading but never timeout nor shows information to import the template.<br>
 {{BZ|1020277}} - problems in engine-backup.sh<br>
 {{BZ|1020294}} - last pull of translations from Zanata for rhev-m 3.3 product.<br>
-{{BZ|1022942}} - Creating VM from Foreman fails with oVirt 3.3.1 beta.
+{{BZ|1022942}} - Creating VM from Foreman fails with oVirt 3.3.1 beta.<br>
+{{BZ|1025313}} - support relative answer file name<br>
+{{BZ|1028748}} - answer files are world-readable and contain passwords<br>
 [[Category:Documentation]]
 [[Category:Releases]]
