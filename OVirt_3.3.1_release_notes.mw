@@ -1,13 +1,13 @@
 {{DISPLAYTITLE:oVirt 3.3.1 release notes}}
 
-The oVirt Project is pleased to announce the availability of oVirt 3.3.1 BETA release for testing.
+The oVirt Project is pleased to announce the availability of oVirt 3.3.1 release for testing.
 
 oVirt is an open source alternative to VMware vSphere, and provides an awesome KVM management interface for multi-node virtualization.
 
 To find out more about features which were added in previous oVirt releases, check out the [[oVirt 3.3 release notes]], [[oVirt 3.2 release notes]] and [[oVirt 3.1 release notes]].
 For a general overview of oVirt, read [[oVirt 3.0 Feature Guide | the oVirt 3.0 feature guide]] and the [[about oVirt]] page.
 
-= What's New in 3.3.1 BETA? =
+= What's New in 3.3.1? =
 
 ==Vnic Profiles==
 The [[Features/Vnic_Profiles|vnic profiles]] feature was developed as a requirement for the Network QoS feature.
@@ -106,8 +106,21 @@ Using user provided code may have a performance impact, so administrators are ad
 carefully test their code and the general performance changes before using it in live
 setups.
 
-==Bugs fixed==
-===oVirt Engine===
+=Known issues=
+The Vdsm rebase during ovirt-3.3.1 caused an unintended change in
+how gluster storage domains are implemented: Instead of using glusterfs,
+it is using gluster-fuse.
+
+This change has a positive side effect: {{BZ|1017289}} - "Snapshots on
+GlusterFS w/ libgfapi enabled" makes it impossible to use gluster VMs
+with snapshots on ovirt-3.3.0; that should be possible now.
+
+If you would like to maintain the former behavior, you can apply a
+hackish patch http://gerrit.ovirt.org/21151/ to your Vdsms.
+
+
+=Bugs fixed=
+==oVirt Engine==
 {{BZ|785555}} - domain selection list in login screen should be sorted alphabetically<br>
 {{BZ|787578}} - support for multiple monitors on QXL device (single device with more RAM)<br>
 {{BZ|858952}} - webadmin [Tree]: when "x" main tab is displayed and "x1" (type "x") item is selected on the tree, hide "New" + "Remove" actions, and disable Name editing of the item.<br>
