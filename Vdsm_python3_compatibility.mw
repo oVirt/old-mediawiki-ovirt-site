@@ -14,6 +14,7 @@ To help us achieve that, this page will keep links to some useful resources and 
 
 == Useful resources ==
 * [http://docs.python.org/3/howto/cporting.html Making C Python modules 2.x and 3.x compatible with a bit of ifdefing.]
+* [http://python3porting.com/cextensions.html Book on Python3 porting (opened at the C Python modules section).]
 * [http://pythonhosted.org/six/ Six: Python 2 and 3 helper library.]
 * [http://lucumr.pocoo.org/2013/5/21/porting-to-python-3-redux/ Great blog post about single codebase for the versions we want to support (MUST READ).]
 
