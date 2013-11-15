@@ -372,7 +372,6 @@ hackish patch http://gerrit.ovirt.org/21151/ to your Vdsms.
 {{BZ|1004066}} - Host: Exit message: internal error No more available PCI addresses<br>
 {{BZ|1004395}} - ISO Domain set-up during run of 'engine-setup' fails to attach to Data Center<br>
 {{BZ|1004582}} - Host name is not valid: The following addreses: 192.168.100.7 can't be mapped to non loopback devices on this host<br>
-{{BZ|1004675}} - [Admin Portal] Attempt to add a 3.2 host into 3.3 env fails but the host cannot be removed<br>
 {{BZ|1004677}} - Not possible to select quota, which is assigned to specific storage.<br>
 {{BZ|1004695}} - emulated machine reset on cluster compatibility level change<br>
 {{BZ|1005481}} - [engine-backend] [external-provider] there is no indicator by engine about failure in DownloadImage<br>
