@@ -406,7 +406,7 @@ hackish patch http://gerrit.ovirt.org/21151/ to your Vdsms.
 {{BZ|1008975}} - [ovirt-engine-notifier] - Mail - Cannot send mails with SSL  ("Connection refused")<br>
 {{BZ|1008999}} - Gateway field can be updated for non-rhevm network on 3.2 and 3.1 Cluster and it should not exist on such a Cluster<br>
 {{BZ|1009298}} - [RHEVM] [backend] it is not possible to create new VM without vNIC<br>
-{{BZ|1009391}} - Change multi-monitor setting in VM Console option dialog for 3.2 compatible cluster
+{{BZ|1009391}} - Change multi-monitor setting in VM Console option dialog for 3.2 compatible cluster<br>
 {{BZ|1009599}} - Install fails due to relation "tags_vm_pool_map" already exist<br>
 {{BZ|1009807}} - [ja_JP][Admin Portal] Networks tab -> Import Networks window -> "Network Provider" is not aligned with dropdown box due to insufficient space<br>
 {{BZ|1009863}} - Java update breaks ovirt-engine start<br>
