@@ -397,7 +397,6 @@ hackish patch http://gerrit.ovirt.org/21151/ to your Vdsms.
 {{BZ|1007286}} - Add/Edit network | profile name should be grayed out when network is non-vm<br>
 {{BZ|1007443}} - ovirt-engine-notifier cannot be stopped properly<br>
 {{BZ|1007506}} - [RHEVM] [webadmin] [UI] Remove custom MAC address checkbox and Example text from Blank Template NIC<br>
-{{BZ|1007751}} - [RHS-C] warning: user ovirt does not exist - using root / warning: group ovirt does not exist - using root<br>
 {{BZ|1007784}} - Windows template created on 3.2 setup has Single PCI checked after import to 3.3<br>
 {{BZ|1008153}} - When pintohost filter is active, then vm which is not pinned fail to migrate.<br>
 {{BZ|1008523}} - Scroll bar is missing when picking up a VNIC profile during VM creation<br>
