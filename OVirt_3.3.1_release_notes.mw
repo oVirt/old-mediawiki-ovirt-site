@@ -288,7 +288,6 @@ hackish patch http://gerrit.ovirt.org/21151/ to your Vdsms.
 {{BZ|998705}} - When selecting an active VM the console button is not enabled immediately<br>
 {{BZ|998907}} - canDoAction fails when removing imported vm from export domain<br>
 {{BZ|998921}} - [upgrade] correctly detect if packages can be rollbacked<br>
-{{BZ|998938}} - GuideMe AddHost does not pass OverrideFirewall<br>
 {{BZ|998997}} - SPM priority doesn't affect the SPM selection<br>
 {{BZ|999048}} - VM permissions entries remain in database after force deleting data-center<br>
 {{BZ|999283}} - It's impossible to create/change the VNIC profile to an empty one<br>
