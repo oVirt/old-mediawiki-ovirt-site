@@ -447,5 +447,68 @@ hackish patch http://gerrit.ovirt.org/21151/ to your Vdsms.
 {{BZ|1022942}} - Creating VM from Foreman fails with oVirt 3.3.1 beta.<br>
 {{BZ|1025313}} - support relative answer file name<br>
 {{BZ|1028748}} - answer files are world-readable and contain passwords<br>
+
+==VDSM==
+{{BZ|1001001}} - Running vm in "runOnce" mode prevent to unlink vnic from vm<br>
+{{BZ|1001704}} - Restarting VDSM results in traffic duplication on a NIC with port mirroring<br>
+{{BZ|1004196}} - Assigning a non_vm/vlan/bond network with MTU to a host doesn't effect its interface<br>
+{{BZ|1005031}} - Unable to generate coredump<br>
+{{BZ|1006203}} - no SPM failover after SPM lost connection to storage<br>
+{{BZ|1006842}} - Traceback on booting of rhevh<br>
+{{BZ|1007686}} - Migration command in vdsClient doesn't include dstqemu field in its command description<br>
+{{BZ|1007980}} - Failed to run VM with gluster drives: internal error unexpected address type for ide disk<br>
+{{BZ|1009086}} - [vdsm] small raw volume sizes (<~1M) are rounded to 0m in createVolume (lvcreate error)<br>
+{{BZ|1010693}} - When starting vdsmd service, service asks for authentication name and password and wait forever<br>
+{{BZ|1011505}} - AcquireLockFailure failed to AttachStorageDomainVDS, Cannot obtain lock, wrong lease value<br>
+{{BZ|1011608}} - Unable to migrate VM between 3.3 (is14) hosts and older hosts<br>
+{{BZ|1012944}} - Device identifier mismatch when extending iscsi domain<br>
+{{BZ|1014942}} - [vdsm] Creating several disks at once fails CreateVolume with LVReplaceTagError sometimes<br>
+{{BZ|1015071}} - fail to delete snapshot based on a preallocated LV<br>
+{{BZ|1015171}} - engine report task failure after "after hook" fails although HW plug completed successfully<br>
+{{BZ|1017735}} - remoteFileHandler processes are not being cleaned up after removing a disk from FileSD<br>
+{{BZ|1019200}} - VM fail to start after upgrading from RHEV-H 6.4 to RHEV-H 6.5 (vdsm4.10->vdsm4.13) due to wrong libvirt configuration<br>
+{{BZ|1019360}} - vdsm not starts properly after clean installation.<br>
+{{BZ|1021147}} - vdsm from 3.3.1 beta missing dependency selinux-policy-targeted-3.7.19-195.el6_4.12.noarch<br>
+{{BZ|1022975}} - [vdsm] storage domain upgrade fails with attributeError<br>
+{{BZ|1023733}} - Override python-cpopen package<br>
+{{BZ|1025845}} - MOM is ballooning all VMs at once, even VMs without free memory enough<br>
+{{BZ|1026556}} - avoid vdsm segfaults due to m2crypto<br>
+{{BZ|1029501}} - [vdsm] VM disk does not get resized when performing live virtual disk resize on block storage<br>
+{{BZ|713434}} - lvremove on one host while runaway 'dd' on another may lead to data loss<br>
+{{BZ|787578}} - PRD33 - RFE: add support for multiple monitors on QXL device (single device with more RAM)<br>
+{{BZ|802446}} - [ovirt] [vdsm] hibernate vm from vdsClient is broken: Attribute ERROR<br>
+{{BZ|851050}} - [vdsm] Failure in iscsiadm update node command during discoverSendTargets on attempt to modify node.startup<br>
+{{BZ|908704}} - Networking of the Nested VMs is blocked by the rule of the Parent VM<br>
+{{BZ|950055}} - Vdsm uses not updated cache when doing getStorageDomainStats<br>
+{{BZ|955993}} -  [engine-backend] CreateStoragePool fails in case CreateStorageDomain is done by one host and CreateStoragePool is done by another one<br>
+{{BZ|960635}} - Drive image file %s could not be found" message contains unparsed "%s"<br>
+{{BZ|960952}} - cannot run VM when vdsm not connected to pool ("Image path does not exist or cannot be accessed/created")<br>
+{{BZ|964649}} - vdsm: spmStop will be called because of 'TypeError: 'dictionary-keyiterator' object is unsubscriptable' error in vdsm when removing a template with depended vms from the export domain<br>
+{{BZ|964768}} - Add second LUN for already connected target need manually run multipath reload<br>
+{{BZ|979193}} - Storage operations are slow, long waits on OperationMutex <br>
+{{BZ|980174}} - adding a tagged vlan network to rhevm network interface will change rhevm network boot protocol from dhcp to none<br>
+{{BZ|982004}} - [vdsm] vdsm fails to rollback tasks after a failure in create snapshot (with several disks)<br>
+{{BZ|982632}} - Configuring a vlanned network over an existing and used interface takes down the interface<br>
+{{BZ|982634}} - [Migration Network] VDSM takes itself down on failure to connect to destination libvirtd<br>
+{{BZ|983630}} - [vdsm] engine address does not appear in vdsm.log when SSL connection problem occurs<br>
+{{BZ|984028}} - [RHEVM][backend][vdsm][multiple gateways] Keep ovirt management as default in the main routing table always<br>
+{{BZ|984616}} - [vdsm] vdsm fails to bind to port due to another vdsm process running<br>
+{{BZ|985735}} - Failed to LSM, "RuntimeError: Disk 'vda' already has an ongoing replication<br>
+{{BZ|986635}} - No dependency between “Vdsmd” and “SuperVdsmd” daemons<br>
+{{BZ|987525}} - Can't update the bond name<br>
+{{BZ|987586}} - [vdsm] - getVdsCapabilities verb provides QoS for host networks<br>
+{{BZ|988065}} - Migration fails - AttributeError: 'ConsoleDevice' object has no attribute 'alias'<br>
+{{BZ|988299}} - Impossible to start VM from Gluster Storage Domain<br>
+{{BZ|988990}} - oVirt 3.3 - (vdsm-network): netinfo - ValueError: unknown bridge ens3<br>
+{{BZ|990985}} - shutdown/reboot VM causes an exception on removeVmFromMonitoredDomains<br>
+{{BZ|991091}} - [vdsm] after a crash of libvirt, vdsm is stuck in recovery phase and unable to initialize<br>
+{{BZ|994600}} - [vdsm] SuperVdsm fails to start due to ValueError: ipaddr rhevm is not properly defined<br>
+{{BZ|994912}} - [host-deploy] vdsmd cannot be started<br>
+{{BZ|995142}} - DHCP FAIL $reason removes source routing configuration on management network<br>
+{{BZ|998411}} - [vdsm] guest alignment scan fails on host due to lvchange (deactivate lv) failure<br>
+{{BZ|999343}} - Strange behaviour of LEASETIMESEC and IOOPTIMEOUTSEC in storage domain configuration<br>
+{{BZ|999664}} - [abrt] vdsm-python-4.12.0-18.git78903dd.fc19: service.py:353:_runAlts:ServiceNotExistError: ServiceNotExistError: Tried all alternatives but failed<br>
+{{BZ|999795}} - RHS-C: List gluster hook fails when some of the hooks directories (post/pre) are missing in the RHS nodes<br>
+{{BZ|999853}} - Resarting supervdsmd service after performing libvirt reconfigure<br>
 [[Category:Documentation]]
 [[Category:Releases]]
