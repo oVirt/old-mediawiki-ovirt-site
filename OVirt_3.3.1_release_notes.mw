@@ -512,7 +512,6 @@ hackish patch http://gerrit.ovirt.org/21151/ to your Vdsms.
 {{BZ|999853}} - Resarting supervdsmd service after performing libvirt reconfigure<br>
 
 ==ovirt-node-plugin-vdsm==
-{{BZ|1019884}} - Console error message when using wrong IP address of RHEV-M to collect certificate<br>
 {{BZ|1022711}} - Replace the string 'TBD' when showing the certificate<br>
 {{BZ|1021157}} -  Console error message when using wrong IP address of ovirt Engine to collect certificate<br>
 [[Category:Documentation]]
