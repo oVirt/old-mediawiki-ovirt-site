@@ -6,19 +6,14 @@ This feature provides means by which to control the traffic of a specific networ
 You may also refer to the [[Features/Host_Network_QoS|simple feature page]].
 
 === Owner ===
-* Name: Lior Vernia
+* Name: Lior Vernia (previously owned by Giuseppe Vallarelli)
 * E-mail: lvernia@redhat.com
 * IRC: lvernia at #ovirt (irc.oftc.net)
-
-=== Original Owner ===
-* Name: [[User:gvallarelli| Giuseppe Vallarelli]]
-* Email: <gvallare@redhat.com>
-* IRC: gvallarelli at #ovirt (irc.oftc.net)
 
 === Current Status ===
 * Target Release: 3.4
 * Status: design
-* Last updated: November 12th, 2013.
+* Last updated: November 17th, 2013.
 
 === Detailed Description ===
 Generally speaking, network QoS (Quality of Service) in oVirt could be applied on a variety of different levels:
