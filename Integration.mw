@@ -39,7 +39,7 @@ Outstanding contributes:
 |-
 ! Feature !! Status !! Date
 |-
-| [[Features/Otopi_Infra_Migration|Otopi_Infra_Migration]] || style="background-color: orange;"| In Progress || 8/3/2013
+| [[Features/Otopi_Infra_Migration|Otopi_Infra_Migration]] || style="background-color: lightgreen;"| Done|| 19/7/2013
 |-
-|  [[Features/Self_Hosted_Engine|Hosted_Engine]] || style="background-color: red;"|Started playing with poc || 8/3/2013
+|  [[Features/Self_Hosted_Engine|Hosted_Engine]] || style="background-color: orange;"|Work in progress|| 17/11/2013
 |}
