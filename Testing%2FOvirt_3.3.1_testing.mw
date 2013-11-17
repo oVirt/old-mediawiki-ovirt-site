@@ -17,9 +17,7 @@ If you're willing to participate please add yourself to the below table:
 {|border="1"
 ! Name !! part tested !!Storage !! Networking !! Distribution !! Bugs
 |-
-| [[User:SandroBonazzola|SandroBonazzola]]  || engine-setup , clean install || NFS  || basic || Fedora-19 ||
-|-
-| [[User:SandroBonazzola|SandroBonazzola]]  || engine-setup , upgrade from 3.3.0 || NFS  || basic || Fedora-19 ||
+| [[User:SandroBonazzola|SandroBonazzola]]  || engine-setup , clean install, upgrade from 3.3.0 || NFS  || basic || Fedora-19 ||
 |-
 | [[User:Sven|Sven]]  || engine-setup || local Storage  || v-lan, qos || CentOS 6.4 || {{BZ|1023739}} {{BZ|1029584}} {{BZ|1029885}}
 |-
