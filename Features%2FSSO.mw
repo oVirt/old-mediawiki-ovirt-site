@@ -94,14 +94,14 @@ The domain, user and password that it used are the credentials used to login int
 
 Available more commands than actually used.
 
-* refresh - Send misc information back.</p>
+* refresh - Send misc information back.
 * login - Perform login, triggered by engine command, can also be used to unlock. Accepts: username[@domain], password
 * lock-screen - Lock console, used by:
 *# vdsm save vm state sequence (before saving).
 *# libvirt event GRAPHICS phase: GRAPHICS_DISCONNECT
 * log-off - Force logoff user from console, triggered by engine command, not actually used anywhere.
 * shutdown - Gracefully shutdown system, used by vdsm VM shutdown sequence before using other more intrusive means.
-   
+
 == Problems in current implementations ==
 
 * Inability to support single signon or non password based authentication (example: OpenID) <p>The assumption that the password used to login into the ovirt web interface is available or can be used in order to login into guest is incorrect. Authentication using kerberos, SSL certificate, OpenID or any password based SSO will not provide usable password to the engine.</p>
