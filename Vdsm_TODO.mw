@@ -52,7 +52,7 @@
 
 * <strike>make the ''macspoof'' hook of https://bugzilla.redhat.com/908704 per vnic, using http://www.ovirt.org/Features/Device_Custom_Properties</strike>
 
-* work in conjunction with Network Manager.
+* <strike>work in conjunction with Network Manager.</strike> works in F20.
 
 * report 'bootproto' and bonding_opts not via cfg. https://bugzilla.redhat.com/987813
 
