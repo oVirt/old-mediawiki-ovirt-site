@@ -57,5 +57,7 @@ draft:  don't execute all can do actions for HA that is being run immediatly aft
 * Change scheduler to schedule multiple VMs together instead of each one separately.
 * Improve the VM statistics mechanism to work in a bulk
 
+
 [1] we need to think whether VmRunner and AutoStartVmsRunner could be combined together or AutoStartVmsRunner will use VmRunner.
+
 [2] we need to think about rerun
