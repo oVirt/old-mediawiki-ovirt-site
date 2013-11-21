@@ -1,5 +1,3 @@
-= Building RPM for the oVirt project =
-
 Most components of oVirt project use standard sequence to build rpms.
 
 Summary of sequence is:
