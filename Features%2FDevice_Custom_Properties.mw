@@ -26,6 +26,7 @@ Similarly, users may want to connect a virtual disk to an "exotic" storage serve
 These extensions, and many others, can be made available by allowing per-device custom properties. Device custom properties are just like VM-wide ones, only that they are attached to a specific device, and can take effect when the device is hot-plugged.
 
 === User Experience ===
+Under the Networks main tab -> Profiles subtab:
 [[File:NetworkCustomProperties.png]]
 
 === Implementation ===
