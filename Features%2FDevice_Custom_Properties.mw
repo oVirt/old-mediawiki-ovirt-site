@@ -27,6 +27,7 @@ These extensions, and many others, can be made available by allowing per-device 
 
 === User Experience ===
 Under the Networks main tab -> Profiles subtab:
+
 [[File:NetworkCustomProperties.png]]
 
 === Implementation ===
