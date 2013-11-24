@@ -70,7 +70,7 @@ As with the first node, this will take you to the process completion.
 * Remember to use the same storage path you used on first host.
 
 === '''Maintaining the setup''' ===
-The HA services has 2 maintenance types for different tasks.
+The HA services have 2 maintenance types for different tasks.
 
 ==== '''Global maintenance''' ====
 Main use is to allow the administrator to start/stop/modify the engine VM without any worry of interference from the HA agents. <br />
