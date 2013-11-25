@@ -30,9 +30,9 @@ Currently engine sends only <code>video</code> device to the vdsm. The <code>gra
 // VmInfoBulder class sends this map to VDSM
 {
   'display': 'qxl',
-  'devices': {
-      'video': {'type': 'video' , 'device': 'qxl' , 'specParams': {} }
-    ...}
+  'devices': [
+      {'type': 'video' , 'device': 'qxl' , 'specParams': {} }
+    ...]
 }
 </pre>
 ** Setting VM ticket for console auth
@@ -50,8 +50,19 @@ VdsBrokerObjectsBuilder processes these fields:
 * displayType - same value as 'display' that is sent from Engine on VM create.
 
 === Proposal ===
-
-
+==== Engine -> VDSM ====
+** Creating VM
+<pre>
+// VmInfoBulder class would send this map to VDSM
+{
+  'devices': [
+      {'type': 'video' , 'device': 'qxl' , 'specParams': {} },
+      {'type': 'graphics', 'device': 'spice' , 'specParams': {} },
+      {'type': 'graphics', 'device': 'vnc' , 'specParams': {} }
+    ...]
+  // no 'display'!
+}
+</pre>
 
 
 [[Category:Feature]]
