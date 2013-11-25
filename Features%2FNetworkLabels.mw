@@ -27,8 +27,7 @@ The amount of request actions by the administrator are significantly reduced and
 
 
 === Dependencies / Related Features ===
-The feature will use the mass host network configuration feature to achieve it goals: [[Features/EditProvisionedNetwork|Edit Provisioned Network]]
-
+The feature will use the [[Features/EditProvisionedNetwork|Edit Provisioned Network]] feature to achieve its goals.
 
 === Documentation / External references ===
 
