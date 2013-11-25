@@ -39,15 +39,15 @@ Currently engine sends only <code>video</code> device to the vdsm. The <code>gra
 <pre>
 // SetVmTicket class
 {
-  'display': 'qxl',
-  'devices': {
-      'video': {'type': 'video' , 'device': 'qxl' , 'specParams': {} }
-    ...}
+  //todo
 }
 </pre>
 
 * VDSM -> Engine
-
+VdsBrokerObjectsBuilder processes these fields:
+** displayPort
+** displaySecurePort
+** displayType - same value as 'display' that is sent from Engine on VM create.
 
 === Proposal ===
 
