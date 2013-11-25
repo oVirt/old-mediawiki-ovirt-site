@@ -22,8 +22,11 @@ Currently engine sends only <code>video</code> device to the vdsm. The <code>gra
 * The first phase consists of changing modeling the <code>graphics</code> device. It should be treated as a regular device. For this both Engine and VDSM must be changed. This would also allow us to set these devices separately (various <code>video</code> and <code>graphics</code> combinations).
 * The second phase is to reflect these changes to frontend. There should be a way to configure <code>graphics</code> type and <code>video</code> type in the New/Edit VM/Template dialog.
 
-= Engine <---> VDSM Communication scheme =
+== Engine <-> VDSM Communication scheme ==
+=== Current situation ===
+* Engine -> VDSM
 
+=== Proposal ===
 
 
 
