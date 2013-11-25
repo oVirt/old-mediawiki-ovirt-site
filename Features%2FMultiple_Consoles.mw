@@ -23,8 +23,31 @@ Currently engine sends only <code>video</code> device to the vdsm. The <code>gra
 * The second phase is to reflect these changes to frontend. There should be a way to configure <code>graphics</code> type and <code>video</code> type in the New/Edit VM/Template dialog.
 
 == Engine <-> VDSM Communication scheme ==
-=== Current situation ===
+=== Current situation - pseudocode ===
 * Engine -> VDSM
+** Creating VM
+<pre>
+// VmInfoBulder class sends this map to VDSM
+{
+  'display': 'qxl',
+  'devices': {
+      'video': {'type': 'video' , 'device': 'qxl' , 'specParams': {} }
+    ...}
+}
+</pre>
+** Setting VM ticket for console auth
+<pre>
+// SetVmTicket class
+{
+  'display': 'qxl',
+  'devices': {
+      'video': {'type': 'video' , 'device': 'qxl' , 'specParams': {} }
+    ...}
+}
+</pre>
+
+* VDSM -> Engine
+
 
 === Proposal ===
 
