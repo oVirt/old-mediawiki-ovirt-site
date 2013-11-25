@@ -24,7 +24,7 @@ Currently engine sends only <code>video</code> device to the vdsm. The <code>gra
 
 == Engine <-> VDSM Communication scheme ==
 === Current situation - pseudocode ===
-* Engine -> VDSM
+==== Engine -> VDSM ====
 ** Creating VM
 <pre>
 // VmInfoBulder class sends this map to VDSM
@@ -43,11 +43,11 @@ Currently engine sends only <code>video</code> device to the vdsm. The <code>gra
 }
 </pre>
 
-* VDSM -> Engine
+==== VDSM -> Engine ====
 VdsBrokerObjectsBuilder processes these fields:
-** displayPort
-** displaySecurePort
-** displayType - same value as 'display' that is sent from Engine on VM create.
+* displayPort
+* displaySecurePort
+* displayType - same value as 'display' that is sent from Engine on VM create.
 
 === Proposal ===
 
