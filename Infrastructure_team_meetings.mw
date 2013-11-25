@@ -8,46 +8,41 @@ This page is for tracking agenda, notes, logs, and etc. about each oVirt Infrast
 
 == Upcoming meetings ==
 
-==== 2013-11-25 ====
+==== 2013-12-02 ====
 ====== Agenda ======
-* Introductions
-* Review of action items
 * Hosting
-* Puppet
+* Puppet and Foreman
 * Jenkins
 * Other business?
-* Trac review
 
 == Past meetings ==
-==== 2013-11-18 ====
-"[http://ovirt.org/meetings/ovirt/2013/ovirt.2013-11-18-15.02.log.html Minutes]"
-* Introductions
-* Review of action items
+==== 2013-11-25 ====
+"[http://ovirt.org/meetings/ovirt/2013/ovirt.2013-11-25-15.05.log.html Minutes]"
 * Hosting
-* Puppet
+* Puppet and Foreman
 * Jenkins
 * Other business?
-* Trac review
+
+==== 2013-11-18 ====
+"[http://ovirt.org/meetings/ovirt/2013/ovirt.2013-11-18-15.02.log.html Minutes]"
+* Hosting
+* Puppet and Foreman
+* Jenkins
+* Other business
 
 ==== 2013-11-11 ====
 "[http://ovirt.org/meetings/ovirt/2013/ovirt.2013-11-11-14.59.log.html Minutes]"
-* Introductions
-* Review of action items
 * Hosting
-* Puppet
+* Puppet and Foreman
 * Jenkins
 * Other business?
-* Trac review
 
 ==== 2013-11-04 ====
 "[http://ovirt.org/meetings/ovirt/2013/ovirt.2013-11-04-15.01.log.html Minutes]"
-* Introductions
-* Review of action items
 * Hosting
-* Puppet
+* Puppet and Foreman
 * Jenkins
 * Other business?
-* Trac review
 
 ==== 2013-10-28 ====
 "[http://ovirt.org/meetings/ovirt/2013/ovirt.2013-10-28-15.03.log.html Minutes]"
