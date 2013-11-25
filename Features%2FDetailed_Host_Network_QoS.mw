@@ -126,7 +126,7 @@ If the "anonymous" QoS approach is taken (or the "named" approach is implemented
 * Create a new Network QoS entity from the dialog that opens (in whatever way is agreed-upon, among the alternatives discussed above).
 
 === Comments and Discussion ===
-On the arch@ovirt.org mailing list.
+On the arch@ovirt.org and users@ovirt.org mailing lists.
 
 === Open Issues ===
 
