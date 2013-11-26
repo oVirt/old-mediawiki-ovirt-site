@@ -25,7 +25,7 @@ Currently engine sends only <code>video</code> device to the vdsm. The <code>gra
 == Engine <-> VDSM Communication scheme ==
 === Current situation - pseudocode ===
 ==== Engine -> VDSM ====
-** Creating VM
+* Creating VM
 <pre>
 // "vmCreate" JSON sent from Engine to VDSM
 {
@@ -40,7 +40,7 @@ Currently engine sends only <code>video</code> device to the vdsm. The <code>gra
     }, ... // other devices
   ]}
 </pre>
-** Setting VM ticket for console auth
+* Setting VM ticket for console auth
 <pre>
 // SetVmTicket class
 {
