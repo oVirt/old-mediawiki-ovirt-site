@@ -73,7 +73,7 @@ VdsBrokerObjectsBuilder processes these fields:
 
 === Proposal ===
 ==== Engine -> VDSM ====
-** Creating VM
+* Creating VM
 <pre>
 // New "vmCreate" JSON sent from Engine to VDSM
 {
