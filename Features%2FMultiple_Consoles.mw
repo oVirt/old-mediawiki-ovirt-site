@@ -68,7 +68,7 @@ This call will result in adding following devices:
 </pre>
 
 ==== VDSM -> Engine ====
-VdsBrokerObjectsBuilder processes these fields:
+VdsBrokerObjectsBuilder processes these fields "sent" by VDSM:
 * <code>displayPort</code> - port of graphics framebuffer (no matter if it's SPICE or VNC)
 * <code>displaySecurePort</code> - SPICE secured graphics port
 * <code>displayType</code> - same value as 'display' that is sent from Engine on VM create.
