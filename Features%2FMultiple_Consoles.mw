@@ -110,4 +110,8 @@ Changes proposed by this page would be backward compatible:
 ** '''VDSM -> Engine:''' As noted in 'proposal' section, the displayPort and securedDisplayPort would contain same information as with old VDSM.
 * 'Old' VDSM + 'New' Engine
 ** In this case engine would contain logic that switches behavior of VmInfoBuilder and VdsObjectsBrokerBuilder classes depending on cluster level of given VM.
+
+== Frontend ==
+Nothing interesting so far.
+
 [[Category:Feature]]
