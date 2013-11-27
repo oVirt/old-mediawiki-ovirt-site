@@ -71,31 +71,12 @@ To show the certificate data:
 Yum is only supported in offline image editing.  On a running system, it's disabled.  A how-to for editing an ISO image after creation will be coming soon.
 
 == Upgrading oVirt Node ==
-:'''Warning''' This information is outdated
 
-The log of upgrade operation are: 
-* /var/log/ovirt.log
-*  /var/log/vdsm-reg/vds_bootstrap_upgrade.XXX_XX.log
+oVirt Node can be updated in two ways:
 
-Upgrade configuration are under /etc/vdsm-reg/vdsm-reg.conf
-<pre>
- upgrade_iso_file=/data/updates/ovirt-node-image.iso
-  # Where's located the new ovirt-node-image ISO
-
-  upgrade_mount_point=/live
-  # Where's the ovirt-node-image is mounted to be used by vdsm-upgrade tool
-</pre>
-
-Tool that executes the upgrade is <code>/usr/share/vdsm-reg/vdsm-upgrade</code>
-
-Example, (developer mode only) upgrading manually from ovirt-node 2.5.0-2.0 to 2.5.1-1.0
-  <nowiki> * Installed ovirt-node 2.5.0-2.0
-  * Copied 2.5.1-1.0 image to /data/updates/ovirt-node-image.iso
-  * mount -o loop /data/updates/ovirt-node-image.iso /live
-  * Update in /etc/vdsm-reg/vdsm-reg.conf - upgrade_mount_point=/live
-  * service vdsm-reg restart
-  * /usr/share/vdsm-reg/vdsm-upgrade
-  * reboot</nowiki>
+* Run a media containing the oVirt Node ISO image 
+** An interactive upgrade dialog appears and guides you through the upgrade process
+* Through oVirt Engine
 
 = Making changes on the host =
 * '''Warning''' -- Changes you make from the shell are not persistent by default and will be lost if you reboot the host
