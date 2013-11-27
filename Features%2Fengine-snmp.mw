@@ -1,0 +1,24 @@
+<!-- {{autolang|base=yes}} -->
+
+== SNMP Monitoring in oVirt Engine ==
+
+=== Summary ===
+Enable oVirt engine to send SNMP traps of events to monitoring systems 
+
+=== Owner ===
+* Name: [[User:aberezin|Arthur Berezin]]
+* Email: <art@redhat.com>
+
+=== Current status ===
+
+* Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
+
+==== Target Version  ====
+First version to be released in ovirt 3.4.
+
+
+=== Benefit to oVirt ===
+Allow oVirt users to monitor their virtualization environment with open source and proprietary monitoring systems such as Nagios, BMC Patrol, HP OpenView, etc.
+
+
+[[Category:Feature]]
