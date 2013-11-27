@@ -77,9 +77,8 @@ You're encouraged to [[Community | join the oVirt community]], and help us bring
 </div>
 
 <div class="span4 pad-left-small pad-right">
-<div class="well">
+<div class="well well-lg">
 == User Case Study ==
-
 
 <div class="text-center">
 [[File:AlterWay.jpg|alt=AlterWay|200px|link=http://www.alterway.fr]]
@@ -89,11 +88,13 @@ Meet [[Alter Way case study | Alter Way]], a French hosting company who deploys 
 
 The main points which swayed their decision? "A very active community, an ambitious technical roadmap with regular releases, and the involvement of companies including Red Hat, Intel, NetApp, Cisco and IBM reassured us that the project would be around for the duration."
 
+<div style="clear:both; display: inline-block;">
 <div class="pull-right">
 Read the full [[Alter Way case study]]
 </div>
 <div class="pull-right">
-See other [[:Category:Case studies | user case studies]]
+Find other [[:Category:Case studies | user case studies]]
+</div>
 </div>
 </div>
 </div>
