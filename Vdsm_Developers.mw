@@ -259,6 +259,7 @@ Example:
  <nowiki> # service vdsmd restart </nowiki>
 
 After vdsm restarts, you can check to see that your hooks are installed in your host’s “Host Hooks” tab:
+[[File:Nestedvt hook.png]]
 
 === AMD ===
 Works out of the box.
