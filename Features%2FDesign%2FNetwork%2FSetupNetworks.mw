@@ -313,7 +313,7 @@ The following connections are supported:
 ==== Attaching a network to a NIC ====
 
  POST /api/hosts/{host:id}/nics/setupnetworks
- <action
+ <action>
   <host_nics>
     <host_nic>
         <name>em1</name>
@@ -326,7 +326,6 @@ The following connections are supported:
     <force>false</false>
   </host_nics>
  </action>
-
 
 ==== Attaching several (VLAN'd) networks to a NIC ====
 
