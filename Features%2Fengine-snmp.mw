@@ -6,6 +6,10 @@
 Enable oVirt engine to send SNMP traps of events to monitoring systems 
 
 === Owner ===
+
+* Name: [[User:mtayer|Mooli Tayer]]
+* Email: <mtayer@redhat.com>
+
 * Name: [[User:aberezin|Arthur Berezin]]
 * Email: <art@redhat.com>
 
