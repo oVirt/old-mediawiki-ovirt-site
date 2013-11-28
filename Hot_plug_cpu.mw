@@ -48,17 +48,6 @@ this feature will enable this powerful use cases:
 | VDSM || check migration of a VM that was hotplugged with cpus and remigrate it (not sure changes needed) || 0
 |}
 
-
-{| class="wikitable sortable"
-|-
-! Header text !! Header text !! Header text
-|-
-| Example || Example || Example
-|-
-| Example || Example || Example
-|-
-| Example || Example || Example
-|}
 === Dependencies / Related Features ===
 KVM support for hot plug 
 libvirt support for hotattach device
