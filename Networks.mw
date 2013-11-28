@@ -5,7 +5,7 @@ Networking in oVirt comprises of several layers:
 
 This document will try to cover the various networking aspects and some basic usages.
 
-= The Logical Network Difeinitions =
+= The Logical Network Definitions =
 == The Data Center Networks ==
 The first and foremost container of a network is the data center. The data center's networks are modelled under the data center (in the system tree and main tabs).
 In this scope, each network must have a unique name and a unique VLAN tag (if it's used).
