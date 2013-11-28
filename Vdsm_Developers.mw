@@ -331,7 +331,7 @@ In our case, the last patch is  '''configuring-selinux-allowing-qemu-kvm-to-gene
 Again, why -19 ?  Because we are 19 patches behind from version '''3.3.1''' You can use '''git log''' to check how many patches we do have after '''configuring-selinux-allowing-qemu-kvm-to-generate-co'''
  
 Copy the 19 patches to the  ~/vdsm-fedora dir
-    $ cp *.patch ~/vdsm-fedora dir/vdsm/
+    $ cp *.patch ~/vdsm-fedora/vdsm
  
 4) Build new vdsm with the new patches
     $ cd ~/vdsm-fedora/vdsm/
