@@ -42,10 +42,10 @@ $ openssl passwd -salt 42 ovirt
 * Press F2 from any TUI screen
 
 == Debug Mode ==
-* '''Installer''': To enable the debug mode during install pass <code>node.log_level=debug</code> as a kernel argument, take a look at the [[Log Files]] for the relevant logfiles.
-* '''Setup''': The setup TUI also has a debug mode - this will log much mroe stuff and print the stracktraces on the screen. This mode can be entered by following the steps:
+* '''Auto-Installation''': To enable the debug mode during install pass <code>node.log_level=debug</code> as a kernel argument, take a look at the [[Log Files]] for the relevant logfiles.
+* '''TUI Installation and Setup''': The TUI also has a debug mode - this will log much more stuff and print the stracktraces on the screen. This mode can be entered by following the steps:
 ** Drop to shell (using F2)
-** re-run the setup using <code>ovirt-node-setup --debug</code>
+** re-run the setup using <code>ovirt-node-setup --debug</code> or installer using <code>ovirt-node-installer --debug</code>
 ** Finally take a look at the [[Log Files]] for the relevant logfiles
 
 == Setting manually oVirt Node root password  ==
