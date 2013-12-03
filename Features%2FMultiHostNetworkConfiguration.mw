@@ -32,10 +32,10 @@ Currently, Updating the network is blocked for network which is used by VMs. As 
 The feature will be enabled only for 3.1 clusters and above since it relies on the 'Setup Networks' which introduced in 3.1.
 
 ==== Phase 2 ====
-The same behaviour will be added to 'Remove Network' action as well in a similar manner:
+# The same behaviour will be added to 'Remove Network' action as well in a similar manner:
 * By providing the property 'apply' the network will be removed from all of the hosts which the network is configured on.
-
-We may consider as a lower priority to allow the user to specify the list of hosts/clusters on which to apply the changes instead of the entire hosts.
+# We may consider as a lower priority to allow the user to specify the list of hosts/clusters on which to apply the changes instead of the entire hosts.
+# Change which includes the renaming of the network will be permitted to be applied to hosts.
 
 ==== User Experience ====
 A checkbox will be added to the 'Edit Network' dialog with caption 'Apply network change to all hosts'.<br>
