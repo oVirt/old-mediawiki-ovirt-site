@@ -47,7 +47,7 @@ this feature will enable this powerful use cases:
 |}
 
 === Dependencies / Related Features ===
-* running qemu-guest-agent
+* running [http://wiki.qemu.org/Features/QAPI/GuestAgent qemu-guest-agent]
 
 === Documentation / External references ===
 * [https://bugzilla.redhat.com/show_bug.cgi?id=1036492 oVIrt VDSM RFE]
