@@ -19,6 +19,6 @@ oVirt provides several ways to connect to remote virtual machines. This page des
 
 === RDP Protocol ===
 * Native
-:Client application that is capable of parsing an RDP file and invoke console session (e.g. mstsc.exe on MS Windows).
+:Client application capable of parsing an RDP file and invoking console session (e.g. mstsc.exe on MS Windows).
 * Plugin
 :<b>(MS Internet Explorer only)</b> Usage of the plugin doesn't require user intervention and is invoked automatically.
