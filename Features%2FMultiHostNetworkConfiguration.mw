@@ -43,6 +43,7 @@ The only supported properties to be apply on the hosts are: vlan, mtu, network t
 Modifying the network name is permitted, as long as it was not marked to be applied to hosts. Therefore attempt to modify network name and applying it to hosts will be blocked. (This limitation will be removed once p2 is implemented)<br>
 
 ==== REST ====
+===== Phase 1 ===== 
 Editing the network is done on rest via PUT method on:
   api/networks/{network:id}/
   api/datacenters/{datacenter:id}/networks/{network:id}/
