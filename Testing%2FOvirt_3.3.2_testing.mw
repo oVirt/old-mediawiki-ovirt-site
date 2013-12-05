@@ -17,17 +17,17 @@ If you're willing to participate please add yourself to the below table:
 {|border="1"
 ! Name !! part tested !!Storage !! Networking !! Distribution !! Bugs
 |-
-| Douglas Landgraf  || Deploy Fedora 20 as Node  || Yes || Yes || Fedora 20 || -
+| Douglas Landgraf  || Deploy Fedora 20 as Node  || Yes || Yes || Fedora 20 (beta)|| -
 |-
-| Douglas Landgraf  || Add iSCSI storage  || Yes || Yes || Fedora 20 || BZ#1037602 
+| Douglas Landgraf  || Add iSCSI storage  || Yes || Yes || Fedora 20 (beta) || BZ#1037602 
 |-
-| Douglas Landgraf  || Add NFS storage (data and ISO)  || Yes || Yes || Fedora 20 || -
+| Douglas Landgraf  || Add NFS storage (data and ISO)  || Yes || Yes || Fedora 20 (beta) || -
 |-
-| Douglas Landgraf  || create/start/stop/suspend virtual machine || Yes || Yes || Fedora 20 || -
+| Douglas Landgraf  || create/start/stop/suspend virtual machine || Yes || Yes || Fedora 20 (beta) || -
 |-
-| Douglas Landgraf || Live migration || Yes || Yes || Fedora 20 || -
+| Douglas Landgraf || Live migration || Yes || Yes || Fedora 20 (beta) || -
 |-
-| Douglas Landgraf  || ovirt-log-collector  || - || - || Fedora 20 || BZ#1037663 
+| Douglas Landgraf  || ovirt-log-collector  || - || - || Fedora 20 (beta) || BZ#1037663 
 |-
 | Ohad Basan  || engine-setup , clean install, dwh and reports installation|| ?  || ? || ? ||
 |-
