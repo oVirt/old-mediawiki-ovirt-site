@@ -25,6 +25,8 @@ If you're willing to participate please add yourself to the below table:
 |-
 | Douglas Landgraf  || create/start/stop/suspend virtual machine || Yes || Yes || Fedora 20 (beta) || -
 |-
+| Douglas Landgraf  ||  Use SPICE as protocol for virtual machine || - || Yes || CentOS 6 || -
+|-
 | Douglas Landgraf || Live migration || Yes || Yes || Fedora 20 (beta) || -
 |-
 | Douglas Landgraf  || ovirt-log-collector  || - || - || Fedora 20 (beta) || BZ#1037663 
