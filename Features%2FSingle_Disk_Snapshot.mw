@@ -88,6 +88,12 @@ Already supported.
 *** Excluding a disk implications are similar to deleting a disk (will result with an illegal disk on previous snapshots).
 
 === Testing ===
+* Verify that create snapshot flow has no regressions.
+* Verify that the 'regular' preview/undo/commit flow has no regressions.
+* Create a snapshot with a subset of disks.
+* Custom preview a snapshot from various point of times.
+* Undo/commit  a custom previewed snapshot.
+*
 
 === Comments and Discussion ===
 
