@@ -2,24 +2,23 @@
 
 Installing the Guest Agent in a Ubuntu virtual machine is fairly simple and will provide the oVirt-engine with additional information about the VM. The process has two main steps which is adding an install source and installing the ovirt-guest-agent package. Presently the ovirt-guest-agent package for Ubuntu is not in the official repos, but is available through zhshzhou who currently maintains the package.
 
-== Adding the Installation Source ==
-# Visit https://launchpad.net/~zhshzhou/+archive/vdsm-ubuntu/+packages
-## For Ubuntu Precise, Raring, and Sausy open Ovirt-Guest-Agent for the source Precise
-### Below Builds, click i386
-## For Debian open Ovirt-Guest-Agent for the source Raring, per [https://www.mail-archive.com/users@ovirt.org/msg10171.html the mailing list]
-
 == Methods for Installation ==
 There are three methods you can use. 
-# The easiest is to use yum via a terminal prompt or through the Software application. This requires that the virtual machine has access to the internet or at least to a repository mirror.
-# Using an RPM. This is more complicated, but can be done in an isolated environment where the virtual machine does not have access to the internet.
+# The easiest is to use apt-get via a terminal prompt or through the Ubuntu Software Center application. This requires that the virtual machine has access to the internet or at least to a repository mirror.
+# Using an .deb package. This is more complicated, but can be done in an isolated environment where the virtual machine does not have access to the internet.
 
-=== Using YUM via Software to install the oVirt Guest Tools ===
-# Open the Software application. In Gnome for example, you can find this under Activities > Show Applications > Software
-# In the Software application, use the search function to search for '''ovirt-guest-agent'''
-# From the results, click the box beside '''ovirt-guest-agent-common'''
-# Click Apply Changes. The system will when verify that any required dependencies are installed, and then install the guest agent.
+=== Using Ubuntu Software Center to install the oVirt Guest Tools ===
+At present the oVirt guest agent is not available in the Ubuntu repositories add requires adding another installation source.
+== Adding the Installation Source ==
+[[File:Ubuntu_guest_agent_install.jpg|300px|thumb|right|Ubuntu Software Center]]
+# Visit https://launchpad.net/~zhshzhou/+archive/vdsm-ubuntu/+packages
+## For Debian open Ovirt-Guest-Agent for the source Raring, per [https://www.mail-archive.com/users@ovirt.org/msg10171.html the mailing list]
+## For Ubuntu Precise, Raring, and Sausy open Ovirt-Guest-Agent for the source Precise
+### Below Package files, click ovirt-guest-agent-*.deb
+### Save the file or open it with /usr/bin/software-center (default)
+### When Ubuntu Software Center opens, click install
 
-=== Using YUM via terminal to install the oVirt Guest Tools ===
+=== Using apt-get via terminal to install the oVirt Guest Tools ===
 From a terminal session, type the following 
 <pre>
 sudo yum install ovirt-guest-agent
