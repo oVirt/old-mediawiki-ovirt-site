@@ -60,7 +60,7 @@ No information is available at this time
 |-
 | oVirt Guest Agent||[[How_to_install_the_guest_agent_in_Fedora|Yes]]||||||[[How_to_install_the_guest_agent_in_Ubuntu|Yes]]
 |-
-| VirtIO Drivers||Built-in||Built-in||Built-in||Built-in
+| VirtIO Drivers||Built-in(3)||Built-in(3)||Built-in(3)||Built-in(3)
 |-
 | Spice Drivers||Yes||||||Yes
 |-
@@ -68,3 +68,8 @@ No information is available at this time
 |-
 | QEMU Drivers||||||||
 |}
+''(1) XP Does not support VirtIO-SCSI''
+
+''(2) The spice drivers currently work with Windows 7 and below. ''
+
+''(3) Supported in Kernel 2.6.35 and above''
