@@ -1,0 +1,42 @@
+<!-- {{autolang|base=yes}} -->
+
+== HSM Async Tasks ==
+
+=== Summary ===
+In oVirt 3.3 and below, async tasks exist only for SPM (i.e., storage management) tasks.
+Other tasks, now matter how long they potentially take, are treated as synchronous task (and may just time out).
+This feature suggestion is to enable such a mechanism for HSM operations too.
+
+=== Owner ===
+* Name: TBD <!--[[User:MyUser| My User]]-->
+* Email: <!--my@email--->
+
+
+=== Current status ===
+* No such feature in implemented in 3.3
+* Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
+
+=== Detailed Description ===
+* Each (relevant) VDSM verb will gain an additional parameter (runAsync=False), in order to continue running verbs in backwards compatibility mode
+* For the first release, we will only allow VM level async tasks. The engine will send a call, and provide an additional callback to VdsUpdateRuntimeInfo that will return the task's completion status (running, endSuccessfully, endWithFailure) according to its business logic based on the runtime data collected for the VM.
+
+
+=== Benefit to oVirt ===
+* Allow long running on HSM without them timing out (current limitation: 3:00 minutes with the default configuration)
+* Move some of the asynchronous tasks from SPM to HSM, and reduce the load on the SPOF.
+* Improve current VM-centric features like [[Features/Storage Live Migration|Storage Live Migration]]
+* Facilitate future features such as live merge
+
+=== Dependencies / Related Features ===
+* See above
+
+=== Documentation / External references ===
+
+=== Testing ===
+TBD
+
+=== Comments and Discussion ===
+
+* Refer to [[Talk:HSM Async Tasks]]
+
+[[Category:Feature]]
