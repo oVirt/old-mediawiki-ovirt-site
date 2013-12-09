@@ -1,4 +1,4 @@
-== Edit Provisioned Networks ==
+== Multi-Host Network Configuration ==
 
 === Summary ===
 The feature allows the administrator to modify a network (i.e. vlan-id, mtu) which is already provisioned by the hosts and to apply the network changes to all of the hosts within the data-center to which the network is assigned.
