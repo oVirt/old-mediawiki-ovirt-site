@@ -146,7 +146,7 @@ For phase 2:
 * A query for all hosts which are labelled with specific label will be supported.
 
 === Dependencies / Related Features ===
-The feature will use the [[Features/EditProvisionedNetwork|Edit Provisioned Network]] feature to achieve its goals.
+The feature will use the [[Features/MultiHostNetworkConfiguration|Multi-Host Network Configuration]] feature to achieve its goals.
 
 === Documentation / External references ===
 
