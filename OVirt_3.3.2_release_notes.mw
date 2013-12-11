@@ -213,6 +213,14 @@ For restore, disks are attached to a virtual appliance, the data is restored to 
 {{BZ|1025780}} - Cannot disable KSM.<br>
 {{BZ|1031109}} - [vdsm] vdsm.spec restorecon verbosity.<br>
 {{BZ|1028972}} - [RHS-C] Error while executing action Add Gluster Hook: Internal Engine Error.<br>
+{{BZ|1037277}} - Node isn't registred when NIC with VLAN.<br>
+{{BZ|1034969}} - Mom tries to set balloon bigger than max_balloon.<br>
+{{BZ|1015887}} - Migration status verb fails on engine side due to change in response format.<br>
+{{BZ|1023131}} - DestroyVDSCommand called after CancelMigrateVDSCommand failure when attempting to cancel multiple live migrations at a time .<br>
+{{BZ|1002246}} - Accents in the vm name break the migration .<br>
+{{BZ|1031592}} - vdsm fails to start if reconfiguring of libvirt was performed.<br>
+{{BZ|1009812}} - LVM logical volumes on FC SDs are activated automatically after hypervisor reboot.<br>
+{{BZ|1029792}} -  VDSM does not report the qemu version in capabilities, if qemu-kvm-rhev is used.<br>
 
 ==ovirt-node-plugin-vdsm==
 No bugs reported at moment.
