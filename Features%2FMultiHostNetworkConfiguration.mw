@@ -75,4 +75,4 @@ To test the feature, a setup should include at least one host within the data-ce
 # Verify network 'red' was modified correctly on the relevant data-center's hosts.
 
 [[Category:Feature]]
-[[Category:Template]]
+[[Category:Networking]]
