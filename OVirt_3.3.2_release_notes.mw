@@ -113,7 +113,7 @@ For restore, disks are attached to a virtual appliance, the data is restored to 
 {{BZ|1013347}} - /etc/sysconfig/nfs is deleted on cleanup<br>
 {{BZ|1013619}} - Number of images listed in glance domains shouldn't be limited by server-side configuration<br>
 {{BZ|1013637}} - [REST-API] no ssh-publickey support for install host action<br>
-{{BZ|1013790}} - The automatic install in RHEV-M 3.3 does not have all the values in the config file it uses.v
+{{BZ|1013790}} - The automatic install in RHEV-M 3.3 does not have all the values in the config file it uses.<br>
 {{BZ|1013860}} - "Resources" tab on the Power User Portal unable to display all virtual machine disks<br>
 {{BZ|1014194}} - [ovirt-engine-backend] cloud-init fake-cdrom is attached even during normal Run action<br>
 {{BZ|1014491}} - support for configurable attachment of VirtIO-SCSI controller<br>
@@ -179,6 +179,7 @@ For restore, disks are attached to a virtual appliance, the data is restored to 
 {{BZ|1025294}} - [engine] Allocated size not calculated correctly for storage domains<br>
 {{BZ|1025773}} - disk stays in "image locked" status long after action (snapshot preview) failure when all related task are gone from vdsm and engine<br>
 {{BZ|1025794}} - Add osinfo configuration instruction and warning not to override defaults<br>
+{{BZ|1025829}} - sysprep floppy is not attached to Windows 2008 R2 machine - even when specifically checked in Run Once<br>
 {{BZ|1026083}} - Removing VM without removing its disks releases quota of the disks wrongfully<br>
 {{BZ|1026100}} - ovirt-engine is killed by oom-killer in is21<br>
 {{BZ|1026225}} - Required/non-required networks gone from setup networks dialog<br>
@@ -191,9 +192,11 @@ For restore, disks are attached to a virtual appliance, the data is restored to 
 {{BZ|1028050}} - Make the UseFqdnForRdpIfAvailable engine-config option available<br>
 {{BZ|1028739}} - Possibility to edit Network description and comment while attached to VMs<br>
 {{BZ|1028755}} - add NIC to VM failed on create VM from template<br>
+{{BZ|1028966}} - require openjdk version which solves the memory leak in RHEV-M: service ovirt-engine gets OOM killed after few days of uptime<br>
 {{BZ|1029036}} - rhevm-setup fails do to missing 'file' tool<br>
 {{BZ|1029038}} - export isn't executed because of space check performed not only for relevant disks<br>
 {{BZ|1029045}} - memory volumes aren't being exported for diskless vms<br>
+{{BZ|1029106}} - getallfromvmtemplates stored in procedure execution takes long time making VM creation take long time when having more than 80 templates<br>
 {{BZ|1029177}} - taskcleaner.sh '-l' option does not produce logfile<br>
 {{BZ|1029324}} - when exporting vm with memory snapshots, the tasks for export the memory volumes are never cleaned<br>
 {{BZ|1029339}} - [RHEVM][webadmin] check if network profile exists on DC before creating VM<br>
@@ -205,8 +208,14 @@ For restore, disks are attached to a virtual appliance, the data is restored to 
 {{BZ|1032508}} - The GWT applications should use /api/ instead of /api to avoid sending credentials to /rhevm-reports<br>
 {{BZ|1032652}} - RHEL 6 VM gets ac97 soundcard (osinfo overrides broken?)<br>
 {{BZ|1032807}} - TryBackToAllSnapshotsOfVm threw NullPointerException during snapshot-preview because of random disk attached to VM<br>
+{{BZ|1032890}} - [RHEV][host deploy] Support OpenStack Havana layer 2 agent integration<br>
 {{BZ|1033629}} - Unable to run regular yum update due to implicit (undeclared) version lock on rhevm-websocket-proxy<br>
 {{BZ|1035346}} - Updating info from Host fails when a VM without a balloon is found<br>
+{{BZ|1035932}} - [postgres provisioning] when locale is non unicode non unicode password may be generate failing java database access<br>
+{{BZ|1036209}} - [AIO] ssh issues <br>
+{{BZ|1039009}} - can't use cloud-init /run once via api<br>
+{{BZ|1039921}} - [REST API] Network object has no attribute ID<br>
+{{BZ|1040513}} - restapi: cloud-init incorrectly implements RSDL metadata at vm.start()<br>
 
 ==VDSM==
 {{BZ|1003588}} - Paused VM not unpaused when vdsm is starting and storage domain is valid<br>
