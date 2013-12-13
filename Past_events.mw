@@ -16,6 +16,9 @@
 
 In addition, there was a presentation on OpenShift from Fabiano Franz and KVM from Ademar Reis to complete a successful cloud track.}}
 
+{{Event|name=[[Intel Workshop May 2013 | oVirt Workshop hosted by Intel]]
+|date=8-9 May 2013|location=Shanghai, China|lead= The May 2013 oVirt workshop was held at Intel's Shanghai Campus. This workshop was designed to encourage collaboration in our community, as well as help answer questions about the project from both a developer and user's perspective. Slides and material from the event can be found on [[Intel Workshop May 2013 | the event web page]].}}
+
 {{Event|name=[//wiki.centos.org/Events/Dojo/Antwerp2013 CentOS Dojo in Antwerp, Getting Started with oVirt]|date=8 April 2013|location=Antwerp, Belgium|lead=An Introduction to oVirt [https://speakerdeck.com/vincentvdk/ovirt-introduction-and-overview Presentation] by Vincent Van Der Kussen explaining what oVirt is about and why its generating so much excitement in the virtualised infrastructure space. }}
 
 {{Event|name=[[FOSDEM 2013 | oVirt at FOSDEM 2013]]|date=22-24 January 2013|location=Brussels, Belgium|lead=
