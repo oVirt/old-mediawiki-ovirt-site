@@ -56,7 +56,7 @@ No information is available at this time
 |}
 == Linux Guests ==
 {| class="wikitable"
-| ||Fedora||RHEL||CentOS||Ubuntu
+| ||[[How_to_create_a_Fedora_Virtual_Machine|Fedora]]||RHEL||CentOS||Ubuntu
 |-
 | oVirt Guest Agent||[[How_to_install_the_guest_agent_in_Fedora|Yes]]||||||[[How_to_install_the_guest_agent_in_Ubuntu|Yes]]
 |-
