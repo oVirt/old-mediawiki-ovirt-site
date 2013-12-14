@@ -42,7 +42,7 @@ No information is available at this time
 = Availability & Install Instructions =
 == Windows Guests ==
 {| class="wikitable"
-| ||Win XP||[[How_to_create_a_Windows_7_Virtual_Machine|Win 7]]||Win 8||Server 2003||Server 2003 R2||Server 2008||Server 2008 R2||Server 2012||Server 2012 R2
+| ||[[How_to_create_a_Windows_XP_Virtual_Machine|Win XP]]||[[How_to_create_a_Windows_7_Virtual_Machine|Win 7]]||[[How_to_create_a_Windows_8_Virtual_Machine|Win8]]||Server 2003||Server 2003 R2||Server 2008||Server 2008 R2||Server 2012||Server 2012 R2
 |-
 | oVirt Guest Agent||||||||||||||||||
 |-
