@@ -47,11 +47,31 @@ You have now created your Windows 7 virtual machine. Before you can use your vir
 ##Figure 2.1. Run once menu
 ##Retain the default settings for the other options and click OK to start the virtual machine. 
 # Select the virtual machine and click the Console ( ) icon. This displays a window to the virtual machine, where you will be prompted to begin installing the operating system.
+# Continue with the Windows 7 install as normal until you reach "Where do you want to install Windows?"
 
-If you choose to use the VirtIO interface for your hard disks, expand this box:
-(put box here)
-If you choose to use the IDE interface for your hard disks, expand this box:
-(put box here)
+== Installing with a  VirtIO interface==
+<div class="toccolours mw-collapsible mw-collapsed" style="width:800px">
+"Where do you want to install Windows?" does not show any disks. Click to expand this section. 
+<div class="mw-collapsible-content">
+[[File:Install_Windows7_VirtIO_Disk.jpg|thumb|No disks available]]
+You need to load the VirtIO driver.
+# On the Navigation Tabs, click Change CD[[File:Navigation_Tabs_Change_CD.jpg|thumb|Change CD]]
+#From the drop down list select the virtio CD and click ok.[[File:Change CD virtio.jpg|thumb|VirtIO CD]]
+# On the console, click "Load Drivers"
+# On the "Load Driver" popup, click Browse
+# Browse to the CD, Win7 folder. Choose the appropriate architecture (AMD64 for 64-bit, x86 for 32-bit) and click OK.
+# The VirtIO Drivers should appear. Choose "Red Hat VirtIO SCSI Controller", and then click Next[[File:Install_Windows7_VirtIO_Drivers.jpg|thumb|Drivers Available]]
+# The driver should install and return to the "Where do you want to install Windows?" screen now showing a disk to install to. Note that a message has appeared that "Windows cannot be installed to this disk"
+# On the Navigation Tabs, click Change CD
+# From the drop down list select the Windows 7 install media and click ok.
+# On the console, click "Refresh". The "Windows cannot be installed to this disk" message should disappear as the system can see the Windows install media again.
+# Continue with the install as normal
+</div>
+</div>
+
+== Installing with a IDE interface ==
+"Where do you want to install Windows?" shows a disk to install to. Continue as normal.
+
 = Post Install Additions =
 Adding a few guest tools may improve your experience.
 *oVirt Guest Agent allows oVirt to show the Memory and Network utilization of the VM, the IP address of the VM, the installed Applications, Enable Single Sign On (SSO) and more.
