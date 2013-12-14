@@ -42,11 +42,11 @@ No information is available at this time
 = Availability & Install Instructions =
 == Windows Guests ==
 {| class="wikitable"
-| ||Win XP||Win 7||Win 8||Server 2003||Server 2003 R2||Server 2008||Server 2008 R2||Server 2012||Server 2012 R2
+| ||Win XP||[[How_to_create_a_Windows_7_Virtual_Machine|Win 7]]||Win 8||Server 2003||Server 2003 R2||Server 2008||Server 2008 R2||Server 2012||Server 2012 R2
 |-
 | oVirt Guest Agent||||||||||||||||||
 |-
-| VirtIO Drivers||Yes(1)||Yes||Yes||Yes||Yes||Yes||Yes||Yes||
+| VirtIO Drivers||Yes(1)||[[How_to_create_a_Windows_7_Virtual_Machine#Drivers|Yes]]||Yes||Yes||Yes||Yes||Yes||Yes||
 |-
 | Spice Drivers||Yes||Yes||No(2)||Yes?||Yes?||Yes?||Yes?||No||No
 |-
@@ -54,6 +54,7 @@ No information is available at this time
 |-
 | QEMU Drivers||||||||||||||||||
 |}
+
 == Linux Guests ==
 {| class="wikitable"
 | ||[[How_to_create_a_Fedora_Virtual_Machine|Fedora]]||RHEL||CentOS||[[How_to_create_a_Ubuntu_Virtual_Machine|Ubuntu]]
