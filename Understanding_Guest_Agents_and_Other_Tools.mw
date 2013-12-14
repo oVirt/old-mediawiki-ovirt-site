@@ -46,9 +46,9 @@ No information is available at this time
 |-
 | oVirt Guest Agent||||||||||||||||||
 |-
-| VirtIO Drivers||Yes(1)||[[How_to_create_a_Windows_7_Virtual_Machine#Drivers|Yes]]||Yes||Yes||Yes||Yes||Yes||Yes||
+| VirtIO Drivers||[[How_to_create_a_Windows_XP_Virtual_Machine#VirtIO|Yes(1)]]||[[How_to_create_a_Windows_7_Virtual_Machine#Drivers|Yes]]||Yes||Yes||Yes||Yes||Yes||Yes||
 |-
-| Spice Drivers||Yes||Yes||No(2)||Yes?||Yes?||Yes?||Yes?||No||No
+| Spice Drivers||[[How_to_create_a_Windows_XP_Virtual_Machine#Graphics|Yes]]||Yes||No(2)||Yes?||Yes?||Yes?||Yes?||No||No
 |-
 | QXL Drivers||||||||||||||||||
 |-
