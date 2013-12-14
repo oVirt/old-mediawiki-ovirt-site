@@ -53,17 +53,19 @@ You have now created your Windows XP virtual machine. Before you can use your vi
 
 = Post Install Additions =
 == Drivers ==
-If you choose to use the VirtIO disk interface, the VirtIO network interface, or wish to use the oVirt Guest Tools through the VirtIO-Serial interface, you need to install additional drivers.
+=== VirtIO ===
+If you wish to use the oVirt Guest Tools through the VirtIO-Serial interface, you need to install additional drivers.
 [[File:Device_Manager_WinXP_Missing_Drivers_VirtIO.jpg|thumb|Device Manager]]
 # On the console, open the Device Manger
 # On the Navigation Tabs, click Change CD[[File:Navigation_Tabs_Change_CD.jpg|thumb|Change CD]]
 #From the drop down list select the virtio CD and click ok.[[File:Change CD virtio.jpg|thumb|VirtIO CD]]
-# On the console, right click the first device that is missing drivers
+# On the console, right click the "PCI Simple Communications Controller" device that is missing drivers
 # Select "Update Driver", and then click Next
 # Choose "Install from a list or a specific location", and then click Next
 # Choose "Search for the best driver in these locations", check "Search removable media", and then click Next
 # When prompted, choose "Continue Anyway"
-# Repeat the above for the remaining missing drivers, except for the "Video Controller (VGA Compatible)"
+Note: The drivers for Ethernet Controller (VirtIO based) and SCSI Controller/pass-through (VirtIO based) do not work correctly. The latter is intentional.
+ === Graphics ===
 
 == Guest Tools ==
 Adding a few guest tools may improve your experience.
