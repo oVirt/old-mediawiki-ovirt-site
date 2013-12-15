@@ -11,7 +11,7 @@ VDSM already has a read-only disk capability. This feature  adds that functional
 * Name: [[User:vvolansk|Vered Volansky]]
 * Email: vered@redhat.com
 
-<ref>Insert footnote text here</ref>=== Current status ===
+=== Current status ===
 * Target Release: 3.4
 * Status: Done
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}
