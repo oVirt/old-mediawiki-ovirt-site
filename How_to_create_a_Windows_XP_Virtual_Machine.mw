@@ -52,18 +52,34 @@ You have now created your Windows XP virtual machine. Before you can use your vi
 = Post Install Additions =
 == Drivers ==
 === VirtIO ===
-If you wish to use the oVirt Guest Tools through the VirtIO-Serial interface, you need to install additional drivers.
+If you wish to use the oVirt Guest Tools through the VirtIO-Serial interface, the VirtIO network interface, or a SCSI disk you need to install additional drivers.
 [[File:Device_Manager_WinXP_Missing_Drivers_VirtIO.jpg|thumb|Device Manager]]
 # On the console, open the Device Manger
 # On the Navigation Tabs, click Change CD[[File:Navigation_Tabs_Change_CD.jpg|thumb|Change CD]]
 #From the drop down list select the virtio CD and click ok.[[File:Change CD virtio.jpg|thumb|VirtIO CD]]
-# On the console, right click the "PCI Simple Communications Controller" device that is missing drivers
+==== VirtIO Serial ====
+# On the console, right click the '''PCI Simple Communications Controller''' device that is missing drivers
 # Select "Update Driver", and then click Next
 # Choose "Install from a list or a specific location", and then click Next
-# Choose "Search for the best driver in these locations", check "Search removable media", and then click Next
+# '''UNCHECK Search removable media or else it will install the Windows 8 drivers and error'''
+# Check "Include this location in the search", Browse to "X:\WXP\X86" and then click Next
 # When prompted, choose "Continue Anyway"
-Note: The drivers for Ethernet Controller (VirtIO based) and SCSI Controller/pass-through (VirtIO based) do not work correctly. The latter is intentional.
- 
+==== VirtIO Networking ====
+# On the console, right click the '''Ethernet Controller''' device that is missing drivers
+# Select "Update Driver", and then click Next
+# Choose "Install from a list or a specific location", and then click Next
+# '''UNCHECK Search removable media or else it will install the Windows 8 drivers and error'''
+# Check "Include this location in the search", Browse to "X:\XP\X86" (yes, this time X:\XP\X86) and then click Next
+# When prompted, choose "Continue Anyway"
+==== VirtIO SCSI ====
+# On the console, right click the '''SCSI Controller''' device that is missing drivers
+# Select "Update Driver", and then click Next
+# Choose "Install from a list or a specific location", and then click Next
+# '''UNCHECK Search removable media or else it will install the Windows 8 drivers and error'''
+# Check "Include this location in the search", Browse to "X:\WXP\X86" and then click Next
+# If prompted, choose "Continue Anyway"
+Note: There may be two "SCSI Controllers" which need drivers. There are drivers for one "Red Hat SCSI Controller", but there are no XP drivers for "Red Hat SCSI Pass-through"If the drivers do not install on one, try the other SCSI Controller if a second exists.
+
 === Graphics ===
 To install the graphics driver (aka "Video Controller (VGA compatible)") if you are using the Spice console, download and install the [http://www.spice-space.org/download/windows/spice-guest-tools/spice-guest-tools-0.65.1.exe Spice Guest Tools]. 
 When prompted, click "Continue Anyway".
