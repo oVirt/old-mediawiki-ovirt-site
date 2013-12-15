@@ -32,15 +32,16 @@ Figure 1.4. Add Virtual Disk configurations
 You have now created your Fedora virtual machine. Before you can use your virtual machine, install an operating system on it.
 
 = Installing an Operating System =
-# Right click the virtual machine and select Run Once. 
-# Check “Attach CD” and choose a disk from the list
-##Note: If you do not have any in the list, you need to upload one.
-# Click Ok
-##[[File:Run_Once_Fedora.jpg|350px]]
-##Figure 2.1. Run once menu
-##Retain the default settings for the other options and click OK to start the virtual machine. 
-# Select the virtual machine and click the Console ( ) icon. This displays a window to the virtual machine, where you will be prompted to begin installing the operating system. For further instructions, see the [https://docs.fedoraproject.org/en-US/Fedora/17/html/Installation_Guide/index.html Fedora Installation Guide]. 
-# After the installation has completed, shut down the virtual machine and reboot from the hard drive.
+:1. Right click the virtual machine and select Run Once. 
+:2. Check “Attach CD” and choose a disk from the list
+ Note: If you do not have any in the list, you need to upload one.
+:3. Click Ok
+[[File:Run_Once_Fedora.jpg|350px]]
+
+Figure 2.1. Run once menu
+ Retain the default settings for the other options and click OK to start the virtual machine. 
+:4. Select the virtual machine and click the Console ( ) icon. This displays a window to the virtual machine, where you will be prompted to begin installing the operating system. For further instructions, see the [https://docs.fedoraproject.org/en-US/Fedora/17/html/Installation_Guide/index.html Fedora Installation Guide]. 
+:5. After the installation has completed, shut down the virtual machine and reboot from the hard drive.
 You can now connect to your Fedora virtual machine and start using it.
 
 = Post Install Additions =
