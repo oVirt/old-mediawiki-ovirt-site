@@ -538,49 +538,34 @@ The final stage of setting up oVirt is the virtual machine lifecycle - spanning 
 On oVirt, you can create virtual machines from an existing template, as a clone, or from scratch. Once created, virtual machines can be booted using ISO images, a network boot (PXE) server, or a hard disk. This document provides instructions for creating a virtual machine using an ISO image.
 
 ==== Create a Fedora Virtual Machine ====
+:1. From the navigation tabs, select Virtual Machines. On the Virtual Machines tab, click New VM.
+[[File:Navigation_Tabs.jpg]]
 
-In your current configuration, you should have at least one host available for running virtual machines, and uploaded the required installation images to your ISO domain. This section guides you through the creation of a Fedora virtual server. You will perform a normal attended installation using a virtual DVD.
+Figure 5.1: The navigation tabs
+:2. The “New Virtual Machine” popup appears.
+[[File:New_VM_Fedora.jpg|400px]]
 
-'''To create a Fedora server'''
+Figure 5.2: Create new linux virtual machine
+:3. Under General, your default Cluster and Template will be fine. 
+:4. For Operating System, choose Red Hat Enterprise Linux (for i386/i686 Fedora) or Red Hat Enterprise Linux x64 (for x86_64 Fedora). 
+:5. Under Optimized For, choose Desktop if you are creating a desktop VM, or Server if you are creating a server VM. 
+:6. Add a Name (required) and a comment or description (optional). 
+:7. Finally, attach a Network Interface (optional) to the VM by selecting one from the dropdown. 
+:8. Click OK
+ Note: By clicking “Additional Options” you can configure other details such as memory and CPU resources. You can change these after creating a VM as well, 
+:9. A New Virtual Machine - Guide Me window opens. This allows you to add storage disks to the virtual machine. 
+[[File:Guide_Me.jpg|300px]]
 
-:1. Navigate to the Tree pane and click Expand All. Click the VMs icon under the Default cluster. On the Virtual Machines tab, click New Server.
+Figure 5.3. New Virtual Machine – Guide Me
+:10. Click Configure Virtual Disks to add storage to the virtual machine. 
+:11. Enter a Size for the disk.
+:12. Click OK
+ The parameters in the following figure such as Interface and Allocation Policy are recommended, but can be edited as necessary. 
+[[File:Add_Virtual_Disk_Fedora.jpg|450px]]
 
-[[File:new-fedora-server.png|center|frame|Figure 4.2. Create New Linux Virtual Machine]]
-
-: You only need to fill in the Name field and select Red Hat Enterprise Linux 6.x as your Operating System. You may alter other settings but in this example we will retain the defaults. Click OK to create the virtual machine.
-
-:2. A New Virtual Machine - Guide Me window opens. This allows you to add networks and storage disks to the virtual machine.
-
-[[File:newvm-guide.png|center|frame|Figure 4.3. Create Virtual Machines]]
-
-:3. Click Configure Network Interfaces to define networks for your virtual machine. The parameters in the following figure are recommended, but can be edited as necessary. When you have configured your required settings, click OK.
-
-[[File:new-network-interface.png|center|frame|Figure 4.4. New Network Interface configurations]]
-
-:4. You are returned to the Guide Me window. This time, click Configure Virtual Disks to add storage to the virtual machine. The parameters in the following figure are recommended, but can be edited as necessary. When you have configured your required settings, click OK.
-
-[[File:new-virtual-disk.png|center|frame|Figure 4.5. New Virtual Disk configurations]]
-
-:5. Close the Guide Me window by clicking Configure Later. Your new Fedora virtual machine will display in the Virtual Machines tab.
-
-: You have now created your first Fedora virtual machine. Before you can use your virtual machine, install an operating system on it.
-
-'''To install the Fedora guest operating system'''
-
-:1. Right click the virtual machine and select Run Once. Configure the following options:
-
-[[File:run-fedora-vm.png|center|frame|Figure 4.6. Run Linux Virtual Machine]]
-
-:* Attach CD: Fedora 18
-:* Boot Sequence: CD-ROM
-:* Display protocol: SPICE
-
-: Retain the default settings for the other options and click OK to start the virtual machine.
-
-:2. Select the virtual machine and click the Console (   ) icon. This displays a window to the virtual machine, where you will be prompted to begin installing the operating system. For further instructions, see the [https://docs.fedoraproject.org/en-US/Fedora/17/html/Installation_Guide/index.html Fedora Installation Guide].
-:3. After the installation has completed, shut down the virtual machine and reboot from the hard drive.
-
-You can now connect to your Fedora virtual machine and start using it.
+Figure 5.4. Add Virtual Disk configurations
+:13. Close the Guide Me window by clicking Configure Later. Your new Fedora virtual machine will display in the Virtual Machines tab. 
+You have now created your Fedora virtual machine. Before you can use your virtual machine, install an operating system on it.
 
 ==== Create a Windows Virtual Machine ====
 
