@@ -10,31 +10,35 @@ If you are familiar with Linux VMs on oVirt you know that the default options wo
 Loading the VirtIO drivers and using the alternatives is covered in the install directions below. If you would like to use the VirtIO interfaces you only need to add the VirtIO disk to your ISO domain. [[Understanding_Guest_Agents_and_Other_Tools#VirtIO_Drivers|Please see this section to download the VirtIO ISO from Fedora]] which contains signed drivers for Windows.
 
 = Creating a Windows 7 VM =
-# From the navigation tabs, select Virtual Machines. On the Virtual Machines tab, click New VM.
-##[[File:Navigation_Tabs.jpg]]
-##Figure 1.2: The navigation tabs
-# The “New Virtual Machine” popup appears.
-##[[File:New_VM_Win7.jpg|400px]]
-##Figure 1.2: Create new Windows virtual machine
-# Under General, your default Cluster and Template will be fine. 
-# For Operating System, choose Windows 7 (for 32-bit Windows) or Windows7 x64 (for 64-bit Windows). 
-# Under Optimized For, choose Desktop. 
-# Add a Name (required) and a comment or description (optional). 
-# Finally, attach a Network Interface (optional) to the VM by selecting one from the dropdown. 
-# Click OK
-##Note: By clicking “Additional Options” you can configure other details such as memory and CPU resources. You can change these after creating a VM as well, 
-# A New Virtual Machine - Guide Me window opens. This allows you to add storage disks to the virtual machine. 
-##[[File:Guide_Me.jpg|300px]]
-##Figure 1.3. New Virtual Machine – Guide Me
-# Click Configure Virtual Disks to add storage to the virtual machine. 
-# Enter a Size for the disk.
-# Click OK
-##The parameters in the following figure such as Interface and Allocation Policy are recommended, but can be edited as necessary. 
-##[[File:Add_Virtual_Disk_Win7.jpg|450px]]
-##Figure 1.4. Add Virtual Disk configurations
-##Note: [[How_to_create_a_Windows_7_Virtual_Machine#VirtIO_interfaces|As mentioned above]] When using the VirtIO interface (recommended) additional drivers are required at install time. You can use the IDE interface instead which does not require the additional drivers. The OS install guide covers both VirtIO and IDE interfaces below.
-# Close the Guide Me window by clicking Configure Later. Your new Windows 7 virtual machine will display in the Virtual Machines tab. 
-You have now created your Windows 7 virtual machine. Before you can use your virtual machine you need to install an operating system on it. 
+:1. From the navigation tabs, select Virtual Machines. On the Virtual Machines tab, click New VM.
+[[File:Navigation_Tabs.jpg]]
+
+Figure 2.1: The navigation tabs
+:2. The “New Virtual Machine” popup appears.
+[[File:New_VM_Win7.jpg|400px]]
+
+Figure 2.2: Create new Windows virtual machine
+:3. Under General, your default Cluster and Template will be fine. 
+:4. For Operating System, choose Windows 7 (for 32-bit Windows) or Windows7 x64 (for 64-bit Windows). 
+:5. Under Optimized For, choose Desktop. 
+:6. Add a Name (required) and a comment or description (optional). 
+:7. Finally, attach a Network Interface (optional) to the VM by selecting one from the dropdown. 
+:8. Click OK
+ Note: By clicking “Additional Options” you can configure other details such as memory and CPU resources. You can change these after creating a VM as well, 
+:9. A New Virtual Machine - Guide Me window opens. This allows you to add storage disks to the virtual machine. 
+[[File:Guide_Me.jpg|300px]]
+
+Figure 2.3. New Virtual Machine – Guide Me
+:11. Click Configure Virtual Disks to add storage to the virtual machine. 
+:12. Enter a Size for the disk.
+:13. Click OK
+ The parameters in the following figure such as Interface and Allocation Policy are recommended, but can be edited as necessary. 
+[[File:Add_Virtual_Disk_Win7.jpg|450px]]
+
+Figure 2.4. Add Virtual Disk configurations
+ Note: [[How_to_create_a_Windows_7_Virtual_Machine#VirtIO_interfaces|As mentioned above]] When using the VirtIO interface (recommended) additional drivers are required at install time. You can use the IDE interface instead which does not require the additional drivers. The OS install guide covers both VirtIO and IDE interfaces below.
+:15. Close the Guide Me window by clicking Configure Later. Your new Windows 7 virtual machine will display in the Virtual Machines tab. 
+You have now created your Windows 7 virtual machine. Before you can use your virtual machine you need to install an operating system on it.
 
 = Installing an Operating System =
 # Right click the virtual machine and select Run Once. 
