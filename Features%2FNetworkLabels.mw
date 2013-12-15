@@ -81,6 +81,10 @@ Removing a labelled network from a labelled interface will be blocked, as labell
 ==== Assigning Network to a Cluster ====
 When attaching a labelled network to a cluster, which the label already specified on the cluster's host interfaces will result in adding that network to all of the hosts in that cluster carrying that label on their interfaces.
 
+==== Moving host between clusters ====
+Moving host between cluster that supports 'network labels' to a cluster which doesn't will be blocked if labels are used on that host.<br>
+* Moving a host that uses labels from version greater than 3.0 to cluster 3.0 will be blocked.
+
 ==== Network Label constraints ====
 The network labels feature relies on the 'Setup Networks' api to configure the networks on the hosts.<br>
 There are certain configurations which aren't supported by the 'Setup Networks' api and defining the network label in that manner will fail the operation and will result in a useless label declaration. The following network configuration on a single interface are prohibited:
