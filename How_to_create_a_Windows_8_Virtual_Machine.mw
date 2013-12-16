@@ -96,4 +96,5 @@ Adding a few guest tools may improve your experience.
 *Spice-vdagent allows for copy and paste support (text & image), better mouse functionality, and automatic adjustment of the screen resolution based on the size of your window.
 
 Add the oVirt Guest Agent by following the directions at <<unwritten>>
-Add the Spice-vdagent by following the directions at <<unwritten>>
+
+The Spice-Guest-Tools are unsupported in Windows 8 & 8.1 at this time.
