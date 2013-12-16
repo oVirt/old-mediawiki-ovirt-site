@@ -9,7 +9,7 @@ For a general overview of oVirt, read [[oVirt 3.0 Feature Guide | the oVirt 3.0 
 
 = Install / Upgrade from previous versions=
 
-== BETA RELEASE ==
+== RELEASE CANDIDATE ==
 oVirt 3.3.2 release candidate is available for testing. In order to install it you've to enable ovirt-updates-testing repository.
 
 If you're going to test  oVirt 3.3.2 release candidate, please add yourself to [[Testing/Ovirt 3.3.2 testing]].
