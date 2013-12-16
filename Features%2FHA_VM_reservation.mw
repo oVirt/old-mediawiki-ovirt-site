@@ -4,8 +4,7 @@
 
 === Summary ===
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
-The HA VM reservation feature allows the user to ensure a safety HA VMs in case of host failover, without negatively impacting performance.
-
+The HA VM reservation feature ensure the safety of HA VMs in case of host failover, without negatively impacting performance.
 
 === Owner ===
 <!--This should link to your home wiki page so we know who you are-->
