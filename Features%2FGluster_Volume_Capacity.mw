@@ -1,0 +1,24 @@
+==Summary==
+
+A gluster storage administrator would like to view the capacity information (total , used and free) on a volume as well as on bricks. This feature provides support for that.
+
+==Owner==
+
+== Current Status ==
+
+* Status: Development in progress
+* Last updated date: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
+
+== Detailed Description ==
+
+
+== Dependencies / Related Features ==
+
+== User Flows ==
+
+
+== Detailed Design ==
+
+
+
+[[Category:Feature]]
