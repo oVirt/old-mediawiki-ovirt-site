@@ -101,9 +101,9 @@ For managing labels on host level:
 * In host interfaces sub-tab a column ''labels'' will present the labels.
 
 For managing labels on network level:
-Alternative 1:
 * In 'Add/Edit Network' dialog a new property ''label'' will be added.
-* In 'network main tab' a ''label'' column will present the labels.
+** Before submitting, an verification for the validity of the label is being examined: If two networks which are attached to a specific cluster cannot co-exit on the host nic by that label, a warning message will be appeared to the user.
+* In 'network main tab' a ''label'' icon is added next to the network name, when hovers it displays the label name.
 
 ==== REST ====
 The network label on host nic level are represented as a sub-collection of the nic resource: <br>
