@@ -38,6 +38,12 @@ the oVirt manager will be able to predict the change of status in cases of run/m
 In case of a new HA VM it is needed to take into account not only the resources that the VM consumes from the host but also be aware that the HA VMs resources are lager now, and in case of failover the replacement host must have the appropriate amount of available resources.
 
 === GUI ===
+Enabling or disabling the HA VM Reservation will  be possible via the Configure popup.
+A sketch of the Configure window:
+[[File:configurewin.png]]
+
+Illustration of the Alert panel:
+[[File:alert.png]]
 
 === Detailed Design ===
 Detailed design can be found here [[Features/HA_VM_reservation_detailedDesign|HA_VM_reservation_detailedDesign]]
