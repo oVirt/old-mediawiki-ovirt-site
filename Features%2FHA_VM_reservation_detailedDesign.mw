@@ -95,6 +95,7 @@ for the monitoring task we will use Quartz to run a job every 5 minutes.
 the job will implement the pseudo code shown above for the monitoring task.
 
 <todo: Add quartz Impl notes here>
+<todo: Add run/migrate Impl notes here>
 
 ==== DB ====
 Since there is no use of persisting the data, because it is relevant for a short period of time, no DB changes are needed.
