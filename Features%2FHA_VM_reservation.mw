@@ -63,11 +63,8 @@ In case of a new HA VM it is needed to take into account not only the resources 
 
 === GUI ===
 Enabling or disabling the HA VM Reservation will  be possible via the Configure popup.<br>
-A sketch of the Configure window:
+A sketch of the Configure window:<br>
 [[File:configurewin.png]]
-
-Illustration of the Alert panel:
-[[File:alert.png]]
 
 === Detailed Design ===
 Detailed design can be found here [[Features/HA_VM_reservation_detailedDesign|HA_VM_reservation_detailedDesign]]
