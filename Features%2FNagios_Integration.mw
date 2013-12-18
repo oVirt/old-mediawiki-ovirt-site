@@ -30,7 +30,7 @@ Monitoring the system/Gluster resources and services includes:
 *Nagios addons and plugins will not be packaged and installed. This needs to taken done separately on the the monitoring nodes and the server
 
 == User Flows ==
-== =Overview ===
+=== Overview ===
 
 [[File:Setup.png]]
 
