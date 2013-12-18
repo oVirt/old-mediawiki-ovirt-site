@@ -3,7 +3,7 @@
 '''HA VM reservation detailed design for host failover - phase 1'''
 
 === Summary ===
-The HA VM reservation feature ensure the safety of HA VMs in case of host failover, without negatively impacting performance.
+High level design can be found at  [[ Features/HA_VM_reservation]]
 
 === Owner ===
 * Name: [[User:kianku|Kobi Ianko]]
