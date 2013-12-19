@@ -86,13 +86,13 @@ The specific values means:
 |-
 | mem_size_mb || Memory Size || Y || || N || || || Y || create instance || || Y || || Y || Y || Y || Instance || 
 |-
-| vmt_guid || Internal link to template object || N || || N || || || N || || || Y || || Y || Y || N || User || If user picks custom template, than it appears on basic as well
+| vmt_guid || Internal link to template object || N || || N || || || N || || || Y || || Y || Y || N || User || 
 |-
 | OS || Operating System Type || Y || || Y || || || N || || || Y || || Y || Y || Y || Image || 
 |-
-| description || description set by user for vm and template || Y || || Y || || || Y || create instance ||  || Y || || N || Y || N || User || We could take from image if not passed
+| description || description set by user for vm and template || Y || || Y || || || Y || create instance ||  || Y || || N || Y || N || User ||
 |-
-| vds_group_id || vm cluster || Y || || N || || || Y || change cluster || || Y || || N || Y || N || User || 
+| vds_group_id || vm cluster || Y || || Y || || || N || change cluster || || Y || || N || Y || N || User || 
 |-
 | domain || directory services domain || Y || || N || || || N || || || Y || || Y || Y || N || User || 
 |-
