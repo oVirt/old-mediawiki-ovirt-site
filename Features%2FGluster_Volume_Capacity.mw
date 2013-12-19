@@ -24,6 +24,29 @@ The dialog also lists separately the list of volumes that are completely filled 
 [[File:VolumeCapacity.jpg]]
 
 == Detailed Design ==
+=== Entities ===
+<big>GlusterVolumeSizeInfo</big>
+{| class="wikitable" border="1"
+|-
+! Column
+! Type
+! Description
+|-
+| volumeId
+| GUID
+| respective gluster volume id
+|-
+| totalSize
+| long
+| total volume size
+|-
+| freeSize
+| long
+| free volume size
+|-
+| usedSize
+| long
+| used volume size
 
 
 
