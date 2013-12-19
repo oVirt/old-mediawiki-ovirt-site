@@ -25,7 +25,7 @@ The dialog also lists separately the list of volumes that are completely filled 
 
 == Detailed Design ==
 === Entities ===
-<big>GlusterVolumeSizeInfo</big>
+==== GlusterVolumeSizeInfo ====
 {| class="wikitable" border="1"
 |-
 ! Column
@@ -47,7 +47,17 @@ The dialog also lists separately the list of volumes that are completely filled 
 | usedSize
 | long
 | used volume size
+|}
 
+=== Query ===
+==== GetGlusterVolumeSizeInfoQuery ====
+Makes a call to Gluster and get the volume capacity details. The details are returned into an instance of GlusterVolumeSizeInfo.
 
+=== REST API ===
+
+* Add statistics GET action on the gluster volume resource
+
+ /api/clusters/{cluster-id}/glustervolumes/{volume-id}/statistics
+This will return the volume capacity details
 
 [[Category:Feature]]
