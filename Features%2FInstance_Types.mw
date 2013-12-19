@@ -37,6 +37,8 @@ In many cloud platforms the following concepts and terminology are used:
 '''Instance Type (or flavor)'''<br>
 Used to describe the hardware configuration of the virtual machines.<br>
 For example “medium” including 1 virtual CPU and 4GB of memory.
+It will be a top-level entity (e.g. not bound to any DC/Cluster). It could be by default enabled/disabled and than this enable/disable overridden per cluster.
+For example an instance type named "Huge" could be by default disabled and enabled only for a one specific cluster.
  
 '''Image'''<br>
 Used to describe the virtual machine disk image. (Amazon uses the term AMI)
@@ -55,7 +57,7 @@ A user can add volumes to the virtual machines, which are persistent disks typic
  
 '''Template'''<br>
 The old template used in the oVirt until now. User will be able to combine the VM from the triple instance type, image and template.
- 
+
 == Design ==
 The following table enumerates all the fields involved and also how they are related to the entities. 
  
