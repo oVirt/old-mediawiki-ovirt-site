@@ -42,7 +42,7 @@ Considering the current level of integration (using the current vdsm-hook-vmfex)
 This level of integration consists of reworking the existing vdsm-hook-vmfex so that the oVirt administrator can set up the integration at the guest device level instead of at the VM level. The advantage of this is that only the port profile will need to be specified (since the MAC address is already part of the VM's NIC properties given by the Engine).
 
 Things to be done:
-* Filter out unused virtual functions from being reported as nics.
+* [http://gerrit.ovirt.org/#/c/22559/ Filter out unused virtual functions from being reported as nics].
 * [http://gerrit.ovirt.org/#/c/22529/ Clone and refactor the current hook to use custom device properties and to run "before_device_create" and "before_device_hotplug"].
 
 === Level V: "The Network provider strikes back" ===
