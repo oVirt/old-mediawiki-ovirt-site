@@ -86,7 +86,7 @@ A second UI change will be at the Alert window, in case the system will recogniz
 
 The message to be presented to the user:<br>
 Cluster <clusterName> might suffer some performance downgrade in case of failover in hosts: <hostName1>, <hostName2>, ...
-<br>
+<br><br>
 Adding a new tab at the configure popup (ConfigurePopupView.ui.xml)
     <t:tab>
         <t:DialogTab ui:field="HAVMReservationTab">
