@@ -1,5 +1,5 @@
 ==Summary==
-A storage administrator want storage nodes to be capable of being monitored using Nagios - an open IT infrastructure monitoring framework (http://www.nagios.org/) - to monitor the system/Gluster resources and services.
+An administrator want managed nodes to be capable of being monitored using Nagios - an open IT infrastructure monitoring framework (http://www.nagios.org/) - to monitor the system/Gluster resources and services.
 
 ==Owner==
 * Feature owner: Nishanth Thomas <nthomas@redhat.com>
