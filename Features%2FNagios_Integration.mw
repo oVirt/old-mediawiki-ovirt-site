@@ -39,6 +39,7 @@ Monitoring the system/Gluster resources and services includes:
 *Nagios addons and plugins will not be packaged and installed. This needs to taken done separately on the the monitoring nodes and the server
 
 == Resources to be Monitored ==
+
 *List of Physical Resources that need to be monitored :
 *#Hosts (Servers)
 *#CPU
@@ -47,9 +48,9 @@ Monitoring the system/Gluster resources and services includes:
 *#Disks
 
 *List of Logical Resources that need to be monitored :
-*#Cluster
-*#Volume
-*#Brick
+*#Cluster(Gluster specific)
+*#Volume(Gluster specific)
+*#Brick(Gluster specific)
 *#LVM
 
 *Parameters that should be monitored for logical and physical resources :
@@ -57,6 +58,23 @@ Monitoring the system/Gluster resources and services includes:
 *#Utilization
 *#Capacity
 *#Usage
+
+== Services/Operations to be monitored ==
+
+*Monitoring of Access Services such as:
+*#NFS (and CTDB)
+*#Swift/Object
+*#SMB (and CTDB)
+
+*Monitoring of background operations such as:
+*#Remove Brick(Gluster specific)
+*#Re-balance(Gluster specific)
+*#Self-Heal(Gluster specific)
+*#Geo-Replication(Gluster specific)
+*#System Monitoring(Gluster specific)
+*#Replace Brick(Gluster specific)
+
+* Alerting mechanisms needed for spilt-brain
 
 == User Flows ==
 
