@@ -113,7 +113,7 @@ Monitoring the system resources and services includes:
 *#Capacity
 *#Usage
 
-== Services/Operations to be monitored ==
+=== Services/Operations to be monitored ===
 
 *Monitoring of Access Services such as:
 *#NFS 
@@ -129,7 +129,6 @@ Monitoring the system resources and services includes:
 *#Replace Brick(Gluster specific)
 
 * Alerting mechanisms needed for spilt-brain
-
 
 == Detailed Design ==
 
