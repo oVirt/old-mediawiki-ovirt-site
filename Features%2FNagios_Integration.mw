@@ -71,7 +71,6 @@ Monitoring the system resources and services includes:
 *#Re-balance(Gluster specific)
 *#Self-Heal(Gluster specific)
 *#Geo-Replication(Gluster specific)
-*#System Monitoring(Gluster specific)
 *#Replace Brick(Gluster specific)
 
 * Alerting mechanisms needed for spilt-brain
