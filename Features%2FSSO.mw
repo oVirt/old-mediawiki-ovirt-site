@@ -105,7 +105,7 @@ Available more commands than actually used.
 == Problems in current implementations ==
 
 * Inability to support single signon or non password based authentication (example: OpenID) <p>The assumption that the password used to login into the ovirt web interface is available or can be used in order to login into guest is incorrect. Authentication using kerberos, SSL certificate, OpenID or any password based SSO will not provide usable password to the engine.</p>
-* Always enable automatic login when guest agent is available may cause user lockout <p>If password on guest differs, the lock reference of the user will be incremented at any attempt.</p>
+* Always enable automatic login when guest agent is available may cause user lockout <p>If password on guest differs, the lock reference of the user will be incremented at any attempt (should be solved in 3.4).</p>
 * Webadmin does not support automatic login
 * No mutual authentication between client and virtual machine <p>The user credentials are passed directly to VM using the engine->vdsm channel, the user login takes place without even the user is involved. User does not need to connect to the VM in order to establish login.</p>
 * vdsm<->guest agent protocol does not support negotiation<p>No protocol version is exchanged between components, components are unaware of what features are supported by peer.</p>
