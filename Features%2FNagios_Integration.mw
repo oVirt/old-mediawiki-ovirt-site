@@ -61,9 +61,10 @@ Monitoring the system resources and services includes:
 == Services/Operations to be monitored ==
 
 *Monitoring of Access Services such as:
-*#NFS (and CTDB)
+*#NFS 
 *#Swift/Object
-*#SMB (and CTDB)
+*#SMB 
+*#CTDB
 
 *Monitoring of background operations such as:
 *#Remove Brick(Gluster specific)
