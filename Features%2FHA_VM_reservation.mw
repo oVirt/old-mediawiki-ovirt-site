@@ -65,7 +65,7 @@ More details on this functionality can be found at the detailed design page.
 
 === GUI ===
 Enabling or disabling the HA VM Reservation will  be possible via the Cluster new/edit popup.<br>
-A sketch of the Configure window:<br>
+A sketch of the edit Cluster window:<br>
 [[File:editclusterwin.png]]
 
 === Detailed Design ===
