@@ -122,7 +122,7 @@ Example of usage:
             <password>myPass</password>
           </user>
         </users>
-        <network>
+        <network_configuration>
           <nics>
             <nic>
               <name>eth0</name>
@@ -160,7 +160,7 @@ Example of usage:
               </host>
             </search_domains>
           </dns>
-        </network>
+        </network_configuration>
         <files>
           <file>
             <name>/tmp/testFile1.txt</name>
