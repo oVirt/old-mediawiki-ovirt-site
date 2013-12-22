@@ -64,9 +64,9 @@ Basically the Engine will calculate the amount of used HA resources, the host wi
 More details on this functionality can be found at the detailed design page.
 
 === GUI ===
-Enabling or disabling the HA VM Reservation will  be possible via the Configure popup.<br>
+Enabling or disabling the HA VM Reservation will  be possible via the Cluster new/edit popup.<br>
 A sketch of the Configure window:<br>
-[[File:configurewin.png]]
+[[File:editclusterwin.png]]
 
 === Detailed Design ===
 Detailed design can be found here [[Features/HA_VM_reservation_detailedDesign|HA_VM_reservation_detailedDesign]]
