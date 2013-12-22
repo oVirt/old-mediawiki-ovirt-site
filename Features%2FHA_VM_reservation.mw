@@ -36,12 +36,14 @@ In the event that an HA VM cannot migrate upon a Host failure, an Alert will be 
 The monitoring procedure can be logically be divided into two.
 The first logical unit will search for a single host that can contain all of VMs from the failover host.
 *A pseudo code for that:<br>
-    1. for each host x in the cluster do:<br>
-    2.     calculate the host x HA resources -> resourceHA(x)<br>
-    3.     for each host y in the cluster, y<>x do:<br>
-    4.         calculate the host y free resources -> resourceFree(y);<br>
-    5.         if  resourceHA(x) < resourceFree(x) return ClusterHAStateOK;<br>
-    6. ClusterHAStateFailed, raise Alert<br>
+    1. mark for each host x:  ClusterHAStateOK(x) = false;
+    2. for each host x in the cluster do:<br>
+    3.     calculate the host x HA resources -> resourceHA(x)<br>
+    4.     for each host y in the cluster, y<>x do:<br>
+    5.         calculate the host y free resources -> resourceFree(y);<br>
+    6.         if  (resourceHA(x) < resourceFree(y) )  then mark ClusterHAStateOK(x) = true; //x can be migrated in case of failover<br>
+    7. for each host x  do: if ClusterHAStateOK(x) == false, add to Alert<br>
+    8. raise Alert
 
 In case we did not find a match, the second logical unit will split the host into VMs and will try to find several host that will replace the failover host.
 *A pseudo code for that:<br>
