@@ -1,5 +1,5 @@
 
-== VmOvfOnWantedDomains ==
+== OvfOnWantedDomains ==
 
 === Summary ===
 The vm ovf on any domain feature introduces a change on the way the vm ovfs are being stored/backed up in oVirt. Currently all the ovfs are being stored on the master domain and are being updated asynchronously on a time basis by the [[Feature/OvfAutoUpdater|OvfAutoUpdater]], This feature purpose is to store the OVFs on all wanted domains to provide better recovery abillity, reduce the use of master_fs and the master domain and add capabillities to oVirt that will be used further on.
