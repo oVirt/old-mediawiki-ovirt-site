@@ -21,3 +21,8 @@ cards create a /etc/modules-load.d/ib.conf with the following lines
 <nowiki>mlx4_ib
 ib_ipoib
 ib_umad</nowiki>
+
+After loading these modules you should see an Infiniband interface ib0 with ifconfig 
+(additionally ib1 if you have a two port card)
+
+=== Issues ===
