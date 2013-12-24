@@ -35,8 +35,7 @@ This is a compilation of known problems. Feel free to extend it.
 The kernel advertises TSO for Mellanox ConnectX cards although it is not supported. Therefore the hardware creates corrupt IP fragments on sender side during large requests and the receiving client cannot use LRO. The result of a lengthy discussion is stated [http://www.spinics.net/lists/linux-rdma/msg17787.html here]. So check if your Mellanox card has revision '''a0'''. Here an example of a non TSO compatible card:
 
  <nowiki>lspci | grep Mellanox
-03:00.0 InfiniBand: Mellanox Technologies MT25418 [ConnectX VPI PCIe 2.0 2.5GT/s - IB DDR / 10GigE] (rev a0)
-</nowiki>
+03:00.0 InfiniBand: Mellanox Technologies MT25418 [ConnectX VPI PCIe 2.0 2.5GT/s - IB DDR / 10GigE] (rev a0)</nowiki>
 
 If you have such an old card disable TSO and make that setting permanent in some startup script. 
 
@@ -44,9 +43,8 @@ If you have such an old card disable TSO and make that setting permanent in some
 if [ $isOldCard -gt 0 ]; then
   ethtool -K ib0 tso off
   ethtool -K ib1 tso off
-fi
-</nowiki>
+fi</nowiki>
 
+==== Old hardware and MTU 2044 ====
 
-* Slow performance on
-* Bulleted list item
+If you are running on old switch hardware than your maximum IPoIB MTU will be limited to 2044 bytes. That is no problem at all - at least on switch level. On your NFS server and hypervisor nodes this can result in unneccessary high CPU load. Once again a reference to a [http://www.spinics.net/lists/linux-rdma/msg15133.html discussion thread].
