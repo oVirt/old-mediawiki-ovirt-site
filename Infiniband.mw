@@ -18,6 +18,6 @@ On the hypervisor node you have to load the IPoIB required modules. These consis
 of the driver of your card, the transport and a managing module. For Mellanox ConnectX
 cards create a /etc/modules-load.d/ib.conf with the following lines
 
-mlx4_ib
+<nowiki>mlx4_ib
 ib_ipoib
-ib_umad
+ib_umad</nowiki>
