@@ -105,8 +105,8 @@ The integration of network providers into oVirt will be incremental. The followi
 * IP will be delivered to the guest OS via DHCP (provided by the Neutron service).
 
 === Security groups  ===
-* A custom property for specifying the security group will be added to the vNIC custom properties list.
-** Using this property the user can specify on profile level what security group this profile uses.
+* A custom property for specifying the security group(s) will be added to the vNIC custom properties list.
+** Using this property the user can specify on profile level what security group(s) this profile uses.
 
 == Future phases ==
 === REST API support ===
