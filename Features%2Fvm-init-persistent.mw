@@ -35,7 +35,7 @@ The new time-zone that vm_init table have will represent the VM operating system
     custom_script
 
 ===UX Design===
-[[/UX/cloud_init|UX Design page]]
+[[UX/cloud_init|UX Design page]]
 
 [[File:Cloud_init.jpg]]
 
