@@ -4,7 +4,7 @@ for virtualized guest images and ISO boot media. After you have exported pNFS st
 attached to the Red Hat Enterprise Virtualization Manager using the Administration Portal.
 
 ==Owner==
-Aharon Canan - aharonca@gmail.com
+QA: Aharon Canan <aharonca@gmail.com>
 
 ==Attaching pNFS Storage==
 1. Click the Storage resource tab to list the existing storage domains.
