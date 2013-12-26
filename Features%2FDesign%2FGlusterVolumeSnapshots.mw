@@ -294,4 +294,24 @@ Input:
 </action>
 </pre>
 
+* /api/clusters/{cluster-id}/glustervolumes/{volume-id}/glustersnapshots/{snapshot-id}|rel=rename - renames the given snspshot
+** Parameters
+*** New snapshot name
+Input:
+<pre>
+<snapshot>
+	<name>{name}</name>
+</snapshot>
+</pre>
+
+* /api/clusters/{cluster-id}/consistencygroups/{consistency-group-id}|rel=rename - renames the given consistency group
+** Parameters
+*** New consistency group name
+Input:
+<pre>
+<consistencygroup>
+	<name>{name}</name>
+</consistencygroup>
+</pre>
+
 [[Category: Feature]]
