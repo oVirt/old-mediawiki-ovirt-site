@@ -25,6 +25,7 @@ On the other hand, an offline snapshot makes the file-system offline or unavaila
 === Consistency Group ===
 Applications might consume multiple Gluster volumes and might require the resulting snapshot of these volumes to be from the same point in time view. This group of volumes forms a consistency group. If a volume belongs to a consistency group, then that volume can only be snapped as part of the named consistency group. Restore would also be permitted only on the consistency group. Addition or removal of volumes to/from a consistency group is allowed.
 
+
 With this feature the user will be able to
 * Create snaps of volumes
 * View all the snaps taken for a volume
