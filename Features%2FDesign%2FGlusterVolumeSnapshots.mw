@@ -96,41 +96,7 @@ The details of the REST for Gluster Volume Snapshot feature are as below -
 * /api/clusters/{cluster-id}/glustervolumes/{volume-id}/glustersnapshots|rel=get - lists all the snapshots for a given volume
 Output:
 <pre>
-	<glustersnapshots>
-		<glustersnapshot href="" id="">
-			<actions>
-			</actions>
-			<name>{name}</name>
-			<link>{link}</link>
-			<volume href="" id=""/>
-			<description>{description}</description>
-			<status>{status}</status>
-		</glustersnapshot>
-	</glustersnapshots>
-</pre>
-
-* /api/clusters/{cluster-id}/consistencygroups|rel=get - lists all the consistency groups
-Output: 
-<pre>
-	<consistencygroups>
-		<consistencygroup href="" id="">
-			<actions>
-			</actions>
-			<name>{name}</name>
-			<link>{link}</link>
-			<volumes>
-				<volume href="" id=""/>
-				<volume href="" id=""/>
-			</volumes>
-			<description>{description}</description>
-			<status>{status}</status>
-		</consistencygroup>
-	</consistencygroups>
-</pre>
-
-* /api/clusters/{cluster-id}/glustervolumes/{volume-id}/glustersnapshots/{snapshot-id}|rel=get - lists the details of a specific snapshot
-Output:
-<pre>
+<glustersnapshots>
 	<glustersnapshot href="" id="">
 		<actions>
 		</actions>
@@ -140,11 +106,13 @@ Output:
 		<description>{description}</description>
 		<status>{status}</status>
 	</glustersnapshot>
+</glustersnapshots>
 </pre>
 
-* /api/clusters/{cluster-id}/consistencygroups/{consistencygroup-id}|rel=get - lists the detail of an individual consistency group
-Output:
+* /api/clusters/{cluster-id}/consistencygroups|rel=get - lists all the consistency groups
+Output: 
 <pre>
+<consistencygroups>
 	<consistencygroup href="" id="">
 		<actions>
 		</actions>
@@ -157,18 +125,50 @@ Output:
 		<description>{description}</description>
 		<status>{status}</status>
 	</consistencygroup>
+</consistencygroups>
+</pre>
+
+* /api/clusters/{cluster-id}/glustervolumes/{volume-id}/glustersnapshots/{snapshot-id}|rel=get - lists the details of a specific snapshot
+Output:
+<pre>
+<glustersnapshot href="" id="">
+	<actions>
+	</actions>
+	<name>{name}</name>
+	<link>{link}</link>
+	<volume href="" id=""/>
+	<description>{description}</description>
+	<status>{status}</status>
+</glustersnapshot>
+</pre>
+
+* /api/clusters/{cluster-id}/consistencygroups/{consistencygroup-id}|rel=get - lists the detail of an individual consistency group
+Output:
+<pre>
+<consistencygroup href="" id="">
+	<actions>
+	</actions>
+	<name>{name}</name>
+	<link>{link}</link>
+	<volumes>
+		<volume href="" id=""/>
+		<volume href="" id=""/>
+	</volumes>
+	<description>{description}</description>
+	<status>{status}</status>
+</consistencygroup>
 </pre>
 
 * /api/clusters/{cluster-id}/glustervolumes|rel=get - Gluster volume listing would be updated to list the snapshot configuration parameters as well
 Output:
 <pre>
-        <glustervolume>
-        ........
-	<snapshot_config>
-		<option name="" value=""/>
-		<option name="" value=""/>
-	</snapshot_config>
-        </glustervolume>
+<glustervolume>
+........
+<snapshot_config>
+	<option name="" value=""/>
+	<option name="" value=""/>
+</snapshot_config>
+</glustervolume>
 </pre>
 
 ==== Actions Supported ====
@@ -186,6 +186,7 @@ Input:
 		<volume_name>{volume-name}</volume_name>
 		<description>{description}</description>
 	</snapshot>
+</action>
 </pre>
 
 * /api/clusters/{cluster-id}/consistencygroups|rel=add - creates and adds a new consistency group
@@ -196,18 +197,18 @@ Input:
 Input:
 <pre>
 <action>
-	<consistencygroup>
-		<name>{name}</name>
-		<volumes>
-			<volume>
-                            <name>{name}</name>
-                        </volume>
-			<volume>
-                            <name>{name}</name>
-                        </volume>
-		</volumes>
-		<description>{description}</description>
-	</consistencygroup>
+<consistencygroup>
+	<name>{name}</name>
+	<volumes>
+		<volume>
+                       <name>{name}</name>
+                </volume>
+		<volume>
+                       <name>{name}</name>
+                </volume>
+	</volumes>
+	<description>{description}</description>
+</consistencygroup>
 </action>
 </pre>
 
@@ -216,19 +217,19 @@ Input:
 *** snapshot-id / snapshot-name / volume-name
 Input:
 <pre>
-    <snapshot id="{id}" />
+<snapshot id="{id}" />
 </pre>
 or
 <pre>
-    <snapshot>
-        <name>{name}</name>
-    </snapshot>
+<snapshot>
+    <name>{name}</name>
+</snapshot>
 </pre>
 or
 <pre>
-    <snapshot>
-        <volume_name>{vol-name}</volume_name>
-    </snapshot>
+<snapshot>
+    <volume_name>{vol-name}</volume_name>
+</snapshot>
 </pre>
 
 * /api/clusters/{cluster-id}/consistencygroups|rel=delete - deletes consistency group
@@ -236,49 +237,49 @@ or
 *** cg-id / cg-name
 Input:
 <pre>
-    <consistencygroup id="id" />
+<consistencygroup id="id" />
 </pre>
 or
 <pre>
-    <consistencygroup>
-        <name>{name}</name>
-    </consistencygroup>
+<consistencygroup>
+    <name>{name}</name>
+</consistencygroup>
 </pre>
 
 * /api/clusters/{cluster-id}/glustervolumes/{volume-id}/glustersnapshots/{snapshot-id}/start|rel=start - starts the given snapshot
 Input: 
 <pre>
-    <action/>
+<action/>
 </pre>
 
 * /api/clusters/{cluster-id}/consistencygroups/{consistency-group-id}/start|rel=start - starts a consistency group
 Input:
 <pre>
-    <action/>
+<action/>
 </pre>
 
 * /api/clusters/{cluster-id}/glustervolumes/{volume-id}/glustersnapshots/{snapshot-id}/stop|rel=stop - stops the given snapshot
 Input:
 <pre>
-    <action/>
+<action/>
 </pre>
 
 * /api/clusters/{cluster-id}/consistencygroups/{consistency-group-id}/stop|rel=stop - stops the given consistency group
 Input:
 <pre>
-    <action/>
+<action/>
 </pre>
 
 * /api/clusters/{cluster-id}/glustervolumes/{volume-id}/glustersnapshots/{snapshot-id}/restore|rel=restore - restores the given volume to the given snapshot
 Input:
 <pre>
-    <action/>
+<action/>
 </pre>
 
 * /api/clusters/{clusters-id}/consistencygroups/{consistency-group-id}/restore|rel=restore - allows for all the volumes which have a snapshot in the mentioned CG to be restored that point in time. This provides roll-back mechanisms for the multiple volumes which were snapped together.
 Input:
 <pre>
-    <action/>
+<action/>
 </pre>
 
 * /api/clusters/{cluster-id}/glustervolumes/{volume-id}/setsnapshotconfig|rel=setsnapshotconfig - sets a snapshot configuration parameter value for the given volume
@@ -287,10 +288,10 @@ Input:
 *** Option-value
 Input:
 <pre>
-	<action>
-		<option_name>{name}</name>
-		<option_value>{value}</option_value>
-	</action>
+<action>
+	<option_name>{name}</name>
+	<option_value>{value}</option_value>
+</action>
 </pre>
 
 [[Category: Feature]]
