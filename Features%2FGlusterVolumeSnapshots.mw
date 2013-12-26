@@ -6,9 +6,9 @@ Using this feature, an admin can take scheduled or unscheduled snapshots of and 
 To read more about GlusterFS geo-replication, see https://forge.gluster.org/snapshot/pages/Home.
 
 ==Owner==
-*Feature owner: 
+*Feature owner: Shubhendu Tripathi <shtripat@redhat.com>
 **GUI Component owner: 
-**Engine Component owner: Shubhendu Ram Tripathi
+**Engine Component owner: Shubhendu Tripathi <shtripat@redhat.com>
 **VDSM Component owner: 
 **QA Owner:
 
