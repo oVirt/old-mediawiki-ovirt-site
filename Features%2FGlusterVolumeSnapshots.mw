@@ -14,8 +14,8 @@ To read more about GlusterFS geo-replication, see https://forge.gluster.org/snap
 
 == Current Status ==
 
-* Status: 
-* Last updated date: 
+* Status: Inception
+* Last updated date: 26 Dec, 2013
 
 == Detailed Description ==
 An online snapshot is a feature where the file-system and associated data continue to be available for the clients, while the snapshot is being taken. Here the onus lies on the application to periodically sync data, so that the snap created has the desired data consistent view.
