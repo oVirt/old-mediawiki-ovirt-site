@@ -1,18 +1,18 @@
 == Summary ==
-This document describes the design for geo replication feature under gluster. GlusterFS provides DR management feature through geo-replication and RHS-C provides a web based mechanism to achieve the same feature.
-This feature allows the administrator to configure, start, stop and monitor geo-replication for Gluster volumes from oVirt engine. With this the administrator can view the status of geo-replication on Gluster volumes and also would be able to start/stop/configure geo-replication for a volume. GlusterFS geo-replication provides a continuous, asynchronous, and incremental replication service from one site to another over Local Area Networks (LANs), Wide Area Network (WANs), and across the Internet.
+This document describes the design for the volume snapshot feature under Gluster. GlusterFS provides crash recoverability for the vloumes through snapshot feature and RHS-C needs to provide a web based mechanism to achieve the same feature.
+
+This feature allows the administrators to create, start, stop, delete and restore to a given snapshot. With this administrators can view all the available snaps taken for a volume and in case of crash can opt to restore to a point in time view using the existing snapshots.
 
 ==Owner==
 *Feature owner: Shubhendu Tripathi <shtripat@redhat.com>
-**GUI Component owner: Kanagaraj Mayilsamy <kmayilsa@redhat.com>
+**GUI Component owner: 
 **Engine Component owner: Shubhendu Tripathi <shtripat@redhat.com>
-**VDSM Component owner: Balamurugan Arumugam <barumuga@redhat.com>
-**QA Owner: Sudhir Dharanendraiah <sdharane@redhat.com>
+**VDSM Component owner: 
 
 == Current Status ==
 
-* Status: In Progress
-* Last updated date: Thu Jul 25 2013
+* Status: Inception
+* Last updated date: Thu Dec 26 2013
 
 == Design ==
 Geo-replication feature is designed to enable creation and maintenance of geo-replication sessions across clusters in GlusterFS. A geo-replication session can be setup between a GlusterFS managed source cluster and remote (destination) GlusterFS managed cluster.
