@@ -49,6 +49,7 @@ This entity stores the snapshot details created on gluster volumes. Different vo
 | description || String || Description
 |-
 | Status || String || Current status of the snapshot
+|}
 
 ==== GlusterVolumeSnapshotConfig ====
 This entity stores the details of a configuration parameter for volume snapshot. Volume specific values for the parameters would be maintained as part of this entity, whereas the system level configuration parameters would be maintained as part of vdc_options only.
@@ -66,8 +67,6 @@ This entity stores the details of a configuration parameter for volume snapshot.
 === Entities changes ===
 * Change to store consistency group id for a volume
 ** Add a field cgId of UUID type in gluster_volumes table to store a consistency group id, if volume is part of a consistency group
-* Change to mark if a volume is a snap volume
-** Add a flag isSnap of character type in glusyer_volumes table to indicate if a volume is a snapshot (Internally snapshots are stored as volumes only)
 <big>gluster_volumes</big>
 {| class="wikitable" border="1"
 |-
@@ -80,15 +79,7 @@ This entity stores the details of a configuration parameter for volume snapshot.
 | UUID, nullable
 | Addition
 | stores the consistency group id if volume is part of a consistency group
-|-
-| isSnap
-| char
-| Addition
-| stores the flag which mentions is the said volume is a snap volume or a regular volume
 |}
-
-=== Database changes ===
-Modify all the stored procedures on gluster_volumes tables to add additional WHERE clause with 'isSnap=N'
 
 ==== Gluster Geo Replication Sessions====
 This entity stores the details of the individual geo-replication sessions
