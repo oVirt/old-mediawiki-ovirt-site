@@ -32,6 +32,24 @@ This entity stores the details of a Gluster volume consistency group. While defi
 | Description || String || Description of the consistency group
 |}
 
+==== GlusterVolumeSnapshots ====
+This entity stores the snapshot details created on gluster volumes. Different volumes can have snapshots with same names.
+{| class="wikitable"
+|+ GlusterVolumeSnapshots
+!Column name !! Type !! Description
+|-
+| VolumeId || UUID || Id of the reference volume
+|-
+| SnapId || UUID || Id of the new snapshot
+|-
+| SnapName || String || Name of the snapshot
+|-
+| SanpTime || Date || Creation time of the snapshot
+|-
+| description || String || Description
+|-
+| Status || String || Current status of the snapshot
+
 ==== GlusterVolumeSnapshotConfig ====
 This entity stores the details of a configuration parameter for volume snapshot. Volume specific values for the parameters would be maintained as part of this entity, whereas the system level configuration parameters would be maintained as part of vdc_options only.
 {| class="wikitable"
