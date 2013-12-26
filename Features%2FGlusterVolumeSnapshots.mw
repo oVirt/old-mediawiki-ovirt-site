@@ -3,7 +3,7 @@ This feature allows the administrators to maintain the snapshots of a Gluster vo
 
 Using this feature, an admin can take scheduled or unscheduled snapshots of and thereby backup a Gluster volume. This also provides a check-point in time to restore to, if and when necessary.
 
-To read more about GlusterFS geo-replication, see https://forge.gluster.org/snapshot/pages/Home.
+To read more about Gluster volume snapshot feature, see https://forge.gluster.org/snapshot/pages/Home.
 
 ==Owner==
 *Feature owner: Shubhendu Tripathi <shtripat@redhat.com>
