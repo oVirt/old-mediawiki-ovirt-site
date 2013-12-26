@@ -43,6 +43,7 @@ With this feature the user will be able to
 
 === Limitations ===
 
+
 Refer the URL: http://www.ovirt.org/Features/Design/GlusterVolumeSnapshots for detailed design of the feature.
 
 == Dependencies / Related Features and Projects ==
