@@ -69,23 +69,23 @@ If you wish to use the oVirt Guest Tools through the VirtIO-Serial interface, th
 :2. Select "Update Driver", and then click Next
 :3. Choose "Install from a list or a specific location", and then click Next
 :4. '''UNCHECK Search removable media or else it will install the Windows 8 drivers and error'''
-:5. Check "Include this location in the search", Browse to "X:\WXP\X86" and then click Next
+:5. Check "Include this location in the search", Browse to "X:\Wnet\X86" (for 32-bit) or "X:\Wnet\AMD64" (for 64-bit) and then click Next
 :6. When prompted, choose "Continue Anyway"
 ==== VirtIO Networking ====
 :1. On the console, right click the '''Ethernet Controller''' device that is missing drivers
 :2. Select "Update Driver", and then click Next
 :3. Choose "Install from a list or a specific location", and then click Next
 :4. '''UNCHECK Search removable media or else it will install the Windows 8 drivers and error'''
-:5. Check "Include this location in the search", Browse to "X:\XP\X86" (yes, this time X:\XP\X86) and then click Next
+:5. Check "Include this location in the search", Browse to "X:\XP\X86" (for 32-bit and yes, this time X:\XP\X86) or "X:\XP\AMD64" (for 64-bit)and then click Next
 :6. When prompted, choose "Continue Anyway"
 ==== VirtIO SCSI ====
 :1. On the console, right click the '''SCSI Controller''' device that is missing drivers
 :2. Select "Update Driver", and then click Next
 :3. Choose "Install from a list or a specific location", and then click Next
 :4. '''UNCHECK Search removable media or else it will install the Windows 8 drivers and error'''
-:5. Check "Include this location in the search", Browse to "X:\WXP\X86" and then click Next
+:5. Check "Include this location in the search", Browse to "X:\Wnet\X86" (for 32-bit) or "X:\Wnet\AMD64" (for 64-bit) and then click Next
 :6. If prompted, choose "Continue Anyway"
- Note: There may be two "SCSI Controllers" which need drivers. There are drivers for one "Red Hat SCSI Controller", but there are no XP drivers for "Red Hat SCSI Pass-through"If the drivers do not install on one, try the other SCSI Controller if a second exists.
+ Note: There may be two "SCSI Controllers" which need drivers. There are drivers for one "Red Hat SCSI Controller", but there are no 2003 drivers for "Red Hat SCSI Pass-through"If the drivers do not install on one, try the other SCSI Controller if a second exists.
 
 === Graphics ===
 To install the graphics driver (aka "Video Controller (VGA compatible)") if you are using the Spice console, download and install the [http://www.spice-space.org/download/windows/spice-guest-tools/spice-guest-tools-0.65.1.exe Spice Guest Tools]. 
