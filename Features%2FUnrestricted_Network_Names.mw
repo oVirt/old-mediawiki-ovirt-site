@@ -52,7 +52,7 @@ Instead of passing the user-defined network name to Vdsm, Engine would use the n
 
 Pros:
 * If a IFNAMSIZ-long slice is used, there's almost no change at all on Vdsm side. (The only one is that Vdsm cannot assume the management role of a network based on its <tt>ovirtmgmt</tt> name)
-* That what OpenStack Neutron does.
+* That what OpenStack Neutron does; that's an important argument when it provides networks to oVirt.
 * The "name" of a network becomes a user-editable string, that can be changed with no effect on the distributed hosts.
 Cons:
 * When debugging a host, the user-chosen name would not be available. This condition already exists with disk names, and is [http://lists.ovirt.org/pipermail/users/2013-December/019079.html not loved by users]. To avoid that, we can add a "description" field per network, where Engine would pass the human-readable name/description of the network, to be stored in the ifcfg file or as a comment in the libvirt definition of the network.
