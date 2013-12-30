@@ -33,11 +33,11 @@ For Windows VMs the drivers must be installed. The VirtIO drivers are available 
 = Availability & Install Instructions =
 == Windows Guests ==
 {| class="wikitable"
-| ||[[How_to_create_a_Windows_XP_Virtual_Machine|Win XP]]||[[How_to_create_a_Windows_7_Virtual_Machine|Win 7]]||[[How_to_create_a_Windows_8_Virtual_Machine|Win8]]||[[How_to_create_a_Windows_2003_Virtual_Machine|Server 2003/R2]]||[[How_to_create_a_Windows_2008_Virtual_Machine|Server 2008/R2]]||Server 2012/R2
+| ||[[How_to_create_a_Windows_XP_Virtual_Machine|Win XP]]||[[How_to_create_a_Windows_7_Virtual_Machine|Win 7]]||[[How_to_create_a_Windows_8_Virtual_Machine|Win8]]||[[How_to_create_a_Windows_2003_Virtual_Machine|Server 2003/R2]]||[[How_to_create_a_Windows_2008_Virtual_Machine|Server 2008/R2]]||[[How_to_create_a_Windows_2012_Virtual_Machine|Server 2012/R2]]
 |-
 | oVirt Guest Agent||-||-||-||-||-||-
 |-
-| VirtIO Drivers||[[How_to_create_a_Windows_XP_Virtual_Machine#VirtIO|Yes(1)]]||[[How_to_create_a_Windows_7_Virtual_Machine#Drivers|Yes]]||[[How_to_create_a_Windows_8_Virtual_Machine#Drivers|Yes]]||[[How_to_create_a_Windows_2003_Virtual_Machine#VirtIO|Yes(1)]]||[[How_to_create_a_Windows_2008_Virtual_Machine#Graphics|Yes]]||-
+| VirtIO Drivers||[[How_to_create_a_Windows_XP_Virtual_Machine#VirtIO|Yes(1)]]||[[How_to_create_a_Windows_7_Virtual_Machine#Drivers|Yes]]||[[How_to_create_a_Windows_8_Virtual_Machine#Drivers|Yes]]||[[How_to_create_a_Windows_2003_Virtual_Machine#VirtIO|Yes(1)]]||[[How_to_create_a_Windows_2008_Virtual_Machine#Graphics|Yes]]||Yes
 |-
 | Spice Drivers||[[How_to_create_a_Windows_XP_Virtual_Machine#Graphics|Yes]]||Yes||No(2)||Yes||Yes||No(2)
 |}
