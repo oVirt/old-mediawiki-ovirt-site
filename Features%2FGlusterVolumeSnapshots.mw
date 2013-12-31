@@ -58,7 +58,7 @@ The sub-tabs for the individual consistency groups would be having tabs -
 * Configurations
 * Snapshots
 
-==== Sub-tab "Configurations" ====
+==== Sub-tab "Consistency Groups --> Configurations" ====
 This sub-tab lists the snapshot configuration values set for the consistency group. The configuration parameters are listed in tabular form having two columns -
 * Parameter Name
 * Parameter Value
