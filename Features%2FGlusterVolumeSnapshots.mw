@@ -56,6 +56,7 @@ Actions supported for the main tab are -
 * Add Volumes - add new volumes to the consistency group
 * Remove Volumes - removes volumes from the consistency group
 
+
 [[File:CGList1.png]]
 
 The sub-tabs for the individual consistency groups would be having tabs -
