@@ -123,41 +123,43 @@ The Gluster volume snapshot and consistency group details would be periodically 
 ** Output
 *** Success/Failure
 
+* <big>glusterCGSnapshotCreate</big> - creates a snapshot of the consistency group
+** Input
+*** cgName
+*** snapName
+*** [description]
+** Output
+*** Success/Failure
+
 * <big>glusterConsistencyGroupCreate</big> - creates a consistency group
 ** Input
-*** volumeNames
 *** cgName
-*** [description]
+*** volumeNames
+*** [force]
+** Output
+*** Success/Failure
+
+* <big>glusterConsistencyGroupAddVolume</big> - adds new volumes to the consistency group. Once a new volume is added to a CG then CG cannot be restored to older snaps.
+** Input
+*** cgName
+*** volumeNames
+*** [force]
 ** Output
 *** Success/Failure
 
 * <big>glusterVolumeSanpshotList</big> - gets the list of snapshots for a volume
 ** Input
 *** volumeName
-*** [option -d]
+*** [snapName]
 ** Output
 *** snapsList
 
-* <big>glusterConsistencyGroupsList</big> - gets the details of a consistency group
+* <big>glusterCGSnapshotList</big> - gets the details of a consistency group
 ** Input
 *** cgName
-*** [option -d]
+*** [snapName]
 ** Output
-*** cgList
-
-* <big>glusterVolumeSnapshotRename</big> - renames a given snapshot with new name
-** Input
-*** oldSnapName
-*** newSnapName
-** Ouptut
-*** Success/Failure
-
-* <big>glusterConsistencyGroupRename</big> - renames a given consistency group with new name
-** Input
-*** oldCgName
-*** newCgName
-** Output
-*** Success/Failure
+*** snapsList
 
 * <big>glusterVolumeSnapshotRestore</big> - restores the given volume to the given snapshot
 ** Input
@@ -166,9 +168,10 @@ The Gluster volume snapshot and consistency group details would be periodically 
 ** Output
 *** Success/Failure
 
-* <big>glusterConsistencyGroupRestore</big> - allows for all the volumes which have a snapshot in the mentioned CG to be restored that point in time
+* <big>glusterConsistencyGroupRestore</big> - allows to restore a CG to the specified snap
 ** Input
 *** cgName
+*** snapName
 ** Output
 *** Success/Failure
 
@@ -176,13 +179,21 @@ The Gluster volume snapshot and consistency group details would be periodically 
 ** Input
 *** volumeName
 *** configList(name=value pair)
+*** [force]
 ** Output
 *** Success/Failure
-Note: volumeName can be passed as ALL and the configurations would be set for all the volumes
+
+* <big>glusterCGSnapshotSetConfig</big> - sets the snapshot configuration parameters for the given consistency group
+** Input
+*** cgName
+*** configList(name=value pair)
+*** [force]
+** Output
+*** Success/Failure
 
 * <big>glusterVolumeSnapshotGetConfig</big> - gets the value of the given snapshot configuration parameter for the given volume
 ** Input
-*** volumeName
+*** [volumeName]
 *** [optionName]
 ** Ouptut
 *** Name=Value pair list
@@ -225,9 +236,10 @@ Note: If no input passed at all, status details of all the snapshots is listed
 *** Success/Failure
 Note: If snapName is not passed all the snaps would be deleted for the volume
 
-* <big>glusterConsistencyGroupDelete</big> - deletes the consistency group
+* <big>glusterConsistencyGroupDelete</big> - deletes the volumes from the consistency group
 ** Input
 *** cgName
+*** volumeNames
 ** Output
 *** Success/Failure
 
