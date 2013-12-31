@@ -204,7 +204,7 @@ Note: If snapName is not passed all the snaps would be deleted for the volume
 *** Success/Failure
 Note: If no snapName is passed, all the snaps would be deleted for the consistency group
 
-==== VDSM verbs for listing snaps =====
+==== VDSM verbs for listing snaps ====
 * <big>glusterVolumeSanpshotList</big> - gets the list of snapshots for a volume
 ** Input
 *** volumeName
