@@ -91,11 +91,17 @@ This sub-tab lists the snapshots for the consistency group in a tabular form. Th
 * Description
 * Creation Time (makes easy for administrator to decide while restore)
 
+
+[[File:SnapsList.png]]
+
+
 Actions supported for this sub-tab are -
 * Start - starts the snapshot
 * Stop - stops the snapshot
 * Restore - restores the consistency group to the said snapshot
 * Remove - removes the selected snapshots
+
+[[File:SnapsList.png]]
 
 ==== Sub-tab "Volumes --> Snapshot" ====
 This sub-tab under the main tab Volumes lists the snapshots created for individual volumes. This is same as the above mentioned sub-tab Snapshots under Consistency Group. It lists the same details and supports the same set of actions.
