@@ -367,7 +367,6 @@ Output:
 			<volume href="" id=""/>
 		</volumes>
 		<description>{description}</description>
-		<status>{status}</status>
                 <snapshot_config>
 	            <option name="" value=""/>
 	            <option name="" value=""/>
@@ -389,7 +388,6 @@ Output:
 		<volume href="" id=""/>
 	</volumes>
 	<description>{description}</description>
-	<status>{status}</status>
         <snapshot_config>
 	    <option name="" value=""/>
 	    <option name="" value=""/>
