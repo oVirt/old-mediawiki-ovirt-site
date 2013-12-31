@@ -501,7 +501,7 @@ Input:
 
 * /api/clusters/{cluster-id}/glustervolumes/{volume-id}/snapshots|rel=delete - deletes snapshots
 ** Parameters
-*** snapshot-id / snapshot-name / volume-name
+*** snapshot-id / snapshot-name
 Input:
 <pre>
 <snapshot id="{id}" />
