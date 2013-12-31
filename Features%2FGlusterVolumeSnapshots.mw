@@ -47,7 +47,9 @@ An additional main tab item would be introduced for "Consistency Groups". This t
 * Volumes (# of volumes in the consistency group)
 * Snaps (# of snaps taken for the consistency group)
 
+
 [[File:CGList.png]]
+
 
 Actions supported for the main tab are -
 * New - creates a new consistency group
@@ -58,6 +60,7 @@ Actions supported for the main tab are -
 
 
 [[File:CGList1.png]]
+
 
 The sub-tabs for the individual consistency groups would be having tabs -
 * Configurations
