@@ -297,7 +297,7 @@ Note: If snapName is not passed, all the snaps of the volume are stopped
 *** [snapName]
 ** Output
 *** Success/Failure
-Note: If snapName is not passed, all the snaps of the consistency group are stoppped
+Note: If snapName is not passed, all the snaps of the consistency group are stopped
 
 === REST APIs ===
 The details of the REST for Gluster Volume Snapshot feature are as below -
