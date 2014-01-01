@@ -105,10 +105,6 @@ If you wish to use the oVirt Guest Tools through the VirtIO-Serial interface, th
 # If  prompted, choose "Install this driver software anyway"
 # When prompted, choose "Always trust software from Red Hat Inc.", and click Install.
 
-=== Graphics ===
-If you are using the Spice console, download and install the [http://www.spice-space.org/download/windows/spice-guest-tools/spice-guest-tools-0.65.1.exe Spice Guest Tools]. 
-When prompted, click "Continue Anyway".
-
 == Guest Tools ==
 Adding a few guest tools may improve your experience.
 *oVirt Guest Agent allows oVirt to show the Memory and Network utilization of the VM, the IP address of the VM, the installed Applications, Enable Single Sign On (SSO) and more.
