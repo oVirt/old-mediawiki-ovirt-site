@@ -603,7 +603,7 @@ Input:
 <action/>
 </pre>
 
-* /api/clusters/{cluster-id}/glustervolumes/{volume-id}/glustersnapshots/{snapshot-id}/stop|rel=stop - stops the given snapshot
+* /api/clusters/{cluster-id}/glustervolumes/{volume-id}/snapshots/{snapshot-id}/stop|rel=stop - stops the given snapshot
 Input:
 <pre>
 <action/>
