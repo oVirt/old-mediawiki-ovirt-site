@@ -61,12 +61,12 @@ This entity stores the snapshot details created on gluster volumes. Different vo
 ** DECOMMISSIONED
 
 ==== GlusterVolumeSnapshotConfig ====
-This entity stores the details of a configuration parameter for volume snapshot. Volume specific values for the parameters would be maintained as part of this entity, whereas the system level configuration parameters would be maintained as part of vdc_options only.
+This entity stores the details of a configuration parameter for volume/consistency group snapshots. Volume/consistency group specific values for the parameters would be maintained as part of this entity, whereas the system level configuration parameters would be maintained as part of vdc_options only.
 {| class="wikitable"
 |+ GlusterVolumeSnapshotConfig
 !Column name !! Type !! Description
 |-
-| VolumeId || UUID || Id of the reference volume
+| EntityId || UUID || Id of the reference volume or consistency group
 |-
 | ParamName || String || Name of the configuration parameter
 |-
