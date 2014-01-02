@@ -562,6 +562,7 @@ Input:
 Input:
 <pre>
 <action>
+    <configurations>
         <config>
 	    <name>{name-1}</name>
 	    <value>{value-1}</value>
@@ -570,6 +571,7 @@ Input:
 	    <name>{name-2}</name>
 	    <value>{value-2}</value>
         </config>
+    </configurations>
 </action>
 </pre>
 
@@ -580,6 +582,7 @@ Input:
 Input:
 <pre>
 <action>
+    <configurations>
         <config>
 	    <name>{name-1}</name>
 	    <value>{value-1}</value>
@@ -588,6 +591,7 @@ Input:
 	    <name>{name-2}</name>
 	    <value>{value-2}</value>
         </config>
+    </configurations>
 </action>
 </pre>
 
