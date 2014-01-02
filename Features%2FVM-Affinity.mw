@@ -104,7 +104,17 @@ Filters out host according to affinity enforce mode (hard).
 <affinity_group></affinity_group>
 /DELETE  /api/clusters/{clsuter_id}/affinitygroups/{affinity_group_id}
 ====vms====
-under discussion
+GET  .../vms
+<vm>
+  <placement_policy>
+...
+    <affinity_groups>
+      <affinity_group href=""/>
+      <affinity_group href=""/>
+    </affinity_groups>
+...
+  </placement_policy>
+</vm>
 
 [[Category:Feature]]
 [[Category:SLA]]
