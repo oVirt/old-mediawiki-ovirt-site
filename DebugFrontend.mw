@@ -1,150 +1,113 @@
-== How to debug Frontend applications ==
-This document contains instructions and tips for debugging oVirt Frontend web applications. Although it focuses on debugging applications in Eclipse IDE, it should be easy to adapt within your own development environment.
+= Debugging Frontend Applications =
+This document contains instructions and tips for debugging oVirt web applications built with [http://www.gwtproject.org/ Google Web Toolkit], an open source set of tools for building web applications using Java programming language. One GWT tool we'll use in particular is [http://www.gwtproject.org/doc/latest/DevGuideCompilingAndDebugging.html#DevGuideDevMode Development Mode], which allows debugging GWT application without having to manually translate it to JavaScript.
 
-oVirt Frontend comprises following web applications:
-* WebAdmin: <code>$OVIRT_HOME/frontend/webadmin/modules/webadmin/</code>
-* UserPortal: <code>$OVIRT_HOME/frontend/webadmin/modules/userportal-gwtp/</code>
+This document assumes that you have [http://wiki.ovirt.org/OVirt_Engine_Development_Environment Engine development environment] and [http://wiki.ovirt.org/wiki/Building_Ovirt_Engine/IDE Java IDE] configured accordingly.
 
-oVirt Frontend applications use [https://developers.google.com/web-toolkit/ Google Web Toolkit], an open source set of tools for building JavaScript web applications using Java programming language. One GWT tool we'll use in particular is [https://developers.google.com/web-toolkit/doc/latest/DevGuideCompilingAndDebugging#DevGuideDevMode Development Mode], which allows debugging an application without having to translate (compile) it to JavaScript.
+Tip: ''Working Java IDE is required in order to debug GWT applications via Development Mode. This is due to [http://en.wikipedia.org/wiki/Java_Platform_Debugger_Architecture JPDA] being used as the debugging protocol between IDE and Development Mode.''
 
-=== Prerequisites ===
-This document assumes that you've successfully [http://wiki.ovirt.org/wiki/Building_oVirt_engine cloned and built oVirt from source] and [http://wiki.ovirt.org/wiki/Building_Ovirt_Engine/IDE configured Eclipse for development].
-
-=== Development Mode ===
+== GWT Development Mode ==
 Launching Development Mode spawns a separate JVM instance (Java application) that executes GWT application code as bytecode, providing a bridge between web browser and Java IDE:
-* Java IDE connects to Development Mode to debug GWT application code, allowing to set breakpoints and debug code as Java
-* web browser connects to Development Mode via GWT Developer Plugin, passing instructions to Development Mode which executes them and sends the result back to web browser
+* Java IDE connects to Development Mode to debug GWT application code, allowing to set breakpoints and debug code as if it was Java
+* browser connects to Development Mode via GWT Developer Plugin, passing instructions to Development Mode which executes them and sends the result back to browser
 
-=== Step 0 - Things to check ===
-Make sure to have appropriate oVirt-related environment variables exported, for example:
+
+Following commands should be executed from within the Engine source directory, unless noted otherwise.
+
+
+First, build Engine from source:
 <pre>
-$ export OVIRT_HOME=$HOME/workspace/ovirt-engine
-$ export JBOSS_HOME=/usr/local/dev/ovirt-jboss-as
-$ export ENGINE_DEFAULTS=$OVIRT_HOME/backend/manager/conf/engine.conf.defaults
+$ make clean install-dev PREFIX="$OVIRT_OUT" DEV_EXTRA_BUILD_FLAGS_GWT_DEFAULTS="-Dgwt.userAgent=$GWT_USER_AGENT" BUILD_GWT_WEBADMIN="1" BUILD_GWT_USERPORTAL="1" [extra makefile options if necessary]
 </pre>
 
-You should also do full oVirt build prior to debugging, with WebAdmin and/or UserPortal GWT compilation enabled<code>*</code>:
+
+* <code> OVIRT_OUT</code> points to Engine build output directory
+* <code>GWT_USER_AGENT</code> specifies web browser(s) for which to build GWT application(s), supported values:
+** <code>ie8</code> - Microsoft Internet Explorer 8 - ''UserPortal only, WebAdmin requires IE9+''
+** <code>ie9</code> - Microsoft Internet Explorer 9 and above
+** <code>gecko1_8</code> - Mozilla Firefox
+** <code>safari</code> - Safari & Google Chrome
+** <code>opera</code> - Opera
+
+Tip: ''Never use <code>ie6</code> with <code>gwt.userAgent</code>, Microsoft Internet Explorer 6 and 7 are '''not''' supported by oVirt web applications.''
+
+Note that you can control GWT compilation using <code>BUILD_GWT_WEBADMIN</code> and <code>BUILD_GWT_USERPORTAL</code> flags. If such flag is set to <code>0</code> then the corresponding application won't be available in Engine build. Since GWT compilation takes some time, make sure to disable GWT applications you're not debugging.
+
+
+For example, to build Engine with WebAdmin (excluding UserPortal) for Firefox and Chrome browsers:
 <pre>
-$ cd $OVIRT_HOME
-$ mvn clean install -Pdep,gwt-admin,gwt-user
+$ make clean install-dev PREFIX="$HOME/ovirt-engine" DEV_EXTRA_BUILD_FLAGS_GWT_DEFAULTS="-Dgwt.userAgent=gecko1_8,safari" BUILD_GWT_WEBADMIN="1" BUILD_GWT_USERPORTAL="0"
 </pre>
 
-<code>*</code> You'll be able to debug given Frontend application via Development Mode only if the application was compiled for at least 2 different browsers.
+Tip: ''To avoid problems with GWT permutation selector script <code>*.nocache.js</code> being optimized-out, always build Engine for at least two browsers.''
 
-Notes:
-* <code>dep</code> profile deploys oVirt Engine to JBoss AS, e.g. <code>$JBOSS_HOME/standalone/deployments/engine.ear</code>
-* <code>gwt-admin</code> profile enables WebAdmin GWT compilation (optional)
-* <code>gwt-user</code> profile enables UserPortal GWT compilation (optional)
 
-=== Step 1 - Launching Development Mode ===
-Make sure JBoss AS is running and launch Development Mode for the given Frontend application:
+To start Development Mode, execute following commands:
 <pre>
-$ cd $GWT_APP_DIR
-$ mvn gwt:debug -Pgwtdev,gwt-admin -Dgwt.noserver=true
+$ make gwt-debug DEBUG_MODULE="$GWT_APP" DEV_EXTRA_BUILD_FLAGS_GWT_DEFAULTS="-Dgwt.userAgent=$GWT_USER_AGENT"
 </pre>
 
-Notes:
-* Example for $GWT_APP_DIR :  ovirt-engine/frontend/webadmin/modules/webadmin
-* <code>gwt:debug</code> launches Development Mode via gwt-maven-plugin
-* <code>gwtdev</code> profile adds extra Java sources and resources necessary for debugging, so that changes in related Frontend projects (<code>uicommonweb</code>, <code>gwt-common</code> etc.) are reflected in Development Mode for new debugging sessions
-* <code>gwt.noserver</code> tells Development Mode that the application is already deployed on JBoss AS (don't use embedded Jetty instance to serve application content)
 
-You should see following output in console: <code>Listening for transport dt_socket at address: 8000</code>
+* <code>GWT_APP</code> can be one of following:
+** <code>webadmin</code> for debugging WebAdmin application
+** <code>userportal-gwtp</code> for debugging UserPortal application
 
-=== Step 2 - Connecting to Development Mode from Java IDE ===
-In Eclipse  create new debug configuration via "Run | Debug Configurations | Remote Java Application | New launch configuration":
-* In Connect tab:
-** Project: choose WebAdmin or UserPortal project that you previously imported into Eclipse
-** Host: <code>localhost</code>
-** Port: <code>8000</code>
-* In Source tab:
-** Click "Add | Java Project" and choose related Frontend projects: <code>uicommonweb</code>, <code>gwt-common</code>
-Click "Apply" and "Debug", so that Eclipse now connects to Development Mode, which spawns Development Mode GUI.
 
-Alternatively, in Intellij:
-* Run/Debug configurations --> Edit configurations
-* Add new configuration of type Remote
-* In the new configuration, fill in fields: host : localhost, port : 8000
-* Press Apply, OK
-* Select the new created configuration and press Debug.
+For example, to start Development Mode for debugging WebAdmin in Chrome browser:
+<pre>
+$ make gwt-debug DEBUG_MODULE="webadmin" DEV_EXTRA_BUILD_FLAGS_GWT_DEFAULTS="-Dgwt.userAgent=safari"
+</pre>
 
+
+Development Mode will inform you that it's awaiting debug connection from your Java IDE:
+<pre>
+[INFO] Listening for transport dt_socket at address: 8000
+</pre>
+
+
+In your Java IDE, create new "Remote Java Application" debug configuration for localhost:8000 with classpath that includes related frontend projects.
+
+
+'''IntelliJ Idea''': "Run | Edit Configurations"
+* Click "Add New Configuration" and choose "Remote"
+* On Configuration tab, set Host="localhost" and Port="8000"
+
+
+'''Eclipse''': "Run | Debug Configurations"
+* Select "Remote Java Application" and click "New launch configuration"
+* On Connect tab, set Host="localhost" and Port="8000"
+* On Source tab, click "Add | Java Project" and choose related frontend projects
+
+
+After your IDE connects to Development Mode, Development Mode GUI (graphical window) will show up. Development Mode is now ready.
 
 [[File:GWT_Development_Mode.png|GWT Development Mode]]
 
-=== Step 3 - Launching the application in web browser ===
-Open your favorite web browser and navigate to one of debug URLs below:
-* WebAdmin: http://127.0.0.1:8700/webadmin/webadmin/WebAdmin.html?gwt.codesvr=127.0.0.1:9997
-* UserPortal: http://127.0.0.1:8700/UserPortal/org.ovirt.engine.ui.userportal.UserPortal/UserPortal.html?gwt.codesvr=127.0.0.1:9997
 
-Notes:
-* <code>gwt.codesvr</code> points to Development Mode, port 9997 is used internally by GWT Developer Plugin to communicate with Development Mode
-* This means you're debugging the application in your favorite web browser!
+Start a web browser (the one you've specified earlier through <code>GWT_USER_AGENT</code>) and navigate to GWT application's debug URL:
+* WebAdmin: http://127.0.0.1:8080/ovirt-engine/webadmin/WebAdmin.html?gwt.codesvr=127.0.0.1:9997
+* UserPortal: http://127.0.0.1:8080/ovirt-engine/userportal/UserPortal.html?gwt.codesvr=127.0.0.1:9997
 
-Navigating to debug URLs mentioned above for the first time, you will be prompted to install GWT Developer Plugin for the given web browser. Just proceed with plugin installation and restart the browser.
+Tip: ''GWT application's debug URL contains the suffix <code>?gwt.codesvr=127.0.0.1:9997</code> which tells GWT Developer Plugin to connect to Development Mode at <code>127.0.0.1:9997</code>.''
 
-The next time you navigate to debug URLs mentioned below, GWT Developer Plugin will connect to Development Mode and new debugging session will be started for the given browser. This can take some time, please be patient and wait while the application gets loaded.
+If you open the debug URL for the first time, you will be prompted to install GWT Developer Plugin for the given web browser. Just proceed with plugin installation and restart the browser.
 
-You can switch to Development Mode GUI and see a new tab representing the debugging session. Note that each session has its own client-side logs displayed within the given tab.
+Next time you open the debug URL, GWT Developer Plugin will connect to Development Mode and new debugging session will be started for the given browser. This can take some time, please be patient and wait while the application gets loaded.
 
-== Typical development cycle ==
-Development Mode allows you to "code-test-debug" running GWT application, without having to compile it to JavaScript or even restart Development Mode.
+== GWT Development Cycle ==
+Change frontend application's code while Development Mode is running, your IDE might prompt you to restart debug connection (i.e. hot swap failed) - just reconnect again.
 
-Whenever you make code changes while debugging:
-* Eclipse might complain that changes cannot be hot-swapped, in this case just click "Terminate" and reconnect again
-* Reload (refresh) the application in web browser, this will start new Development Mode session
+Reload (refresh) GWT application in your browser in order for your changes to take effect.
 
-== Compiling Frontend applications for specific browser(s) ==
-
-In order to speed up GWT compilation, you can compile Frontend applications only for specific browser(s).
-
-For example, to compile WebAdmin and UserPortal only for Firefox:
-<pre>
-$ cd $OVIRT_HOME
-$ mvn clean install -Pdep,gwt-admin,gwt-user -Dgwt.userAgent=gecko1_8
-</pre>
-
-User agents supported by GWT compiler:
-* <code>ie8</code> - Microsoft Internet Explorer 8
-* <code>ie9</code> - Microsoft Internet Explorer 9 and above
-* <code>gecko1_8</code> - Mozilla Firefox
-* <code>safari</code> - Safari
-* <code>opera</code> - Opera
-
-Notes:
-* Accessing the application in browser that wasn't specified for GWT compilation results in blank page being shown.
-* Never use <code>ie6</code> with <code>gwt.userAgent</code>, Microsoft Internet Explorer 6 and 7 are not supported by oVirt Frontend applications<code>*</code>.
-
-<code>*</code> Even though GWT technically supports <code>ie6</code> user agent, trying to run Frontend applications in Microsoft Internet Explorer 6 or 7 results in terrible performance and user experience. This is because Frontend applications leverage the "browser as a platform" philosophy, using JavaScript to drive user interface as a single-page web application. Unfortunately, Microsoft Internet Explorer's JavaScript engine (as well as its rendering engine) are suboptimal to handle such kind of applications.
-
-== Compiling Frontend applications for specific locale(s) ==
-
-By default, Frontend applications are compiled only for English (en) locale.
-
-For example, to compile WebAdmin and UserPortal for English, French and Japanese:
-<pre>
-$ cd $OVIRT_HOME
-$ mvn clean install -Pdep,gwt-admin,gwt-user -Dgwt.locale=en_US,fr_FR,ja_JP
-</pre>
-
-To compile Frontend applications for all supported locales, just use the <code>all-langs</code> profile:
-<pre>
-$ cd $OVIRT_HOME
-$ mvn clean install -Pdep,gwt-admin,gwt-user,all-langs
-</pre>
-
-See <code>all-langs</code> profile in <code>$OVIRT_HOME/frontend/webadmin/modules/pom.xml</code> for a full list of supported locales.
-
-== Compiling Frontend applications in detailed mode ==
-
+== GWT Draft Compile ==
 Sometimes it's necessary to profile or analyze GWT applications, e.g. fixing memory leaks or identifying performance bottlenecks in different web browsers. GWT compiler produces optimized and obfuscated JavaScript by default, which is hard to work with.
 
-To compile Frontend applications in detailed mode, reducing the level of code optimization and preventing obfuscation, you can do full oVirt build with <code>gwtdev</code> profile:
+
+To compile oVirt web applications in draft mode, reducing the level of code optimization and preventing obfuscation, use <code>DEV_BUILD_GWT_DRAFT</code> makefile option:
 <pre>
-$ cd $OVIRT_HOME
-$ mvn clean install -Pdep,gwt-admin,gwt-user,gwtdev
+$ make clean install-dev [usual makefile options] DEV_BUILD_GWT_DRAFT="1"
 </pre>
 
-''Use detailed mode only when profiling or analyzing GWT application code, don't use it for regular oVirt builds.''
+Tip: ''Use draft mode only when profiling or analyzing GWT application code, don't use it for regular Engine builds.''
 
 == Frequently asked questions ==
 ''Q: My web browser doesn't prompt me to install GWT Developer Plugin.''
@@ -154,12 +117,12 @@ A: Make sure your browser is officially supported by GWT Developer Plugin. Alter
 
 ''Q: The web page is blank after navigating to debug URL.''
 
-A: Make sure to do full oVirt build prior to debugging for at least 2 different browsers, e.g. without specifying <code>gwt.userAgent</code> property (compile for all supported browsers).
+A: Make sure to build Engine from source prior to debugging for at least two different browsers.
 
 
 ''Q: Client-side logs are not persisted on Engine, e.g. <code>$JBOSS_HOME/standalone/log/engine/engine-ui.log</code>.''
 
-A: Currently, client-side logs are enabled only when debugging the application via Development Mode.
+A: At the moment, client-side logging works only when debugging GWT application via Development Mode. In future, we might consider adding infrastructure to support persisting client-side logs on server.
 
 
 ''Q: I'm getting <code>-bindAddress host "0.0.0.0" unknown</code> error message when launching Development Mode.''
@@ -169,7 +132,7 @@ A: Using 0.0.0.0 means that Development Mode will listen for incoming connection
 
 ''Q: I'm getting <code>Exception: java.lang.OutOfMemoryError</code> or similar error during GWT compilation.''
 
-A: You can tweak GWT compiler JVM arguments via <code>gwt-plugin.extraJvmArgs</code> property, for example:
+A: You can tweak GWT compiler's JVM arguments using <code>DEV_EXTRA_BUILD_FLAGS</code> makefile option, for example:
 <pre>
-$ mvn clean install -Pdep,gwt-admin,gwt-user -Dgwt-plugin.extraJvmArgs="-Xms1024M -Xmx2048M -XX:PermSize=256M -XX:MaxPermSize=512M"
+$ make clean install-dev [usual makefile options] DEV_EXTRA_BUILD_FLAGS="-Dgwt-plugin.extraJvmArgs=\"-Xms1024M -Xmx2048M -XX:PermSize=256M -XX:MaxPermSize=512M\""
 </pre>
