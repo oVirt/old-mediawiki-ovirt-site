@@ -73,7 +73,7 @@ Changing a label of a network will remove it the network from all of the hosts w
 ==== Pre-'Setup Networks' execution ====
 At the first step of the 'Setup Networks' parameters validation, a translation of the labels to a list of networks will be done.<br>
 The translation will rely on the host interface's set of labels. <br>
-'Setup Networks' api will support both labeling and attaching the networks to the interface/bond.<br>
+'Setup Networks' API will support both labeling and attaching the networks to the interface/bond.<br>
 
 Removing a labelled network from a labelled interface will be blocked, as labelled networks should be managed according to the interface label. In order to remove a network, the administrator should remove the label from the interface and manage the interface individually. 
 
@@ -88,8 +88,8 @@ Moving host between cluster that supports 'network labels' to a cluster which do
 * Moving a host that uses labels from version greater than 3.0 to cluster 3.0 will be blocked.
 
 ==== Network Label constraints ====
-The network labels feature relies on the 'Setup Networks' api to configure the networks on the hosts.<br>
-There are certain configurations which aren't supported by the 'Setup Networks' api and defining the network label in that manner will fail the operation and will result in a useless label declaration. The following network configuration on a single interface are prohibited:
+The network labels feature relies on the 'Setup Networks' API to configure the networks on the hosts.<br>
+There are certain configurations which aren't supported by the 'Setup Networks' API and defining the network label in that manner will fail the operation and will result in a useless label declaration. The following network configuration on a single interface are prohibited:
 # Any combination of 2 non-vlan networks:
 ## 2 VM networks
 ## 2 non-VM networks
@@ -131,8 +131,8 @@ A representation of '''labels''' element:
     <label id="label_name_2" />
   </labels>
   
-====== Phase 2 (when UI will use the restapi) ======
-The user will be able to provide the list of labels per nic via as part of the setupnetworks api:
+====== Phase 2 (when UI will use the RESTAPI) ======
+The user will be able to provide the list of labels per nic via as part of the setupnetworks API:
   ''/api/hosts/{host:id}/nics/setupnetworks''
 
 '''POST''' request example:
