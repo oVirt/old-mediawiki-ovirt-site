@@ -104,6 +104,11 @@ Actions supported for this sub-tab are -
 
 [[File:SnapsList1.png]]
 
+==== Main tab Volumes ====
+A new action group "Volume Snapshot" would be introduced under actions for a volume as a drop down. The set of actions under this action group would be -
+* Create Snapshot
+* Restore
+
 ==== Sub-tab "Volumes --> Snapshot" ====
 This sub-tab under the main tab Volumes lists the snapshots created for individual volumes. This is same as the above mentioned sub-tab Snapshots under Consistency Group. It lists the same details and supports the same set of actions.
 
