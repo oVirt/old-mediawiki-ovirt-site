@@ -21,7 +21,7 @@ User goes to "Volumes" tab where capacity information will be displayed as part 
 [[File:VolumeCapacity.png]]
 
 == Getting the volume capacity details ==
- Volume capacity information will be fetched by GlusterSyncJob as part of getting Volume advanced details. 'glusterVolumeStatus' VDSM verb will be enhanced to get the capacity information as part of volume status. Capacity information will be fetched when 'detail' options is passed. Internally VDSM can use any of the following ways to determine the capacity information.
+Volume capacity information will be fetched by GlusterSyncJob as part of getting Volume advanced details. 'glusterVolumeStatus' VDSM verb will be enhanced to get the capacity information as part of volume status. Capacity information will be fetched when 'detail' options is passed. Internally VDSM can use any of the following ways to determine the capacity information.
 
 === Using libgfapi ===
 In this approach VDSM uses the APIs from libgfapi to get the details of a gluster volume. There are certain issues with the said API and not opting for using this option.
