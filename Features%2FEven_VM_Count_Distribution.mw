@@ -15,7 +15,21 @@ The goal of this feature is to provide a cluster policy that evenly distributes 
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 === Detailed Description ===
-- TBD
+[[File:balancing-before.png||Unbalanced cluster]]
+'''Unbalanced cluster'''
+[[File:balancing-after1iter.png]]
+'''Cluster after 1 balancing iteration'''
+[[File:balancing-after2iter.png]]
+'''Cluster after 2 balancing iterations'''
+
+
+== 1. iteration: ==
+# VM1 moved from VDS1 to VDS3 (there is no special logic involved in selecting the VDS, so even though VDS5 is also a good target we simply take whatever comes first)
+# The balance window top moved from 12 to 11 and minimum is now 7
+
+== 2. iteration: ==
+# VM2 moved to VDS5 (the only possible target, because it's the only one outside of the balancing window)
+# The balancing window top moved from 11 to 10 and the minimum is now 6 which means the cluster is balanced because every VDS has VM count inside the balancing window
 
 === Benefit to oVirt ===
 This feature comes from customer request, so benefit to ovirt is a better customer satisfaction ;)
