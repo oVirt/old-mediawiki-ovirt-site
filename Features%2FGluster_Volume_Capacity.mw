@@ -34,7 +34,7 @@ In this approach VDSM needs to collate the details from advanced details of the 
 == Detailed Design ==
 === Entities ===
 ==== Gluster_Volumes ====
-  Following three columns will be added to the gluster_volumes tables. 
+  Following three columns will be added to gluster_volumes table.
 {| class="wikitable" border="1"
 |-
 ! Column
