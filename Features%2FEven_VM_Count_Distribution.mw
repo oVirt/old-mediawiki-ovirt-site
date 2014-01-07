@@ -15,13 +15,17 @@ The goal of this feature is to provide a cluster policy that evenly distributes 
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 === Detailed Description ===
-[[File:balancing-before.png||Unbalanced cluster]]
 '''Unbalanced cluster'''
-[[File:balancing-after1iter.png]]
+
+[[File:balancing-before.png||Unbalanced cluster]]
+
 '''Cluster after 1 balancing iteration'''
-[[File:balancing-after2iter.png]]
+
+[[File:balancing-after1iter.png]]
+
 '''Cluster after 2 balancing iterations'''
 
+[[File:balancing-after2iter.png]]
 
 == 1. iteration: ==
 # VM1 moved from VDS1 to VDS3 (there is no special logic involved in selecting the VDS, so even though VDS5 is also a good target we simply take whatever comes first)
