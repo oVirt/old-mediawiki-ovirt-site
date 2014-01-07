@@ -68,10 +68,10 @@ If user opts for creation of snapshot for the individual volume another dialog p
 
 [[File:CreateVolumeSnapshot1.png]]
 
+If the user opts for snapshot creation as group, then a dialog pops asking for Snapshot Group Name and Snapshot Name. User provides the required details and snapshot creation is triggered,
 
+[[File:CreateCGSnapshot1.png]]
 
-
-[[File:Create]]
 * User
 Without selecting a volume from the list, if user clicks the action "Create Snapshot", the create snapshot dialog opens. User can snap the individual consistency groups and volumes using the dialog by selecting them clicking the button "Snap". User can also create a fresh consistency group and snap it using this dialog by selecting multiple volumes from the list and clicking the button "Snap as Consistency Group".
 
