@@ -55,6 +55,7 @@ In this approach VDSM needs to collate the details from advanced details of the 
 |}
 
 ==== GlusterVolumeSizeInfo ====
+  A new entity GlusterVolumeSizeInfo will be added to GlusterVolumeEntity. 
 {| class="wikitable" border="1"
 |-
 ! Column
@@ -64,6 +65,10 @@ In this approach VDSM needs to collate the details from advanced details of the 
 | volumeId
 | GUID
 | respective gluster volume id
+|-
+| volumeName
+| String
+| Volume Name
 |-
 | totalSize
 | long
@@ -76,7 +81,10 @@ In this approach VDSM needs to collate the details from advanced details of the 
 | usedSize
 | long
 | used volume size
-|}
+|-
+| updatedAt
+| Date
+|Capacity Info Lasted updated at
 
 === Query ===
 ==== GetGlusterVolumeSizeInfoQuery ====
