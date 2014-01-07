@@ -85,6 +85,7 @@ In this approach VDSM needs to collate the details from advanced details of the 
 | updatedAt
 | Date
 |Capacity Info Lasted updated at
+|}
 
 === Query ===
 ==== GetGlusterVolumeSizeInfoQuery ====
