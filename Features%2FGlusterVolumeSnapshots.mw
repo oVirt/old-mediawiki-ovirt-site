@@ -121,7 +121,7 @@ This action asks for a confirmation and then removes the selected snapshot(s).
 
 This actions sets / edits the snapshot related configuration parameters for the specific volume. On click of the action, a pop up dialog opens with values set for the configuration parameters. User has option to edit the values using the Edit action in the pop up dialog.
 
-[[File:VolumeSnapConfiguration.png]]
+[[File:SnapshotConfiguration.png]]
 
 ==== Main Tab "Consistency Groups" ====
 An additional main tab item would be introduced for "Consistency Groups". This tab would list the consistency group in the cluster in tabular form having the columns -
