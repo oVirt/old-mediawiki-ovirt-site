@@ -44,9 +44,9 @@ This entity stores the snapshots created on gluster volumes. Different volumes c
 |-
 | SnapName || String || Name of the snapshot
 |-
-| VolumeId || UUID || Id of the reference volume
+| ReferenceEntityId || UUID || Id of the reference volume or snapshot group for which the snapshot is taken
 |-
-|SnapshotGroupId || UUID || Id of the reference snapshot group, if snapshot is for a snapshot group
+|SnapshotType || String || Type of the snapshot (if its for a volume or a snapshot group)
 |-
 | CreatedAt || Date || Creation time of the snapshot
 |-
