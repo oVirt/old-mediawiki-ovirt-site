@@ -117,7 +117,7 @@ for saving the configuration we will add a new field to the vds_group "ha_reserv
 possible values for this field are true/false according to the user selection in the checkbox at the cluster popup window (shown at the UI section).
 
 ==== Rest API ====
-Since the configuration does not have a Rest api, no changes in the Rest api are needed.
+A small change to the Rest Api, adding a new property to the Cluster object to enable/disable the HA Reservation, named "ha_reservation" with valid values of true/false.
 
 ==== Backwards Compatibility ====
 For this feature there are no changes in APIs to the host and all the logic will be done by the engine, there isn't any  backwards compatibility issues,
