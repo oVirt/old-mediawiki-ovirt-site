@@ -87,6 +87,8 @@ balance():
   return (possibleTargets, vmToMigrate)
 </pre>
 
+[http://jmoskovc.fedorapeople.org/even_vm_distribution.py Algorithm simulation in python]
+
 === Testing ===
 - TBD
 
