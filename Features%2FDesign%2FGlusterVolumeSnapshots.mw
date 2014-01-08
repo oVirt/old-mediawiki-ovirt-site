@@ -15,40 +15,40 @@ This feature allows the administrators to create, start, stop, delete and restor
 * Last updated date: Thu Dec 26 2013
 
 == Design ==
-The snapshot feature is being designed to enable administrators to define a consistency group, create and maintain volume snapshots. It also provides mechanism to restore a volume to a point in time snap of the volume in a crash situation.
+The snapshot feature is being designed to enable administrators to create and maintain individual volumes snapshots and snapshots for a group of volumes (snapshot group). It also provides mechanism to restore a volume or snapshot group to a point in time snapshot in a crash situation.
 
 === New Entities ===
 
-==== GlusterVolumeConsistencyGroup ====
-This entity stores the details of a Gluster volume consistency group. While definition of a consistency group different volumes are assigned the newly created consistency group's identity to make sure they belong to the said consistency group.
+==== GlusterVolumeSnapshotGroup ====
+This entity stores the details of a Gluster volume snapshot group. While definition of a snapshot group different volumes are assigned the newly created snapshot group's identity to make sure they belong to the said snapshot group.
 {| class="wikitable"
-|+ GlusterVolumeConsistencyGroups
+|+ GlusterVolumeSnapshotGroups
 !Column name !! Type !! Description
 |-
 | Id || UUID || Primary Key
 |-
-| CGName || String || Name of the consistency group
+| Name || String || Name of the snapshot group
 |-
-| Description || String || Description of the consistency group
+| Description || String || Description of the snapshot group
 |}
 
 ==== GlusterVolumeSnapshots ====
-This entity stores the snapshot details created on gluster volumes. Different volumes can have snapshots with same names.
+This entity stores the snapshots created on gluster volumes. Different volumes can have snapshots with same names.
 {| class="wikitable"
 |+ GlusterVolumeSnapshots
 !Column name !! Type !! Description
-|-
-| VolumeId || UUID || Id of the reference volume
-|-
-|CgId || UUID || Id of the reference consistency group, if snapshot is for a consistency group
 |-
 | SnapId || UUID || Id of the new snapshot
 |-
 | SnapName || String || Name of the snapshot
 |-
-| SanpTime || Date || Creation time of the snapshot
+| VolumeId || UUID || Id of the reference volume
 |-
-| description || String || Description
+|SnapshotGroupId || UUID || Id of the reference snapshot group, if snapshot is for a snapshot group
+|-
+| CreatedAt || Date || Creation time of the snapshot
+|-
+| Description || String || Description
 |-
 | Status || String || Current status of the snapshot
 |}
@@ -61,12 +61,14 @@ This entity stores the snapshot details created on gluster volumes. Different vo
 ** DECOMMISSIONED
 
 ==== GlusterVolumeSnapshotConfig ====
-This entity stores the details of a configuration parameter for volume/consistency group snapshots. Volume/consistency group specific values for the parameters would be maintained as part of this entity, whereas the system level configuration parameters would be maintained as part of vdc_options only.
+This entity stores the details of a configuration parameter for volume/snapshot group related to snapshot feature. Volume/snapshot group specific values for the parameters would be maintained as part of this entity.
 {| class="wikitable"
 |+ GlusterVolumeSnapshotConfig
 !Column name !! Type !! Description
 |-
-| EntityId || UUID || Id of the reference volume or consistency group
+| EntityId || UUID || Id of the reference volume or snapshot group
+|-
+| EntityType || String || Type of the entity (V-Volume, C-Snapshot Group)
 |-
 | ParamName || String || Name of the configuration parameter
 |-
@@ -74,8 +76,8 @@ This entity stores the details of a configuration parameter for volume/consisten
 |}
 
 === Entities changes ===
-* Change to store consistency group id for a volume
-** Add a field cgId of UUID type in gluster_volumes table to store a consistency group id, if volume is part of a consistency group
+* Change to store snapshot group id for a volume
+** Add a field SnapshotGroupId of UUID type in gluster_volumes table to store a snapshot group id, if volume is part of a snapshot group
 <big>gluster_volumes</big>
 {| class="wikitable" border="1"
 |-
@@ -84,43 +86,42 @@ This entity stores the details of a configuration parameter for volume/consisten
 ! Change
 ! Description
 |-
-| cgId
+| SnapshotGroupId
 | UUID, nullable
 | Addition
-| stores the consistency group id if volume is part of a consistency group
+| stores the snapshot group id if volume is part of a snapshot group
 |}
 
 === Sync Jobs ===
-The Gluster volume snapshot and consistency group details would be periodically fetched and updated into engine using the GlusterSyncJob's lightweight sync mechanism.
+The Gluster volume snapshot and snapshot group details would be periodically fetched and updated into engine using the GlusterSyncJob's lightweight sync mechanism.
 
 === BLL commands ===
-* <big>AddGlusterVolumeConsistencyGroup</big> - creates a consistency group
-* <big>AddGlusterVolumesToConsistencyGroup</big> - adds volumes to consistency group
-* <big>RemoveGlusterVolumeConsistencyGroup</big> - removes said volumes from the consistency group (if list of volumes passed as parameters). If no volumes passed, the consistency group itself is deleted.
+* <big>AddGlusterVolumeSnapshotGroup</big> - creates a snapshot group
+* <big>AddGlusterVolumesToSnapshotGroup</big> - adds volumes to snapshot group
+* <big>RemoveGlusterVolumeSnapshotGroup</big> - removes said volumes from the snapshot group (if list of volumes passed as parameters). If no volumes passed, the consistency group itself is deleted.
 * <big>AddGlusterVolumeSnapshot</big> - creates a volume snapshot
-* <big>AddGlusterVolumeConsistencyGroupSnapshot</big> - creates a consistency group snapshot
+* <big>AddGlusterVolumeSnapshotGroupSnapshot</big> - creates a snapshot group snapshot
 * <big>RestoreGlusterVolumeSnapshot</big> - restore a given volume to a snapshot
-* <big>RestoreGlusterVolumeConsistencyGroup</big> - allows for all the volumes which have a snapshot in the mentioned CG to be restored that point in time. This provides roll-back mechanisms for the multiple volumes which were snapped together
+* <big>RestoreGlusterVolumeSnapshotGroup</big> - allows for all the volumes which have a snapshot in the mentioned snapshot group to be restored to that point in time. This provides roll-back mechanisms for the multiple volumes which were snapped together
 * <big>RemoveGlusterVolumeSnapshot</big> - removes the given snapshot
-* <big>RemoveGlusterVolumeConsistencyGroupSnapshot</big> - removes the given consistency group snapshot
+* <big>RemoveGlusterVolumeSnapshotGroupSnapshot</big> - removes the given snapshot group snapshot
 * <big>UpdateGlusterVolumeSnapshotConfig</big> - sets the configuration values for a given volume snapshot
-* <big>UpdateGlusterVolumeConsistencyGroupSnapshotConfig</big> - sets the configuration values for a given consistency group
+* <big>UpdateGlusterVolumeSnapshotGroupConfig</big> - sets the configuration values for a given snapshot group
 * <big>StartGlusterVolumeSnapshot</big> - starts the given snapshot
-* <big>StartGlusterVolumeConsistencyGroupSnapshot</big> - starts the given consistency group
+* <big>StartGlusterVolumeSnapshotGroupSnapshot</big> - starts the given snapshot group snapshot
 * <big>StopGlusterVolumeSnapshot</big> - stops the given snapshot
-* <big>StopGlusterVolumeConsistencyGroupSnapshot</big> - stops the given consistency group
+* <big>StopGlusterVolumeSnapshotGroupSnapshot</big> - stops the given snapshot group snapshot
 
 === Engine Queries ===
 * <big>GetGlusterVolumeSnapshotsByVolumeId</big> - lists all the snapshot for a given volume
 * <big>GetGlusterVolumeSnapshotByVolumeIdAndSnapshotId</big> - lists snapshot for the given snapshot id and volume id
-* <big>GetGlusterVolumeConsistencyGroupById</big> - lists the consistency group by id
-* <big>GetGlusterVolumeConsistencyGroupSnapshotByCgIdAndSnapId</big> - lists the consistency group snapshot by consistency group id and snap id
+* <big>GetGlusterVolumeSnapshotGroupById</big> - lists the snapshot group by id
+* <big>GetGlusterVolumeSnapshotGroupSnapshotByIdAndSnapshotId</big> - lists the snapshot group snapshot by id and snapshot id
 * <big>GetGlusterVolumeSnapshotConfigDetailsByVolumeId</big> - lists all the snapshot configuration details for the given volume id
-* <big>GetGlusterVolumeConsistencyGroupConfigDetailsByCgId</big> - lists all the snapshot configuration details for the given cg id
-* <big>GetAllGlusterVolumeSnapshotStatus</big> - lists all the snapshot with their status
+* <big>GetGlusterVolumeSnapshotGroupConfigDetailsById</big> - lists all the snapshot configuration details for the given snapshot group id
+* <big>GetAllGlusterVolumeSnapshotStatus</big> - lists all the snapshots with their status
 * <big>GetGlusterVolumeSnapshotStatusByVolumeId</big> - gets the status of a snapshot for a specific volume
-* <big>GetGlusterVolumeSnapshotStatusBySnapId</big> - gets the status of a specific snapshot
-* <big>GetGlusterVolumeSnapshotStatusById</big> - lists snapshot status for a consistency group
+* <big>GetGlusterVolumeSnapshotStatusBySnapshotId</big> - gets the status of a specific snapshot
 
 === VDSM Verbs ===
 ==== VDSM Verbs for consistency group maintenance ====
