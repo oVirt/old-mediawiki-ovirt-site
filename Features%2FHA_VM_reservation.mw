@@ -62,6 +62,8 @@ Enabling or disabling the HA VM Reservation will  be possible via the Cluster ne
 A sketch of the edit Cluster window:<br>
 [[File:editclusterwin.png]]
 
+When enabled the weight and balancing methods will kick into action as well as the monitoring task that will trigger an alert to the user when needed.
+
 === Detailed Design ===
 Detailed design can be found here [[Features/HA_VM_reservation_detailedDesign|HA_VM_reservation_detailedDesign]]
 
