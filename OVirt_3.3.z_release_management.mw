@@ -40,3 +40,6 @@
 * Release notes must be filled: [[oVirt 3.3.1 release notes]]
 * Blocking bugs must be fixed: {{BZ|1019391}} - Tracker: oVirt 3.3.1 release
 * QE must test the release: [[Testing/Ovirt 3.3.1 testing]]
+
+[[Category:Releases]] 
+[[Category:Release management]]
