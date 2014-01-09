@@ -118,7 +118,7 @@ Execute:
 * Using the engine-config command, enable the websocket-proxy by using "engine-config -s WebSocketProxy=<FQDN>:<PORT>" where <FQDN> is the hostname or IP address of your websocket-proxy host, and the port you wish to use.
 ''Note: the port on the proxy machine must be opened on firewall.''
 
-On the engine, generate a certificate and key. substitute <FQDN> with the DNS name of the host. Substitute <country>, <organization> to suite your environment.
+On the engine, generate a certificate and key. substitute <FQDN> with the DNS name of the host. Substitute <country>, <organization> to suite your environment (i.e. the values must match values in the certificate authority of your engine).
  /usr/share/ovirt-engine/bin/pki-enroll-pkcs12.sh --name=websocket-proxy-standalone --password=mypass --subject="/C=<country>/O=<organization>/CN=<fqdn>"
 
 Copy /etc/pki/ovirt-engine/keys/websocket-proxy-standalone.p12 and /etc/pki/ovirt-engine/certs/engine.cer from the engine to the proxy machine at /etc/pki/ovirt-websocket-proxy
