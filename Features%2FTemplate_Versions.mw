@@ -84,7 +84,7 @@ base id - required (template object with id of the base template)
 version name =optional
 version numbering cannot be filled (it's calculated by the engine), if user fills it - ignore
 * PUT: (update template)
-only version name can be updated
+only version name can be updated. 
 no update is supported for version section in 3.4 for base id nor numbering.
 
 VMs usecase
