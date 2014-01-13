@@ -88,9 +88,7 @@ will upgrade to latest 3.3.
 {{BZ|886478}} - [RHS-C] Creating a Distributed Stripe volume using the default Stripe Count (4) actually creates only a Stripe volume<BR>
 {{BZ|896139}} - [RFE] collect the "created_by" field of a VM into it's configuration history<BR>
 {{BZ|906313}} - [oVirt-webadmin] [setupNetworks] "No valid Operation for <network_name> and Unassigned Logical Networks panel"<BR>
-{{BZ|906393}} - [oVirt] [network] Audit log message for unmanaged network<BR>
 {{BZ|911348}} - REST-API: Allow copy/move disk from disks collection<BR>
-{{BZ|915753}} - Deadlock detected during creation vms in pool<BR>
 {{BZ|921666}} - engine: DeactivateStorageDomainCommand fails with vdsm error: 'Operation not allowed while SPM is active' because we do not actually send SpmStop while there are unknown tasks<BR>
 {{BZ|922520}} - [event tab] better phrasing for actions done by unauthenticated users, currently appears as <UNKNOWN><BR>
 {{BZ|948653}} - Change "Guide" link to Power User Portal Guide<BR>
@@ -124,7 +122,6 @@ will upgrade to latest 3.3.
 {{BZ|989382}} - RHS-C: No error message seen while starting "ovirt-engine-notifier" when "MAIL_SERVER" is NOT defined<BR>
 {{BZ|989396}} - [Admin Portal] Setting config value DefaultWindowsTimeZone has no effect<BR>
 {{BZ|990429}} - [RHEVM][UI][TEXT] Comment tooltip is not well adjusted to its text<BR>
-{{BZ|992883}} - VdsManager.OnTimer loads VDS instead of VdsDynamic<BR>
 {{BZ|992899}} - [RHSC] Console allows addition of a host to a cluster, that has the same UUID as that of a host that is already present in the cluster<BR>
 {{BZ|995238}} - Change column header for clusters on which a policy is applied for usability<BR>
 {{BZ|996563}} - [Admin Portal] Deleted config of UI plugin is not reflected, data are kept until engine is restarted<BR>
@@ -140,11 +137,9 @@ will upgrade to latest 3.3.
 {{BZ|1007393}} - [scale] The thread pool is out of limit<BR>
 {{BZ|1008258}} - Cannot add hypervisor host when use chinese support<BR>
 {{BZ|1008318}} - [RHSC] Error message seen on starting rebalance on a volume with one brick needs improvement<BR>
-{{BZ|1008870}} - [oVirt] In gluster-only mode, permissions for every user has roles not relevant to a gluster-user.<BR>
 {{BZ|1008900}} - [RHSC] Show error pop-up when user tries to stop a volume which has rebalance in progress<BR>
 {{BZ|1008942}} - RHS-C: Introduce a Force option in the UI to allow creation of bricks in the root partition<BR>
 {{BZ|1009757}} - [es_ES]   [Admin Portal] Virtual Machines tab- Chart heading "Time executing" does not fit in the available space<BR>
-{{BZ|1009899}} - exportDbSchema scripts generates output file with wrong name<BR>
 {{BZ|1011445}} - Tabbing navigation in Add host tab should go from password field to OK buton<BR>
 {{BZ|1011778}} - RHS-C: Rebalance Status refresh was not occuring properly<BR>
 {{BZ|1012329}} - [RHSC] Not able to close rebalance status dialog .<BR>
@@ -156,11 +151,9 @@ will upgrade to latest 3.3.
 {{BZ|1015016}} - [RHSC] - An event message should be displayed when rebalance completes on a volume.<BR>
 {{BZ|1015020}} - [RHSC] 'Add Network' dialog for a cluster contains fields not relevant to RHS<BR>
 {{BZ|1015052}} - [ovirt-engine-backend] there are dos end of lines in engine.log<BR>
-{{BZ|1015080}} - Exception thrown on import vm failure<BR>
 {{BZ|1015185}} - [RFE] Addition of os disk indicator on VM import screen<BR>
 {{BZ|1015444}} - [RHSC] - No event message generated when rebalance is started from CLI.<BR>
 {{BZ|1015478}} - [RHSC] A user with permissions to manipulate volumes cannot delete a volume<BR>
-{{BZ|1015683}} - core/GUI: prevent potential serialization exceptions post upgrade to GWT 2.5<BR>
 {{BZ|1016461}} - [vdsm] engine fails to add host with vdsm version 4.13.0<BR>
 {{BZ|1016661}} - Description for the creation of cluster is incorrect<BR>
 {{BZ|1016844}} - [RFE] Diplay client IP in the VM Sessions tab<BR>
@@ -178,7 +171,6 @@ will upgrade to latest 3.3.
 {{BZ|1020254}} - [RHSC] - Stop Rebalance button does not get disabled  once rebalance is complete.<BR>
 {{BZ|1020278}} - [RHSC] - Completed text in the status dialog needs to be highlighted or made bold.<BR>
 {{BZ|1020282}} - [RHSC] Error message on failure to start remove-brick is incorrect<BR>
-{{BZ|1020344}} - Power Managent with cisco_ucs problem<BR>
 {{BZ|1020760}} - [notifier] sent notification should be visible in INFO log level<BR>
 {{BZ|1020779}} - [RHSC] - Skipped file count is getting displayed as failed file count in rebalance status dialog.<BR>
 {{BZ|1020793}} - [notifier] If Alert and Issue Solved Notifications are both discovered during next iteration, the order is messed<BR>
@@ -188,7 +180,6 @@ will upgrade to latest 3.3.
 {{BZ|1021334}} - [RHSC] - Cancel button is not working in the stop rebalance dialog box.<BR>
 {{BZ|1021343}} - [RHSC] - Stop rebalance confirmation dialog does not display the volumes on which rebalance  is going to be stopped.<BR>
 {{BZ|1021360}} - [text] spelling mistakes in engine event log<BR>
-{{BZ|1021393}} - Creating VM from Foreman fails with oVirt 3.3.1 beta.<BR>
 {{BZ|1021397}} - [RHSC] 'CPU Name' field for a host is empty and 'CPU Type' is scrollable<BR>
 {{BZ|1021441}} - [RHSC] Status of bricks that reside on a server which is down, should be shown as down.<BR>
 {{BZ|1021584}} - message in the 'remove' confirmation dialog cannot be overridden in some cases<BR>
@@ -231,7 +222,6 @@ will upgrade to latest 3.3.
 {{BZ|1026593}} - Webadmin UI is now requesting two slashes in front of URLs<BR>
 {{BZ|1026885}} - Default DC & Cluster has fixed UUIDs<BR>
 {{BZ|1027178}} - Volumes tab and sub-tabs not taking equal space<BR>
-{{BZ|1027593}} - Possibility to edit Network description and comment<BR>
 {{BZ|1027675}} - [RHSC] Remove-brick status dialog hangs when glusterd goes down on the storage node<BR>
 {{BZ|1029050}} - Reinstall host by rest api fails on root_password field requirement<BR>
 {{BZ|1029414}} - [RHS-C] About dialog does not have a title.<BR>
@@ -248,7 +238,6 @@ will upgrade to latest 3.3.
 {{BZ|1034346}} - REST: can not remove brick from distributed-replicate volume<BR>
 {{BZ|1035124}} - An event message for commit remove brick should mention the number of bricks removed.<BR>
 {{BZ|1035146}} - [RHSC] 'Could not fetch remove brick status of volume' message lists all the bricks of the volume<BR>
-{{BZ|1035297}} - Updating info from Host fails when a VM without a balloon is found<BR>
 {{BZ|1035566}} - [RFE] [oVirt][webadmin] Change comment column title to icon, and move to right of name<BR>
 {{BZ|1035601}} - [RHSC] Remove-brick icon disappears from the UI, when glusterd is killed on the node which was running remove-brick<BR>
 {{BZ|1035667}} - Paused VM can be resumed on host that is not UP<BR>
