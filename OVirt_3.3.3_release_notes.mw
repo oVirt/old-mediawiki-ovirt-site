@@ -121,7 +121,7 @@ will upgrade to latest 3.3.
 ==VDSM==
 
 ==ovirt-node-plugin-vdsm==
-Use Management class to pass informations  (BZ#1048929)
+{{BZ|1048929}} - Use Management class to pass informations<BR>
 
 [[Category:Documentation]]
 [[Category:Releases]]
