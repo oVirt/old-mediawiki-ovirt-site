@@ -54,6 +54,9 @@ will upgrade to latest 3.3.
 
 =Known issues=
 
+* EL >= 6.5 or cloud-init >= 0.7.2 are needed for cloud-init feature support ({{BZ|1029885}})
+* On Fedora 19 with recent versions of PostgreSQL it may be necessary to manually change kernel.shmmax settings ({{BZ|1039616}})
+
 =Bugs fixed=
 ==oVirt Engine==
 {{BZ|957602}} - [RHEVM-RHS] Remove rebalance and replace-brick actions from REST API<BR>
