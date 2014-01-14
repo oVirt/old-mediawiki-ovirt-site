@@ -17,9 +17,8 @@ This feature extends events notifier capabilities and enables it to generate SNM
 
 === Current status ===
 * Target Release: 3.4
-* Status: Assigned
+* Status: Post
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
-
 
 === Benefit to oVirt ===
 Allow oVirt users to monitor their virtualization environment with open source or proprietary monitoring systems such as Nagios, BMC Patrol, HP OpenView, etc.
