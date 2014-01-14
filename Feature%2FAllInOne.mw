@@ -4,6 +4,8 @@
 
 == All in One ==
 
+{{Feature|name=All in One|modules=engine,node|version=3.1|status=Released}}
+
 === Summary ===
 
 "All in One" means configuring VDSM on the same host where oVirt-engine is installed, so that VMs can be hosted on the same machine.
