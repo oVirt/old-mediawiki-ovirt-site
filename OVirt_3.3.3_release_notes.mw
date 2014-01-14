@@ -56,64 +56,64 @@ will upgrade to latest 3.3.
 
 =Bugs fixed=
 ==oVirt Engine==
-{{BZ|957602}}[RHEVM-RHS] Remove rebalance and replace-brick actions from REST API<BR>
-{{BZ|961693}}[es_ES] change spanish translation for "poweroff", at the moment it is the same word "apagar"<BR>
-{{BZ|968178}}[RHEVM-RHS] Should check for gluster capabilities when moving host from virt to gluster cluster<BR>
-{{BZ|968511}}(PENDING RC BUILD) PRD33 - set marketplace link/icon<BR>
-{{BZ|987999}}[oVirt] [provider] Add button shouldn't appear on specific provider<BR>
-{{BZ|990572}}cloud-init integration - REST API<BR>
-{{BZ|1003796}}[rhevm] Webadmin - Events - Search box with value "Events: Templates =*" gives error (Exception message is StatementCallback)<BR>
-{{BZ|1005832}}[GlusterFS] Default option on GlusterFS Data Center in Storage Type is ISO/ POSIX compliant FS<BR>
-{{BZ|1008146}}When run multiple vms then filter don't check correctly free resources.<BR>
-{{BZ|1011087}}[RHEVM] cannot upgrade RHEVM 3.2 to RHEVM 3.3 because of rhevm-tools-3.3.0-0.22.master.el6ev.noarch   Requires: rhevm-notification-service = 3.2.3-0.43.el6ev<BR>
-{{BZ|1013654}}Fencing flow fails to get to secondary PM (primary is deliberately configured with wrong params)<BR>
-{{BZ|1014030}}The $action and the $type aren't set in the change cd command.<BR>
-{{BZ|1014696}}optimize scheduling for speed<BR>
-{{BZ|1014697}}Scheduling: allow overbooking resources<BR>
-{{BZ|1016118}}async between masterVersion : can't connect to StoragePool<BR>
-{{BZ|1017267}}Plaintext user passwords in async_tasks database<BR>
-{{BZ|1018201}}CPU pinning option is not available for the VMs running on "Local on Host" type DataCenter.<BR>
-{{BZ|1023316}}engine-setup incorrectly directs users to use firewall-cmd on RHEL when it's only available on Fedora<BR>
-{{BZ|1024707}}engine-setup after 'engine-backup --mode=restore' does not fix everything<BR>
-{{BZ|1025869}}[RHSC][scale-test] Create Volume Results In "Error while executing action"<BR>
-{{BZ|1028768}}[engine-backend] LSM fails due to another operation (attaching the disk snapshot to another VM), which was started after it and managed to take the lock on the disk<BR>
-{{BZ|1029020}}[ovirt-setup] engine-setup does not configure firewall properly on upgrade<BR>
-{{BZ|1031353}}CpuOverCommitDuration not working correctly in cluster policies<BR>
-{{BZ|1031366}}Incorrect error message when trying to import network with invalid name from network provider<BR>
-{{BZ|1031371}}NPE: CanDoActionFailure - Import a vm that has memory state snapshot<BR>
-{{BZ|1031558}}Trying to add VNIC profile from "Edit Logical Network" window fails with error message<BR>
-{{BZ|1031577}}It is possible to create several VNIC profile with the same name for the specific network<BR>
-{{BZ|1031925}}[REST-API] XSD schema validation error: 'vnic_profile': Missing child element(s)<BR>
-{{BZ|1031960}}[REST-API] XSD schema validation error: Element 'payload': Missing child element(s).<BR>
-{{BZ|1032745}}[upgrade] upgrade 3.2 => 3.3 failed - password authentication failed for user "rhevm"<BR>
-{{BZ|1033932}}VM stays locked, in being migrated state, even after migration failed.<BR>
-{{BZ|1034201}}Issues during database cleanup after upgrade<BR>
-{{BZ|1034797}}[RHEVM] setup should be more tolerant detecting available memory<BR>
-{{BZ|1034929}}Upgrade fails if postgres owned temporary table exists in engine database<BR>
-{{BZ|1035453}}limitation for maximum VirtIO-SCSI disks should be removed<BR>
-{{BZ|1035622}}[scale-test] Create Volume Results In "Error while executing action"<BR>
-{{BZ|1035997}}Path to image under glance storage domain not correct<BR>
-{{BZ|1037894}}rhevm-manage-domains fails to update ldapServers entries when using action=edit<BR>
-{{BZ|1039103}}[RHEVM][backend] cannot add vNIC with custom MAC address to VM if there is no adresses left in MAC Address Pool.<BR>
-{{BZ|1039275}}Spelling correction<BR>
-{{BZ|1039507}}[Admin Portal] [java.lang.NullPointerException] No msg/event when prestarted pooled VM cannot be started because of low memory<BR>
-{{BZ|1039900}}Pending memory is not decremented during VM migration<BR>
-{{BZ|1040460}}Even distribution policy selects the same host where there is no CPU load on the host<BR>
-{{BZ|1040875}}Power Managment with cisco_ucs problem<BR>
-{{BZ|1042872}}NIC selection shows but it is not part of VM creation.<BR>
-{{BZ|1043386}}An attempt to create a vnic profile is made each time a vm network is being updated<BR>
-{{BZ|1043397}}RPM packages built without .pyc/.pyo files<BR>
-{{BZ|1043398}}Webadmin & User Portal: set secure-channels property in .vv files<BR>
-{{BZ|1045079}}[RHEVM] user is not forced to unplug vNIC when switching to profile without port mirroring<BR>
-{{BZ|1045471}}Cannot add hypervisor host when use chinese support<BR>
-{{BZ|1046000}}[RHEV-RHS] Disable 'rebalance' from RHEVM UI, as its partial in implementation<BR>
-{{BZ|1046031}}[engine-backend] guest alignment scan fails on file storage<BR>
-{{BZ|1046336}}[REST-API] misleading error message, for moving hosts between clusters<BR>
-{{BZ|1047163}}[engine-backend] deadlock in postgres during multiple AddVmFromTemplate threads<BR>
-{{BZ|1049343}}[oVirt] Disabled Balloon in Add Vm<BR>
-{{BZ|1049622}}Rollback of setup seems to remove several configuration files when upgrade is ran again setup will prompt for hostname and other data<BR>
-{{BZ|1049654}}upgrade from 3.2 with remote db user 'postgres' is not recognized as an upgrade<BR>
-{{BZ|1051890}}Storage and dc are up although there is no host<BR>
+{{BZ|957602}} - [RHEVM-RHS] Remove rebalance and replace-brick actions from REST API<BR>
+{{BZ|961693}} - [es_ES] change spanish translation for "poweroff", at the moment it is the same word "apagar"<BR>
+{{BZ|968178}} - [RHEVM-RHS] Should check for gluster capabilities when moving host from virt to gluster cluster<BR>
+{{BZ|968511}} - (PENDING RC BUILD) PRD33 - set marketplace link/icon<BR>
+{{BZ|987999}} - [oVirt] [provider] Add button shouldn't appear on specific provider<BR>
+{{BZ|990572}} - cloud-init integration - REST API<BR>
+{{BZ|1003796}} - [rhevm] Webadmin - Events - Search box with value "Events: Templates =*" gives error (Exception message is StatementCallback)<BR>
+{{BZ|1005832}} - [GlusterFS] Default option on GlusterFS Data Center in Storage Type is ISO/ POSIX compliant FS<BR>
+{{BZ|1008146}} - When run multiple vms then filter don't check correctly free resources.<BR>
+{{BZ|1011087}} - [RHEVM] cannot upgrade RHEVM 3.2 to RHEVM 3.3 because of rhevm-tools-3.3.0-0.22.master.el6ev.noarch   Requires: rhevm-notification-service = 3.2.3-0.43.el6ev<BR>
+{{BZ|1013654}} - Fencing flow fails to get to secondary PM (primary is deliberately configured with wrong params)<BR>
+{{BZ|1014030}} - The $action and the $type aren't set in the change cd command.<BR>
+{{BZ|1014696}} - optimize scheduling for speed<BR>
+{{BZ|1014697}} - Scheduling: allow overbooking resources<BR>
+{{BZ|1016118}} - async between masterVersion : can't connect to StoragePool<BR>
+{{BZ|1017267}} - Plaintext user passwords in async_tasks database<BR>
+{{BZ|1018201}} - CPU pinning option is not available for the VMs running on "Local on Host" type DataCenter.<BR>
+{{BZ|1023316}} - engine-setup incorrectly directs users to use firewall-cmd on RHEL when it's only available on Fedora<BR>
+{{BZ|1024707}} - engine-setup after 'engine-backup --mode=restore' does not fix everything<BR>
+{{BZ|1025869}} - [RHSC][scale-test] Create Volume Results In "Error while executing action"<BR>
+{{BZ|1028768}} - [engine-backend] LSM fails due to another operation (attaching the disk snapshot to another VM), which was started after it and managed to take the lock on the disk<BR>
+{{BZ|1029020}} - [ovirt-setup] engine-setup does not configure firewall properly on upgrade<BR>
+{{BZ|1031353}} - CpuOverCommitDuration not working correctly in cluster policies<BR>
+{{BZ|1031366}} - Incorrect error message when trying to import network with invalid name from network provider<BR>
+{{BZ|1031371}} - NPE: CanDoActionFailure - Import a vm that has memory state snapshot<BR>
+{{BZ|1031558}} - Trying to add VNIC profile from "Edit Logical Network" window fails with error message<BR>
+{{BZ|1031577}} - It is possible to create several VNIC profile with the same name for the specific network<BR>
+{{BZ|1031925}} - [REST-API] XSD schema validation error: 'vnic_profile': Missing child element(s)<BR>
+{{BZ|1031960}} - [REST-API] XSD schema validation error: Element 'payload': Missing child element(s).<BR>
+{{BZ|1032745}} - [upgrade] upgrade 3.2 => 3.3 failed - password authentication failed for user "rhevm"<BR>
+{{BZ|1033932}} - VM stays locked, in being migrated state, even after migration failed.<BR>
+{{BZ|1034201}} - Issues during database cleanup after upgrade<BR>
+{{BZ|1034797}} - [RHEVM] setup should be more tolerant detecting available memory<BR>
+{{BZ|1034929}} - Upgrade fails if postgres owned temporary table exists in engine database<BR>
+{{BZ|1035453}} - limitation for maximum VirtIO-SCSI disks should be removed<BR>
+{{BZ|1035622}} - [scale-test] Create Volume Results In "Error while executing action"<BR>
+{{BZ|1035997}} - Path to image under glance storage domain not correct<BR>
+{{BZ|1037894}} - rhevm-manage-domains fails to update ldapServers entries when using action=edit<BR>
+{{BZ|1039103}} - [RHEVM][backend] cannot add vNIC with custom MAC address to VM if there is no adresses left in MAC Address Pool.<BR>
+{{BZ|1039275}} - Spelling correction<BR>
+{{BZ|1039507}} - [Admin Portal] [java.lang.NullPointerException] No msg/event when prestarted pooled VM cannot be started because of low memory<BR>
+{{BZ|1039900}} - Pending memory is not decremented during VM migration<BR>
+{{BZ|1040460}} - Even distribution policy selects the same host where there is no CPU load on the host<BR>
+{{BZ|1040875}} - Power Managment with cisco_ucs problem<BR>
+{{BZ|1042872}} - NIC selection shows but it is not part of VM creation.<BR>
+{{BZ|1043386}} - An attempt to create a vnic profile is made each time a vm network is being updated<BR>
+{{BZ|1043397}} - RPM packages built without .pyc/.pyo files<BR>
+{{BZ|1043398}} - Webadmin & User Portal: set secure-channels property in .vv files<BR>
+{{BZ|1045079}} - [RHEVM] user is not forced to unplug vNIC when switching to profile without port mirroring<BR>
+{{BZ|1045471}} - Cannot add hypervisor host when use chinese support<BR>
+{{BZ|1046000}} - [RHEV-RHS] Disable 'rebalance' from RHEVM UI, as its partial in implementation<BR>
+{{BZ|1046031}} - [engine-backend] guest alignment scan fails on file storage<BR>
+{{BZ|1046336}} - [REST-API] misleading error message, for moving hosts between clusters<BR>
+{{BZ|1047163}} - [engine-backend] deadlock in postgres during multiple AddVmFromTemplate threads<BR>
+{{BZ|1049343}} - [oVirt] Disabled Balloon in Add Vm<BR>
+{{BZ|1049622}} - Rollback of setup seems to remove several configuration files when upgrade is ran again setup will prompt for hostname and other data<BR>
+{{BZ|1049654}} - upgrade from 3.2 with remote db user 'postgres' is not recognized as an upgrade<BR>
+{{BZ|1051890}} - Storage and dc are up although there is no host<BR>
 
 ==VDSM==
 
