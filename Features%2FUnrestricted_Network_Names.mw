@@ -42,7 +42,7 @@ where <tt>XXXXXXXXXXXXX</tt> are 13 hexadecimal characters extracted from the UU
 On upgrade, the "name" of existing networks would be copied into they "visible_name". REST-based scripts and GUI users would not see a difference. However, they could now edit visible_name with no Linux-based limitations.
 
 === Alternative ===
-Instead of adding visible_name and changing REST/UI to expose it, we could add "vdsm_name" and lift current restrictions from "name". This would requiring renaming name validation, VM startup, and network monitoring code.
+Instead of adding visible_name and changing REST/UI to expose it, we could add "vdsm_name" and lift current restrictions from "name". This may require renaming the field in name validation, VM startup, and network monitoring code.
 
 === UI considerations ===
 The user interface currently takes advantage of the narrow name field for networks. Once we lift the restrictions, and allow names in languages such a Japanese which commonly requires wide text columns, we would have to make some UI adjustments. Possible tricks are: tooltip showing the complete name, adjustable tables, in-UI limitation on name lengths.
