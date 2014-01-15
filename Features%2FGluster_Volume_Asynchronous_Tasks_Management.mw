@@ -1,3 +1,4 @@
+{{Feature|name=Gluster tasks management|modules=engine,gluster|version=3.4|status=In Progress}}
 ==Summary==
 This feature provide the support for managing the asynchronous tasks on Gluster volumes.
 
