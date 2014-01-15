@@ -4,9 +4,11 @@
 <startfeed/>
 </noinclude>
 
-{{Event|name=[//http://www.haifux.org/ Haifux Linux Club]|date=December 23, 2013|location=Technion Computer Science Department, Haifa, Israel|lead=Orit Wasserman will give an overview of how embedded virtualization works, titled [//www.haifux.org/lectures/314/ Nested Virtualization: Shadow Turtles] on Monday 23th of December 2013. Details are [//www.haifux.org/ on the club website].}}
+{{Event|name=[//lanyrd.com/2014/lcs2014/ London Cloud Summit]|date=January 29, 2014|location=London, United Kingdom|lead=What's the "state of cloud" in early 2014? A gathering of industry experts and practitioners to give their take on the state of private and public cloud, IaaS and PaaS platforms, and where the industry is going in 2014 and beyond. }}
 
-{{Event|name=[//fosdem.org/2014/ FOSDEM 2014]|date=February 1 - 2, 2014|location=Brussels, Belgium|lead=FOSDEM is a free event that offers open source communities a place to meet, share ideas and collaborate.   CFP is now open.  Deadlines:  Oct 1 for main track proposals, Nov 20 for stands and lightning talks. }}
+{{Event|name=[//fosdem.org/2014/ FOSDEM 2014]|date=February 1 - 2, 2014|location=Brussels, Belgium|lead=FOSDEM is a free event that offers open source communities a place to meet, share ideas and collaborate.   Join oVirt at our stand at Auditoire SK1.101! }}
+
+{{Event|name=[//lanyrd.com/2014/infranext/ Infrastructure.Next Ghent]|date=February 5, 2014|location=Ghent, Belgium|lead=Infrastructure.Next is a new series of events that will highlight cloud, virtualization, and enterprise tools and show the future of the data center. }}
 
 <noinclude>
 <endfeed/>
