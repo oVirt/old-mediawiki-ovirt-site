@@ -1,3 +1,4 @@
+{{Feature|name=Import cluster|modules=engine,gluster|version=3.2|status=Released}}
 ==Summary==
 This allows the user to import an existing gluster supported cluster to engine. All the hosts part of the cluster will be imported. 
 
@@ -29,7 +30,7 @@ The '''Import existing cluster configuration''' section will be shown only if th
 The list of hosts which are part of the cluster will be shown. The '''Name''' column for each host will have the same values as the '''Hostname/IP''' column, the user can change the name of the host. The user needs to enter the '''Password''' for all the hosts shown in the table. If the passwords for all the hosts are same, the user can select '''Use a common password''', enter the '''Root Password''' and click on '''Apply'''. The same password will be assigned for all the hosts. The user needs to verify the '''Fingerprint''' of all the hosts before submitting the details. If the passwords provided for the hosts are correct, the hosts will be added to the engine and available under the '''Hosts''' tab. The normal '''Add Host''' flow of bootstrapping, restart,etc continues from here onwards. As the newly imported hosts will not have '''vdsm''' installed, the bootstrap script will install all the necessary vdsm packages on the hosts.
 
 == User Work flow ==
-#Click on '''New''' in Clsuter Main Tab, the Create Cluster dialog opens
+#Click on '''New''' in Cluster Main Tab, the Create Cluster dialog opens
 #Select '''Enable Gluster Service''' and '''Import existing gluster configuration''' checkboxes.
 #Enter the IP Address/Host name of any server in the cluster
 #Wait for the '''Fingerprint''' to load, and make sure we are communicating with the correct host
