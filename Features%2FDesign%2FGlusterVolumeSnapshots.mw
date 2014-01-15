@@ -1,3 +1,5 @@
+{{Feature|name=Gluster Volume Snapshot|modules=engine|version=3.5|status=Not Started}}
+
 == Summary ==
 This document describes the design for the volume snapshot feature under Gluster. GlusterFS provides crash recoverability for the vloumes through snapshot feature and RHS-C needs to provide a web based mechanism to achieve the same feature.
 
