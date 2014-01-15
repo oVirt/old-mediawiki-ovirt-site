@@ -3,7 +3,7 @@
 {{Feature|name=Gluster Volume Snapshot|modules=engine|version=3.5|status=Not Started}}
 
 ==Summary==
-This feature allows the administrators to maintain the snapshots of a Gluster volume. Administrator can create, start, stop, delete and restore to a given snapshot. Gluster volume snapshot provides an online crash consistency mechanism for the Gluster volumes. The volume snaps provide a point in time view of the volume. In a case of inconsistency, these snaps could be used to restore the volume to a consistent stage. The snaps are also a mechanism of volume backup for future references.
+This feature allows the administrators to maintain the snapshots of a Gluster volume. Administrator can create, list, delete and restore to a given snapshot. Gluster volume snapshot provides an online crash consistency mechanism for the Gluster volumes. The volume snapshots provide a point in time view of the volume. In a case of inconsistency, these snapshots could be used to restore the volume to a consistent stage. The snapshots are also a mechanism of volume backup for future references.
 
 Using this feature, an admin can take scheduled or unscheduled snapshots of and thereby backup a Gluster volume. This also provides a check-point in time to restore to, if and when necessary.
 
@@ -22,23 +22,17 @@ To read more about Gluster volume snapshot feature, see https://forge.gluster.or
 * Last updated date: Thu Dec 26 2013
 
 == Detailed Description ==
-An online snapshot is a feature where the file-system and associated data continue to be available for the clients, while the snapshot is being taken. Here the onus lies on the application to periodically sync data, so that the snap created has the desired data consistent view.
+An on-line snapshot is a feature where the file-system and associated data continue to be available for the clients, while the snapshot is being taken. Here the onus lies on the application to periodically sync data, so that the snapshot created has the desired data consistent view.
 
-On the other hand, an offline snapshot makes the file-system offline or unavailable for a deterministic time-window till the snapshot is taken. While offline snapshots are relatively easy to administer, the inaccessibility to the volume(s)/data is a major disadvantage.
-
-=== Consistency Group / Snapshot Group===
-Applications might consume multiple Gluster volumes and might require the resulting snapshot of these volumes to be from the same point in time view. This group of volumes forms a consistency group or snapshot group. The other scenario where a snapshot group is required could a scenario where application DB is maintained in one volume, logs in other volume and misc documents in other volume. If a volume belongs to a snapshot group, then that volume can only be snapped as part of the named snapshot group. Restore would also be permitted only on the snapshot group. Addition or removal of volumes to/from a snapshot group is allowed with certain restrictions.
-
+On the other hand, an off-line snapshot makes the file-system off-line or unavailable for a deterministic time-window till the snapshot is taken. While off-line snapshots are relatively easy to administer, the inaccessibility to the volume(s)/data is a major disadvantage.
 
 With this feature the user will be able to
-* Create snapshot of a volumes
+* Take snapshot of a volume
 * View all the snapshots taken for a volume
 * Restore a volume to a given snapshot
-* Create snapshot of multiple volumes as a group
 * Delete an existing snapshot
-* Start / Stop a snapshot
 * View the current status of snapshot
-* Define the values for the snapshot configuration parameters
+* Define the values for the snapshot related configuration parameters for a volume
 * List view the snapshot configuration parameters
 
 == Design ==
@@ -46,14 +40,14 @@ With this feature the user will be able to
 === User Experience and control flows ===
 ==== Main tab "Volumes" ====
 A new action group "Volume Snapshot" would be introduced under actions for a volume as a drop down. The set of actions under this action group would be -
-* Create Snapshot
+* Take Snapshot
 * Restore
 
 [[File:VolumeList.png]]
 
-<big>1. Creating a snapshot</big>
+<big>1. Taking a snapshot</big>
 
-There are three scenarios for creation of snapshot
+There are three scenarios for taking a snapshot
 * User selects a volume from the volume list table which is part of a snapshot group and clicks the menu option "Volume Snapshot --> Create Snapshot". In this scenario first a confirmation dialog would be popped saying that volume is part of a snapshot group and does user want to continue.
 
 [[File:CreateCGSnapConfirmation.png]]
@@ -162,6 +156,8 @@ NA
 Refer the URL: http://www.ovirt.org/Features/Design/GlusterVolumeSnapshots for detailed design of the feature.
 
 == Dependencies / Related Features and Projects ==
+
+<<Volume creation has dependencies as they could be marked for snapshot creation later>>
 
 == Test Cases ==
 
