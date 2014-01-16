@@ -98,7 +98,7 @@ The relevant url is: api/templates
 Only the version name can be updated. 
 No update is supported for version section in 3.4 for base template id nor numbering.
 
-Example for editing:
+Example for editing a template's version name: (add the version part inside the template element in the request body)
 Relevant api is the same as updating a template : api/templates/<templateId>
 
  <version>
