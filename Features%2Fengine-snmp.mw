@@ -89,3 +89,28 @@ Using the default value for SNMP_OID (1.3.6.1.4.1.2312.13.1), traps will show up
 | STRING
 | Log time
 |-}
+
+=== Testing ===
+This section contains instructions on setting up an snmp manager capable of receiving traps.<br/>
+Tested under fedora 20 (please update if it worked for you on a different version).
+ 
+ # yum install -y net-snmp
+
+Edit the trap daemon configuration file, /etc/snmp/snmptrapd.conf:
+ # Example configuration file for snmptrapd
+ #
+ # No traps are handled by default, you must edit this file!
+ #
+ authCommunity   log,execute,net public
+ # traphandle SNMPv2-MIB::coldStart    /usr/bin/bin/my_great_script cold
+ [snmp]
+ logOption f /tmp/snmptrapd.log
+
+Start the service:
+ # service snmptrapd start
+
+Test service by sending a trap:
+ # yum install -y  net-snmp-utils
+ $ snmptrap -v 2c -c public localhost '' 1.2 SNMPv2-MIB::sysLocation.0 s "just here"
+
+Incoming traps should now be available in /tmp/snmptrapd.log
