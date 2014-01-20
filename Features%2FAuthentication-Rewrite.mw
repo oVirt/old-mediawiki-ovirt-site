@@ -48,6 +48,7 @@ The Authenticators have a mechanism to resolve error messages to allow oVirt Eng
 The associated Directory will be used to query the user by its name.
 The returned user information will be used to get the user information from the database, and run the MLA check if the login action is authorized.
 
+
 3.  Search users & groups
 
 Each  Directory should contain in its configuration the required information in order to perform a search of users.
