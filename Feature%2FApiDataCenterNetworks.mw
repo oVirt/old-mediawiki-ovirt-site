@@ -1,0 +1,35 @@
+<!-- {{autolang|base=yes}} -->
+
+<!-- The actual name of your feature page should look something like: "Your feature name". Use natural language to name the pages. -->
+
+== API Networks Subcollection Under Data Center ==
+
+{{Feature|name=Api Data Center Networks|modules=engine,api|version=3.4|status=ON_QA}}
+
+=== Summary ===
+
+"Api Data Center Networks" provides a way to add, delete, retrieve and update the networks attached to a data center using rest api.
+
+=== Owner ===
+
+* Name: [[User:RNori| Ravi Nori ]]
+* Email: rnori@redhat.com
+
+=== Current status ===
+
+* Currently merged (http://gerrit.ovirt.org/#/c/11707)
+
+=== Detailed Description ===
+
+Adds new api rest end points to retrieve and maniplutale the networks attached to a data center.
+
+The following are the list of new rest end points
+
+# List All Networks attached to a data center:  <pre>wget -O - --auth-no-challenge --http-user=admin@internal --http-passwd='<password>' head='Accept: application/xml' http://127.0.0.1:8080/api/datacenters/<data-center-id>/networks</pre>
+# List Details of a Network attached to a data center:  <pre>wget -O - --auth-no-challenge --http-user=admin@internal --http-passwd='<password>' head='Accept: application/xml' http://127.0.0.1:8080/api/datacenters/<data-center-id>/networks/<network-id></pre>
+# Add new network to Data Center:  <pre>curl -X POST --data '<network><name>test2</name></network>' -u admin@internal:<password> -H "Accept: application/xml" -H "Content-Type: application/xml" http://127.0.0.1:8080/api/datacenters/<data-center-id>/networks</pre>
+# Update a network attached to a data center: <pre>curl -X PUT --data '<network><name>test_update</name></network>' -u admin@internal:<password> -H "Accept: application/xml" -H "Content-Type: application/xml" http://127.0.0.1:8080/api/datacenters/<data-center-id>/networks/<network-id></pre>
+# Delete a network attached to a datacenter: <pre>curl -X DELETE -u admin@internal:<passwd> -H "Accept: application/xml" -H "Content-Type: application/xml" http://127.0.0.1:8080/api/datacenters/<data-center-id>/networks/<network-id></pre>
+
+[[Category:Feature]]
+[[Category:Template]]
