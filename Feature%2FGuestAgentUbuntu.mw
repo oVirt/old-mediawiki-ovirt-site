@@ -20,6 +20,7 @@ Packaging the ovirt-guest-agent for Ubuntu
 
 === Detailed Description ===
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
+This feature should provide ovirt-guest-agent packages for Ubuntu
 
 === Benefit to oVirt ===
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
