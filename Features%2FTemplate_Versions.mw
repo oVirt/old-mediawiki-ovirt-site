@@ -107,7 +107,7 @@ Relevant api is the same as updating a template : api/templates/<templateId>
 
 '''VMs usecase'''
 
-template  field continues to be reused and will contain version details where applicable. <b>
+template  field continues to be reused and will contain version details where applicable. <br>
 VM will have a new useLatestTemplateVersion boolean property that is relevant for stateless VMs. User will be able to pass it when
 creating or updating a VM. If user will try to create a new stateful VM with this property set to true, an error will be returned. <br>
 When doing GET, this property will be propagated from backend, set to 'false' for stateful VMs.<br>
