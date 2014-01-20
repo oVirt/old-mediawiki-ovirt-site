@@ -17,7 +17,8 @@ The Provisional directory gets the required configuration from the oVirt databas
 * Email: <jhernand@redhat.com>
 ===Current status===
 * status: Phase 1 - done. Phase 2 - in progress
-* Last updated: {{January} {{19}}, {{2014}}
+* Last updated:  January 19, 2014
+
 ==Benefits to oVirt==
 * Allows to introduce new types of Authenticators(not just password based)  and Directories - not necessarily Kerberos based and LDAP based.
 * Allows change of configuration to support new LDAP prvoiders or changes in LDAP schema (no code change is required).
