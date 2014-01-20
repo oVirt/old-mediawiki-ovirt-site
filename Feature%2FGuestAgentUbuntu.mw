@@ -33,6 +33,8 @@ It'll be easier to install the ovirt-guest-agent on Ubuntu guests.
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
 The ovirt-guest-agent for Ubuntu is available here: https://launchpad.net/~zhshzhou/+archive/vdsm-ubuntu
 
+NOTE: The single sign on feature is not available for Ubuntu.
+
 === Testing ===
 
 <!-- Explain how this feature may be tested by a user or a quality engineer. List relevant use cases and expected results. -->
