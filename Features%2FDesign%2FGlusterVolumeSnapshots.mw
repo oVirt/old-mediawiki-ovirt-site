@@ -70,6 +70,8 @@ The Gluster volume snapshot details would be periodically fetched and updated in
 * <big>RestoreGlusterVolumeSnapshot</big> - restore a given volume to a snapshot
 * <big>RemoveGlusterVolumeSnapshot</big> - removes the given snapshot
 * <big>UpdateGlusterVolumeSnapshotConfig</big> - sets the configuration values for a given volume
+* <big>ActivateGlusterVolumeSnapshot</big> - activates the snapshot for further activities
+* <big>DeactivateGlusterVolumeSnapshot</big> - deactivates an already activated snapshot
 
 === Engine Queries ===
 * <big>GetGlusterVolumeSnapshotsByVolumeId</big> - lists all the snapshot for a given volume
