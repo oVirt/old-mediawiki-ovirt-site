@@ -55,6 +55,8 @@ If user selects a volume from the list and click the menu option "Snapshot", a d
 This sub-tab under the main tab "Volumes" lists the snapshots created for individual volumes. The set of supported actions are -
 * Restore
 * Remove
+* Activate
+* De-activate
 * Configure
 
 [[File:VolumeSnapsList.png]]
