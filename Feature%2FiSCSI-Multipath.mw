@@ -26,8 +26,6 @@ with that configuration the user can configure the Hosts to connect to the iSCSI
 
 === API ===
 
-==== Installation using answer file ====
-
 === Comments and Discussion ===
 
 * Refer to [[Talk: iSCSIMultiPath ]] 
