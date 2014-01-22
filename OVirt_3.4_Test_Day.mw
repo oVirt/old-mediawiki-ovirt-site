@@ -33,13 +33,804 @@
 
 ===Known issues===
 
-==oVirt 3.4 New Features==
+==oVirt 3.4 New Features  - Test Status Table==
+Please report test results on the [http://etherpad.ovirt.org/p/3.4-testday-1 report etherpad] or on the table below.
 
-You can find a list of the new features and a link to features page here: http://bit.ly/17qBn6F
-
-Refer to single feature pages in order to know what and how to test them.
-
-Please report test results on the [http://etherpad.ovirt.org/p/3.4-testday-1 report etherpad]
+{| class="wikitable" border="1"
+|-
+  ! Functional team
+  ! Feature
+  ! Owner
+  ! Dev - Status
+  ! Test page
+  ! Tested By/ Distro
+  ! BZs
+  ! remarks
+|-
+  | General
+  | ovirt-live 3.4 (testing)
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+|-
+  | General
+  | upgrade from 3.3 (testing)
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+|-
+  | General
+  | ovirt-all-in-one (testing)
+  | 
+  | 
+  | 
+  | 
+  | 
+  | 
+|-
+  | Gluster
+  | [[Features/Gluster Volume Asynchronous Tasks Management|Volume Asynchronous Tasks Management]]
+  | [[User:Sahina| Sahina Bose]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1040791}}
+  | 
+|-
+  | Infra
+  | [[Features/engine-snmp|snmp & snmp trap monitoring (will do only snmp trap as notification)]]
+  | [[User:mtayer|Mooli Tayer]]
+  | style="background-color: orange;" | Orange - Work in Progress
+  | http://www.ovirt.org/Features/engine-snmp#Testing
+  | 
+  | {{BZ|1032661}}
+  | 
+|-
+  | Infra
+  | Authentication Refactoring
+  | [[User:juan| Juan Hernandez]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1032682}}
+  | 
+|-
+  | Infra
+  | Add fence_hpblade as a Fence Agent
+  | [[User:emesika | Eli Mesika]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1032655}}
+  | 
+|-
+  | Infra
+  | Allow to provide a password change URL on login failure when password expires
+  | [[User:juan| Juan Hernandez]]
+  | style="background-color: orange;" | Orange - Work in Progress
+  | 
+  | 
+  | {{BZ|1053601}}
+  | 
+|-
+  | Infra
+  | DWH: Add trigger to stop ETL connection via engine dB value
+  | [[User:ydary| Yaniv Dary]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1023754}}
+  | 
+|-
+  | Infra
+  | Read only Admin role in AP
+  | [[User:ovedo| Oved Ourfalli]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1038222}}
+  | 
+|-
+  | Infra
+  | [RFE] Add new event notifiers for VM_DOWN_ERROR and VDS_INITIATED_RUN_VM_FAIL
+  | [[User:Aglitke| Adam Litke]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1042829}}
+  | 
+|-
+  | Infra
+  | Add JSON support to REST API
+  | [[User:juan| Juan Hernandez]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1053109}}
+  | 
+|-
+  | Infra
+  | Add drac7 fence agent support
+  | [[User:emesika | Eli Mesika]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1034642}}
+  | 
+|-
+  | Infra
+  | collect the "created_by" field of a VM into it's configuration history
+  | [[User:ydary| Yaniv Dary]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1052383}}
+  | 
+|-
+  | Infra
+  | engine-notifier to support STARTTLS
+  | [[User:mperina| Martin Perina]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1045347}}
+  | 
+|-
+  | integration
+  | ovirt-engine URI rework
+  | [[User:Alonbl|Alon Bar-Lev]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|961677}}
+  | 
+|-
+  | integration
+  | [[Feature/oVirtAppliance|virtual appliance image/rpm for ovirt]]
+  | [[User:obasan| Ohad Basan ]]
+  | style="background-color: orange;" | Orange - Work in Progress
+  | 
+  | 
+  | {{BZ|1053435}}
+  | 
+|-
+  | integration
+  | DWH - migrate setup to otopi
+  | [[User:SandroBonazzola| Sandro Bonazzola]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|967350}}
+  | 
+|-
+  | integration
+  | [REQUESTING EXCEPTION] reports - migrate setup to otopi
+  | [[User:SandroBonazzola| Sandro Bonazzola]]
+  | style="background-color: orange;" | Orange - Work in Progress
+  | 
+  | 
+  | {{BZ|967351}}
+  | 
+|-
+  | integration
+  | [REQUESTING EXCEPTION] reports - add support for Centos el6 arch
+  | [[User:SandroBonazzola| Sandro Bonazzola]]
+  | style="background-color: orange;" | Orange - Work in Progress
+  | 
+  | 
+  | {{BZ|1023752}}
+  | 
+|-
+  | network
+  | [[Feature/Predictable vNIC Order|nic ordering]]
+  | [[User:ovedo| Oved Ourfalli]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1040630}}
+  | 
+|-
+  | network
+  | [[Features/Detailed OSN Integration|Neutron integration - security group support]]
+  | [[User:Mkolesni| Mike Kolesnik]]
+  | style="background-color: yellow;" | Partial (migration missing)
+  | 
+  | 
+  | {{BZ|1043220}}
+  | 
+|-
+  | network
+  | [[Features/Detailed OSN Integration|Neutron integration - security group support]]
+  | [[User:Mkolesni| Mike Kolesnik]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1048738}}
+  | 
+|-
+  | network
+  | [[Features/Detailed OSN Integration|Neutron integration - remove external networks]]
+  | [[User:Mkolesni| Mike Kolesnik]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1048740}}
+  | 
+|-
+  | network
+  | [[Features/Detailed Host Network QoS|Network level QoS]]
+  | [[User:lvernia| Lior Vernia]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1043230}}
+  | 
+|-
+  | network
+  | [[Feature/NetworkReloaded|stabilize iproute2 configurator]]
+  | [[User:APuimedo| Antoni Segura Puimedon]]
+  | style="background-color: yellow;" | Partial implementation
+  | 
+  | 
+  | {{BZ|1044479}}
+  | 
+|-
+  | network
+  | [[Features/MultiHostNetworkConfiguration|Multi-Host Network Configuration]]
+  | [[User:masayag| Moti Asayag]]
+  | style="background-color: lightgreen;" | Green
+  | http://www.ovirt.org/Features/MultiHostNetworkConfiguration#Testing
+  | 
+  | {{BZ|1040580}}
+  | 
+|-
+  | network
+  | [[Features/NetworkLabels|Network Labels]]
+  | [[User:masayag| Moti Asayag]]
+  | style="background-color: lightgreen;" | Green
+  | http://www.ovirt.org/Features/NetworkLabels#Testing
+  | 
+  | {{BZ|1040586}}
+  | 
+|-
+  | ppc
+  | [[Features/Engine support for PPC64|Architecture support when importing/exporting VM and Templates]]
+  | [[User:lbianco| Leonardo Bianconi]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1053715}}
+  | 
+|-
+  | ppc
+  | [[Features/Engine support for PPC64|Ability to specify architecture in the OSInfo file]]
+  | [[User:lbianco| Leonardo Bianconi]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1053715}}
+  | 
+|-
+  | ppc
+  | [[Features/Engine support for PPC64|Ability to specify supported video cards and display protocols in the OSInfo file]]
+  | [[User:lbianco| Leonardo Bianconi]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1053715}}
+  | 
+|-
+  | ppc
+  | [[Features/Engine support for PPC64|Ability to specify watch dog in the OSInfo file]]
+  | [[User:gpedrosa| Gustavo Pedrosa]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1053715}}
+  | 
+|-
+  | ppc
+  | [[Features/Engine support for PPC64|Ability to specify hotplug of nic and disk in the OSInfo file]]
+  | [[User:gpedrosa| Gustavo Pedrosa]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1053715}}
+  | 
+|-
+  | ppc
+  | [[Features/Engine support for PPC64|Ability to search by architecture]]
+  | [[User:vdelima| Vitor de Lima]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1053715}}
+  | 
+|-
+  | ppc
+  | [[Features/Engine support for PPC64|Create Cluster, VM and Templates for PPC64]]
+  | [[User:lbianco| Leonardo Bianconi]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1053728}}
+  | 
+|-
+  | ppc
+  | [[Features/Engine support for PPC64|Add PPC64 Hosts]]
+  | [[User:vdelima| Vitor de Lima]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1053728}}
+  | 
+|-
+  | ppc
+  | [[Features/Engine support for PPC64|Support for sPAPR VLAN and sPAPR VSCSI]]
+  | [[User:vdelima| Vitor de Lima]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1053728}}
+  | 
+|-
+  | ppc
+  | [[Features/Vdsm for PPC64|Run fake power hosts]]
+  | [[User:vdelima| Vitor de Lima]]
+  | style="background-color: lightgreen;" | Green
+  | http://www.ovirt.org/Features/Vdsm_for_PPC64#Testing_the_PPC64_support
+  | 
+  | {{BZ|1053728}}
+  | 
+|-
+  | ppc
+  | [[Features/Vdsm for PPC64|Ability to run power machines on x86 hosts]]
+  | [[User:vdelima| Vitor de Lima]]
+  | style="background-color: lightgreen;" | Green
+  | http://www.ovirt.org/Features/Vdsm_for_PPC64#Testing_the_PPC64_support
+  | 
+  | {{BZ|1053728}}
+  | 
+|-
+  | ppc
+  | [[Features/Vdsm for PPC64|Obtain capabilities of PPC64 hosts]]
+  | [[User:vdelima| Vitor de Lima]]
+  | style="background-color: lightgreen;" | Green
+  | http://www.ovirt.org/Features/Vdsm_for_PPC64#Testing_the_PPC64_support
+  | 
+  | {{BZ|1053728}}
+  | 
+|-
+  | ppc
+  | [[Features/Vdsm for PPC64|Obtain the CPU topology of PPC64 hosts]]
+  | [[User:lbianco| Leonardo Bianconi]]
+  | style="background-color: lightgreen;" | Green
+  | http://www.ovirt.org/Features/Vdsm_for_PPC64#Testing_the_PPC64_support
+  | 
+  | {{BZ|1053728}}
+  | 
+|-
+  | ppc
+  | [[Features/Engine support for PPC64|Block migration in ppc64 Vms]]
+  | [[User:vdelima| Vitor de Lima]]
+  | style="background-color: orange;" | Under review
+  | 
+  | 
+  | {{BZ|1053728}}
+  | 
+|-
+  | ppc
+  | [[Features/Engine support for PPC64|Block memory snapshots in ppc64 Vms]]
+  | [[User:lbianco| Leonardo Bianconi]]
+  | style="background-color: orange;" | Under review
+  | 
+  | 
+  | {{BZ|1053728}}
+  | 
+|-
+  | sla
+  | [[Features/VM-Affinity|positive/negative affinity between group of Vms]]
+  | [[User:gchaplik| Gilad Chaplik]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1036638}}
+  | 
+|-
+  | sla
+  | [[Features/HostPowerManagementPolicy|power saving policy powering off machines]]
+  | [[User:msivak| Martin Sivák]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1035238}}
+  | 
+|-
+  | sla
+  | High Availability flag should be included when exporting/importing from Export Domain
+  | [[User:jmoskovc| Jiri Moskovcak]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1036746}}
+  | 
+|-
+  | sla
+  | [[Features/Even VM Count Distribution|Even Distribution Policy by number of Vms]]
+  | [[User:jmoskovc| Jiri Moskovcak]]
+  | style="background-color: lightgreen;" | Green
+  | http://www.ovirt.org/Features/Even_VM_Count_Distribution#Testing
+  | 
+  | {{BZ|1036749}}
+  | 
+|-
+  | sla
+  | [[Features/HA VM reservation|Make reservations for HA VMs to make sure there's enough capacity to start them if N hosts fail]]
+  | [[User:kianku|Kobi Ianko]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1036753}}
+  | 
+|-
+  | sla
+  | ovirt node support for hosted engine nodes
+  | 
+  | style="background-color: orange;" | Best effort, may slip
+  | 
+  | 
+  | {{BZ|1038616}}
+  | 
+|-
+  | sla
+  | hosted engine on san
+  | [[User:gpadgett| Greg Padgette]]
+  | style="background-color: orange;" | Best effort, may slip
+  | 
+  | 
+  | {{BZ|1036731}}
+  | 
+|-
+  | sla
+  | [[Features/Self Hosted Engine Maintenance Flows|Unify maintenance path of hosted engine with host maintenance]]
+  | [[User:gpadgett| Greg Padgette]]
+  | style="background-color: yellow;" | code
+  | 
+  | 
+  | {{BZ|1047649}}
+  | 
+|-
+  | sla
+  | [[Hosted Engine Howto|hosted engine on nfs]]
+  | [[User:gpadgett| Greg Padgette]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1055481}}
+  | 
+|-
+  | storage
+  | [[Features/Read Only Disk|read only disks]]
+  | [[User:sgotliv| Sergey Gotliv]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1054209}}
+  | 
+|-
+  | storage
+  | [[Features/Single Disk Snapshot|single disk snapshots]]
+  | [[User:Derez| Daniel Erez]]
+  | style="background-color: lightgreen;" | Green
+  | http://www.ovirt.org/Features/Single_Disk_Snapshot#Testing
+  | 
+  | {{BZ|1054219}}
+  | 
+|-
+  | storage
+  | Adding Disk to a VM which is not down adds a Disk that is not activated
+  | [[User:tal|Tal Nisan]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1047273}}
+  | 
+|-
+  | storage
+  | [RFE] Handle iSCSI storage domain lun resize
+  | [[User:Derez| Daniel Erez]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|961532}}
+  | 
+|-
+  | storage
+  | viable, ever-working vdsm functional tests
+  | [[User:vvolansk|Vered Volansky]]
+  | style="background-color: orange;" | coding (90% complete)
+  | 
+  | 
+  | 
+  | 
+|-
+  | storage
+  | [REQUESTING EXCEPTION] [stretch] multiple storage domains (local/shared)
+  | [[User:tal|Tal Nisan]]
+  | style="background-color: orange;" | merged upstream
+  | 
+  | 
+  | {{BZ|1038053}}
+  | 
+|-
+  | storage
+  | [[Features/Backup-Restore API Integration|backup and restore api]]
+  | [[User:laravot|Liron Aravot]]
+  | style="background-color: lightgreen;" | Green (3.3.2)
+  | 
+  | 
+  | {{BZ|1054231}}
+  | 
+|-
+  | storage
+  | iSCSI EqualLogic SAN support or use standard iscsi tools/configuration
+  | [[User:sgotliv| Sergey Gotliv]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|953343}}
+  | 
+|-
+  | storage
+  | Store OVF on any domains
+  | [[User:laravot|Liron Aravot]]
+  | style="background-color: orange;" | code review (90% complete)
+  | 
+  | 
+  | {{BZ|1054241}}
+  | 
+|-
+  | storage
+  | [[Features/StoragePool Metadata Removal|Get rid of storage pool metadata on master storage domain]]
+  | [[User:Fsimonce| Federico Simoncelli]]
+  | style="background-color: orange;" | code review (90% complete)
+  | http://www.ovirt.org/Features/StoragePool_Metadata_Removal#Testing
+  | 
+  | {{BZ|1055640}}
+  | 
+|-
+  | storage
+  | allow importing glance image as a template
+  | [[User:ovedo| Oved Ourfalli]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1053544}}
+  | 
+|-
+  | ux
+  | [[Features/Design/UIRefreshSynchronization|centralizing refresh logic]]
+  | [[User:awels|Alexander Wels]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1049996}}
+  | 
+|-
+  | ux
+  | case insensitive search
+  | [[User:ovedo| Oved Ourfalli]] (?)
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1035309}}
+  | 
+|-
+  | ux
+  | [[Features/Design/LowerResolutionSupport|webadmin's layout is broken when using resolution 1024 by 768]]
+  | [[User:awels|Alexander Wels]]
+  | style="background-color: lightgreen;" | Green
+  | http://www.ovirt.org/Features/Design/LowerResolutionSupport#Testing
+  | 
+  | {{BZ|832258}}
+  | 
+|-
+  | ux
+  | easily collapsible left-pane
+  | [[User:awels|Alexander Wels]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1053646}}
+  | 
+|-
+  | virt
+  | [RFE] Allow searching by the description field
+  | [[User:Aglitke| Adam Litke]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1035301}}
+  | 
+|-
+  | virt
+  | viable, ever-working vdsm functional tests
+  | [[User:Martin Polednik| Martin Polednik]]
+  | style="background-color: yellow;" | Partially
+  | 
+  | 
+  | 
+  | 
+|-
+  | virt
+  | [[Features/Spice Proxy|spice proxy at cluster/pool level]]
+  | [[User:tjelinek| Tomas Jelinek]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1032584}}
+  | 
+|-
+  | virt
+  | Save user's console setting per pool - enhancements in Display Console Dialog (persistence per pool)
+  | [[User:Fkobzik|Frank Kobzik]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1042783}}
+  | 
+|-
+  | virt
+  | Make default VNC console mode configurable
+  | [[User:Fkobzik|Frank Kobzik]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1035719}}
+  | 
+|-
+  | virt
+  | [[Hot plug cpu|hotplug CPU]]
+  | [[User:rgolan| Roy Golan]]
+  | style="background-color: lightgreen;" | Green, backport in progress
+  | http://www.ovirt.org/Hot_plug_cpu#Testing
+  | 
+  | {{BZ|1036764}}
+  | 
+|-
+  | virt
+  | [[Features/vm-init-persistent|cloud-init/sysprep customization, more options exposed, persistence]]
+  | [[User:Shaharh| Shahar Havivi]]
+  | style="background-color: lightgreen;" | Green, backport in progress
+  | 
+  | 
+  | {{BZ|1051041}}
+  | 
+|-
+  | virt
+  | Features/Guest Reboot | "reboot VM" functionality]]
+  | [[User:Mbetak|Martin Betak]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1051451}}
+  | 
+|-
+  | virt
+  | [[Features/Template Versions|template versions (ability to update template of a pool)]]
+  | [[User:ofrenkel| Omer Frenkel]]
+  | style="background-color: orange;" | Orange - Work in Progress
+  | http://www.ovirt.org/Features/Template_Versions#Testing
+  | 
+  | {{BZ|1037478}}
+  | 
+|-
+  | virt
+  | [[Feature/GuestAgentUbuntu|oVirt guest agent for Ubuntu]]
+  | [[User:Vfeenstr| Vinzenz 'evilissimo' Feenstra]]
+  | style="background-color: lightgreen;" | Green
+  | http://www.ovirt.org/Feature/GuestAgentUbuntu#Testing
+  | 
+  | {{BZ|1043473}}
+  | 
+|-
+  | virt
+  | [[Feature/GuestAgentOpenSUSE|oVirt guest agent for openSUSE]]
+  | [[User:Vfeenstr| Vinzenz 'evilissimo' Feenstra]]
+  | style="background-color: lightgreen;" | Green
+  | http://www.ovirt.org/Feature/GuestAgentOpenSUSE#Testing
+  | 
+  | {{BZ|1043469}}
+  | 
+|-
+  | virt
+  | [[Features/SSO Method Control|Allow to disable SSO per VM]]
+  | [[User:Fkobzik|Frank Kobzik]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1035279}}
+  | 
+|-
+  | virt
+  | qemu-ga installed by default on Linux
+  | [[User:Vfeenstr| Vinzenz 'evilissimo' Feenstra]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1055524}}
+  | 
+|-
+  | virt
+  | add events for remote console connection
+  | [[User:ovedo| Oved Ourfalli]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1039862}}
+  | 
+|-
+  | virt
+  | Fix Control-Alt-Delete functionality in console options
+  | [[User:Fkobzik|Frank Kobzik]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1042782}}
+  | 
+|-
+  | virt
+  | Show name of the template in General tab for a vm if the vm is deployed from template via clone allocation
+  | [[User:tjelinek| Tomas Jelinek]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1042784}}
+  | 
+|-
+  | virt
+  | [RFE] Track downtime for inactive VMs
+  | [[User:Aglitke| Adam Litke]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1042854}}
+  | 
+|-
+  | virt
+  | Set NIC boot order according to NIC names
+  | [[User:Arik| Arik Hadas]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1045022}}
+  | 
+|-
+  | virt
+  | [RFE] RunOnce dialog can not set a vnc keymap itself
+  | [[User:kianku|Kobi Ianku]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1031040}}
+  | 
+|-
+  | virt
+  | [RFE] Enable configuration of maximum allowed downtime during live migration per guest
+  | [[User:Mbetak|Martin Betak]]
+  | style="background-color: lightgreen;" | Green
+  | 
+  | 
+  | {{BZ|1055434}}
+  | 
+|-
+|}
 
 ==Regression testing==
 
