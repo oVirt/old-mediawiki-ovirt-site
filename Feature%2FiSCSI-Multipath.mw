@@ -32,8 +32,6 @@ Device mapper works by passing data from a virtual block device (provided by the
 
 === Detailed Description ===
 
-=== Installation flow ===
-
 === API ===
 
 === Comments and Discussion ===
