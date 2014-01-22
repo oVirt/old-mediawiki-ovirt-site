@@ -262,9 +262,13 @@ Webadmin:
 |-
 |||Step 5:  Verify the imported VM is defined as highly available ||
 |-
-|Even Distribution Policy by number of VMs||Step 1: ||
+|Even Distribution Policy by number of VMs||Step 1: Create a cluster with at least 1 host ||
 |-
-|||Step 2:  YYYY ||
+|||Step 2: Set the VM_Evenly_Distributed as a cluster policy ||
+|-
+|||Step 3:  Add another host to the cluster ||
+|-
+|||Step 4:  After a while check if the VMs are evenly distributed to all hosts in the cluster (please note that one host is SPM and should have less VMs) ||
 |-
 |Make reservations for HA VMs to make sure there's enough capacity to start them if N hosts fail||Step 1: have 2 hosts and 2 running VMs on one of them.||
 |-
