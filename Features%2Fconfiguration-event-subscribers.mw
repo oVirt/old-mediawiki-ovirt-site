@@ -56,6 +56,9 @@ Lets take a look;
 A profile defines a target and data associated with it. For MAIL it is simply an email address defined by MAIL_SUBSCRIBER.<br/>
 For SNMP a profile consists of SNMP_MANAGERS, SNMP_COMMUNITY and SNMP_OID (see [[Features/engine-snmp]] for additional info).<br/>
 
+The important thing to understand about profiles is that each one of it's settings is optional and overrides the default profile.
+Lets look at an example;
+
 === DB v.s Configuration ===
 
 === Available Events ===
