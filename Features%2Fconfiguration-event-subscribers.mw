@@ -841,7 +841,7 @@ USER_FAILED_STOP_VM
 PM_POLICY_MAINTENANCE_TO_DOWN
 
 ==== Event Map ====
- event_up_name                      |           event_down_name            
+ event_up_name                                               |event_down_name            
  VDC_STOP                                               | VDC_START
  IRS_FAILURE                                            | UNASSIGNED
  IRS_DISK_SPACE_LOW                                     | UNASSIGNED
