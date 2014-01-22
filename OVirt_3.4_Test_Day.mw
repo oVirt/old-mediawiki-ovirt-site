@@ -258,6 +258,8 @@ Webadmin:
 |}
 
 ====Affinity Groups====
+http://www.ovirt.org/Features/VM-Affinity
+
 {| class="wikitable" border="1"
 |-
 ! Scenario !! Steps !! Bugs
