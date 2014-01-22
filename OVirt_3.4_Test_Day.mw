@@ -236,17 +236,27 @@ Webadmin:
 
 ===SLA===
 {| class="wikitable" border="1"
-! Scenario !! Bugs
+! Scenario !! Steps !! Bugs
 |-
-|positive/negative affinity between group of VMs||
+|positive/negative affinity between group of VMs||Step 1: login  and define XXX ||
 |-
-|power saving policy powering off machines||
+|||Step 2: Edit a VM and verify YYYY ||
 |-
-|High Availability flag should be included when exporting/importing from Export Domain||
+|power saving policy powering off machines||Step 1: ||
 |-
-|Even Distribution Policy by number of VMs||
+|||Step 2:  YYYY ||
 |-
-|Make reservations for HA VMs to make sure there's enough capacity to start them if N hosts fail||
+|High Availability flag should be included when exporting/importing from Export Domain||Step 1: ||
+|-
+|||Step 2:  YYYY ||
+|-
+|Even Distribution Policy by number of VMs||Step 1: ||
+|-
+|||Step 2:  YYYY ||
+|-
+|Make reservations for HA VMs to make sure there's enough capacity to start them if N hosts fail||Step 1: ||
+|-
+|||Step 2:  YYYY ||
 |}
 
 ==Bug Reporting==
