@@ -30,6 +30,13 @@ Device mapper works by passing data from a virtual block device (provided by the
 * Merged to 3.4 branch
 
 === Detailed Description ===
+The iSCSI multipath is an entity managed under the Data Center.<BR/>
+At the moment the Data Center is attached with iSCSI storage, the user can configure the iSCSI bond with the appropriate networks.<BR/>
+The User can choose which networks the iSCSI multipath will be assembled from.<BR/>
+it can be empty, with no networks configured in it, or configured with one or more networks related to the Data Center.<BR/>
+<BR/>
+Once the iSCSI multipath is configured with networks all the Hosts in the Data Center will connect to the iSCSI Storage Domain through this iSCSI bond the user configured.<BR/>
+The path selection for the connection to the iSCSI storage will be configured by the multipath.conf in each host.
 
 === API ===
 
