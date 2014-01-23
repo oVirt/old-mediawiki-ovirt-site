@@ -193,9 +193,9 @@ Please report test results on the [http://etherpad.ovirt.org/p/3.4-testday-1 rep
   | [[User:Alonbl|Alon Bar-Lev]]
   | style="background-color: lightgreen;" | Green
   | 
-  | 
+  | [[User:rnori| Ravi Nori]] / F19
   | {{BZ|961677}}
-  | 
+  | Works for me
 |-
   | integration
   | [[Feature/oVirtAppliance|virtual appliance image/rpm for ovirt]]
