@@ -104,7 +104,7 @@ Please report test results on the [http://etherpad.ovirt.org/p/3.4-testday-1 rep
   | style="background-color: lightgreen;" | Green
   | 
   | [[User:amureini| Allon Mureinik]] / EL6
-  | {{BZ|1032682}}, {{BZ|1056999}}, {{BZ|1057007}}, {{BZ|1057054}}, {{BZ|1057074}}, {{BZ|1057092}}, {{BZ|1057103}}, {{BZ|1057109}}, {{BZ|1057147}}
+  | {{BZ|1032682}}, {{BZ|1056999}}, {{BZ|1057007}}, {{BZ|1057054}}, {{BZ|1057074}}, {{BZ|1057092}}, {{BZ|1057103}}, {{BZ|1057109}}, {{BZ|1057147}}, {{BZ|1057172}}, {{BZ|1057176}}, {{BZ|1057182}}
   | 
 |-
   | Infra
