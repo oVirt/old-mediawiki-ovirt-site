@@ -84,6 +84,7 @@ DEVICE="ovirtmgmt"
 ONBOOT="yes"
 IPADDR=XXX.XXX.XXX.XXX
 NETMASK=255.255.255.0
+GATEWAY=XXX.XXX.XXX.XXX  # gateway goes into management network
 EOF
 
 # cat > /etc/sysconfig/network-scripts/ifcfg-br0 << EOF
@@ -94,12 +95,7 @@ DEVICE="br0"
 ONBOOT="yes"
 IPADDR=XXX.XXX.XXX.XXX
 NETMASK=255.255.255.0
-EOF</pre>
-<br />
-
-Gateway goes into:
-<pre># cat > /etc/sysconfig/network << EOF
-GATEWAY=XXX.XXX.XXX.XXX
+DEFROUTE=no
 EOF</pre>
 <br />
 
