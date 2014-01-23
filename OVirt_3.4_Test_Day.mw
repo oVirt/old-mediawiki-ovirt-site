@@ -29,6 +29,9 @@
  then ovirt repo -   sudo yum localinstall http://resources.ovirt.org/releases/ovirt-release-el6-10.0.1-2.noarch.rpm
 * follow [[OVirt_3.4.0_release_notes#Install_.2F_Upgrade_from_previous_versions | Install instructions in release notes]]
 * guest agent rpms are available on http://evilissimo.fedorapeople.org/repos/ovirt-guest-agent/ovirt-3.4/beta1/ 
+* the following oVirt Node ISO (based on CentOS 6.5 and oVirt 3.4 components) can be used for the Test Day. '''Important: You need to append enforcing=0 to the kernel when booting the ISO to prevent SELinux denials'''
+ http://fedorapeople.org/~fabiand/node/3.0.4/ovirt-node-iso-3.0.4-TestDay.vdsm.el6.iso
+
 
 ===Known issues===
 
