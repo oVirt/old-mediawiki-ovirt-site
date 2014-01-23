@@ -57,7 +57,7 @@ If you are not afraid of compiling kernels yourself and you know what you are do
 
 == NFS over RDMA ==
 
-In this setup NFS sunrpc layer driectly accesses the basic infiniband mechanisms to exchange data between NFS server and client. The setup is explained [https://www.kernel.org/doc/Documentation/filesystems/nfs/nfs-rdma.txt here]. The known bugs are
+In this setup NFS sunrpc layer driectly accesses the basic infiniband mechanisms to exchange data between NFS server and client. The configuration is explained [https://www.kernel.org/doc/Documentation/filesystems/nfs/nfs-rdma.txt here] and might have some bugs:
 
 * [https://bugzilla.redhat.com/show_bug.cgi?id=1046011 Cannot read more than 812 bytes from NFS server file]: The bug can occur between kernels 3.7 and 3.13. It should be fixed with [http://article.gmane.org/gmane.linux.nfs/60953 this commit] 
 * [http://www.mail-archive.com/linux-rdma@vger.kernel.org/msg14145.html NFS crashes]: Not yet tested/observed.
