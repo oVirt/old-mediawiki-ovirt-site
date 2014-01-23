@@ -526,9 +526,9 @@ Please report test results on the [http://etherpad.ovirt.org/p/3.4-testday-1 rep
   | [[User:sgotliv| Sergey Gotliv]]
   | style="background-color: lightgreen;" | Green
   | 
-  | 
+  | [[User:mperina| Martin Perina]] / F19
   | {{BZ|1054209}}, {{BZ|1056964}}
-  | 
+  | Works for me
 |-
   | storage
   | [[Features/Single Disk Snapshot|single disk snapshots]]
