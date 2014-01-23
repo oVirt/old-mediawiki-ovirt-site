@@ -520,7 +520,7 @@ Please report test results on the [http://etherpad.ovirt.org/p/3.4-testday-1 rep
   | style="background-color: lightgreen;" | Green
   | 
   | 
-  | {{BZ|1054209}}
+  | {{BZ|1054209}}, {{BZ|1056964}}
   | 
 |-
   | storage
@@ -529,7 +529,7 @@ Please report test results on the [http://etherpad.ovirt.org/p/3.4-testday-1 rep
   | style="background-color: lightgreen;" | Green
   | http://www.ovirt.org/Features/Single_Disk_Snapshot#Testing
   | 
-  | {{BZ|1054219}}, {BZ|1056922}
+  | {{BZ|1054219}}, {BZ|1056922}, {{BZ|1038525}}, {{BZ|1056932}}, {{BZ|1056935}}, {{BZ|1056944}}, {{BZ|1056949}}, {{BZ|1056951}}
   | 
 |-
   | storage
