@@ -25,8 +25,8 @@
 * Make sure you have either a Fedora 19 or CentOS 6.5 machine installed.
 * Install the release pkg: 
  (f19) sudo yum localinstall http://resources.ovirt.org/releases/ovirt-release-fedora-10.0.1-2.noarch.rpm
- (el)   sudo yum localinstall http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-           sudo yum localinstall http://resources.ovirt.org/releases/ovirt-release-el6-10.0.1-2.noarch.rpm
+ (el) sudo yum localinstall http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+        sudo yum localinstall http://resources.ovirt.org/releases/ovirt-release-el6-10.0.1-2.noarch.rpm
 * follow [[OVirt_3.4.0_release_notes#Install_.2F_Upgrade_from_previous_versions | Install instructions in release notes]]
 * guest agent rpms are available on http://evilissimo.fedorapeople.org/repos/ovirt-guest-agent/ovirt-3.4/beta1/ 
 
