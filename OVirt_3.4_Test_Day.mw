@@ -761,9 +761,9 @@ Please report test results on the [http://etherpad.ovirt.org/p/3.4-testday-1 rep
   | [[User:Vfeenstr| Vinzenz 'evilissimo' Feenstra]]
   | style="background-color: lightgreen;" | Green
   | 
-  | [[User:SandroBonazzola| Sandro Bonazzola]] / F19 
+  | [[User:SandroBonazzola| Sandro Bonazzola]] / F19, F20, EL6
   | {{BZ|1055524}}
-  | 
+  | Works for me
 |-
   | virt
   | add events for remote console connection
