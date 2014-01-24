@@ -58,8 +58,8 @@ The search queries for users and groups will be run against query methods at the
 
 In order to achieve support for different LDAP vendors,  the configuration should include the following information:
 * Root DSE handling - 
-As ROOT DSE queries are used to collect information on the directory ("metadata") some vendors might hold different attributes in the ROOT DSE which may later on be utilized  for further directory queries. It is required to add an ability to provide a custom handler if needed and a default implementation. 
-As the base DN under which the users and the groups will be queried for is also provided by the Root DSE, it is required to provide a mapping between an abstracted name of the attribute (for example - "namingContexts") to a vendor-specific name of the attribute (for example "defaultNamingContexts" at Active-Directory.
+As ROOT DSE queries are used to collect information on the directory ("metadata") some vendors might hold different attributes in the ROOT DSE which may later on be utilized  for further directory queries. It is required to add an ability to provide a custom handler if needed, and a default implementation. 
+As the base DN under which the users and the groups will be queried for is also provided by the Root DSE, it is required to provide a mapping between an abstracted name of the attribute (for example - "namingContexts") to a vendor-specific name of the attribute (for example "defaultNamingContexts" in Active Directory.)
 
 * Queries templates - Each query (i.e - "GetUserByName") should have a "template" that defines the query structure and allows to include parameters in it.
 Before a query is executed, the proper template should be resolved into  a query string, by substituting the parameter place holders to parameter values.
