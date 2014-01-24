@@ -100,6 +100,7 @@ will upgrade to latest 3.3.
 {{BZ|1039103}} - [RHEVM][backend] cannot add vNIC with custom MAC address to VM if there is no adresses left in MAC Address Pool.<BR>
 {{BZ|1039275}} - Spelling correction<BR>
 {{BZ|1039507}} - [Admin Portal] [java.lang.NullPointerException] No msg/event when prestarted pooled VM cannot be started because of low memory<BR>
+{{BZ|1039616}} - Setting shmmax on F19 is not enough for starting postgres<BR>
 {{BZ|1039900}} - Pending memory is not decremented during VM migration<BR>
 {{BZ|1040460}} - Even distribution policy selects the same host where there is no CPU load on the host<BR>
 {{BZ|1040875}} - Power Managment with cisco_ucs problem<BR>
