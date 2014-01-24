@@ -445,8 +445,8 @@ Please report test results on the [http://etherpad.ovirt.org/p/3.4-testday-1 rep
   | [[User:gchaplik| Gilad Chaplik]]
   | style="background-color: lightgreen;" | Green
   | 
-  | 
-  | {{BZ|1036638}}
+  | [[User:apuimedo| Antoni Segura Puimedon]]
+  | {{BZ|1036638}} {{BZ|1057480}} {{BZ|1057487}} {{BZ|1057512}} {{BZ|1057519}}
   | 
 |-
   | sla
