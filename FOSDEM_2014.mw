@@ -27,7 +27,7 @@ For building locations, [//fosdem.org/2014/practical/transportation/ see map]
 {|
 ! Time !! Name !! Session
 |-
-| 13:40-14:20 | | Federico Simoncelli || oVirt and OpenStack Storage (present and future)
+| 13:40-14:20 || Federico Simoncelli || oVirt and OpenStack Storage (present and future)
 |-
 | 14:20-15:00  || Daniel Berrange || New Developments and Advanced Features in the Libvirt Management API
 |-
