@@ -304,7 +304,7 @@ will upgrade to latest 3.3.
 ==VDSM==
 
 ==ovirt-node-plugin-vdsm==
-
+{{BZ|1019859}} - UI: AttributeError("'module' object has no attribute 'configure_logging'",) <BR>
 
 [[Category:Documentation]]
 [[Category:Releases]]
