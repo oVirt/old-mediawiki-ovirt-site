@@ -7,8 +7,9 @@ The oVirt scheduler capabilities introduced in version 3.3 have opened opportuni
 * Name: [[User:gchaplik| Gilad Chaplik]]
 * Email: <gchaplik@redhat.com>
 ===Current status===
-* status: design phase
+* status: merged (almost)
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}
+
 ==Benefits to oVirt==
 * Leverages the oVirt Scheduler to manually assign VM workload affinity policies
 * Enables users to accommodate advanced workload scenarios
