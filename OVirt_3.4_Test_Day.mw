@@ -760,9 +760,9 @@ Please report test results on the [http://etherpad.ovirt.org/p/3.4-testday-1 rep
   | [[User:Fkobzik|Frank Kobzik]]
   | style="background-color: lightgreen;" | Green
   | 
-  | 
+  |  [[User:ecohen| Einav Cohen]] / F19
   | {{BZ|1035279}}
-  | 
+  | works for me. more details in BZ. 
 |-
   | virt
   | qemu-ga installed by default on Linux
@@ -778,9 +778,9 @@ Please report test results on the [http://etherpad.ovirt.org/p/3.4-testday-1 rep
   | [[User:ovedo| Oved Ourfalli]]
   | style="background-color: lightgreen;" | Green
   | 
-  | 
+  |  [[User:ecohen|Einav Cohen]] / F19
   | {{BZ|1039862}}
-  | 
+  |  works for me. more details in BZ. 
 |-
   | virt
   | Fix Control-Alt-Delete functionality in console options
