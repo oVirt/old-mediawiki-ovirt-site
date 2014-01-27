@@ -24,10 +24,10 @@ For building locations, [//fosdem.org/2014/practical/transportation/ see map]
 
 === Saturday 2014-02-01 ===
 
-{|
+{| style="width: 85%"
 ! Time !! Name !! Session
 |-
-| 13:40-14:20 || Federico Simoncelli || oVirt and OpenStack Storage (present and future)
+| style="width: 10%" | 13:40-14:20 || style="width: 25%" | Federico Simoncelli ||  oVirt and OpenStack Storage (present and future)
 |-
 | 14:20-15:00  || Daniel Berrange || New Developments and Advanced Features in the Libvirt Management API
 |-
@@ -38,10 +38,10 @@ For building locations, [//fosdem.org/2014/practical/transportation/ see map]
 
 === Sunday 2014-02-02 ===
 
-{|
+{| style="width: 85%"
 ! Time !! Name !! Session
 |-
-| 10:20-11:00 || Omer Frenkel || Getting cross-platform: bringing virtualization management to the PPC world
+| style="width: 10%" | 10:20-11:00 || style="width: 25%" | Omer Frenkel || Getting cross-platform: bringing virtualization management to the PPC world
 |-
 | 11:40-12:20  || Mike Kolesnik & René Koch|| Expanding oVirt's horizons - How to extends and modify oVirt even further
 |-
