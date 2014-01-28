@@ -10,11 +10,11 @@ RHEL 6 users must install a newer pep8 version than the one shipped in EPEL6. Ol
 
 RHEL 6 users must add the ovirt repositories, providing packages that are not available yet on RHEL 6.
 
- <nowiki>yum install http://resources.ovirt.org/releases/ovirt-release-el6-8-1.noarch.rpm</nowiki>
+ <nowiki>yum install http://resources.ovirt.org/releases/ovirt-release-el.noarch.rpm</nowiki>
 
 Fedora users must add the ovirt repositories, providing packages that are not available yet on Fedora.
 
- <nowiki>yum install http://resources.ovirt.org/releases/ovirt-release-fedora-8-1.noarch.rpm</nowiki>
+ <nowiki>yum install http://resources.ovirt.org/releases/ovirt-release-fedora.noarch.rpm</nowiki>
 
 RHEL 6 users must add the glusterfs repository, providing newer glusterfs not available on RHEL 6.  Optionally install 'wget' if not present
  rpm -q wget 2> /dev/null || yum install wget
