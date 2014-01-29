@@ -59,7 +59,7 @@ Every user with permissions to create a Storage Domain on the Data Center, will 
 * Nice to have: A way to choose the VMs to import to the DC (instead automatically)
 * Mock ups will be added.
 
-==== Related Issues ====
+=== Related Features ===
 This feature is dependent on OVF on any domain
 
 === Comments and Discussion ===
