@@ -4,12 +4,11 @@
 <startfeed/>
 </noinclude>
 
-{{Event|name=[//lanyrd.com/2014/lcs2014/ London Cloud Summit]|date=January 29, 2014|location=London, United Kingdom|lead=A gathering of industry experts and practitioners to give their take on the state of private and public cloud, IaaS and PaaS platforms, and where the industry is going in 2014 and beyond. }}
-
 {{Event|name=[//fosdem.org/2014/ FOSDEM 2014]|date=February 1 - 2, 2014|location=Brussels, Belgium|lead=FOSDEM is a free event that offers open source communities a place to meet, share ideas and collaborate. Join oVirt at our stand at Auditoire SK1.101 and at [[FOSDEM 2014|all of our activities]]! }}
 
 {{Event|name=[//lanyrd.com/2014/infranext/ Infrastructure.Next Ghent]|date=February 5, 2014|location=Ghent, Belgium|lead=Infrastructure.Next is a new series of events that will highlight cloud, virtualization, and enterprise tools and show the future of the data center. }}
 
+{{Event|name=[//onoffmix.com/event/23134 oVirt/RHEV Technical Community Event]|date=Feb 8, 2014|location=Seoul, South Korea|lead=Exploring oVirt's big potential in cloud computing in despite its current focus on traditional IT workloads.}}
 <noinclude>
 <endfeed/>
 
