@@ -8,6 +8,8 @@ For Handling the above we have the process of sysprep. For guests with Windows O
 
 ==The process for sealing a Linux guest template==
 
+The following is RedHat specific:
+
 <ol>
 <li> SSH to the VM as root </li>
 <li> flag the system for reconfiguring</li>
