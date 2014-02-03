@@ -36,7 +36,7 @@ Lets take a look;
  # Minimum SNMP configuration
  #
  # Create @ENGINE_ETC@/notifier/notifier.conf.d/20-snmp.conf with:
- # SNMP_MANAGER="host"
+ # SNMP_MANAGERS="host"
  # FILTERS="include:*(snmp:) ${FILTERS}"
  
  # Default whitespace separated IP/DNS list with optional port, default is 162.
@@ -64,7 +64,7 @@ Lets take a look;
  #
 
 Notes:
-* At least one of (SNMP_MANAGER|MAIL_SERVER)  must be properly defined in order for the notifier to run.
+* At least one of SNMP_MANAGERS & MAIL_SERVER must be properly defined in order for the notifier to run.
 
 === Messages ===
 
