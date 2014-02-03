@@ -1,4 +1,4 @@
-The porpouse of this page is to describe how to allow Gluster network traffic to use other network interface than ovirtmgmt.
+The purpose of this page is to describe how to allow Gluster network traffic to use other network interface than ovirtmgmt.
 By default, Ovirt shows the hosts in the cluster with their ovirmgmt IPs. This can cause problems under heavy network activity, mostly when Gluster uses the network to syncronize big ammonts of data. In this scenario, Ovirt looses touch with the host and can cause the host to be marked as unreachable and thus trigger VMs migrartions.
 To avoid this, you may use extra NICs in your hosts to create a network for Gluster's traffic.
 You can be in two scenarios; you already have your Gluster storage domain created and can't start over from the top, or you can get yourself a fresh start.
