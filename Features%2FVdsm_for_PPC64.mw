@@ -90,7 +90,7 @@ http://www.ovirt.org/Vdsm_Developers#Getting_the_source
 * Build a Vdsm RPM:
 http://www.ovirt.org/Vdsm_Developers#Building_a_Vdsm_RPM
  
-* Install:
+* Install (don't forget to install the faqemu hook):
 http://www.ovirt.org/Vdsm_Developers#Basic_installation
  
 * Create the '50-fake.conf' file:
