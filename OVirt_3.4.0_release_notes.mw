@@ -305,7 +305,8 @@ will upgrade to latest 3.3.
 {{BZ|1055434}} - [RFE] Enable configuration of maximum allowed downtime during live migration per guest<BR>
 {{BZ|1053715}} - [RFE] Cross arch support for ovirt<BR>
 {{BZ|1053728}} - [RFE] PPC arch support<BR>
-
+{{BZ|1061774}} - Memory snapshot on PPC64<BR>
+{{BZ|1057178}} - Migration on the ppc64 platform<BR>
 
 ==VDSM==
 
