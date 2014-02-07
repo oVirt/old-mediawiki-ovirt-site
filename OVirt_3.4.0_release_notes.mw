@@ -308,6 +308,68 @@ will upgrade to latest 3.3.
 {{BZ|1061774}} - Memory snapshot on PPC64<BR>
 {{BZ|1057178}} - Migration on the ppc64 platform<BR>
 
+Fixed in oVirt 3.4.0 beta 2:
+
+{{BZ|906359}} - Management network VLAN tagging behaves badly<BR>
+{{BZ|953343}} - [RFE] Hypervisor RHEV-H only connects to the Dell Equallogic using one connection. it is expected to do multipathing and have 4 connection to it.<BR>
+{{BZ|979231}} - oVirt Node Upgrade: Support N configuration<BR>
+{{BZ|991470}} - Storage connection is left in db table in case adding storage domain fails<BR>
+{{BZ|999713}} - PRD34 - [RFE] Need to reclaim horizontal real estate by collapsing the tree panel<BR>
+{{BZ|1014039}} - Cannot read name of 'current' CD image through the REST API<BR>
+{{BZ|1019394}} - deleteImage task, which was started as part of snapshot creation (with save memory) roll-back remains running forever<BR>
+{{BZ|1028515}} - Change label for Network profiles to be more specific to VMs<BR>
+{{BZ|1028523}} - Add VM network icon in the Logical network dialog<BR>
+{{BZ|1033043}} - [engine-setup] engine-setup should detect if postgresql's shared_buffers are below active kernel.shmmax<BR>
+{{BZ|1036777}} - [OVIRT][ENGINE]  Hot Plug CPU - Support dynamic virtual CPU allocation and deallocation<BR>
+{{BZ|1037441}} - [engine-backend] bad handling with code 205 response from vdsm to CopyImageVDS request in engine.log<BR>
+{{BZ|1037478}} - [RFE] Have ability to modify VM template - template versions<BR>
+{{BZ|1038053}} - [RFE] Allow domain of multiple types in a single Data Center<BR>
+{{BZ|1038613}} - XP VMs get virtio-scsi controller when created as a brand-new VM or from template<BR>
+{{BZ|1038988}} - Gluster brick sync does not work when host has multiple interfaces<BR>
+{{BZ|1039616}} - Setting shmmax on F19 is not enough for starting postgres<BR>
+{{BZ|1040572}} - [RHEVM-SETUP] - remote db configuration. rhevm-setup asks for different configuartion than the dwh & reports setups<BR>
+{{BZ|1040590}} - RHEVM SETUP REMOTE_DB: postgresProvisioning remains none in answer file<BR>
+{{BZ|1043230}} - Allow configuring Network QoS on host interfaces<BR>
+{{BZ|1048790}} - Not possible to power off VM that failed migration.<BR>
+{{BZ|1048916}} - sub-tab events in different main-tabs are being duplicated<BR>
+{{BZ|1051041}} - cloud-init options persistence / unification with sysprep options<BR>
+{{BZ|1051048}} - [notifier] MAIL_PORT=blabla does not make the app fail but it continues to send to port 25<BR>
+{{BZ|1051061}} - [notifier] MAIL_PORT=0 is nonsense as we are not binding but connecting to remote host<BR>
+{{BZ|1051524}} - [es-ES] sync option in network edit is not displayed<BR>
+{{BZ|1053601}} - [RFE] allow to provide a password change url on login failure when password expires<BR>
+{{BZ|1054195}} - [NetworkLabels] Attaching two labeled networks to a cluster result in failure of the latter<BR>
+{{BZ|1054320}} - QoS doesn't take effect when synchronizing network in cluster < 3.4<BR>
+{{BZ|1054322}} - Host with network QoS can be moved to cluster < 3.4<BR>
+{{BZ|1055188}} - [NetworkLabels] Detaching two labeled networks from a cluster result in failure of the latter<BR>
+{{BZ|1055441}} - [NetworkLabels] Host nics labels are being deleted when setup networks api is called<BR>
+{{BZ|1055952}} - [NetworkLabels] Missing 'Edit network' button on labeled networks which are attached to a nic in 'setup networks' dialog<BR>
+{{BZ|1056064}} - Events are being pulled from audit_log in a very inefficient way<BR>
+{{BZ|1056155}} - VDSM < 3.4 reporting QoS in 3.4 cluster produces ClassCastException<BR>
+{{BZ|1056307}} - RHEV 3.2 RHEV-M "Enforcing" typo in host reboot log message<BR>
+{{BZ|1056501}} - Updating a network on nic via 3.0 api fails<BR>
+{{BZ|1056567}} - Cannot update comment for VM in user portal<BR>
+{{BZ|1056651}} - Cannot create VM snapshot, dialog does not load<BR>
+{{BZ|1057001}} - duplicate commit button for snapshots<BR>
+{{BZ|1057143}} - [REST] Single disk snapshot fails without specifying storage domain<BR>
+{{BZ|1057147}} - Assigning a role to a user fails with an SQL error<BR>
+{{BZ|1057154}} - Some properties not persisted during Clone of VM Snapshot<BR>
+{{BZ|1057155}} - multiple storage domains - edit dialog always resets type to Shared<BR>
+{{BZ|1057176}} - engine-managed-domains - typos in usage report<BR>
+{{BZ|1057221}} - [engine] Files created on stateless vm are retained after powering off and back on<BR>
+{{BZ|1057305}} - Misaligned Host Network QoS columns on Chrome<BR>
+{{BZ|1057561}} - Templates are being pulled from template view in a very inefficient way<BR>
+{{BZ|1057654}} - Extend important limits to their hard limit<BR>
+{{BZ|1058017}} - Host network QOS get a null value if you cancel the creation of new Network QOS<BR>
+{{BZ|1058205}} - Unneeded line in Profiles subtab when creating the new network<BR>
+{{BZ|1058327}} - Do not override httpd ssl.conf and root on upgrade<BR>
+{{BZ|1058778}} - Port mirroring should be greyed out of VNIC profiles of networks imported/created in Neutron<BR>
+{{BZ|1059233}} - Neutron labels should be invisible for the Host NICs<BR>
+{{BZ|1059411}} - vdc_options - set version correctly<BR>
+{{BZ|1059780}} - [oVirt] NPE in update vm/template<BR>
+{{BZ|1060705}} - One display seen on a multi-monitor guest after rhev 3.0 to 3.2 migration<BR>
+{{BZ|1060729}} - Change NIC type from sPAPR VLAN to any other type causes error when starting the VM (PPC)<BR>
+{{BZ|1061032}} - [AIO] support RFC2317 reverse DNS lookup<BR>
+
 ==VDSM==
 
 ==ovirt-node-plugin-vdsm==
