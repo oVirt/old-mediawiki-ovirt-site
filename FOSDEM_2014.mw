@@ -27,13 +27,13 @@ For building locations, [//fosdem.org/2014/practical/transportation/ see map]
 {| style="width: 100%"
 ! Time !! Name !! Session
 |-
-| style="width: 10%" | 13:40-14:20 || style="width: 25%" | Federico Simoncelli ||  oVirt and OpenStack Storage (present and future)
+| style="width: 10%" | 13:40-14:20 || style="width: 25%" | Federico Simoncelli ||  oVirt and OpenStack Storage (present and future) - [[:Media:Ovirt-2014-ovirt-and-openstack-storage.pdf|Slides]], [http://ftp.osuosl.org/pub/fosdem//2014/UD2120_Chavanne/Saturday/oVirt_and_OpenStack_Storage_present_and_future.webm Session recording]
 |-
-| 14:20-15:00  || Daniel Berrange || New Developments and Advanced Features in the Libvirt Management API
+| 14:20-15:00  || Daniel Berrange || New Developments and Advanced Features in the Libvirt Management API - [http://ftp.osuosl.org/pub/fosdem//2014/UD2120_Chavanne/Saturday/New_Developments_and_Advanced_Features_in_the_Libvirt_Management_API.webm Session recording]
 |-
-| 15:40-16:20  || Ohad Levy || Foreman Project
+| 15:40-16:20  || Ohad Levy || Foreman Project - [http://ftp.osuosl.org/pub/fosdem//2014/UD2120_Chavanne/Saturday/Foreman_Project.webm Session recording]
 |-
-| 17:40-18:20  || Gilad Chaplik || oVirt applying Nova scheduler concepts for data center virtualization
+| 17:40-18:20  || Gilad Chaplik || oVirt applying Nova scheduler concepts for data center virtualization - [[:Media:Scheduling fosdem.pdf|Slides]], [http://ftp.osuosl.org/pub/fosdem//2014/UD2120_Chavanne/Saturday/oVirt_applying_Nova_scheduler_concepts_for_data_center_virtualization.webm Session recording]
 |}
 
 === Sunday 2014-02-02 ===
