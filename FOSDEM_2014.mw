@@ -38,18 +38,21 @@ For building locations, [//fosdem.org/2014/practical/transportation/ see map]
 
 === Sunday 2014-02-02 ===
 
+<!-- linking slides and session recording:
+ - [[:Media:Ovirt-2014-ovirt-and-openstack-storage.pdf|Slides]], [http://ftp.osuosl.org/pub/fosdem//2014/UD2120_Chavanne/Saturday/oVirt_and_OpenStack_Storage_present_and_future.webm Session recording] -->
+
 {| style="width: 100%"
 ! Time !! Name !! Session
 |-
-| style="width: 10%" | 10:20-11:00 || style="width: 25%" | Omer Frenkel || Getting cross-platform: bringing virtualization management to the PPC world
+| style="width: 10%" | 10:20-11:00 || style="width: 25%" | Omer Frenkel || Getting cross-platform: bringing virtualization management to the PPC world - [[:Media:OVirt-ppc.pdf|Slides]]
 |-
-| 11:40-12:20  || Mike Kolesnik & René Koch|| Expanding oVirt's horizons - How to extends and modify oVirt even further
+| 11:40-12:20  || Mike Kolesnik & René Koch|| Expanding oVirt's horizons - How to extends and modify oVirt even further  - [[:Media:Extending oVirt - FOSDEM 14.pdf|Slides]]
 |-
-| 12:20-13:00  || Doron Fediuck || oVirt Hosted Engine: The Egg That Hosts its Parent Chicken
+| 12:20-13:00  || Doron Fediuck || oVirt Hosted Engine: The Egg That Hosts its Parent Chicken - [[:Media:Fosdem-hosted-engine.pdf|Slides]]
 |-
 | 13:40-14:20  || Assaf Muller || Tunnels as a Connectivity and Segregation Solution for Virtualized Networks
 |-
-| 16:20-17:00  || Mike Kolesnik || Bring your virtualized networking stack to the next level oVirt & OpenStack Neutron integration
+| 16:20-17:00  || Mike Kolesnik || Bring your virtualized networking stack to the next level oVirt & OpenStack Neutron integration - [[:Media:Bring your virtualized networking stack to the next level - FOSDEM 14.pdf|Slides]]
 |-
 | 17:20-17:35  || Dave Neary || Your Complete Open Source Cloud (Lightning talk track)
 |}
