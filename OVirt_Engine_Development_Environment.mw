@@ -34,7 +34,7 @@ protect=1</nowiki>
     m2crypto python-psycopg2 python-cheetah python-daemon libxml2-python \
     unzip</nowiki>
 
-===== fedora =====
+===== Fedora =====
  <nowiki># yum install jboss-as</nowiki>
 
 ===== RHEL =====
