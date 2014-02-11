@@ -75,12 +75,13 @@ Make sure openjdk is the java preferred:
 Based on your distribution it may be that you require to initialize the database.
 
  <nowiki>Fedora: # postgresql-setup initdb
+RHEL:   # /etc/init.d/postgresql initdb
 Gentoo: # emerge --config postgresql-server</nowiki>
 
 Configure PostgreSQL to accept network connection by locating <code>pg_hba.conf</code> file, locations includes:
 {| class="wikitable"
 |-
-|Fedora||/var/lib/pgsql/data/pg_hba.conf
+|Fedora,RHEL||/var/lib/pgsql/data/pg_hba.conf
 |-
 |Debian||/etc/postgresql/*/main/pg_hba.conf
 |-
@@ -101,7 +102,7 @@ Restart PostgreSQL service for definitions to take effect:
 |-
 |Fedora||# systemctl restart postgresql.service
 |-
-|RHEL||#service postgresql restart
+|RHEL||# service postgresql restart
 |-
 |Gentoo||# /etc/init.d/postgresql-* start
 |}
