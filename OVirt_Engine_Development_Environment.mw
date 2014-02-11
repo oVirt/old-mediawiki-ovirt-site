@@ -37,7 +37,7 @@ protect=1</nowiki>
 ===== fedora =====
  <nowiki># yum install jboss-as</nowiki>
 
-===== rhel =====
+===== RHEL =====
 
 Option 1, setup jboss channel, and install downstream jboss, JBOSS_HOME will be /usr/share/jbossas.
 
