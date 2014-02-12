@@ -33,10 +33,10 @@ Everyone is welcome to join the #ovirt IRC channel, especially if you're thinkin
 You can also join oVirt users mailing list, where quality assurance-related topics are marked using [QE] in subject.
 
 == Next releases  ==
-* 3.3.3:
-** {{BZ|1050084}} Tracker: oVirt 3.3.3 release
-** [[OVirt_3.3.3_release_notes|oVirt 3.3.3 release notes]]
-** [[Testing/Ovirt_3.3.3_testing|oVirt 3.3.3 testing]]
+* 3.3.4: 
+** {{BZ|1064462}} Tracker: oVirt 3.3.4 release
+** [[OVirt_3.3.4_release_notes|oVirt 3.3.4 release notes]]
+** [[Testing/Ovirt_3.3.4_testing|oVirt 3.3.4 testing]]
 * 3.3.z:
 ** [[OVirt_3.3.z_release-management]]
 * 3.4.0:
