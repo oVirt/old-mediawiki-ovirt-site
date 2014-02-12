@@ -110,7 +110,7 @@ The specific values means:
 |-
 | cpu_per_socket || cpu per socket || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
 |-
-| usb_policy || usb policy || Y || || N || || || N || || || Y || || Y || N || N || User || Not on instance type since it depends on the OS
+| usb_policy || usb policy || Y || || N || || || Y || || || Y || || Y || N || N || User ||
 |-
 | time_zone || time zone || Y || || N || || || N || || || Y || || Y || Y || N || User || 
 |-
@@ -128,7 +128,7 @@ The specific values means:
 |-
 | default_boot_sequence || boot sequence || Y || || N || || || Y || || || Y || || Y || Y || N || Instance || 
 |-
-| default_display_type || display type(SPICE, VNC)|| Y || || N || || || N || || || Y || || Y || Y || N || Instance || Not present on instance type since it is OS dependent
+| default_display_type || display type(SPICE, VNC)|| Y || || N || || || Y || || || Y || || Y || Y || N || Instance ||
 |-
 | priority || priority || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
 |-
