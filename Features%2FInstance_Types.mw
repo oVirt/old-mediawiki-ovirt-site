@@ -174,7 +174,7 @@ The specific values means:
 |-
 | image_type_id || internal. link to vm's image type || N || || N || || || N || || || Y || || N || Y || N || User || 
 |-
-| host_cpu_flags || use host cpu flags || N || || N || || || N || || || N || || || || || empty || Not in GUI
+| host_cpu_flags || use host cpu flags || Y || || N || || || Y || || || Y || || || || || empty || 
 |-
 | db_generation || internal || N || || N || || || N || || || N || || || || ||  || Not in GUI
 |-
