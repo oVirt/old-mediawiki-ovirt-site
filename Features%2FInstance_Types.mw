@@ -188,6 +188,8 @@ The specific values means:
 |-
 | migrationDowntime || max downtime during migration || Y || || N || || || Y || || || Y || || Y || N || Y || Instance ||
 |-
+| watchdog || consists of model and action || Y || || N || || || N || || || Y || || Y || N || N || User ||
+|-
 |}
 
 == Entities' Details ==
