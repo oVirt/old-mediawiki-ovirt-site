@@ -128,7 +128,7 @@ The specific values means:
 |-
 | default_boot_sequence || boot sequence || Y || || N || || || Y || || || Y || || Y || Y || N || Instance || 
 |-
-| default_display_type || display type(SPICE, VNC)|| Y || || N || || || Y || || || Y || || Y || Y || N || Instance || 
+| default_display_type || display type(SPICE, VNC)|| Y || || N || || || N || || || Y || || Y || Y || N || Instance || Not present on instance type since it is OS dependent
 |-
 | priority || priority || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
 |-
