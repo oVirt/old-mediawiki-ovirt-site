@@ -142,7 +142,7 @@ The specific values means:
 |-
 | kernel_params || boot params || Y || || Y || || || N || || || Y || || Y || Y || N || Image || Only visible when kernel url is specified in image. 
 |-
-| migration_support || migration support options || Y || || N || || || N || || || Y || || Y || Y || Y || true || 
+| migration_support || migration support options || Y || || N || || || Y || || || Y || || Y || Y || Y || true || 
 |-
 | userdefined_properties || custom properties || Y || || Y || || || Y || || || Y || || Y || N || N || merge || merge instance type and image by key with instance type taking priority
 |-
@@ -160,7 +160,7 @@ The specific values means:
 |-
 | is_smartcard_enabled || smartcard enabled || Y || || N || || || Y || || || Y || || Y || N || N || Instance || 
 |-
-| payload || payload (device, not in vm_static) || Y || || N || || || Y || || || Y || || || || || Instance || Not in GUI
+| payload || payload (device, not in vm_static) || Y || || N || || || N || || || Y || || || || || Instance || Not in GUI
 |-
 | thin/clone || || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
 |-
@@ -184,7 +184,7 @@ The specific values means:
 |-
 | vncKeyboardLayout || VNC specific keyboard layout || Y || || N || || || N || || || Y || || Y || Y || N || User ||
 |-
-| tunnelMigration || use libvirt-to-libvirt communication || N || || N || || || Y || || || || || || ||  || Instance || Not in GUI
+| tunnelMigration || use libvirt-to-libvirt communication || N || || N || || || N || || || || || || ||  || Instance || Not in GUI
 |-
 |}
 
