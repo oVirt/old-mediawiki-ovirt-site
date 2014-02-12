@@ -162,7 +162,7 @@ The specific values means:
 |-
 | payload || payload (device, not in vm_static) || Y || || N || || || N || || || Y || || || || || Instance || Not in GUI
 |-
-| thin/clone || || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
+| thin/clone || || N || || N || || || N || || || Y || || Y || Y || N || User || 
 |-
 | soundcard || payload (device, not in vm_static) || N || || N || || || Y || || || Y || || || || || Instance || Not in GUI. Setting should include soundcard type which is dependant on the OS.
 |-
