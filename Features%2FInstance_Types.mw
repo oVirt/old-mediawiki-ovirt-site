@@ -110,7 +110,7 @@ The specific values means:
 |-
 | cpu_per_socket || cpu per socket || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
 |-
-| usb_policy || usb policy || Y || || N || || || Y || || || Y || || Y || N || N || User || 
+| usb_policy || usb policy || Y || || N || || || N || || || Y || || Y || N || N || User || Not on instance type since it depends on the OS
 |-
 | time_zone || time zone || Y || || N || || || N || || || Y || || Y || Y || N || User || 
 |-
