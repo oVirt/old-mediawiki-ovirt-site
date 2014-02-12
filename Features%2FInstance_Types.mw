@@ -186,6 +186,8 @@ The specific values means:
 |-
 | tunnelMigration || use libvirt-to-libvirt communication || N || || N || || || N || || || || || || ||  || Instance || Not in GUI
 |-
+| migrationDowntime || max downtime during migration || Y || || N || || || Y || || || Y || || Y || N || Y || Instance ||
+|-
 |}
 
 == Entities' Details ==
