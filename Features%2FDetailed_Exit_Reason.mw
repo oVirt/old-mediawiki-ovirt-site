@@ -1,0 +1,38 @@
+<!-- {{autolang|base=yes}} -->
+
+== Detailed Exit Reason ==
+
+=== Summary ===
+
+* Add a detailed exit code on VDSM ExitedVmStats to represent the reason why a VM was shut down, either normally or because of an error.
+* Update engine to fetch and use this new value internally.
+* The benefit for the engine is better reporting and better view of the status of the VM.
+
+=== Owner ===
+
+* Name: [[User:Fromani|Francesco Romani]]
+* Email: [mailto:fromani@redhat.com fromani@redhat.com]
+* PM Requirements : N/A
+* Email: N/A
+
+=== Current status ===
+Implementation vor VDSM and Engine in progress, patches posted on gerrit. See below for links.
+
+=== Detailed Description ===
+
+==== Webadmin/Power User Portal ====
+
+
+==== REST API ====
+Need new element suspend_type of following resources:
+* Virtual machine
+* Template
+
+==== VDSM ====
+
+
+=== Documentation / External references ===
+
+
+[[Category:Feature]]
+<!-- [[Category:Template]] -->
