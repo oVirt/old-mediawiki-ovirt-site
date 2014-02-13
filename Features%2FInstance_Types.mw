@@ -58,7 +58,7 @@ A user can add volumes to the virtual machines, which are persistent disks typic
 '''Template'''<br>
 The old template used in the oVirt until now. User will be able to combine the VM from the triple instance type, image and template.
 
-== Design ==
+--[[User:TJelinek|TJelinek]] ([[User talk:TJelinek|talk]]) 10:30, 13 February 2014 (GMT)== Design ==
 The following table enumerates all the fields involved and also how they are related to the entities. 
  
 The specific columns means:
@@ -144,9 +144,9 @@ The specific values means:
 |-
 | migration_support || migration support options || Y || || N || || || Y || || || Y || || Y || Y || Y || true || 
 |-
-| userdefined_properties || custom properties || Y || || Y || || || Y || || || Y || || Y || N || N || merge || merge instance type and image by key with instance type taking priority
+| userdefined_properties || custom properties || N || || N || || || N || || || Y || || Y || N || N || User || 
 |-
-| predefined_properties || custom properties || Y || || Y || || || Y || || || Y || || Y || N || N || merge || merge instance type and image by key with instance type taking priority
+| predefined_properties || custom properties || N || || N || || || N || || || Y || || Y || N || N || merge || 
 |-
 | min_allocated_mem || memory guaranteed || Y || || N || || || Y || || || Y || || Y || N || Y || Instance || 
 |-
@@ -172,9 +172,9 @@ The specific values means:
 |-
 | instance_type_id || internal. link to vm's instance type || N || || N || || || N || || || Y || || N || Y || N || User || 
 |-
-| image_type_id || internal. link to vm's image type || N || || N || || || N || || || Y || || N || Y || N || User || 
+| image_type_id || internal. link to vm's image type || N || || N || || || N || || || Y || || N || Y || N || Empty || 
 |-
-| host_cpu_flags || use host cpu flags || Y || || N || || || Y || || || Y || || || || || empty || 
+| host_cpu_flags || use host cpu flags || N || || N || || || N || || || Y || || || || || User || 
 |-
 | db_generation || internal || N || || N || || || N || || || N || || || || ||  || Not in GUI
 |-
