@@ -1,7 +1,7 @@
-== Ideas for Google Summer of Code 2014 ==
 For more information about Google Summer of Code please refer to the official page[https://developers.google.com/open-source/soc/].
-
 {{#ev:youtube|QVnN34YGz8s|640}}
+
+== Ideas for Google Summer of Code 2014 ==
 
 === '''Idea:''' oVirt virtual disks advanced integration with libvirt ===
 '''Description:''' oVirt is the KVM virtualization management application for large data centers. Today oVirt supports many advanced features and is looking to enhance these by fine grained control of virtual disk capabilities such as 'discard', 'eio' behavior, 'cache' type and more. These capabilities would be exposed through Rest API and web interfaces.
