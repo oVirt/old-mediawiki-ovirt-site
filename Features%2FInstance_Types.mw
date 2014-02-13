@@ -190,6 +190,8 @@ The specific values means:
 |-
 | watchdog || consists of model and action || Y || || N || || || N || || || Y || || Y || N || N || User ||
 |-
+| sso method || none or guest agent || Y || || N || || || Y || || || Y || || Y || N || Y || Instance ||
+|-
 |}
 
 == Entities' Details ==
