@@ -4,6 +4,8 @@ This is the detailed design page for NUMA and Virtual NUMA
 You may also refer to the [http://www.ovirt.org/Features/NUMA_and_Virtual_NUMA simple feature page].
 
 == Get Host NUMA topology ==
+=== Overview ===
+[[File:Get Host NUMA topology.png]]
 === Engine core ===
 *A new VDS attribute - numanodes - will be added to support this feature.
 **Means a DB change: extend vds_dynamic to add it.
