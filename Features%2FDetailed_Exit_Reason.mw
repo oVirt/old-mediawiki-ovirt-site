@@ -19,7 +19,9 @@ WARNING: work in progress
 * Email: N/A
 
 === Current status ===
-Implementation vor VDSM and Engine in progress, patches posted on gerrit. See below for links.
+* Target Release: oVirt 3.5
+* Status: Implementation vor VDSM and Engine in progress, patches posted on gerrit. See below for links.
+* Last updated: 14 Feb 2014
 
 === Detailed Description ===
 This change is transparent to the user because will only affect the VDSM <=> engine communication. User will notice only indirectly through more precise reporting and better behaviour in general.
