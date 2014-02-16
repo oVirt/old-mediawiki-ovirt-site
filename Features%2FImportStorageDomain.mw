@@ -72,9 +72,10 @@ Once the user finished to import the Storage Server he chose, and the engine wil
 From that on, the same behaviour should be the same as importing from NFS as described in phase 2.
 
 The following UI mockups contain guidelines for the different screens and wizards related to the block domain:
-
+An import screen for Fibre Channel Storage Domain :
 [[File:FibreChannel.png|600px]]
 
+An import screen for iSCSI Storage Domain :
 [[File:Iscsi.jpeg|600px]]
 
 === Permissions ===
