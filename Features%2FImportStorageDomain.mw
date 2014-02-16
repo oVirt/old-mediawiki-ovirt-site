@@ -54,15 +54,15 @@ The user will enter the path of the storage domain and will start the import pro
 The following UI mockups contain guidelines for the different screens and wizards related for mount domains:<BR/>
 An import screen for NFS Storage Domain :<BR/>
 <BR/>
-[[File:ImportNFSDomain.jpeg|600px]]
+[[File:ImportNFS.jpeg|600px]]
 <BR/><BR/><BR/><BR/>
 An import screen for POSIX Storage Domain :<BR/>
 <BR/>
-[[File:ImportPosixDomain|600px]]
+[[File:ImportPosix|600px]]
 <BR/><BR/><BR/><BR/>
 An import screen for Gluster Storage Domain :<BR/>
 <BR/>
-[[File:ImportGlusterDomain.jpeg|600px]]
+[[File:ImportGluster.jpeg|600px]]
 
 ===== DB Changes =====
 We will add a new column in the storage domains table which will be called isStorageExists.<BR/>
