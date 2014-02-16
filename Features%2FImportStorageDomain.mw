@@ -51,6 +51,19 @@ once we will found a match, the engine will run over the properties of the Stora
 The user will enter the path of the storage domain and will start the import process.<BR/>
 * Unrelated disks will be disabled in the GUI
 
+The following UI mockups contain guidelines for the different screens and wizards related for mount domains:<BR/>
+An import screen for NFS Storage Domain :<BR/>
+<BR/>
+[[File:ImportNFSDomain.jpeg|600px]]
+<BR/><BR/><BR/><BR/>
+An import screen for POSIX Storage Domain :<BR/>
+<BR/>
+[[File:ImportPosixDomain|600px]]
+<BR/><BR/><BR/><BR/>
+An import screen for Gluster Storage Domain :<BR/>
+<BR/>
+[[File:ImportGlusterDomain.jpeg|600px]]
+
 ===== DB Changes =====
 We will add a new column in the storage domains table which will be called isStorageExists.<BR/>
 When this field is false then all the images related to it will be disabled in the GUI.
