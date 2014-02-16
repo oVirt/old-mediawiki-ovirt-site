@@ -51,14 +51,14 @@ once we will found a match, the engine will run over the properties of the Stora
 The user will enter the path of the storage domain and will start the import process.<BR/>
 * Unrelated disks will be disabled in the GUI
 
-The following UI mockups contain guidelines for the different screens and wizards related for mount domains:<BR/>
+The following UI mockups contain guidelines for the different screens and wizards related for file Storage Domains:<BR/>
 An import screen for NFS Storage Domain :<BR/>
 <BR/>
 [[File:ImportNFS.jpeg|600px]]
 <BR/><BR/><BR/><BR/>
 An import screen for POSIX Storage Domain :<BR/>
 <BR/>
-[[File:ImportPosix|600px]]
+[[File:ImportPosix.jpeg|600px]]
 <BR/><BR/><BR/><BR/>
 An import screen for Gluster Storage Domain :<BR/>
 <BR/>
