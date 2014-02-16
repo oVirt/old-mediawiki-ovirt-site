@@ -73,7 +73,7 @@ From that on, the same behaviour should be the same as importing from NFS as des
 
 The following UI mockups contain guidelines for the different screens and wizards:
 
-[[File:FibreChannel.png]]
+[[File:FibreChannel.png|200px]]
 
 === Permissions ===
 There should not be changes is detach storage domain
