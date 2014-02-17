@@ -388,6 +388,14 @@ Fixed in oVirt 3.4.0 beta 2:
 {{BZ|1053040}} - API: setHaMaintenanceMode command<BR>
 {{BZ|1059482}} - vm: discover volume path from xml definition<BR>
 {{BZ|1062166}} - vm iface statistics: never report negative rates<BR>
+{{BZ|956741}} - vdsm: fix RTC offset<BR>
+{{BZ|1057225}} - Adding configure sanlock on force<BR>
+{{BZ|1060524}} - spec: vdsm pkg for EL distro must include pkla<BR>
+{{BZ|889097}} - vm: do not pause during refreshVolume<BR>
+{{BZ|889097}} - vm: do not pause during refreshVolume<BR>
+gluster: adopt xml changes of rebalance and remove-brick status<BR>
+gluster: interpret and use correct xml elements<BR>
+gluster: add host uuid in volume status<BR>
 
 ==ovirt-node-plugin-vdsm==
 {{BZ|1019859}} - UI: AttributeError("'module' object has no attribute 'configure_logging'",) <BR>
