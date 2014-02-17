@@ -112,7 +112,7 @@ VM will have a new use_latest_template_version boolean property that is relevant
 creating or updating a VM. If user will try to create a new stateful VM with this property set to true, an error will be returned. <br>
 When doing GET, this property will be propagated from backend, set to 'false' for stateful VMs.<br>
 
-VM Pools usecase
+'''VM Pools usecase'''
 TBD
 
 ==== DB ====
