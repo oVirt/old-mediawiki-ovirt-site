@@ -391,6 +391,8 @@ Fixed in oVirt 3.4.0 beta 2:
 
 ==ovirt-node-plugin-vdsm==
 {{BZ|1019859}} - UI: AttributeError("'module' object has no attribute 'configure_logging'",) <BR>
+{{BZ|1058257}} - engine_page: use vdsm to detect mgmt interface <BR>
+{{BZ|1057453}} - engine_page: display url/port only on available <BR>
 
 [[Category:Documentation]]
 [[Category:Releases]]
