@@ -415,6 +415,11 @@ Fixed in oVirt 3.4.0 beta 2:
 {{BZ|1036111}} - Malformed libvirt XML is causing Storage Live Migration failure. <BR>
 {{BZ|983088}} - New VMs use display network ports outside of documented 5634 to 6166 range<BR>
 {{BZ|982065}} - vdsClient should provide more debug info- in case of malformed XML response<BR>
+{{BZ|1007860}} - Bond "speed" does not reflect the correct speed<BR>
+{{BZ|988469}} - PRD34 - [RFE] vdsm does not recognize hot-plugged host interfaces<BR>
+{{BZ|675560}} - vdsm should monitor bond interfaces, sub-interfaces and bridges status<BR>
+{{BZ|1005889}} - Size of ISO images shown in 'Images' tab of ISO Domain wrong<BR>
+{{BZ|970645}} - migration_timeout not honoured, live migration goes on beyond it<BR>
 
 ==ovirt-node-plugin-vdsm==
 {{BZ|1019859}} - UI: AttributeError("'module' object has no attribute 'configure_logging'",) <BR>
