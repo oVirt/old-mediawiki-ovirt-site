@@ -378,6 +378,16 @@ Fixed in oVirt 3.4.0 beta 2:
 {{BZ|1061032}} - [AIO] support RFC2317 reverse DNS lookup<BR>
 
 ==VDSM==
+{{BZ|1036883}} - Validate conf in configure only if not forcing overriding<BR>
+{{BZ|1059757}} - sp: stop all poolMonitoredDomains on disconnect<BR>
+{{BZ|1026868}} -  vm: Update LUN size when starting a vm<BR>
+{{BZ|1059108}} - hsm: Fix missing MAX_DOMAINS constant<BR>
+{{BZ|1063472}} - fencing: stop using a deprecated command<BR>
+{{BZ|980054}} - clientIF: Teardown volume path only for VDSM images<BR>
+{{BZ|1053040}} - API: return additional Hosted Engine information from vdsStats<BR>
+{{BZ|1053040}} - API: setHaMaintenanceMode command<BR>
+{{BZ|1059482}} - vm: discover volume path from xml definition<BR>
+{{BZ|1062166}} - vm iface statistics: never report negative rates<BR>
 
 ==ovirt-node-plugin-vdsm==
 {{BZ|1019859}} - UI: AttributeError("'module' object has no attribute 'configure_logging'",) <BR>
