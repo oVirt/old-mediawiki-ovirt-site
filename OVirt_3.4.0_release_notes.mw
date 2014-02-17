@@ -378,24 +378,43 @@ Fixed in oVirt 3.4.0 beta 2:
 {{BZ|1061032}} - [AIO] support RFC2317 reverse DNS lookup<BR>
 
 ==VDSM==
-{{BZ|1036883}} - Validate conf in configure only if not forcing overriding<BR>
-{{BZ|1059757}} - sp: stop all poolMonitoredDomains on disconnect<BR>
-{{BZ|1026868}} -  vm: Update LUN size when starting a vm<BR>
-{{BZ|1059108}} - hsm: Fix missing MAX_DOMAINS constant<BR>
-{{BZ|1063472}} - fencing: stop using a deprecated command<BR>
-{{BZ|980054}} - clientIF: Teardown volume path only for VDSM images<BR>
-{{BZ|1053040}} - API: return additional Hosted Engine information from vdsStats<BR>
-{{BZ|1053040}} - API: setHaMaintenanceMode command<BR>
-{{BZ|1059482}} - vm: discover volume path from xml definition<BR>
-{{BZ|1062166}} - vm iface statistics: never report negative rates<BR>
+{{BZ|1036883}} - VM fails to start when qemu.conf's spice_tls conflicts with vdsm.conf's ssl<BR>
+{{BZ|1059757}} - domain monitor does not stop during disconnectStoragePool on HSM during destroyStoragePool flow on SPM<BR>
+{{BZ|1026868}} -  Direct LUN is not being updated after resizing<BR>
+{{BZ|1059108}} - Failed creating storage pool - AttributeError: 'module' object has no attribute 'MAX_DOMAINS'<BR>
+{{BZ|1063472}} - fenceNode passes wrong argument to the fence agent<BR>
+{{BZ|980054}} -  [LOG][vdsm] KeyError: 'domainID' during teardownImage in power-off to VM<BR>
+{{BZ|1053040}} - [Hosted Engine] Unify maintenance flows<BR>
+{{BZ|1059482}} - Migrating between older and newer RHEV-H images leads to flood "path /rhev/data-center/mnt/blockSD/<UUID>/images/<UUID>/<UUID> not assigned to domain"<BR>
+{{BZ|1062166}} - do not report negative rx/tx rate when Linux counters wrap<BR>
 {{BZ|956741}} - vdsm: fix RTC offset<BR>
-{{BZ|1057225}} - Adding configure sanlock on force<BR>
-{{BZ|1060524}} - spec: vdsm pkg for EL distro must include pkla<BR>
-{{BZ|889097}} - vm: do not pause during refreshVolume<BR>
-{{BZ|889097}} - vm: do not pause during refreshVolume<BR>
-gluster: adopt xml changes of rebalance and remove-brick status<BR>
-gluster: interpret and use correct xml elements<BR>
-gluster: add host uuid in volume status<BR>
+{{BZ|1057225}} - sanlock not configured with no error which fails vdsm service start and fails host installation <BR>
+{{BZ|1060524}} - Command PollVDS execution failed <BR>
+{{BZ|889097}} -vm's status is changed to pause for a short moment during volume refresh (after an extend)<BR>
+{{BZ|1055153}} -  vdsmd not starting on first run since vdsm logs are not included in rpm<BR> 
+{{BZ|1059680}} - netconfig: set ETHTOOL_OPTS when a NIC goes up<BR>
+{{BZ|1056948}} iscsid daemon not started when vdsm starts and iscsi storage not available<BR>
+{{BZ|1056918}} Not able to add a node to 3.4 Cluster in Ovirt 3.4 engine<BR>
+{{BZ|1038988}} Gluster brick sync does not work when host has multiple interfaces<BR>
+{{BZ|1029812}} vdsm-tool configure outputs misleading error messages although it ends successfully<BR>
+{{BZ|1034172}}  Cloud-Init: generated config-drive CD image is world-readable<BR>
+{{BZ| 1015009}} Default route is not set properly for management network if downstream/upstream engine and VDSM are mixed<BR>
+{{BZ|987832}}  failed to add ovirtmgmt bridge when the host has static ip<BR>
+{{BZ|1051860}}  yum transaction on rhel7: reading information on service vdsmd: No such file or directory<BR>
+{{BZ|1035314}} vdsm-hook-nestedvt uses kvm_intel-only syntax<BR>
+{{BZ|1044060}} [RFE] Prevent RHEV from requiring hwaddr lines within ifcfg files<BR>
+{{BZ|1024236}} Can't activate a host due to /etc/sudoer configuration<BR>
+{{BZ|1028917}} Resource lock split brain causes VM to get paused after migration<BR>
+{{BZ|1035847}}  vdsm-tool configure fails stopping service<BR>
+{{BZ|1048763}} before_device_migrate_source not being called <BR>
+{{BZ|1033942}} [vdsm] getStorageDomainInfo fails due to key 'info' missing from poolInfo for master domain <BR>
+{{BZ|1047646}} VDSM - hooks - after_update_device_fail hook fails<BR>
+{{BZ|1034247}}Cloud-Init: meta_data.json and user_data files on config-drive are world-readable<BR>
+{{BZ|1020356}} stray libvirt networks make vdsm fail to recognize management network on native interface with "Network defined withoutdevices" error of setupNetworks<BR>
+{{BZ|1036358}}  Paused VM not unpaused when vdsm is starting and storage domain is valid<BR>
+{{BZ|1036111}} Malformed libvirt XML is causing Storage Live Migration failure. <BR>
+{{BZ|983088}} New VMs use display network ports outside of documented 5634 to 6166 range<BR>
+{{BZ|982065}} vdsClient should provide more debug info- in case of malformed XML response<BR>
 
 ==ovirt-node-plugin-vdsm==
 {{BZ|1019859}} - UI: AttributeError("'module' object has no attribute 'configure_logging'",) <BR>
