@@ -22,7 +22,28 @@ For Phase I of this project, we will apply the new look and feel to the followin
 
 === Detailed Description ===
 The best way to describe will be to show example screens.
-TODO: add screens
+
+
+=== Welcome Page ===
+
+[[File:OVirt-LAF-Welcome-Page.png]]
+
+
+=== 404 Page ===
+[[File:OVirt-LAF-404.png]]
+
+
+=== Login Page (web admin/user portal) ===
+[[File:OVirt-LAF-LoginPage.png]]
+
+
+=== Top Banner - web admin ===
+[[File:OVirt-LAF-Admin-Banner-Only.png]]
+
+
+=== Top Banner - user portal ===
+[[File:OVirt-LAF-Basic-Banner-Only.png]]
+[[File:OVirt-LAF-Extended-Banner-Only.png]]
 
 === Benefit to oVirt ===
 This is a major change. Both oVirt users and administrators will benefits from a superior user experience.
