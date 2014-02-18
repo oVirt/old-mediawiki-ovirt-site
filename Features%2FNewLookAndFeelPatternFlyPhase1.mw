@@ -24,24 +24,24 @@ For Phase I of this project, we will apply the new look and feel to the followin
 The best way to describe will be to show example screens.
 
 
-=== Welcome Page ===
+'''Welcome Page'''
 
 [[File:OVirt-LAF-Welcome-Page.png]]
 
 
-=== 404 Page ===
+''' 404 Page '''
 [[File:OVirt-LAF-404.png]]
 
 
-=== Login Page (web admin/user portal) ===
+''' Login Page (web admin/user portal) '''
 [[File:OVirt-LAF-LoginPage.png]]
 
 
-=== Top Banner - web admin ===
+''' Top Banner - web admin '''
 [[File:OVirt-LAF-Admin-Banner-Only.png]]
 
 
-=== Top Banner - user portal ===
+''' Top Banner - user portal '''
 [[File:OVirt-LAF-Basic-Banner-Only.png]]
 [[File:OVirt-LAF-Extended-Banner-Only.png]]
 
