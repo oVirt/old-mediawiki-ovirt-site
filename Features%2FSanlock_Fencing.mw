@@ -203,7 +203,7 @@ as hardware support, and is relevant only for SCSI storage types.  sanlock
 fencing can work with all shared storage types (e.g FCP, NFS, glusterfs).
 
 
-=== Why not use fence_sanlockd? ===
+==== Why not use fence_sanlockd? ====
 
 The fence_sanlock package provides a daemon that uses its own storage volume
 and sanlock to create a fencing solution. However, it requires a rather large
@@ -216,7 +216,7 @@ available and used by vdsm and sanlock. We think that it would be much easier
 to have a solution based on the existing infrastructure.
 
 
-=== Why not use VM based leases? ===
+==== Why not use VM based leases? ====
 
 If we add VM based leases, sanlock would kill those VMs when fencing a host,
 or when access to storage is lost. In this case, we can check that host was
@@ -234,7 +234,7 @@ and this may not be enough for some setups
 For this version, we prefer to have simpler solution.
 
 
-=== Why not use Disk based leases? ===
+==== Why not use Disk based leases? ====
 
 Using disk based leases, we can ensure that VMs are killed when sanlock loose
 the host id lease, even if we don't get a reset message acknowledge. It also
@@ -250,7 +250,7 @@ pass leases from one VM to another during migration.
 For this version, we prefer to have simpler solution.
 
 
-=== Comments and Discussion ===
+==== Comments and Discussion ====
 
 * Refer to [[Talk:Sanlock Fencing]]
 
