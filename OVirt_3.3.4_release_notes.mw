@@ -10,6 +10,15 @@
 ==oVirt Engine==
 
 ==VDSM==
+{{BZ|1052162}} - vdsm: pre-defined range for spice/vnc ports <BR>
+{{BZ|1059129}} - Avoid going into 'Paused' status during long lasting migrations<BR>
+{{BZ|1061561}} - vdsmd not starting on first run since vdsm logs are not included in rpm<BR>
+{{BZ|956741}} - vdsm: fix RTC offset<BR>
+{{BZ|1063433}} - netinfo.speed: avoid log spam<BR>
+{{BZ|1061621}} - vm: discover volume path from xml definition<BR>
+{{BZ|1063180}} - Removing vdsm-python-cpopen rpm creation from vdsm<BR>
+{{BZ|1064489}} - vm iface statistics: never report negative rates<BR>
+sos: plugin should ignore /var/run/vdsm/storage
 
 ==ovirt-node-plugin-vdsm==
 {{BZ|1019859}} - UI: AttributeError("'module' object has no attribute 'configure_logging'",) <BR>
