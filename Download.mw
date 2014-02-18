@@ -31,7 +31,7 @@ You can also [[porting oVirt | help us make oVirt easier to install everywhere]]
 ; Recommended web browsers for Engine:
 :* Mozilla Firefox 17 or later
 :* Internet Explorer 9 or later
-; Advanced
+; Advanced:
 :* Installing [[Building oVirt engine | Engine]] and [[Node Building | Node]] from source
 :* Experimental builds for [[ovirt build on debian/ubuntu | Debian/Ubuntu]], [//wiki.gentoo.org/wiki/OVirt Gentoo]
 :* Help [[porting oVirt | port]] oVirt to other distributions, or help [[supporting Chrome| support Chrome for the Engine]] 
