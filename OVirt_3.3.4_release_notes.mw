@@ -54,6 +54,34 @@ will upgrade to latest 3.3.
 
 =Bugs fixed=
 ==oVirt Engine==
+{{BZ|1044478}} - [engine-setup] Encoding issue in /var/lib/ovirt-engine/setup-history.txt<BR>
+{{BZ|1048790}} - Not possible to power off VM that failed migration.<BR>
+{{BZ|1052077}} - don't spawn pop-up for .vv file download in User Portal (because it can't open multiple consoles at one click anyway)<BR>
+{{BZ|1052082}} - In the event of a full host power outage (including fence devices) a user must wait 19 mins (3 x 3 minute timeouts + 10 minutes for the transaction reaper) until they can manually fence a host to relocate guests.<BR>
+{{BZ|1052137}} - [host-deploy] terminate event is not received by engine although sent by host<BR>
+{{BZ|1052162}} - New VMs use display network ports outside of documented 5634 to 6166 range<BR>
+{{BZ|1052873}} - Fix SPICE plugin behavior/support for IE 11<BR>
+{{BZ|1055162}} - Job and step tables not cleaned after the failure or completion of some tasks.<BR>
+{{BZ|1055625}} - [welcome page] duplicated content on welcome page<BR>
+{{BZ|1056307}} - RHEV 3.2 RHEV-M "Enforcing" typo in host reboot log message<BR>
+{{BZ|1056598}} - deleteImage task, which was started as part of snapshot creation (with save memory) roll-back remains running forever<BR>
+{{BZ|1057654}} - Extend important limits to their hard limit<BR>
+{{BZ|1058295}} - [engine] Editing running vm that has virtio-scsi disabled always fails<BR>
+{{BZ|1059085}} - Can't make persistent CDRom change while VM is running<BR>
+{{BZ|1059355}} - [engine-setup] engine-setup should detect if postgresql's shared_buffers are below active kernel.shmmax<BR>
+{{BZ|1059357}} - [RHEVM-SETUP] - remote db configuration. rhevm-setup asks for different configuartion than the dwh & reports setups<BR>
+{{BZ|1059358}} - RHEVM SETUP REMOTE_DB: postgresProvisioning remains none in answer file<BR>
+{{BZ|1059480}} - broken link in /var/lib/ovirt-engine/deployments cause setup to fail<BR>
+{{BZ|1060636}} - Dialogue for attaching ISOs is not logically ordered<BR>
+{{BZ|1061032}} - [AIO] support RFC2317 reverse DNS lookup<BR>
+{{BZ|1061165}} - Events are being pulled from audit_log in a very inefficient way<BR>
+{{BZ|1061185}} - Templates are being pulled from template view in a very inefficient way<BR>
+{{BZ|1063286}} - useDnsLookup flag is ignored at rhevm-manage-domains - krb5.conf file will always contain realms and "domain_realm" section<BR>
+{{BZ|1063860}} - [notifier] /etc/rc.d/init.d/ovirt-engine-notifier contains copy&paste header<BR>
+{{BZ|1063873}} - Multiple daemons are not "registered" in /etc/rc[0-6].d directory hierarchy (chkconfig)<BR>
+{{BZ|1064428}} - Support dual mode of password escaping within pgpassfile<BR>
+{{BZ|1064823}} - Update vnic_profile fails for VM vnic.<BR>
+{{BZ|1064877}} - webadmin: we cannot edit the disk alias while vm is running because the edit button is greyed out<BR>
 
 ==VDSM==
 {{BZ|1052162}} - vdsm: pre-defined range for spice/vnc ports <BR>
