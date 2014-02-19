@@ -395,6 +395,7 @@ Fixed in oVirt 3.4.0 beta 3:
 {{BZ|1018847}} - PRD34 - [RFE] Export storage domain maintenance mode confirmation<BR>
 {{BZ|1023484}} - [Admin Portal] Local DC - The Cluster is fully configured and ready for use.<BR>
 {{BZ|1031369}} - When trying to create a vNicProfile without a network, an invalid error is returned<BR>
+{{BZ|1031717}} - Force removal of DataCenter fails to remove vm_pool from DB<BR>
 {{BZ|1038980}} - PRD34 - [RFE] Add 'warnings' to Relocate VM disk "Move" and "Deactivate" actions<BR>
 {{BZ|1044089}} - Allow manual fence in connecting state<BR>
 {{BZ|1047887}} - Update vnic_profile fails for VM vnic.<BR>
@@ -409,15 +410,18 @@ Fixed in oVirt 3.4.0 beta 3:
 {{BZ|1056803}} - Creating a new VM fails with MAC_POOL_NOT_INITIALIZED<BR>
 {{BZ|1056922}} - Storage Live Migration should only snapshot the migrated disk<BR>
 {{BZ|1056999}} - [TEXT] engine-managed-domains - inconsistent cases in usage and error messages<BR>
+{{BZ|1057053}} - Change default display type for x86-64 VMs<BR>
 {{BZ|1057087}} - some administrators (admin@internal, admins added via engine-manage-domains?) are displayed with a 'user' icon by mistake.<BR>
 {{BZ|1057101}} - Guide me window - new is hidden by the icon<BR>
 {{BZ|1057136}} - Fail to add Event-Notification<BR>
 {{BZ|1057172}} - engine-managed-domains - insufficient validation of the "-report" parameter<BR>
 {{BZ|1057182}} - [RFE] engine-managed-domains - sort domains alphabetically when reporting<BR>
+{{BZ|1057214}} - Unable to add group via RESTAPI<BR>
 {{BZ|1057546}} - vdsm: cannot start a vm in read only with IDE disk type<BR>
 {{BZ|1058214}} - Action buttons in the Hosts/Network interfaces subtab show 3.0 and 3.1 action simultaneously<BR>
 {{BZ|1058957}} - rhevm-config output when failing to change password is easy to miss and doesn't give any context<BR>
 {{BZ|1059228}} - [events] Incorrect mapping: DWH_STOPPED - History Service Started<BR>
+{{BZ|1059713}} - Vm update not work via REST api<BR>
 {{BZ|1060516}} - SD becomes inaccessible while adding a new lun to it<BR>
 {{BZ|1060575}} - [RFE] OVF descriptor file data via the REST API for the Active VM<BR>
 {{BZ|1060792}} - Bookmarks panel is not refreshing upon adding/editing/removing a Bookmark<BR>
@@ -426,6 +430,7 @@ Fixed in oVirt 3.4.0 beta 3:
 {{BZ|1061727}} - [engine] Audit log event for failure to commit network changes appears as INFO messages<BR>
 {{BZ|1062172}} - useDnsLookup flag is ignored at rhevm-manage-domains - krb5.conf file will always contain realms and "domain_realm" section<BR>
 {{BZ|1062388}} - Guest NIC initialization uses tag "nics" instead of "nic"<BR>
+{{BZ|1062434}} - RHEV 3.3 rhevm-shell 'show vm' not returning all guest attributes<BR>
 {{BZ|1062646}} - [notifier] MAIL_SMTP_ENCRYPTION=tls falls back to plain-text SMTP if server does not advertise STARTTLS<BR>
 {{BZ|1063041}} - Unable to interact with user portal login dialog<BR>
 {{BZ|1063187}} - [REST API] duplicate "Nic" name from GuestNicsConfiguration<BR>
