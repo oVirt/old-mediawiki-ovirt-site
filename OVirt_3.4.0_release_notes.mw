@@ -377,6 +377,70 @@ Fixed in oVirt 3.4.0 beta 2:
 {{BZ|1060729}} - Change NIC type from sPAPR VLAN to any other type causes error when starting the VM (PPC)<BR>
 {{BZ|1061032}} - [AIO] support RFC2317 reverse DNS lookup<BR>
 
+Fixed in oVirt 3.4.0 beta 3:
+
+{{BZ|879662}} - user-portal/web-admin: refresh rate across tabs/sections should be identical (currently each tab has its own refresh rate)<BR>
+{{BZ|904029}} - [engine-manage-domains] should use POSIX parameter form and aliases as values<BR>
+{{BZ|910733}} - [Storage] [Direct LUN] Wrong event message when removing direct LUN disk.<BR>
+{{BZ|957939}} - PRD34 - [RFE] When changing the cluster and data centre compatibility versions, it should be clearly stated that changing from version 3.0 makes the data domains incompatible with RHEV 3,0 and roll back will not be possible.<BR>
+{{BZ|960997}} - [REST-API] add descriptions to import vm/template SD source/destination params in RSDL<BR>
+{{BZ|962180}} - engine: host stuck on Unassigned when moving from status Maintenance  when storage is not availble from the host<BR>
+{{BZ|969641}} - [RFE] Able to detach the ISO domain from the DataCenter though iso is attached and mounted in the VM<BR>
+{{BZ|969789}} - engine: can't live migrate a disk if the vm also has an inactive disk attached on a domain which is in maintenance<BR>
+{{BZ|975114}} - engine: no CanDoAction for creating vm from snapshot when snapshot has a disk on a maintenance domain<BR>
+{{BZ|1001976}} - manage domains should try to resolve FQDNs provided by -ldapServers<BR>
+{{BZ|1006439}} - Can not do scan alignment to several disks simultaneously. Scan alignment option is greyed out.<BR>
+{{BZ|1013631}} - No email notification sent when host recovers from previously reported condition<BR>
+{{BZ|1014859}} - [RFE] improve context-sensitive help csv mapping files<BR>
+{{BZ|1018847}} - PRD34 - [RFE] Export storage domain maintenance mode confirmation<BR>
+{{BZ|1023484}} - [Admin Portal] Local DC - The Cluster is fully configured and ready for use.<BR>
+{{BZ|1031369}} - When trying to create a vNicProfile without a network, an invalid error is returned<BR>
+{{BZ|1038980}} - PRD34 - [RFE] Add 'warnings' to Relocate VM disk "Move" and "Deactivate" actions<BR>
+{{BZ|1044089}} - Allow manual fence in connecting state<BR>
+{{BZ|1047887}} - Update vnic_profile fails for VM vnic.<BR>
+{{BZ|1047965}} - OVF descriptor file data via the REST API for the Active VM<BR>
+{{BZ|1048356}} - Source cluster and dc does not show up in Power Management tab while editing a previous added host [pm_proxy_preferences]<BR>
+{{BZ|1052149}} - no square-loading-animation when changing left-pane-tree selection<BR>
+{{BZ|1053544}} - [RFE] allow importing glance image as a template<BR>
+{{BZ|1053740}} - Missing storage allocation checks when extending a disk<BR>
+{{BZ|1054080}} - gracefully warn about unsupported upgrade from legacy releases<BR>
+{{BZ|1055161}} - [engine][network] Missing audit log for mass operations<BR>
+{{BZ|1056169}} - [engine-backend] [RO-disks] snapshot creation includes RO disks<BR>
+{{BZ|1056803}} - Creating a new VM fails with MAC_POOL_NOT_INITIALIZED<BR>
+{{BZ|1056922}} - Storage Live Migration should only snapshot the migrated disk<BR>
+{{BZ|1056999}} - [TEXT] engine-managed-domains - inconsistent cases in usage and error messages<BR>
+{{BZ|1057087}} - some administrators (admin@internal, admins added via engine-manage-domains?) are displayed with a 'user' icon by mistake.<BR>
+{{BZ|1057101}} - Guide me window - new is hidden by the icon<BR>
+{{BZ|1057136}} - Fail to add Event-Notification<BR>
+{{BZ|1057172}} - engine-managed-domains - insufficient validation of the "-report" parameter<BR>
+{{BZ|1057182}} - [RFE] engine-managed-domains - sort domains alphabetically when reporting<BR>
+{{BZ|1057546}} - vdsm: cannot start a vm in read only with IDE disk type<BR>
+{{BZ|1058214}} - Action buttons in the Hosts/Network interfaces subtab show 3.0 and 3.1 action simultaneously<BR>
+{{BZ|1058957}} - rhevm-config output when failing to change password is easy to miss and doesn't give any context<BR>
+{{BZ|1059228}} - [events] Incorrect mapping: DWH_STOPPED - History Service Started<BR>
+{{BZ|1060516}} - SD becomes inaccessible while adding a new lun to it<BR>
+{{BZ|1060575}} - [RFE] OVF descriptor file data via the REST API for the Active VM<BR>
+{{BZ|1060792}} - Bookmarks panel is not refreshing upon adding/editing/removing a Bookmark<BR>
+{{BZ|1060994}} - [RHSC] - Rebalance icon in the activities column chnages to unknown (?)<BR>
+{{BZ|1061724}} - [engine] Redundant Commit Network Changes command is sent to host when cluster is changed<BR>
+{{BZ|1061727}} - [engine] Audit log event for failure to commit network changes appears as INFO messages<BR>
+{{BZ|1062172}} - useDnsLookup flag is ignored at rhevm-manage-domains - krb5.conf file will always contain realms and "domain_realm" section<BR>
+{{BZ|1062388}} - Guest NIC initialization uses tag "nics" instead of "nic"<BR>
+{{BZ|1062646}} - [notifier] MAIL_SMTP_ENCRYPTION=tls falls back to plain-text SMTP if server does not advertise STARTTLS<BR>
+{{BZ|1063041}} - Unable to interact with user portal login dialog<BR>
+{{BZ|1063187}} - [REST API] duplicate "Nic" name from GuestNicsConfiguration<BR>
+{{BZ|1063276}} - Cannot login as admin@internal<BR>
+{{BZ|1063443}} - Type converters in XML schema confuse Java SDK generator<BR>
+{{BZ|1063869}} - allinone fails on upgrade - no admin password<BR>
+{{BZ|1063883}} - Cannot run VM for windows VM if sysprep is enabled<BR>
+{{BZ|1064227}} - task list in Webadmin - jobs disappear while still running<BR>
+{{BZ|1064572}} - restapi JAXBMarshallingException are not propogated<BR>
+{{BZ|1064903}} - engine-backup --mode=restore should point to documentation on failure<BR>
+{{BZ|1065615}} - When adding a user that belongs to a group, it does not inherit the group permissions<BR>
+{{BZ|1065713}} - [NetworkLabels] LABELED_NETWORK_ATTACHED_TO_WRONG_INTERFACE entry in AppErrors is split to two lines<BR>
+{{BZ|1065727}} - Disk name doesn't get assigned automatically after a CREATE command.<BR>
+{{BZ|1065941}} - Queries generated for data centers don't take into account the replacement of "type" with "local"<BR>
+
 ==VDSM==
 {{BZ|1036883}} - VM fails to start when qemu.conf's spice_tls conflicts with vdsm.conf's ssl<BR>
 {{BZ|1059757}} - domain monitor does not stop during disconnectStoragePool on HSM during destroyStoragePool flow on SPM<BR>
