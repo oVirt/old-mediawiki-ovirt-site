@@ -450,7 +450,6 @@ Fixed in oVirt 3.4.0 beta 3:
 ==VDSM==
 {{BZ|1036883}} - VM fails to start when qemu.conf's spice_tls conflicts with vdsm.conf's ssl<BR>
 {{BZ|1059757}} - domain monitor does not stop during disconnectStoragePool on HSM during destroyStoragePool flow on SPM<BR>
-{{BZ|1026868}} -  Direct LUN is not being updated after resizing<BR>
 {{BZ|1059108}} - Failed creating storage pool - AttributeError: 'module' object has no attribute 'MAX_DOMAINS'<BR>
 {{BZ|1063472}} - fenceNode passes wrong argument to the fence agent<BR>
 {{BZ|980054}} - [LOG][vdsm] KeyError: 'domainID' during teardownImage in power-off to VM<BR>
