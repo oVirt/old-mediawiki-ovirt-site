@@ -470,7 +470,6 @@ Fixed in oVirt 3.4.0 beta 3:
 {{BZ|1034172}} - Cloud-Init: generated config-drive CD image is world-readable<BR>
 {{BZ|1015009}} - Default route is not set properly for management network if downstream/upstream engine and VDSM are mixed<BR>
 {{BZ|987832}} - failed to add ovirtmgmt bridge when the host has static ip<BR>
-{{BZ|1051860}} - yum transaction on rhel7: reading information on service vdsmd: No such file or directory<BR>
 {{BZ|1035314}} - vdsm-hook-nestedvt uses kvm_intel-only syntax<BR>
 {{BZ|1044060}} - [RFE] Prevent RHEV from requiring hwaddr lines within ifcfg files<BR>
 {{BZ|1024236}} - Can't activate a host due to /etc/sudoer configuration<BR>
