@@ -504,7 +504,13 @@ Fixed in oVirt 3.4.0 beta 3:
 {{BZ|1040938}} - [DWH-SETUP] - remote user password is asked twice for authentication<BR>
 {{BZ|1063873}} - Multiple daemons are not "registered" in /etc/rc[0-6].d directory hierarchy (chkconfig)<BR>
 
-
+== oVirt Log Collector ==
+{{BZ|1035825}} - Collect ovirt-engine runtime configuration files<BR>
+{{BZ|1035826}} - Do not collect .pgpass files from RHEV-M.<BR>
+{{BZ|1041749}} - rhevm-log-collector garbles the tty when multiple hosts are gathered and ssh is called with the "-t" flag<BR>
+{{BZ|1046309}} - [ovirt-engine-log-collector] engine-ca -> cert-file option switch, support old option name<BR>
+{{BZ|1055517}} - log-collector accesses /api instead of /ovirt-engine/api<BR>
+{{BZ|1059654}} - [engine-log-collector] `engine-log-collector --help' requires root credentials<BR>
 
 [[Category:Documentation]]
 [[Category:Releases]]
