@@ -16,7 +16,7 @@ This feature would help users setup rules to automatically scale out their appli
 
 === Current status ===
 * Status: proposal
-* Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
+* Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY}} by {{REVISIONUSER}}
 
 === Detailed Description ===
 
