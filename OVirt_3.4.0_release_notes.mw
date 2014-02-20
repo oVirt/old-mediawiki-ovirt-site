@@ -498,5 +498,13 @@ Fixed in oVirt 3.4.0 beta 3:
 {{BZ|1058257}} - engine_page: use vdsm to detect mgmt interface <BR>
 {{BZ|1057453}} - engine_page: display url/port only on available <BR>
 
+== oVirt DWH ==
+{{BZ|896139}} - PRD34 - [RFE] collect the "created_by" field of a VM into it's configuration history<BR>
+{{BZ|1023754}} - [RFE] add trigger to stop etl connection via engine db value.<BR>
+{{BZ|1040938}} - [DWH-SETUP] - remote user password is asked twice for authentication<BR>
+{{BZ|1063873}} - Multiple daemons are not "registered" in /etc/rc[0-6].d directory hierarchy (chkconfig)<BR>
+
+
+
 [[Category:Documentation]]
 [[Category:Releases]]
