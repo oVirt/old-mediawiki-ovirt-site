@@ -512,5 +512,9 @@ Fixed in oVirt 3.4.0 beta 3:
 {{BZ|1055517}} - log-collector accesses /api instead of /ovirt-engine/api<BR>
 {{BZ|1059654}} - [engine-log-collector] `engine-log-collector --help' requires root credentials<BR>
 
+== oVirt ISO Uploader ==
+{{BZ|1032689}} - [ovirt-engine-iso-uploader] engine-ca -> cert-file option switch, support old option name<BR>
+{{BZ|1058807}} - [engine-iso-uploader] /etc/ovirt-engine/isouploader.conf is world readable (can contain password!)<BR>
+
 [[Category:Documentation]]
 [[Category:Releases]]
