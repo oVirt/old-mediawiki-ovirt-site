@@ -16,7 +16,7 @@ This feature will move allow for plugins to be installed while a node is running
 
 === Current status ===
 Not Started
-* Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
+* Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY}} by {{REVISIONUSER}}
 
 
 === Detailed Description ===
