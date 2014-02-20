@@ -112,10 +112,11 @@ OVF on any domain<BR/>
 <BR/>
 Quota - The user might import disks which will extend a defined Quota in DC.
 This scenario is similar to when a user enforce a quota though it already been extended.<BR/>
-The default behaviour will treet that by letting the user still use the resources though he will not be able to create any more disks.<BR/>
+The default behaviour will treat that by letting the user still use the resources though he/she will not be able to create any more disks.<BR/>
 <BR/>
-Local Storage Domain - It should be the same behaviour as any other NFS Storage Domain.
-Gluster
+Local Storage Domain - Should be the same behaviour as any other NFS Storage Domain.<BR/>
+Gluster<BR/>
 PosixFS
+
 === Comments and Discussion ===
 * Refer to [[Talk: ImportStorageDomain ]]
