@@ -504,6 +504,13 @@ Fixed in oVirt 3.4.0 beta 3:
 {{BZ|1040938}} - [DWH-SETUP] - remote user password is asked twice for authentication<BR>
 {{BZ|1063873}} - Multiple daemons are not "registered" in /etc/rc[0-6].d directory hierarchy (chkconfig)<BR>
 
+== oVirt Reports ==
+{{BZ|961677}} - [RFE] ovirt-engine URI rework<BR>
+{{BZ|1023751}} - [RFE] Create Bin Overrider for application context files changes we do in JRS<BR>
+{{BZ|1037667}} - [REPORTS] - dashboard results an error, after reports were installed<BR>
+{{BZ|1040943}} - [REPORTS-SETUP] - remote user password is asked twice for authentication<BR>
+
+
 == oVirt Log Collector ==
 {{BZ|1035825}} - Collect ovirt-engine runtime configuration files<BR>
 {{BZ|1035826}} - Do not collect .pgpass files from RHEV-M.<BR>
