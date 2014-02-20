@@ -113,7 +113,7 @@ creating or updating a VM. If user will try to create a new stateful VM with thi
 When doing GET, this property will be propagated from backend, set to 'false' for stateful VMs.<br>
 
 '''REST relevant patches'''
-http://gerrit.ovirt.org/#/c/23453/
+http://gerrit.ovirt.org/#/c/23453/ <br>
 http://gerrit.ovirt.org/#/c/23560/
 
 ==== DB ====
