@@ -28,9 +28,9 @@ The Vdsm kernel parameters are:
 ::An example: 
 ::management_server=vm-17-42.qa.eng.blg.redhat.com:10443
 :management_server_fingerprint:
-::This is the RHEVM CA certificate fingerprint, as it is produced by executing on RHEVM/Engine machine
-'grep SSLCACertificateFile /etc/httpd/conf.d/ssl.conf' 
-'openssl x509 -fingerprint -in /etc/pki/ovirt-engine/apache-ca.pem'
+::This is the RHEVM CA certificate fingerprint, as it is produced by executing on RHEVM/Engine machine:
+:: grep SSLCACertificateFile /etc/httpd/conf.d/ssl.conf
+:: openssl x509 -fingerprint -in /etc/pki/ovirt-engine/apache-ca.pem
 ::An example:
 ::management_server_fingerprint=49:2A:EB:4C:1F:52:A5:59:F6:2B:5C:AE:B4:B5:14:77:4E:D2:0D:6C
 :rhevm_admin_password:
