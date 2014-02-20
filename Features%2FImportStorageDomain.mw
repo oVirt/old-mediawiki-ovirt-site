@@ -97,8 +97,9 @@ An import screen for iSCSI Storage Domain :<BR/>
 [[File:Iscsi.jpeg|600px]]
 
 === Permissions ===
-There should not be changes is detach storage domain
-Every user with permissions to create a Storage Domain on the Data Center, will be able to import a storage domain as well.
+* No additional permissions will be added.
+* The role for importing a Storage Domain should be CREATE_STORAGE_DOMAIN
+Open issue: Could be also that CREATE_VM for creating VMs.
 
 === Future Work ===
 * Detach Stroage Domain: Eventually if the user will choose all the storage domains at once then we will detach them all at once (Need to take into consideration this message could nag the user since we might always have VMs with disks on other storage domains)
