@@ -11,7 +11,7 @@ The feature will be enabled for 3.1 data-centers and above, regardless cluster l
 === Current status ===
 * Ready
 * Planned for ovirt-engine-3.4
-* Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}
+* Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY}} by {{REVISIONUSER}}
 
 === Benefit to oVirt ===
 Having this feature simplifies significantly the maintenance of hosts within the system: <br>
