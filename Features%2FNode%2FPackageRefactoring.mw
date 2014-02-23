@@ -21,7 +21,7 @@ Moving around some dependencies and features so that other images can minimize t
 * What needs to be refactored out
 * What sub-packages will there be
 
-* Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY}} by {{REVISIONUSER}}
+* Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by {{REVISIONUSER}}
 
 === Detailed Description ===
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
