@@ -527,7 +527,7 @@ Fixed in oVirt 3.4.0 beta 3:
 
 == oVirt Image Uploader ==
 {{BZ|1046303}} - [ovirt-engine-image-uploader] engine-ca -> cert-file option switch, support old option name<BR>
-
+{{BZ|1058810}} - [engine-image-uploader] /etc/ovirt-engine/imageuploader.conf is world readable (can contain password!)<BR>
 
 [[Category:Documentation]]
 [[Category:Releases]]
