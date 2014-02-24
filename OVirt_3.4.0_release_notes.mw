@@ -316,6 +316,7 @@ will upgrade to latest 3.3.
 {{BZ|1061774}} - Memory snapshot on PPC64<BR>
 {{BZ|1057178}} - Migration on the ppc64 platform<BR>
 {{BZ|1035279}} - Allow to disable SSO per VM<BR>
+{{BZ|1029441}} - Fix Control-Alt-Delete functionality in console options<BR>
 
 Fixed in oVirt 3.4.0 beta 2:
 
