@@ -32,6 +32,6 @@ The tool has following limitations that should be considered when using it in oV
 # Package fence-agents-kdump doesn't contain any scripts to integrate them into kdump kernel
 
 =Fencing flow with fence kdump=
-Fence kdump will be inserted into current fencing flow just before hard fencing, details are in [[Automatic_Fencing#Automatic_Fencing_in_oVirt_3.5]].
+Fence kdump will be inserted into current fencing flow just before hard fencing, details are in [[Automatic_Fencing#Automatic_Fencing_in_oVirt_3.5|Automatic Fencing in oVirt 3.5]].
 
 =Host configuration=
