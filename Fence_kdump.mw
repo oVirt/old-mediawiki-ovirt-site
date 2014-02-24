@@ -1,5 +1,7 @@
 ''It's only proposal, not yet finalized''
 
+=About kdump=
+
 =About fence kdump=
 Fence kdump is a method how to prevent fencing a host during its kdump process. The tool is packaged in fence-agents-kdump package and it contains two commands:
 * <tt>fence_kdump_send</tt>
@@ -11,6 +13,7 @@ The tool has following limitations that should be considered when using it in oV
 # <tt>fence_kdump_send</tt> can send packet only to IPs specified as its command line argument (it cannot send packets to level2 broadcast address)
 # <tt>fence_kdump</tt> return success exit code only for one host at the time, messages from other hosts are ignored
 # Package fence-agents-kdump doesn't contain any scripts to integrate them into kdump kernel
+
 
 =Prerequisities=
 
