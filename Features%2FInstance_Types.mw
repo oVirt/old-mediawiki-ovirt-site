@@ -144,53 +144,53 @@ The specific values means:
 |-
 | migration_support || migration support options || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| userdefined_properties || custom properties || N || || N || || || N || || || Y || || Y || N || N || User || 
+| userdefined_properties || custom properties || Y || || N || || || N ? || || || Y || || Y || N || N || Instance?/Template/User || 
 |-
-| predefined_properties || custom properties || N || || N || || || N || || || Y || || Y || N || N || merge || 
+| predefined_properties || custom properties || Y || || N || || || N ? || || || Y || || Y || N || N || Instance?/Template/User || 
 |-
 | min_allocated_mem || memory guaranteed || Y || || N || || || Y || || || Y || || Y || N || Y || Instance || 
 |-
 | child_count || internal. for template, not in use? || N || || N || || || N || || || N || || || || || || 
 |-
-| quota_id || link to quota || Y || || Y || || || N || || || Y || || N || Y || N || User || Merge of template and image with image taking priority
+| quota_id || link to quota || Y || || Y || || || N || || || Y || || Y || Y || N || User || 
 |-
-| allow_console_reconnect || allow reconnect to console || Y || || N || || || N || || || Y || console reconnect || Y || N || N || User || 
+| allow_console_reconnect || allow reconnect to console || Y || || N || || || N || || || Y || console reconnect || Y || N || N || Instance/Template/User || 
 |-
-| cpu_pinning || cpu pinning || N || || N || || || N || || || Y || || || || || empty || For future
+| cpu_pinning || cpu pinning || N || || N || || || N || || || Y || || Y || N || N || User || 
 |-
-| is_smartcard_enabled || smartcard enabled || Y || || N || || || Y || || || Y || || Y || N || N || Instance || 
+| is_smartcard_enabled || smartcard enabled || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| payload || payload (device, not in vm_static) || Y || || N || || || N || || || Y || || || || || Instance || Not in GUI
+| payload || payload (device, not in vm_static) || Y || || N || || || N || || || Y || || || || || Instance || Not in GUI, REST only
 |-
-| thin/clone || || N || || N || || || N || || || Y || || Y || Y || N || User || 
+| thin/clone || || N || || N || || || N || || || Y || || Y || N || N || User || 
 |-
-| soundcard || payload (device, not in vm_static) || N || || N || || || Y || || || Y || || || || || Instance || Not in GUI. Setting should include soundcard type which is dependant on the OS.
+| soundcard || payload (device, not in vm_static) || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| Balloon || payload (device, not in vm_static) || N || || N || || || Y || || || Y || || || || || Instance || Not in GUI
+| Balloon || payload (device, not in vm_static) || N || || N || || || Y || || || Y || || Y || N || Y || Instance/User || 
 |-
-| network interface || binding of NIC to logical network || N || || N || || || Y || || can be empty || Y || || N || Y || N || Instance || 
+| network interface || binding of NIC to logical network || N || || N || || || Y || || || Y || || N || Y || N || Instance/Template/User || 
 |-
 | instance_type_id || internal. link to vm's instance type || N || || N || || || N || || || Y || || N || Y || N || User || 
 |-
-| image_type_id || internal. link to vm's image type || N || || N || || || N || || || Y || || N || Y || N || Empty || 
+| image_type_id || internal. link to vm's image type || N || || N || || || N || || || Y || || N || Y || N || User || 
 |-
-| host_cpu_flags || use host cpu flags || N || || N || || || N || || || Y || || || || || User || 
+| host_cpu_flags || use host cpu flags || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
 | db_generation || internal || N || || N || || || N || || || N || || || || ||  || Not in GUI
 |-
-| is_delete_protected || protection from accidental deletion || Y || || N || || || N || || || Y || || Y || Y || N || User ||
+| is_delete_protected || protection from accidental deletion || Y || || N || || || N || || || Y || || N || Y || N || Template/User ||
 |-
 | is_disabled || disabled-template (for templates only) || Y || || N || || || N || || || N || || || || || ||
 |-
-| vncKeyboardLayout || VNC specific keyboard layout || Y || || N || || || N || || || Y || || Y || Y || N || User ||
+| vncKeyboardLayout || VNC specific keyboard layout || Y || || N || || || N || || || Y || || Y || Y || N || Template/User ||
 |-
-| tunnelMigration || use libvirt-to-libvirt communication || N || || N || || || N || || || || || || ||  || Instance || Not in GUI
+| tunnelMigration || use libvirt-to-libvirt communication || N || || N || || || N || || || || || || ||  || || Not in GUI
 |-
-| migrationDowntime || max downtime during migration || Y || || N || || || Y || || || Y || || Y || N || Y || Instance ||
+| migrationDowntime || max downtime during migration || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User ||
 |-
-| watchdog || consists of model and action || Y || || N || || || N || || || Y || || Y || N || N || User ||
+| watchdog || consists of model and action || Y || || N || || || N? || || || Y || || Y || N || N? || Instance?/Template/User ||
 |-
-| sso method || none or guest agent || Y || || N || || || Y || || || Y || || Y || N || Y || Instance ||
+| sso method || none or guest agent || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User ||
 |-
 |}
 
