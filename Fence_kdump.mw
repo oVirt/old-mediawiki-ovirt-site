@@ -2,6 +2,23 @@
 
 =About kdump=
 
+The kdump crash recovery mechanism provides way how to save kernel core dump to local or remote storage and reboot host afterwards so host will became operational asap. This is done by booting kdump kernel with specially configured initramfs from the context of regular kernel. 
+
+The kdump service support is contained in kexec-tools package:
+# Configuration of kdump behavior is defined in <tt>/etc/kdump.conf</tt>
+# The initramfs file can be created from <tt>/etc/kdump.conf</tt> file executing <tt>kdumpctl restart</tt> (Fedora 19) or <tt>service kdump restart</tt> (RHEL 6)
+
+'''Attention:''' To enabled kdump these two things are needed:
+# Main kernel has to be booted with <tt>crashkernel=</tt> parameter
+# kdump service has to be enabled and started
+
+Following options can be specified in in <tt>/etc/kdump.conf</tt> file:
+# Place where to store kernel core dump, currently it can be local, NFS, SSH or iSCSI (by default core dumps are saved to <tt>/var/crash</tt>)
+# Action that will be executed if core dump collection failed, currently it can be reboot(default), halt, poweroff, shell or dump_to_rootfs
+# Scripts/commands to be executed before/after core dump collection started/finished
+# Extra binaries to include into initramfs
+# And other not so important for oVirt options
+
 =About fence kdump=
 Fence kdump is a method how to prevent fencing a host during its kdump process. The tool is packaged in fence-agents-kdump package and it contains two commands:
 * <tt>fence_kdump_send</tt>
