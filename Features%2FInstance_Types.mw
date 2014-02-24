@@ -58,7 +58,7 @@ A user can add volumes to the virtual machines, which are persistent disks typic
 '''Template'''<br>
 The old template used in the oVirt until now. User will be able to combine the VM from the triple instance type, image and template.
 
---[[User:TJelinek|TJelinek]] ([[User talk:TJelinek|talk]]) 10:30, 13 February 2014 (GMT)== Design ==
+== Design ==
 The following table enumerates all the fields involved and also how they are related to the entities. 
  
 The specific columns means:
@@ -84,15 +84,15 @@ The specific values means:
 |-
 | vm_guid || Internal unique ID || N || || N || || || N || || || N || || || || || Generated || 
 |-
-| vm_name || name set by user for vm and template || Y || || Y || || || Y || create instance || we could autogenerate a default if not passed || Y || || N || Y || N || User || 
+| vm_name || name set by user for vm and template || Y || || Y || || || Y || || || Y || || N || Y || N || User || 
 |-
-| mem_size_mb || Memory Size || Y || || N || || || Y || create instance || || Y || || Y || Y || Y || Instance || 
+| mem_size_mb || Memory Size || Y || || N || || || Y ||  || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| vmt_guid || Internal link to template object || N || || N || || || N || || || Y || || Y || Y || N || User || 
+| vmt_guid || Internal link to template object || N || || N || || || N || || || Y || || N || Y || N || User || 
 |-
-| OS || Operating System Type || Y || || Y || || || N || || || Y || || Y || Y || Y || Image || 
+| OS || Operating System Type || Y || || Y || || || N || || || Y || || N || Y || N || Image/Template/User || 
 |-
-| description || description set by user for vm and template || Y || || Y || || || Y || create instance ||  || Y || || N || Y || N || User ||
+| description || description set by user for vm and template || Y || || Y || || || Y || ||  || Y || || N || Y || N || User ||
 |-
 | vds_group_id || vm cluster || Y || || Y || || || N || change cluster || || Y || || N || Y || N || User || 
 |-
@@ -106,43 +106,43 @@ The specific values means:
 |-
 | is_auto_suspend || legacy from auto-suspend feature, not in use || D || || D || || || D || || || D || || || || || D || 
 |-
-| num_of_sockets || umber of sockets || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
+| num_of_sockets || umber of sockets || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| cpu_per_socket || cpu per socket || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
+| cpu_per_socket || cpu per socket || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| usb_policy || usb policy || Y || || N || || || Y || || || Y || || Y || N || N || User ||
+| usb_policy || usb policy || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User ||
 |-
-| time_zone || time zone || Y || || N || || || N || || || Y || || Y || Y || N || User || 
+| time_zone || time zone || Y || || N || || || N || || || Y || || Y || Y || N || Template/User || 
 |-
-| is_stateless || stateless flag || Y || || N || || || N || || || Y || || N || Y || N || User || Needs to be set on per disk level as well
+| is_stateless || stateless flag || Y || || N || || || N || || || Y || || N || Y || N || Template/User || Needs to be set on per disk level as well
 |-
 | fail_back || legacy from fail-back feature, not in use || D || || D || || || D || || || D || || || || || D || 
 |-
-| dedicated_vm_for_vds || specific host for running vm || Y || || N || || || N || || || Y || || Y || Y || N || null || 
+| dedicated_vm_for_vds || specific host for running vm || Y || || N || || || N || || || Y || || Y || N || N || Template/User || 
 |-
-| auto_startup || HA || Y || || N || || || Y || || || Y || || Y || Y || N || User || 
+| auto_startup || HA || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| vm_type || vm type (server/desktop) || Y || || N || || || N || || || Y || || N || Y || N || User || 
+| vm_type || vm type (server/desktop) || Y || || N || || || N || || || Y || || N || Y || N || Template/User || 
 |-
-| nice_level || vm nice level || Y || || N || || || N || || || Y || || Y || N || N || User || Currently not on GUI (but present in REST). Do we want it there?
+| nice_level || vm nice level || Y || || N || || || N || || || Y || ||  ||  ||  ||  || Not on GUI (but present in REST).
 |-
-| default_boot_sequence || boot sequence || Y || || N || || || Y || || || Y || || Y || Y || N || Instance || 
+| default_boot_sequence || boot sequence || Y || || N || || || Y || || || Y || || Y || Y || N || Instance/Template/User || 
 |-
-| default_display_type || display type(SPICE, VNC)|| Y || || N || || || Y || || || Y || || Y || Y || N || Instance ||
+| default_display_type || display type(SPICE, VNC)|| Y || || N || || || Y || || || Y || || Y || Y || N || Instance/Template/User ||
 |-
-| priority || priority || Y || || N || || || Y || || || Y || || Y || Y || Y || Instance || 
+| priority || priority || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| iso_path || cd || Y || || Y || || || N || || || Y || || Y || Y || N || Image || 
+| iso_path || cd || Y || || Y ? || || || N || || || Y || || Y || Y || N || Image?/User || 
 |-
-| origin || internal. where the vm was created || N || || N || || || N || || || N || || || || || Instance || 
+| origin || internal. where the vm was created || N || || N || || || N || || || N || || || || || || 
 |-
-| initrd_url || boot params || Y || || Y || || || N || || || Y || || Y || Y || N || Image || 
+| initrd_url || boot params || Y || || Y || || || N || || || Y || || Y || N || N || Image/User || 
 |-
-| kernel_url || boot params || Y || || Y || || || N || || || Y || || Y || Y || N || Image || 
+| kernel_url || boot params || Y || || Y || || || N || || || Y || || Y || N || N || Image/User || 
 |-
-| kernel_params || boot params || Y || || Y || || || N || || || Y || || Y || Y || N || Image || Only visible when kernel url is specified in image. 
+| kernel_params || boot params || Y || || Y || || || N || || || Y || || Y || N || N || Image/User || Only visible when kernel url is specified in image. 
 |-
-| migration_support || migration support options || Y || || N || || || Y || || || Y || || Y || Y || Y || true || 
+| migration_support || migration support options || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
 | userdefined_properties || custom properties || N || || N || || || N || || || Y || || Y || N || N || User || 
 |-
