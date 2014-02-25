@@ -1,0 +1,77 @@
+
+= Mocking Static Objects =
+Let say you have a Class you want to test, Class A.
+A uses a static reference in it methods<br>
+<pre>
+class a {
+    public void func() {
+        StaticObject.doLogic();
+    }
+}
+</pre>
+
+In cases you want to mock the behavior of the <code>StaticObject.doLogic()</code> method, you we need to have access to the static object, usually by a getter.
+This should be done before writing the jUnit tests, while you code.
+In our example:
+
+<pre>
+class a {
+    public void func() {
+        getStaticObject().doLogic();
+    }
+
+    public StaticObject getStaticObject() {
+        return StaticObject;
+    }
+}
+</pre>
+
+Now that you have an access method to the static object you mock the behavior of the <code>getStaticObject()</code> method, change it to return your mocked instance of the static object.
+
+<pre>
+@RunWith(MockitoJUnitRunner.class)
+class aTest {
+    @mock
+    StaticObject myStaticObject;
+
+    @spy
+    A a = new A();
+
+    @Test
+    public void doTest() {
+        doReturn(myStaticObject).when(a).getStaticObject();
+        ...
+        ...
+    }
+
+}
+</pre>
+
+After you assign <code>myStaticObject</code> to replace the existitng static object, you can mock method as usual.
+<pre>
+doReturn("test123").when(myStaticObject)..doLogic();
+</pre> 
+
+* note: due to performance issues it is not recomended to use PowerMockito.
+
+= Mocking Complex Objects =
+Let's say you are testing Class A, who has a member Class B, who has a member Class C, and you want to mock one of the Class C's methods.
+There's no easy way to do that, just to walk through the hierarchy .
+
+<pre>
+    @mock
+    B b;
+
+    @mock
+    C c;
+
+    @Test
+    public void doTest() {
+        doReturn(b).when(a).getB();
+        doReturn(c).when(b).getC();
+        doReturn("test123").when(c).doLogic();
+        ...
+        ...
+    }
+</pre>
+[[Category:Unit Testing Utilities]]
