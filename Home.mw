@@ -33,7 +33,7 @@ solidifies oVirt as a leading KVM management application and open
 source alternative to VMware vSphere.
 
 oVirt is available now for Fedora 19 and Red Hat Enterprise Linux 6.5
-(or similar).
+(or similar to RHEL).
 
 This release of oVirt includes numerous bug fixes.
 See the release notes for a list of the new features and bugs fixed.
