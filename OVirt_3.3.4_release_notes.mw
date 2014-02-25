@@ -51,6 +51,7 @@ will upgrade to latest 3.3.
 = What's New in 3.3.4? =
 
 =Known issues=
+* Host deployment may fail on EL6 system due to a recent tuned regression ({{BZ|1069119}}, {{BZ|1069245}}). Please downgrade tuned to previous version while waiting for a new tuned package solving this issue.
 
 =Bugs fixed=
 ==oVirt Engine==
