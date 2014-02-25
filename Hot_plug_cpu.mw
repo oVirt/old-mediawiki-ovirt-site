@@ -220,6 +220,7 @@ pseudo-code for building a VM xml we send to VDSM
 === Documentation / External references ===
 * [https://bugzilla.redhat.com/show_bug.cgi?id=1036492 oVIrt VDSM RFE]
 * [http://wiki.qemu.org/Features/CPUHotplug QEMU hotplug cpu feature wiki page]
+* [https://www.kernel.org/doc/Documentation/cpu-hotplug.txt Linux Kernel Documentation for hotplug]
 
 === Open Issues ===
 ===== Possible error when migrating a VM which its max cpu is lower than what currently in  ''''' <vcpu current=n>m</vcpu>''''' =====
