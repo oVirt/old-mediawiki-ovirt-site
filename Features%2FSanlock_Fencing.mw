@@ -69,12 +69,12 @@ it responsive again.
 
 === sanlock fencing - theory of operation ===
 
-Fencing using sanlock include these steps:
+Fencing using sanlock includes the following steps:
 
 # Engine picks a proxy host
 # Engine sends sanlock fencing request to the proxy host
-# Proxy host send sanlock fencing request sanlock daemon
-# Engine poll sanlock fencing status until fencing request is finished
+# Proxy host sends sanlock fencing request to the sanlock daemon
+# Engine polls sanlock fencing status until fencing request is finished
 # Engine waits until host is up
 
 
