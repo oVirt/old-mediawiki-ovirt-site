@@ -4,11 +4,11 @@
 <startfeed/>
 </noinclude>
 
-{{Event|name=[//lanyrd.com/2014/infra-at-scale/ Infrastructure.Next @ SCALE]|date=February 21, 2014|location=Los Angeles, CA|lead=Infrastructure.Next is a new series of events that will highlight cloud, virtualization, and enterprise tools and show the future of the data center. }}
-
 {{Event|name=[//www.devnation.org/ DevNation]|date=April 13-16, 2014|location=San Francisco, CA|lead=An open source bazaar of a conference for application developers and maintainers.}}
 
 {{Event|name=[//www.redhat.com/summit/ Red Hat Summit]|date=April 14-17, 2014|location=San Francisco, CA|lead=The 2014 Red Hat Summit is meant for anyone looking to increase their understanding of open source technology and identify powerful solutions for their business needs.}}
+
+{{Event|name=[//linuxfestnorthwest.org/ LinuxFest Northwest @ SCALE]|date=April 26-27, 2014|location=Bellingham, WA|lead=LinuxFest Northwest is a grassroots, free and inexpensive event, that is organized by people just like you.}}
 <noinclude>
 <endfeed/>
 
