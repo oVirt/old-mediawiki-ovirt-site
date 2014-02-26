@@ -49,7 +49,7 @@ While the host is unreachable, we can communicate with it using the shared
 storage.  Since oVirt 3.1, every host is running the sanlock daemon, used to
 acquire leases on the shared storage. Sanlock fencing is using the available
 sanlock daemon to send a fence request to the fenced host, and on the fenced
-host, the sanlock daemon reboot the machine.
+host, the sanlock daemon reboots the machine.
 
 === Fencing goals ===
 
@@ -124,9 +124,9 @@ status. Until the sanlock fencing command returns, vdsm will return the same
 status that other fencing agents return today when a host is stopping.
 
 We assume that sanlock request will return when sanlock on the fencing host is sure
-that the fenced host did receive the reset message, stopped renewing its host id lease,
+that the fenced host received the reset message, stopped renewing its host id lease,
 and enough time has passed, so the watcdog on the fenced host did reset the machine.
-We also asssume that the watchdog on the fenced host cannot fail when resetting the
+We also assume that the watchdog on the fenced host cannot fail when resetting the
 machine.
 
 When sanlock command is finished, the fencing thread will wait for the next
@@ -136,7 +136,7 @@ status to "Non-Responsive".
 At this point, engine can clear the VMs that were running on the fenced host and
 start them on another host.
 
-This step takes should take about 1-2 minutes, depending on sanlock configuration.
+This step should take about 1-2 minutes, depending on sanlock configuration.
 
 === Integration with existing mechanisms ===
 
@@ -152,9 +152,9 @@ changes.
 
 ==== Host fatal failures ====
 
-If a fenced host has a hardware failure, loose power, its kernel panics, or it cannot 
+If a fenced host has a hardware failure, looses power, its kernel panics, or it cannot 
 access storage, the host will stop renewing its lease. However, since we have no
-indication about the host status, we must assume that the host may write to storage
+indication about the host's status, we must assume that the host may write to storage
 any time. In this case we would not be able to fence the host using sanlock, and 
 manual fencing will be required.
 
