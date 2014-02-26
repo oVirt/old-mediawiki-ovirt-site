@@ -100,7 +100,7 @@ The specific values means:
 |-
 | vds_group_id || vm cluster || Y || || Y || || || N || change cluster || || Y || || N || Y || N || User || 
 |-
-| domain || directory services domain || Y || || N || || || N || || || Y || || Y || Y || N || User || 
+| domain || directory services domain || D || || D || || || D || || || || || || || || Part of VmInit field || 
 |-
 | creation_date || internal. creation date || N || || N || || || N || || || N || || || || || ||
 |-
