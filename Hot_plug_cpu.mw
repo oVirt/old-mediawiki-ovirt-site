@@ -259,7 +259,10 @@ lets break to 2 problems to solve:
 VDSM-guest-agent work for reporting this is already in progress - http://gerrit.ovirt.org/23268
 
 === Testing ===
-TODO
+TODO - add tests
+
+*how to check the guest CPUs - LINUX
+ lscpu -e -a
 
 === Comments and Discussion ===
 * Refer to [[Talk:Hot plug cpu]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
