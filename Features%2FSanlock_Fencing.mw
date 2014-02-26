@@ -11,7 +11,7 @@
 When a host becomes non-responsive, oVirt engine tries to fence the host;
 detaching it from the shared storage, and hopefully making it responsive again.
 This feature adds a new fencing mechanism, fencing via shared storage using
-sanlock.  Using sanlock, we can provide a simple fencing solution when a soft or
+sanlock.  Using sanlock, we can provide a simple fencing solution when soft or
 hard fencing are not available or fail, avoiding manual fencing, and increasing
 VM availability.
 
@@ -49,7 +49,7 @@ While the host is unreachable, we can communicate with it using the shared
 storage.  Since oVirt 3.1, every host is running the sanlock daemon, used to
 acquire leases on the shared storage. Sanlock fencing is using the available
 sanlock daemon to send a fence request to the fenced host, and on the fenced
-host, trigger a reboot.
+host, the sanlock daemon reboot the machine.
 
 === Fencing goals ===
 
