@@ -128,7 +128,7 @@ The specific values means:
 |-
 | vm_type || vm type (server/desktop) || Y || || N || || || N || || || Y || || N || Y || N || Template/User || If the instance type is not custom, the vm_type becomes only a mark but does not change anything
 |-
-| nice_level || vm nice level || Y || || N || || || N || || || Y || ||  ||  ||  ||  || Not on GUI (but present in REST).
+| nice_level || vm nice level || D || || D || || || D || || || D || ||  ||  ||  ||  || 
 |-
 | default_boot_sequence || boot sequence || Y || || N || || || Y || || || Y || || Y || Y || N || Instance/Template/User || 
 |-
@@ -136,7 +136,7 @@ The specific values means:
 |-
 | priority || priority || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| iso_path || cd || Y || || Y ? || || || N || || || Y || || Y || Y || N || Image?/User || 
+| iso_path || cd || Y || || Y || || || N || || || Y || || Y || Y || N || Image/User || 
 |-
 | origin || internal. where the vm was created || N || || N || || || N || || || N || || || || || || 
 |-
@@ -148,9 +148,9 @@ The specific values means:
 |-
 | migration_support || migration support options || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| userdefined_properties || custom properties || Y || || N || || || N ? || || || Y || || Y || N || N || Instance?/Template/User || 
+| userdefined_properties || custom properties || Y || || N || || || Y || || || Y || || Y || N || N || Instance/Template/User || merge of all the three
 |-
-| predefined_properties || custom properties || Y || || N || || || N ? || || || Y || || Y || N || N || Instance?/Template/User || 
+| predefined_properties || custom properties || Y || || N || || || Y || || || Y || || Y || N || N || Instance/Template/User || merge of all the three
 |-
 | min_allocated_mem || memory guaranteed || Y || || N || || || Y || || || Y || || Y || N || Y || Instance || 
 |-
@@ -158,13 +158,13 @@ The specific values means:
 |-
 | quota_id || link to quota || Y || || Y || || || N || || || Y || || Y || Y || N || User || 
 |-
-| allow_console_reconnect || allow reconnect to console || Y || || N || || || N || || || Y || console reconnect || Y || N || N || Instance/Template/User || 
+| allow_console_reconnect || allow reconnect to console || Y || || N || || || N || || || Y || console reconnect || Y || N || N || Template/User || 
 |-
 | cpu_pinning || cpu pinning || N || || N || || || N || || || Y || || Y || N || N || User || 
 |-
 | is_smartcard_enabled || smartcard enabled || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| payload || payload (device, not in vm_static) || Y || || N || || || N || || || Y || || || || || Instance || Not in GUI, REST only
+| payload || payload (device, not in vm_static) || N || || N || || || N || || || Y || || || || || || Not in GUI, REST only
 |-
 | thin/clone || || N || || N || || || N || || || Y || || Y || N || N || User || 
 |-
@@ -192,9 +192,9 @@ The specific values means:
 |-
 | migrationDowntime || max downtime during migration || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User ||
 |-
-| watchdog || consists of model and action || Y || || N || || || N? || || || Y || || Y || N || N? || Instance?/Template/User ||
+| watchdog || consists of model and action || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User ||
 |-
-| sso method || none or guest agent || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User ||
+| sso method || none or guest agent || Y || || N || || || N || || || Y || || Y || N || N || Template/User ||
 |-
 | cpu allocation || || N || || N || || || N || || || Y || || Y || N || N || User ||
 |-
