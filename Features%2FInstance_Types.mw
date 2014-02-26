@@ -148,9 +148,9 @@ The specific values means:
 |-
 | migration_support || migration support options || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| userdefined_properties || custom properties || Y || || N || || || Y || || || Y || || Y || N || N || Instance/Template/User || merge of all the three
+| userdefined_properties || custom properties || Y || || N || || || N || || || Y || || Y || N || N || Template/User || 
 |-
-| predefined_properties || custom properties || Y || || N || || || Y || || || Y || || Y || N || N || Instance/Template/User || merge of all the three
+| predefined_properties || custom properties || Y || || N || || || N || || || Y || || Y || N || N || Template/User || 
 |-
 | min_allocated_mem || memory guaranteed || Y || || N || || || Y || || || Y || || Y || N || Y || Instance || 
 |-
