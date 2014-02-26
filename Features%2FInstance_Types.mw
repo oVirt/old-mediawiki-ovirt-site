@@ -126,7 +126,7 @@ The specific values means:
 |-
 | auto_startup || HA || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| vm_type || vm type (server/desktop) || Y || || N || || || N || || || Y || || N || Y || N || Template/User || 
+| vm_type || vm type (server/desktop) || Y || || N || || || N || || || Y || || N || Y || N || Template/User || If the instance type is not custom, the vm_type becomes only a mark but does not change anything
 |-
 | nice_level || vm nice level || Y || || N || || || N || || || Y || ||  ||  ||  ||  || Not on GUI (but present in REST).
 |-
@@ -178,7 +178,7 @@ The specific values means:
 |-
 | image_type_id || internal. link to vm's image type || N || || N || || || N || || || Y || || N || Y || N || User || 
 |-
-| host_cpu_flags || use host cpu flags || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
+| host_cpu_flags || use host cpu flags || Y || || N || || || N || || || Y || || Y || N || N || Template/User || 
 |-
 | db_generation || internal || N || || N || || || N || || || N || || || || ||  || Not in GUI
 |-
@@ -195,6 +195,12 @@ The specific values means:
 | watchdog || consists of model and action || Y || || N || || || N? || || || Y || || Y || N || N? || Instance?/Template/User ||
 |-
 | sso method || none or guest agent || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User ||
+|-
+| cpu allocation || || N || || N || || || N || || || Y || || Y || N || N || User ||
+|-
+| virtio-scsi || || N || || N || || || Y || || || Y || || Y || N || Y || Instance/User ||
+|-
+| vm init || cloud-init or sysprep|| N || || N || || || N || || || Y || || Y || Y || N || User ||
 |-
 |}
 
