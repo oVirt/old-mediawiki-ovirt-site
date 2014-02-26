@@ -13,7 +13,7 @@ VM custom property won't be present.
 === VM-level hooks ===
 On the server that has the engine installed:
  <nowiki>
-# engine-config -s "UserDefinedVMProperties=macspoof=(true|false)"
+# engine-config -s "UserDefinedVMProperties=macspoof=(true|false);another_property=regexp"
 # service ovirt-engine restart
 </nowiki>
 
