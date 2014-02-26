@@ -14,7 +14,8 @@ The usability of the feature might be useful for various use cases, the followin
 * Support migrating Storage Domains between DCs and between different oVirt installations.
 
 == Owner ==
-* Maor Lipchuk mlipchuk@redhat.com 
+* Maor Lipchuk
+* Email <mlipchuk@redhat.com>
 
 == Current status ==
 * Design
