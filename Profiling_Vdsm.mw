@@ -14,6 +14,12 @@ To profile VDSM, you need to do some small and self-contained modifications. Mak
 
 The advantage of using the standard python tools is that statistics are in the Pstats format, so the [http://docs.python.org/2/library/profile.html standard way of inspecting them applies].
 
+To explore statistics or to quickly change the presentation of the statistics, the pstats interactive mode can be handy
+
+    python -m pstats /path/to/main/profile/data
+
+[http://stefaanlippens.net/python_profiling_with_pstats_interactive_mode quick description of the interactive mode]
+
 TODO: add helper snippets/scripts
 
 == profiling functions ==
