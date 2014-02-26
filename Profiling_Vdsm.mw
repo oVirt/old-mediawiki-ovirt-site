@@ -12,8 +12,9 @@ To profile VDSM, you need to do some small and self-contained modifications. Mak
 
 == collecting and inspecting statistics ==
 
-WRITEME
+The advantage of using the standard python tools is that statistics are in the Pstats format, so the [http://docs.python.org/2/library/profile.html standard way of inspecting them applies].
 
+TODO: add helper snippets/scripts
 
 == profiling functions ==
 
