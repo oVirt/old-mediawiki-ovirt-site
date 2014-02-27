@@ -16,7 +16,7 @@ An ovirt-engine-notifier feature defining a generic way of subscribing to  audit
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 === Benefit to oVirt ===
-Allows ovirt-engine-notifier users to subscribe to events.
+Allows ovirt-engine-notifier users to subscribe to events using configuration.
 
 === Detailed Description ===
 A new 'Event Filter' section is now available in the notifier's configuration file under<br/>
