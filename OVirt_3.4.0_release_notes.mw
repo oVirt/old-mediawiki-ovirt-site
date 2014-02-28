@@ -454,6 +454,63 @@ Fixed in oVirt 3.4.0 beta 3:
 {{BZ|1037478}} - Have ability to modify VM template - Template Versions<BR>
 {{BZ|1058203}} - 	[RHEVM-RHS] - Brick advanced details gives error<BR>
 
+Fixed in oVirt 3.4.0 RC
+
+{{BZ|928864}} - Cannot import VM. The following disks already exist: . Please import as a clone.<BR>
+{{BZ|975040}} - engine [TEXT]: unclear error when trying to remove a disk from a template when the template disk has only one copy on that specific domain<BR>
+{{BZ|1023330}} - [RHEVM][webadmin] New Data Center "Guide Me" does not reflect hosts presence<BR>
+{{BZ|1026868}} - Direct LUN is not being updated after resizing<BR>
+{{BZ|1032661}} - Add SNMP trap as notification method to to ovirt-engine-notification<BR>
+{{BZ|1035844}} - [oVirt][infra] Add host/Reinstall radio button text not actionable<BR>
+{{BZ|1047649}} - [Hosted Engine] Unify maintenance flows<BR>
+{{BZ|1049611}} - rhev 3.3 mtu field shows the wrong ip-mtu<BR>
+{{BZ|1054187}} - [NetworkLabels] Block labeling a bond without slaves<BR>
+{{BZ|1054410}} - FullListVdsCommand log message appears wrong with java class ref<BR>
+{{BZ|1055881}} - REST API: Search for an user in active directory by upn doesn't return any results (search by user name returns result)<BR>
+{{BZ|1056998}} - Edit Approve Host popup -> Cluster not updated<BR>
+{{BZ|1057109}} - UI: Bad vertical alignment in add user screen<BR>
+{{BZ|1057575}} - From GuideMe link, adding Host using SSH PublicKey Authentication fails with "Error while executing action: Cannot install Host with empty password."<BR>
+{{BZ|1057579}} - HA Vm reservation check ignores host status<BR>
+{{BZ|1057584}} - HA Vm reservation check failure event log is not well resolved<BR>
+{{BZ|1057622}} - webadmin: preallocated disk is reported as thinprovision in "Edit" dialogue<BR>
+{{BZ|1058011}} - general ldap provider should be removed from manage-domains<BR>
+{{BZ|1058018}} - upgrade from 3.3 overwrites exports with acl None<BR>
+{{BZ|1058030}} - Incorrect error message when trying to edit network attached to Template from VM to non-VM<BR>
+{{BZ|1059156}} - Move out downstream specific vdc_options changes into rhevm-setup-plugins<BR>
+{{BZ|1059258}} - REST API: Create user user@domain actually creates user only<BR>
+{{BZ|1059741}} - It's impossible to update the MTU/VLAN of the network that resides on unplugged NIC of the VM<BR>
+{{BZ|1060528}} - Error response to DELETE request of 'Everyone' group doesn't contains 'detail' field<BR>
+{{BZ|1061121}} - [engine] Extending a storage domain that is not attached to a datacenter fails with NullPointerException<BR>
+{{BZ|1062615}} - utc_diff not updated according to a change in VM settings<BR>
+{{BZ|1063285}} - [RHEVM] [Network Labels] moving host with labeled interface to Cluster 3.0 is not blocked<BR>
+{{BZ|1064067}} - webadmin: customer preview allows you to select "Active vm before the preview" which causes the disk to become illegal and vm cannot be run with "CANNOT_RUN_FROM_DISK_WITHOUT_DISK"<BR>
+{{BZ|1064395}} - search paging on event log does not use paging correctly<BR>
+{{BZ|1064456}} - rest api Empty int fields in POST data causes JAXB parser to fail<BR>
+{{BZ|1064829}} - Adding permissions to any thing doesn't work<BR>
+{{BZ|1064907}} - Listing templates takes noticeable amount of time, while listing many more VMs is prompt<BR>
+{{BZ|1064953}} - [RHEVM] [network labels] Failed to configure vm networks on host while changing its cluster.<BR>
+{{BZ|1065014}} - Adding a direct LUN disk doesn't work<BR>
+{{BZ|1065747}} - [engine-backend] cannot set domain to maintenance in case there are only unplugged disks located on it<BR>
+{{BZ|1065970}} - Missing data storage types on "Add More Storage"<BR>
+{{BZ|1066081}} - Enable sync of LUNs after storage domain activation for FC<BR>
+{{BZ|1066459}} - [database] plpgsql language is not created although it should<BR>
+{{BZ|1066489}} - Event list not updating when events happen.<BR>
+{{BZ|1066834}} - [engine-backend] Can add multiple boot disks to a vm<BR>
+{{BZ|1066838}} - [engine-webadmin] inappropriate error message when cloning a VM from snapshot which one of its disks is located on an inactive SD<BR>
+{{BZ|1066953}} - Cannot edit network is "setup networks" dialog<BR>
+{{BZ|1066956}} - Cannot create a bond in 'Setup networks' dialog<BR>
+{{BZ|1067058}} - [database] old psycopg2 does not accept unicode string as port name<BR>
+{{BZ|1067103}} - [engine-webadmin] unclear error message when starting a VM with disk that located on a domain in maintenance<BR>
+{{BZ|1067906}} - Cloud-init DNS settings should go inside the "iface" section<BR>
+{{BZ|1068884}} - wrong memory usage report<BR>
+{{BZ|1068924}} - tree based sub-tabs - missing action panel buttons<BR>
+{{BZ|1068929}} - Default route is not set properly for management network if downstream/upstream engine and VDSM are mixed<BR>
+{{BZ|1068970}} - RHEV 3.2 API changing IP on hypervisor bond sub-int reqs re-passing bond opts<BR>
+{{BZ|1069151}} - Override previous export of same template fail<BR>
+{{BZ|1069201}} - [REST]: Missing domain field on VM\Template object.<BR>
+{{BZ|1069522}} - [REST-API] XSD schema validation error: response for create vm returned with 'type' and 'data' fields instead of with one of these fields<BR>
+{{BZ|1070735}} - [database] do not enable provisioning for remote database<BR>
+
 ==VDSM==
 {{BZ|1036883}} - VM fails to start when qemu.conf's spice_tls conflicts with vdsm.conf's ssl<BR>
 {{BZ|1059757}} - domain monitor does not stop during disconnectStoragePool on HSM during destroyStoragePool flow on SPM<BR>
