@@ -14,7 +14,7 @@ Experienced users can also compile from source, using the guides on [[Building o
 
 <div class="span6 pad-left-small pad-right">
 <div class="well">
-== Supported Hardware ==
+== Vital info ==
 
 <div class="row-fluid">
 <div class="span6">
@@ -44,6 +44,7 @@ Experienced users can also compile from source, using the guides on [[Building o
 <div class="row">
 
 <div class="span10 offset1">
+
 == Supported Host Distributions ==
 <ul>
 * Fedora 19
