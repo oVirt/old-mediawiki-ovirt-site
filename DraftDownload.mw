@@ -31,7 +31,15 @@ Experienced users can also compile from source, using the guides on [[Building o
 :* Internet Explorer 9 or later
 </div><!-- span -->
 </div><!-- row-fluid-->
-== Supported Distributions ==
+
+</div><!-- well -->
+</div><!-- span6 -->
+</div><!-- row -->
+
+<div class="row">
+
+<div class="span10 offset1">
+== Supported Host Distributions ==
 <ul>
 * Fedora 19
 * CentOS 6.4
@@ -39,6 +47,8 @@ Experienced users can also compile from source, using the guides on [[Building o
 * [//wiki.gentoo.org/wiki/OVirt Gentoo] (experimental)
 * [[ovirt build on debian/ubuntu | Debian]] (experimental)
 </ul>
+
+== Supported Guest Distrbutions ==
 {|
 !Operating System	 
 !Architecture
@@ -85,7 +95,8 @@ Experienced users can also compile from source, using the guides on [[Building o
 |Yes
 |-
 |Windows XP Service Pack 3 and newer	 
-|32-bit	 |Yes
+|32-bit	 
+|Yes
 |-
 |Windows 7	 
 |32-bit, 64-bit	 
@@ -111,15 +122,6 @@ Experienced users can also compile from source, using the guides on [[Building o
 |64-bit	 
 |No
 |}
-
-Remote Desktop Protocol (RDP) is the default connection protocol for accessing Windows 8 and Windows 2012 guests from the user portal as Microsoft introduced changes to the Windows Display Driver Model that prevent SPICE from performing optimally.
-</div><!-- well -->
-</div><!-- span6 -->
-</div><!-- row -->
-
-<div class="row">
-
-<div class="span10 offset1">
 
 == Quick Start Guide ==
 
