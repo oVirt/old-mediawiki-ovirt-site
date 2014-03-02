@@ -8,13 +8,7 @@ RHEL 6 users must install a newer pep8 version than the one shipped in EPEL6. Ol
 
  <nowiki>yum install http://danken.fedorapeople.org/python-pep8-1.4.5-2.el6.noarch.rpm</nowiki>
 
-RHEL 6 users must add the ovirt repositories, providing packages that are not available yet on RHEL 6.
-
- <nowiki>yum install http://resources.ovirt.org/releases/ovirt-release-el.noarch.rpm</nowiki>
-
-Fedora users must add the ovirt repositories, providing packages that are not available yet on Fedora.
-
- <nowiki>yum install http://resources.ovirt.org/releases/ovirt-release-fedora.noarch.rpm</nowiki>
+ <nowiki>yum install http://resources.ovirt.org/releases/ovirt-release.noarch.rpm</nowiki>
 
 RHEL 6 users must add the glusterfs repository, providing newer glusterfs not available on RHEL 6.  Optionally install 'wget' if not present
  rpm -q wget 2> /dev/null || yum install wget
@@ -24,7 +18,7 @@ Fedora and RHEL 6 users must verify the following packages are installed before 
   yum install make autoconf automake pyflakes logrotate gcc python-pep8 libvirt-python python-devel \
   python-nose rpm-build sanlock-python genisoimage python-ordereddict python-pthreading libselinux-python\
   python-ethtool m2crypto python-dmidecode python-netaddr python-inotify python-argparse git \
-  python-cpopen bridge-utils libguestfs-tools-c pyparted openssl
+  python-cpopen bridge-utils libguestfs-tools-c pyparted openssl libnl
 
 ==Getting the source==
 Our public git repo is located on [http://gerrit.ovirt.org/gitweb?p=vdsm.git oVirt.org]
