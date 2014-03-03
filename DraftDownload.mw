@@ -178,6 +178,7 @@ ovirt-stable repositories listed in the output of the repolist command.}}
 
 === Fedora ===
 
+<div class= "mw-collapsible mw-collapsed">
 {{Quote|'''Important:''' It is recommended that you install oVirt on Fedora 19, which is the best supported version of the Fedora platform at this time.}}
 
 <ol start="0" class="steps endian">
@@ -194,9 +195,10 @@ ovirt-stable repositories listed in the output of the repolist command.}}
 <li>Congratulations! oVirt Engine is now installed!
 <li>For every virtualization server you'd like to manage, you can now [[Quick Start Guide#Install_Hosts | set them up as oVirt hosts]] .
 </ol>
-
+</div>
 ===  Red Hat Enterprise Linux 6/CentOS ===
 
+<div class= "mw-collapsible mw-collapsed">
 These instructions should work for both Red Hat Enterprise Linux and CentOS.  They will likely work with other binary compatible EL6 versions as well, but they were not tested.  It is strongly recommended that you use at least version 6.4 of RHEL or CentOS.
 
 {{Quote|'''Warning:''' Native GlusterFS support will not work with Red Hat Enterprise Linux 6.4 at this time.}}
@@ -217,7 +219,7 @@ These instructions should work for both Red Hat Enterprise Linux and CentOS.  Th
 <li>Congratulations! oVirt Engine is now installed!
 <li>For every virtualization server you'd like to manage, you can now [[Quick Start Guide#Install_Hosts | set them up as oVirt nodes]] .
 </ol>
-
+</div>
 ----
 
 Now that you have oVirt running, check out the [[documentation | documentation section]] for more information and be sure to [[community | join our community]]! 
