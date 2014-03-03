@@ -34,8 +34,9 @@ Experienced users can also compile from source, using the guides for the [[Build
 :* Fedora 19
 :* CentOS 6.4
 :* Red Hat Enterprise Linux 6.4
-:* [//wiki.gentoo.org/wiki/OVirt Gentoo] (experimental)
-:* [[ovirt build on debian/ubuntu | Debian]] (experimental)
+:* Scientific Linux 6.4
+:* Gentoo Linux (experimental)
+:* Debian GNU/Linux (experimental)
 
 ; Recommended Web Browsers for Engine:
 :* Mozilla Firefox 17 or later
