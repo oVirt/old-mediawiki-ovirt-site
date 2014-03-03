@@ -79,7 +79,7 @@ Experienced users can also compile from source, using the guides on [[Building o
 |32-bit, 64-bit	 
 |No
 |-
-|SUSE Linux Enterprise Server 11 (SPICE drivers (QXL) are not supplied by Red Hat. However, the distribution's vendor may provide spice drivers as part of their distribution.)	 
+|SUSE Linux Enterprise Server 11 (SPICE drivers (QXL) are not supplied by Red Hat. Distribution's vendor may provide SPICE drivers.)	 
 |32-bit, 64-bit	 
 |No
 |-
