@@ -6,7 +6,7 @@ oVirt is a virtual datacenter manager that delivers powerful management of multi
 
 If you are absolutely new to oVirt, try our [[OVirt_Live| Live version]] where you can test-drive oVirt on CentOS without installing it on your machine.
 
-If you have some knowledge of installing packages on Linux, you can install our [[#oVirt_All-in-One | All-in-One solution]]. 
+If you have some knowledge of installing packages on Linux, you can install our [[#Install_oVirt_All-in-One | All-in-One solution]]. 
 
 Experienced users can also compile from source, using the guides for the [[Building oVirt engine |  oVirt engine]] and [[Node Building | oVirt Node]].
 
