@@ -58,12 +58,12 @@ Experienced users can also compile from source, using the guides for the [[Build
 oVirt release 3.3.3 is intended for production use and is available for the following platforms:
 
 <ul>
-* oVirt for Fedora Core ([[#Fedora | Guide]])
-* oVirt for RHEL ([[#Red_Hat_Enterprise_Linux 6/CentOS | Guide]])
-* oVirt for CentOS ([[#Red_Hat_Enterprise_Linux 6/CentOS | Guide]])
+* oVirt for Fedora Core ([[#Fedora |Guide]])
+* oVirt for RHEL ([[#Red_Hat_Enterprise_Linux 6/CentOS |Guide]])
+* oVirt for CentOS ([[#Red_Hat_Enterprise_Linux 6/CentOS |Guide]])
 * oVirt for Scientific Linux (Guide)
 * oVirt for Gentoo ([//wiki.gentoo.org/wiki/OVirt Experimental])
-* oVirt for Debian ([[ovirt build on debian/ubuntu | Guide]]) 
+* oVirt for Debian ([[ovirt build on debian/ubuntu |Guide]]) 
 </ul>
 
 == Supported Guest Distributions ==
