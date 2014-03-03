@@ -62,9 +62,9 @@ Experienced users can also compile from source, using the guides for the [[Build
 oVirt release 3.3.3 is intended for production use and is available for the following platforms:
 
 <ul>
-* oVirt for Fedora Core ([[#Fedora |Guide]])
-* oVirt for RHEL ([[#Red_Hat_Enterprise_Linux 6/CentOS |Guide]])
-* oVirt for CentOS ([[#Red_Hat_Enterprise_Linux 6/CentOS |Guide]])
+* oVirt for Fedora Core ([[#Fedora_Installation_Instructions |Guide]])
+* oVirt for RHEL ([[#Red_Hat_Enterprise_Linux 6/CentOS_Installation_Instructions |Guide]])
+* oVirt for CentOS ([[#Red_Hat_Enterprise_Linux 6/CentOS_Installation_Instructions |Guide]])
 * oVirt for Scientific Linux (Guide)
 * oVirt for Gentoo ([//wiki.gentoo.org/wiki/OVirt Experimental])
 * oVirt for Debian ([[ovirt build on debian/ubuntu |Guide]]) 
@@ -73,16 +73,13 @@ oVirt release 3.3.3 is intended for production use and is available for the foll
 Our recommended method of installing oVirt is to use the pre-built packages for Fedora or a supported EL6 distribution, such as CentOS or RHEL. This makes installing oVirt very easy. Naturally, you can run most Linux distributions or several other operating systems (e.g. Windows) as [[#Supported_Guest_Distributions | guests]] inside of oVirt instances.
 
  <div class="alert alert-info">
-'''Important:''' If you're upgrading from a previous version, please update
-ovirt-release to the latest version (10) and verify you have the correct
-repositories enabled by running the following commands
+'''Important:''' If you're upgrading from a previous version, please update ovirt-release to the latest version (10) and verify you have the correct repositories enabled by running the following commands before upgrading with the usual procedure. 
      # yum update ovirt-release
      # yum repolist enabled
-before upgrading with the usual procedure. You should see the ovirt-3.3.2 and
-ovirt-stable repositories listed in the output of the repolist command.
+You should see the ovirt-3.3.3 and ovirt-stable repositories listed in the output of the repolist command.
 </div>
 
-=== Fedora ===
+=== Fedora Installation Instructions ===
 
 <div class= "mw-collapsible mw-collapsed">
  <div class="alert alert-info">
@@ -105,7 +102,7 @@ ovirt-stable repositories listed in the output of the repolist command.
 </ol>
 </div>
 
-===  Red Hat Enterprise Linux 6/CentOS ===
+===  Red Hat Enterprise Linux 6/CentOS  Installation Instructions===
 
 <div class= "mw-collapsible mw-collapsed">
 These instructions should work for both Red Hat Enterprise Linux and CentOS.  They will likely work with other binary compatible EL6 versions as well, but they were not tested.  It is strongly recommended that you use at least version 6.4 of RHEL or CentOS.
