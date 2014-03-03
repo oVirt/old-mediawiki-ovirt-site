@@ -4,9 +4,9 @@ __NOTOC__
 = oVirt Deployment Options =
 oVirt is a virtual datacenter manager that delivers powerful management of multiple virtual machines on multiple hosts. Using KVM and libvirt, oVirt can be installed on Fedora, CentOS, or Red Hat Enterprise Linux hosts to set up and manage your virtual data center.
 
-If you are absolutely new to oVirt, try our [[OVirt_Live| Live version]] where you can test-drive oVirt on CentOS without installing it on your machine.
+If you are absolutely new to oVirt, try our [[OVirt_Live | Live version]] where you can test-drive oVirt on CentOS without installing it on your machine.
 
-If you have some knowledge of installing packages on Linux, you can install our [[#Install_oVirt_All-in-One | All-in-One solution]]. 
+If you have some knowledge of installing packages on Linux, you can install [[#Install_oVirt | oVirt]] directly on a host machine. 
 
 Experienced users can also compile from source, using the guides for the [[Building oVirt engine |  oVirt engine]] and [[Node Building | oVirt Node]].
 
@@ -23,8 +23,6 @@ Experienced users can also compile from source, using the guides for the [[Build
 :* 20 GB disk space
 ;Optional Hardware:
 :* Network storage
-</div>
-<div class="span6">
 ; Supported Hosts:
 :* Fedora 19
 :* CentOS 6.4
@@ -32,6 +30,8 @@ Experienced users can also compile from source, using the guides for the [[Build
 :* Scientific Linux 6.4
 :* Gentoo Linux (experimental)
 :* Debian GNU/Linux (experimental)
+</div>
+<div class="span6">
 
 ; Recommended Web Browsers for Engine:
 :* Mozilla Firefox 17 or later
@@ -49,7 +49,15 @@ Experienced users can also compile from source, using the guides for the [[Build
 
 <div class="span10 offset1">
 
-== Install oVirt All-in-One ==
+== Versions of oVirt ==
+
+<ul>
+* Stable ('''Recommended''')
+* Current Development
+* Future Development
+</ul>
+
+== Install oVirt ==
 
 oVirt release 3.3.3 is intended for production use and is available for the following platforms:
 
@@ -62,9 +70,64 @@ oVirt release 3.3.3 is intended for production use and is available for the foll
 * oVirt for Debian ([[ovirt build on debian/ubuntu |Guide]]) 
 </ul>
 
+Our recommended method of installing oVirt is to use the pre-built packages for Fedora or a supported EL6 distribution, such as CentOS or RHEL. This makes installing oVirt very easy. Naturally, you can run most Linux distributions or several other operating systems (e.g. Windows) as [[#Supported_Guest_Distributions | guests]] inside of oVirt instances.
+
+{{Quote|'''Important:''' If you're upgrading from a previous version, please update
+ovirt-release to the latest version (10) and verify you have the correct
+repositories enabled by running the following commands
+     # yum update ovirt-release
+     # yum repolist enabled
+before upgrading with the usual procedure. You should see the ovirt-3.3.2 and
+ovirt-stable repositories listed in the output of the repolist command.}}
+
+=== Fedora ===
+
+<div class= "mw-collapsible mw-collapsed">
+{{Quote|'''Important:''' It is recommended that you install oVirt on Fedora 19, which is the best supported version of the Fedora platform at this time.}}
+
+<ol class="steps endian">
+<li>Add the official oVirt repository for Fedora. <kbd><pre>sudo yum localinstall http://ovirt.org/releases/ovirt-release-fedora.noarch.rpm</pre></kbd>
+<ul>
+<li> This will add repositories from ovirt.org to your host allowing you to get the latest and greatest oVirt rpms.
+<li> It will also enable the [http://fedoraproject.org/wiki/Virtualization_Preview_Repository virt-preview] repository on your machine giving you access to the latest versions of things like libvirt and KVM.
+</ul>
+<li>Install oVirt Engine. <kbd><pre>sudo yum install -y ovirt-engine</pre></kbd>
+<li>Optionally, install the All-In-One plugin if you want to host VMs on your Engine Host <kbd><pre>sudo yum install -y ovirt-engine-setup-plugin-allinone</pre></kbd>
+<li>Set up oVirt Engine. <kbd><pre>sudo engine-setup</pre></kbd>
+<li> Follow the on screen prompts to configure and install the engine
+<li>Once you have successfully installed oVirt Engine, you will be provided with instructions to access oVirt's web-based management interface.
+<li>Congratulations! oVirt Engine is now installed!
+<li>For every virtualization server you'd like to manage, you can now [[Quick Start Guide#Install_Hosts | set them up as oVirt hosts]] .
+</ol>
+</div>
+===  Red Hat Enterprise Linux 6/CentOS ===
+
+<div class= "mw-collapsible mw-collapsed">
+These instructions should work for both Red Hat Enterprise Linux and CentOS.  They will likely work with other binary compatible EL6 versions as well, but they were not tested.  It is strongly recommended that you use at least version 6.4 of RHEL or CentOS.
+
+{{Quote|'''Warning:''' Native GlusterFS support will not work with Red Hat Enterprise Linux 6.4 at this time.}}
+
+<!-- Normally, an <ol> isn't needed, but we're starting with 0 here, for fun. -->
+<ol class="steps endian">
+<li>Add the official oVirt repository for EL6. <kbd><pre>sudo yum localinstall http://ovirt.org/releases/ovirt-release-el.noarch.rpm</pre></kbd>
+<ul>
+<li> This will add repositories from ovirt.org to your host allowing you to get the latest and greatest oVirt rpms.
+<li> It will also enable the gluster repository for their 3.4.0 release, so you will get those updates correctly as well
+</ul>
+<li> Add (or enable) the [http://dl.fedoraproject.org/pub/epel/6/x86_64/ EPEL yum repository]
+<li>Install oVirt Engine. <kbd><pre>sudo yum install -y ovirt-engine</pre></kbd>
+<li> Optionally install the All-In-One plugin if you want to host VMs on your Engine Host <kbd><pre>sudo yum install -y ovirt-engine-setup-plugin-allinone</pre></kbd>
+<li>Set up oVirt Engine. <kbd><pre>sudo engine-setup</pre></kbd>
+<li> Follow the on screen prompts to configure and install the engine
+<li>Once you have successfully installed oVirt Engine, you will be provided with instructions to access oVirt's web-based management interface.
+<li>Congratulations! oVirt Engine is now installed!
+<li>For every virtualization server you'd like to manage, you can now [[Quick Start Guide#Install_Hosts | set them up as oVirt nodes]] .
+</ol>
+</div>
+
 == Supported Guest Distributions ==
 
-Once oVirt is installed and running, you can proceed to install any number of supported operating systems as guest virtual machines. The  table below lists what operating systems are supported as guests.
+Once oVirt is installed and running, you can proceed to install any number of supported operating systems as guest virtual machines. The table lists what operating systems are supported as guests.
 <div class= "mw-collapsible mw-collapsed" style="width:800px">
 {| 
 ! style="text-align:left;"|Operating System	 
@@ -157,63 +220,6 @@ Once oVirt is installed and running, you can proceed to install any number of su
 |
 |No
 |}
-</div>
-
-== Installation Guides ==
-
-Our recommended method of installing oVirt is to use the pre-built packages for Fedora or a supported EL6 distribution, such as CentOS or RHEL. This makes installing oVirt very easy. Naturally, you can run most Linux distributions or several other operating systems (e.g. Windows) as [[#Supported_Guest_Distributions | guests]] inside of oVirt instances.
-
-{{Quote|'''Important:''' If you're upgrading from a previous version, please update
-ovirt-release to the latest version (10) and verify you have the correct
-repositories enabled by running the following commands
-     # yum update ovirt-release
-     # yum repolist enabled
-before upgrading with the usual procedure. You should see the ovirt-3.3.2 and
-ovirt-stable repositories listed in the output of the repolist command.}}
-
-=== Fedora ===
-
-<div class= "mw-collapsible mw-collapsed">
-{{Quote|'''Important:''' It is recommended that you install oVirt on Fedora 19, which is the best supported version of the Fedora platform at this time.}}
-
-<ol start="0" class="steps endian">
-<li>Add the official oVirt repository for Fedora. <kbd><pre>sudo yum localinstall http://ovirt.org/releases/ovirt-release-fedora.noarch.rpm</pre></kbd>
-<ul>
-<li> This will add repositories from ovirt.org to your host allowing you to get the latest and greatest oVirt rpms.
-<li> It will also enable the [http://fedoraproject.org/wiki/Virtualization_Preview_Repository virt-preview] repository on your machine giving you access to the latest versions of things like libvirt and KVM.
-</ul>
-<li>Install oVirt Engine. <kbd><pre>sudo yum install -y ovirt-engine</pre></kbd>
-<li> Optionally install the All-In-One plugin if you want to host VMs on your Engine Host <kbd><pre>sudo yum install -y ovirt-engine-setup-plugin-allinone</pre></kbd>
-<li>Set up oVirt Engine. <kbd><pre>sudo engine-setup</pre></kbd>
-<li> Follow the on screen prompts to configure and install the engine
-<li>Once you have successfully installed oVirt Engine, you will be provided with instructions to access oVirt's web-based management interface.
-<li>Congratulations! oVirt Engine is now installed!
-<li>For every virtualization server you'd like to manage, you can now [[Quick Start Guide#Install_Hosts | set them up as oVirt hosts]] .
-</ol>
-</div>
-===  Red Hat Enterprise Linux 6/CentOS ===
-
-<div class= "mw-collapsible mw-collapsed">
-These instructions should work for both Red Hat Enterprise Linux and CentOS.  They will likely work with other binary compatible EL6 versions as well, but they were not tested.  It is strongly recommended that you use at least version 6.4 of RHEL or CentOS.
-
-{{Quote|'''Warning:''' Native GlusterFS support will not work with Red Hat Enterprise Linux 6.4 at this time.}}
-
-<!-- Normally, an <ol> isn't needed, but we're starting with 0 here, for fun. -->
-<ol start="0" class="steps endian">
-<li>Add the official oVirt repository for EL6. <kbd><pre>sudo yum localinstall http://ovirt.org/releases/ovirt-release-el.noarch.rpm</pre></kbd>
-<ul>
-<li> This will add repositories from ovirt.org to your host allowing you to get the latest and greatest oVirt rpms.
-<li> It will also enable the gluster repository for their 3.4.0 release, so you will get those updates correctly as well
-</ul>
-<li> Add (or enable) the [http://dl.fedoraproject.org/pub/epel/6/x86_64/ EPEL yum repository]
-<li>Install oVirt Engine. <kbd><pre>sudo yum install -y ovirt-engine</pre></kbd>
-<li> Optionally install the All-In-One plugin if you want to host VMs on your Engine Host <kbd><pre>sudo yum install -y ovirt-engine-setup-plugin-allinone</pre></kbd>
-<li>Set up oVirt Engine. <kbd><pre>sudo engine-setup</pre></kbd>
-<li> Follow the on screen prompts to configure and install the engine
-<li>Once you have successfully installed oVirt Engine, you will be provided with instructions to access oVirt's web-based management interface.
-<li>Congratulations! oVirt Engine is now installed!
-<li>For every virtualization server you'd like to manage, you can now [[Quick Start Guide#Install_Hosts | set them up as oVirt nodes]] .
-</ol>
 </div>
 ----
 
