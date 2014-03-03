@@ -6,9 +6,9 @@ oVirt is a virtual datacenter manager that delivers powerful management of multi
 
 If you are absolutely new to oVirt, try our [[OVirt_Live| Live version]] where you can test-drive oVirt on CentOS without installing it on your machine.
 
-If you have some knowledge of installing packages on Linux, you should install our All-in-One solution using the [[#Quick_Start_Guide | Quick Start]] instructions below. 
+If you have some knowledge of installing packages on Linux, you can install our [[#oVirt_All-in-One | All-in-One solution]]. 
 
-Experienced users can also compile from source, using the guides on [[Building oVirt engine | the oVirt engine]] and [[Node Building | oVirt Node]].
+Experienced users can also compile from source, using the guides for the [[Building oVirt engine |  oVirt engine]] and [[Node Building | oVirt Node]].
 
 </div>
 
@@ -53,7 +53,22 @@ Experienced users can also compile from source, using the guides on [[Building o
 
 <div class="span10 offset1">
 
+== Install oVirt All-in-One ==
+
+oVirt release 3.3.3 is intended for production use and is available for the following platforms:
+
+<ul>
+* oVirt for Fedora Core ([[#Fedora_19 | Guide]])
+* oVirt for RHEL (Guide)
+* oVirt for CentOS (Guide)
+* oVirt for Scientific Linux (Guide)
+* oVirt for Gentoo ([//wiki.gentoo.org/wiki/OVirt Experimental])
+* oVirt for Debian ([[ovirt build on debian/ubuntu | Guide]]) 
+</ul>
+
 == Supported Guest Distributions ==
+
+Once oVirt is installed and running, you can proceed to install any number of supported operating systems as guest virtual machines. The updated table lists what operating systems are supported as guests.
 {|
 ! style="text-align:left;"|Operating System	 
 !Architecture
@@ -128,19 +143,15 @@ Experienced users can also compile from source, using the guides on [[Building o
 |No
 |}
 
-== Quick Start Guide ==
+== Installation Guides ==
 
-<div class="alert alert-info">
-IMPORTANT NOTE: If you're upgrading from a previous version, please update
+{{Quote|'''Important:''' If you're upgrading from a previous version, please update
 ovirt-release to the latest version (10) and verify you have the correct
 repositories enabled by running the following commands
-
-<pre># yum update ovirt-release
+# yum update ovirt-release
 # yum repolist enabled
-</pre>
 before upgrading with the usual procedure. You should see the ovirt-3.3.2 and
-ovirt-stable repositories listed in the output of the repolist command.
-</div>
+ovirt-stable repositories listed in the output of the repolist command.}}
 
 Our recommended method of installing oVirt is to use the pre-built packages for Fedora or an EL6 distribution. It makes installing oVirt very easy. Naturally, you can run any Linux distribution or several other operating systems (e.g. Windows) as guests inside of oVirt instances.
 
