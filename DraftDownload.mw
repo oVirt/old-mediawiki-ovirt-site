@@ -69,9 +69,9 @@ oVirt release 3.3.3 is intended for production use and is available for the foll
 
 == Supported Guest Distributions ==
 
-Once oVirt is installed and running, you can proceed to install any number of supported operating systems as guest virtual machines. The expandable table lists what operating systems are supported as guests.
-
-{|  class="mw-collapsible mw-collapsed" style="padding: 10"
+Once oVirt is installed and running, you can proceed to install any number of supported operating systems as guest virtual machines. The  table below lists what operating systems are supported as guests.
+<div class= "mw-collapsible mw-collapsed" style="width:800px">
+{| 
 ! style="text-align:left;"|Operating System	 
 !Architecture
 !
@@ -162,6 +162,7 @@ Once oVirt is installed and running, you can proceed to install any number of su
 |
 |No
 |}
+</div>
 
 == Installation Guides ==
 
