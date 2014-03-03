@@ -55,7 +55,7 @@ Experienced users can also compile from source, using the guides on [[Building o
 
 == Supported Guest Distributions ==
 {|
-!Operating System	 
+! style="text-align:left;"|Operating System	 
 !Architecture
 !SPICE support
 |-
