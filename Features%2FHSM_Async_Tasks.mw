@@ -27,6 +27,13 @@ This feature suggestion is to enable such a mechanism for HSM operations too.
 * Improve current VM-centric features like [[Features/Storage Live Migration|Storage Live Migration]]
 * Facilitate future features such as live merge
 
+
+List of possible users:
+# Live merge
+# setupNetwork with slow DHCP servers
+# VM start up
+# migration
+
 === Dependencies / Related Features ===
 * See above
 
