@@ -58,9 +58,9 @@ Experienced users can also compile from source, using the guides for the [[Build
 oVirt release 3.3.3 is intended for production use and is available for the following platforms:
 
 <ul>
-* oVirt for Fedora Core ([[#Fedora_19 | Guide]])
-* oVirt for RHEL (Guide)
-* oVirt for CentOS (Guide)
+* oVirt for Fedora Core ([[#Fedora | Guide]])
+* oVirt for RHEL ([[#Red_Hat_Enterprise_Linux 6/CentOS | Guide]])
+* oVirt for CentOS ([[#Red_Hat_Enterprise_Linux 6/CentOS | Guide]])
 * oVirt for Scientific Linux (Guide)
 * oVirt for Gentoo ([//wiki.gentoo.org/wiki/OVirt Experimental])
 * oVirt for Debian ([[ovirt build on debian/ubuntu | Guide]]) 
@@ -145,21 +145,20 @@ Once oVirt is installed and running, you can proceed to install any number of su
 
 == Installation Guides ==
 
+Our recommended method of installing oVirt is to use the pre-built packages for Fedora or a supported EL6 distribution, such as CentOS or RHEL. This makes installing oVirt very easy. Naturally, you can run most Linux distributions or several other operating systems (e.g. Windows) as [[#Supported_Guest_Distributions | guests]] inside of oVirt instances.
+
 {{Quote|'''Important:''' If you're upgrading from a previous version, please update
 ovirt-release to the latest version (10) and verify you have the correct
 repositories enabled by running the following commands
-# yum update ovirt-release
-# yum repolist enabled
+     # yum update ovirt-release
+     # yum repolist enabled
 before upgrading with the usual procedure. You should see the ovirt-3.3.2 and
 ovirt-stable repositories listed in the output of the repolist command.}}
 
-Our recommended method of installing oVirt is to use the pre-built packages for Fedora or an EL6 distribution. It makes installing oVirt very easy. Naturally, you can run any Linux distribution or several other operating systems (e.g. Windows) as guests inside of oVirt instances.
+=== Fedora ===
 
-If you are looking to preview the project without permanently dedicating a machine, you can also try the LiveCD image.  This image will appear under the [http://resources.ovirt.org/releases/stable/tools tools] directory.  This generally appears a week or two after a release, due to the need to have final release packages available.
+{{Quote|'''Important:''' It is recommended that you install oVirt on Fedora 19, which is the best supported version of the Fedora platform at this time.}}
 
-=== [http://fedoraproject.org/en/download-splash?file=http://download.fedoraproject.org/pub/fedora/linux/releases/19/Live/x86_64/Fedora-Live-Desktop-x86_64-19-1.iso Fedora 19] ===
-
-<!-- Normally, an <ol> isn't needed, but we're starting with 0 here, for fun. -->
 <ol start="0" class="steps endian">
 <li>Add the official oVirt repository for Fedora. <kbd><pre>sudo yum localinstall http://ovirt.org/releases/ovirt-release-fedora.noarch.rpm</pre></kbd>
 <ul>
@@ -175,11 +174,11 @@ If you are looking to preview the project without permanently dedicating a machi
 <li>For every virtualization server you'd like to manage, you can now [[Quick Start Guide#Install_Hosts | set them up as oVirt hosts]] .
 </ol>
 
-===  Enterprise Linux 6 ===
+===  Red Hat Enterprise Linux 6/CentOS ===
 
-These instructions should work for both Red Hat Enterprise Linux and CentOS.  They will likely work with other binary compatible EL6 version as well, but they were not tested.  It is strongly recommended that you use at least version 6.4.
+These instructions should work for both Red Hat Enterprise Linux and CentOS.  They will likely work with other binary compatible EL6 versions as well, but they were not tested.  It is strongly recommended that you use at least version 6.4 of RHEL or CentOS.
 
- <div class="alert alert-info">Warning: Native GlusterFS support will not work with Red Hat Enterprise Linux 6.4 at this time</div>
+{{Quote|'''Warning:''' Native GlusterFS support will not work with Red Hat Enterprise Linux 6.4 at this time.}}
 
 <!-- Normally, an <ol> isn't needed, but we're starting with 0 here, for fun. -->
 <ol start="0" class="steps endian">
