@@ -25,10 +25,10 @@ __NOTOC__
 
 <div class="row">
 <div class="span4 pad-left pad-right-small">
-== oVirt 3.3.3 Released! ==
+== oVirt 3.3.4 Released! ==
 
 The oVirt development team is very happy to announce the general
-availability of oVirt 3.3.3 as of February 3rd 2014. This release
+availability of oVirt 3.3.4 as of March 4, 2014. This release
 solidifies oVirt as a leading KVM management application and open
 source alternative to VMware vSphere.
 
@@ -41,13 +41,13 @@ See the release notes for a list of the new features and bugs fixed.
 A new oVirt Node build will be available soon as well.
 
 <div class="pull-right">
-[[oVirt 3.3.3 release notes | Read the 3.3.3 release notes »]]
+[[oVirt 3.3.4 release notes | Read the 3.3.4 release notes »]]
 </div>
 <div class="pull-right">
 [[oVirt 3.3 release announcement | Read more about the 3.3 release »]]
 </div>
 <div class="pull-right">
-[[Download | Get started with oVirt 3.3 now »]]
+[[Download | Get started with oVirt 3.3.4 now »]]
 </div>
 </div>
 
