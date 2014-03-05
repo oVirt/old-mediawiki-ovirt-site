@@ -10,9 +10,13 @@
 
 {{Event|name=[//linuxfestnorthwest.org/ LinuxFest Northwest]|date=April 26-27, 2014|location=Bellingham, WA|lead=LinuxFest Northwest is a grassroots, free and inexpensive event, that is organized by people just like you.}}
 
-
 <noinclude>
 <endfeed/>
 {{Event|name=[//softwarelivre.org/fisl15 FISL]|date=May 7-10, 2014|location=Porto Alegre, Brazil|lead=For 15 years the International Free Software Forum has hosted and inspired the most important debates about technology and freedom, all for the cause of growth and education.}}
+
+{{Event|name=[//lanyrd.com/2014/dockerconf14/ Dockerconf]|date=June 6, 2014|location=London, UK|lead=A one day not for profit by-the-community and for-the-community international conference about the world of Docker.}}
+
+{{Event|name=[//www.oscon.com/oscon2014 OSCON]|date=July 20-24, 2014|location=Portland, OR|lead=From the early days of open source, OSCON has been the only event that covers the open source stack in its entirety.}}
+
 [[Category:Events]]
 </noinclude>
