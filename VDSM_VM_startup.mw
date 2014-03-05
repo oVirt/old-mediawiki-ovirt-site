@@ -144,17 +144,19 @@ Work in progress...
 
 In order to properly describe the 'Migration destination' flow is beneficial to step back and describe the whole migration flow on its entirety. On this page, the focus is still on the VM creation phase, so more detailed description of Migration is demanded to other wiki pages.
 
-In a nutshell, migration si performed through libvirt using the [http://libvirt.org/migration.html#flowpeer2peer peer to peer flow]. This means
+In a nutshell, migration si performed through libvirt using the [http://libvirt.org/migration.html#flowpeer2peer peer to peer flow]. This means:
 * the actual migration is done by libvirt which in turn uses the facilities of the underlying QEMU
 * the source host is in charge of control of the operation, thus
 * the destination hosts acts as receiver, and it is controlled by the source hosts (see below for a detailed description of the 'Migration Destination' startup)
 * the control and the ownership of the VM is passed from source to destination after a succesfull migration
 * if migration fails, the source keeps running and the destination is trasparently (= without explicit user intervention) destroyed
 
+
 A migration is triggered using the 'migrate' verb and is implemented using the ''VM.migrate'' method.
 A migration is carried by a service thread, ''MigrationSourceThread'',  which uses a couple more threads to monitor the operation:
 * ''MigrationMonitorThread'' polls libvirt periodically and report the migration progress
-* ''MigrationDowntimeThread'' controls the maximum allowed downtime and updates libvirt during the migration. The purpose is to avoid the guest OS go paused during the migration, or to minimize the pause duration
+* ''MigrationDowntimeThread'' controls the maximum allowed downtime and updates libvirt during the migration. The purpose is to avoid the guest OS go paused during the migration, or to minimize the pause duration.
+
 
 ''MigrationSourceThread'' performs the following steps to do the migration (in the ''run'' method)
 * establish a connection to the destination host, optionally secured unsing SSL, using the XML-RPC bindings and make sure a VM with the same ID is not running on that host. (''_setupVdsConnection'')
@@ -165,9 +167,12 @@ A migration is carried by a service thread, ''MigrationSourceThread'',  which us
 * starts the actual migration using libvirt's ''migrateToURI2'' call (''_startUnderlyingMigration'')
 * if migration ends well, save the Source VM state and put the source VM Down with success code (''_finishSuccesfully'')
 
+
 Is worth to note that a lot of details are been skipped here and this summary just cover the basic succesfull case. See the migration page for a deeper explanation about migration, error scenarios and more detailed documentation.
 
+
 On the destination host, the 'Migration Destination' flow is the implemented with the following steps:
+*
 
 == Rewrite objectives ==
 
