@@ -506,7 +506,7 @@ Please report test results on the [http://etherpad.ovirt.org/p/3.4-testday-2 rep
   | sla
   | [[Features/Self Hosted Engine Maintenance Flows|Unify maintenance path of hosted engine with host maintenance]]
   | [[User:gpadgett| Greg Padgette]]
-  | style="background-color: yellow;" | code
+  | style="background-color: lightgreen;" | code
   | 
   | 
   | {{BZ|1047649}}
