@@ -113,7 +113,7 @@ cd ~/rpmbuild/RPMS/ppc64
 yum install *
 </pre>
 
-* Replace your POWER7 optimized glibc for the generic ppc64 package:
+* Replace your POWER7 optimized glibc for the generic ppc64 package (this is a workaround for [https://bugzilla.redhat.com/show_bug.cgi?id=1059428 this] bug: ):
 <pre>
 rpm -e --nodeps --justdb glibc.ppc64p7
 yum install glibc.ppc64
