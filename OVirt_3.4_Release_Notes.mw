@@ -24,7 +24,7 @@ To find out more about features which were added in previous oVirt releases, che
 * [[Features/Vdsm_for_PPC64|VDSM Support for PPC64]] introduces the capability of managing KVM on IBM POWER processors via oVirt. Administrators will be able to perform management functionalities such as adding or activating KVM, creating clusters of KVM and performing VM lifecycle management on any IBM POWER host.
 ** <div class="alert alert-info">Migration is still a work in progress for KVM on IBM POWER processor.</div>
 
-==Preview: Hot-plug CPUS==
+==Preview: Hot-plug CPUs==
 
 oVirt 3.4 adds a preview of a [[Hot_plug_cpu|Hot-plug CPU]] feature that enables administrators to ensure customer's service-level agreements are being met, the full utilization of spare hardware, and the capability to dynamically to scale vertically, down or up, a system's hardware according to application needs without restarting the virtual machine.
 
