@@ -16,6 +16,7 @@ This limits older distributions, such as SUSE 10 and RHEL 5.x
 ** Engine Component owner: Ricardo Marin Matinata <rmm@br.ibm.com>
 ** VDSM Component owner: Pradipta Kr. Banerjee <bpradip@in.ibm.com>
 ** QA Owner: Li AG Zhang <zhlbj@cn.ibm.com>
+** Developers: Leonardo Bianconi <leonardo.bianconi@eldorado.org.br>; Vitor de Lima <vitor.lima@eldorado.org.br>; Gustavo Frederico Temple Pedrosa <gustavo.pedrosa@eldorado.org.br>
 
 == Current Status ==
 
