@@ -60,11 +60,11 @@ oVirt 3.4 adds a preview of a [[Hot_plug_cpu|Hot-plug CPU]] feature that enables
 * [[Features/Single_Disk_Snapshot|Single-disc Snapshot]] enables the creation of a customized snapshot, allowing the user to select from which disks to take a snapshot.
 
 === SLA & Scheduling ===
-* [[Features/VM-Affinity|VM Affinity]} makes it possible to apply Affinity and Anti-Affinity rules to VMs to manually dictate scenarios in which VMs should run together on the same, or separately on different hypervisor hosts.
+* [[Features/VM-Affinity|VM Affinity]] makes it possible to apply Affinity and Anti-Affinity rules to VMs to manually dictate scenarios in which VMs should run together on the same, or separately on different hypervisor hosts.
 * [[Features/HostPowerManagementPolicy|Power off capacity added to power policy]] enables hosts to be shutdown and have the Engine clear the host to migrate all VMs elsewhere.
 * [[Features/Even_VM_Count_Distribution|Even VM distribution based on VM count per host]] provides a cluster policy that evenly distributes VMs based on VM count.
 * [[Features/HA_VM_reservation|High Availability VM Reservation]] serves as a mechanism to ensure appropriate capacity exists within a cluster for HA VMs in the event the host they currently resides on fails unexpectedly.
-* [[Features/Self_Hosted_Engine_Maintenance_Flows|Self Hosted Engine Maintenance Flows]] reports additional information about the hosted engine system to the engine, allowing the engine to control the hosted engine maintenance modes. 
+* [[Features/Self_Hosted_Engine_Maintenance_Flows|Self Hosted Engine Maintenance Flows]] reports additional information about the hosted engine system to the engine, allowing the engine to control the hosted engine maintenance modes.
 
 === UX Enhancements ===
 * [[Features/Design/UIRefreshSynchronization|UI Refresh Synchronization]] solves UI consistency issues related to the UI not being updated when certain actions/events happen by centralizing the refresh logic.
