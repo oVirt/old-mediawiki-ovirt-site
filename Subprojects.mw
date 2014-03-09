@@ -65,7 +65,8 @@ Livnat Peer
 |  [http://gerrit.ovirt.org/gitweb?p=ovirt-engine.git gitweb]
 |- 
 | guest agent
-| Vinzenz 'evilissimo' Feenstra
+| Vinzenz 'evilissimo' Feenstra<br/>
+Barak Azulay
 | tbd
 | [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla] <br />
 use ovirt-guest-agent?
