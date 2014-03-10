@@ -1,0 +1,414 @@
+==oVirt Engine==
+{{BZ|818051}} - [RFE] Webadmin's layout is broken when not enough display real-estate [main-tab clutter, sub-tab clutter, buttons-panel clutter]<BR>
+{{BZ|828080}} - [RFE] Please allow to search in a case-insensitive manner from the search bar<BR>
+{{BZ|849427}} - [engine-core] Activating an already active domain through REST fails with "domain inaccessible"<BR>
+{{BZ|852003}} - createVG failures are not logged in vdsm logs<BR>
+{{BZ|856272}} - [RFE] Adding Disk to a VM which is not down adds a Disk that is not activated<BR>
+{{BZ|858166}} - webadmin - centralized refreshing logic<BR>
+{{BZ|864363}} - ovirt-engine-webadmin-portal: New VM Pool button should be grayed out when there are no templates (except Blank template)<BR>
+{{BZ|877906}} - [UserPortal] User is not able to see newly added permissions on object if he inherited this permission on that object.<BR>
+{{BZ|885592}} - [RHS-C] SHD service status details are not displayed in "Services" tab in Cluster<BR>
+{{BZ|886416}} - VMs are not migrated properly when NFS storage is blocked on host<BR>
+{{BZ|886478}} - [RHS-C] Creating a Distributed Stripe volume using the default Stripe Count (4) actually creates only a Stripe volume<BR>
+{{BZ|896139}} - [RFE] collect the "created_by" field of a VM into it's configuration history<BR>
+{{BZ|906313}} - [oVirt-webadmin] [setupNetworks] "No valid Operation for <network_name> and Unassigned Logical Networks panel"<BR>
+{{BZ|911348}} - REST-API: Allow copy/move disk from disks collection<BR>
+{{BZ|921666}} - engine: DeactivateStorageDomainCommand fails with vdsm error: 'Operation not allowed while SPM is active' because we do not actually send SpmStop while there are unknown tasks<BR>
+{{BZ|922520}} - [event tab] better phrasing for actions done by unauthenticated users, currently appears as <UNKNOWN><BR>
+{{BZ|948653}} - Change "Guide" link to Power User Portal Guide<BR>
+{{BZ|953570}} - [Admin Portal] sort roles in alphabetical order in Configure|Roles window<BR>
+{{BZ|955661}} - [vdsm] remove mapping fails after extend storage domain with force=True<BR>
+{{BZ|956075}} - Define meaningful Expires for static css|ico files<BR>
+{{BZ|958813}} - [RHS-C] No event messages are generated in UI when a brick goes from UP --> DOWN / DOWN --> UP<BR>
+{{BZ|961677}} - [RFE] ovirt-engine URI rework<BR>
+{{BZ|965170}} - webadmin: when unchecking the "collapse snapshot" tag in import dialogue it will change the disks allocation policy in the dialogue view to thinprovision no matter what the original disk is<BR>
+{{BZ|965617}} - Migrating VM vm_name to Host <UNKNOWN><BR>
+{{BZ|967546}} - [RHEVM][webadmin] weird scroll-bar flickering on Host -> Network Interfaces sub-tab when refresh button is pressed<BR>
+{{BZ|968961}} - [User Portal] Displaying incorrect events after renaming VM<BR>
+{{BZ|971022}} - engine:  LiveMigrateDisk: java.lang.reflect.InvocationTargetException when vm is removed before the deleteImage step is cleared on wipe=true disk<BR>
+{{BZ|972619}} - [RHS-C] Detected server host3 removed from Cluster <UNKNOWN>, and removed it from engine DB.<BR>
+{{BZ|973091}} - [RHS-C] Binary hook contents are being displayed during Resolve Conflicts<BR>
+{{BZ|973638}} - [RHS-C] Remove all the RHEVM related events from "Manage Events"<BR>
+{{BZ|974076}} - [RFE] spice proxy support at cluster/vm-pool granularity<BR>
+{{BZ|974837}} - event names partially overlap in "manage events" dialog<BR>
+{{BZ|975055}} - [RHSC] Cluster Compatibility Version version should default to the latest version<BR>
+{{BZ|975096}} - engine: no alert for user that specific disks cannot be moved when we move multiple disks at once<BR>
+{{BZ|975729}} - [User Portal] Disable strict user checking - warning, confirmation and then error<BR>
+{{BZ|976469}} - Export and Import of a VM do not save the plugged/unplugged status of its disks<BR>
+{{BZ|977304}} - [restapi] Missing permissions link at /vmpools url<BR>
+{{BZ|977524}} - 'Remove' button on quota consumer should be enabled immediately, after click on user.<BR>
+{{BZ|980750}} - [RHSC] When a host is moved to Maintenance after being Non-operational, it is removed from the cluster, if another host in the cluster is UP.<BR>
+{{BZ|980879}} - osinfo file - deriving properties from NON-existing section causes 'General command validation failure.' in UI<BR>
+{{BZ|982686}} - engine [logger]: same exception is logged multiple times in engine log<BR>
+{{BZ|983051}} - [RHSC] Import cluster when one of the peers is unresolvable or unreachable from the engine, fails.<BR>
+{{BZ|986171}} - [RHSC] Remove hooks from a cluster, when all servers in the cluster are removed from engine.<BR>
+{{BZ|987916}} - [oVirt] [provider] Dialog doesn't update unless focus lost<BR>
+{{BZ|989382}} - RHS-C: No error message seen while starting "ovirt-engine-notifier" when "MAIL_SERVER" is NOT defined<BR>
+{{BZ|989396}} - [Admin Portal] Setting config value DefaultWindowsTimeZone has no effect<BR>
+{{BZ|990429}} - [RHEVM][UI][TEXT] Comment tooltip is not well adjusted to its text<BR>
+{{BZ|992899}} - [RHSC] Console allows addition of a host to a cluster, that has the same UUID as that of a host that is already present in the cluster<BR>
+{{BZ|995238}} - Change column header for clusters on which a policy is applied for usability<BR>
+{{BZ|996563}} - [Admin Portal] Deleted config of UI plugin is not reflected, data are kept until engine is restarted<BR>
+{{BZ|998799}} - [RHS-C] AddVdsCommand should use LockManagerProperly<BR>
+{{BZ|999539}} - scheduling policy: please rename the predefined Functions / Weights Modules / Factors<BR>
+{{BZ|999636}} - [RHEVM-ENGINE] Authentication method doesn't change when using arrow keys<BR>
+{{BZ|1005284}} - It is possible to change an iscsi storage connection and set an empty target<BR>
+{{BZ|1005787}} - [rhevm] Webadmin - Vms - Vms:Hosts autocomplete is incorrect<BR>
+{{BZ|1005836}} - [rhevm] Webadmin - Users - SearchBox doesnt display Templates in search for Users (Users: Templates.name =R*)<BR>
+{{BZ|1006231}} - [rhevm] Webadmin - Hosts - SearchBox "Host:user.usrname =*" doesn't filter correctly<BR>
+{{BZ|1006905}} - REST-API: --parent-tag-id  option doesn't exists in 'update tag' options<BR>
+{{BZ|1007392}} - [ovirt-engine-notifier] - Mail - Incorrect mail headline on Error (Issue Solved Notification, Failed to query for notifications)<BR>
+{{BZ|1007393}} - [scale] The thread pool is out of limit<BR>
+{{BZ|1008258}} - Cannot add hypervisor host when use chinese support<BR>
+{{BZ|1008318}} - [RHSC] Error message seen on starting rebalance on a volume with one brick needs improvement<BR>
+{{BZ|1008900}} - [RHSC] Show error pop-up when user tries to stop a volume which has rebalance in progress<BR>
+{{BZ|1008942}} - RHS-C: Introduce a Force option in the UI to allow creation of bricks in the root partition<BR>
+{{BZ|1009757}} - [es_ES]   [Admin Portal] Virtual Machines tab- Chart heading "Time executing" does not fit in the available space<BR>
+{{BZ|1011058}} - [Admin Portal] Relogin with username/password via login screen after being automatically logged off causes HTTP auth dialog<BR>
+{{BZ|1011445}} - Tabbing navigation in Add host tab should go from password field to OK buton<BR>
+{{BZ|1011778}} - RHS-C: Rebalance Status refresh was not occuring properly<BR>
+{{BZ|1012329}} - [RHSC] Not able to close rebalance status dialog .<BR>
+{{BZ|1012871}} - [RHSC] Bricks tab for a volume not displaying the bricks and remains in the loading state for very long - more than 15 minutes.<BR>
+{{BZ|1013643}} - Glance download is not interrupted when the InputStream is closed<BR>
+{{BZ|1014069}} - [spice-html5] Unable to send ctrl-alt-del to a Windows guest while using spice-html5 console<BR>
+{{BZ|1014980}} - [RHSC] - Rebalance status title should be changed.<BR>
+{{BZ|1015013}} - [RHSC] - Brick advanced details gives error.<BR>
+{{BZ|1015016}} - [RHSC] - An event message should be displayed when rebalance completes on a volume.<BR>
+{{BZ|1015020}} - [RHSC] 'Add Network' dialog for a cluster contains fields not relevant to RHS<BR>
+{{BZ|1015052}} - [ovirt-engine-backend] there are dos end of lines in engine.log<BR>
+{{BZ|1015185}} - [RFE] Addition of os disk indicator on VM import screen<BR>
+{{BZ|1015444}} - [RHSC] - No event message generated when rebalance is started from CLI.<BR>
+{{BZ|1015478}} - [RHSC] A user with permissions to manipulate volumes cannot delete a volume<BR>
+{{BZ|1016461}} - [vdsm] engine fails to add host with vdsm version 4.13.0<BR>
+{{BZ|1016661}} - Description for the creation of cluster is incorrect<BR>
+{{BZ|1016844}} - [RFE] Diplay client IP in the VM Sessions tab<BR>
+{{BZ|1018552}} - REST-API: role should not be added to user without having a resource in context<BR>
+{{BZ|1018782}} - REST-API: Inconsistent schema implementation in PayloadFile<BR>
+{{BZ|1018904}} - call to ClusterGlusterVolumeBricks::add() successfully adds brick to volume but throws exception<BR>
+{{BZ|1019557}} - [RHS-C] The menu option "Rebalance" should appear after "Stop" in Volume tab<BR>
+{{BZ|1019559}} - [RHS-C] Drop down menu in Activities column for volumes should have a box on mouse hover<BR>
+{{BZ|1019561}} - [RHS-C] Remove bricks status dialog should show host names instead of IP address<BR>
+{{BZ|1019568}} - [RHS-C] In the Hosts tab, the sub-tab "Gluster Bricks" should be renames as "Bricks"<BR>
+{{BZ|1019570}} - [RHS-C] Hide all the virt related fields and menus from RHSC<BR>
+{{BZ|1019598}} - [RHS-C] Status of the volume in activities column after Stop rebalance should be in sync with gluster CLI output<BR>
+{{BZ|1019599}} - [RHS-C] Show units of time (sec/ min) in runtime column in remove brick status dialog<BR>
+{{BZ|1020190}} - RHS-C: Hide NFS setup, Application mode and Datacenter storage type from CONFIGURATION PREVIEW during rhsc-setup<BR>
+{{BZ|1020254}} - [RHSC] - Stop Rebalance button does not get disabled  once rebalance is complete.<BR>
+{{BZ|1020278}} - [RHSC] - Completed text in the status dialog needs to be highlighted or made bold.<BR>
+{{BZ|1020282}} - [RHSC] Error message on failure to start remove-brick is incorrect<BR>
+{{BZ|1020760}} - [notifier] sent notification should be visible in INFO log level<BR>
+{{BZ|1020779}} - [RHSC] - Skipped file count is getting displayed as failed file count in rebalance status dialog.<BR>
+{{BZ|1020793}} - [notifier] If Alert and Issue Solved Notifications are both discovered during next iteration, the order is messed<BR>
+{{BZ|1020872}} - [RHSC] - Node column should be sorted in the rebalance status dialog.<BR>
+{{BZ|1020883}} - [RHSC] In the task tab, show the size of rebalanced files in MB or GB<BR>
+{{BZ|1020920}} - [notifier][RFE] Use STARTTLS<BR>
+{{BZ|1021334}} - [RHSC] - Cancel button is not working in the stop rebalance dialog box.<BR>
+{{BZ|1021343}} - [RHSC] - Stop rebalance confirmation dialog does not display the volumes on which rebalance  is going to be stopped.<BR>
+{{BZ|1021360}} - [text] spelling mistakes in engine event log<BR>
+{{BZ|1021397}} - [RHSC] 'CPU Name' field for a host is empty and 'CPU Type' is scrollable<BR>
+{{BZ|1021441}} - [RHSC] Status of bricks that reside on a server which is down, should be shown as down.<BR>
+{{BZ|1021584}} - message in the 'remove' confirmation dialog cannot be overridden in some cases<BR>
+{{BZ|1021773}} - [RHSC] Import host dialog hangs<BR>
+{{BZ|1021814}} - [RHSC] After starting rebalance on a volume, the rebalance button is active for some time.<BR>
+{{BZ|1021982}} - [RHSC] - Remove brick warning for distributed replicate volume has an extra parameter which is not relevant .<BR>
+{{BZ|1022511}} - RHS-C: Commit and Retain buttons are disabled in Remove brick status pop-up even though it's ready for Commit/Retain<BR>
+{{BZ|1022516}} - RHS-C: Typo in Events during Remove brick<BR>
+{{BZ|1022585}} - [RHSC] Menu items in the remove-brick menu are all disabled<BR>
+{{BZ|1022937}} - [RHSC] - Stopped At field is not getting dispalyed in the rebalance status dialog once rebalance is stopped.<BR>
+{{BZ|1022946}} - [RHSC] Rebalance status dialog appears on the Console on clicking on the Status button and immediately disappears<BR>
+{{BZ|1022996}} - [RHSC] - Monitoring stop rebalance from CLI does not work.<BR>
+{{BZ|1023048}} - Upgrade from ovirt-engine-3.3 to master fails<BR>
+{{BZ|1023145}} - Storage and dc are up although there is no host<BR>
+{{BZ|1023722}} - [oVirt-webadmin][network] Network roles in cluster management should be radio buttons<BR>
+{{BZ|1023754}} - [RFE] add trigger to stop etl connection via engine db value.<BR>
+{{BZ|1023884}} - [RHSC] - Table in the rebalance status dialog should be same as that of CLI.<BR>
+{{BZ|1023956}} - [RHS-C] In Add Bricks" pop-up, reference of "Servers"  is NOT changed to "Hosts"<BR>
+{{BZ|1024183}} - [RHS-C] Host detach fails but does not show an error in UI<BR>
+{{BZ|1024227}} - [RHS-C] Stop remove brick does not show the remove brick status<BR>
+{{BZ|1024377}} - Users with GlusterAdmin role should be able to Add/Remove Cluster and Hosts<BR>
+{{BZ|1024592}} - [RHSC] Brick advance details dialogue should have the heading “Brick Advanced Detail”. In the General tab of Brick Advance details, swap the last two items “Mount options” and “File System” position.<BR>
+{{BZ|1024606}} - [RHS-C] Remove brick status dialogue : Rename the column from “File Rebalanced” to “Files Migrated”<BR>
+{{BZ|1024609}} - Rename Gluster Host to Host in detach Host dialog<BR>
+{{BZ|1024649}} - [RHSC] In the bricks sub-tab for a server, show the bricks in sorted order<BR>
+{{BZ|1024734}} - Put – (dash) before every item name for the purpose of consistency in confirmation dialogues. Particularly in Maintenance Confirmation dialogue...<BR>
+{{BZ|1024736}} - [RHS-C] Error pop up has empty title<BR>
+{{BZ|1024782}} - [RHSC] Retain button in the remove-brick status dialog does not work.<BR>
+{{BZ|1024817}} - [RHSC] - Close button in commit remove bricks dialog should be changed to 'Cancel'<BR>
+{{BZ|1024997}} - Remove Multiple hosts throws error<BR>
+{{BZ|1025013}} - [RHS-C] Remove-brick icon in the Volumes tab and Bricks tab should appear simultaneously<BR>
+{{BZ|1025101}} - [RHSC] General Tab under Host : All the rows has to be properly aligned<BR>
+{{BZ|1025203}} - [RHEVM] [webadmin] fix Edit Role dialog layout<BR>
+{{BZ|1025295}} - Webadmin - Events - Search box: filtering events by time shows bogus results<BR>
+{{BZ|1025304}} - Starting rebalance should reflect in UI immediately that task has started<BR>
+{{BZ|1025320}} - backend search returns only first page when given max=-1<BR>
+{{BZ|1026097}} - Create DB Scripts - incompatible code breaking dwh cross compatibility<BR>
+{{BZ|1026308}} - [oVirt] [webadmin] In VM Guide Me, button Configure Virtual Disks doesn't change<BR>
+{{BZ|1026389}} - Duplicated login events<BR>
+{{BZ|1026593}} - Webadmin UI is now requesting two slashes in front of URLs<BR>
+{{BZ|1026885}} - Default DC & Cluster has fixed UUIDs<BR>
+{{BZ|1026980}} - [RFE] Allow users to cluster level enable/disable KSM<BR>
+{{BZ|1027178}} - Volumes tab and sub-tabs not taking equal space<BR>
+{{BZ|1027675}} - [RHSC] Remove-brick status dialog hangs when glusterd goes down on the storage node<BR>
+{{BZ|1029050}} - Reinstall host by rest api fails on root_password field requirement<BR>
+{{BZ|1029414}} - [RHS-C] About dialog does not have a title.<BR>
+{{BZ|1029478}} - [RHSC] After committing remove-brick or retaining the brick, buttons 'Commit' and 'Retain' are not disabled in the remove-brick status dialog<BR>
+{{BZ|1029648}} - [RHSC] Edit Role Dialog Should Read "Volumes" instead of "Gluster"<BR>
+{{BZ|1030806}} - restore.sh - wrong example commands in --help<BR>
+{{BZ|1030834}} - [restore.sh] restore.sh is doing restore.sh.log in /usr directory<BR>
+{{BZ|1031040}} - [RFE] RunOnce dialog can not set a vnc keymap itself<BR>
+{{BZ|1031386}} - [engine-webadmin] inappropriate message when trying to perform an operation on a locked disk<BR>
+{{BZ|1031585}} - [RHSC] Unable to remove more than one pair of bricks from a distributed-replicate ( 3x2 ) volume<BR>
+{{BZ|1031597}} - REST-API: Session based authentication in 3.4 is broken<BR>
+{{BZ|1031901}} - [RHSC] Events log message seen on adding and removing a role needs improvement.<BR>
+{{BZ|1033772}} - REST: unable to resolve hook content conflict by copying from another host<BR>
+{{BZ|1034063}} - [RFE] engine.log is missing the iso file name, for run once \ boot from CD.<BR>
+{{BZ|1034346}} - REST: can not remove brick from distributed-replicate volume<BR>
+{{BZ|1035124}} - An event message for commit remove brick should mention the number of bricks removed.<BR>
+{{BZ|1035146}} - [RHSC] 'Could not fetch remove brick status of volume' message lists all the bricks of the volume<BR>
+{{BZ|1035238}} - [RFE] Support for moving hosts to sleep when using Power Saving policy<BR>
+{{BZ|1035566}} - [RFE] [oVirt][webadmin] Change comment column title to icon, and move to right of name<BR>
+{{BZ|1035601}} - [RHSC] Remove-brick icon disappears from the UI, when glusterd is killed on the node which was running remove-brick<BR>
+{{BZ|1035667}} - Paused VM can be resumed on host that is not UP<BR>
+{{BZ|1035719}} - Make default VNC console mode configurable<BR>
+{{BZ|1036035}} - [RHS-C] Replace "GLuster" with "Gluster" in "Add Event Notification" under Users tab<BR>
+{{BZ|1036039}} - [RHSC] Bricks status is not getting synched when gluster CLI output shows the port as N/A<BR>
+{{BZ|1036365}} - Engine does not verify that proxy supports PM agent<BR>
+{{BZ|1036500}} - [RHS-C] 'Add Event Notification' should show an error message if MAIL_SERVER is NOT configured and if "ovirt-engine-notifier" service is NOT started<BR>
+{{BZ|1036638}} - [RFE] VM-VM Affinity<BR>
+{{BZ|1036746}} - [RFE] High Availability flag should be included when exporting/importing from Export Domain<BR>
+{{BZ|1036749}} - [RFE] Even Distribution Policy by number of VMs<BR>
+{{BZ|1036753}} - [RFE] Make reservations for HA VMs to make sure there's enough capacity to start them if N hosts fail<BR>
+{{BZ|1036885}} - CreateVDSCommand Logging message does not report NIC devices<BR>
+{{BZ|1037583}} - [RHSC] After retaining a brick using the Retain button in the status dialog, the 'Stopped At' field does not appear<BR>
+{{BZ|1037607}} - when rebalance or remove-brick happens volume name gets updated as UNKNOWN in the tasks pane<BR>
+{{BZ|1037667}} - [REPORTS] - dashboard results an error, after reports were installed<BR>
+{{BZ|1037709}} - REST: migrating step's type is unknown<BR>
+{{BZ|1038678}} - REST: rsdl definition for brick migrate is incorrectly defined<BR>
+{{BZ|1039862}} - add events for remote console connection<BR>
+{{BZ|1040630}} - [RFE] Predictable vNIC order<BR>
+{{BZ|1040686}} - rest api: incorrect error message commiting part of the migrated brick set<BR>
+{{BZ|1040959}} - Rebalance start from gluster CLI does not update icon in the volume activities column.<BR>
+{{BZ|1040973}} - No event message gets generated when remove-brick is stopped from CLI<BR>
+{{BZ|1042740}} - Virt related links are returned in RSDL  when engine is in Gluster only mode<BR>
+{{BZ|1042783}} - Save user's console setting per pool<BR>
+{{BZ|1042784}} - Show name of the template in General tab for a vm if the vm is deployed from template via clone allocation.<BR>
+{{BZ|1042854}} - [RFE] Track downtime for inactive VMs<BR>
+{{BZ|1043032}} - [RHSC] Server removed from DB after being in Up state<BR>
+{{BZ|1044091}} - In the event of a full host power outage (including fence devices) a user must wait 19 mins (3 x 3 minute timeouts + 10 minutes for the transaction reaper) until they can manually fence a host to relocate guests.<BR>
+{{BZ|1044478}} - [engine-setup] Encoding issue in /var/lib/ovirt-engine/setup-history.txt<BR>
+{{BZ|1045022}} - [RFE] Virtual pxe boots out of order - NICs ordered according to the MAC addresses<BR>
+{{BZ|1045139}} - In the event of a full host power outage (including fence devices) VDS_ALERT_FENCE_STATUS_VERIFICATION_FAILED alert remains in audit log<BR>
+{{BZ|1045380}} - tree view unsorted<BR>
+{{BZ|1046611}} - [oVirt][infra] Device custom properties syntax check is wrong<BR>
+{{BZ|1046625}} - [RFE] Add drac7 fence agent with ipmilan as implemintation<BR>
+{{BZ|1047654}} - RHEVM-CLI: action <type> <id> <action>  command accepts async and grace_period-expiry parameters but they are missing in auto-completion<BR>
+{{BZ|1049892}} - [RHSC] - Values of Physical Memory and swap size in hosts general sub tab  are incorrect.<BR>
+{{BZ|1050135}} - [RHSC] Unable to remove U1 Server after Server failed to add<BR>
+{{BZ|1050954}} - cleandb.sh does not obey '-l logfile'<BR>
+{{BZ|1051451}} - [RFE] Add Reboot option for VM<BR>
+{{BZ|1051867}} - Fail to delete network using API<BR>
+{{BZ|1052104}} - Fix SPICE ActiveX issues with MS Internet Explorer 11<BR>
+{{BZ|1054311}} - Newly-created QoS isn't saved for network<BR>
+{{BZ|1054314}} - Edit Host Network dialog can't be approved in clusters < 3.4<BR>
+{{BZ|1055434}} - [RFE] Enable configuration of maximum allowed downtime during live migration per guest<BR>
+{{BZ|1053715}} - [RFE] Cross arch support for ovirt<BR>
+{{BZ|1053728}} - [RFE] PPC arch support<BR>
+{{BZ|1061774}} - Memory snapshot on PPC64<BR>
+{{BZ|1057178}} - Migration on the ppc64 platform<BR>
+{{BZ|1035279}} - Allow to disable SSO per VM<BR>
+{{BZ|1029441}} - Fix Control-Alt-Delete functionality in console options<BR>
+
+Fixed in oVirt 3.4.0 beta 2:
+
+{{BZ|906359}} - Management network VLAN tagging behaves badly<BR>
+{{BZ|953343}} - [RFE] Hypervisor RHEV-H only connects to the Dell Equallogic using one connection. it is expected to do multipathing and have 4 connection to it.<BR>
+{{BZ|979231}} - oVirt Node Upgrade: Support N configuration<BR>
+{{BZ|991470}} - Storage connection is left in db table in case adding storage domain fails<BR>
+{{BZ|999713}} - PRD34 - [RFE] Need to reclaim horizontal real estate by collapsing the tree panel<BR>
+{{BZ|1014039}} - Cannot read name of 'current' CD image through the REST API<BR>
+{{BZ|1019394}} - deleteImage task, which was started as part of snapshot creation (with save memory) roll-back remains running forever<BR>
+{{BZ|1028515}} - Change label for Network profiles to be more specific to VMs<BR>
+{{BZ|1028523}} - Add VM network icon in the Logical network dialog<BR>
+{{BZ|1033043}} - [engine-setup] engine-setup should detect if postgresql's shared_buffers are below active kernel.shmmax<BR>
+{{BZ|1036777}} - [OVIRT][ENGINE]  Hot Plug CPU - Support dynamic virtual CPU allocation and deallocation<BR>
+{{BZ|1037441}} - [engine-backend] bad handling with code 205 response from vdsm to CopyImageVDS request in engine.log<BR>
+{{BZ|1037478}} - [RFE] Have ability to modify VM template - template versions<BR>
+{{BZ|1038053}} - [RFE] Allow domain of multiple types in a single Data Center<BR>
+{{BZ|1038613}} - XP VMs get virtio-scsi controller when created as a brand-new VM or from template<BR>
+{{BZ|1038988}} - Gluster brick sync does not work when host has multiple interfaces<BR>
+{{BZ|1039616}} - Setting shmmax on F19 is not enough for starting postgres<BR>
+{{BZ|1040572}} - [RHEVM-SETUP] - remote db configuration. rhevm-setup asks for different configuartion than the dwh & reports setups<BR>
+{{BZ|1040590}} - RHEVM SETUP REMOTE_DB: postgresProvisioning remains none in answer file<BR>
+{{BZ|1043230}} - Allow configuring Network QoS on host interfaces<BR>
+{{BZ|1048790}} - Not possible to power off VM that failed migration.<BR>
+{{BZ|1048916}} - sub-tab events in different main-tabs are being duplicated<BR>
+{{BZ|1051041}} - cloud-init options persistence / unification with sysprep options<BR>
+{{BZ|1051048}} - [notifier] MAIL_PORT=blabla does not make the app fail but it continues to send to port 25<BR>
+{{BZ|1051061}} - [notifier] MAIL_PORT=0 is nonsense as we are not binding but connecting to remote host<BR>
+{{BZ|1051524}} - [es-ES] sync option in network edit is not displayed<BR>
+{{BZ|1053601}} - [RFE] allow to provide a password change url on login failure when password expires<BR>
+{{BZ|1054195}} - [NetworkLabels] Attaching two labeled networks to a cluster result in failure of the latter<BR>
+{{BZ|1054320}} - QoS doesn't take effect when synchronizing network in cluster < 3.4<BR>
+{{BZ|1054322}} - Host with network QoS can be moved to cluster < 3.4<BR>
+{{BZ|1055188}} - [NetworkLabels] Detaching two labeled networks from a cluster result in failure of the latter<BR>
+{{BZ|1055441}} - [NetworkLabels] Host nics labels are being deleted when setup networks api is called<BR>
+{{BZ|1055952}} - [NetworkLabels] Missing 'Edit network' button on labeled networks which are attached to a nic in 'setup networks' dialog<BR>
+{{BZ|1056064}} - Events are being pulled from audit_log in a very inefficient way<BR>
+{{BZ|1056155}} - VDSM < 3.4 reporting QoS in 3.4 cluster produces ClassCastException<BR>
+{{BZ|1056307}} - RHEV 3.2 RHEV-M "Enforcing" typo in host reboot log message<BR>
+{{BZ|1056501}} - Updating a network on nic via 3.0 api fails<BR>
+{{BZ|1056567}} - Cannot update comment for VM in user portal<BR>
+{{BZ|1056651}} - Cannot create VM snapshot, dialog does not load<BR>
+{{BZ|1057001}} - duplicate commit button for snapshots<BR>
+{{BZ|1057143}} - [REST] Single disk snapshot fails without specifying storage domain<BR>
+{{BZ|1057147}} - Assigning a role to a user fails with an SQL error<BR>
+{{BZ|1057154}} - Some properties not persisted during Clone of VM Snapshot<BR>
+{{BZ|1057155}} - multiple storage domains - edit dialog always resets type to Shared<BR>
+{{BZ|1057176}} - engine-managed-domains - typos in usage report<BR>
+{{BZ|1057221}} - [engine] Files created on stateless vm are retained after powering off and back on<BR>
+{{BZ|1057305}} - Misaligned Host Network QoS columns on Chrome<BR>
+{{BZ|1057561}} - Templates are being pulled from template view in a very inefficient way<BR>
+{{BZ|1057654}} - Extend important limits to their hard limit<BR>
+{{BZ|1058017}} - Host network QOS get a null value if you cancel the creation of new Network QOS<BR>
+{{BZ|1058205}} - Unneeded line in Profiles subtab when creating the new network<BR>
+{{BZ|1058327}} - Do not override httpd ssl.conf and root on upgrade<BR>
+{{BZ|1058778}} - Port mirroring should be greyed out of VNIC profiles of networks imported/created in Neutron<BR>
+{{BZ|1059233}} - Neutron labels should be invisible for the Host NICs<BR>
+{{BZ|1059411}} - vdc_options - set version correctly<BR>
+{{BZ|1059780}} - [oVirt] NPE in update vm/template<BR>
+{{BZ|1060705}} - One display seen on a multi-monitor guest after rhev 3.0 to 3.2 migration<BR>
+{{BZ|1060729}} - Change NIC type from sPAPR VLAN to any other type causes error when starting the VM (PPC)<BR>
+{{BZ|1061032}} - [AIO] support RFC2317 reverse DNS lookup<BR>
+
+Fixed in oVirt 3.4.0 beta 3:
+
+{{BZ|879662}} - user-portal/web-admin: refresh rate across tabs/sections should be identical (currently each tab has its own refresh rate)<BR>
+{{BZ|904029}} - [engine-manage-domains] should use POSIX parameter form and aliases as values<BR>
+{{BZ|910733}} - [Storage] [Direct LUN] Wrong event message when removing direct LUN disk.<BR>
+{{BZ|957939}} - PRD34 - [RFE] When changing the cluster and data centre compatibility versions, it should be clearly stated that changing from version 3.0 makes the data domains incompatible with RHEV 3,0 and roll back will not be possible.<BR>
+{{BZ|960997}} - [REST-API] add descriptions to import vm/template SD source/destination params in RSDL<BR>
+{{BZ|962180}} - engine: host stuck on Unassigned when moving from status Maintenance  when storage is not availble from the host<BR>
+{{BZ|969641}} - [RFE] Able to detach the ISO domain from the DataCenter though iso is attached and mounted in the VM<BR>
+{{BZ|969789}} - engine: can't live migrate a disk if the vm also has an inactive disk attached on a domain which is in maintenance<BR>
+{{BZ|975114}} - engine: no CanDoAction for creating vm from snapshot when snapshot has a disk on a maintenance domain<BR>
+{{BZ|1001976}} - manage domains should try to resolve FQDNs provided by -ldapServers<BR>
+{{BZ|1006439}} - Can not do scan alignment to several disks simultaneously. Scan alignment option is greyed out.<BR>
+{{BZ|1013631}} - No email notification sent when host recovers from previously reported condition<BR>
+{{BZ|1014859}} - [RFE] improve context-sensitive help csv mapping files<BR>
+{{BZ|1018847}} - PRD34 - [RFE] Export storage domain maintenance mode confirmation<BR>
+{{BZ|1023484}} - [Admin Portal] Local DC - The Cluster is fully configured and ready for use.<BR>
+{{BZ|1031369}} - When trying to create a vNicProfile without a network, an invalid error is returned<BR>
+{{BZ|1031717}} - Force removal of DataCenter fails to remove vm_pool from DB<BR>
+{{BZ|1038980}} - PRD34 - [RFE] Add 'warnings' to Relocate VM disk "Move" and "Deactivate" actions<BR>
+{{BZ|1044089}} - Allow manual fence in connecting state<BR>
+{{BZ|1047887}} - Update vnic_profile fails for VM vnic.<BR>
+{{BZ|1047965}} - OVF descriptor file data via the REST API for the Active VM<BR>
+{{BZ|1048356}} - Source cluster and dc does not show up in Power Management tab while editing a previous added host [pm_proxy_preferences]<BR>
+{{BZ|1052149}} - no square-loading-animation when changing left-pane-tree selection<BR>
+{{BZ|1053544}} - [RFE] allow importing glance image as a template<BR>
+{{BZ|1053740}} - Missing storage allocation checks when extending a disk<BR>
+{{BZ|1054080}} - gracefully warn about unsupported upgrade from legacy releases<BR>
+{{BZ|1055161}} - [engine][network] Missing audit log for mass operations<BR>
+{{BZ|1056169}} - [engine-backend] [RO-disks] snapshot creation includes RO disks<BR>
+{{BZ|1056803}} - Creating a new VM fails with MAC_POOL_NOT_INITIALIZED<BR>
+{{BZ|1056922}} - Storage Live Migration should only snapshot the migrated disk<BR>
+{{BZ|1056999}} - [TEXT] engine-managed-domains - inconsistent cases in usage and error messages<BR>
+{{BZ|1057053}} - Change default display type for x86-64 VMs<BR>
+{{BZ|1057087}} - some administrators (admin@internal, admins added via engine-manage-domains?) are displayed with a 'user' icon by mistake.<BR>
+{{BZ|1057101}} - Guide me window - new is hidden by the icon<BR>
+{{BZ|1057136}} - Fail to add Event-Notification<BR>
+{{BZ|1057172}} - engine-managed-domains - insufficient validation of the "-report" parameter<BR>
+{{BZ|1057182}} - [RFE] engine-managed-domains - sort domains alphabetically when reporting<BR>
+{{BZ|1057214}} - Unable to add group via RESTAPI<BR>
+{{BZ|1057546}} - vdsm: cannot start a vm in read only with IDE disk type<BR>
+{{BZ|1058214}} - Action buttons in the Hosts/Network interfaces subtab show 3.0 and 3.1 action simultaneously<BR>
+{{BZ|1058957}} - rhevm-config output when failing to change password is easy to miss and doesn't give any context<BR>
+{{BZ|1059228}} - [events] Incorrect mapping: DWH_STOPPED - History Service Started<BR>
+{{BZ|1059713}} - Vm update not work via REST api<BR>
+{{BZ|1060516}} - SD becomes inaccessible while adding a new lun to it<BR>
+{{BZ|1060575}} - [RFE] OVF descriptor file data via the REST API for the Active VM<BR>
+{{BZ|1060792}} - Bookmarks panel is not refreshing upon adding/editing/removing a Bookmark<BR>
+{{BZ|1060994}} - [RHSC] - Rebalance icon in the activities column chnages to unknown (?)<BR>
+{{BZ|1061724}} - [engine] Redundant Commit Network Changes command is sent to host when cluster is changed<BR>
+{{BZ|1061727}} - [engine] Audit log event for failure to commit network changes appears as INFO messages<BR>
+{{BZ|1062172}} - useDnsLookup flag is ignored at rhevm-manage-domains - krb5.conf file will always contain realms and "domain_realm" section<BR>
+{{BZ|1062388}} - Guest NIC initialization uses tag "nics" instead of "nic"<BR>
+{{BZ|1062434}} - RHEV 3.3 rhevm-shell 'show vm' not returning all guest attributes<BR>
+{{BZ|1062646}} - [notifier] MAIL_SMTP_ENCRYPTION=tls falls back to plain-text SMTP if server does not advertise STARTTLS<BR>
+{{BZ|1063041}} - Unable to interact with user portal login dialog<BR>
+{{BZ|1063187}} - [REST API] duplicate "Nic" name from GuestNicsConfiguration<BR>
+{{BZ|1063276}} - Cannot login as admin@internal<BR>
+{{BZ|1063443}} - Type converters in XML schema confuse Java SDK generator<BR>
+{{BZ|1063869}} - allinone fails on upgrade - no admin password<BR>
+{{BZ|1063883}} - Cannot run VM for windows VM if sysprep is enabled<BR>
+{{BZ|1064227}} - task list in Webadmin - jobs disappear while still running<BR>
+{{BZ|1064572}} - restapi JAXBMarshallingException are not propogated<BR>
+{{BZ|1064903}} - engine-backup --mode=restore should point to documentation on failure<BR>
+{{BZ|1065615}} - When adding a user that belongs to a group, it does not inherit the group permissions<BR>
+{{BZ|1065713}} - [NetworkLabels] LABELED_NETWORK_ATTACHED_TO_WRONG_INTERFACE entry in AppErrors is split to two lines<BR>
+{{BZ|1065727}} - Disk name doesn't get assigned automatically after a CREATE command.<BR>
+{{BZ|1065941}} - Queries generated for data centers don't take into account the replacement of "type" with "local"<BR>
+{{BZ|1051041}} - Cloud-init options persistence and unification with Windows Sysprep options<BR>
+{{BZ|1037478}} - Have ability to modify VM template - Template Versions<BR>
+{{BZ|1058203}} - 	[RHEVM-RHS] - Brick advanced details gives error<BR>
+
+Fixed in oVirt 3.4.0 RC
+
+{{BZ|928864}} - Cannot import VM. The following disks already exist: . Please import as a clone.<BR>
+{{BZ|975040}} - engine [TEXT]: unclear error when trying to remove a disk from a template when the template disk has only one copy on that specific domain<BR>
+{{BZ|1023330}} - [RHEVM][webadmin] New Data Center "Guide Me" does not reflect hosts presence<BR>
+{{BZ|1026868}} - Direct LUN is not being updated after resizing<BR>
+{{BZ|1032661}} - Add SNMP trap as notification method to to ovirt-engine-notification<BR>
+{{BZ|1035844}} - [oVirt][infra] Add host/Reinstall radio button text not actionable<BR>
+{{BZ|1047649}} - [Hosted Engine] Unify maintenance flows<BR>
+{{BZ|1049611}} - rhev 3.3 mtu field shows the wrong ip-mtu<BR>
+{{BZ|1054187}} - [NetworkLabels] Block labeling a bond without slaves<BR>
+{{BZ|1054410}} - FullListVdsCommand log message appears wrong with java class ref<BR>
+{{BZ|1055881}} - REST API: Search for an user in active directory by upn doesn't return any results (search by user name returns result)<BR>
+{{BZ|1056998}} - Edit Approve Host popup -> Cluster not updated<BR>
+{{BZ|1057109}} - UI: Bad vertical alignment in add user screen<BR>
+{{BZ|1057575}} - From GuideMe link, adding Host using SSH PublicKey Authentication fails with "Error while executing action: Cannot install Host with empty password."<BR>
+{{BZ|1057579}} - HA Vm reservation check ignores host status<BR>
+{{BZ|1057584}} - HA Vm reservation check failure event log is not well resolved<BR>
+{{BZ|1057622}} - webadmin: preallocated disk is reported as thinprovision in "Edit" dialogue<BR>
+{{BZ|1058011}} - general ldap provider should be removed from manage-domains<BR>
+{{BZ|1058018}} - upgrade from 3.3 overwrites exports with acl None<BR>
+{{BZ|1058030}} - Incorrect error message when trying to edit network attached to Template from VM to non-VM<BR>
+{{BZ|1059156}} - Move out downstream specific vdc_options changes into rhevm-setup-plugins<BR>
+{{BZ|1059258}} - REST API: Create user user@domain actually creates user only<BR>
+{{BZ|1059741}} - It's impossible to update the MTU/VLAN of the network that resides on unplugged NIC of the VM<BR>
+{{BZ|1060528}} - Error response to DELETE request of 'Everyone' group doesn't contains 'detail' field<BR>
+{{BZ|1061121}} - [engine] Extending a storage domain that is not attached to a datacenter fails with NullPointerException<BR>
+{{BZ|1062615}} - utc_diff not updated according to a change in VM settings<BR>
+{{BZ|1063285}} - [RHEVM] [Network Labels] moving host with labeled interface to Cluster 3.0 is not blocked<BR>
+{{BZ|1063782}} - VMs do not appear in virtual machine tab if host is selected in side pane (data-center > cluster > host > )<BR>
+{{BZ|1064067}} - webadmin: customer preview allows you to select "Active vm before the preview" which causes the disk to become illegal and vm cannot be run with "CANNOT_RUN_FROM_DISK_WITHOUT_DISK"<BR>
+{{BZ|1064395}} - search paging on event log does not use paging correctly<BR>
+{{BZ|1064456}} - rest api Empty int fields in POST data causes JAXB parser to fail<BR>
+{{BZ|1064829}} - Adding permissions to any thing doesn't work<BR>
+{{BZ|1064880}} - RHEV-M fails to detect 'AMD Opteron G5' as CPU_Type for hypervisors.<BR>
+{{BZ|1064907}} - Listing templates takes noticeable amount of time, while listing many more VMs is prompt<BR>
+{{BZ|1064953}} - [RHEVM] [network labels] Failed to configure vm networks on host while changing its cluster.<BR>
+{{BZ|1065014}} - Adding a direct LUN disk doesn't work<BR>
+{{BZ|1065747}} - [engine-backend] cannot set domain to maintenance in case there are only unplugged disks located on it<BR>
+{{BZ|1065970}} - Missing data storage types on "Add More Storage"<BR>
+{{BZ|1066081}} - Enable sync of LUNs after storage domain activation for FC<BR>
+{{BZ|1066459}} - [database] plpgsql language is not created although it should<BR>
+{{BZ|1066489}} - Event list not updating when events happen.<BR>
+{{BZ|1066834}} - [engine-backend] Can add multiple boot disks to a vm<BR>
+{{BZ|1066838}} - [engine-webadmin] inappropriate error message when cloning a VM from snapshot which one of its disks is located on an inactive SD<BR>
+{{BZ|1066953}} - Cannot edit network is "setup networks" dialog<BR>
+{{BZ|1066956}} - Cannot create a bond in 'Setup networks' dialog<BR>
+{{BZ|1067058}} - [database] old psycopg2 does not accept unicode string as port name<BR>
+{{BZ|1067103}} - [engine-webadmin] unclear error message when starting a VM with disk that located on a domain in maintenance<BR>
+{{BZ|1067906}} - Cloud-init DNS settings should go inside the "iface" section<BR>
+{{BZ|1068884}} - wrong memory usage report<BR>
+{{BZ|1068924}} - tree based sub-tabs - missing action panel buttons<BR>
+{{BZ|1068929}} - Default route is not set properly for management network if downstream/upstream engine and VDSM are mixed<BR>
+{{BZ|1068970}} - RHEV 3.2 API changing IP on hypervisor bond sub-int reqs re-passing bond opts<BR>
+{{BZ|1069151}} - Override previous export of same template fail<BR>
+{{BZ|1069201}} - [REST]: Missing domain field on VM\Template object.<BR>
+{{BZ|1069522}} - [REST-API] XSD schema validation error: response for create vm returned with 'type' and 'data' fields instead of with one of these fields<BR>
+{{BZ|1070152}} - webadmin: Missing add new ISO option in data center "guide me" dialog<BR>
+{{BZ|1070465}} - Failure to add domain via engine-manage-domains if the kerberos realm is not an uppercase of the domain<BR>
+{{BZ|1070735}} - [database] do not enable provisioning for remote database<BR>
