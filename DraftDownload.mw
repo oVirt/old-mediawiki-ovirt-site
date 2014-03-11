@@ -23,6 +23,9 @@ Experienced users can also compile from source, using the guides for the [[Build
 :* 20 GB disk space
 ;Optional Hardware:
 :* Network storage
+
+</div>
+<div class="span6">
 ; Supported Hosts:
 :* Fedora 19
 :* CentOS 6.4
@@ -30,9 +33,6 @@ Experienced users can also compile from source, using the guides for the [[Build
 :* Scientific Linux 6.4
 :* Gentoo Linux (experimental)
 :* Debian GNU/Linux (experimental)
-</div>
-<div class="span6">
-
 ; Recommended Web Browsers for Engine:
 :* Mozilla Firefox 17 or later
 :* Internet Explorer 9 or later
