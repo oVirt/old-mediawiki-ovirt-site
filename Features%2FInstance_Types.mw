@@ -218,8 +218,6 @@ The exact meaning this switch:
 ** is stateless
 This are only the default values which will be present in the GUI - the user can change them.
 
-For more details, please consult the [http://www.ovirt.org/images/9/9e/Instance_type.pdf new/edit VM dialog mockups].
-
 === Image ===
 Will be created from an existing VM using the '''Create Image''' - similar to the way how the templates are created today.
 Opened question: Do we want them to be stateless in 3.3?
