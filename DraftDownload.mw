@@ -52,9 +52,9 @@ Experienced users can also compile from source, using the guides for the [[Build
 == Versions of oVirt ==
 
 <ul>
-* Stable ('''Recommended''')
-* Current Development
-* Future Development
+* [http://resources.ovirt.org/releases/stable/ Stable] ('''Recommended''')
+* [http://resources.ovirt.org/releases/beta/ Current Development]
+* [http://resources.ovirt.org/releases/updates-testing/ Future Development]
 </ul>
 
 == Install oVirt ==
