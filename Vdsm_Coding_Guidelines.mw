@@ -1,0 +1,5 @@
+= Vdsm Coding Guidelines =
+
+* Vdsm is written in Python (at least mostly), and its coding style should follow the best practices of Python coding, unless otherwise declared.
+* PEP8 is holy
+* API calls and arguments are mixedCased, but new internal modules should use underscore_separated_names.
