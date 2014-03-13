@@ -70,21 +70,7 @@ Finally start the vdsmd service:
 
 ==Code Style==
 
-* Variables and arguments are in mixedCase
-* Class names are in CamelCase
-*  Function and method names are in mixedCase
-* All indentation is made of space characters
-* A space character follows any comma
-* Spaces surround operators, but
-* No spaces between
- def f(arg=its_default_value):
-* Lines longer than 80 chars are frowned upon
-* Whitespace between functions and within stanza help to breath while reading code
-* A space char follows a comment's hash char
-* Let logging method do the formatting for you:
- logging.debug('hello %s', 'world')
-Rather than
- logging.debug('hello %s' % 'world')
+See [[Vdsm Coding Guidelines]].
 
 ==Sending patches==
 Send them to [http://gerrit.ovirt.org our gerrit server] ([[Working with oVirt Gerrit|see how]]). With your first major patch, do not forget to add yourself to the AUTHORS file. Do not be shy - it gives you a well-deserved recognition, and it shows to the team that you stand behind your code.
