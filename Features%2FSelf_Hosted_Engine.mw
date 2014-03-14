@@ -19,7 +19,7 @@ The ability to run the Engine as a VM on the hosts that are managed by this Engi
 
 === Current status ===
 * Initial POC devel
-* Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by {{REVISIONUSER}}  <!--This is markup for last revision, do not change-->
+* Last updated: {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]] <!--This is markup for last revision, do not change-->
 
 === Detailed Description ===
 This feature will deal with two main issues:
