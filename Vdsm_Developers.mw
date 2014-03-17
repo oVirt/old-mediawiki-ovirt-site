@@ -396,6 +396,4 @@ You have no tags in your repo. If you want to push your repo from another machin
 
 == Code Documentation ==
 
-=== Walkthroughs ===
-
 partial code walkthrough of the [[VDSM_VM_startup|virt subsystem]] (VM lifecycle, creation, migration)
