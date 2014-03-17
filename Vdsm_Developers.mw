@@ -393,3 +393,9 @@ Since c0729453573, vdsm requires newer libvirt and selinux-policy packages, whic
 You have no tags in your repo. If you want to push your repo from another machine, you must also push the tags:
 
  <nowiki>git push --tags remote </nowiki>
+
+== Code Documentation ==
+
+=== Walkthroughs ===
+
+partial code walkthrough of the [[VDSM_VM_startup|virt subsystem]] (VM lifecycle, creation, migration)
