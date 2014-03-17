@@ -7,7 +7,7 @@ If you are familiar with VMware products, it is conceptually similar to vSphere.
 
 To get started with oVirt, follow our [[Download | quick start guide]] and check out our [[Quick Start Guide | getting started]] documentation.
 
-== oVirt selling points ==
+== oVirt Features ==
 * Manage multiple virtual machines
 * Sophisticated user interface allows management of all aspects of your datacenter
 * Choice of means of allocation of VMs to hosts: manual, "optimised", pinned
@@ -21,7 +21,7 @@ To get started with oVirt, follow our [[Download | quick start guide]] and check
 
 == oVirt Engine ==
 
-[[File:admin-portal-label.png|center|frame|Figure 2.4. Administration Portal Features]]
+[[File:admin-portal-label.png|center|frame|]]
 
 # '''Header''': This bar contains the name of the logged in user, the sign out button, the option to configure user roles.
 # '''Navigation Pane''': This pane allows you to navigate between the Tree, Bookmarks and Tags tabs. In the Tree tab, tree mode allows you to see the entire system tree and provides a visual representation your virtualization environment's architecture.
