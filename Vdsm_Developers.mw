@@ -401,4 +401,4 @@ We have a partial code walkthrough of the [[VDSM_VM_startup|virt subsystem]] (VM
 
 == Performance and scalability ==
 
-To analyse the performance and the scalability of the VDSM, you first need to [[Profiling_Vdsm|set up the tools]]. Then you may want to run common scenarios, or write your own using a template, to make sure the results are easily shareable.
+To analyse the performance and the scalability of the VDSM, you first need to [[Profiling_Vdsm|set up the tools]]. Then you may want to [[VDSM_benchmarks|run common scenarios]], or write your own using a [[VDSM_benchmarks|template]], to make sure the results are easily shareable.
