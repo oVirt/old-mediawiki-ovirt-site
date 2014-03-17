@@ -396,4 +396,9 @@ You have no tags in your repo. If you want to push your repo from another machin
 
 == Code Documentation ==
 
-partial code walkthrough of the [[VDSM_VM_startup|virt subsystem]] (VM lifecycle, creation, migration)
+We have a partial code walkthrough of the [[VDSM_VM_startup|virt subsystem]] (VM lifecycle, creation, migration)
+(more to come...)
+
+== Performance and scalability ==
+
+To analyse the performance and the scalability of the VDSM, you first need to [[Profiling_Vdsm|set up the tools]]. Then you may want to run common scenarios, or write your own using a template, to make sure the results are easily shareable.
