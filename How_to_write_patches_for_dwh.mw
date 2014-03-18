@@ -1,0 +1,8 @@
+= How to write patches for DWH =
+
+== If a change to the engine views is required ==
+Follow the following steps:
+# Have a cloned ovirt-engine git repository
+# Setup a postgreSQL "engine" DB.
+# Make the necessary changes in:
+   ./ovirt-engine/packaging/dbscripts/create_dwh_views.sql
