@@ -67,7 +67,7 @@ oVirt release 3.4 is intended for production use and is available for the follow
 * oVirt for Fedora Core ([[#Fedora_Installation_Instructions |Guide]])
 * oVirt for RHEL ([[#Red_Hat_Enterprise_Linux 6/CentOS_Installation_Instructions |Guide]])
 * oVirt for CentOS ([[#Red_Hat_Enterprise_Linux 6/CentOS_Installation_Instructions |Guide]])
-* oVirt for Scientific Linux (Guide)
+* oVirt for Scientific Linux
 * oVirt for Gentoo ([//wiki.gentoo.org/wiki/OVirt Experimental])
 * oVirt for Debian ([[ovirt build on debian/ubuntu |Guide]]) 
 </ul>
