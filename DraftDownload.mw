@@ -61,7 +61,7 @@ Experienced users can also compile from source, using the guides for the [[Build
 
 == Install oVirt ==
 
-oVirt release 3.3.3 is intended for production use and is available for the following platforms:
+oVirt release 3.4 is intended for production use and is available for the following platforms:
 
 <ul>
 * oVirt for Fedora Core ([[#Fedora_Installation_Instructions |Guide]])
@@ -78,11 +78,11 @@ Our recommended method of installing oVirt is to use the pre-built packages for 
 '''Important:''' If you're upgrading from a previous version, please update ovirt-release to the latest version (10) and verify you have the correct repositories enabled by running the following commands before upgrading with the usual procedure. 
      # yum update ovirt-release
      # yum repolist enabled
-You should see the ovirt-3.3.3 and ovirt-stable repositories listed in the output of the repolist command.
+You should see the ovirt-3.4 and ovirt-stable repositories listed in the output of the repolist command.
 </div>
 
 
-=== <span class="mw-customtoggle-0" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Show/hide]</span></span>Fedora Installation Instructions === 
+=== <span class="mw-customtoggle-0" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Show/Hide]</span></span>Fedora Installation Instructions === 
 <div  id="mw-customcollapsible-0" class="mw-collapsible mw-collapsed">
  <div class="alert alert-info">
 '''Important:''' It is recommended that you install oVirt on Fedora 19, which is the best supported version of the Fedora platform at this time.
@@ -104,7 +104,7 @@ You should see the ovirt-3.3.3 and ovirt-stable repositories listed in the outpu
 </ol>
 </div>
 
-===  <span class="mw-customtoggle-1" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Show/hide]</span></span>Red Hat Enterprise Linux 6/CentOS  Installation Instructions===
+===  <span class="mw-customtoggle-1" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Show/Hide]</span></span>Red Hat Enterprise Linux 6/CentOS  Installation Instructions===
 <div  id="mw-customcollapsible-1" class="mw-collapsible mw-collapsed">
 These instructions should work for both Red Hat Enterprise Linux and CentOS.  They will likely work with other binary compatible EL6 versions as well, but they were not tested.  It is strongly recommended that you use at least version 6.4 of RHEL or CentOS.
 
