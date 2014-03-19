@@ -242,8 +242,9 @@ Its not clear if some linux versions will have the cpu added but offline in the 
 Due to libvirt bug on unplug the engine has an inconsistent view of the amount of  CPUs the VM has.<br>
 i.e after unplugging  4 vcpus to 2 vcpus the VM entity in DB has 4 and in qemu process it will decrease to 2
 
-status: in progress
-related bugs: [https://bugzilla.redhat.com/show_bug.cgi?id=1075602 1075602]
+'''status:''' in progress<br />
+
+'''related bugs:''' [https://bugzilla.redhat.com/show_bug.cgi?id=1075602 1075602]
 
 ==== block Unplug ====
 * block unplug operation (based on static vm cpu count)
