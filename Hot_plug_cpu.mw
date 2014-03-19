@@ -244,7 +244,7 @@ i.e after unplugging  4 vcpus to 2 vcpus the VM entity in DB has 4 and in qemu p
 
 '''status:''' in progress<br />
 
-'''related bugs:''' [https://bugzilla.redhat.com/show_bug.cgi?id=1075602 1075602]
+'''related bugs:''' [https://bugzilla.redhat.com/show_bug.cgi?id=1077515 1077515]
 
 ==== block Unplug ====
 * block unplug operation (based on static vm cpu count)
