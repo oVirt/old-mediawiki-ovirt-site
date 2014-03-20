@@ -38,6 +38,8 @@ Follow the following steps:
 * Have the Talend open Studio installed in the project version.
 * Update the Jobs with the required changes.
 * Close all open jobs. 
+
+First,
 * Build the Job from the "History ETL" job.
 [[File:BuildJob.jpg]]
 ** Open the zip file and copy the java files from:
@@ -58,3 +60,7 @@ To the git repository:
 
 To the git repository:
  . /ovirt-dwh/etl_export/src/routines
+
+Second,
+* Export the project :
+[[File:ExportTalendProject.jpg]]
