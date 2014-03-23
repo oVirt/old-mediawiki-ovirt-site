@@ -42,8 +42,8 @@ User-flow:
 # Now, that will trigger the following system flow:
 ## add the host to foreman using the API
 ## Now there is a split:
-### RHEV-H hosts - will do the registration to the engine (assuming the kernel params are configured for that template)
-### RHEL hosts - at first step won't do the registration by themselves, but foreman will do that using a plugin (plugin will send RestAPI call to add the host , or could it just register it same like RHEVH ? need to check)
+### oVirt-node hosts - will do the registration to the engine (assuming the kernel params are configured for that template)
+###  regular hosts- at first step won't do the registration by themselves, but foreman will do that using a plugin (plugin will send RestAPI call to add the host , or could it just register it same like RHEVH ? need to check)
 # The host now appears in the oVirt UI, it is being approved, we can modify the host properties, and bootstrapping starts.
 
 Open issues:
