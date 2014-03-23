@@ -1,0 +1,78 @@
+== Foreman Integration ==
+
+=== Summary ===
+[http://theforeman.org/ Foreman] [1] The Foreman is a complete lifecycle management tool for physical and virtual servers.
+Through deep integration with configuration management, DHCP, DNS, TFTP, and PXE-based unattended installations, Foreman manages every stage of the lifecycle of your physical or virtual servers. The Foreman provides comprehensive, auditable interaction facilities including a web frontend and robust, RESTful API. 
+[https://launchpad.net/cloud-init/ Cloud-init] [1] is a tool used to perform initial setup on cloud nodes, including networking, SSH keys, timezone, user data injection, and more.  It is a service that runs on the guest, and supports various Linux distributions including Fedora, RHEL, and Ubuntu.
+
+Integrating Foreman with oVirt will help adding hypervisor hosts that are managed by Foreman to the oVirt engine (installed hosts, discovered hosts, etc.) VM configuration and etc.
+Today, there is basic Foreman integration, described in [2], which allows the administrator to see hosts installed in Foreman, and get their basic details.
+This feature aims to extend this integration to cover other aspects such as Bare-Metal provisioning, VM provisioning and Host configuration.
+
+
+=== Owners ===
+
+* Name: Yaniv Bronheim
+* Email: ybronhei@redhatdotcom
+* Name: Oved Ourfali
+* Email: ovedo@redhatdotcom
+
+=== Current Status ===
+
+Design phase
+
+=== Detailed Description ===
+
+==== Use Cases ====
+The following use-cases assume you already have a Foreman provider in the system. For more information on adding Foreman providers have a look at [2].
+
+===== Bare-Metal provisioning =====
+
+prerequisites:
+* Foreman admin has designated a host group(s) in foreman for that purpose 
+* That Host group has the relevant templates  (PXE / kickstart files ) associated with that host group for the relevant OSs
+* oVirt needs proper credentials to view relevant bare-metal hosts and host groups.
+* For now we assume a host group has all the required defaults needed to provision the host
+
+User-flow:
+# add a host in oVirt, which will be selected from a list of discovered hosts taken from Foreman (show the hosts in a provider sub-tab)
+# select a host group for this host
+# set the proper configuration needed for it (location/environment/other relevant properties)
+# Press Okay
+# Now, that will trigger the following system flow:
+## add the host to foreman using the API
+## Now there is a split:
+### RHEV-H hosts - will do the registration to the engine (assuming the kernel params are configured for that template)
+### RHEL hosts - at first step won't do the registration by themselves, but foreman will do that using a plugin (plugin will send RestAPI call to add the host , or could it just register it same like RHEVH ? need to check)
+# The host now appears in the oVirt UI, it is being approved, we can modify the host properties, and bootstrapping starts.
+
+Open issues:
+# How to register the host in case of RHEL? What would be the oVirt API for that? Is it the same as the RHEV-H one?
+# The proposal above assumes the operation is triggered from the Provider discovery sub-tab, which is different from the current way we add hosts. Need to verify that it is acceptable
+
+
+
+
+''' Implementation Notes '''
+
+'''API Design'''
+
+* Engine/Backend/DB
+
+'''Additional changes'''
+
+=== Benefit to oVirt ===
+* Better integration with external host providers, that will ease the work for the administrator
+* Providing an interface that other host providers can implement, to add their own properties and logic
+
+=== Dependencies / Related Features ===
+
+=== Documentation / External References ===
+
+# Foreman homepage: http://theforeman.org/
+# Basic Foreman integration feature page : http://ovirt.org/Features/ForemanIntegration
+
+
+=== Comments and Discussion ===
+
+* Refer to [[Talk:Advanced Foreman Integration]]
