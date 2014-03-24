@@ -84,7 +84,9 @@ to promote reuse of applications beyond the basic use in a web browser by both h
 
 = Repository =
 
-* git://gerrit.ovirt.org/ovirt-engine (restapi is one of the engine modules located under ovirt/ovirt-engine/backend/manager/modules/restapi/)
+* git://gerrit.ovirt.org/ovirt-engine
+
+(restapi is one of the engine modules located under ovirt/ovirt-engine/backend/manager/modules/restapi/)
 
 = Maintainers =
 
