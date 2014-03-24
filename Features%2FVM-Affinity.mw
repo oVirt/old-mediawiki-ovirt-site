@@ -9,6 +9,7 @@ The oVirt scheduler capabilities introduced in version 3.3 have opened opportuni
 ===Current status===
 * status: merged (almost)
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}
+* version: 3.4
 
 ==Benefits to oVirt==
 * Leverages the oVirt Scheduler to manually assign VM workload affinity policies
