@@ -59,7 +59,7 @@ To the git repository:
   ./HistoryETL/src/routines/
 
 To the git repository:
- . /ovirt-dwh/etl_export/src/routines
+ ./ovirt-dwh/etl_export/src/routines
 
 Second,
 * Export the project :
