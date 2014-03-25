@@ -59,6 +59,12 @@ Experienced users can also compile from source, using the guides for the [[Build
 * [http://resources.ovirt.org/releases/updates-testing/ Future Development]
 </ul>
 
+== Mirrors for oVirt Downloads ==
+
+<ul>
+* [http://archive.linux.duke.edu/ovirt/ Duke University] ([http://archive.linux.duke.edu/ovirt/releases/stable/ Stable] | [http://archive.linux.duke.edu/ovirt/releases/beta/ Current Development] | [http://archive.linux.duke.edu/ovirt/releases/updates-testing/ Future Development])
+</ul>
+
 == Install oVirt ==
 
 oVirt release 3.4 is intended for production use and is available for the following platforms:
