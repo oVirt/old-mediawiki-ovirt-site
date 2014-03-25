@@ -3,7 +3,7 @@
 == NUMA and Virtual NUMA ==
 
 === Summary ===
-This feature allow Enterprise customers to provision large guests for their traditional scale-up enterprise workloads and expect low overhead due to virtualization.
+This feature allow Enterprise customers to provision large guests for their traditional scale-up enterprise workloads and expect low overhead due to visualization.
 * Query target host’s NUMA topology
 * NUMA bindings of guest resources (vCPUs & memory)
 * Virtual NUMA topology
@@ -17,7 +17,7 @@ You may also refer to the [http://www.ovirt.org/Features/Detailed_NUMA_and_Virtu
 === Current status ===
 * Target Release: oVirt 3.5
 * Status: design
-* Last updated: 24 Mar 2014
+* Last updated: 25 Mar 2014
 
 === Detailed Description ===
 * Query target host’s NUMA topology
