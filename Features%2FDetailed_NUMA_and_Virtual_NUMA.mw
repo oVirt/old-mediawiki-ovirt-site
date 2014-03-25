@@ -21,6 +21,9 @@ You may also refer to the [http://www.ovirt.org/Features/NUMA_and_Virtual_NUMA s
 This is the detailed design page for NUMA and Virtual NUMA
 
 === Interface & data structure ===
+[[File:Data_Flow_Diagram.png]]
+
+=== Interface & data structure ===
 ==== Interface between VDSM and libvirt ====
 # I-1.1  Host's NUMA node index and CPU id of each NUMA node
 # I-1.2  Host's NUMA node memory information, include total and free memory
