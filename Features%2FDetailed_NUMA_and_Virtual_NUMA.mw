@@ -96,7 +96,7 @@ cpu3 65777888 4559 21950279 1649220333 2216260 4 11027 0 16521086
 * I-1.4 Data structure that provided to MOM component
 To be continue...
 
-* I-1.7 libivirt API do not support to get NUMA distances information, so we use command <code>numactl<code> to get the distances information
+* I-1.7 libivirt API do not support to get NUMA distances information, so we use command <code>numactl</code> to get the distances information
 <pre>
 $ numactl -H
 node distances:
