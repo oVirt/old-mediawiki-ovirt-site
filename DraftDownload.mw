@@ -62,7 +62,7 @@ Experienced users can also compile from source, using the guides for the [[Build
 == Mirrors for oVirt Downloads ==
 
 <ul>
-* [http://archive.linux.duke.edu/ovirt/ Duke University] ([http://archive.linux.duke.edu/ovirt/releases/stable/ Stable] | [http://archive.linux.duke.edu/ovirt/releases/beta/ Current Development] | [http://archive.linux.duke.edu/ovirt/releases/updates-testing/ Future Development])
+* [http://archive.linux.duke.edu/ovirt/ Duke University] ([http://archive.linux.duke.edu/ovirt/releases/stable/ Stable] | [http://archive.linux.duke.edu/ovirt/releases/beta/ Current] | [http://archive.linux.duke.edu/ovirt/releases/updates-testing/ Future])
 </ul>
 
 == Install oVirt ==
