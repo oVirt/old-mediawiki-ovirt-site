@@ -23,6 +23,9 @@ In oVirt, Gamification refers to the initiative that aims to increase awareness 
 ProgressBar is meant to encourage users to explore oVirt features through WebAdmin UI.
 
 
+[[File:Progressbar-plugin-poc.png|oVirt ProgressBar PoC]]
+
+
 '''Basic concepts'''
 * achievement is the basic unit of tracking user's progress
 * each achievement maps to one or more feature(s)
