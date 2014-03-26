@@ -45,18 +45,14 @@ There's fence_kdump support in package kexec-tools 2.0.4.18, but unfortunately t
 * [https://lists.fedoraproject.org/pipermail/kexec/2014-March/000603.html Rename check_fence_kdump to check_pcs_cluster_rebuild]
 * [https://lists.fedoraproject.org/pipermail/kexec/2014-March/000604.html Move fence_kdump nodes filtering into separate function]
 * [https://lists.fedoraproject.org/pipermail/kexec/2014-March/000605.html Add support for fence_kdump in generic cluster]
+* [https://lists.fedoraproject.org/pipermail/kexec/2014-March/000676.html Add fence_kdump support for generic cluster v3]
+
+If those patches from v3 will be accepted, fence_kdump will be configured automatically when executing <tt>kdumpctl restart</tt> if <tt>fence_kdump_nodes</tt> option in <tt>kdump.conf</tt> will contain at least one host to send notification to, for example:
+ fence_kdump_nodes 192.168.1.10 10.34.63.155
 
 
-If those patches will be accepted, fence_kdump will be configured automatically when executing <tt>kdumpctl restart</tt> if those conditions are satisfied:
-* <tt>/usr/libexec/fence_kdump_send</tt> exists and is executable
-* <tt>/etc/sysconfig/fence_kdump_nodes</tt> exists
-
-File <tt>/etc/sysconfig/fence_kdump_nodes</tt> should contain list of hosts separated by space which fence_kdump notification should be sent to, for example:
- 192.168.1.10 10.34.63.155
-
-
-There's also optional configuration file <tt>/etc/sysconfig/fence_kdump</tt> which contains fence_kdump_send command line arguments stored in <tt>FENCE_KDUMP_OPTS</tt> variable, for example:
- FENCE_KDUMP_OPTS="-p 7410 -f auto -i 5"
+If required other <tt>fence_kdump_send</tt> arguments can be set using <tt>fence_kdump_args</tt> option in <tt>kdump.conf</tt>, for example:
+ fence_kdump_args -p 7410 -f auto -i 5"
 
 =Receiving fence_kdump notifications=
 There are currently several possible methods how to receive fence_kdump notification and detect that host is in kdump flow:
