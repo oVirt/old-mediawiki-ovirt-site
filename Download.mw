@@ -95,7 +95,7 @@ You should see the ovirt-3.4 and ovirt-stable repositories listed in the output 
 </div>
 
 <ol>
-<li>Add the official oVirt repository for Fedora. <kbd><pre>sudo yum localinstall http://ovirt.org/releases/ovirt-release-fedora.noarch.rpm</pre></kbd>
+<li>Add the official oVirt repository for Fedora. <kbd><pre>sudo yum localinstall http://resources.ovirt.org/releases/ovirt-release.noarch.rpm</pre></kbd>
 <ul>
 <li> This will add repositories from ovirt.org to your host allowing you to get the latest and greatest oVirt rpms.
 <li> It will also enable the [http://fedoraproject.org/wiki/Virtualization_Preview_Repository virt-preview] repository on your machine giving you access to the latest versions of things like libvirt and KVM.
