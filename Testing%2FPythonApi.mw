@@ -183,7 +183,7 @@ Please upload the following ISO file to the ISO Storage Domain once the ISO Stor
         while api.vms.get(VM_NAME).status.state != 'down':
             sleep(1)
     
-    except:
+    except Exception as e:
         print 'Failed to create VM with disk and NIC\n%s' % str(e)
 
 === Start/hibernate/resume/stop VM ===
