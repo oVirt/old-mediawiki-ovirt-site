@@ -25,29 +25,27 @@ __NOTOC__
 
 <div class="row">
 <div class="span4 pad-left pad-right-small">
-== oVirt 3.3.4 Released! ==
+== oVirt 3.4 Released! ==
 
 The oVirt development team is very happy to announce the general
-availability of oVirt 3.3.4 as of March 4, 2014. This release
-solidifies oVirt as a leading KVM management application and open
-source alternative to VMware vSphere.
+availability of oVirt 3.4 as of March 27, 2014. This release features self-hosted engine, PPC64 support, and hot-plug CPUs.
 
-oVirt is available now for Fedora 19 and Red Hat Enterprise Linux 6.5
+oVirt is available now for Fedora 19, Red Hat Enterprise Linux 6.5, and CentOS 6.5
 (or similar to RHEL).
 
-This release of oVirt includes numerous bug fixes.
-See the release notes for a list of the new features and bugs fixed.
+This release of oVirt also includes numerous bug fixes.
+See the release notes for a complete list of the new features and bugs fixed.
 
 A new oVirt Node build will be available soon as well.
 
 <div class="pull-right">
-[[oVirt 3.3.4 release notes | Read the 3.3.4 release notes »]]
+[[OVirt_3.4_Release_Notes | Read the 3.4 release notes »]]
 </div>
 <div class="pull-right">
-[[oVirt 3.3 release announcement | Read more about the 3.3 release »]]
+[[OVirt_3.4_Release_Announcement | Read more about the 3.4 release »]]
 </div>
 <div class="pull-right">
-[[Download | Get started with oVirt 3.3.4 now »]]
+[[Download | Get started with oVirt 3.4 now »]]
 </div>
 </div>
 
@@ -60,6 +58,7 @@ A new oVirt Node build will be available soon as well.
 * Live migration
 * Load balancing
 * Web-based management interface 
+* Self-hosted engine
 * iSCSI, FC, NFS, and local storage
 * Enhanced security: SELinux and Mandatory Access Control for VMs and hypervisor
 * Scalability: up to 64 vCPU and 2TB vRAM per guest
@@ -76,10 +75,6 @@ A new oVirt Node build will be available soon as well.
 
 <div class="row">
 <div class="span4 pad-left pad-right-small">
-
-== oVirt Joins Google Summer of Code! ==
-
-oVirt is please to be a part of the Google Summer of Code! If you're a student interested in participating in an open source project and earning some pay, too, check out our [[Summer of Code | GSoC page]].
 
 == Community is Key ==
 
