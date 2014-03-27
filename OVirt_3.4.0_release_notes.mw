@@ -459,7 +459,7 @@ Fixed in oVirt 3.4.0 beta 3:
 {{BZ|1065941}} - Queries generated for data centers don't take into account the replacement of "type" with "local"<BR>
 {{BZ|1051041}} - Cloud-init options persistence and unification with Windows Sysprep options<BR>
 {{BZ|1037478}} - Have ability to modify VM template - Template Versions<BR>
-{{BZ|1058203}} - 	[RHEVM-RHS] - Brick advanced details gives error<BR>
+{{BZ|1058203}} -    [RHEVM-RHS] - Brick advanced details gives error<BR>
 
 Fixed in oVirt 3.4.0 RC
 
@@ -519,8 +519,44 @@ Fixed in oVirt 3.4.0 RC
 {{BZ|1069201}} - [REST]: Missing domain field on VM\Template object.<BR>
 {{BZ|1069522}} - [REST-API] XSD schema validation error: response for create vm returned with 'type' and 'data' fields instead of with one of these fields<BR>
 {{BZ|1070152}} - webadmin: Missing add new ISO option in data center "guide me" dialog<BR>
-{{BZ|1070465}} - Failure to add domain via engine-manage-domains if the kerberos realm is not an uppercase of the domain<BR>
+{{BZ|1070465}} - Failure to add domain via engine-manage-domains if the kerberos realm is not an uppercase of the DNS domain<BR>
 {{BZ|1070735}} - [database] do not enable provisioning for remote database<BR>
+
+Fixed in oVirt 3.4.0 GA
+
+{{BZ|1024889}} - Tracker: oVirt 3.4 release<BR>
+{{BZ|1056528}} - engine-setup should refuse using a non-empty remote database<BR>
+{{BZ|1057232}} - engine: cannot change to a different cpu family after installation without removing host from cluster<BR>
+{{BZ|1059550}} - Proper audit log handling should be added for various login failures<BR>
+{{BZ|1059578}} - Creating a VM from a Template without NICs might create a NIC<BR>
+{{BZ|1062438}} - RHEV 3.3 adding new host causes error logging for an attempt to remove host<BR>
+{{BZ|1063762}} - [RHEVM] [webadmin] [network labels] cannot remove network label from interface via Setup Host Networks<BR>
+{{BZ|1063935}} - webadmin: wipe after delete option is set by what ever domain is listed first (iscsi/nfs DC)<BR>
+{{BZ|1065270}} - [RHEVM] [webadmin] [network labels] Setup Host Networks dialog presents network configuration incorrectly<BR>
+{{BZ|1066617}} - Template is created with no default value for migration downtime<BR>
+{{BZ|1067096}} - Adding new node running VDSM 4.14 will not add<BR>
+{{BZ|1067548}} - [DWH-SETUP][TEXT] - misconfiguartion of remote DB setup<BR>
+{{BZ|1067928}} - [webadmin] [network labels] emphasize unconfigured interface in Setup Host Networks dialog<BR>
+{{BZ|1068267}} - [webadmin] [network labels] Same label on VLAN + bridged network + host interface blocks Setup Host Networks dialog<BR>
+{{BZ|1069193}} - Release maven artifacts with correct version numbers<BR>
+{{BZ|1069802}} - CPU Hotplug config value is wrong in the database creation scripts<BR>
+{{BZ|1070394}} - Cannot import disks from glance as templates<BR>
+{{BZ|1070742}} - [database] support postgres user length within schema version<BR>
+{{BZ|1071536}} - Notifier doesn't send any notifications via email<BR>
+{{BZ|1072059}} - [RFE] 3.4 product translation: translation update 1<BR>
+{{BZ|1072282}} - VM split brain caused by network outage<BR>
+{{BZ|1072307}} - remote database cannot be used<BR>
+{{BZ|1072474}} - provisioning with existing database 'engine' fails<BR>
+{{BZ|1072476}} - provisioning with existing database 'engine' logs the new password<BR>
+{{BZ|1072501}} - /permits subcollection of SuperUser role throws NullPointerException<BR>
+{{BZ|1072849}} - minimal snmp notifications conf section has wrong variable name<BR>
+{{BZ|1072867}} - Schema upgrade failure on 03_05_0050_event_notification_methods.sql<BR>
+{{BZ|1073471}} - On DB upgrade, readonly user and client custom users losses permissions to db views<BR>
+{{BZ|1073486}} - Restapi throws ClassCastException when search by unknow value<BR>
+{{BZ|1073548}} - Engine requires /etc/mime.types<BR>
+{{BZ|1074431}} - support snmp notifications to multiple managers<BR>
+{{BZ|1076902}} - RHEVM shows an event message of ETL service sampling has encountered an error<BR>
+{{BZ|1077447}} - [ovirt][engine-api] Force switch HTTPS to HTTP in REST API<BR>
 
 ==VDSM==
 {{BZ|1036883}} - VM fails to start when qemu.conf's spice_tls conflicts with vdsm.conf's ssl<BR>
