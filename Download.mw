@@ -1,42 +1,48 @@
 __NOTOC__
 <div class="row">
 <div class="span6 pad-left pad-right-small">
-= Get started with oVirt =
-We’re working hard to make oVirt easy to install and available everywhere.
+= oVirt Deployment Options =
+oVirt is a virtual datacenter manager that delivers powerful management of multiple virtual machines on multiple hosts. Using KVM and libvirt, oVirt can be installed on Fedora, CentOS, or Red Hat Enterprise Linux hosts to set up and manage your virtual data center.
 
-Since oVirt is a relatively young project, setting it up is still a little tricky… but it’s getting easier with every release. 
+If you are absolutely new to oVirt, try our [[OVirt_Live | Live version]] where you can test-drive oVirt on CentOS without installing it on your machine.
 
-Right now, oVirt runs best on Fedora or CentOS/RHEL — and we tailored our quickstart guide to reflect this fact — but if you’re not afraid of compiling from source, we also have guides on how to install [[Building oVirt engine | the oVirt engine]] and [[Node Building | oVirt Node]] from source.
+If you have some knowledge of installing packages on Linux, you can install [[#Install_oVirt | oVirt]] directly on a host machine. 
 
-You can also [[porting oVirt | help us make oVirt easier to install everywhere]] too.
+Experienced users can also compile from source, using the guides for the [[Building oVirt engine |  oVirt engine]] and [[Node Building | oVirt Node]].
+
 </div>
 
 <div class="span6 pad-left-small pad-right">
 <div class="well">
-== You’ll need the following… ==
+== System Requirements ==
 
 <div class="row-fluid">
-
 <div class="span6">
-;Minimum hardware:
+;Minimum Hardware/Software:
 :* 4 GB memory
 :* 20 GB disk space
-;Optional:
+;Optional Hardware:
 :* Network storage
-;Software:
-:* Fedora 19 or Red Hat Enterprise Linux 6.4 (or similar)
+;Recommended browsers:
+:* Mozilla Firefox 17
+:* IE9 and above for the web-admin
+:* IE8 and above for the user portal
+
+
+</div>
+<div class="span6">
+; Supported Hosts:
+:* Fedora 19
+:* CentOS 6.4
+:* Red Hat Enterprise Linux 6.4
+:* Scientific Linux 6.4
+:* Gentoo Linux (experimental)
+:* Debian GNU/Linux (experimental)
 </div>
 
-<div class="span6">
-; Recommended web browsers for Engine:
-:* Mozilla Firefox 17 or later
-:* Internet Explorer 9 or later
-; Advanced:
-:* Installing [[Building oVirt engine | Engine]] and [[Node Building | Node]] from source
-:* Experimental builds for [[ovirt build on debian/ubuntu | Debian/Ubuntu]], [//wiki.gentoo.org/wiki/OVirt Gentoo]
-:* Help [[porting oVirt | port]] oVirt to other distributions, or help [[supporting Chrome| support Chrome for the Engine]] 
-</div><!-- span -->
+<!-- span -->
 </div><!-- row-fluid-->
+
 </div><!-- well -->
 </div><!-- span6 -->
 </div><!-- row -->
@@ -45,51 +51,76 @@ You can also [[porting oVirt | help us make oVirt easier to install everywhere]]
 
 <div class="span10 offset1">
 
-== Quick Start Guide ==
+== Version Releases of oVirt ==
 
-<div class="alert alert-info">
-IMPORTANT NOTE: If you're upgrading from a previous version, please update
-ovirt-release to the latest version (10) and verify you have the correct
-repositories enabled by running the following commands
+<ul>
+* [http://resources.ovirt.org/releases/stable/ Stable] ('''Recommended''')
+* [http://resources.ovirt.org/releases/beta/ Current Development]
+* [http://resources.ovirt.org/releases/updates-testing/ Future Development]
+</ul>
 
-<pre># yum update ovirt-release
-# yum repolist enabled
-</pre>
-before upgrading with the usual procedure. You should see the ovirt-3.3.2 and
-ovirt-stable repositories listed in the output of the repolist command.
+== Mirrors for oVirt Downloads ==
+
+<ul>
+* [http://archive.linux.duke.edu/ovirt/ Duke University] ([http://archive.linux.duke.edu/ovirt/releases/stable/ Stable] | [http://archive.linux.duke.edu/ovirt/releases/beta/ Current] | [http://archive.linux.duke.edu/ovirt/releases/updates-testing/ Future])
+</ul>
+
+== Install oVirt ==
+
+oVirt release 3.4 is intended for production use and is available for the following platforms:
+
+<ul>
+* oVirt for Fedora Core ([[#Fedora_Installation_Instructions |Guide]])
+* oVirt for RHEL ([[#Red_Hat_Enterprise_Linux 6/CentOS_Installation_Instructions |Guide]])
+* oVirt for CentOS ([[#Red_Hat_Enterprise_Linux 6/CentOS_Installation_Instructions |Guide]])
+* oVirt for Scientific Linux
+* oVirt for Gentoo ([//wiki.gentoo.org/wiki/OVirt Experimental])
+* oVirt for Debian ([[ovirt build on debian/ubuntu |Guide]]) 
+</ul>
+
+Our recommended method of installing oVirt is to use the pre-built packages for Fedora or a supported EL6 distribution, such as CentOS or RHEL. This makes installing oVirt very easy. Naturally, you can run most Linux distributions or several other operating systems (e.g. Windows) as [[#Supported_Guest_Distributions | guests]] inside of oVirt instances.
+
+ <div class="alert alert-info">
+'''Important:''' If you're upgrading from a previous version, please update ovirt-release to the latest version (10) and verify you have the correct repositories enabled by running the following commands before upgrading with the usual procedure. 
+     # yum update ovirt-release
+     # yum repolist enabled
+You should see the ovirt-3.4 and ovirt-stable repositories listed in the output of the repolist command.
 </div>
 
-Our recommended method of installing oVirt is to use the pre-built packages for Fedora or an EL6 distribution. It makes installing oVirt very easy. Naturally, you can run any Linux distribution or several other operating systems (e.g. Windows) as guests inside of oVirt instances.
 
-If you are looking to preview the project without permanently dedicating a machine, you can also try the LiveCD image.  This image will appear under the [http://resources.ovirt.org/releases/stable/tools tools] directory.  This generally appears a week or two after a release, due to the need to have final release packages available.
+=== <span class="mw-customtoggle-0" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Show/Hide]</span></span>Fedora Installation Instructions === 
+<div  id="mw-customcollapsible-0" class="mw-collapsible mw-collapsed">
+ <div class="alert alert-info">
+'''Important:''' It is recommended that you install oVirt on Fedora 19, which is the best supported version of the Fedora platform at this time.
+</div>
 
-=== [http://fedoraproject.org/en/download-splash?file=http://download.fedoraproject.org/pub/fedora/linux/releases/19/Live/x86_64/Fedora-Live-Desktop-x86_64-19-1.iso Fedora 19] ===
-
-<!-- Normally, an <ol> isn't needed, but we're starting with 0 here, for fun. -->
-<ol start="0" class="steps endian">
-<li>Add the official oVirt repository for Fedora. <kbd><pre>sudo yum localinstall http://ovirt.org/releases/ovirt-release.noarch.rpm</pre></kbd>
+<ol>
+<li>Add the official oVirt repository for Fedora. <kbd><pre>sudo yum localinstall http://ovirt.org/releases/ovirt-release-fedora.noarch.rpm</pre></kbd>
 <ul>
 <li> This will add repositories from ovirt.org to your host allowing you to get the latest and greatest oVirt rpms.
 <li> It will also enable the [http://fedoraproject.org/wiki/Virtualization_Preview_Repository virt-preview] repository on your machine giving you access to the latest versions of things like libvirt and KVM.
 </ul>
 <li>Install oVirt Engine. <kbd><pre>sudo yum install -y ovirt-engine</pre></kbd>
-<li> Optionally install the All-In-One plugin if you want to host VMs on your Engine Host <kbd><pre>sudo yum install -y ovirt-engine-setup-plugin-allinone</pre></kbd>
+<li>Optionally, install the All-In-One plugin if you want to host VMs on your Engine Host <kbd><pre>sudo yum install -y ovirt-engine-setup-plugin-allinone</pre></kbd>
 <li>Set up oVirt Engine. <kbd><pre>sudo engine-setup</pre></kbd>
 <li> Follow the on screen prompts to configure and install the engine
 <li>Once you have successfully installed oVirt Engine, you will be provided with instructions to access oVirt's web-based management interface.
 <li>Congratulations! oVirt Engine is now installed!
 <li>For every virtualization server you'd like to manage, you can now [[Quick Start Guide#Install_Hosts | set them up as oVirt hosts]] .
 </ol>
+</div>
 
-===  Enterprise Linux 6 ===
+===  <span class="mw-customtoggle-1" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Show/Hide]</span></span>Red Hat Enterprise Linux 6/CentOS  Installation Instructions===
+<div  id="mw-customcollapsible-1" class="mw-collapsible mw-collapsed">
+These instructions should work for both Red Hat Enterprise Linux and CentOS.  They will likely work with other binary compatible EL6 versions as well, but they were not tested.  It is strongly recommended that you use at least version 6.4 of RHEL or CentOS.
 
-These instructions should work for both Red Hat Enterprise Linux and CentOS.  They will likely work with other binary compatible EL6 version as well, but they were not tested.  It is strongly recommended that you use at least version 6.4.
-
- <div class="alert alert-info">Warning: Native GlusterFS support will not work with Red Hat Enterprise Linux 6.4 at this time</div>
+ <div class="alert alert-info">
+'''Warning:''' Native GlusterFS support will not work with Red Hat Enterprise Linux 6.4 at this time.
+</div>
 
 <!-- Normally, an <ol> isn't needed, but we're starting with 0 here, for fun. -->
-<ol start="0" class="steps endian">
-<li>Add the official oVirt repository for EL6. <kbd><pre>sudo yum localinstall http://ovirt.org/releases/ovirt-release.noarch.rpm</pre></kbd>
+<ol>
+<li>Add the official oVirt repository for EL6. <kbd><pre>sudo yum localinstall http://ovirt.org/releases/ovirt-release-el.noarch.rpm</pre></kbd>
 <ul>
 <li> This will add repositories from ovirt.org to your host allowing you to get the latest and greatest oVirt rpms.
 <li> It will also enable the gluster repository for their 3.4.0 release, so you will get those updates correctly as well
@@ -103,10 +134,107 @@ These instructions should work for both Red Hat Enterprise Linux and CentOS.  Th
 <li>Congratulations! oVirt Engine is now installed!
 <li>For every virtualization server you'd like to manage, you can now [[Quick Start Guide#Install_Hosts | set them up as oVirt nodes]] .
 </ol>
+</div>
 
-----
+== Supported Guest Distributions ==
 
-Now that you have oVirt running, check out the [[documentation | documentation section]] and be sure to [[community | join our community]]! 
+Once oVirt is installed and running, you can proceed to install any number of supported operating systems as guest virtual machines. Click Expand below to show the table that lists that operating systems supported as guests.
+<div class= "mw-collapsible mw-collapsed" style="width:800px">
+{| 
+! style="text-align:left;"|Operating System	 
+!Architecture
+!
+!SPICE support
+|-
+|Red Hat Enterprise Linux 3	 
+|32-bit, 64-bit
+|
+|Yes
+|-
+|Red Hat Enterprise Linux 4	
+|32-bit, 64-bit	 
+|
+|Yes
+|-
+|Red Hat Enterprise Linux 5	 
+|32-bit, 64-bit	 
+|
+|Yes
+|-
+|Red Hat Enterprise Linux 6	 
+|32-bit, 64-bit	 
+|
+|Yes
+|-
+|SUSE Linux Enterprise Server 10 (select Other Linux for the guest type in the user interface)	
+|32-bit, 64-bit	 
+|
+|No
+|-
+|SUSE Linux Enterprise Server 11 (SPICE drivers (QXL) are not supplied by Red Hat. Distribution's vendor may provide SPICE drivers.)	 
+|32-bit, 64-bit	 
+|
+|No
+|-
+|Ubuntu 12.04 (Precise Pangolin LTS)	
+|32-bit, 64-bit	
+|
+|Yes
+|-
+|Ubuntu 12.10 (Quantal Quetzal)	 
+|32-bit, 64-bit	 
+|
+|Yes
+|-
+|Ubuntu 13.04 (Raring Ringtail)	 
+|32-bit, 64-bit	 
+|
+|Yes
+|-
+|Ubuntu 13.10 (Saucy Salamander)	 
+|32-bit, 64-bit	 
+|
+|Yes
+|-
+|Windows XP Service Pack 3 and newer	 
+|32-bit	 
+|
+|Yes
+|-
+|Windows 7	 
+|32-bit, 64-bit	 
+|
+|Yes
+|-
+|Windows 8	 
+|32-bit, 64-bit	 
+|
+|No
+|-
+|Windows Server 2003 Service Pack 2 and newer	 
+|32-bit, 64-bit	 
+|
+|Yes
+|-
+|Windows Server 2008	 
+|32-bit, 64-bit	 
+|
+|Yes
+|-
+|Windows Server 2008 R2	 
+|64-bit	 
+|
+|Yes
+|-
+|Windows Server 2012 R2	 
+|64-bit	 
+|
+|No
+|}
+</div>
+
+
+Now that you have oVirt running, check out the [[documentation | documentation section]] for more information and be sure to [[community | join our community]]! 
 
 Help [[develop | develop the software]], take part in discussions on the [[mailing lists]] and join us [[communication#IRC | on IRC]].
 </div>
