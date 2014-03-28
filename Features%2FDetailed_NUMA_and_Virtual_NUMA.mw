@@ -149,20 +149,21 @@ kernel.numa_balancing = 1
 The above interfaces are defined with database design diagram
 [[File:Database_design_diagram.png]]
 * Related database scripts change:
-*# Add <code>numa_sp.sql</code> to include the store procedures which handle the operations in table <code>vm_numa_node</code>, <code>vds_numa_node</code>, <code>vm_numatune_nodeset</code> and <code>vds_numa_node_statistics</code>. It will provide the store procedures to insert, update and delete data and kinds of query functions.
+*# Add <code>numa_sp.sql</code> to include the store procedures which handle the operations in table <code>vm_numa_node</code>, <code>vds_numa_node</code>, <code>vm_numatune_nodeset</code>, <code>vds_numa_node_statistics</code> and <code>vm_vds_numa_node_map</code>. It will provide the store procedures to insert, update and delete data and kinds of query functions.
 *# Modify <code>vds_sp.sql</code> to add some store procedures which handle the operations in table <code>vds_cpu_statistics</code>, including insert, update, delete and kinds of query functions.
 *# Modify the function of <code>InsertVdsDynamic</code>, <code>UpdateVdsDynamic</code> in <code>vds_sp.sql</code> to add new columns <code>auto_numa_banlancing</code>, <code>numa_node_distance_list</code> and <code>vds_numa_node_count</code>.
 *# Modify the function of <code>InsertVmStatic</code>, <code>UpdateVmStatic</code> in <code>vms_sp.sql</code> to add three new columns <code>numa_manual_binding</code>, <code>numatune_mode</code> and <code>vm_numa_node_count</code>.
 *# Modify <code>create_views.sql</code> to add new columns <code>numa_manual_binding</code>, <code>numatune_mode</code> and <code>vm_numa_node_count</code> in view <code>vms</code>; add new columns <code>auto_numa_banlancing</code>, <code>numa_node_distance_list</code> and <code>vds_numa_node_count</code> in view <code>vds</code>.
-*# Modify <code>create_views.sql</code> to add new views, including view <code>vds_numa_node_view</code> which joins <code>vds_static</code>, <code>vds_numa_node</code> and <code>vds_numa_node_statistics</code>; view <code>vm_numa_node_view</code> which joins <code>vm_static</code>, <code>vm_numa_node</code>; view <code>vm_numatune_nodeset_view</code> which joins <code>vm_static</code>, <code>vm_numatune_nodeset</code> and <code>vds_numa_node</code>.
+*# Modify <code>create_views.sql</code> to add new views, including view <code>vds_numa_node_view</code> which joins <code>vds_static</code>, <code>vds_numa_node</code> and <code>vds_numa_node_statistics</code>; view <code>vm_numa_node_view</code> which joins <code>vm_static</code>, <code>vm_numa_node</code>; view <code>vm_numatune_nodeset_view</code> which joins <code>vm_static</code>, <code>vm_numatune_nodeset</code> and <code>vds_numa_node</code>; view <code>vm_vds_numa_node_view</code> which joins <code>vm_numa_node</code>, <code>vm_vds_numa_node_map</code> and <code>vds_numa_node</code>.
 *# Modify <code>upgrade/post_upgrade/0010_add_object_column_white_list_table.sql</code> to add new columns <code>auto_numa_banlancing</code>, <code>numa_node_distance_list</code> and <code>vds_numa_node_count</code>.
-*# Add one script under <code>upgrade/</code> to create tables - <code>vm_numa_node</code>, <code>vds_numa_node</code>, <code>vm_numatune_nodeset</code>, <code>vds_numa_node_statistics</code> and <code>vds_cpu_statistics</code> and add columns in table <code>vds_dynamic</code> and <code>vm_static</code>.
+*# Add one script under <code>upgrade/</code> to create tables - <code>vm_numa_node</code>, <code>vds_numa_node</code>, <code>vm_numatune_nodeset</code>, <code>vds_numa_node_statistics</code>, <code>vds_cpu_statistics</code>, <code>vm_vds_numa_node_map</code> and add columns in table <code>vds_dynamic</code> and <code>vm_static</code>.
 *# Create the following indexes in the script mentioned in point 8:
 *#* Index on column <code>vm_guid</code> of table <code>vm_numa_node</code>
 *#* Index on column <code>vds_numa_node_count</code> of table <code>vds_dynamic</code>
 *#* Indexes on each of the columns <code>vm_guid</code> and <code>vds_numa_node_id</code> of table <code>vm_numatune_nodeset</code>
 *#* Indexes on each of the columns <code>vds_id</code> and <code>cpu_count</code> of table <code>vds_numa_node</code>
 *#* Indexes on each of the columns <code>vds_id</code> and <code>vds_numa_node_id</code> of table <code>vds_cpu_statistics</code>
+*#* Indexes on each of the columns <code>vm_numa_node_id</code> and <code>vds_numa_node_id</code> of table <code>vm_vds_numa_node_map</code>
 *# Modify <code>create_views.sql</code> to add new columns <code>auto_numa_balancing</code> and <code>numa_node_distance_list</code> in view <code>vds_with_tags</code>.
 
 * Related DAO change:
@@ -172,6 +173,7 @@ The above interfaces are defined with database design diagram
 *# Add <code>VdsCpuStatisticsDao</code> and related implementation to provide data save, update, delete and kinds of queries in table <code>vds_cpu_statistics</code>. Add <code>VdsCpuStatisticsDAOTest</code> for <code>VdsCpuStatisticsDAO</code> meanwhile.
 *# Modify <code>VdsDynamicDAODbFacadeImpl</code> and <code>VdsDAODbFacadeImpl</code> to add the map of new columns <code>auto_numa_banlancing</code>, <code>numa_node_distance_list</code> and <code>vds_numa_node_count</code>. Run <code>VdsDynamicDAOTest</code> to verify the modification.
 *# Modify <code>VmStaticDAODbFacadeImpl</code> and <code>VmDAODbFacadeImpl</code> to add the map of new columns <code>numa_type</code>, <code>numatune_mode</code> and <code>numa_node_count</code>. Run <code>VmStaticDAOTest</code> to verify the modification.
+*# Add <code>VmNumaNodeMapDAO</code> and related implemention to provide data save, update, delete in table <code>vm_vds_numa_node_map</code> and queries about the relationship between <code>vm_numa_node</code> and <code>vds_numa_node</code> which needs to join table <code>vm_numa_node</code>, <code>vm_vds_numa_node_map</code> and <code>vds_numa_node</code>. Add <code>VmNumaNodeMapDAOTest</code> for <code>VmNumaNodeMapDAO</code> meanwhile.
 
 * Related search engine change
 Currently, we plan to provide below search functions about NUMA feature, each field support the numeric relation of “>”, “<”, “>=”, “<=”, “=”, “!=”.
