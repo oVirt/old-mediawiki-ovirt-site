@@ -147,7 +147,7 @@ kernel.numa_balancing = 1
 # I-3.7 Add table <code>vm_numatune_nodeset</code> to include vm numatune nodeset configuration (this is a relationship table, store the map relations between vm and <code>vds_numa_node</code>)
 # I-3.8 Add table <code>vm_vds_numa_node_map</code> to include the configuration of vm virtual NUMA nodes pinning to host NUMA nodes (this is a relationship table, store the map relations between <code>vm_numa_node</code> and <code>vds_numa_node</code>)
 The above interfaces are defined with database design diagram
-
+[[File:Database_design_diagram.png]]
 * Related database scripts change:
 *# Add <code>numa_sp.sql</code> to include the store procedures which handle the operations in table <code>vm_numa_node</code>, <code>vds_numa_node</code>, <code>vm_numatune_nodeset</code> and <code>vds_numa_node_statistics</code>. It will provide the store procedures to insert, update and delete data and kinds of query functions.
 *# Modify <code>vds_sp.sql</code> to add some store procedures which handle the operations in table <code>vds_cpu_statistics</code>, including insert, update, delete and kinds of query functions.
