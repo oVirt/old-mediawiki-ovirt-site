@@ -4,7 +4,7 @@
 {{Feature|name=Device ethtool options|modules=engine,network,vdsm|status=To be Released|version=3.5.0}}
 
 === Summary ===
-This feature provides a way for the administrator to specify ethtool options for the oVirt defined networks.
+This feature provides a way for the administrator to specify ethtool options for oVirt-defined networks.
 
 === Owner ===
 * Name: [[User:apuimedo| Antoni Segura Puimedon]]
