@@ -40,10 +40,13 @@ When assigning a network to a NIC it will be possible to click on "edit" (icon m
 
 === Ethtool options format ===
 
-The proposed format is  based on dictionaries and the command line options to ethtool:
-<pre>{'coalesce':{'rx-usecs': 14, 'sample_interval': 3}, 
- 'offload':{'rx': True, 'lro': True, 'tcp-segmentation-offload': False},
- 'change':{'speed': 1000, 'duplex': 'half'}}</pre>
+The proposed format is  just the command line ethtool syntax
+<pre>--coalesce ethX rx-usecs 14 sample_interval 3 --offload ethX rx on lroon tcp-segmentation-offload off --change ethX speed 1000 duplex half </pre>
+
+If the property is being set on a bond, the user should make sure to specify the proper ethX/ethY/ethZ for each of the bond's nics that ethtool options should be set for. E.g., we have a bond with em1 and em2 and em2 should offload only rx and em1 only tx:
+<pre>--offload em2 rx on --offload em1 tx on</pre>
+
+In the bonding case, the UI/Engine/vdsm code may want to check that there is no reference to a NIC that isn't enslaved to the bond.
 
 === Dependencies / Related Features ===
 <!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
