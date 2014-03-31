@@ -212,8 +212,9 @@ Currently, we plan to provide below search functions about NUMA feature, each fi
 ** <code>AddVmNumaNode, UpdateVmNuamNode, RemoveVmNuamNode</code> use same parameters <code>VmNumaNodeParameters</code>
 ** <code>GetVmNumaNodeByVdsNumaNodeId</code> will query the <code>VmNumaNode</code>s under the <cdde>VdsNumaNode</code>
 ** <code>VmNumaNodeParameters</code> has one pair of <code>VmNumaNode</code> and <code>VdsNumaNode</code>, it will calculate below things
-pin to host - VdsNumaNode.vdsId
-CPU pinning - VdsNumaNode.cpuIds and VmNumaNode.vcpusIds
-numatune nodeset - VmNumaNode.vdsNumaNodeId
+***pin to host - VdsNumaNode.vdsId
+***CPU pinning - VdsNumaNode.cpuIds and VmNumaNode.vcpusIds
+***numatune nodeset - VmNumaNode.vdsNumaNodeId
+
 ==== Interface and data structure in ovirt scheduler ====
 ==== Interface and data structure in restful API ====
