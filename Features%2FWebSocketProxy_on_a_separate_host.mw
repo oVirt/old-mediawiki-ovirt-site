@@ -32,16 +32,16 @@ Assumption:
 Under this assumptions it can works this way:
 
 *On the first node:
-*# Via yum, the user installs the required RPMs on the first machine (the engine one) ensuring to don't install ovirt-engine-websocket-proxy
-*# Then the can launch engine-setup
-*# Acknowledging that  ovirt-engine-websocket-proxy RPM is not install, the engine-setup asks to the user if he/she wants to install the WebSocketProxy on a different machine.
+*# Via yum, the user installs the required RPMs on the first machine (the engine one) ensuring to don't install ovirt-engine-websocket-proxy (if so the engine-setup will run as for an installation with the engine and the websocket-proxy on a single node)
+*# Then he can launch engine-setup
+*# Acknowledging that  ovirt-engine-websocket-proxy RPM is not installed, the engine-setup asks to the user if he/she wants to install the WebSocketProxy on a different machine.
 *# If so, the engine-setup asks for a fqdn and and port of the machine that will run the WebSocketProxy
 *# engine-setup on the first machine generates and signs also the cert for the WebSocketProxy one storing them on a well defined path: having it running on a different host with a different fdqn requires an additional SSL cert
 
 * On the second node:  
 *# Via yum user install only ovirt-engine-websocket-proxy being sure to not install ovirt-engine (if so the engine-setup will run as for an installation with the engine and the websocket-proxy on a single node)
-*# Then the can launch engine-setup
-*# Acknowledging that  ovirt-engine-websocket-proxy RPM is install but ovirt-egine no, the engine-setup asks:
+*# Then he can launch engine-setup
+*# Acknowledging that  ovirt-engine-websocket-proxy RPM is installed but ovirt-egine not, the engine-setup asks:
 *#* The fqdn of the engine node
 *#* The fqdn of the WebSocketProxy (current) node
 *#* The port to bind on
