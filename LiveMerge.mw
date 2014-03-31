@@ -1,12 +1,8 @@
 <!-- {{autolang|base=yes}} -->
 
-<!-- The actual name of your feature page should look something like: "Your feature name". Use natural language to name the pages. -->
+== Live Merge ==
 
-The actual name of your feature page should look something like: "Your feature name". Use natural language to [[How to make pages#Page naming|name the pages]].
-
-== Your Feature Name <!-- The name of your feature --> ==
-
-{{Feature|name=Your feature name|modules=engine,network,vdsm|status=Released|version=3.1.0}}
+{{Feature|name=Live Merge|modules=engine,vdsm|status=Development|version=3.5.0}}
 
 === Summary ===
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
