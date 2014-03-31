@@ -210,11 +210,13 @@ Currently, we plan to provide below search functions about NUMA feature, each fi
 * Action & Query
 ** <code>GetVdsNumaNodeByVdsId, GetVmNumaNodeByVmId, GetVmNumaNodeByVdsNumaNodeId, GetCpuStatsByVdsId</code> use same parameters <code>IdQueryParameters</code>
 ** <code>AddVmNumaNode, UpdateVmNuamNode, RemoveVmNuamNode</code> use same parameters <code>VmNumaNodeParameters</code>
-** <code>GetVmNumaNodeByVdsNumaNodeId</code> will query the <code>VmNumaNode</code>s under the <cdde>VdsNumaNode</code>
+** <code>GetVdsNumaNodeByVdsId</code> will return List<VdsNumaNode>
+** <code>GetVmNumaNodeByVmId, GetVmNumaNodeByVdsNumaNodeId</code> will return List<VmNumaNode>
+** <code>GetVmNumaNodeByVdsNumaNodeId</code> will query the <code>VmNumaNode</code>s under the <code>VdsNumaNode</code>
 ** <code>VmNumaNodeParameters</code> has one pair of <code>VmNumaNode</code> and <code>VdsNumaNode</code>, it will calculate below things
-***pin to host - VdsNumaNode.vdsId
+***Pin to host - VdsNumaNode.vdsId
 ***CPU pinning - VdsNumaNode.cpuIds and VmNumaNode.vcpusIds
-***numatune nodeset - VmNumaNode.vdsNumaNodeId
+***Numatune nodeset - VmNumaNode.vdsNumaNodeId
 
 ==== Interface and data structure in ovirt scheduler ====
 ==== Interface and data structure in restful API ====
