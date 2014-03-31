@@ -34,8 +34,8 @@ The WebSocketProxy is already able to run on a different host, only the engine s
 
 === Documentation / External references ===
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
-[RFE] Allow setup of ovirt-websocket-proxy on separate machine - [https://bugzilla.redhat.com/show_bug.cgi?id=1080992]
-[RFE] rhevm-websocket-proxy - using as standalone service - automatic configuration - [https://bugzilla.redhat.com/show_bug.cgi?id=985945]
+* [RFE] Allow setup of ovirt-websocket-proxy on separate machine - [https://bugzilla.redhat.com/show_bug.cgi?id=1080992]
+* [RFE] rhevm-websocket-proxy - using as standalone service - automatic configuration - [https://bugzilla.redhat.com/show_bug.cgi?id=985945]
 
 === Testing ===
 A tester should perform a full oVirt installation choosing to install the WebSocketProxy on a different host. The The tester should be able to connect to any running machine via the noVNC web client.
