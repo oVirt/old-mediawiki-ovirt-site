@@ -11,8 +11,8 @@ This feature enable the user to use iSCSI storage for Hosted Engine data domain.
 * Name: [[User:SandroBonazzola| Sandro Bonazzola]]
 * Email: <sbonazzo@redhat.com>
 
-
 === Current status ===
+* Status: Design
 * Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]] 
 
 === Detailed Description ===
