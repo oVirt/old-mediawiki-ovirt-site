@@ -27,6 +27,7 @@ Assumption:
 * The user still needs to install the needed RPMs on both the machine; the user have to install only the required RPMs, installing a not required RPM on one of the two machine can broken the process 
 * The user still need to run engine-setup on both the machine 
 * The user knows the root password of the  first machine when on the second
+* This process is relative to a new install
 
 Under this assumptions it can works this way:
 
@@ -49,12 +50,12 @@ Under this assumptions it can works this way:
 *# engine-setup configures the service editing /etc/ovirt-engine/ovirt-websocket-proxy.conf.d/10-setup.conf
 *# engine-setup starts the WebSocketProxy service
 
-Engine setup currently asks:
-'Configure websocket proxy on the machine' accepting
-
 === Benefit to oVirt ===
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
-The installation process will become easier for who needs to install the WebSocketProxy on a separate engine cause it will not require any successive manual procedure.
+The installation process will become easier for who needs to install the WebSocketProxy on a separate engine cause it will not require to manually:
+* generate and sign the WebSocketProxy certs on the engine machine
+* copy the certs on the websocketsproxy machine
+* configure the websocketsproxy service editing a file on the  websocketsproxy machine
 
 === Dependencies / Related Features ===
 <!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
