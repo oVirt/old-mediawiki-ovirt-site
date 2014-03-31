@@ -197,18 +197,23 @@ Currently, we plan to provide below search functions about NUMA feature, each fi
 #* Add new entries in entitySearchInfo accordingly. NUMANODES will use new added view  vds_numa_node_view and VIRTUALNUMANODES will use new added view vm_numa_node_view.
 #* Modify <code>org.ovirt.engine.core.searchbackend.VdsCrossRefAutoCompleter</code> to add auto complete  entry NUMANODES; Modify <code>org.ovirt.engine.core.searchbackend.VmCrossRefAutoCompleter</code> to  add auto complete entry VIRTUALNUMANODES.
 
-==== Interface and data structure in engine side ====
-The below interfaces are defined with class diagram to easier understand the data relationship
-* The information and setup of VM is defined in entity VM of engine core as below, the data interface in I-4.1, I-5.1 and I-6.1 will use these data
-# I-4.1 Provide vm NUMA configuration properties to scheduler (numaType, guestNumaNodeList)
-# I-5.1 Provide vm NUMA configuration properties which is binding to UI model (numaType, numaTuneMode, numaTuneNodeList, guestNumaNodeList)
-# I-6.1 Provide vm NUMA configuration properties which is showing vm NUMA information in restful API
-The above interfaces are defined with class diagram
-[[File:Vm_class_diagram.png|780px]]
-* The information and setup of host is defined in entity VDS of engine core as below, the data interface in I-4.2, I-5.2, I-5.3 and I-6.2 will use these data
-# I-4.2 Provide host NUMA statistics information to scheduler, include free memory and used memory percentage of each NUMA node, total used cpu percentage of each NUMA node
-# I-5.2 Provide host NUMA node index list when create vm
-# I-5.3 Provide host NUMA statistics information, include free/total memory and used memory percentage, user/system/idle cpu percentage and total used cpu percentage
-# I-6.2 Provide host NUMA information which are mentioned above (host NUMA node and statistics information) in restful API
-The above interfaces are defined with class diagram
-[[File:Vds_class_diagram.png|780px]]
+==== Interface and data structure in engine core ====
+[[File:ARCH Class Diagram.png]]
+*Entities
+** <code>VDS</code> has many <code>VdsNumaNode</code> objects in dynamic data (collect from vds capatibility)
+** <code>VdsNumaNode</code> is core entity for host NUMA topology, it links one statistics object <code>VdsNumaNodeStatistics</code> which contains some real-time data (free memory, NUMA node cpu usage etc.)
+** <code>VM</code> has many <code>VmNumaNode</code> object in dynamic data (configured by user)
+** <code>VmNumaNode</code> is core entity for VM NUMA topology. 
+** <code>NumaTuneMode</code> is the memory tune mode (configured by user).
+** <code>VdsNumaNode</code> has one-to-many relationship with <code>VmNumaNode</code>.
+** <code>VdsNumaNode.cpuIds</code> links with <code>CpuStatistics.cpuId</code> to take a look inside NUMA node each CPU usage
+* Action & Query
+** <code>GetVdsNumaNodeByVdsId, GetVmNumaNodeByVmId, GetVmNumaNodeByVdsNumaNodeId, GetCpuStatsByVdsId</code> use same parameters <code>IdQueryParameters</code>
+** <code>AddVmNumaNode, UpdateVmNuamNode, RemoveVmNuamNode</code> use same parameters <code>VmNumaNodeParameters</code>
+** <code>GetVmNumaNodeByVdsNumaNodeId</code> will query the <code>VmNumaNode</code>s under the <cdde>VdsNumaNode</code>
+** <code>VmNumaNodeParameters</code> has one pair of <code>VmNumaNode</code> and <code>VdsNumaNode</code>, it will calculate below things
+pin to host - VdsNumaNode.vdsId
+CPU pinning - VdsNumaNode.cpuIds and VmNumaNode.vcpusIds
+numatune nodeset - VmNumaNode.vdsNumaNodeId
+==== Interface and data structure in ovirt scheduler ====
+==== Interface and data structure in restful API ====
