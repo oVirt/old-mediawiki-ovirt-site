@@ -1,13 +1,11 @@
 <!-- {{autolang|base=yes}} -->
 <!-- The actual name of your feature page should look something like: "Your feature name". Use natural language to name the pages. -->
 == WebSocketProxy on a separate host <!-- The name of your feature --> ==
-
 {{Feature|name=WebSocketProxy on a separate host|modules=websocket-proxy|status=tbd|version=3.5.0}}
 
 === Summary ===
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
 The aim of this feature is to enhance the engine setup being able to install and configure the WebSocketProxy on a second machine, where engine does not run, in a fully automated way.
-
 
 === Owner ===
 <!--This should link to your home wiki page so we know who you are-->
@@ -15,10 +13,9 @@ The aim of this feature is to enhance the engine setup being able to install and
 <!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
 * Email: <stirabos@redhat.com>
 
-
 === Current status ===
 * To be discussed
-
+* Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]] <!--This is markup for the date on which the current page was last changed, do not change-->
 
 === Detailed Description ===
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
@@ -27,30 +24,24 @@ The noVNC client used for VM web console utilizes websockets for passing VNC dat
 It's currently already possible run the WebSocketProxy  on a separate host but it requires a manual procedure [http://www.ovirt.org/Features/noVNC_console#Setup_Websocket_Proxy_on_a_Separate_Machine]. What we are proposing will automate the setup process so it will be configurable just using engine-setup command.
 The engine-setup process will be updated asking (both in the interactive way and in the answer file) for the details (fqdn, port) of the machine that will run the WebSocketProxy.
 
-
 === Benefit to oVirt ===
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
 The installation process will become easier for who needs to install the WebSocketProxy on a separate engine cause it will not require any successive manual procedure.
 
-
 === Dependencies / Related Features ===
 <!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
 The WebSocketProxy is already able to run on a different host, only the engine setup should be improved to allow it being automatically configured.  
-
 
 === Documentation / External references ===
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
 * [RFE] Allow setup of ovirt-websocket-proxy on separate machine - [https://bugzilla.redhat.com/show_bug.cgi?id=1080992]
 * [RFE] rhevm-websocket-proxy - using as standalone service - automatic configuration - [https://bugzilla.redhat.com/show_bug.cgi?id=985945]
 
-
 === Testing ===
 A tester should perform a full oVirt installation choosing to install the WebSocketProxy on a different host. The The tester should be able to connect to any running machine via the noVNC web client.
-
 
 === Comments and Discussion ===
 <!-- This below adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 * Refer to [[Talk:WebSocketProxy on a separate host]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
-
 
 [[Category:Feature]]
