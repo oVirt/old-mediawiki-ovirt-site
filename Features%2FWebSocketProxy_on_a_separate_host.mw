@@ -1,7 +1,7 @@
 <!-- {{autolang|base=yes}} -->
 <!-- The actual name of your feature page should look something like: "Your feature name". Use natural language to name the pages. -->
 == WebSocketProxy on a separate host <!-- The name of your feature --> ==
-{{Feature|name=WebSocketProxy on a separate host|modules=websocket-proxy|status=tbd|version=3.5.0}}
+{{Feature|name=WebSocketProxy on a separate host|modules=websocket-proxy|status=Design|version=3.5.0}}
 
 === Summary ===
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
@@ -14,7 +14,7 @@ The aim of this feature is to enhance the engine setup being able to install and
 * Email: <stirabos@redhat.com>
 
 === Current status ===
-* To be discussed
+* Design
 * Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]] <!--This is markup for the date on which the current page was last changed, do not change-->
 
 === Detailed Description ===
