@@ -214,6 +214,8 @@ Currently, we plan to provide below search functions about NUMA feature, each fi
 ** <code>GetVdsNumaNodeByVdsId</code> will return List<VdsNumaNode>
 ** <code>GetVmNumaNodeByVmId, GetVmNumaNodeByVdsNumaNodeId</code> will return List<VmNumaNode>
 ** <code>GetVmNumaNodeByVdsNumaNodeId</code> will query the <code>VmNumaNode</code>s under the <code>VdsNumaNode</code>
+** <code>GetCpuStatsByVdsId</code> will return List<CpuStatistics>
+** When <code>VmNumaNodeParameters.vdsNumaNodeId</code>  is set to null, the VmNumaNode is unsigned.
 
 ==== Interface and data structure in ovirt scheduler ====
 ==== Interface and data structure in restful API ====
