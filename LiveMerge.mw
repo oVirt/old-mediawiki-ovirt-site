@@ -54,8 +54,7 @@ This feature hides the complexity of the Live Merge flows behind a simple clicka
 * [https://bugzilla.redhat.com/show_bug.cgi?id=1062142 live snapshot merge (commit) of the active layer]
 
 === Documentation / External references ===
-<!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
-Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs.
+* [http://libvirt.org/html/libvirt-libvirt.html#virDomainBlockCommit libvirt blockCommit API]
 
 === Testing ===
 
