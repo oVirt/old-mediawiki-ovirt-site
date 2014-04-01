@@ -21,9 +21,9 @@ Patches:
 * Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]] <!--This is markup for the date on which the current page was last changed, do not change-->
 
 === Detailed Description ===
-<!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
-Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better.
 
+==== Flow Diagram ====
+[[File:live-merge-flow.png]]
 
 === Benefit to oVirt ===
 This feature hides the complexity of the Live Merge flows behind a simple clickable "Delete" button in the UI.  This results in a symmetric create/delete snapshot operations regardless of whether the VM is running or not.  This feature has been actively requested by users.
