@@ -5,19 +5,15 @@
 {{Feature|name=Live Merge|modules=engine,vdsm|status=Development|version=3.5.0}}
 
 === Summary ===
-<!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
-A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release.
+Live merge makes it possible to delete VM disk snapshots that are no longer needed while the VM continues to run.
 
-=== Owner ===
-<!--This should link to your home wiki page so we know who you are-->
-This should link to your home wiki page so we know who you are
+=== Owners ===
 
-* Name: [[User:MyUser| My User]]
+* Name: [[User:AdamLitke| Adam Litke]]
+* Email: <alitke@redhat.com>
 
-<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
-Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved
-* Email: <my@email>
-
+* Name: [[User:GregPadgett| Greg Padgett]]
+* Email: <gpadgett@redhat.com>
 
 === Current status ===
 * Link to feature page in a specific release. That release may complete the feature, or parts of it. The complete scope of this feature in this release will be described in the release feature page
