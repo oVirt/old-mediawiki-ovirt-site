@@ -14,7 +14,7 @@ pls note: <br>
  -A INPUT -p tcp -m state --state NEW -m tcp --dport 8443 -j ACCEPT
 * set selinux to permissive or disabled mode, config selinux in "/etc/selinux/config", eg
  SELINUX=permissive
-* oat package might not able to be pushed into fedora 18 since some dependencies can't be pushed in f18.
+* oat package was not able to be pushed into fedora 18 since some dependencies can't be pushed in f18.
 
 ==== Install basic packages (for all-in-one approach) ====
  # yum -y install httpd mysql mysql-server php php-mysql openssl java-1.7.0-openjdk.x86_64
@@ -23,7 +23,7 @@ pls note: <br>
 * Install all-in-one package
 Download [http://gwei3.fedorapeople.org/package_review/oat/v1/oat-appraiser-1.6.0-1.fc18.x86_64.rpm oat-appraiser] rpm package, and then
  # rpm -i oat-appraiser-1.6.0-1.fc18.x86_64.rpm
-*  Yum Install oat server package from fedora19 repository (not available yet).
+*  Yum Install oat server package from fedora19 repository
  # yum install oat-appraiser
 *  make sure tomcat is running after package installation, otherwise,  start tomcat service manually.
  # service tomcat6 status (check status)
@@ -35,7 +35,7 @@ Generate client files after installing oat-appraiser package, execute this comma
 Client files will be output in this directory “/var/lib/oat-appraiser/ClientFiles/”. Part of these files are needed in agent’s side.
 
 === Deploy Host Agent on VDS ===
-Two approaches (all-in-one packages for f18, yum install in f19) are provided to deploy Host Agent. Install via yum command will be available after oat package is merged in fedora 19 repository(WIP).
+Two approaches (all-in-one packages for f18, yum install in f19) are provided to deploy Host Agent. 
 
 ==== Install Fedora for Legacy Boot ====
 The Fedora18/19 x86-64 system should be installed to run in legacy boot instead of EFI boot. Many new systems will by default boot as EFI boot, so you need to explicitly boot the installation media (DVD or USB) with legacy mode. Below is a example on HP8300:
@@ -120,7 +120,7 @@ pls input the host name instead of the IP address of oat server (IP address is n
 
 Start oat client service, make sure TrouSers service is running
 * all-in-one approach
- # chmod 755 /etc/init.d/OATClient (this bug will be fixed in the next release for all-in-one packages)
+ # chmod 755 /etc/init.d/OATClient 
  # service OATClient start
 * yum install approach
  # service oat-client start
