@@ -2,7 +2,7 @@
 
 == Separate DWH Host ==
 
-{{Feature|name=Separate DWH Host|modules=engine|status=Planning|version=3.5.0}}
+{{Feature|name=Separate DWH Host|modules=engine|status=Design|version=3.5.0}}
 
 === Summary ===
 Allow ovirt-engine-dwh to be installed and configured by engine-setup on a separate machine, without requiring ovirt-engine to be on the same host.
@@ -17,9 +17,12 @@ Allow ovirt-engine-dwh to be installed and configured by engine-setup on a separ
 In preparation.
 
 === Detailed Description ===
-TBD:
-* Need access to the engine's database - if db is setup locally, we might ask the user for the root password and ssh to get the credentials
-* We might want to try and understand that from some engine status page first, to not bother the user. Do we need the engine's FQDN for other things?
+
+We assume that engine is already setup and running on machine A. We assume that user wants to install dwh on machine B.
+
+We need access to the engine's database. We'll let the user choose between two options:
+* provide root password of machine A, ssh there, get the credentials
+* manually supply the credentials
 
 === Benefit to oVirt ===
 DWH sometimes causes a significant load on the engine machine. Installing it on a separate machine will allow distributing the load.
