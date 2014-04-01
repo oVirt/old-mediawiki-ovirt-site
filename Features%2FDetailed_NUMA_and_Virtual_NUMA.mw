@@ -209,14 +209,11 @@ Currently, we plan to provide below search functions about NUMA feature, each fi
 ** <code>VdsNumaNode.cpuIds</code> links with <code>CpuStatistics.cpuId</code> to take a look inside NUMA node each CPU usage
 * Action & Query
 ** <code>GetVdsNumaNodeByVdsId, GetVmNumaNodeByVmId, GetVmNumaNodeByVdsNumaNodeId, GetCpuStatsByVdsId</code> use same parameters <code>IdQueryParameters</code>
-** <code>AddVmNumaNode, UpdateVmNuamNode, RemoveVmNuamNode</code> use same parameters <code>VmNumaNodeParameters</code>
+** <code>AddVmNumaNode, UpdateVmNuamNode, RemoveVmNuamNode</code> use same parameters <code>VmNumaNodeParameters</code> to manage Virtual NUMA node in VM
+** <code>SetNumaTuneMode</code> use parameters <code>NumaTuneModeParameters</code> to set the NUMA tuning mode for VM
 ** <code>GetVdsNumaNodeByVdsId</code> will return List<VdsNumaNode>
 ** <code>GetVmNumaNodeByVmId, GetVmNumaNodeByVdsNumaNodeId</code> will return List<VmNumaNode>
 ** <code>GetVmNumaNodeByVdsNumaNodeId</code> will query the <code>VmNumaNode</code>s under the <code>VdsNumaNode</code>
-** <code>VmNumaNodeParameters</code> has one pair of <code>VmNumaNode</code> and <code>VdsNumaNode</code>, it will calculate below things
-***Pin to host - VdsNumaNode.vdsId
-***CPU pinning - VdsNumaNode.cpuIds and VmNumaNode.vcpusIds
-***Numatune nodeset - VmNumaNode.vdsNumaNodeId
 
 ==== Interface and data structure in ovirt scheduler ====
 ==== Interface and data structure in restful API ====
