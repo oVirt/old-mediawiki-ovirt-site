@@ -1,10 +1,6 @@
 <!-- {{autolang|base=yes}} -->
 __TOC__
 
-= Scoped MacPoolRanges =
-
-
-
 == Summary ==
 Previously there was sole pool of MACs, it's mac ranges for this pool could/can be configured via engine-config.
 
