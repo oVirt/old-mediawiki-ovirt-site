@@ -1,0 +1,33 @@
+<!-- {{autolang|base=yes}} -->
+
+== Optaplanner integration with scheduling ==
+
+=== Summary ===
+
+
+=== Owner ===
+* Feature Owner: Martin Sivák: [[User:msivak|msivak]]
+
+* Email: <msivak@redhat.com>
+
+=== Current status ===
+* Initial design discussion
+* Last updated: {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]] <!--This is markup for last revision, do not change-->
+
+
+=== Use cases ===
+
+=== Benefit to oVirt ===
+
+
+== '''Requirements''' ==
+
+
+== Detailed Description ==
+
+
+== Comments and Discussion ==
+* Refer to [[Talk:Self Hosted Engine]]
+
+[[Category:Feature]]
+[[Category:SLA]]
