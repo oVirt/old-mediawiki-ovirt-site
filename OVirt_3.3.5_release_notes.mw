@@ -69,6 +69,32 @@ will upgrade to latest 3.3.
 
 =Bugs fixed=
 ==oVirt Engine==
+{{BZ|1030367}} - [race] Host stays in "Preparing for maintenance" forever if requested while incoming live migrations<BR>
+{{BZ|1031717}} - Force removal of DataCenter fails to remove vm_pool from DB<BR>
+{{BZ|1054108}} - engine: DeactivateStorageDomainCommand fails with vdsm error: 'Operation not allowed while SPM is active' because we do not actually send SpmStop while there are unknown tasks<BR>
+{{BZ|1064907}} - Listing templates takes noticeable amount of time, while listing many more VMs is prompt<BR>
+{{BZ|1066392}} - Pool VMs are being pulled from template view in a very inefficient way<BR>
+{{BZ|1066400}} - Allow manual fence in connecting state<BR>
+{{BZ|1066654}} - 'engine-backup --mode=restore' fails after engine-cleanup on postgres 8<BR>
+{{BZ|1067450}} - Typo in Cluster Policy Tool Tip<BR>
+{{BZ|1067906}} - Cloud-init DNS settings should go inside the "iface" section<BR>
+{{BZ|1068926}} - engine: host stuck on Unassigned when moving from status Maintenance  when storage is not availble from the host<BR>
+{{BZ|1069131}} - 'engine-backup --mode=restore' fails after engine-cleanup on postgres 8<BR>
+{{BZ|1069219}} - Force removal of DataCenter fails to remove vm_pool from DB<BR>
+{{BZ|1069714}} - [restore.sh] restore.sh is doing restore.sh.log in /usr directory<BR>
+{{BZ|1069847}} - GuideMe AddHost does not pass OverrideFirewall<BR>
+{{BZ|1069898}} - VMs do not appear in virtual machine tab if host is selected in side pane (data-center > cluster > host > )<BR>
+{{BZ|1070265}} - Listing templates takes noticeable amount of time, while listing many more VMs is prompt<BR>
+{{BZ|1071793}} - RHEV-M fails to detect 'AMD Opteron G5' as CPU_Type for hypervisors.<BR>
+{{BZ|1071997}} - VM is not locked on run once<BR>
+{{BZ|1072282}} - VM split brain caused by network outage<BR>
+{{BZ|1072330}} - Failure to add domain via engine-manage-domains if the kerberos realm is not an uppercase of the domain<BR>
+{{BZ|1073776}} - CpuOverCommitDurationMinutes limited to a single digit value by regular expression in database scripts<BR>
+{{BZ|1074478}} - After a power outage two VMs marked as HA failed to start automatically, they were required to be started manually.<BR>
+{{BZ|1077114}} - Missing option create engine-setup answer-file template<BR>
+{{BZ|1078129}} - On DB upgrade, readonly user and client custom users losses permissions to db views<BR>
+{{BZ|1079287}} - Tasks are cleared while they are still running<BR>
+{{BZ|1080033}} - The RSDL documentation of the cloud-init hostname property should be host.address<BR>
 
 ==VDSM==
 
