@@ -26,10 +26,9 @@ Definition of domains from which MAC addresses will be allocated for each "scope
 * While ranges definition may differ per "scope", other variables -- 'MaxMacsCountInPool' and 'AllowDuplicateMacAddresses' are still system wide.
 
 == Gui ==
+Style of entering mac pool ranges is hardly ideal, but it should suffice at first.
 [[File:MacPoolRangesOnDataCenter.png]]
-<gallery>
-File:MacPoolRangesOnDataCenter.png|screenshot
-</gallery>
+
 
 == Implementation details ==
 While we're just talking about data center "scopes", it's possible that fine grained "scope" will be requested, or user could decide which "scope" he/she/... wants.
