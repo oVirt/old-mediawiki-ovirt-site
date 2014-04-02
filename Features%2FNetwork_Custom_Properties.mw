@@ -5,9 +5,9 @@
 Define special parameters per network, and pass them down to Vdsm hooks when the network is set up on a host.
 
 === Owner ===
-* Name: [[User:Danken| Dan Kenigsberg]]
-* Email: <danken@redhat.com>
-* IRC: danken at #ovirt (irc.oftc.net)
+* Name: [[User:lvernia| Lior Vernia]]
+* Email: <lvernia@redhat.com>
+* IRC: lvernia at #ovirt (irc.oftc.net)
 
 === Current Status ===
 * To be proposed to oVirt-3.5
