@@ -1,4 +1,5 @@
 == Network Custom Properties ==
+{{Feature|name=Network Custom Properties|modules=engine,network,vdsm|status=To be Released|version=3.5.0}}
 
 === Summary ===
 Define special parameters per network, and pass them down to Vdsm hooks when the network is set up on a host.
@@ -78,6 +79,9 @@ Engine needs to take special care at canDoAction to disallow custom network prop
 * From the Engine, define a network and set the 'hostonly' property (Make sure the cluster level is 3.4+)
 * [[Vdsm_Hooks|Create a new VDSM hook]] that occurs during before (and after) setupNetwork that prints the value for the 'hostonly' environment variabls, and the network definition that the hook received.
 * Verify that 'True' is printed.
+
+=== Usages ===
+
 
 === Documentation / External references ===
 * TBD
