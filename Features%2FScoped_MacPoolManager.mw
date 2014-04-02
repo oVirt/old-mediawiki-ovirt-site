@@ -27,6 +27,8 @@ Definition of domains from which MAC addresses will be allocated for each "scope
 
 == Gui ==
 Style of entering mac pool ranges is hardly ideal, but it should suffice at first.
+
+
 [[File:MacPoolRangesOnDataCenter.png]]
 
 
