@@ -82,6 +82,13 @@ Engine needs to take special care at canDoAction to disallow custom network prop
 
 === Usages ===
 
+This section describes features that use the infrastructure above.
+
+==== Ethtool options ====
+{{Feature|name=Device ethtool options|modules=engine,network,vdsm|status=To be proposed|version=3.5.0}}
+
+==== Bridge options ====
+{{Feature|name=Bridge options|modules=engine,network,vdsm|status=To be proposed|version=3.5.0}}
 
 === Documentation / External references ===
 * TBD
