@@ -108,8 +108,9 @@ The tool will create the user in the database and allocate a system permissions 
 === Open Issues ===
 * Correctness of Extensions API 
 * Format for generic ldap configuraton
-** Should be determined during the development
+** To be determined soon
 * Format of generic ldap template file.
+** To be determined soon, the queries will look similar to the ones at org.ovirt.engine.extensions.aaa.builtin.kerberosldap.LdapQueryMetadataFactoryImpl
 
 === Testing ===
 * Verify that after upgrade from 3.4 no regressions are introduced: It is possible to query users,groups in the already added domains, the permissions mechanism is working as expected
