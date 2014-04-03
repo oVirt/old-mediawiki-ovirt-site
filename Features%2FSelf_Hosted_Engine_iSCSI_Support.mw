@@ -8,8 +8,8 @@
 This feature enable the user to use iSCSI storage for Hosted Engine data domain.
 
 === Owner ===
-* Name: [[User:SandroBonazzola| Sandro Bonazzola]]
-* Email: <sbonazzo@redhat.com>
+* Installation: [[User:SandroBonazzola| Sandro Bonazzola]] e-mail: <sbonazzo@redhat.com>
+* HA agent: [[User:jmoskovc| Jiri Moskovcak]] e-mail: <jmoskovc@redhat.com>
 
 === Current status ===
 * Status: Design
