@@ -1,7 +1,7 @@
 == ioprocess ==
 
 === Summary ===
-Scale: Replace the use of a python process pool with ioprocess written in C.
+Scale: Replace the use of a process pool with ioprocess written in C.
 
 === Owner ===
 * Name: [[User:ykaplan| Yeela Kaplan]]
