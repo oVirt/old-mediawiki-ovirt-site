@@ -90,8 +90,7 @@ This will also require changes at Engine code to call the extensions API properl
 *** For each ldap provider (OpenLdap, ActiveDirectory, RHDS, IPA) there will be a a "template" file which will contain information such as query/search mapping and mapping of
 attributes to users/groups
 
-==== Tools ====
-* In order to have the ability to ad
+=== Tools ===
 
 === Open Issues ===
 * Correctness of Extensions API 
