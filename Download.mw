@@ -103,13 +103,27 @@ rpm {-K|--checksig} PACKAGE_FILE ...
 </pre></kbd>
 
 ===Currently used keys===
-<kbd><pre>
-rpm signature
-pub   2048R/FE590CB7 2014-03-30 [expires: 2016-04-02]
-      Key fingerprint = 31A5 D783 7FAD 7CB2 86CD  3469 AB8C 4F9D FE59 0CB7
-uid                  oVirt <infra@ovirt.org>
-sub   2048R/004BC303 2014-03-30
-</pre></kbd>
+{| class="wikitable"
+|-
+! scope="col"| Key ID
+! scope="col"| Key Type
+! scope="col"| Key Fingerprint
+! scope="col"| Key Description
+! scope="col"| Created
+! scope="col"| Expires
+! scope="col"| Revoked
+! scope="col"| Notes
+|-
+! scope="row"| FE590CB7
+| 2048-bit RSA
+| 31A5 D783 7FAD 7CB2 86CD  3469 AB8C 4F9D FE59 0CB7
+| oVirt
+| 2014-03-30
+| 2016-04-02
+|
+|
+|-
+|}
 
 == Install oVirt ==
 
