@@ -61,7 +61,7 @@ A developer of the extensions should work with the API defined at :
 And pack the extensions developed as a jboss module.
 
 Once engine starts, the directories containing configuration files are scanned, the extensions are created, and profiles are created for matching authenticaton and authorization
-extensions.
+extensions
 
 ==== UI ====
 
