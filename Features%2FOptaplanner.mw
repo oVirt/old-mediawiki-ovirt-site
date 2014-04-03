@@ -24,6 +24,7 @@
 
 == '''Requirements''' ==
 
+The output should be a service that is able to compute the ideal VM to Host assignment and give the administrator hints about how to balance the cluster to utilize the resources better.  The idea is to have the service free-running in an infinite loop and improve the solution over time while adapting to changes in the cluster.
 
 == Detailed Description ==
 
