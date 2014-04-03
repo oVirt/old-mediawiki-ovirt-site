@@ -80,7 +80,7 @@ When observing users in the DB, by issuing GET /api/users , the ID of the user i
 
 All of the above is correct for domain groups as well, with the relevant changes to URLs and the <domain_group_id> being the additional XML element.
 
-==== Backend and extensions work ====
+=== Backend and extensions work ===
 * Changing existing (built-in) extensions to support the Extensions API
 ** The current LdapKerberos Authenticator/Directory code, and the Internal Authenticator/Code should be aligned with the new API.
 This will also require changes at Engine code to call the extensions API properly.
