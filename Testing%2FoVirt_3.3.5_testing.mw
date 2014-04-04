@@ -17,6 +17,10 @@ If you're willing to participate, please add yourself to the table below:
 {|border="1"
 ! Name !! part tested !!Storage !! Networking !! Distribution !! Bugs
 |-
-|  -  || - || - || -  || - || -
+| [[User:stirabos|Simone Tiraboschi]]  || engine-setup, clean install || NFS  || basic || Fedora 19 || - 
+|-
+| [[User:stirabos|Simone Tiraboschi]]  || engine-setup, install -> remove all RPMs -> reinstall  || NFS  || basic || Fedora 19 || - 
+|-
+| [[User:stirabos|Simone Tiraboschi]]  || upgrade from 3.3.4 to 3.3.5-rc via engine-setup || NFS  || basic || Fedora 19 || - 
 |-
 |}
