@@ -2,7 +2,7 @@
 
 == Self Hosted Engine iSCSI Support ==
 
-{{Feature|name=Self Hosted Engine iSCSI Support|modules=ovirt-hosted-engine-setup|status=Design|version=3.5.0}}
+{{Feature|name=Self Hosted Engine iSCSI Support|modules=ovirt-hosted-engine-setup,ovirt-hosted-engine-ha|status=Design|version=3.5.0}}
 
 === Summary ===
 This feature enable the user to use iSCSI storage for Hosted Engine data domain.
