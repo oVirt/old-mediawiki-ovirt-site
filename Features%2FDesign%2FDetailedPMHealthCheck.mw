@@ -1,0 +1,66 @@
+= Power Management Health Check =
+
+== Summary ==
+<!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
+
+== Owner ==
+<!--This should link to your home wiki page so we know who you are-->
+* Feature owner: [[User:emesika| Eli Mesika]]
+:* Engine Component owner: [[User:emesika| Eli Mesika]]
+:* QA Owner: [[User:pstehlik| Pavel Stehlik]] 
+
+<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
+* Email: emesika@redhat.com
+
+== Current status ==
+* Target Release: 3.5
+* Status: Design
+* Last updated date: APR 6 2012
+
+== Detailed Description ==
+<!-- Provide the details of the feature. What is it going to include. See the sections below. -->
+<!-- New entities and changes in existing entities. -->
+
+
+== CRUD ==
+
+=== DAO ===
+=== Metadata ===
+
+== Configuration ==
+
+This configuration value should be exposed to the engine-config tool.
+
+== Business Logic == 
+
+=== Flow ===
+
+== API ==
+<!-- describe changes in REST API and SDK -->
+
+== User Experience ==
+<!-- Describe user experience related issues. For example: We need a wizard for ...., the behaviour is different in the UI because ....., etc. -->
+
+== Installation/Upgrade ==
+<!-- Describe how the feature will effect new installation or existing one. -->
+
+=== User work-flows ===
+<!-- Describe the high-level work-flows relevant to this feature. -->
+
+== Enforcement ==
+
+
+== Dependencies / Related Features and Projects ==
+<!-- What other packages (RPMs) depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  -->
+=== Affected oVirt projects ===
+
+== Documentation / External references ==
+<!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
+[[FeaturesPMHealthCheck]]
+
+== Future Directions ==
+
+== Open Issues ==
+<!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
+
+[[Category: Feature]]
