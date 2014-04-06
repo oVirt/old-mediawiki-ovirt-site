@@ -34,7 +34,7 @@ Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is ma
     <qos>
 
 NOTE: the qos object will contain all limits from all types.
-* PUT/DELETE methods are trivial.
+* POST/PUT/DELETE methods are trivial.
 
 ==== GUI ==== 
 * Remove network profile as a main tab.
