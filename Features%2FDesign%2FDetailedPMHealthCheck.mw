@@ -56,7 +56,7 @@ This configuration value should be exposed to the engine-config tool.
 
 == Documentation / External references ==
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
-[[FeaturesPMHealthCheck]]
+[[Features/PMHealthCheck]]
 
 == Future Directions ==
 
