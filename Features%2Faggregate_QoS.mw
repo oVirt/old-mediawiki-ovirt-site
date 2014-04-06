@@ -1,7 +1,7 @@
 == Aggregate QoS Objects ==
 === Description ===
 While oVirt is rapidly continues to grow and gather features, it’s important to wrap already existing features with new ones, for better UX reasons.
-In oVirt 3.5, there are going to be 2 new QoS objects, [http://www.ovirt.org/Features/CPU_SLA: CPU limits] and [http://http://www.ovirt.org/Features/blkio-support: blkio limits], added to the existing one [http://http://www.ovirt.org/Features/Network_QoS: network QoS] (since 3.3).
+In oVirt 3.5, there are going to be 2 new QoS objects, [http://www.ovirt.org/Features/CPU_SLA CPU limits] and [http://http://www.ovirt.org/Features/blkio-support: blkio limits], added to the existing one [http://http://www.ovirt.org/Features/Network_QoS: network QoS] (since 3.3).
 
 === Owner ===
 Name: [[User:gchaplik| Gilad Chaplik]]
