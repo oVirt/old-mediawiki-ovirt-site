@@ -62,6 +62,11 @@ name<br>
 qos_id (FK)<br>
 cluster_id (FK)<br>
 
+===Rest API===
+A new element of cpu_profile will be added to the API,
+and the VM element will extend to contain the new CPU profile property.
+
+
 === Benefit to oVirt ===
 When running a VM, the VM should run as an independent unit and should be affected by other VMs as little as possible.<BR>
 This feature enable the user to limit the CPU resources of a specific VM, this will ensure that in cases were several VMs are running on the same host, one VM will not cause performance decline in another VMs.<BR>
