@@ -46,7 +46,7 @@ NOTE: the qos object will contain all limits from all types.
 each view will show a separate table including its limit, in All we’ll have a generic limit text, taken from IQoS, and the QoSType.
 * [WiP] mockups to follow.
 
-==== Open Issue ====
+==== Open Issue - profiles ====
 2 options:
     1) Aggregate profiles: 'vnic_profiles' to change to 'profiles', and include a type field.
     2) Separate flow for each profile.
