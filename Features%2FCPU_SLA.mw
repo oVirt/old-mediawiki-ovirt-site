@@ -52,10 +52,11 @@ The Qos entered by the user will be converted into the libvirt period and quota 
 
 ===DB===
 The VM_STATIC will introduce a new field of CPU_PROFILE, this field will be a FK to the new table of CPU_PROFILES.
-CPU_PROFILES table will contain the following fields:
-id
-name
-qos(FK)
+CPU_PROFILES table will contain the following fields:<br>
+id (PK)<br>
+name<br>
+qos_id (FK)<br>
+cluster_id (FK)<br>
 
 === Benefit to oVirt ===
 When running a VM, the VM should run as an independent unit and should be affected by other VMs as little as possible.<BR>
