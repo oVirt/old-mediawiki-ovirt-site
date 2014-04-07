@@ -98,8 +98,8 @@ When executing Setup Networks, the VdsNetworkInterface custom properties member 
 Add a custom_properties field to api.xsd for the NIC type, and possibly for the Network type as well. There will also be a need to modify the Setup Networks command in rsdl_metadata.yaml, and maybe the add/update NIC commands as well. If the feature includes implementation of custom properties on logical networks, then the add/update network commands will need to be modified too. At last, mapping between the REST entities and the engine entities will have to be modified.
 
 ==== Backwards Compatibility ====
-As this is a 3.4 feature, all 3.3 (and down) cluster related entities should not be allowed (at the GUI level) to customize network properties.
-Engine needs to take special care at canDoAction to disallow custom network properties for 3.3 and below.
+As this is a 3.5 feature, all 3.4 (and down) cluster related entities should not be allowed (at the GUI level) to customize network properties.
+Engine needs to take special care at canDoAction to disallow custom network properties for 3.4 and below.
 
 === Testing ===
 
