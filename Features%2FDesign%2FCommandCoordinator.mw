@@ -58,6 +58,6 @@ Command entity DAO is the class object that deals with persisting the CommandEnt
 All the Async tasks need to work with the new code changes. Instead of commands being persisted into async tasks table, the command should be persisted in the new command_entities table.
 
 === Dependencies / Related Features ===
-[[http://www.ovirt.org/Features/Design/LiveMerge]]
+http://www.ovirt.org/Features/Design/LiveMerge
 
 [[Category:Feature]]
