@@ -1,4 +1,4 @@
-{{Feature|name=Gluster tasks management|modules=engine,gluster|version=3.4|status=In Progress}}
+{{Feature|name=Gluster tasks management|modules=engine,gluster|version=3.4|status=Complete| Requires=glusterfs > 3.5}}
 ==Summary==
 This feature provide the support for managing the asynchronous tasks on Gluster volumes.
 
@@ -12,7 +12,7 @@ This feature provide the support for managing the asynchronous tasks on Gluster 
 
 == Current Status ==
 
-* Status: Development in progress
+* Status: Complete
 * Last updated date: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 == Detailed Description ==
