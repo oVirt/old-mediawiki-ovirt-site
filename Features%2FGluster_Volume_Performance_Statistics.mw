@@ -10,7 +10,7 @@ This feature provides the support for monitoring and measuring the performance o
 == Current Status ==
 
 * Status: In Progress
-* Last updated date: Mon Oct 22 2012
+* Last updated date: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 == Detailed Description ==
 === Top ===
