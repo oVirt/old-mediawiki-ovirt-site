@@ -43,6 +43,9 @@ The Qos element will be defined in the DataCenter level of the system, and will 
 The user will configure the CPU limitation at the VM popup, at the advance Resource Allocation section: <br>
 [[File:cpuLimit.png]]
 
+The administrator will allocate CPU profiles to be used in the Cluster at the Cluster main tab, using the CPU Profile sub tab.
+[[CpuLimitClusterSubTab.png]]
+
 === Benefit to oVirt ===
 When running a VM, the VM should run as an independent unit and should be affected by other VMs as little as possible.<BR>
 This feature enable the user to limit the CPU resources of a specific VM, this will ensure that in cases were several VMs are running on the same host, one VM will not cause performance decline in another VMs.<BR>
