@@ -14,6 +14,7 @@ This feature provide the support for managing the asynchronous tasks on Gluster 
 
 * Status: Complete
 * Last updated date: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
+* Requires : glusterfs >= 3.5
 
 == Detailed Description ==
 
