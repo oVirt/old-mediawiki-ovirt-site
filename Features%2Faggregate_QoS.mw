@@ -18,7 +18,7 @@ Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is ma
 === Detailed Description ===
 ==== Engine Core ==== 
 * Introducing a new name space QoS, IQoS interface, and QoSType (network, cpu, storage).
-* Data Base: extend netwok_qos, rename it to qos, have a type field (QoSType), all other limits wil be added here.
+* Data Base: extend netwok_qos, rename it to qos, have a type field (QoSType), all other limits wil be added here (sparse matrix).
 
 ==== RESTful API ==== 
 * GET: api/capabilities/<version>/qos_type
