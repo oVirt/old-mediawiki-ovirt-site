@@ -37,7 +37,6 @@ To view the profile info, "Details" sub-menu of the Profiling menu needs to be c
 
 [[File:Vol-Profile-Details-Bricks.png]]
 [[File:Vol-Profile-Details-NFS.png]]
-
 * User can choose to export the data returned for the sampling interval using the "Export" button
 * User can refresh the profile data using the "Refresh" icon
 
