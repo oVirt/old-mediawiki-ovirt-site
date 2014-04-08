@@ -2,7 +2,7 @@
 
 The tests where done on a ovirt 3.3.1 installation. With 2 hypervisors enabled. 
 
-{| class="wikitable sortable"
+{| class="wikitable table"
 |-
 ! Test Case !! Result
 |-
