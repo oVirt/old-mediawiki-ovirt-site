@@ -84,6 +84,25 @@ and the VM element will extend to contain the new CPU profile property.
 </cpu_profile>
 </pre>
 
+<pre>
+<vm>
+    ...
+    ...
+    <memory>1073741824</memory>
+    <cpu>
+        <topology sockets="1" cores="1"/>
+        <architecture>X86_64</architecture>
+    </cpu>
+    <cpu_shares>0</cpu_shares>
+    <cpu_limit>25</cpu_limit>
+    <os type="other">
+        <boot dev="hd"/>
+    </os>
+    ...
+    ...
+</vm>
+</pre>
+
 === Benefit to oVirt ===
 When running a VM, the VM should run as an independent unit and should be affected by other VMs as little as possible.<BR>
 This feature enable the user to limit the CPU resources of a specific VM, this will ensure that in cases were several VMs are running on the same host, one VM will not cause performance decline in another VMs.<BR>
