@@ -248,3 +248,20 @@ Scheduler generate virtual NUMA topology
 To be continue ...
 
 ==== Interface and data structure in restful API ====
+* host NUMA resource
+<pre>
+/api/hosts/{host:id}/numas/{numa:id}
+</pre>
+**Supported actions - GET returns a specific NUMA node information, CPU list, total memory, map of distance with other nodes.
+* host NUMA statistics
+<pre>
+/api/hosts/{host:id}/numas/{numa:id}/statistics
+</pre>
+**Supported actions - GET returns a specific NUMA node statistics data, CPU usage, free memory.
+* vm NUMA resource
+<pre>
+/api/vms/{vm:id}/vnumas/{vnuma:id}
+</pre>
+**Supported actions: 
+***GET returns a specific virtual NUMA node information, CPU list, total memory.
+***POST attach a new virtual NUMA
