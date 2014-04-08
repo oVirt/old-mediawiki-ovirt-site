@@ -59,7 +59,9 @@ Add to VM object and view an indicator if a 'running' snapshot exists, for UI an
 <br>
 ''' UI '''<br>
 On Edit Vm, if 'running' snapshot exists, load it to the edit dialog.<br>
-for each field that is not immediately applicable, add an icon and tootip to mark that to the user.<br>
+Show warning to the user if anything changed that require restart.<br>
+Allow the user to choose if to apply now changes that can be applied.<br>
+<br>[[File:Edit_running_vm.png]]<br>
 <br>
 On VM main grid, add an icon notifying there is a running configuration for each vm with this field true.<br>
 <br>
@@ -67,6 +69,7 @@ On VM main grid, add an icon notifying there is a running configuration for each
 Add corresponding element for vm to notify for each vm if there is a running configuration for it.<br>
 Add a way to get the 'running' configuration for a VM,<br>
 this should probably be a url parameter on GET that will allow the user to get this configuration.<br>
+On update vm, allow user to decide if to apply changes now for applicable changes.
 
 === Open Issues ===
 * what about changing cd rom ? will it do live change cd, or like today?
