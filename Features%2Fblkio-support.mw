@@ -25,6 +25,8 @@ Status: design
 
 Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
+[https://bugzilla.redhat.com/show_bug.cgi?id=1085049 RFE Reference]
+
 == Detailed Description ==
 === QoS object ===
 Please refer to].
