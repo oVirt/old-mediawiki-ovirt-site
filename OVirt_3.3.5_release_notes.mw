@@ -93,6 +93,12 @@ will upgrade to latest 3.3.
 {{BZ|1078129}} - On DB upgrade, readonly user and client custom users losses permissions to db views<BR>
 {{BZ|1079287}} - Tasks are cleared while they are still running<BR>
 {{BZ|1080033}} - The RSDL documentation of the cloud-init hostname property should be host.address<BR>
+{{BZ|1071867}} - Tracker: oVirt 3.3.5 release<BR>
+{{BZ|1073464}} - [legacy upgrade 3.2->3.3] misleading information<BR>
+{{BZ|1076246}} - RHEV 3.3 - Live Migration fails with ERROR: insert or update on table "step" violates foreign key constraint "fk_step_job"<BR>
+{{BZ|1078215}} - Editing VM clears the VNIC profiles<BR>
+{{BZ|1082296}} - setupNetworks: nic with dhcp cannot be bonded<BR>
+{{BZ|1082506}} - Typo in encryptionvalidator.sh in RHEV > 3.2 prevents script from running<BR>
 
 ==VDSM==
 
