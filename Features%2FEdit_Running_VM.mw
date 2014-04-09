@@ -67,9 +67,8 @@ On VM main grid, add an icon notifying there is a running configuration for each
 <br>
 ''' REST API '''<br>
 Add corresponding element for vm to notify for each vm if there is a running configuration for it.<br>
-Add a way to get the 'running' configuration for a VM,<br>
-this should probably be a url parameter on GET that will allow the user to get this configuration.<br>
-On update vm, allow user to decide if to apply changes now for applicable changes.
+Add a URL-parameter to get and put vm, in order to be able to get the 'running' configuration for a VM,<br>
+and also in update vm, to allow the user to decide if to apply changes now for applicable changes.<br>
 
 === Open Issues ===
 * what about changing cd rom ? will it do live change cd, or like today?
