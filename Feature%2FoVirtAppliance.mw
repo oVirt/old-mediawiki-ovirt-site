@@ -14,7 +14,8 @@ The latter might be currently blocked by the missing functionality in the build 
 
 * Name: [[User:fabiand| Fabian Deutsch]]
 * Email: fabiand@redhat.com
-
+* Tracker https://bugzilla.redhat.com/show_bug.cgi?id=1053435
+* Gitweb: http://gerrit.ovirt.org/gitweb?p=ovirt-appliance.git
 
 === Current status ===
 
