@@ -130,9 +130,9 @@ kernel.numa_balancing = 1
 # I-2.3 Configuration of set VM's numatune and virtual NUMA topology from engine core to VDSM
 * I-2.1 Transfer data format of host NUMA nodes information
 <pre>
-'autoNumaBalancing': true/false
-'numaDistances': 'str'
-'numaNodes': {'<nodeIndex>': {'cpus': [int], 'totalMemory': 'str'}, …}
+'autoNumaBalancing': int
+'numaDistances': {'<nodeIndex>': [int], ...}
+'numaNodes': {'<nodeIndex>': {'cpus': [int], 'totalMemory': int}, …}
 </pre>
 
 * I-2.2 Transfer data format of host CPU statistics and NUMA nodes memory information
