@@ -77,7 +77,7 @@ The values of blockSize and count  will be passed to an appropriate gluster cli 
 This provides  write throughput of files on a specific brick/brick-wise
 
 
-==== Entities =====
+==== Entities ====
 
 File:TopClassDiagram.png
 
