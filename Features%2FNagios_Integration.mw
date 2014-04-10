@@ -109,7 +109,13 @@ quorum not met
 volume is reached maximum capacity
 '''DOWN''' – All nodes in cluster are down or all volumes in cluster are down. ( Need to close out : Whether a single node a cluster? )
 
+=== Nagios Dashboard and Trends ===
+
+Dashboard and trends tabs will be added to the oVirt-UI through ui-plugins approach.  All the alerts pushed from Nagios to oVirt will be shown in the dashboard. It will also show a summary of the entities currently being manged by oVirt like Hosts, Volumes and Bricks. Alerts will be shown for individual clusters as well.
+
 [[File:Ovirt-dashboard.png]]
+
+[[File:Ovirt_Monitoring_Trends.png]]
 
 == Nagios Specific ==
 
