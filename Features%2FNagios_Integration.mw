@@ -77,8 +77,9 @@ Cluster and volume state is determined by the state of its constituents.  Ovirt 
 On an external event, further action will be taken to update the status of Brick, Volume and Cluster.
 
 Brick is a logical entity, which provides basic storage facility for gluster-cluster. A brick can be in one of the following states
-'''UP''' – If Brick service is up and brick storage has not crossed the Critical threshold
-'''DOWN''' – If either Brick service is down or brick has consumed all the storage capacity of the brick
+
+* '''UP''' – If Brick service is up and brick storage has not crossed the Critical threshold
+* '''DOWN''' – If either Brick service is down or brick has consumed all the storage capacity of the brick
 
 Volume is treated as a logical entity that serves data, and it's state needs to reflect this purpose.
 Volume can have the following states
@@ -161,11 +162,7 @@ volume is reached maximum capacity
 *Nagios server will process the alerts/traps and invokes the event handler script to perform additional actions(SNMP traps, SMS, E-mail etc.).
 '''Alternatively check_logfiles plugin can be executed from an external program as a passive check''
 
-== Plugins ==
 
-*Nagios plugins needs to be developed to monitor specific scenarios of interest for Ovirt
-*Nagios/External applications will execute these plugins periodically(Active/Passive checks) and update the status of monitored resources/services/operations
- 
 === Resources to be Monitored ===
 
 *List of Physical Resources that need to be monitored :
@@ -195,10 +192,6 @@ volume is reached maximum capacity
 *#Geo-Replication(Gluster specific)
 
 * Alerting mechanisms needed for spilt-brain
-
-'''Below table has the details about the plugins that needs to be developed'''
-
-[[File:plugin_details.png]]
 
 == Detailed Design ==
 
