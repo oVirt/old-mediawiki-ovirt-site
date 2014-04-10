@@ -35,8 +35,9 @@ Style of entering mac pool ranges is hardly ideal, but it should suffice at firs
 == Implementation details ==
 [[File:scopedMacPoolManager_UML.png]]
 
-more detailed diagram
-[[File:scopedMacPoolManager_UML-details.png]]
+Click for more detailed diagram
+
+[[Media:scopedMacPoolManager_UML-details.png]]
 == DB details ==
 In DB was added column 'mac_pool_ranges' into table 'storage_pool'.
 
