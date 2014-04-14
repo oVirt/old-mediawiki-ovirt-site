@@ -100,8 +100,9 @@ cpu3 65777888 4559 21950279 1649220333 2216260 4 11027 0 16521086
 MOM use the VDSM HypervisorInterface
 using API.py <code>Global.getCapabilities</code> function to get host NUMA topology data
 <pre>
-'autoNumaBalancing': true/false
-'numaNodes': {'<nodeIndex>': {'memTotal': 'str'}, …}
+'autoNumaBalancing': int
+'numaDistances': {'<nodeIndex>': [int], ...}
+'numaNodes': {'<nodeIndex>': {'cpus': [int], 'totalMemory': int}, …}
 </pre>
 using API.py <code>Global.getStats</code> function to get host NUMA statistics data
 <pre>
