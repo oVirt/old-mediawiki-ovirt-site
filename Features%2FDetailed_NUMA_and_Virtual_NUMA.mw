@@ -194,7 +194,7 @@ Currently, we plan to provide below search functions about NUMA feature, each fi
 #* Virtual NUMA node number
 #* Virtual NUMA node vcpu count
 #* Virtual NUMA node total memory
-=== NUMA tune mode support enum value relation, the others support the numeric relation. ===
+NUMA tune mode support enum value relation, the others support the numeric relation.
 
 #* Modify <code>org.ovirt.engine.core.searchbackend.SearchObjects</code> to add new entry NUMANODES.
 #* Add <code>org.ovirt.engine.core.searchbackend.NumaNodeConditionFieldAutoCompleter</code> to provide NUMA node related filters auto completion; 
