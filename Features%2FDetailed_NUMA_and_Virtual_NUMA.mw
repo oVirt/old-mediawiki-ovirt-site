@@ -182,7 +182,7 @@ The above interfaces are defined with database design diagram
 *# Modify <code>VmStaticDAODbFacadeImpl</code> and <code>VmDAODbFacadeImpl</code> to add the map of new columns <code>numatune_mode</code> and <code>numa_node_count</code>. Run <code>VmStaticDAOTest</code> to verify the modification.
 
 * Related search engine change
-Currently, we plan to provide below search functions about NUMA feature, each field support the numeric relation of “>”, “<”, “>=”, “<=”, “=”, “!=”.
+:Currently, we plan to provide below search functions about NUMA feature, each field support the numeric relation of “>”, “<”, “>=”, “<=”, “=”, “!=”.
 # Search hosts with the below NUMA related fields:
 #* NUMA node number
 #* NUMA node cpu count
@@ -195,7 +195,7 @@ Currently, we plan to provide below search functions about NUMA feature, each fi
 #* Virtual NUMA node vcpu count
 #* Virtual NUMA node total memory
 ::NUMA tune mode support enum value relation, the others support the numeric relation.
-We will do the following modifications:
+:We will do the following modifications:
 # Modify <code>org.ovirt.engine.core.searchbackend.SearchObjects</code> to add new entry NUMANODES.
 # Add <code>org.ovirt.engine.core.searchbackend.NumaNodeConditionFieldAutoCompleter</code> to provide NUMA node related filters auto completion; 
 # Modify <code>org.ovirt.engine.core.searchbackend.SearchObjectAutoCompleter</code> to add new joins, one is  HOST joins NUMANODES on vds_id, the other is VM joins NUMANODES on vm_guid. 
@@ -203,6 +203,7 @@ We will do the following modifications:
 # Modify <code>org.ovirt.engine.core.searchbackend.VdsCrossRefAutoCompleter</code> to add auto complete  entry NUMANODES.
 
 * Cascade-delete
+*# When user remove a virtual NUMA node, the related rows in table <code>numa_node_cpu_map</code>, <code>vm_vds_numa_node_map</code>, <code>numa_node_distance</code>(maybe in future) and <code>numa_node</code> should be removed meanwhile.
 *#
 
 ==== Interface and data structure in engine core ====
