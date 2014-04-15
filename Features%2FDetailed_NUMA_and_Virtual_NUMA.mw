@@ -203,6 +203,7 @@ We will do the following modifications:
 # Modify <code>org.ovirt.engine.core.searchbackend.VdsCrossRefAutoCompleter</code> to add auto complete  entry NUMANODES.
 
 * Cascade-delete
+*#
 
 ==== Interface and data structure in engine core ====
 [[File:ARCH Class Diagram.png]]
