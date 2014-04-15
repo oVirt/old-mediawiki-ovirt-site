@@ -149,7 +149,7 @@ kernel.numa_balancing = 1
 </pre>
 
 ==== Interface between engine core and database (schema) ====
-# I-3.1 Schema modification of <code>vds_dynamic</code> table to include host's NUMA node distance information, NUMA node count and automatic NUMA balancing support flag.
+# I-3.1 Schema modification of <code>vds_dynamic</code> table to include host's NUMA node count and automatic NUMA balancing status.
 # I-3.2 Add table <code>vds_cpu_statistics</code> to include host cpu statistics information (system, user, idle cpu time and used cpu percentage)
 # I-3.3 Add table <code>vds_numa_node_statistics</code> to include host NUMA node statistics information (system, user, idle cpu time, used cpu percentage, free memory and used memory percentage) 
 # I-3.4 Schema modification of <code>vm_static</code> table to include NUMA type, numatune mode configuration and virtual NUMA node count
