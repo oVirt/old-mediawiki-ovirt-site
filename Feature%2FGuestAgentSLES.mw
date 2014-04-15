@@ -1,6 +1,6 @@
 
 == oVirt Guest Agent on SLE[S] (SUSE Linux Enterprise [Server]) ==
-
+{{Feature|name=oVirt Guest Agent on SLE(S)|modules=ovirt-guest-agent|status=Done|version=3.5.0}}
 === Summary ===
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
 
