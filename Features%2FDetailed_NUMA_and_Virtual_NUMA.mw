@@ -150,10 +150,12 @@ kernel.numa_balancing = 1
 
 ==== Interface between engine core and database (schema) ====
 # I-3.1 Schema modification of <code>vds_dynamic</code> table to include host's NUMA node count and automatic NUMA balancing status.
-# I-3.2 Add table <code>vds_cpu_statistics</code> to include host cpu statistics information (system, user, idle cpu time and used cpu percentage)
-# I-3.3 Schema modification of <code>vm_static</code> table to include numatune mode configuration and virtual NUMA node count
-# I-3.4 Add table <code>numa_node</code> to include host/vm NUMA node information (node index, total memory, cpu count of each node) and statistics information (system, user, idle cpu time, used cpu percentage, free memory and used memory percentage)
-# I-3.5 Add table <code>vm_vds_numa_node_map</code> to include the configuration of vm virtual NUMA nodes pinning to host NUMA nodes (this is a relationship table, store the map relations between <code>vm_numa_node</code> and <code>vds_numa_node</code>)
+# I-3.2 Add table <code>vds_cpu_statistics</code> to include host cpu statistics information (system, user, idle cpu time and used cpu percentage).
+# I-3.3 Schema modification of <code>vm_static</code> table to include numatune mode configuration and virtual NUMA node count.
+# I-3.4 Add table <code>numa_node</code> to include host/vm NUMA node information (node index, total memory, cpu count of each node) and statistics information (system, user, idle cpu time, used cpu percentage, free memory and used memory percentage).
+# I-3.5 Add table <code>vm_vds_numa_node_map</code> to include the configuration of vm virtual NUMA nodes pinning to host NUMA nodes (this is a nested relationship table, store the map relations between vm NUMA nodes and host NUMA nodes which are all in table numa_node).
+# I-3.6 Add table <code>numa_node_cpu_map</code> to include the cpu information that each host/vm NUMA node contains.
+# I-3.7 Add table <code>numa_node_distance</code> to include the distance information between the NUMA nodes.
 The above interfaces are defined with database design diagram
 [[File:Database_design_diagram.png]]
 * Related database scripts change:
