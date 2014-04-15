@@ -164,17 +164,16 @@ The above interfaces are defined with database design diagram
 *# Modify the function of <code>InsertVdsDynamic</code>, <code>UpdateVdsDynamic</code> in <code>vds_sp.sql</code> to add new columns <code>auto_numa_banlancing</code> and <code>vds_numa_node_count</code>.
 *# Modify the function of <code>InsertVmStatic</code>, <code>UpdateVmStatic</code> in <code>vms_sp.sql</code> to add two new columns <code>numatune_mode</code> and <code>vm_numa_node_count</code>.
 *# Modify <code>create_views.sql</code> to add new columns <code>numatune_mode</code> and <code>vm_numa_node_count</code> in view <code>vms</code>; add new columns <code>auto_numa_banlancing</code> and <code>vds_numa_node_count</code> in view <code>vds</code>.
-*# Modify <code>create_views.sql</code> to add new views, including view <code>vds_numa_node_view</code> which joins <code>vds_static</code>, <code>vds_numa_node</code> and <code>vds_numa_node_statistics</code>; view <code>vm_numa_node_view</code> which joins <code>vm_static</code>, <code>vm_numa_node</code>; view <code>vm_numatune_nodeset_view</code> which joins <code>vm_static</code>, <code>vm_numatune_nodeset</code> and <code>vds_numa_node</code>; view <code>vm_vds_numa_node_view</code> which joins <code>vm_numa_node</code>, <code>vm_vds_numa_node_map</code> and <code>vds_numa_node</code>.
-*# Modify <code>upgrade/post_upgrade/0010_add_object_column_white_list_table.sql</code> to add new columns <code>auto_numa_banlancing</code>, <code>numa_node_distance_list</code> and <code>vds_numa_node_count</code>.
-*# Add one script under <code>upgrade/</code> to create tables - <code>vm_numa_node</code>, <code>vds_numa_node</code>, <code>vm_numatune_nodeset</code>, <code>vds_numa_node_statistics</code>, <code>vds_cpu_statistics</code>, <code>vm_vds_numa_node_map</code> and add columns in table <code>vds_dynamic</code> and <code>vm_static</code>.
-*# Create the following indexes in the script mentioned in point 8:
-*#* Index on column <code>vm_guid</code> of table <code>vm_numa_node</code>
-*#* Index on column <code>vds_numa_node_count</code> of table <code>vds_dynamic</code>
-*#* Indexes on each of the columns <code>vm_guid</code> and <code>vds_numa_node_id</code> of table <code>vm_numatune_nodeset</code>
-*#* Indexes on each of the columns <code>vds_id</code> and <code>cpu_count</code> of table <code>vds_numa_node</code>
-*#* Indexes on each of the columns <code>vds_id</code> and <code>vds_numa_node_id</code> of table <code>vds_cpu_statistics</code>
+*# Modify <code>create_views.sql</code> to add new column <code>auto_numa_balancing</code> in view <code>vds_with_tags</code>.
+*# Modify <code>create_views.sql</code> to add new views, including view <code>vds_numa_node_view</code> which joins <code>vds_dynamic</code> and <code>numa_node</code>; view <code>vm_numa_node_view</code> which joins <code>vm_static</code> and <code>numa_node</code>.
+*# Modify <code>upgrade/post_upgrade/0010_add_object_column_white_list_table.sql</code> to add new columns <code>auto_numa_banlancing</code> and <code>vds_numa_node_count</code>.
+*# Add one script under <code>upgrade/</code> to create tables - <code>numa_node</code>, <code>vds_cpu_statistics</code>, <code>vm_vds_numa_node_map</code>, <code>numa_node_cpu_map</code>, <code>numa_node_distance</code> and add columns in table <code>vds_dynamic</code> and <code>vm_static</code>.
+*# Create the following indexes:
+*#* Index on column <code>vm_or_vds_guid</code> of table <code>numa_node</code>
+*#* Index on column <code>vds_id</code> of table <code>vds_cpu_statistics</code>
+*#* Index on column <code>numa_node_id</code> of table <code>numa_node_cpu_map</code>
+*#* Index on column <code>numa_node_id</code> of table <code>numa_node_distance</code>
 *#* Indexes on each of the columns <code>vm_numa_node_id</code> and <code>vds_numa_node_id</code> of table <code>vm_vds_numa_node_map</code>
-*# Modify <code>create_views.sql</code> to add new columns <code>auto_numa_balancing</code> and <code>numa_node_distance_list</code> in view <code>vds_with_tags</code>.
 
 * Related DAO change:
 *# Add <code>VdsNumaNodeDAO</code> and related implemention to provide data save, update, delete and kinds of queries in table <code>vds_numa_node</code> and <code>vds_numa_node_statistics</code>. Add <code>VdsNumaNodeDAOTest</code> for <code>VdsNumaNodeDAO</code> meanwhile.
