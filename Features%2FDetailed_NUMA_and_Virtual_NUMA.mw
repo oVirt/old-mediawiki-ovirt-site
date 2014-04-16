@@ -203,8 +203,9 @@ The above interfaces are defined with database design diagram
 # Modify <code>org.ovirt.engine.core.searchbackend.VdsCrossRefAutoCompleter</code> to add auto complete  entry NUMANODES.
 
 * Cascade-delete
-*# When user remove a virtual NUMA node, the related rows in table <code>numa_node_cpu_map</code>, <code>vm_vds_numa_node_map</code>, <code>numa_node_distance</code>(maybe in future) and <code>numa_node</code> should be removed meanwhile.
-*#
+*# When user remove a virtual NUMA node, the related rows in table <code>numa_node_cpu_map</code>, <code>vm_vds_numa_node_map</code>, <code>numa_node_distance</code>(maybe in future, currently no distance information for virtual NUMA node) and <code>numa_node</code> should be removed meanwhile.
+*# When user remove a vm, all the virtual NUMA nodes of this vm should be removed, follow above item to do the cascade-delete.
+*# When user remove a host, the related rows in table <code>numa_node_cpu_map</code>, <code>vm_vds_numa_node_map</code>, <code>numa_node_distance</code>,  <code>numa_node</code> and <code>vds_cpu_statistics</code> should be removed meanwhile.
 
 ==== Interface and data structure in engine core ====
 [[File:ARCH Class Diagram.png]]
