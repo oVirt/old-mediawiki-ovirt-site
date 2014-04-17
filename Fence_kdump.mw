@@ -52,10 +52,10 @@ fence_kdump will be configured.
 If required, other ''fence_kdump_send'' arguments can be set using '''fence_kdump_args''' option, for example:
  fence_kdump_args -p 7410 -f auto -i 5"
 
-Patches are managed using those bugs:
-* Fedora 20: [http://bugzilla.redhat.com/1078134 BZ1078134]
-* RHEL 6.6: [http://bugzilla.redhat.com/1083938 BZ1083938]
-* RHEL 7.1: [http://bugzilla.redhat.com/1086988 BZ1086988]
+Patches are managed using those RFEs:
+* Fedora 20: [https://bugzilla.redhat.com/1078134 BZ1078134]
+* RHEL 6.6: [https://bugzilla.redhat.com/1083938 BZ1083938]
+* RHEL 7.1: [https://bugzilla.redhat.com/1086988 BZ1086988]
 
 =Receiving fence_kdump notifications=
 There are currently several possible methods how to receive fence_kdump notification and detect that host is in kdump flow:
