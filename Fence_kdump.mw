@@ -4,34 +4,34 @@
 
 The kdump crash recovery mechanism provides way how to save kernel core dump to local or remote storage and reboot host afterwards so host will became operational asap. This is done by booting kdump kernel with specially configured initramfs from the context of regular kernel. 
 
-The kdump service support is contained in kexec-tools package:
-# Configuration of kdump behavior is defined in <tt>/etc/kdump.conf</tt>
-# The initramfs file can be created from <tt>/etc/kdump.conf</tt> file executing <tt>kdumpctl restart</tt> (Fedora 19) or <tt>service kdump restart</tt> (RHEL 6)
+The kdump service support is contained in '''kexec-tools''' package:
+# Configuration of kdump behavior is defined in ''/etc/kdump.conf''
+# The initramfs file can be created from ''/etc/kdump.conf'' file executing ''systemctl restart kdump'' (Fedora) or ''service kdump restart'' (RHEL)
 
 '''Attention:''' To enable kdump these two things are needed:
-# Main kernel has to be booted with <tt>crashkernel=</tt> parameter
+# Main kernel has to be booted with ''crashkernel'' parameter
 # kdump service has to be enabled and started
 
-'''Attention:''' On RHEL6 you can specify <tt>crashkernel=auto</tt> (kernel calculates needed memory size based on RAM size), but this doesn't work on Fedora (you have to manually set memory size).
+'''Attention:''' On RHEL6 you can specify ''crashkernel=auto'' (kernel calculates needed memory size based on RAM size), but this doesn't work on Fedora (you have to manually set memory size).
 
-Following options can be specified in in <tt>/etc/kdump.conf</tt> file:
-# Place where to store kernel core dump, currently it can be local, NFS, SSH or iSCSI (by default core dumps are saved to <tt>/var/crash</tt>)
-# Action that will be executed if core dump collection failed, currently it can be reboot(default), halt, poweroff, shell or dump_to_rootfs
+Following options can be specified in in ''/etc/kdump.conf'' file:
+# Place where to store kernel core dump, currently it can be local, NFS, SSH or iSCSI (by default core dumps are saved to ''/var/crash'')
+# Action that will be executed if core dump collection failed, currently it can be '''reboot'''(default), '''halt''', '''poweroff''', '''shell''' or '''dump_to_rootfs'''
 # Scripts/commands to be executed before/after core dump collection started/finished
 # Extra binaries to include into initramfs
 # And other not so important for oVirt options
 
 =About Fence kdump=
-Fence kdump is a method how to prevent fencing a host during its kdump process. The tool is packaged in fence-agents-kdump package and it contains two commands:
-* <tt>fence_kdump_send</tt>
+Fence kdump is a method how to prevent fencing a host during its kdump process. The tool is packaged in '''fence-agents-kdump''' package and it contains two commands:
+* ''fence_kdump_send''
 ** It is executed in kdump kernel and it sends message using UDP protocol to specified host each time interval to notify that host is still in kdump process
-* <tt>fence_kdump</tt>
+* ''fence_kdump''
 ** It is executed on a host that tries to detect if some other host is in kdump process by receiving messages from specified host
 
 The tool has following limitations that should be considered when using it in oVirt:
-# <tt>fence_kdump_send</tt> can send packet only to IPs specified as its command line argument (it cannot send packets to level2 broadcast address)
-# <tt>fence_kdump</tt> return success exit code only for one host at the time, messages from other hosts are ignored
-# Package fence-agents-kdump doesn't contain any scripts to integrate them into kdump kernel
+# ''fence_kdump_send'' can send packet only to IPs specified as its command line argument (it cannot send packets to level2 broadcast address)
+# ''fence_kdump'' return success exit code only for one host at the time, messages from other hosts are ignored
+# Package '''fence-agents-kdump''' doesn't contain any scripts to integrate them into kdump kernel
 
 =Fencing flow with fence kdump=
 Fence kdump will be inserted into current fencing flow just before hard fencing, details are in [[Automatic_Fencing#Automatic_Fencing_in_oVirt_3.5|Automatic Fencing in oVirt 3.5]].
@@ -55,21 +55,21 @@ If required, other ''fence_kdump_send'' arguments can be set using '''fence_kdum
 =Receiving fence_kdump notifications=
 There are currently several possible methods how to receive fence_kdump notification and detect that host is in kdump flow:
 # '''Using fencing proxy same way as for hard fencing flow'''
-#* On the fencing proxy host (selected host from same cluster/DC as Non Responsive host) we can execute fence_kdump using same API as other fencing agents and by analyzing exit code we will know if Non Responsive host is in kdump flow (exit code <tt>0</tt>) or not
+#* On the fencing proxy host (selected host from same cluster/DC as Non Responsive host) we can execute fence_kdump using same API as other fencing agents and by analyzing exit code we will know if Non Responsive host is in kdump flow (exit code ''0'') or not
 #* '''Problems'''
-#** Since fence_kdump_send can send notification only to predefined list of hosts, on each add/remove host from cluster we will need to update fence_kdump_nodes on each host in cluster and recreate initial ramding for kdump by executing <tt>kdumpctl restart</tt>
+#** Since ''fence_kdump_send'' can send notification only to predefined list of hosts, on each add/remove host from cluster we will need to update fence_kdump_nodes on each host in cluster and recreate initial ramding for kdump by restarting kdump service.
 #** Sending to notifications to huge list of hosts can be inefficient
 # '''Host, that engine is running on, will be used as fencing proxy'''
-#* We can execute fence_kdump using same API as other fencing agents on the same host as engine is running on and by analyzing exit code we will know if Non Responsive host is in kdump flow (exit code <tt>0</tt>) or not
+#* We can execute ''fence_kdump'' using same API as other fencing agents on the same host as engine is running on and by analyzing exit code we will know if Non Responsive host is in kdump flow (exit code ''0'') or not
 #* '''Problems'''
 #** API to execute fencing agents on the same host as engine is running is not currently implemented, but it's requested as RFE [https://bugzilla.redhat.com/show_bug.cgi?id=891085 BZ891085]
 #** UDP connection to port 7410 from all hosts to the host that engine is running on should be allowed
-#** fence_kdump executable can detect only one host in kdump flow at the same time, notifications received from other hosts then requested are ignored. fence_kdump is executed with host name or IP and timeout to wait for notification from the host. So on large clusters when fence_kdump detection will be required for multiple hosts at once and those hosts won't be non responsive due to kdump flow, the timeout before hard fencing is executed will depend on number of hosts to detect kdump on.
+#** ''fence_kdump'' can detect only one host in kdump flow at the same time, notifications received from other hosts then requested are ignored. ''fence_kdump'' is executed with host name or IP and timeout to wait for notification from the host. So on large clusters when fence_kdump detection will be required for multiple hosts at once and those hosts won't be non responsive due to kdump flow, the timeout before hard fencing is executed will depend on number of hosts to detect kdump on.
 # '''New fence_kdump notification listener executed inside engine will be implemented'''
 #* We can easily implement new listener that will be part of engine and which will receive all fence_kdump notification and will store them in some kind of the map, where key can be IP address of host and value the timestamp when last notification was received. Using this listener we can easily detect kdump flow on multiple hosts at the same time
 #* '''Problems'''
 #** UDP connection to port 7410 from all hosts to the host that engine is running on should be allowed
-#** May introduce security threat to engine since fence_kdump notification are sent using UDP
+#** May introduce security threat to engine since fence_kdump notification are sent using UDP protocol
 # '''New standalone fence_kdump notification listener will be implemented'''
 #* We can easily implement new standalone listener which will receive all fence_kdump notification and will store them in some kind of the map, where key can be IP address of host and value the timestamp when last notification was received. Using this listener we can easily detect kdump flow on multiple hosts at the same time
 #* '''Problems'''
@@ -77,16 +77,16 @@ There are currently several possible methods how to receive fence_kdump notifica
 #** We will need to implement API for communication between engine and standalone listener
 
 
-So far options 3) or 4) looks most promising with the note that 3) is easier to implement.
+We decided to implement new standalone listener running on the same host as engine (option 4).
 
 =Open questions/issues=
 # '''Does kdump support all network configuration we need (bridge, VLAN, ...)?'''
-#* Bridges are supported, I successfully tested fence_kdump with ovirtmgmt bridge
+#* Bridges are supported, I successfully tested fence_kdump with ''ovirtmgmt'' bridge
 #* According to [https://bugzilla.redhat.com/show_bug.cgi?id=752458 BZ752458] VLANs are supported
 # '''Fence_kdump uses port 7410 by default (can be changed using command line argument) which is reserved for Ionix Network Monitor. Should we used by default another port?'''
 # '''Fence_kdump configuration will be updated only on host redeploy. Is it enough?'''
 # '''Kdump configuration will need to be refreshed after network configuration is updated because network configuration to reach host for fence_kdump is stored inside kdump initial ramdisk'''
-#* Can be achieved by executing <tt>service kdump restart</tt>, but this call should be added to VDSM module which is responsible for network configuration.
+#* Can be achieved by restarting kdump service, but this call should be added to VDSM module which is responsible for network configuration.
 # '''We plan to update only fence_kdump options in kdump configuration, host admin will be responsible to configure other options and restart kdump service manually when done. In order to successfully report kdump status to engine this operation should be done only when host is in Maintenance.'''
 # '''Host from which fence_kdump message came is identified by IP address, but inside engine FQDN or IP of host is saved. Is it OK to resolve FQDN during kdump detection or do we need to save IP address of host in engine?'''
 # '''We are able only to allow access to fence_kdump port, but we cannot easily identify which IPs can access this port. This is task for administrator to modify firewall rules for enhanced security'''
