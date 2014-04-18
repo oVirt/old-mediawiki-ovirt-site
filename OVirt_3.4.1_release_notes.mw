@@ -1,13 +1,182 @@
 {{DISPLAYTITLE:oVirt 3.4.1 Release Notes}}
+The oVirt Project is preparing oVirt 3.4.1 candidate release for testing. This page is still a work in progress.
+
+oVirt is an open source alternative to VMware vSphere, and provides an awesome KVM management interface for multi-node virtualization.
+
+To find out more about features which were added in previous oVirt releases, check out the  [[oVirt 3.4 Release Notes]],  [[oVirt 3.3.5 release notes]], [[oVirt 3.2 release notes]] and [[oVirt 3.1 release notes]].
+For a general overview of oVirt, read [[oVirt 3.0 Feature Guide | the oVirt 3.0 feature guide]] and the [[about oVirt]] page.
 
 = Install / Upgrade from previous versions=
+
+== CANDIDATE RELEASE ==
+oVirt 3.4.1 candidate release will be available on 2014-04-22. In order to install it you've to enable oVirt 3.4 pre release repository.
+
+'''please wait for official announcement before trying to install it.'''
+
+ # yum localinstall http://resources.ovirt.org/pub/yum-repo/ovirt-release.noarch.rpm
+ # yum-config-manager --enable ovirt-3.4-prerelease
+
+If you're going to test  oVirt 3.4.1 development version, please add yourself to [[Testing/oVirt 3.4.1 testing]].
+
+== Fedora / CentOS / RHEL ==
+If you're installing oVirt 3.4.1 on a clean host you should read our [[Quick Start Guide]]
+
+If you're upgrading from oVirt 3.4.0 or from oVirt >= 3.3.2 you should just execute:
+ # yum update "ovirt-engine-setup*"
+ # engine-setup
+
+If you're upgrading from oVirt  <= 3.3.1 you must first upgrade to oVirt 3.3.5.
+Please see [[oVirt 3.3.5 release notes]] for upgrading instructions.
+
 
 = What's New in 3.4.1? =
 
 =Known issues=
+* Host deployment may fail on EL6 system due to a recent tuned regression ({{BZ|1069119}}, {{BZ|1069245}}). Please downgrade tuned to previous version while waiting for a new tuned package solving this issue.
 
 =Bugs fixed=
 ==oVirt Engine==
+{{BZ|953492}} - engine: cannot remove template due to failure in commands performed on vm's which are based on template (template is marked as shared)<BR>
+{{BZ|954344}} - [Backend][domain_scan] NPE when scanning for unregistered images on non-existent domain<BR>
+{{BZ|955429}} - displayNetwork must have an IP address on host<BR>
+{{BZ|975742}} - After power outage, storage reported as up while none of the hosts are up<BR>
+{{BZ|987814}} - [engine][neutron] Port leftover if hot-plug new vNIC fails<BR>
+{{BZ|987917}} - [oVirt] [glance] API version not specified in provider dialog<BR>
+{{BZ|1009774}} - [ALL_LANG][Admin Portal] Host tab -> Network Interfaces subtab ->Setup Host Networks ->  remove 'menu for' header<BR>
+{{BZ|1016636}} - [RHEVM][webadmin] remove VM network checkbox from manage network dialog<BR>
+{{BZ|1017826}} - [ALL_LANG][Admin_Portal][User_Portal] Header -> Guide -> Missing Language message unlocalized<BR>
+{{BZ|1031553}} - Port mirroring checkbox should be greyed out for update if that VNIC profile is located on VM<BR>
+{{BZ|1031778}} - The engine-manage-domains tool ignores the Kerberos servers from DNS when using -ldapServers<BR>
+{{BZ|1039468}} - Exception for corrupted ovf in export domain, is not sent to engine log.<BR>
+{{BZ|1045131}} - [engine-backend] Guaranteed RAM memory of a VM can be set to a higher value than the actual memory size<BR>
+{{BZ|1045656}} - Setup Host Networks dialog: Unnecessary "Add NIC to Bond" Item<BR>
+{{BZ|1045658}} - Setup Host Networks dialog: A certain scenario leads to a Bond with only one NIC<BR>
+{{BZ|1045681}} - Time Zone of Sri Lanka in "Initial Run" Section of "New Virtual Machine" and "Edit Virtual Machine" Configuration is WRONG<BR>
+{{BZ|1047345}} - cloud-init: gateway shouldn't be mandatory on run once window<BR>
+{{BZ|1047889}} - components do not have severity initialized on engine start<BR>
+{{BZ|1048735}} - [Admin Portal] Cluster: initialized = false does not change view<BR>
+{{BZ|1049080}} - VM update REST API call returns success instead of error on a wrongly formed xml<BR>
+{{BZ|1050840}} - [engine-backend] [RO disks] cannot change unplugged disk r/o status while VM is running<BR>
+{{BZ|1051297}} - setupNetworks: nic with dhcp cannot be bonded<BR>
+{{BZ|1052024}} - After a power outage two VMs marked as HA failed to start automatically, they were required to be started manually.<BR>
+{{BZ|1052151}} - Bookmarks do not work when the selected tree-node in the System tree is not "System"<BR>
+{{BZ|1052839}} - SQL exception after discovery when configuring the first ISCSI data domain<BR>
+{{BZ|1055403}} - [engine-backend] Attaching a disk as active to a running VM (hotplug), is not blocked for an IDE disk interface<BR>
+{{BZ|1055455}} - [engine-backend] engine asks for vdsManager of a host that was removed from the system<BR>
+{{BZ|1056777}} - [legacy upgrade 3.2->3.3] misleading information<BR>
+{{BZ|1057048}} - High availability parameters are not fully restored on import vm/template<BR>
+{{BZ|1057103}} - UI: Add new role permission drop below the end of the screen<BR>
+{{BZ|1058501}} - Allow to change the version name of a sub template<BR>
+{{BZ|1058618}} - Snapshotpane empty after autologout<BR>
+{{BZ|1058629}} - Autologout does not work in VM view (snapshot pane open)<BR>
+{{BZ|1058652}} - On create new network window the "Enter" key is not press "OK"<BR>
+{{BZ|1062603}} - [RHEVM] [webadmin] improve tooltip on subnet mask in setup networks<BR>
+{{BZ|1062717}} - Create engine-setup answer-file even if setup is aborted<BR>
+{{BZ|1063288}} - Import domain dialog empty selectboxes<BR>
+{{BZ|1063518}} - SSH injection via cloud-init UI doesn't work for root user<BR>
+{{BZ|1063852}} - [RHEVM] [webadmin] [network labels] cannot assign more than 5 labels to host network interface because there in no scrollbar<BR>
+{{BZ|1064373}} - [engine-setup] ascii check for ISO Domain name should be done immediately when defining domain name<BR>
+{{BZ|1064393}} - When creating new VM in advanced view "Start running on" is blank for the second cluster<BR>
+{{BZ|1064425}} - [RHEVM] [webadmin] weird dots in Setup Host Networks dialog<BR>
+{{BZ|1064431}} - [webadmin] UI is confusing for defining a network connection to a vm<BR>
+{{BZ|1064432}} - [RHEVM] [webadmin] [network labels] incorrect tool-tip display for logical networks assigned to host interface by labeling<BR>
+{{BZ|1065914}} - Remove ovirt-scheduler-proxy external module failed<BR>
+{{BZ|1066103}} - RHEVM user and admin portal logging attempt display<BR>
+{{BZ|1066461}} - [RHEVM] [webadmin] incorrect behavior on creating new VM when rhevm runs out of MAC addresses<BR>
+{{BZ|1066646}} - [oVirt] [Frontend] Blank template is available in New Pool dialog<BR>
+{{BZ|1066654}} - 'engine-backup --mode=restore' fails after engine-cleanup on postgres 8<BR>
+{{BZ|1066693}} - Every thirty minutes OnVdsDuringFailureTimer is shown in engine log<BR>
+{{BZ|1066827}} - [webadmin] incorrect behavior of manual refresh in Host Main Tab<BR>
+{{BZ|1066884}} - Please modify /sysprep file in /etc/ovirt-engine/sysprep folder.<BR>
+{{BZ|1067469}} - [Neutron integration] The Neutron network UUID should be the ID of the network on RHEV<BR>
+{{BZ|1067561}} - Run Once allows starting a ppc64 or Windows 8 VM with SPICE<BR>
+{{BZ|1068614}} - [webadmin] use all available space for network display in Setup Host Networks dialog<BR>
+{{BZ|1068763}} - Ambiguous hint for setting up SSH trusts [TEXT]<BR>
+{{BZ|1069096}} - sysprep timezone is not working when create pool from template.<BR>
+{{BZ|1069129}} - Under Even VM Count Distribution cluster policy minimal values for properties is 5<BR>
+{{BZ|1069131}} - 'engine-backup --mode=restore' fails after engine-cleanup on postgres 8<BR>
+{{BZ|1069562}} - When assigning permissions to user that belongs to a group indirectly, it does not inherit the group permissions<BR>
+{{BZ|1069605}} - No host interface configuration history data for unbounded host interfaces<BR>
+{{BZ|1069628}} - It's possible to set nonsense value of RAM size of vm/template.<BR>
+{{BZ|1069765}} - [oVirt] [Fix] Add sPAPR VLAN in the REST API<BR>
+{{BZ|1069768}} - rhevm-config is over writing the previous 'UserDefinedVMProperties' when used without a semicolon(;)<BR>
+{{BZ|1070260}} - Host stays in non-operation state after unreachable required network becomes accessible<BR>
+{{BZ|1070667}} - engine should report the interface name for which "Used Network resources of host xxxxxxxx [100%] exceeded defined threshold [95%]" message is applicable.<BR>
+{{BZ|1070704}} - CpuOverCommitDurationMinutes limited to a single digit value by regular expression in database scripts<BR>
+{{BZ|1070723}} - RHEVM Admin GUI [Text] - Configure - Roles -  "DataCenterAdmin" Description is not fully show<BR>
+{{BZ|1070835}} - Editing VM clears the VNIC profiles<BR>
+{{BZ|1071791}} - [engine-backend] [single-disk-snapshot] snapshot restore to only part of VM's disks will delete all other disks attached to the VM<BR>
+{{BZ|1071840}} - Not able to push more than one external event in 30 second using REST API<BR>
+{{BZ|1071894}} - Tooltip descriptions for Console Invocation are vague<BR>
+{{BZ|1071997}} - VM is not locked on run once<BR>
+{{BZ|1072023}} - Importing image from glance as a template should be blocked on DC level lower than 3.4<BR>
+{{BZ|1072409}} - Upgrade of Spice ActiveX plugin on IE11.<BR>
+{{BZ|1072471}} - [engine-backend] [single-disk-snapshot] [RO-disk] snapshot of RO are not included in the VM snapshots disks table<BR>
+{{BZ|1072529}} - [engine-backend] [RO-disk] [Single-disk-snapshot] NullPointerException for TryBackToAllSnapshotsOfVm when custom previewing a single RO disk snapshot<BR>
+{{BZ|1072773}} - Role UserInstanceManager has import_export_vm action group, but there is no such action in UserPortal.<BR>
+{{BZ|1072794}} - Incorrect error message when coming back from rollback<BR>
+{{BZ|1072918}} - [webadmin] Group 'user name' should be empty value In column 'user name' in user tab.<BR>
+{{BZ|1073019}} - [engine] imported template into domain with its original template causes the imported template to become subversion of the original tempalte<BR>
+{{BZ|1073035}} - [engine] Attempting to import a template that is a subversion of another template when the base does not exist fails with unclear error message<BR>
+{{BZ|1073043}} - [NetworkLabels] Networks with roles should be configured on hosts with 'DHCP' boot protocol<BR>
+{{BZ|1073070}} - Upgrading a hypervisor automatically puts it into an Up state<BR>
+{{BZ|1073235}} - When cache of users is refreshed wrong group id is stored for user group membership<BR>
+{{BZ|1073343}} - [engine-webadmin] [shared-DC] Target domains should be filtered by the source domain type (file/block) for live moving disks from 'Disks' main tab<BR>
+{{BZ|1073479}} - The Memory Size of a VM is editable when the VM is powered up.<BR>
+{{BZ|1073574}} - Disks tab crashes with SQL Exception<BR>
+{{BZ|1073896}} - [RHEVM] error displayed when fencing test fails is not meaningful<BR>
+{{BZ|1074258}} - Changing the label of error network doesn't reattach the network to the nic<BR>
+{{BZ|1074299}} - engine-config man page clarifications<BR>
+{{BZ|1074303}} - engine-backup has no man page<BR>
+{{BZ|1075043}} - Show only setup packages during upgrade check<BR>
+{{BZ|1075065}} - engine should report the interface name for which "Used Network resources of host xxxxxxxx [100%] exceeded defined threshold [95%]" message is applicable.<BR>
+{{BZ|1075074}} - There is no separation between creating a template and  subversion template<BR>
+{{BZ|1075209}} - [pki] create lock file accessible only to whom can actually enroll<BR>
+{{BZ|1075222}} - [oVirt] [Fix] SPICE proxy wrong in Pool<BR>
+{{BZ|1075294}} - With VNC and single pci enabled combination, rhevm3.4 failed to create guest-image vm from template<BR>
+{{BZ|1075500}} - VdsNotRespondingTreatment Job is not marked as finished.<BR>
+{{BZ|1075682}} - PRD34 - [RFE] REST API for  importing glance image as a template<BR>
+{{BZ|1075948}} - [WEBADMIN][TEXT] Fix popup text, when dashboard is accessed 1st time to more friendly one<BR>
+{{BZ|1075981}} - [RHEVM] [webadmin] inconsistent behavior of gateway field for VLAN with static IP configuration<BR>
+{{BZ|1075997}} - KeystoneAuthUrl description's example is missing the version<BR>
+{{BZ|1076046}} - engine-setup fails on upgrade, tries to install ovirt-engine-setup instread of rhevm-setup<BR>
+{{BZ|1076131}} - RHEVM Webadmin portal displays the vm migration completed time incorrectly<BR>
+{{BZ|1076246}} - RHEV 3.3 - Live Migration fails with ERROR: insert or update on table "step" violates foreign key constraint "fk_step_job"<BR>
+{{BZ|1077706}} - HA vms not starts on host with PM that restarted via engine<BR>
+{{BZ|1078093}} - Template search bar is not working<BR>
+{{BZ|1078137}} - [vdsm] cannot activate storage domain when iscsi multipath is configured on host<BR>
+{{BZ|1078553}} - After host power outage HA vms, failed to run first time because ACTION_TYPE_FAILED_VDS_VM_MEMORY<BR>
+{{BZ|1078875}} - Cannot create pool with pattern-based naming scheme for VMs<BR>
+{{BZ|1078955}} - [RHEVM] engine-upgrade-check  => Error: Package ovirt-engine-setup cannot be found<BR>
+{{BZ|1079072}} - The 'Password' field is not visible after selecting a Foreman host in the New Host window<BR>
+{{BZ|1079420}} - Missing "Family" string in Intel Haswell listing name<BR>
+{{BZ|1079469}} - [TEXT] taskcleaner.sh has dangerously misleading help text<BR>
+{{BZ|1079702}} - Not Responding Treatment is broken<BR>
+{{BZ|1079741}} - Cannot add a floating disk from webadmin<BR>
+{{BZ|1079834}} - Failed approved RHEVH for rhev3.2 host in rhevm av4 with Data Centers 3.2 + 3.2 Cluster<BR>
+{{BZ|1079992}} - [Admin Portal] Hot adding 'Dual mode rtl8139, VirtIO' network iface failure - VDSErrorException: Failed to HotPlugNicVDS<BR>
+{{BZ|1080033}} - The RSDL documentation of the cloud-init hostname property should be host.address<BR>
+{{BZ|1080230}} - External_id should be removed from user and group<BR>
+{{BZ|1080594}} - [host-deploy][node-upgarde] Pipe closed at the end of vdsm-upgrade<BR>
+{{BZ|1080961}} - HA VM not start on host with PM after manual fence<BR>
+{{BZ|1081204}} - [AAA] External user UI access unstable<BR>
+{{BZ|1081420}} - Missing fields in snmp notifications<BR>
+{{BZ|1081502}} - UI: Cluster dialog -  filter architecture based on the supported CPUs<BR>
+{{BZ|1081603}} - Cant Assign Quotas to external groups<BR>
+{{BZ|1081895}} - ClassCastException when trying to add a permission to admin@internal<BR>
+{{BZ|1082321}} - [engine-webadmin] Default cluster compatibility version isn't correlated to the DC compatibility version when using 'New DC Guide Me'<BR>
+{{BZ|1082800}} - [RFE] 3.4 product translation: translation update 2<BR>
+{{BZ|1083033}} - manage-domains traceback on empty password<BR>
+{{BZ|1083065}} - [RFE] RHEL 7 Guest Support<BR>
+{{BZ|1083528}} - [RHEVM] [welcome-screen]: Non English docs can not be opened from the welcome screen<BR>
+{{BZ|1083560}} - Disallow domains of mixed subtypes (block/file) on data centers with version < 3.4<BR>
+{{BZ|1083959}} - [Admin Portal] Hot adding 'Dual mode rtl8139, VirtIO' network iface failure - VDSErrorException: Failed to HotPlugNicVDS<BR>
+{{BZ|1084717}} - Pre-seeded Apache redirect directive ignored by engine-setup<BR>
+{{BZ|1084805}} - webadmin: wrong data in Alignment column of Disks sub-tab under Storage main-tab<BR>
+{{BZ|1085529}} - RHEV-M server appears to send the bad authentication to the AD server repeatedly, locking the account.<BR>
+{{BZ|1085712}} - [engine-backend] [external-provider] NullPointerException for AddVmTemplate during importing an image from glance as a template<BR>
+{{BZ|1085754}} - Cannot create template - not possible to submit the New Template dialog<BR>
+{{BZ|1086280}} - VM remains locked after failing to migrate<BR>
 
 ==VDSM==
 
