@@ -95,7 +95,22 @@ VdsNetworkInterface should be extended to include a custom properties member (ei
 When executing Setup Networks, the VdsNetworkInterface custom properties member would have to be added as a map to a network's "custom" entry, as described in the section on VDSM. If the feature is implemented so that VDSM reports network custom properties as part of getVdsCaps, then the member should be reconstructed in the VdsBrokerObjectBuilder class and persisted to the DB; otherwise, it should be persisted before the properties are passed to the VDSM (as is done today with network labels).
 
 ==== REST ====
-Add a custom_properties field to api.xsd for the NIC type, and possibly for the Network type as well. There will also be a need to modify the Setup Networks command in rsdl_metadata.yaml, and maybe the add/update NIC commands as well. If the feature includes implementation of custom properties on logical networks, then the add/update network commands will need to be modified too. At last, mapping between the REST entities and the engine entities will have to be modified.
+Add a custom_properties field to api.xsd for the NIC type:
+<pre>
+<host_nic href="/api/hosts/517b98ee-386c-4538-8f9c-b3216663fb20/nics/e8c1764e-28bb-42a6-aa95-76ce73e944e2" id="e8c1764e-28bb-42a6-aa95-76ce73e944e2">
+    <name>em1</name>
+    <mac address="84:2b:2b:9f:29:b0"/>
+    <ip address="10.35.7.23" netmask="255.255.254.0" gateway="10.35.7.254"/>
+    <boot_protocol>dhcp</boot_protocol>
+    .
+    .
+    .
+    <custom_properties>
+       <custom_property name="forward_delay" value="1500"/>
+    </custom_properties>
+</host_nic>
+</pre>
+and possibly for the Network type as well. There will also be a need to modify the Setup Networks command in rsdl_metadata.yaml, and maybe the add/update NIC commands as well. If the feature includes implementation of custom properties on logical networks, then the add/update network commands will need to be modified too. At last, mapping between the REST entities and the engine entities will have to be modified.
 
 ==== Backwards Compatibility ====
 As this is a 3.5 feature, its related GUI widgets should not be shown for hosts that are part of cluster whose compatibility version is lower. The engine backend needs to take special care at the canDoAction() method of SetupNetworksCommand to disallow custom network properties for 3.4 and below, to also block such operations via REST. Similar care should be taken when hosts are attempted to be moved from a >= 3.5 cluster to a < 3.5 cluster; since there is currently no infrastructure to send a Setup Networks command to VDSM upon cluster change, any non-empty custom properties on the host can't be wiped, therefore it would probably be best to block the operation.
