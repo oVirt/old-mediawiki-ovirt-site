@@ -1,5 +1,7 @@
 == Node Hosted Engine ==
 
+{{Feature|name=Node Hosted Engine|modules=node|version=3.5|status=In Progress}}
+
 === Summary ===
 This feature introduces the ability to setup a hosted engine on an ovirt-node instance
 
