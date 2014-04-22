@@ -1,0 +1,34 @@
+<!-- {{autolang|base=yes}} -->
+
+== Introduce Messaged communication to VDSM using JSON-RPC on top of various transport protocols ==
+
+{{Feature|name=Introduce Messaged communication to VDSM using JSON-RPC on top of various transport protocols|modules=vdsm, engine|status=In Development|version=3.5.0}}
+
+=== Summary ===
+Using a phased approach we are going to move VDSM to a point where messaging is the main communication model between the engine and VDSM as well as the numerous VDSM subsystems.
+
+=== Owner ===
+
+* Name: [[User:smizrahi| Saggi Mizrahi]]
+* Email: <smizrahi@redhat.com>
+
+=== Current status ===
+* Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]] <!--This is markup for the date on which the current page was last changed, do not change-->
+* Were currently in [[#Phase_1|Phase 1]]
+
+=== Phases ===
+
+==== Phase 0 ====
+The is how VDSM communicated with the engine before any messaging was implemented.
+
+[[File:jsonrpc_phase0.png]]
+
+The engine uses XML-RPC over HTTP to make API requests.
+
+==== Phase 1 ====
+[[File:jsonrpc_phase1.png]]
+=== See also  ===
+
+* [http://stomp.github.io STOMP]
+* [http://www.jsonrpc.org/ JSON-RPC]
+* [http://www.amqp.org/ AMQP]
