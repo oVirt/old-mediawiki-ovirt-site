@@ -71,7 +71,7 @@ I used following scenario to test SSH Soft Fencing for hosts without PM configur
 ## After a few minutes SSH Soft Fencing command will be executed, but the host will remain  Non Responsive
 
 = Automatic Fencing in oVirt 3.5 =
-Support for host kdump detection using fence_kdump will be inserted into current fencing flow just before hard fencing, details are in [[Fence_kdump#Fencing_flow_with_fence_kdump|Automatic Fencing in oVirt 3.5]].
+Support for host kdump detection using fence_kdump will be inserted into current fencing flow just before hard fencing, details are in [[Fence_kdump#Fencing_flow_with_fence_kdump|Fencing flow with fence_kdump]].
 
 = Troubleshooting =
 Check that you can run the fence agent from the command line. Use the fence script that corresponds with the fence type you are setting up.
