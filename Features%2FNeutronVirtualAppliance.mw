@@ -150,51 +150,21 @@ The neutron virtual appliance is provided as an image which contains:
 [http://openstack.redhat.com/Docs RDO documentation]
 
 === Testing ===
-==== Create a vm based on neutron-appliance image ====
-# Add new vm network named 'neutron' in the relevant data-center.
-# Edit the 'neutron' vnic profile to include custom properties "mac-spoof=true".
-# Import the neutron-appliance image as a template from the glance.ovirt.org repository.
-# Configure the VM with 2048MB memory and 2 vnics:
-## eth0 - connected to 'ovirtmgmt' (needs to communicate with the ovirt-engine and with compute nodes)
-## eth1 - connected to 'neutron' vm network
-
-==== Run the neutron server vm ====
-# Run the vm with cloud-init:
-## Set a root password.
-## Configure a static IP address for eth0
+# Create a vm based on neutron-appliance image
 # Connect to the vm (ssh/console)
   # . /root/keystonerc_admin
   # neutron net-list
 A list of existing networks should appear.
 
-==== Configure Neutron network provider on ovirt-engine ====
- # engine-config -s KeystoneAuthUrl=http://NEUTRON_SERVER_IP_ADDRESS:35357/v2.0/
-# Restart the ovirt-engine
-# Add external network provider with the following properties:
-# On the general left tab:
-## Type: OpenStack Network
-## Networking Plugin: Open vSwitch
-## Provider URL: http://NEUTRON_SERVER_IP_ADDRESS:9696
-## User name: neutron
-## Password: should be found by: 'grep CONFIG_NEUTRON_KS_PW /root/packstack-answers.txt' on the neutron server vm.
-## Tenant name: services
-Verify 'connectivity test' passes (by clicking the 'Test' button)
-# On the Agent Configuration left tab:
-## Bridge Mappings: vmnet:br-neutron
-## QPID:
-## Host: NEUTRON_SERVER_IP_ADDRESS
-## Port: 5672
-## Username: guest
-## Password: guest
-
-==== Install a Host with the network provider ====
-# Install host with external network provider by clicking the 'network provider' left tab
-# select the newly configured network provider and set:
-## bridge_mappings = vmnet:br-neutron
-# Click 'OK'
-# yum -y install vdsm-hook-macspoof
-# Configure 'neutron' network on the host
- # ovs-vsctl add-port br-neutron neutron
+# Add the neutron server vm into ovirt-engine and run it.
+# Add an external network provider with the vm address.
+# Discover the networks of the external provider.
+# Create a network 'testnet' on the provider.
+# Add a subnet for that network
+# Install a host with the external network provider
+# Add a vm 'test1' which has a vnic connected to 'testnet'
+# run vm 'test1' with cloud-init and configure its vnic for DHCP
+# Verify an IP address was obtained by the vm.
 
 ==== Test neutron services ====
 Specific scenarios will be added later, for now these test cases should be fine:
