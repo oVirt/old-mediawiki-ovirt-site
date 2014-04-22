@@ -34,6 +34,11 @@ The Server than parses the json data and calls the appropriate method on the bri
 
 [[File:jsonrpc_phase1.png]]
 
+==== Phase 2 ====
+'''in progress'''
+
+[[File:jsonrpc_phase2.png]]
+
 === See also  ===
 
 * [http://stomp.github.io STOMP]
