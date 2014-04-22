@@ -167,8 +167,7 @@ A list of existing networks should appear.
 # Verify an IP address was obtained by the vm.
 
 ==== Test neutron services ====
-Specific scenarios will be added later, for now these test cases should be fine:
-[[Features/OSN_Integration#Testing|Testing ovirt-neutron integration]]
+More scenarios can be taken from [[Features/OSN_Integration#Testing|Testing ovirt-neutron integration]]
 
 === Open Issues ===
 * Should the default quotas as configured on the neutron server should be increased ?
