@@ -57,7 +57,7 @@ The neutron appliance for ovirt-engine 3.5 is based on the Havana-RDO which uses
 :# Networking Plugin: Open vSwitch
 :# Provider URL: http://NEUTRON_SERVER_IP_ADDRESS:9696
 :# User name: neutron
-:# Password: should be found by: 'grep CONFIG_NEUTRON_KS_PW /root/packstack-answers.txt' on the neutron server vm.
+:# Password: should be found by: 'grep CONFIG_NEUTRON_KS_PW /root/packstack-answers*.txt' on the neutron server vm.
 :# Tenant name: services
 Verify 'connectivity test' passes (by clicking the 'Test' button)
 :* On the Agent Configuration left tab:
