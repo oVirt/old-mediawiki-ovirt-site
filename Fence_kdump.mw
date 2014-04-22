@@ -95,7 +95,7 @@ The new standalong listener will be implemented with these features:
 *# Select the most recent records from '''fence_kdump_messages''' table for all IP
 *# For each IP if record status is not '''FINISHED''' and ''record_timestamp + FenceKdumpFinishedTimeout < current timestamp'', write new record to '''fence_kdump_messages''' table with status '''FINISHED'''
 *Last thread will be scheduler to execute every 5 seconds and it will be used as a heartbeat status for engine, that fence_kdump listener is alive:
-*# It will store current timestamp into '''fence_kdump_messages''' table for IP ''fence_kdump_listener''
+*# It will store current timestamp into '''fence_kdump_messages''' table for IP value ''fence_kdump_listener''
 The listener will use two config values:
 *'''NextFenceKdumpTimeout'''
 **Defines minimum timeout allowed between one kdump flow finished and new one started for one host
