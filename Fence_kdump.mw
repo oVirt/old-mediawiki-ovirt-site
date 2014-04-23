@@ -187,22 +187,22 @@ Following config values are used:
 | rowspan="7" | engine
 |-
 |Display status of kdump configuration for host
-| Patches on review
+| style="background-color: lightgreen" | Done
 |-
 |Enable/disable kdump detection in Host Power Management configuration
-| Patches on review
+| style="background-color: lightgreen" | Done
 |-
 |Add  fence_kdump_send configuration to vdc_options
-| style="background-color: red" | 
+| Coding
 |-
 |Display warning when host kdump detection is enabled, but kdump not configured for host
 | style="background-color: red" | 
 |-
 |Implement standalone fence_kdump listener
-| style="background-color: red" | 
+| Coding
 |-
 |Add fence_kdump handling to fencing flow
-| style="background-color: red" | 
+| Coding
 |-
 | colspan="3" | &nbsp;
 |-
