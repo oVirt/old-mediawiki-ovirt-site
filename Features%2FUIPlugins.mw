@@ -253,7 +253,33 @@ UI plugin infrastructure maintains a common lifecycle to control execution of in
 |-
 | <code>{EntityType}SelectionChange</code>
 | <code><span style="color:magenta">arguments</span></code>
-| Called when item selection changes in the given main tab. Replace <code>{EntityType}</code> with name of desired entity. Refer to [[#Entity_type_reference|entity types]] for details on supported entity names and their object representations.
+| Called when item selection changes in the given main tab. Replace <code>{EntityType}</code> with name of desired entity. Refer to [[#Entity_type_reference|entity types]] for details on supported entities and their object representations.
+<pre>
+api.register({
+    DataCenterSelectionChange: function() {
+        var firstSelectedItem = (arguments.length > 0) ? arguments[0] : null;
+        var firstSelectedItemId = firstSelectedItem && firstSelectedItem.id;
+    }
+});
+</pre>
+|-
+| colspan="3" |
+=== System tree node selection ===
+|-
+| <code>SystemTreeSelectionChange</code>
+| <code><span style="color:green">object</span> selectedNode</code>
+| Called when node selection changes in the system tree. The <code>selectedNode</code> object contains two attributes: <code><span style="color:blue">string</span> type</code> and <code><span style="color:green">object</span> entity</code> (optional, only if selected node has an entity associated). Refer to [[#Entity_type_reference|entity types]] for details on supported entities and their object representations.
+<pre>
+api.register({
+    SystemTreeSelectionChange: function(selectedNode) {
+        // See SystemTreeItemType Java enum for all supported values
+        var nodeType = selectedNode.type;
+        // Defined only if selected node has an entity associated
+        var associatedEntity = selectedNode.entity;
+        var associatedEntityId = associatedEntity && associatedEntity.id;
+    }
+});
+</pre>
 |-
 | colspan="3" |
 === REST API integration ===
