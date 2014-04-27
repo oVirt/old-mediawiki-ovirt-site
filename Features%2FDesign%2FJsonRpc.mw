@@ -68,6 +68,10 @@ There is a possibility this phase would be skipped and we would just use a ready
 
 [[File:jsonrpc_phase4.png]]
 
+==== Phase 5 ====
+
+[[File:jsonrpc_phase5.png]]
+
 === See also  ===
 
 * [http://stomp.github.io STOMP]
