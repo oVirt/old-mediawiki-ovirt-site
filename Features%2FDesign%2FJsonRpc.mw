@@ -37,7 +37,14 @@ The Server than parses the json data and calls the appropriate method on the bri
 ==== Phase 2 ====
 '''in progress'''
 
+For this phase the main addition is protocol detection.
+Instead of having a dedicated port per protocol the protocol detector handles SSL negotiation and peeks at the stream. After detecting the protocol it passes the socket to the correct part of the system.
+
 [[File:jsonrpc_phase2.png]]
+
+==== Phase 3 ====
+
+[[File:jsonrpc_phase3.png]]
 
 === See also  ===
 
