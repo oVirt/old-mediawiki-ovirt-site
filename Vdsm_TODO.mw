@@ -69,7 +69,7 @@
 
 * lvm.PV.guid is devicemapper-owned piece of information; lvm has nothing to do with it, and jumps through [http://gerrit.ovirt.org/2940 hoops] to produce it. Instead, it should be produced by devicemapper and consumed directly by blockSD.
 
-* Define an API.VMState "enumeration" and use API.VMState.UP instead of the string 'Up'.
+* <strike>Define an API.VMState "enumeration" and use API.VMState.UP instead of the string 'Up'.</strike>
 
 * <strike>factor betterPopen and betterThreading out of vdsm. They deserve a pipy review under the names [https://pypi.python.org/pypi/cpopen cPopen] and [http://pypi.python.org/pypi/pthreading pthreading] respectively.
 https://bugzilla.redhat.com/show_bug.cgi?id=903246</strike>
