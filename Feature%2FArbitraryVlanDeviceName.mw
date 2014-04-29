@@ -44,11 +44,10 @@ Adding new column to vds_interface-
 name - 'base_interface',  type - varchar(50)
 
 ==== Affected Flows ==== 
-There are some engine flows that have to be fixed-
-<br>
-1. NetworkUtils has a lot of methods regarding vlans. Most of the methods were refactored and the signature of some of  them was changed.
-There are some flows that used those NetworkUtils methods. Since the signature was changed those flows needed some adjustments.
-2.  Using iface.getBaseInterface() and iface.getVlanId() instead of determining this values from the vlan device name.
+There are some engine flows that have to be fixed-<br>
+1. NetworkUtils has a lot of methods regarding vlans. Most of the methods were refactored and the signature of some of  them was changed.<br>
+There are some flows that used those NetworkUtils methods. Since the signature was changed those flows needed some adjustments.<br>
+2.  Using iface.getBaseInterface() and iface.getVlanId() instead of determining this values from the vlan device name.<br>
 <br>
 The effected flows are:<br>
 MigrateVmCommand<br>
