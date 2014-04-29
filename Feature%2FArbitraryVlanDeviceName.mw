@@ -50,19 +50,19 @@ There are some engine flows that have to be fixed-
 There are some flows that used those NetworkUtils methods. Since the signature was changed those flows needed some adjustments.
 2.  Using iface.getBaseInterface() and iface.getVlanId() instead of determining this values from the vlan device name.
 <br>
-The effected flows are:
-MigrateVmCommand
-RemoveNetworksByLabelParametersBuilder (DetachNetworksFromClusterCommand,  UnlabelNicCommand)
-DetachNetworkFromVdsInterfaceCommand
-DetachNetworkFromVdsInterfaceCommand
-DetachNetworkFromVdsInterfaceCommand
-LabelNicCommand
-RemoveBondCommand
-SetupNetworks
-UpdateNetworkToVdsInterfaceCommand
-VdsUpdateRunTimeInfo
-GetVlanParentQuery
-NetworkMonitoringHelper
+The effected flows are:<br>
+MigrateVmCommand<br>
+RemoveNetworksByLabelParametersBuilder (DetachNetworksFromClusterCommand,  UnlabelNicCommand)<br>
+DetachNetworkFromVdsInterfaceCommand<br>
+DetachNetworkFromVdsInterfaceCommand<br>
+DetachNetworkFromVdsInterfaceCommand<br>
+LabelNicCommand<br>
+RemoveBondCommand<br>
+SetupNetworks<br>
+UpdateNetworkToVdsInterfaceCommand<br>
+VdsUpdateRunTimeInfo<br>
+GetVlanParentQuery<br>
+NetworkMonitoringHelper<br>
 
 ==== User Experience ====
 There are no ux visible changes.
