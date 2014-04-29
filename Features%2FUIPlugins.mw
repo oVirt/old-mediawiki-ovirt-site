@@ -287,6 +287,7 @@ api.register({
 | <code>RestApiSessionAcquired</code>
 | <code><span style="color:blue">string</span> sessionId</code>
 | Called upon acquiring oVirt Engine [[REST-Api|REST API]] [[Features/RESTSessionManagement|persistent session]] after successful login. The <code>sessionId</code> maps to REST API session bound to current WebAdmin user, which means this value is shared between all plugins. The REST API session is acquired with timeout equal to oVirt Engine user session timeout. WebAdmin will try to keep the REST API session (and corresponding Engine user session) alive by sending heartbeat requests while user stays authenticated in WebAdmin UI.  WebAdmin won't close the session upon logout, as there might be other systems still working with it.
+<hr/> '''Note:''' the <code>sessionId</code> applies to oVirt Engine REST API service deployed at <code>/ovirt-engine/api</code>, not the legacy URL <code>/api</code>. UI plugins should always use <code>/ovirt-engine/api</code> to access the REST API service.
 |-
 | colspan="3" |
 === Cross-window messaging ===
