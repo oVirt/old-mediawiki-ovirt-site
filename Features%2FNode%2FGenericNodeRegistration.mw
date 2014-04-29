@@ -35,7 +35,7 @@ Increased agility, easier integration into other projects.
 
 === Documentation / External references ===
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
-The code for vdsm-reg and the [http://gerrit.ovirt.org/#/c/20815/ new Engine registration interface] describe the other end of the process.
+The code for vdsm-reg and the [[Features/HostDeployProtocol]] describe the other end of the process.
 
 Draft spec is:
 <pre>register:
