@@ -74,7 +74,17 @@ merged: http://gerrit.ovirt.org/#/c/14636
 * need verification.
 === Engine Core ===
 
+==== DB ====
+qos: added limit fields to qos table: 
+  max_throughput
+  max_read_throughput
+  max_write_throughput
+  max_iops
+  max_read_iops
+  max_write_iops
+
 ==== MLA Permissions ====
+
 === RESTful API ===
 Under discussion.
 * Basically in all places when setting a SD, a profile will be selected. neats like setting implicitly default profile will be added to ease user's life.
