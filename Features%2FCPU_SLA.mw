@@ -46,7 +46,7 @@ For representing the CPU qos we have three different approaches:<br />
 3. using bogomips
 :This is an unscientific measurement of CPU speed (http://en.wikipedia.org/wiki/BogoMips)
 
-The selected approach is the percentage (1).
+'''The selected approach is the percentage (1).'''
 
 === GUI ===
 The user will configure the CPU limitation at the VM popup, 
