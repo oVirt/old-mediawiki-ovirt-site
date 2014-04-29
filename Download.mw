@@ -96,8 +96,7 @@ $ gpg --export --armor FE590CB7 > ovirt-infra.pub
 
 Importing keys Automatically
 <kbd><pre>
-install ovirt-release
-install ovirt package using yum
+yum install http://resources.ovirt.org/pub/yum-repo/ovirt-release34.rpm
 </pre></kbd>
 <div class="alert alert-info">
 '''Important:''' yum will prompt sysadmin to acknowedge import of key, make sure key id is FE590CB7.
