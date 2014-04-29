@@ -12,7 +12,6 @@
 *** Max login time.
 *** Message of the day, default none
 *** Present welcome message.
-*** Authz user conversion regular expression, default (.*)
 ** Brute force
 *** # of seconds for each response - response should be no less than this value preferably no more, default 5.
 *** max # of login per minute
