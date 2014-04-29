@@ -3,9 +3,6 @@
 <!-- The actual name of your feature page should look something like: "Your feature name". Use natural language to name the pages. -->
 == Arbitrary Vlan Device Name ==
 
-=== Summary ===
-<!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
-
 === Owner ===
 * Name: [[User:alkaplan| Alona Kaplan]]
 * Email: <alkaplan@redhat.com>
