@@ -90,7 +90,8 @@ Please notice this is not  a recursive search - for principals (users) only the 
 Sync (AKA DbUserCacheManager)  is configured to run once in an hour (configurable by changing the config option of 'UserRefreshRate') <BR>
 # All users fetched from the database and are classified according to their authorization plugin.
 # For each authorization plugin, a search query structure that is based on the IDs of the relevant users is being constructed and invoked using the authorization extension, similar to the search flow. The search query is recursive - for each principal (user) the groups it is a member of are also being collected. 
-# For each returned principal it is checked if its data matches the data of the corresponding user obtained from the database - if there is a change, the principal is added to a list of principcals to update the database.
+# For each returned principal it is checked if its data matches the data of the corresponding user obtained from the database - if there is a change, the  user is added to a list of users to be updated at the database 
+# the database is updated with all the users that got changed.
 
 ==== UI ====
 
