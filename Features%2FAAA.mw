@@ -80,7 +80,7 @@ Base.InvokeCommands.Initialize - intializes the extension.
 Used API commands:
 #Authn.InvokeCommands.AUTHENTICATE_CREDENTIALS - perform credentials based authentication. Returns an Authentication record.
 #Authz.InvokeCommands.FETCH_PRINCIPAL_RECORDS - fetches a principal record based on the authentication record from the authorization extension.
-<BR<BR>
+<BR><BR>
 * Logout
 # The authentication extension is retrieved based on the command parameters.
 # If the authentication extension supports logout, logout is carried by the extension.
