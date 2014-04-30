@@ -1,5 +1,5 @@
 = Lower resolution support =
-
+{{Feature|name=Low Resolution Support|modules=webadmin,userportal|version=3.4|status=Released}}
 == Summary ==
 The web admin interface and to some degree also the user portal interface are not displayed properly in lower resolutions such as 1024x768. When resolutions are lower, the tab bar and action menu wrap overlapping other UI elements. This feature solves this issue by adding a scrollable tab bar for the tabs and a cascading menu bar for the action menu.
 
