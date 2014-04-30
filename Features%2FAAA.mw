@@ -43,12 +43,12 @@ ovirt-engine.conf:ENGINE_EXTENSION_PATH="${ENGINE_USR}/extensions.d:${ENGINE_ETC
 
 Each configuration file will contain the following entries: 
 <BR>
-ovirt.engine.extension.name - the name of the extension
-ovirt.engine.extension.class - the class implementing the extension
-ovirt.engine.extension.module - jboss module name containing the extension
-ovirt.engine.extension.enabled - whether the extension is enabled or not
-ovirt.engine.extension.sensitiveKeys - list of sensitive keys not to be logged.
-ovirt.engine.extension.provides - type of service that the extension provides (For example, in case of AAA - org.ovirt.engine.authentication, or org.ovirt.engine.authorization)
+# ovirt.engine.extension.name - the name of the extension
+# ovirt.engine.extension.class - the class implementing the extension
+# ovirt.engine.extension.module - jboss module name containing the extension
+# ovirt.engine.extension.enabled - whether the extension is enabled or not
+# ovirt.engine.extension.sensitiveKeys - list of sensitive keys not to be logged.
+# ovirt.engine.extension.provides - type of service that the extension provides (For example, in case of AAA - org.ovirt.engine.authentication, or org.ovirt.engine.authorization)
 <BR>
 In addition, specific entries per extension may be included.
 For authenticators (extensions dealing with authentication) the following keys also must be presented -
