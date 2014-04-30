@@ -1,4 +1,5 @@
 = UI Refresh Synchronization =
+{{Feature|name=Refresh Synchronization|modules=webadmin,userportal|version=3.4|status=Released}}
 
 == Summary ==
 Solve UI consistency issues related to the UI not being updated when certain actions/events happen.
