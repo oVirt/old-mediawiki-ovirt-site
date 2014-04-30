@@ -1,5 +1,8 @@
 == Summary ==
 
+{{Feature|name=VDSM for PPC64|modules=VDSM|version=3.4.0|status=Released}}
+
+
 This feature provides support for managing KVM on IBM POWER processors via oVirt.
 
 Qemu and Libvirt support for KVM on IBM POWER processors is already available
