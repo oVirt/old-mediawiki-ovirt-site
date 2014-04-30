@@ -1,4 +1,5 @@
 = Frontend class re-factoring effort =
+{{Feature|name=Frontend-Refactoring|modules=webadmin,userportal|version=3.3|status=Released}}
 
 == Summary ==
 This feature improves the modularity and maintainability of the Frontend class in the UI. This class is used for communication with the backend
