@@ -1,5 +1,7 @@
 == Summary ==
 
+{{Feature|name=Engine support for PPC64|modules=Engine, REST, VDSM, UI|version=3.4.0|status=Released}}
+
 Implement support in ovirt-engine to manage KVM on IBM POWER processor based hosts.
 
 == Owner ==
@@ -11,9 +13,7 @@ Implement support in ovirt-engine to manage KVM on IBM POWER processor based hos
 
 == Current status ==
 
-Status: Development in progress.
-
-Last updated: Sep 12, 2013
+Status: Released.
 
 == Important notes about ppc64 support ==
 
