@@ -4,6 +4,9 @@
 
 <!-- The actual name of your feature page should look something like: "Your feature name". Use natural language to [[How to make pages#Page naming|name the pages]].-->
 
+{{Feature|name=Engine|modules=[nil]|version=3.4|status=Partial}}
+<!-- from the Feature box, above   -->
+
 == Engine Cleanup (Work in progress) <!-- The name of your feature --> ==
 
 === Summary ===
@@ -21,8 +24,8 @@ Include you email address that you can be reached should people want to contact 
 * Email: TBD
 
 
-=== Current status ===
-(To be replaced to a link when a design page will be created)
+=== Present ===
+(To be replaced to a link when a design page is created)
 
  * Drop DB - works both on local and remote
  * Remove keystore (not perfect)
@@ -31,7 +34,7 @@ Include you email address that you can be reached should people want to contact 
  * non-interactive switch -u/--unattended, default is drop DB.
  * switch: -d/--dont-drop-db
 
-
+=== Absent ===
 Missing to comply with the purpose definition:
 ----------------------------------------------
  * Default mode is interactive - asking if to drop DB or not.
