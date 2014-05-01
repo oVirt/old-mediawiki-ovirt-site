@@ -3,6 +3,7 @@
 <!-- The actual name of your feature page should look something like: "Your feature name". Use natural language to name the pages. -->
 
 == Hotplug/Hotunplug of Network Interface Cards ==
+{{Feature|name=Hotplug/Hotunplug of Network Interface Cards|modules=vdsm,engine,api|version=3.1|status=Released}}
 
 === Summary ===
 Allow to hot plug and unplug a NIC to/from running guest. 
