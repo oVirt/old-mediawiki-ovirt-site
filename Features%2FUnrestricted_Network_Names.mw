@@ -1,4 +1,5 @@
 = Unrestricted Network Names =
+{{Feature|name=Unrestricted Network Names|modules=engine,api|version=3.6|status=Proposed}}
 
 === Summary ===
 Let users give any name to their network
@@ -8,10 +9,6 @@ Let users give any name to their network
 * Name: [[User:Danken| Dan Kenigsberg]]
 
 * Email: <danken@redhat.com>
-
-== Current status ==
-* To be proposed for oVirt-3.5
-* Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 == Detailed Description ==
 
