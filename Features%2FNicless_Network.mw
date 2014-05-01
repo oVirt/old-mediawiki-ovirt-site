@@ -1,4 +1,5 @@
 == Nic-less Network ==
+{{Feature|name=Nic-less Network|modules=engine,api|version=|status=Dormant}}
 
 === Summary ===
 Create an in-host-only network, with no external communication
@@ -8,10 +9,6 @@ Create an in-host-only network, with no external communication
 * Name: [[User:Danken| Dan Kenigsberg]]
 
 * Email: <danken@redhat.com>
-
-=== Current status ===
-* Not yet scheduled to a specific release
-* Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 === Detailed Description ===
 In oVirt, after a VM network is defined in the Data Center level and added to a cluster, it needs to be implemented on each host. All VM networks are (currently) based on a Linux software bridge. The specific implementation controls how traffic from that bridge reaches the outer world. For example, the bridge may be connected externally via <tt>eth3</tt>, or <tt>bond3</tt> over <tt>eth2</tt> and <tt>p1p2</tt>. This feature is about implementing a network with no network interfaces (NICs) at all.
