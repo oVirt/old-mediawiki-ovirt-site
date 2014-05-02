@@ -45,6 +45,10 @@ See [[oVirt 3.4.0 Release Notes]] for upgrading from previous versions.
 If you're going to test  oVirt 3.4.1 development version, please add yourself to [[Testing/oVirt 3.4.1 testing]].
 
 == Fedora / CentOS / RHEL ==
+Prior to upgrading or new installation, you should import the new gpg key which is used to sign the packages:
+ # wget -O ./RPM-GPG-ovirt http://resources.ovirt.org/pub/keys/RPM-GPG-ovirt
+ # rpm --import ./RPM-GPG-ovirt
+
 If you're installing oVirt 3.4.1 on a clean host you should read our [[Quick Start Guide]]
 
 If you're upgrading from oVirt 3.4.0 or from oVirt >= 3.3.2 you should just execute:
@@ -53,7 +57,6 @@ If you're upgrading from oVirt 3.4.0 or from oVirt >= 3.3.2 you should just exec
 
 If you're upgrading from oVirt  <= 3.3.1 you must first upgrade to oVirt 3.3.5.
 Please see [[oVirt 3.3.5 release notes]] for upgrading instructions.
-
 
 = What's New in 3.4.1? =
 
