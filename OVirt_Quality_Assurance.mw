@@ -33,16 +33,16 @@ Everyone is welcome to join the #ovirt IRC channel, especially if you're thinkin
 You can also join oVirt users mailing list, where quality assurance-related topics are marked using [QE] in subject.
 
 == Next releases  ==
-* 3.3.4: 
-** {{BZ|1064462}} Tracker: oVirt 3.3.4 release
-** [[OVirt_3.3.4_release_notes|oVirt 3.3.4 release notes]]
-** [[Testing/Ovirt_3.3.4_testing|oVirt 3.3.4 testing]]
-* 3.3.z:
-** [[OVirt_3.3.z_release-management]]
-* 3.4.0:
-** {{BZ|1024889}} Tracker: oVirt 3.4.0 release
-** [[OVirt_3.4_release-management]]
-** [[OVirt_3.4_Release_Notes|oVirt 3.4 release notes]]
+* 3.4.1: 
+* Release notes: [[oVirt 3.4.1 release notes]]
+* {{BZ|1080483}} - Tracker: oVirt 3.4.1 release
+* [[Testing/oVirt 3.4.1 testing]]
+* 3.4.z:
+** [[OVirt_3.4.z_release-management]]
+* 3.5.0:
+** {{BZ|1073943}} - Tracker: oVirt 3.5 release
+** [[OVirt_3.5_release-management]]
+** [[OVirt_3.5_Release_Notes|oVirt 3.5 release notes]]
 
 == Notes: ==
 This page has been created following https://fedoraproject.org/wiki/QA as a model
