@@ -1,7 +1,6 @@
 <!-- {{autolang|base=yes}} -->
 
 == Neutron Virtual Appliance ==
-
 {{Feature|name=Neutron Virtual Appliance|modules=network|status=Development|version=3.5.0}}
 
 === Summary ===
