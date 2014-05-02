@@ -18,6 +18,7 @@ If you're willing to participate, please add yourself to the table below:
 ! Name !! part tested !!Storage !! Networking !! Distribution !! Bugs
 |-
 | [[User:SandroBonazzola|SandroBonazzola]]  || upgrade from 3.4.0 || NFS  || basic || Fedora 19 || {{BZ|1093721}}
-|  -  || - || - || -  || - || -
+|-
+| - || - || -  || - || - || -
 |-
 |}
