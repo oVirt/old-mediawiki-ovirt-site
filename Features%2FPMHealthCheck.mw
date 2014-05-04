@@ -17,6 +17,8 @@
 
 === Detailed Description ===
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
+The requirement is to add a periodic health check of all Hosts with confifigured PM <br>
+The schedulted job will try to send a status command to all PM enabled hosts periodically (once a hour by default) and raise alerts for failed operations
 
 === Benefit to oVirt ===
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
