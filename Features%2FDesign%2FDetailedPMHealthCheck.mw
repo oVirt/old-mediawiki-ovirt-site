@@ -21,6 +21,10 @@ Email: emesika@redhat.com<br>
 <!-- Provide the details of the feature. What is it going to include. See the sections below. -->
 <!-- New entities and changes in existing entities. -->
 
+Add a class PmHealtCheckManager to handle the schedualed check<br>
+This class will 
+   Read the related configuration values(see Configuration) and if feature is enabled reads the PMHealtCheckIntervalInSec configurationvariable.
+   Create the Quartz job in it initialize() method which will be called from backend::initialize()
 
 == CRUD ==
 
