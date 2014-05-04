@@ -2,8 +2,8 @@
 
 == Summary ==
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
-The requirement is to add a periodic health check of all Hosts with confifigured PM<br>
-The schedulted job will try to send a status command to all PM enabled hosts periodically (once anhour by default) and raise alerts for failed operations
+The requirement is to add a periodic health check of all Hosts with configured PM<br>
+The scheduled job will try to send a status command to all PM enabled hosts periodically (once an-hour by default) and raise alerts for failed operations
 
 == Owner ==
 <!--This should link to your home wiki page so we know who you are-->
@@ -21,7 +21,7 @@ Email: emesika@redhat.com<br>
 <!-- Provide the details of the feature. What is it going to include. See the sections below. -->
 <!-- New entities and changes in existing entities. -->
 
-Add a class PmHealtCheckManager to handle the schedualed check<br>
+Add a class PmHealtCheckManager to handle the scheduled check<br>
 This class will 
    Read the related configuration values(see Configuration) and if feature is enabled reads the
    PMHealtCheckIntervalInSec  configurationvariable.   
