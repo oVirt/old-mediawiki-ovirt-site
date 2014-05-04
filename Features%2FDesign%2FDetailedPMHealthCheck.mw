@@ -7,12 +7,10 @@ The schedulted job will try to send a status command to all PM enabled hosts per
 
 == Owner ==
 <!--This should link to your home wiki page so we know who you are-->
-* Feature owner: [[User:emesika| Eli Mesika]]
-:* Engine Component owner: [[User:emesika| Eli Mesika]]
-:* QA Owner: [[User:pstehlik| Pavel Stehlik]] 
-
-<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
-* Email: emesika@redhat.com
+Feature owner: [[User:emesika| Eli Mesika]]<br>
+Engine Component owner: [[User:emesika| Eli Mesika]]<br>
+QA Owner: [[User:pstehlik| Pavel Stehlik]] <br>
+Email: emesika@redhat.com<br>
 
 == Current status ==
 * Target Release: 3.5
