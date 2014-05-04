@@ -72,7 +72,7 @@ In 3.5, the user may be able to clear those alerts as any other alerts on the sy
 See [https://bugzilla.redhat.com/show_bug.cgi?id=1090808 Dismiss Alerts]
 
 == Enforcement ==
-
+Code should verify that PM Health Check cycle can not be run while another cycle is active, this is due the fact that in a general elecricity failure or shutdown, looping over all hosts and waiting for the communication timeouts may be time consuming
 
 == Dependencies / Related Features and Projects ==
 <!-- What other packages (RPMs) depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  -->
