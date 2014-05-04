@@ -27,9 +27,11 @@ This class will
    Create the Quartz job in it initialize() method which will be called from backend::initialize()
 
 == CRUD ==
-
+N/A
 === DAO ===
+N/A
 === Metadata ===
+N/A
 
 == Configuration ==
 
