@@ -1,4 +1,6 @@
 == Summary ==
+{{Feature|name=Cisco UCS integration|modules=engine,network,vdsm|status=Partially Released|version=3.4.0}}
+
 Cisco's Unified Computing System (UCS) is a solution for managing a lot of datacenter aspects, from blade's firmware to network cards number and addresses on the hosts and the VMs. It has a management service (UCS-M) that allows the administrator to easily set up configurations to apply to the hardware of the datacenter.
 
 UCS hosts have network cards that can expose N pseudo physical Network Interface Cards, optionally (and usually) as ethernet cards. Those pseudo ethernet cards are called Virtual Functions (VFs) and when they are not configured they are blank devices, i.e., they lack mac address and any connectivity to the network fabric. One particular benefit of the virtual functions is that they can be connected to the guest's operating system offering a superior network performance, since the Host OS is not involved and parts are hardware accelerated.
@@ -32,7 +34,7 @@ For the hook to work, one must manually specify the VM custom properties with
 This implies that the administrator must manually copy the port profile names from UCS-M and the MAC addresses assigned by the engine and write the above dictionary.
 
 == Current status ==
-* Design.
+Level IV completed and released.
 
 == Integration levels ==
 Considering the current level of integration (using the current vdsm-hook-vmfex) as level 3. The proposed levels of this feature are:
@@ -41,9 +43,39 @@ Considering the current level of integration (using the current vdsm-hook-vmfex)
 
 This level of integration consists of reworking the existing vdsm-hook-vmfex so that the oVirt administrator can set up the integration at the guest device level instead of at the VM level. The advantage of this is that only the port profile will need to be specified (since the MAC address is already part of the VM's NIC properties given by the Engine).
 
-Things to be done:
+Things done:
 * [http://gerrit.ovirt.org/#/c/22559/ Filter out unused virtual functions from being reported as nics].
 * [http://gerrit.ovirt.org/#/c/22529/ Clone and refactor the current hook to use custom device properties and to run "before_device_create" and "before_device_hotplug"].
+
+You can get the hook resulting from this integration level [http://plain.resources.ovirt.org/releases/3.4/rpm/el6/noarch/vdsm-hook-vmfex-dev-4.14.6-0.el6.noarch.rpm here]
+
+==== Installation ====
+* Use the engine-config to append the appropriate custom property:
+
+  sudo engine-config -s CustomDeviceProperties=
+  '{type=interface;prop={vmfex=^[a-zA-Z0-9_ ---]+$}}'
+
+* Verify that the vmfex_dev custom device propertes were properly added:
+	sudo engine-config -g CustomDeviceProperties
+
+==== Usage ====
+* Define an oVirt vNIC profile and set one of its custom properites to "vmfex" with the value of the name of UCS port profile. For instance:
+       vmfex: myPortProfileId
+* Attach the oVirt vNIC profile to a VM vNIC. When the VM runs, the vNIC with  the vmfex custom device, the xml definition of which might originally look  like:
+<pre><interface type='bridge'>
+    <mac address='<mac>'/>
+    <model type='virtio'/>
+    <source bridge='<logical network>'/>
+</interface></pre>
+will be transformed into:
+<pre><interface type='network'>
+    <mac address='<mac>'/>
+    <source network='direct-pool'/>
+    <virtualport type='802.1Qbh'>
+        <parameters profileid='<Port Profile id>'/>
+    </virtualport>
+    <model type='virtio'/>
+</interface></pre>
 
 === Level V: "The Network provider strikes back" ===
 
