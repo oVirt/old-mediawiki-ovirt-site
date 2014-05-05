@@ -73,10 +73,25 @@ When you're super-sure you want to use default storagePool, you can use
 * you can use same MACs on multiple data centers. Currently no checks are done to find out whether pool definition for multiple data centers overlap or not. So if you define your pools in that way, that mac ranges overlaps, one MAC address can be used multiple times. I'd observe that as an error, since it's easier to stick with one global pool with allowed duplicates.
 
 === Gui ===
-Style of entering mac pool ranges is hardly ideal, but it should suffice at first.
+<strike>Style of entering mac pool ranges is hardly ideal, but it should suffice at first.</strike>
 
+* 'private' pool are manipulated with from datacenter dialog, where also will be created new tab for pool.
+* shared pools are managed from app config, where will be added new tab for pools. Private pools can be viewed here also, but not changed. Here you can find out, in which places is shared pool used.
 
-[[File:MacPoolRangesOnDataCenter.png]]
+Below is three screenshots. 'New/edit mac pool pane' is shared component used both in new tabs of datacenter dialog and systemconfig, which are remaining two screenshots.
+
+[[File:newMacPoolPane.png]]
+
+shared component for editing pool properties
+
+[[File:existingPools_newSharedPool.png]]
+
+component for viewing all existing pools and for creating new shared ones.
+
+[[File:datacenterDialog.png]]
+
+component for specifying datacenter related pool or for linking data center to shared pool
+
 
 
 === sample flow ===
