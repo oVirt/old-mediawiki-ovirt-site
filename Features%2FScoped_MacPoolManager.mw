@@ -85,7 +85,8 @@ Lets say, that we've got one data center. It's not configured yet to have its ow
 What happens when we allocated mac in data-center related pool, then remove it, and now we want to put that mac back? As said, on pool removal its content is moved elsewhere. Next, when MAC is about to be returned to the pool, the request goes like: "give me pool for this virtual machine, and whatever pool it is, I'm returning this MAC to it.". And since '''own''' pool for this datacenter(related to given virtual machine) is no more, the <strike>global pool</strike>'''shared pool''' is returned instead, and that's the pool where mac move to from recently deceased scope pool, so mac to be release awaits here and will be properly released. Clients of ScopedMacPoolManager do not know which pool exactly they're talking to. Decision, which pool is right for them, is done behind the scenes upon their identification (I want pool for this logical network). '''For the data center scoped mac pool manager, there is always sole pool to be used for this data center'''
 
 === DB details ===
-In DB was added column 'mac_pool_ranges' into table 'storage_pool'.
+<strike>In DB was added column 'mac_pool_ranges' into table 'storage_pool'.</strike>
+[[File:erd]]
 
 
 [[Category:Api]]
