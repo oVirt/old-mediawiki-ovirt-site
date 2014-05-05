@@ -193,13 +193,13 @@ Following config values are used:
 | style="background-color: lightgreen" | Done
 |-
 |Add  fence_kdump_send configuration to vdc_options
-| Coding
+| Patch on review
 |-
 |Display warning when host kdump detection is enabled, but kdump not configured for host
 | style="background-color: red" | 
 |-
 |Implement standalone fence_kdump listener
-| Coding
+| Patch on review
 |-
 |Add fence_kdump handling to fencing flow
 | Coding
