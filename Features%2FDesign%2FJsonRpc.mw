@@ -5,7 +5,8 @@
 {{Feature|name=Introduce Messaged communication to VDSM using JSON-RPC on top of various transport protocols|modules=vdsm, engine|status=In Development|version=3.5.0}}
 
 === Summary ===
-Using a phased approach we are going to move VDSM to a point where messaging is the main communication model between the engine and VDSM as well as the numerous VDSM subsystems.
+Using a phased approach we are going to a point where messaging is the main communication model between the engine and VDSM as well as the numerous VDSM subsystems.
+The biggest difference between current implementation and the goal is communication model change from synchronous http to asynchronous tcp. Xml message format is going to be replaced with json which will reduce parsing time.
 
 === Owner ===
 
