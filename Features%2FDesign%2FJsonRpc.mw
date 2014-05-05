@@ -85,4 +85,4 @@ Hopefully some subsystems are even running in their own processes.
 * [http://www.amqp.org/ AMQP]
 
 === Attachments ===
-* [[File:schemas.dia.gz|schema]] ([https://wiki.gnome.org/Apps/Dia/ dia] file containing the schema sources)
+* [[File:schemas.tgz|schema]] ([https://wiki.gnome.org/Apps/Dia/ dia] file containing the schema sources)
