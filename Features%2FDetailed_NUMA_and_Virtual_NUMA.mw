@@ -102,11 +102,11 @@ using API.py <code>Global.getCapabilities</code> function to get host NUMA topol
 <pre>
 'autoNumaBalancing': int
 'numaNodeDistance': {'<nodeIndex>': [int], ...}
-'numaNodes': {'<nodeIndex>': {'cpus': [int], 'totalMemory': int}, …}
+'numaNodes': {'<nodeIndex>': {'cpus': [int], 'totalMemory': 'str'}, …}
 </pre>
 using API.py <code>Global.getStats</code> function to get host NUMA statistics data
 <pre>
-'numaNodeMemFree': {'<nodeIndex>': {'memFree': int, 'memPercent': int}, …}
+'numaNodeMemFree': {'<nodeIndex>': {'memFree': 'str', 'memPercent': int}, …}
 'cpuStatistics': {'<cpuId>': {'nodeIndex': int, 'cpuSys': 'str', 'cpuIdle': 'str', 'cpuUser': 'str'}, …}
 </pre>
 
