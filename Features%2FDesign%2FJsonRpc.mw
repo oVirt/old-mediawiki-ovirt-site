@@ -79,5 +79,5 @@ In this phase internal broker will be pulled out (if we are not already using  s
 * [http://www.jsonrpc.org/ JSON-RPC]
 * [http://www.amqp.org/ AMQP]
 
-=== Attachments ===
+== Attachments ==
 * [[File:schemas.tgz|schema]] ([https://wiki.gnome.org/Apps/Dia/ dia] file containing the schema sources)
