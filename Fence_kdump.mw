@@ -208,11 +208,11 @@ Following config values are used:
 |-
 | rowspan="3" | engine-setup
 |-
-| Configure fence_kdump listener port during setup
-| style="background-color: red" | 
+| Configure fence_kdump listener host and port during setup
+| Coding
 |-
 | Add firewall rule for fence_kdump listener
-| style="background-color: red" | 
+| Coding
 |-
 | colspan="3" | &nbsp;
 |-
