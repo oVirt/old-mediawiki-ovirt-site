@@ -17,7 +17,7 @@ The biggest difference between current implementation and the goal is communicat
 * Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]] <!--This is markup for the date on which the current page was last changed, do not change-->
 * Were currently in [[#Phase_1|Phase 1]]
 
-=== Phases ===
+== Phases ==
 
 === Phase 0 ===
 Below is prior state to the messaging changes.  The engine uses XML-RPC over HTTP to communicate with the VDSM. There are two connections active between the engine and a VDSM. 
