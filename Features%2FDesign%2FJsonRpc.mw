@@ -19,12 +19,10 @@ The biggest difference between current implementation and the goal is communicat
 
 === Phases ===
 
-==== Phase 0 ====
-The is how VDSM communicated with the engine before any messaging was implemented.
+=== Phase 0 ===
+Below is prior state to the messaging changes.  The engine uses XML-RPC over HTTP to communicate with the VDSM. There are two connections active between the engine and a VDSM. 
 
 [[File:jsonrpc_phase0.png]]
-
-The engine uses XML-RPC over HTTP to make API requests.
 
 ==== Phase 1 ====
 This is an phase not meant to be released in any version. Instead it it is meant to be used in development so integration with the engine could start.
