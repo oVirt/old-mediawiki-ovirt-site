@@ -133,12 +133,12 @@ kernel.numa_balancing = 1
 <pre>
 'autoNumaBalancing': int
 'numaDistances': {'<nodeIndex>': [int], ...}
-'numaNodes': {'<nodeIndex>': {'cpus': [int], 'totalMemory': int}, …}
+'numaNodes': {'<nodeIndex>': {'cpus': [int], 'totalMemory': 'str'}, …}
 </pre>
 
 * I-2.2 Transfer data format of host CPU statistics and NUMA nodes memory information
 <pre>
-'numaNodeMemFree': {'<nodeIndex>': {'memFree': int, 'memPercent': int}, …}
+'numaNodeMemFree': {'<nodeIndex>': {'memFree': 'str', 'memPercent': int}, …}
 'cpuStatistics': {'<cpuId>': {'numaNodeIndex': int, 'cpuSys': 'str', 'cpuIdle': 'str', 'cpuUser': 'str'}, …}
 </pre>
 
