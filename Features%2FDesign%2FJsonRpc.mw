@@ -1,6 +1,6 @@
 <!-- {{autolang|base=yes}} -->
 
-== Introduce Messaged communication to VDSM using JSON-RPC on top of various transport protocols ==
+== Introduction of messaged based communication using JSON-RPC on top of various transport protocols ==
 
 {{Feature|name=Introduce Messaged communication to VDSM using JSON-RPC on top of various transport protocols|modules=vdsm, engine|status=In Development|version=3.5.0}}
 
