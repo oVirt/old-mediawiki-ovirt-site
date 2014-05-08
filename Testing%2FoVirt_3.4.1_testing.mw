@@ -19,7 +19,7 @@ If you're willing to participate, please add yourself to the table below:
 |-
 | [[User:SandroBonazzola|SandroBonazzola]]  || upgrade from 3.4.0 || NFS  || basic || Fedora 19 || {{BZ|1093721}}
 |-
-| [[User:Sven|Sven]] || upgrade from 3.3.5 || local  || vlans, separate vm networks, seperate display network || CentOS 6.5 || -
+| [[User:Sven|Sven]] || upgrade from 3.3.5 || local  || vlans, separate vm networks, seperate display network || CentOS 6.5 || {{BZ|1093755}}
 |-
 | - || - || -  || - || - || -
 |-
