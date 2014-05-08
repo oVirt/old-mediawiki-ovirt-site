@@ -75,7 +75,9 @@ Base.InvokeCommands.Initialize - intializes the extension.
 # The login returns an authentication record.
 # The record is used by the authorization extension in order to fetch a principal.
 #  If the principal is fetched, the ID of the principal record is used in order to retrieved the associated DB record (if does not exists - a new record is inserted to the users table).
-# The ID of the DB record is used in order to perform the MLA check.
+# The ID of the DB record is used in order to perform the MLA check.<BR>
+The following sequence diagram shows the interaction between the login base command and the used extensions: <BR>
+[[File:Login.jpg]]
 <BR>
 Used API commands:
 #Authn.InvokeCommands.AUTHENTICATE_CREDENTIALS - perform credentials based authentication. Returns an Authentication record.
