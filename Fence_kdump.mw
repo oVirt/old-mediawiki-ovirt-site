@@ -84,14 +84,14 @@ We decided to implement new standalone listener running on the same host as engi
 The new standalone listener will be implemented with these features:
 * Base flow for received messages
 *# Receive a message and check if it's valid fence_kdump message (compare magic number and message version (currently only ''1'') in the same way as in ''fence_kdump'' command).
-*# If message is valid, determine status of kdump flow (based on messages received in the past it's set to ''started'' or ''dumping'')
-*# Store sender IP address, timestamp and status to database.
+*# If message is valid, find host id and determine status of kdump flow (based on messages received in the past it's set to ''started'' or ''dumping'')
+*# Store host id, timestamp, sender IP address:port and status to database.
 * Finish host's kdump flow
 ** For all hosts with status ''dumping'' test if last received message in not older than ''KdumpFinishedTimeout'' (default 30 sec). If so, save record with status ''finished'' and current timestamp for the host to the database
 * Listener heartbeat
 ** Periodically every ''FenceKdumpListenerHeartbeatInterval'' (default 10 sec) save current timestamp to database for host ''fence_kdump_listener'' (this will be checked by engine to know that listener is alive)
 The listener will use two config values:
-* '''FenceKdumpListenerHost'''
+* '''FenceKdumpListenerAddress'''
 ** Defines the IP address to receive fence_kdump messages on
 ** Default 7410
 * '''FenceKdumpListenerPort'''
