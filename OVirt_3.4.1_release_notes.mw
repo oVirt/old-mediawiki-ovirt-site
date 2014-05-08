@@ -207,6 +207,54 @@ Please see [[oVirt 3.3.5 release notes]] for upgrading instructions.
 {{BZ|1085754}} - Cannot create template - not possible to submit the New Template dialog<BR>
 {{BZ|1086280}} - VM remains locked after failing to migrate<BR>
 
+Bugs fixed between RC and GA:
+
+{{BZ|996044}} - [Admin Portal] New VM ignores osinfo properties for network card, it is always VirtIO<BR>
+{{BZ|1001473}} - [ja_JP][Admin Portal] String 'Network Provider' broken into two lines in 'New Host' dailog.<BR>
+{{BZ|1036013}} - can't set a static network via Cloud-Init GUI in 3.3.1-2 beta<BR>
+{{BZ|1037439}} - [engine-backend] Engine copyImage request to vdsm is transmitted with sdUUID value of an inactive SD<BR>
+{{BZ|1043233}} - Balancing cluster doesn't add VM's Predicted CPU load into acceptable hosts load<BR>
+{{BZ|1053062}} - Failed to create data center with default version<BR>
+{{BZ|1058290}} - "too many" permissions needed for creating a VM pool<BR>
+{{BZ|1059286}} - [DWH-OTOPI-SETUP] - Backup handling was removed and restore is done automatically<BR>
+{{BZ|1063901}} - engine-config errors when used by non-root<BR>
+{{BZ|1063996}} - Move sparse raw disk from NFS to iSCSI domain is not supported<BR>
+{{BZ|1064567}} - "OK" button still has focus when editing user-data<BR>
+{{BZ|1065978}} - custom properties sheet: no '-' (remove) button in last row of sheet<BR>
+{{BZ|1068979}} - [backup] extend backup to dwh/reports<BR>
+{{BZ|1071687}} - External users unable to live migrate disks to new storage domain<BR>
+{{BZ|1072414}} - No domain is listed in New VM window: Domain drop down for Windows OS.<BR>
+{{BZ|1073041}} - [webadmin] DC subtabs - refreshes are visible<BR>
+{{BZ|1073051}} - REST API for hosted engine maintenance operations<BR>
+{{BZ|1076221}} - [host-deploy] ovirt-node upgrade results in null point exception if initial installation of node failed in past<BR>
+{{BZ|1077132}} - Labels should be filtered by product (RHEV/Neutron)<BR>
+{{BZ|1077300}} - VM's can't be started after fresh install<BR>
+{{BZ|1077448}} - [ovirt][webadmin] SessionID for REST API stores in browser Local Storage<BR>
+{{BZ|1077684}} - Can't configure vNIC QoS to "unlimited" once it had been set<BR>
+{{BZ|1080322}} - [ja_JP][de_DE][User Portal] String broken into two lines in 'Console Options' dialog.<BR>
+{{BZ|1080483}} - Tracker: oVirt 3.4.1 release<BR>
+{{BZ|1081132}} - [REST API] NullPointerException thrown when importing a template without specifying storage domain<BR>
+{{BZ|1082612}} - installation of rhev-h in webadmin failed due to wrong filename for version.txt<BR>
+{{BZ|1083411}} - manage domains FileNotFoundException exception<BR>
+{{BZ|1083750}} - Distinguish between manual fence resulted from user action  and manual fence called internally by auto fence<BR>
+{{BZ|1084138}} - [RFE][notifier] Event Notifications List Text File<BR>
+{{BZ|1084937}} - Label reference missing under Network and HostNics in API XSD<BR>
+{{BZ|1085359}} - [engine-backend] Engine reports that disk resize had succeeded although it failed on vdsm<BR>
+{{BZ|1085386}} - [rhevm-cli]: update vmpool has no  --description option<BR>
+{{BZ|1085395}} - rhevm creates glusterfs SD on unsupported datacenter versions (3.2..)<BR>
+{{BZ|1085736}} - Label reference missing under Network and HostNics in API XSD<BR>
+{{BZ|1087088}} - [ALL_LANG][Admin_Portal] Default Storage Domain drop down box is not aligned to the text<BR>
+{{BZ|1088868}} - [de_DE, pt_BR, es_ES, fr_FR][RHEVM-3.4.0.5] [Admin Portal] Help button overlap issue on clusters->New->Console tab.<BR>
+{{BZ|1089777}} - [RFE] 3.4 product translation: translation update 3<BR>
+{{BZ|1090168}} - [host-deploy] missing ssh fingerprint in registration protocol v1<BR>
+{{BZ|1091227}} - [dbscripts] engine-setup fails: ERROR: insert or update on table "tags_user_map" violates foreign key constraint "tags_user_map_user"<BR>
+{{BZ|1091371}} - HTTP 500 on expired session request<BR>
+{{BZ|1091380}} - Uprgrade from is35.1 to av7 fails on dbscript<BR>
+{{BZ|1091604}} - Guide me dialog got stuck(NPE) in DataCenter tab if exists pending approval host<BR>
+{{BZ|1091942}} - engine-config's manual should be updated regarding new command --merge<BR>
+{{BZ|1093283}} - db upgrade fails if there's a subscription to VDS_HIGH_NETWORK_USE event<BR>
+{{BZ|1093755}} - [BUG] can't boot vm with cloud-init data submitted as json via REST api<BR>
+
 ==VDSM==
 
 ==ovirt-node-plugin-vdsm==
