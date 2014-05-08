@@ -255,6 +255,21 @@ Bugs fixed between RC and GA:
 {{BZ|1093283}} - db upgrade fails if there's a subscription to VDS_HIGH_NETWORK_USE event<BR>
 {{BZ|1093755}} - [BUG] can't boot vm with cloud-init data submitted as json via REST api<BR>
 
+== oVirt Iso Uploader ==
+{{BZ|1023507}} - [engine-iso-uploader] INFO: Use the -h option to see usage - when put incorrect iso domain<BR>
+{{BZ|1065726}} - The ISO uploader assumes that the storage domain uses NFS<BR>
+
+== oVirt Image Uploader ==
+{{BZ|951097}} - Man page for rhevm-image-uploader is missing options<BR>
+
+== oVirt Hosted Engine Setup ==
+{{BZ|1082028}} - hosted-engine fails when cdrom is chosen as the source for the installation.<BR>
+{{BZ|1084863}} - hosted-engine-setup fails at "Waiting for cluster to become operational"<BR>
+{{BZ|1088572}} - hosted-engine script fails with Traceback when cluster doesn't return a CPU type<BR>
+
+== oVirt Hosted Engine HA ==
+{{BZ|1091360}} - agent dies while monitoring the engine<BR>
+
 ==VDSM==
 
 ==ovirt-node-plugin-vdsm==
