@@ -102,7 +102,10 @@ Used API commands:
 #Authz.InvokeCommands.QUERY_OPEN - opens a query, returns an opaque object
 #Authz.InvokeCommands.QUERY_EXECUTE - executes the query. This command should be called until there are no more results, and use the opaque object returned by QUERY_OPEN
 #Authz.InvokeCommands.QUERY_CLOSE - closes the query
-<BR><BR>
+<BR>
+The following seuqnece diagram shows interaction between the BLL search query and the extensions: <BR>
+[[File:Aaa_search.jpg‎ ]]
+<BR>
 
 *Sync
 Sync (AKA DbUserCacheManager)  is configured to run once in an hour (configurable by changing the config option of 'UserRefreshRate') <BR>
