@@ -113,6 +113,8 @@ Sync (AKA DbUserCacheManager)  is configured to run once in an hour (configurabl
 # For each authorization plugin, a search query structure that is based on the IDs of the relevant users is being constructed and invoked using the authorization extension, similar to the search flow. The search query is recursive - for each principal (user) the groups it is a member of are also being collected. 
 # For each returned principal it is checked if its data matches the data of the corresponding user obtained from the database - if there is a change, the  user is added to a list of users to be updated at the database 
 # the database is updated with all the users that got changed.
+The following sequence diagfram shows interaction between BLL sync and the extensions: <BR>
+[[File:Aaa_sync(2).jpg]]
 <BR>
 Used API commands: 
 Same as in search
