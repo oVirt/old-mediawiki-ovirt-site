@@ -68,6 +68,9 @@ When introducing the feature a default Disk Profile will be created for each Sto
 
 (Note: aggregate all profiles feature pages like for QoS).
 
+==== MLA ====
+Vnic Profiles is used to "hide" infra resource (network) from the user. Currently we will hold same roles and behavior for Disk Profiles as well (Disk Operator and Creator), this would be handled as a bug for 3.5 (not a big deal just need to decide).
+
 == Implementation ==
 === VDSM ===
 merged: http://gerrit.ovirt.org/#/c/14636
