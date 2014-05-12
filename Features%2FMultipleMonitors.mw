@@ -1,6 +1,6 @@
 <!-- {{autolang|base=yes}} -->
 
-== Multiple Monitor Via Siignle PCI==
+== Multiple Monitor Via Single PCI==
 
 === Summary ===
 Ability to channel Spice display protocol up to 4 different PCI channels in a single VM
