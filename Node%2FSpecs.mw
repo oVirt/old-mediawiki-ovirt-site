@@ -106,9 +106,9 @@ The actual rootfs which is used at runtime.
 
 |-
 | ''Setup TUI''
-| custom (ovirt-node-installer)
-| custom (ovirt-node-installer)
-| custom (ovirt-node-installer)
+| custom (ovirt-node-setup)
+| custom (ovirt-node-setup)
+| custom (ovirt-node-setup)
 
 |-
 | ''Upgrade''
@@ -151,23 +151,23 @@ The actual rootfs which is used at runtime.
 
 |-
 | ''Data storage (for big files)''
-| Data LV
+| /data is mounted to a Data LV
 | Writeable /var, mounted to another LV
-| Basically the whole fs, but /var should also be moutned to a separate LV
+| Basically the whole fs, but /var should also be mounted to a separate LV
 
 |-
 | ''Persistence (for individual/random files) between boots''
-| Using writeable LV and bind-mounts into target
+| Using writeable Config LV and bind-mounts into target
 
 '''Limitation: I.e. kernel modules can not be persisted'''
 | Writeable /etc
 
 '''Limitation: I.e. kernel modules can not be persisted'''
-| Writeable filesystem
+| Writeable filesystem and/or Config LV
 
 |-
 | ''Persistence (for individual/random files) between upgrades''
-| Using writeable LV and bind-mounts
+| Using writeable Config LV and bind-mounts
 
 '''Limitation: I.e. kernel modules can not be persisted'''
 | Copying /etc from N to N+1 and upgrade tree could be modified
