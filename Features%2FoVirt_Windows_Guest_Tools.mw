@@ -29,7 +29,6 @@ The current (proposed) list of the software to be included in the ISO:
 ::* VirtIO-Net
 ::* VirtIO-Block
 ::* VirtIO-SCSI
-
 From http://secondary.fedoraproject.org/pub/alt/virtio-win/latest/
 
 :* Spice drivers and agent
@@ -37,6 +36,8 @@ From http://secondary.fedoraproject.org/pub/alt/virtio-win/latest/
 :* Qemu Guest Agent
 
 :* oVirt Guest Agent
+Current plan is to cross-compile it using Wine.
+Sources are available from the Git repo at: http://gerrit.ovirt.org/ovirt-guest-agent
 
 === Benefit to oVirt ===
 The ISO image will become a central repository for all the software that Windows based VMs require in order to function in most optimal way under oVirt / KVM.
