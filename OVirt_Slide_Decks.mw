@@ -3,7 +3,10 @@
 ~20 slides, pulled together from the Nov 2011 decks listed below: [[File:Ovirt-generic.odp ]] (ODP) 
 
 == oVirt Community Update - FISL 2014 ==
-V2V - Migrating virtual machines to oVirt:[[File:Virt-v2v.odp]] (ODP)
+* oVirt Overview:[[File:OVirt-Overview.odp]] (ODP)
+* oVirt Installation Process:[[File:OVirt-Installation.odp‎]] (ODP)
+* oVirt 3.4 New Features:[[File:OVirt34-NewFeatures.odp‎]] (ODP)
+* V2V - Migrating virtual machines to oVirt:[[File:Virt-v2v.odp]] (ODP)
 
 == oVirt Decks from FOSDEM 2012 ==
 
