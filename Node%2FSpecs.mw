@@ -86,7 +86,7 @@ The actual rootfs which is used at runtime.
 |-
 | ''Installation Media''
 | LiveCD
-| LiveCD
+| boot.iso + embedded kickstart (LiveCD+ks)
 | LiveCD
 
 |-
