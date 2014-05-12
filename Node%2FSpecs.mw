@@ -56,7 +56,7 @@ The actual rootfs which is used at runtime.
 * Live plugins are hard
 * Installation is custom
 
-= Implementation Comparison =
+= Comparison: Possible Implementations =
 
 {| class="wikitable" border="1"
 |-
