@@ -61,7 +61,7 @@ The neutron appliance for ovirt-engine 3.5 is based on the Havana-RDO which uses
 Verify 'connectivity test' passes (by clicking the 'Test' button)
 :* On the Agent Configuration left tab:
 :# Bridge Mappings: vmnet:br-neutron
-g:# Host: NEUTRON_SERVER_IP_ADDRESS
+:# Host: NEUTRON_SERVER_IP_ADDRESS
 :# Port: 5672
 :# Username: guest
 :# Password: guest
