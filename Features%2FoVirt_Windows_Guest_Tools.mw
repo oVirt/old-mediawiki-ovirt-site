@@ -35,13 +35,16 @@ From: http://secondary.fedoraproject.org/pub/alt/virtio-win/latest/
 :* Spice drivers and agent
 From: http://www.spice-space.org/download/binaries/spice-guest-tools/
 
- 
+Important Note:  It seems that Spice installer (current is spice-guest-tools-0.74.exe [http://www.spice-space.org/download/binaries/spice-guest-tools/spice-guest-tools-0.74.exe]) installs not just Spice related components (QXL and Agent), but all VirtIO-Win drivers as well.
+
 :* Qemu Guest Agent
 
+Need to check if this can be taken from Fedora or we'll need to compile it ourselves.
 
 :* oVirt Guest Agent
 Current plan is to cross-compile it using Wine.
 Sources are available from the Git repo at: http://gerrit.ovirt.org/ovirt-guest-agent
+Initial cross-compilation seems to be successful, but requires further testing on various versions of Windows.
 
 === Benefit to oVirt ===
 The ISO image will become a central repository for all the software that Windows based VMs require in order to function in most optimal way under oVirt / KVM.
