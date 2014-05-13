@@ -227,10 +227,10 @@ Following config values are used:
 | rowspan="3" | engine-setup
 |-
 | Configure fence_kdump listener host and port during setup
-| Coding
+| Patch on review
 |-
 | Add firewall rule for fence_kdump listener
-| Coding
+| Patch on review
 |-
 | colspan="3" | &nbsp;
 |-
