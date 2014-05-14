@@ -153,6 +153,8 @@ Host kdump flow detection will be inserted into automatic fencing flow just befo
 ### if no record returned, wait '''FenceKdumpMessageInterval''' and continue the loop
 # Execute hard fencing for host
 
+The whole flow is displayed in [[Media:Fencing-flow-with-kdump-detection.jpg | fencing flow with kdump detection]].
+
 Following config values are used:
 * '''FenceKdumpMessageInterval'''
 ** Defines interval in seconds between messages sent by fence_kdump
