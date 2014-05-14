@@ -90,6 +90,9 @@ The new standalone listener will be implemented with these features:
 ** For all hosts with status ''dumping'' test if last received message in not older than ''KDUMP_FINISHED_TIMEOUT'' (default 30 sec). If so, save record with status ''finished'' and current timestamp for the host to the database
 * Listener heartbeat
 ** Periodically every ''HEARTBEAT_INTERVAL'' (default 10 sec) save current timestamp to database for host ''fence_kdump_listener'' (this will be checked by engine to know that listener is alive)
+
+The whole flow of fence_kdump listener shows [[Media:Fence-kdump-listener-flow.jpg| fence_kdump listener flow diagram]].
+
 The listener will use these configuration options:
 * '''LISTENER_ADDRESS'''
 ** Defines the IP address to receive fence_kdump messages on
