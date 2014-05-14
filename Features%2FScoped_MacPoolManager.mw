@@ -80,7 +80,7 @@ A new macpools top level collection will be added supporting the following opera
  </mac_pool>
 * Response: '''GUID on the new pool'''
 
-3. POST api/macpools/AAA
+3. PUT api/macpools/{macpool:id}
 * Request: 
  <mac_pool>
      <description>The default MAC addresses pool - allows duplicates</description>
