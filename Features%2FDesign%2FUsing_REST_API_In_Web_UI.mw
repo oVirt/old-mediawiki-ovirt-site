@@ -147,3 +147,47 @@ Proposed technologies and tools for development:
 
 == Comments and discussion ==
 * Refer to [[Talk:Features/Design/Using_REST_API_In_Web_UI|design discussion page]].
+
+== Implementation Status ==
+{| class="wikitable"
+! style="text-align: left; width: 10%" | Phase
+! style="text-align: left; width: 65%" | Task
+! style="text-align: left; width: 25%" | Status
+|-
+| rowspan="4" | PoC
+|-
+| Manually write Data Centers JavaScript SDK, standalone test, GUI integration test
+| style="background-color: #ddffdd" | Implementation In Progress
+|-
+| Manually write Bookmarks JavaScript SDK, standalone test, GUI integration test
+| 
+|-
+| Manually write Tags JavaScript SDK, standalone test, GUI integration test
+| 
+|-
+| colspan="3" | &nbsp;
+|-
+| rowspan="4" | Infrastructure
+|-
+|Write auto-generated JavaScript binding
+| 
+|-
+|Write high-level JavaScript API (ovirt-engine.js)
+| 
+|-
+|Introduce "hybrid mode" to the application (to allow the GUI to work with the REST API and the legacy API in parallel)
+| 
+|-
+| colspan="3" | &nbsp;
+|-
+| rowspan="4" | API Migration
+|-
+|Migrate Bookmarks GUI code to work over REST API (using JavaScript SDK) instead of legacy API
+|
+|-
+|Migrate Tags GUI code to work over REST API (using JavaScript SDK) instead of legacy API
+|
+|-
+| ?... [Depends on interdependencies between business entities] 
+|
+|}
