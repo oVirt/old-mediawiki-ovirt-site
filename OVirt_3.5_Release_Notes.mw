@@ -12,8 +12,9 @@ For a general overview of oVirt, read [[oVirt 3.0 Feature Guide | the oVirt 3.0 
 = oVirt 3.5.0 ALPHA Release Notes =
 
 == ALPHA RELEASE ==
-oVirt 3.5.0 Alpha release is available since 2014-05-16. In order to install it you've to enable oVirt 3.5 pre release repository.
+The oVirt Project is working on oVirt 3.5.0 Alpha release. In order to install it you've to enable oVirt 3.5 pre release repository.
 See below section on Install / Upgrade for having detailed instructions.
+'''PLEASE WAIT FOR OFFICIAL ANNOUNCEMENT BEFORE TRYING TO INSTALL IT'''
 
 ==Feature #1==
 <description>
@@ -73,7 +74,8 @@ Note that some new '''features in upcoming releases may very well be unavailable
 = Install / Upgrade from previous versions=
 
 == ALPHA RELEASE ==
-oVirt 3.5.0 Alpha release is available since 2014-05-16. In order to install it you've to enable oVirt 3.5 pre release repository.
+The oVirt Project is working on oVirt 3.5.0 Alpha release. In order to install it you've to enable oVirt 3.5 pre release repository.
+'''PLEASE WAIT FOR OFFICIAL ANNOUNCEMENT BEFORE TRYING TO INSTALL IT'''
 
 == Fedora / CentOS / RHEL ==
 In order to install it on a clean system, you need to install 
