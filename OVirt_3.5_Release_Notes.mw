@@ -29,6 +29,9 @@ For a general overview of oVirt, read [[oVirt 3.0 Feature Guide | the oVirt 3.0 
 
 === UX Enhancements ===
 
+=== Hosted Engine ===
+* Added support for VLAN-tagged network interfaces
+* Added support for bonded network interfaces
 
 = Install / Upgrade from previous versions=
 
