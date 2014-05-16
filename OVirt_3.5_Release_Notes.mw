@@ -12,6 +12,8 @@ For a general overview of oVirt, read [[oVirt 3.0 Feature Guide | the oVirt 3.0 
 = oVirt 3.5.0 ALPHA Release Notes =
 
 == ALPHA RELEASE ==
+oVirt 3.5.0 Alpha release is available since 2014-05-16. In order to install it you've to enable oVirt 3.5 pre release repository.
+See below section on Install / Upgrade for having detailed instructions.
 
 ==Feature #1==
 <description>
