@@ -75,8 +75,7 @@ Please see [[oVirt 3.4.1 release notes]] for upgrading instructions.
 
 
 == oVirt Log Collector ==
-
-
+{{BZ|1088172}} - [engine-log-collector] problem with sos3 on rhel7 as general.all_logs no longer exist<BR>
 
 == oVirt ISO Uploader ==
 
