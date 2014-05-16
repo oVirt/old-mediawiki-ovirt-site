@@ -90,6 +90,9 @@ Please see [[oVirt 3.4.1 release notes]] for upgrading instructions.
 {{BZ|1078206}} - [RFE] [ovirt-hosted-engine-setup] add support for bonded interfaces<BR>
 {{BZ|1079956}} - missing dependency<BR>
 
+== oVirt Hosted Engine HA ==
+{{BZ|1036683}} - Time shift on host may cause ha to stop responding<BR>
+
 </div>
 
 [[Category:Documentation]]
