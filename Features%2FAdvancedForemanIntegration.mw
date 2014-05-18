@@ -52,7 +52,7 @@ Prerequisites:
                 ensure => file,                                                 
                 source => "puppet:///modules/ovirt-pk/authorized_keys",         
         }                                                                       
-}   
+ }   
 
 User-flow:
 [[File:New-host-dialog-baremetal-provision.png]]
