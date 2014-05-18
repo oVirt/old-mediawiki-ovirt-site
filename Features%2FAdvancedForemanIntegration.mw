@@ -56,9 +56,10 @@ Prerequisites:
 
 User-flow:
 [[File:New-host-dialog-baremetal-provision.png]]
-# Add a host in oVirt, which will be selected from a list of discovered hosts taken from Foreman (show the hosts in a provider sub-tab)
-# select a host group for this host
-# set the proper configuration needed for it (location/environment/other relevant properties)
+# Add new host form in oVirt shows new list of discovered hosts taken from Foreman
+# Select a host group for this host. all proper configuration needs to be declared in host group definition (part of Foreman setup)
+# Select compute resource to allow access back from Foreman to oVirt (part of Foreman setup)
+# All "discovered" information will filled out in the new host form, edit them as desired 
 # Press Okay
 # Now, the following system flow will occur:
 ## add the host to foreman using the API (Provision the discovered host)
