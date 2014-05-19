@@ -27,7 +27,7 @@ $ make clean install-dev PREFIX="$OVIRT_OUT" DEV_EXTRA_BUILD_FLAGS_GWT_DEFAULTS=
 ** <code>safari</code> - Safari & Google Chrome
 ** <code>opera</code> - Opera
 
-<code>-Dgwt.cssObfuscationStyle=pretty</code> causes GWT to compile with human-readable CSS names, for much easier development and debugging using Firebug or Developer Tools. <code>gwt.cssObfuscationStyle</code> defaults to <code>obs</code>, which means "obfuscated". <code>obs</code> should be used for production builds (and is the default if <code>-Dgwt.cssObfuscationStyle=pretty</code> if not specified.
+<code>-Dgwt.cssObfuscationStyle=pretty</code> causes GWT to compile with human-readable CSS names, for much easier development and debugging using Firebug or Developer Tools. <code>gwt.cssObfuscationStyle</code> defaults to <code>obf</code>, which means "obfuscated". <code>obf</code> should be used for production builds (and is the default if <code>-Dgwt.cssObfuscationStyle=pretty</code> if not specified.
 
 Tip: ''Never use <code>ie6</code> with <code>gwt.userAgent</code>, Microsoft Internet Explorer 6 and 7 are '''not''' supported by oVirt web applications.''
 
