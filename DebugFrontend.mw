@@ -110,6 +110,8 @@ $ make clean install-dev [usual makefile options] DEV_BUILD_GWT_DRAFT="1"
 
 Tip: ''Use draft mode only when profiling or analyzing GWT application code, don't use it for regular Engine builds.''
 
+Note: To prevent CSS name obfuscation, use <pre>DEV_EXTRA_BUILD_FLAGS_GWT_DEFAULTS="-Dgwt.cssObfuscationStyle=pretty"</pre> as explained above.
+
 == Frequently asked questions ==
 ''Q: My web browser doesn't prompt me to install GWT Developer Plugin.''
 
