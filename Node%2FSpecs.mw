@@ -65,7 +65,7 @@ The following table compares how three different technologies could implement th
 ! Feature
 ! Current
 ! Atomic
-! LVM based
+! [https://github.com/fabiand/imgbased/ LVM based]
 
 |-
 | '''Build time'''
