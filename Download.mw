@@ -63,6 +63,12 @@ Experienced users can also compile from source, using the guides for the [[Build
 
 == Mirrors for oVirt Downloads ==
 
+===Europe===
+<ul>
+* [http://ftp.snt.utwente.nl/pub/software/ovirt/ SNT - University of Twente] ([http://ftp.snt.utwente.nl/pub/software/ovirt/releases/stable/ Stable] | [http://ftp.snt.utwente.nl/pub/software/ovirt/releases/beta/ Current] | [http://ftp.snt.utwente.nl/pub/software/ovirt/releases/updates-testing/ Future])
+</ul>
+
+===North America===
 <ul>
 * [http://archive.linux.duke.edu/ovirt/ Duke University] ([http://archive.linux.duke.edu/ovirt/releases/stable/ Stable] | [http://archive.linux.duke.edu/ovirt/releases/beta/ Current] | [http://archive.linux.duke.edu/ovirt/releases/updates-testing/ Future])
 * [http://www.gtlib.gatech.edu/pub/oVirt Georgia Institute of Technology] ([http://www.gtlib.gatech.edu/pub/ovirt/releases/stable/ Stable] | [http://www.gtlib.gatech.edu/pub/ovirt/releases/beta/ Current] | [http://www.gtlib.gatech.edu/pub/ovirt/releases/updates-testing/ Future] | [ftp://ftp.gtlib.gatech.edu/pub/oVirt FTP Site])
