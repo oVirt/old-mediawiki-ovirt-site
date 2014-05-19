@@ -106,6 +106,8 @@ The following table compares how three different technologies could implement th
 | anaconda
 | anaconda
 
+Notes: Needs some improvements. ([https://bugzilla.redhat.com/show_bug.cgi?id=1099222 liveimg support in textmode] and [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=anaconda "raw" payload installation])
+
 |-
 | ''Setup TUI''
 | custom (ovirt-node-setup)
