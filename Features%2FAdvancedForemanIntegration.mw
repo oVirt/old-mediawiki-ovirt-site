@@ -66,6 +66,7 @@ User-flow:
 ## The host will be added and appear in the oVirt UI with status "Installing OS" util the following ends:
 ### For oVirt-node hosts - the registration will occur through the oVirt-node (assuming the kernel parameters are configured for that Foreman template), and the host will be approved automatically by Foreman
 ### For other OS - at first step won't do the registration by themselves, but foreman will do that using a plugin (plugin will send REST-API call to add or approve  the host)
+[[File:installingOSExample.png]]
 
 Open issues:
 
