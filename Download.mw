@@ -54,7 +54,7 @@ Experienced users can also compile from source, using the guides for the [[Build
 == Version Releases of oVirt ==
 
 <ul>
-* [http://resources.ovirt.org/pub/ovirt-3.4/ ovirt-3.4]
+* [http://resources.ovirt.org/pub/ovirt-3.4/ ovirt-3.4] '''Recommended'''
 * [http://resources.ovirt.org/pub/ovirt-3.3/ ovirt-3.3]
 * [http://resources.ovirt.org/pub/ovirt-3.4-rc ovirt-3.4 RC]
 * [http://resources.ovirt.org/pub/ovirt-3.4-snapshot ovirt-3.4 Nightly]
@@ -65,13 +65,13 @@ Experienced users can also compile from source, using the guides for the [[Build
 
 ===Europe===
 <ul>
-* [http://ftp.snt.utwente.nl/pub/software/ovirt/ SNT - University of Twente] ([http://ftp.snt.utwente.nl/pub/software/ovirt/releases/stable/ Stable] | [http://ftp.snt.utwente.nl/pub/software/ovirt/releases/beta/ Current] | [http://ftp.snt.utwente.nl/pub/software/ovirt/releases/updates-testing/ Future])
+* [http://ftp.snt.utwente.nl/pub/software/ovirt/ SNT - University of Twente] ([http://ftp.snt.utwente.nl/pub/software/ovirt/ovirt-3.4/ oVirt 3.4] | [http://ftp.snt.utwente.nl/pub/software/ovirt/ovirt-3.4-snapshot oVirt 3.4 Nightly] | [http://ftp.snt.utwente.nl/pub/software/ovirt/ovirt-master-snapshot/ oVirt 3.5 Nightly])
 </ul>
 
 ===North America===
 <ul>
-* [http://archive.linux.duke.edu/ovirt/ Duke University] ([http://archive.linux.duke.edu/ovirt/releases/stable/ Stable] | [http://archive.linux.duke.edu/ovirt/releases/beta/ Current] | [http://archive.linux.duke.edu/ovirt/releases/updates-testing/ Future])
-* [http://www.gtlib.gatech.edu/pub/oVirt Georgia Institute of Technology] ([http://www.gtlib.gatech.edu/pub/ovirt/releases/stable/ Stable] | [http://www.gtlib.gatech.edu/pub/ovirt/releases/beta/ Current] | [http://www.gtlib.gatech.edu/pub/ovirt/releases/updates-testing/ Future] | [ftp://ftp.gtlib.gatech.edu/pub/oVirt FTP Site])
+* [http://archive.linux.duke.edu/ovirt/ Duke University] ([http://archive.linux.duke.edu/ovirt/pub/ovirt-3.4/ oVirt 3.4] | [[http://archive.linux.duke.edu/ovirt/pub/ovirt-3.4-snapshot/  oVirt 3.4 Nightly] | [http://archive.linux.duke.edu/ovirt/pub/ovirt-master-snapshot/ oVirt 3.5 Nightly])
+* [http://www.gtlib.gatech.edu/pub/oVirt Georgia Institute of Technology] ([http://www.gtlib.gatech.edu/pub/oVirt/pub/ovirt-3.4/ oVirt 3.4] | [http://www.gtlib.gatech.edu/pub/ovirt/ovirt-3.4-snapshot oVirt 3.4 Nightly] | [http://www.gtlib.gatech.edu/pub/oVirt/pub/ovirt-master-snapshot/ oVirt 3.5 Nightly] | [ftp://ftp.gtlib.gatech.edu/pub/oVirt FTP Site])
 * [http://mirrors.ibiblio.org/ovirt/ ibiblio] ([http://mirrors.ibiblio.org/ovirt/releases/stable/ Stable] | [http://mirrors.ibiblio.org/ovirt/releases/beta/ Current] | [http://mirrors.ibiblio.org/ovirt/releases/updates-testing/ Future])
 </ul>
 
