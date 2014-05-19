@@ -64,7 +64,7 @@ The following table compares how three different technologies could implement th
 |-
 ! Feature
 ! Current
-! Atomic
+! [http://www.projectatomic.io/ Atomic]
 ! [https://github.com/fabiand/imgbased/ LVM based]
 
 |-
