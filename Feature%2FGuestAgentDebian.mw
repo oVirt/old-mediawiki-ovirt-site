@@ -96,7 +96,7 @@ Testing has to be executed on a Debian 7 system. Lower version do not fulfil the
 
 <!--This below adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 
-* Refer to [[Talk:oVirt Guest Agent/Debian]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
+* Refer to [[Talk:Feature/GuestAgentDebian]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 
 [[Category:Feature]]
 [[Category:Ovirt_guest_agent]]
