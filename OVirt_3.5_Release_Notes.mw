@@ -109,6 +109,24 @@ On the vdsmd restart that happens when upgrading vdsm to the oVirt 3.5 release, 
 = <span class="mw-customtoggle-1" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Click to Show/Hide]</span></span>Bugs Fixed = 
 <div  id="mw-customcollapsible-1" class="mw-collapsible mw-collapsed">
 ==oVirt Engine==
+'''Fixed in ovirt-engine-3.5.0_alpha1.1'''<BR>
+{{BZ|891073}} - [rhevm-dwh] History DB - Change Fields "Network Name" to "Logical Network Name"<BR>
+{{BZ|1017030}} - [Admin Portal] User $user@$domain attach to VM <UNKNOWN> in VM Pool test was initiated by $user.<BR>
+{{BZ|1051019}} - [RHEVM-RHS] iptables rules are not set on RHSS Nodes, when importing existing gluster cluster configurations<BR>
+{{BZ|1052921}} - novnc didn't connect because the clocks of websocket proxy and the host weren't in sync.<BR>
+{{BZ|1064396}} - Can't create network with empty VNIC profile<BR>
+{{BZ|1073453}} - [RFE] add Debian 7 to the list of operating systems when creating a new vm<BR>
+{{BZ|1079691}} - [RFE] Set 'save network configuration' default to 'true' on setup networks dialog<BR>
+{{BZ|1088568}} - Venezuela Standard Time not included in timezone list for Guests (GMT -04:30)<BR>
+{{BZ|1089067}} - Invalid target of --generate-answer option causes error indicating the entire installation has failed<BR>
+{{BZ|1090800}} - [RFE] Add periodic power management health check to detect/warn about link-down detection of power management<BR>
+{{BZ|1092379}} - Rename New Pool->"Pool" tab to "Type"<BR>
+{{BZ|1097160}} - [SCALE] - storage_domains_with_hosts_view generate slow query<BR>
+{{BZ|1097837}} - [engine-webadmin] Cannot create an export domain under local DC<BR>
+{{BZ|1098258}} - A movement operation of raw sparse disk from file to block domain results in Raw preallocated disk, but reports its type wrongly in the webadmin<BR>
+{{BZ|1098539}} - failed to create VM if no NUMA set is specified<BR>
+
+'''Fixed in ovirt-engine-3.5.0_alpha1'''<BR>
 {{BZ|856940}} - webadmin: after discovery of luns if we press the left side of the dialogue we move to the bottom of the list of luns<BR>
 {{BZ|894076}} - mouse-cursor stuck on resize-image after closing a dialog while re-sizing it.<BR>
 {{BZ|912057}} - [RFE] webadmin [TEXT]: unclear warning that template of linked vm does not exist in export domain<BR>
@@ -267,7 +285,6 @@ On the vdsmd restart that happens when upgrading vdsm to the oVirt 3.5 release, 
 {{BZ|1095258}} - Default cluster/Data center compatibility version should be 3.5 and not 3.4<BR>
 {{BZ|1095583}} - While executin rhsc-cleanup, it shows an error "[ ERROR ] Failed to execute stage 'Misc configuration': Command '/sbin/chkconfig' failed to execute"<BR>
 {{BZ|1097188}} - Engine all in one fails<BR>
-
 
 ==VDSM==
 
