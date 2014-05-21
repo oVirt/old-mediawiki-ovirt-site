@@ -38,8 +38,7 @@ Increased agility, easier integration into other projects.
 The code for vdsm-reg and the [[Features/HostDeployProtocol]] describe the other end of the process.
 
 Draft spec is:
-<pre>
-{
+<pre>{
     "register": {
         "steps": [ 
             {
@@ -103,7 +102,6 @@ Draft spec is:
         ]
     }
 }
-
 </pre>
 
 === Comments and Discussion ===
