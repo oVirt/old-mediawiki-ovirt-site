@@ -7,8 +7,8 @@ We want to build from both a development repo and the master repo on all current
 ===Tools currently used===
 
 # [https://jenkins.ovirt.org Jenkins] for build and test automation
-# [https://gitorious.org/ovirt/igord Igor] to run testsuites
-# [https://fedorahosted.org/cobbler/ Cobbler] to provision VMs for testing
+# [https://github.com/fabiand/igor/ Igor] to run testsuites
+# [https://www.cobblerd.org/ Cobbler] to provision VMs for testing
 
 ==Goals==
 ===Primary Goals===
