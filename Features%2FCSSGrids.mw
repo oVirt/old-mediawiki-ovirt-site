@@ -65,7 +65,7 @@ http://getbootstrap.com/css/#grid
 Testing would be look and feel regression testing. Make sure screens that weren't touched haven't changed at all, in look or functionality. Make sure screens that were touched look good and are still functional. Check font sizes, button sizes, field sizes, borders, alignment, etc.
 
 === Comments and Discussion ===
-* Refer to [[Talk:Your feature name]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
+* Refer to [[Talk:CSSGrids]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 
 [[Category:Feature]]
 [[Category:Template]]
