@@ -17,6 +17,8 @@ If you're willing to participate, please add yourself to the table below:
 {|border="1"
 ! Name !! part tested !!Storage !! Networking !! Distribution !! Bugs
 |-
-|  -  || - || - || -  || - || -
+| [[User:SandroBonazzola|SandroBonazzola]]  || upgrade from 3.3.5 || NFS  || basic || Fedora 19 || 
+|-
+| [[User:SandroBonazzola|SandroBonazzola]]  || AIO clean install  || NFS  || basic || Fedora 19 || 
 |-
 |}
