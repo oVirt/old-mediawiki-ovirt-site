@@ -173,10 +173,10 @@ Following config values are used:
 | style="background-color: lightgreen" | Done, included in kexec-tools >= 2.0.4-27
 |-
 |Patches for RHEL 6.6
-| Accepted, waiting to be merged
+| style="background-color: lightgreen" | Done, included in kexec-tools >= 2.0.0-274
 |-
 |Patches for RHEL 7.1
-| Accepted, waiting to be merged
+| Merged, waiting for package creation
 |-
 | colspan="3" | &nbsp;
 |-
@@ -186,10 +186,10 @@ Following config values are used:
 | Patch on review
 |-
 |Add dependency to kexec-tools package
-| style="background-color: red" | Waiting for RHEL package
+| Coding
 |-
 |Configure fence_kdump during host deploy
-| style="background-color: red" | 
+| Coding
 |-
 | colspan="3" | &nbsp;
 |-
@@ -211,7 +211,7 @@ Following config values are used:
 | Patch on review
 |-
 |Add fence_kdump handling to fencing flow
-| Coding
+| Patch on review
 |-
 | colspan="3" | &nbsp;
 |-
