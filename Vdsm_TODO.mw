@@ -7,17 +7,7 @@
 
 * remove all usage of <tt>sudo</tt>, and replace with specific calls to <tt>superVdsm</tt>.
 
-* <strike>have a logrotate-dependent logrotate.conf that works on Fedora and EL equally well.</strike> Our current 'sed' of the EL6-offensive line is good enough.
-
-* <strike>Configure vdsm to use syslog , but now we need to stop trashing the console</strike> -- done by Mark Wu.
-
-* <strike>Simplify the SysV init script, split most of its code to a "[http://gerrit.ovirt.org/295 vdsm-tool]"</strike>. Mostly done by Zhou ZhengSheng & Co.
-
 * vdsm-tool should assume responsibility on hairy stuff such as [http://bugzilla.redhat.com/547424 configuring multipath], which should not be the business of Vdsm proper.
-
-* <strike>running vdsClient from the project root dir ends with tears. Some PYTHONPATH games should fix this.</strike> done.
-
-* <strike>require only what we actually use in libvirt, instead of the whole libvirt.rpm.</strike> done in Vdsm and mom. http://gerrit.ovirt.org/#/c/15760/
 
 * vdsm/sampling.py: stop storing self._ifids and _rates in the thread. Rate can sit in the interfaces dict per sample.
 
