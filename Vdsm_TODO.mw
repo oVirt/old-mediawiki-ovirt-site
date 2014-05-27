@@ -12,17 +12,12 @@
 * vdsm/sampling.py: stop storing self._ifids and _rates in the thread. Rate can sit in the interfaces dict per sample.
 
 == Testing ==
-* <strike>write an automatic script that runs on each and every new change to gerrit, and adds an insulting comment if <tt>pyflakes</tt> fails for the new change.</strike> Thanks, Robert!
 
 * enable coverage during Jenkins tests.
 
 * run developer jobs on patches with +2 and V+1.
 
-* extend the former script, so that it runs a complete <tt>`make distcheck && make install`</tt> in a confined environment (chroot, VM) and reports if there is an error.
-
-* run unit and functional tests on reviewed patches (before submission).
-
-* add more cases to vmTests.testBuildCmdLine: add more examplary vmParams and their domxml.
+* Add <tt>`make distcheck`</tt> to Jenkins's jobs.
 
 * make <tt>getAllVolumesTests</tt> more meaningful, not only counting the number of volumes, but testing the image structure.
 
@@ -30,7 +25,7 @@
 
 * Test dhcp source routing
 
-* move qemuRebase to qemuimg and a unit test for it.
+* add a unit test for qemuimg.rebase.
 
 == Features ==
 * <strike>add hooks for network operations</strike> - We now have a before/after setupNetworks hook BUT it receives no parameters! It should receive the nets, bonds and options received by the setupNetworks call and (maybe) the running config before the setupNetworks: http://gerrit.ovirt.org/#/c/20330/
