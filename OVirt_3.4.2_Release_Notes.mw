@@ -59,6 +59,40 @@ If you're going to test  oVirt 3.4.2 development version, please add yourself to
 
 =Bugs fixed=
 ==oVirt Engine==
+{{BZ|1055710}} - 'list jobs' shows 'UNKNOWN' for target hosts when VMs are migrating<BR>
+{{BZ|1056997}} - [RHSC] Host does not move to non operational even after glusterd is made down .<BR>
+{{BZ|1063169}} - display the actual CPU allocation of a VM to manage inconsistencies<BR>
+{{BZ|1078897}} - User and System CPU Usage have values higher than 100%<BR>
+{{BZ|1080908}} - [branding]  engine-setup says "login into oVirt Engine"<BR>
+{{BZ|1081005}} - [REST-API] Can't set display network if display=false and usages.usage is display<BR>
+{{BZ|1082673}} - [engine] [RO-disk] Direct-LUN connected by Virt-IO-SCSI which is configured to be RO to a VM is writeable<BR>
+{{BZ|1082979}} - Run once vm with attached cd, not attach payload<BR>
+{{BZ|1083177}} - Hot plug causes the breach in quota enforcement<BR>
+{{BZ|1084771}} - Break bond by detaching the network label cannot be done in one step<BR>
+{{BZ|1084789}} - template of thin provision NFS,can't be copied to block data domains<BR>
+{{BZ|1084915}} - [Network Label] Cannot break bond with Network label attached by break bond action<BR>
+{{BZ|1085838}} - Engine should not send defaultRoute in clusterLevel <= 3.3<BR>
+{{BZ|1086244}} - [User Portal] Windows VNC-based VM are opened via RDP by default in User Portal<BR>
+{{BZ|1088440}} - Cannot sysprep Windows VM with different time zone than the one set in VM dialog / System side-tab<BR>
+{{BZ|1090660}} - SuperUser of DataCenter X cannot approve a host under this Data Center<BR>
+{{BZ|1091714}} - [Network labels] Network label rename should be blocked while label is configured on hosts<BR>
+{{BZ|1092087}} - Extending Preallocated Read Only Disk should fail<BR>
+{{BZ|1092371}} - Extending Thin provision Read Only Disk should block with canDoAction<BR>
+{{BZ|1092380}} - NullPointerException raised while perform REST API request api/vms/***/applications for VM w/o installed applications<BR>
+{{BZ|1092623}} - New Power Savings Policy Parameters are not in Beta 3 Build<BR>
+{{BZ|1093047}} - Failed to commit custom preview of snapshot<BR>
+{{BZ|1093303}} - Unable to upgrade rhevh - Please select an ISO with major version 6.x<BR>
+{{BZ|1093994}} - Neutron: Failed to install Host neseted_host_1. Failed to execute stage 'Misc configuration': list index out of range.<BR>
+{{BZ|1094288}} - Block IDE disks and VirtIO-SCSI disks when attaching/updating<BR>
+{{BZ|1095420}} - admin@internal can not log in to the Web admin portal if another admin user exists in an external directory<BR>
+{{BZ|1096715}} - rhevm failed to create "rhevm" bridge after add new host<BR>
+{{BZ|1096757}} - ovirt-engine failed to create management network during new host installation<BR>
+{{BZ|1097658}} - [Neutron integration] It's impossible to create network on Neutron from ovirt-engine<BR>
+{{BZ|1097736}} - [RHEVM-RHS] Host status is shown up in RHEVM UI, even when glusterd is stopped<BR>
+{{BZ|1097754}} - [engine] [RO-disk] Disbale read-only VirtIO-SCIS LUN disks in the GUI<BR>
+{{BZ|1097837}} - [engine-webadmin] Cannot create an export domain under local DC<BR>
+{{BZ|1098258}} - A movement operation of raw sparse disk from file to block domain results in Raw preallocated disk, but reports its type wrongly in the webadmin<BR>
+{{BZ|1098962}} - Batch updates might create a database deadlock<BR>
 
 ==VDSM==
 
