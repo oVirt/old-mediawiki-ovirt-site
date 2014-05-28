@@ -1,4 +1,4 @@
-== Advanced Foreman Integration ==
+[[File:Cover2.png]]
 
 === Summary ===
 [http://theforeman.org/ Foreman] [1] The Foreman is a complete lifecycle management tool for physical and virtual servers.
@@ -6,9 +6,6 @@ Through deep integration with configuration management, DHCP, DNS, TFTP, and PXE
 [https://launchpad.net/cloud-init/ Cloud-init] [1] is a tool used to perform initial setup on cloud nodes, including networking, SSH keys, timezone, user data injection, and more.  It is a service that runs on the guest, and supports various Linux distributions including Fedora, RHEL, and Ubuntu.
 
 Integrating Foreman with oVirt will help adding hypervisor hosts that are managed by Foreman to the oVirt engine (installed hosts, discovered hosts, etc.) VM configuration and etc.
-<br />
-             [[File:Cover2.png]]
-<br />
 
 Today, there is basic Foreman integration, described in [2], which allows the administrator to see hosts installed in Foreman, and get their basic details.
 This feature aims to extend this integration to cover other aspects such as Bare-Metal provisioning, VM provisioning and Host configuration.
@@ -57,24 +54,24 @@ Prerequisites:
         }                                                                       
  }   
 
-User-flow:
+<big>'''User-flow:'''</big>
+<br />
 [[File:Discover-1-phase.png]]
+<br />
 [[File:Discover-2-phase.png]]
+<br />
 [[File:Discover-3-phase.png]]
-[[File:Discover-4-phase.png]]
-[[File:Discover-5-phase.png]]
+<br />
 # Add new host form in oVirt shows new list of discovered hosts taken from Foreman
-[[File:Discover-6-phase.png]]
+[[File:Discover-4-phase.png]]
 # Select a host group for this host. all proper configuration needs to be declared in host group definition (part of Foreman setup)
 # Select compute resource to allow access back from Foreman to oVirt (part of Foreman setup)
 # All "discovered" information will filled out in the new host form, edit them as desired 
-[[File:Discover-7-phase.png]]
 # Press Okay
-[[File:Discover-8-phase.png]]
+[[File:Discover-5-phase.png]]
 # the following system flow will occur:
 ## add the host to foreman using the API (Provision the discovered host)
 ## The host will be added and appear in the oVirt UI with status "Installing OS" util the following ends:
-[[File:Discover-9-phase.png]]
 ### For oVirt-node hosts - the registration will occur through the oVirt-node (assuming the kernel parameters are configured for that Foreman template), and the host will be approved automatically by Foreman
 ### For other OS - at first step won't do the registration by themselves, but foreman will do that using a plugin (plugin will send REST-API call to add or approve  the host)
 [[File:installingOSExample.png]]
