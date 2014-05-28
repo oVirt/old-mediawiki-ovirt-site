@@ -5,10 +5,19 @@
 ! el6.4
 |-
 | Build source on machine
-| v (testMirroring, testMirroringWithDistraction and testReplacePrio are failing, but they also fail on master)
-| v (testGetBondingOptions is failing, but it also fails on master)
+| v <br/>(testMirroring, testMirroringWithDistraction and testReplacePrio are failing,<br/> but they also fail on master in addition there are pep8 violation <ref>
+./lib/yajsonrpc/betterAsyncore.py:257:55: E225 missing whitespace around operator<br/>
+./tests/utilsTests.py:534:24: W602 deprecated form of raising exception<br/>
+./vdsm_hooks/fileinject/before_vm_start.py:96:80: E501 line too long (89 characters)<br/>
+</ref><br/> also found on master (probably due to pep8 version version))
+| v  <br/>(testGetBondingOptions is failing, but it also fails on master)
 |-
 | rpm installation on machine
-| row 2, cell 2
-| row 2, cell 3
+| v
+| v
+|-
+| attempt to run vdsm after installation 
+| v
+| x
 |}
+<references/>
