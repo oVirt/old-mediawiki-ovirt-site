@@ -6,6 +6,9 @@ Through deep integration with configuration management, DHCP, DNS, TFTP, and PXE
 [https://launchpad.net/cloud-init/ Cloud-init] [1] is a tool used to perform initial setup on cloud nodes, including networking, SSH keys, timezone, user data injection, and more.  It is a service that runs on the guest, and supports various Linux distributions including Fedora, RHEL, and Ubuntu.
 
 Integrating Foreman with oVirt will help adding hypervisor hosts that are managed by Foreman to the oVirt engine (installed hosts, discovered hosts, etc.) VM configuration and etc.
+<br />
+             [[File:Cover2.png]]
+<br />
 
 Today, there is basic Foreman integration, described in [2], which allows the administrator to see hosts installed in Foreman, and get their basic details.
 This feature aims to extend this integration to cover other aspects such as Bare-Metal provisioning, VM provisioning and Host configuration.
@@ -55,7 +58,6 @@ Prerequisites:
  }   
 
 User-flow:
-[[File:Discover-Cover.png]]
 [[File:Discover-1-phase.png]]
 [[File:Discover-2-phase.png]]
 [[File:Discover-3-phase.png]]
