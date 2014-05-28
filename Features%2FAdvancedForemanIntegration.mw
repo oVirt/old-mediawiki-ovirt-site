@@ -63,18 +63,19 @@ Prerequisites:
 [[File:Discover-3-phase.png]]
 <br />
 # Add new host form in oVirt shows new list of discovered hosts taken from Foreman
-[[File:Discover-4-phase.png]]
 # Select a host group for this host. all proper configuration needs to be declared in host group definition (part of Foreman setup)
 # Select compute resource to allow access back from Foreman to oVirt (part of Foreman setup)
 # All "discovered" information will filled out in the new host form, edit them as desired 
+[[File:discoverUIexample.png]]
 # Press Okay
+[[File:Discover-4-phase.png]]
 [[File:Discover-5-phase.png]]
 # the following system flow will occur:
 ## add the host to foreman using the API (Provision the discovered host)
 ## The host will be added and appear in the oVirt UI with status "Installing OS" util the following ends:
+[[File:installingOSExample.png]]
 ### For oVirt-node hosts - the registration will occur through the oVirt-node (assuming the kernel parameters are configured for that Foreman template), and the host will be approved automatically by Foreman
 ### For other OS - at first step won't do the registration by themselves, but foreman will do that using a plugin (plugin will send REST-API call to add or approve  the host)
-[[File:installingOSExample.png]]
 
 Open issues:
 
