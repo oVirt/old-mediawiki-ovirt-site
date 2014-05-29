@@ -1,13 +1,7 @@
 {{DISPLAYTITLE:oVirt Live}}
 
 == What is it? ==
-oVirt Live is an unofficial spin of live fedora 17[1,2], based on oVirt 3.1 release using allInOne[3] plugin.
-
-[1] [http://spins.fedoraproject.org/about fedora spins]
-
-[2] [http://fedoraproject.org/wiki/FedoraLiveCD FedoraLiveCD]
-
-[3] [http://wiki.ovirt.org/wiki/Feature/AllInOne AllInOne]
+oVirt Live is an unofficial [http://spins.fedoraproject.org/about Fedora spin] of [http://fedoraproject.org/wiki/FedoraLiveCD Fedora Live CD] and [https://projects.centos.org/trac/livecd/ CentOS Live CD], based on oVirt stable releases using [[AllInOne|All In One]] plugin.
 
 == Why do we need it? ==
 This version can be used for POC or demos, and suppose to give a sneak preview for the working product operation.
