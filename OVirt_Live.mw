@@ -69,7 +69,7 @@ add the <cpu> output from virsh to your vm xml adding match='exact' to <cpu>
 '''ChangeLog'''
 * Based on oVirt 3.4.1 final, see [[oVirt 3.4.1 release notes]]
 
-===oVirt-Live-3.4.iso - Mar 30 2013 ===
+===oVirt-Live-3.4.iso - Mar 30 2014 ===
 '''Download'''
 * EL6 based: [http://resources.ovirt.org/releases/3.4/iso/ovirt-live-3.4.0.el6ev.iso Download oVirt Live 3.4]
 '''ChangeLog'''
