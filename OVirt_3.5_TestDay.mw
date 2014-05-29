@@ -36,6 +36,8 @@
 ==oVirt 3.5 New Features  - Test Status Table==
 Please report test results on the [http://etherpad.ovirt.org/p/3.4-testday-1 first test day report etherpad] or on the table below.
 
+Following tests should be performed on all supported distributions.
+
 {| class="wikitable" border="1"
 |-
   ! Functional team
