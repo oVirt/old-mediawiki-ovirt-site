@@ -119,17 +119,35 @@ You may need to read the following documents:
 
 {| class="wikitable" border="1"
 |-
-! Scenario !! Bugs
+  ! Scenario
+  ! Tested By/ Distro
+  ! BZs
+  ! remarks
 |-
-| Setup oVirt Hosted Engine using a NFS storage domain ||
+  | Setup oVirt Hosted Engine using a NFS storage domain
+  |
+  |
+  |
 |-
-| Setup oVirt Hosted Engine using a common network interface ||
+  | Setup oVirt Hosted Engine using a common network interface
+  |
+  |
+  |
 |-
-| Setup oVirt Hosted Engine using a tagged VLAN interface ||
+  | Setup oVirt Hosted Engine using a tagged VLAN interface
+  |
+  |
+  |
 |-
-| Setup oVirt Hosted Engine using a bonded interface ||
+  | Setup oVirt Hosted Engine using a bonded interface
+  |
+  |
+  |
 |-
-| Migrate Hosted Engine VM on another host ||
+  | Migrate Hosted Engine VM on another host
+  |
+  |
+  |
 |-
 |}
 
