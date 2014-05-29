@@ -84,7 +84,7 @@ vdsm start                                                 [FAILED]<br/>
 |-
 |-
 | connect to engine & create snapshots
-| v
+| v-snapshots created successfully
 | cannot currently connect el6.4 due to an upstream bug
 
 |}
