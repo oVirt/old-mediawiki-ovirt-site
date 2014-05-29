@@ -69,7 +69,10 @@ vdsm start                                                 [FAILED]<br/>
 | change vdsm.conf ssl = false<br/>validate-config should fail<br/> configure --force and run vdsm should run ok
 | 
 | v
-
+|-
+| getVdsCaps should work well with/without ssl using -s or not in vdsClient
+| 
+| v
 |}
 
 {| class="wikitable" border="1"
