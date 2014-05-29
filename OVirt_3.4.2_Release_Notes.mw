@@ -109,7 +109,12 @@ A new oVirt Live ISO is available:
 ==VDSM==
 
 ==ovirt-node-plugin-vdsm==
-
-
+{{BZ|1100226}} - engine_page: catch exception from vdscli.connect()
+{{BZ|1097645}} - engine_page: replace netinfo to xmlrpc
+{{BZ|1096074}} - engine_page: set password when no address is used
+{{BZ|1088218}} - spec: remove uneeded sed's
+{{BZ|1065401}} - engine_page: Display correctly proto for Manage by
+{{BZ|1081042}} - engine_page: Remove Retrieve Certificate button
+{{BZ|1064206}} - engine_page: network is required to register tab
 [[Category:Documentation]]
 [[Category:Releases]]
