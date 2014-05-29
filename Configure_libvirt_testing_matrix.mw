@@ -54,7 +54,7 @@ vdsm start                                                 [FAILED]<br/>
 | v 
 |
 |-
-| vdsm-tool configure --force<br/> compare configuration files with master configured files.
+| vdsm-tool configure --force<br/> '''compare configuration files with master configured files.'''
 | v (order changes)
 | v (order changes)
 |-
@@ -65,6 +65,11 @@ vdsm start                                                 [FAILED]<br/>
 | upgrade from master vdsm<br/>test is-configured, validate-config<br/> remove-config, configure --force and run vdsm
 | 
 | v
+|-
+| change vdsm.conf ssl = false<br/>validate-config should fail<br/> configure --force and run vdsm should run ok
+| 
+| v
+
 |}
 
 {| class="wikitable" border="1"
@@ -73,7 +78,7 @@ vdsm start                                                 [FAILED]<br/>
 ! ovirt Node
 |-
 | Create iso from source.
-| row 1, cell 2
+| v (By Douglas! Thanks!)
 |-
 | row 2, cell 1
 | row 2, cell 2
