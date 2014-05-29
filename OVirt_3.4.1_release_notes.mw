@@ -259,10 +259,7 @@ Bugs fixed between RC and GA:
 ==VDSM==
 
 ==ovirt-node-plugin-vdsm==
-- engine_page: order imports<br>
 {{BZ|1058257}} - engine_page: use vdsm to detect mgmt interface<br>
-- engine_page: remove unused app from ovirt.node<br>
-- engine_page: remove unused import: exceptions<br>
 {{BZ|1057453}} - engine_page: display url/port only on available<br>
 [[Category:Documentation]]
 [[Category:Releases]]
