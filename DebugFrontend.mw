@@ -16,7 +16,7 @@ Following commands should be executed from within the Engine source directory, u
 
 First, build Engine from source:
 <pre>
-$ make clean install-dev PREFIX="$OVIRT_OUT" DEV_EXTRA_BUILD_FLAGS_GWT_DEFAULTS="-Dgwt.userAgent=$GWT_USER_AGENT -Dgwt.cssObfuscationStyle=pretty" BUILD_GWT_WEBADMIN="1" BUILD_GWT_USERPORTAL="1" [extra makefile options if necessary]
+$ make clean install-dev PREFIX="$OVIRT_OUT" DEV_EXTRA_BUILD_FLAGS_GWT_DEFAULTS="-Dgwt.userAgent=$GWT_USER_AGENT -Dgwt.cssResourceStyle=pretty" BUILD_GWT_WEBADMIN="1" BUILD_GWT_USERPORTAL="1" [extra makefile options if necessary]
 </pre>
 
 * <code> OVIRT_OUT</code> points to Engine build output directory
@@ -27,7 +27,7 @@ $ make clean install-dev PREFIX="$OVIRT_OUT" DEV_EXTRA_BUILD_FLAGS_GWT_DEFAULTS=
 ** <code>safari</code> - Safari & Google Chrome
 ** <code>opera</code> - Opera
 
-<code>-Dgwt.cssObfuscationStyle=pretty</code> causes GWT to compile with human-readable CSS names, for much easier development and debugging using Firebug or Developer Tools. <code>gwt.cssObfuscationStyle</code> defaults to <code>obf</code>, which means "obfuscated". <code>obf</code> should be used for production builds (and is the default if <code>-Dgwt.cssObfuscationStyle=pretty</code> if not specified.
+<code>-Dgwt.cssResourceStyle=pretty</code> causes GWT to compile with human-readable CSS names, for much easier development and debugging using Firebug or Developer Tools. <code>gwt.cssResourceStyle</code> defaults to <code>obf</code>, which means "obfuscated". <code>obf</code> should be used for production builds (and is the default if <code>-Dgwt.cssResourceStyle=pretty</code> if not specified.
 
 Tip: ''Never use <code>ie6</code> with <code>gwt.userAgent</code>, Microsoft Internet Explorer 6 and 7 are '''not''' supported by oVirt web applications.''
 
@@ -110,7 +110,7 @@ $ make clean install-dev [usual makefile options] DEV_BUILD_GWT_DRAFT="1"
 
 Tip: ''Use draft mode only when profiling or analyzing GWT application code, don't use it for regular Engine builds.''
 
-Note: To prevent CSS name obfuscation, use <pre>DEV_EXTRA_BUILD_FLAGS_GWT_DEFAULTS="-Dgwt.cssObfuscationStyle=pretty"</pre> as explained above.
+Note: To prevent CSS name obfuscation, use <pre>DEV_EXTRA_BUILD_FLAGS_GWT_DEFAULTS="-Dgwt.cssResourceStyle=pretty"</pre> as explained above.
 
 == Frequently asked questions ==
 ''Q: My web browser doesn't prompt me to install GWT Developer Plugin.''
