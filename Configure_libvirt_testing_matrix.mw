@@ -61,5 +61,9 @@ vdsm start                                                 [FAILED]<br/>
 | vdsm-tool is-configured<br/>True expected
 | v 
 | v 
+|-
+| upgrade from master vdsm<br/>test is-configured, validate-config<br/> remove-config, configure --force and run vdsm
+| 
+| v
 |}
 <references/>
