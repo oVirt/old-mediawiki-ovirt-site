@@ -4,10 +4,8 @@
 oVirt Live is an unofficial [http://spins.fedoraproject.org/about Fedora spin] of [http://fedoraproject.org/wiki/FedoraLiveCD Fedora Live CD] and [https://projects.centos.org/trac/livecd/ CentOS Live CD], based on oVirt stable releases using [[AllInOne|All In One]] plugin.
 
 == Why do we need it? ==
-This version can be used for POC or demos, and suppose to give a sneak preview for the working product operation.
-
-simplify the the installation for new users, and will allow users to experiment with oVirt before later installing it.
-
+oVirt Live can be used for POC or demos, and for giving a sneak preview on the working product operation.
+It simplifies the installation for new users, and will allow users to experiment with oVirt before installing it.
 
 == How can I use it? ==
 oVirt Live comes as a live os, you can either use it:
