@@ -1,3 +1,5 @@
+Results compared against same machine with master vdsm on it:
+(except for remove-config which does not exist on master.)
 {| class="wikitable" border="1"
 |-
 ! 
@@ -46,5 +48,18 @@ usage: <br/>
  vdsm: stopped during execute check_is_configured task (task returned with error code 1).<br/>
 vdsm start                                                 [FAILED]<br/>
 </ref>
+|-
+| vdsm-tool is-configured<br/>False expected
+| v 
+| v 
+|
+|-
+| vdsm-tool configure --force<br/> compare configuration files with master configured files.
+| v (order changes)
+| v (order changes)
+|-
+| vdsm-tool is-configured<br/>True expected
+| v 
+| v 
 |}
 <references/>
