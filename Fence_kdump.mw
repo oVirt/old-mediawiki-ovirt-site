@@ -189,20 +189,21 @@ Following config values are used:
 |-
 | colspan="3" | &nbsp;
 |-
-| rowspan="4" | vdsm
+| rowspan="2" | vdsm
 |-
 |Detect status of kdump support for host
-| Patch on review
+| style="background-color: lightgreen" | Done
 |-
-|Add dependency to kexec-tools package
-| Coding
+| colspan="3" | &nbsp;
 |-
-|Configure fence_kdump during host deploy
+| rowspan="2" | ovirt-host-deploy
+|-
+|Create plugin to configure fence_kdump during host deploy
 | Coding
 |-
 | colspan="3" | &nbsp;
 |-
-| rowspan="7" | engine
+| rowspan="8" | engine
 |-
 |Display status of kdump configuration for host
 | style="background-color: lightgreen" | Done
@@ -213,14 +214,17 @@ Following config values are used:
 |Add  fence_kdump_send configuration to vdc_options
 | Patch on review
 |-
-|Display warning when host kdump detection is enabled, but kdump not configured for host
-| style="background-color: red" | 
-|-
 |Implement standalone fence_kdump listener
 | Patch on review
 |-
 |Add fence_kdump handling to fencing flow
 | Patch on review
+|-
+|Execute fence_kdump configuration during host deploy
+| Coding
+|-
+|Display warning when host kdump detection is enabled, but kdump not configured for host
+| Coding
 |-
 | colspan="3" | &nbsp;
 |-
@@ -239,6 +243,6 @@ Following config values are used:
 | Enable kdump support in kernel
 | style="background-color: red" | 
 |-
-| Included kexec-tools package with fence_kdump configuration support
+| Include kexec-tools package with fence_kdump configuration support
 | style="background-color: red" | 
 |}
