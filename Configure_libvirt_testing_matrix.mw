@@ -73,6 +73,11 @@ vdsm start                                                 [FAILED]<br/>
 | getVdsCaps should work well with/without ssl using -s or not in vdsClient
 | 
 | v
+|-
+| remove vdsm rpm and check configuration files<br/> vdsm sections should be removed
+| 
+| v
+
 |}
 
 {| class="wikitable" border="1"
