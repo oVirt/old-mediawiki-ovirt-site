@@ -1,5 +1,3 @@
-[[File:Cover2.png]]
-
 === Summary ===
 [http://theforeman.org/ Foreman] [1] The Foreman is a complete lifecycle management tool for physical and virtual servers.
 Through deep integration with configuration management, DHCP, DNS, TFTP, and PXE-based unattended installations, Foreman manages every stage of the lifecycle of your physical or virtual servers. The Foreman provides comprehensive, auditable interaction facilities including a web frontend and robust, RESTful API. 
