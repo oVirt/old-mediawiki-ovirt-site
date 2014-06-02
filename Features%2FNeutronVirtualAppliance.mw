@@ -62,13 +62,18 @@ The neutron appliance for ovirt-engine 3.5 is based on the [http://openstack.red
 :# User name: neutron
 :# Password: should be found by: 'grep CONFIG_NEUTRON_KS_PW /root/packstack-answers*.txt' on the neutron server vm.
 :# Tenant name: services
-Verify 'connectivity test' passes (by clicking the 'Test' button)
+Verify 'connectivity test' passes (by clicking the 'Test' button).
+<br>
+[[File:AddProvider.png]]
+<br>
 :* On the Agent Configuration left tab:
 :# Bridge Mappings: vmnet:br-neutron
+:# Broker Type: RabbitMQ
 :# Host: NEUTRON_SERVER_IP_ADDRESS
 :# Port: 5672
 :# Username: guest
 :# Password: guest
+[[File:AddProviderAmqp.png]]
 
 ==== Install a Host with the network provider ====
 # Configure OpenStack repository on the host, i.e.: sudo yum install -y http://rdo.fedorapeople.org/rdo-release.rpm
