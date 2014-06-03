@@ -58,6 +58,12 @@ ovirt.engine.aaa.authn.authz.plugin - Name of the authorization extension to whi
 
 A developer of the extensions should work with the API and pack the extensions developed as a Jboss module.
 
+==== Block diagram ====
+
+The following is a block diagram that describes the relatonship between the engine , ui and the extensions
+[[File:Aaa_block_diagram.png]]
+
+
 ==== Flows ====
 
 * Engine starts
