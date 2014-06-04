@@ -318,6 +318,9 @@ More information can be found in the [[Features/oVirt_Windows_Guest_Tools|oVirt 
 
 
 
+== oVirt Image Uploader ==
+{{BZ|1102226}} - option insecure doesn't work<BR>
+
 == oVirt ISO Uploader ==
 {{BZ|1100824}} - option insecure doesn't work<BR>
 
