@@ -52,6 +52,8 @@ The whole thing is a fragile hack, with plenty of stuff yet to be solved. The TO
 # There is no <tt><link state="down"></tt>.
 # VNC password cannot be set <tt>libvirtError: unsupported configuration: device type 'graphics' cannot be updated</tt>
 # I failed to connect to the VNC port from outside dom0; I have no idea why I get <tt>unable connect to socket: Connection refused (111)</tt>  with iptables set to ACCEPT all.
+# Live migration is in the works
+# Migration cancellation is missing
 
 === Xen ===
 # When asked to start a domain with only 64MiB RAM, things break in an odd way. qemu dies, but libvirt reports the domain as running.
