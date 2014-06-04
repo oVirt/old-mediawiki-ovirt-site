@@ -12,10 +12,10 @@ This page describes the hacked solution, and tracks the known gaps to its fruiti
 # I needed to modify Vdsm in so it would be possible to run Xen VMs. My patches are not expected to by accepted upstream, at least not in their current form, so you would need to build Vdsm [[Vdsm Developers|from source]], first applying the [http://gerrit.ovirt.org/#/q/status:open+project:vdsm+branch:master+topic:xen,n,z Xen-related patches]. When you build Vdsm, take note of [[Vdsm_Developers#Building_with_hooks_support]].
 # Install Vdsm on your dom0. Do not forget to install vdsm-hook-xen.rpm, too.
 # On your Engine host, 
- # cat <<EOF >/etc/ovirt-host-deploy.conf.d/50-xen.conf 
- [environment:enforce]
- VDSM/checkVirtHardware=bool:False
- EOF
+#: # cat <<EOF >/etc/ovirt-host-deploy.conf.d/50-xen.conf 
+#: [environment:enforce]
+#: VDSM/checkVirtHardware=bool:False
+#: EOF
 # Log into your Engine's admin portal, and add your dom0 to your cluster. Define a VM and start it up.
 
 == What's not Done ==
