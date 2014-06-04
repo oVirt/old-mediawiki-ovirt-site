@@ -36,15 +36,13 @@ The whole thing is a fragile hack, with plenty of stuff yet to be solved. The TO
 # Implement virConnectCompareCPU. At the moment, Vdsm connects to <tt>qemu:///system</tt> to use this API call.
 # Expose an alias per virtual device. Aliases are assigned by libvirt and are used to uniquely identify a device.
 # When a cdrom is specified with
-<pre>
-                <disk device="cdrom" snapshot="no" type="file">
-                        <source file="empty.iso" startupPolicy="optional"/>
-                        <target bus="ide" dev="hdc"/>
-                        <readonly/>
-                        <serial/>
-                </disk>
-</pre>
-the VM does not attempt to boot from the following hard disk.
+#:               <tt><disk device="cdrom" snapshot="no" type="file">
+#:                        <source file="empty.iso" startupPolicy="optional"/>
+#:                        <target bus="ide" dev="hdc"/>
+#:                        <readonly/>
+#:                        <serial/>
+#:                </disk></tt>
+#:the VM does not attempt to boot from its hard disk. Only complete removal of cdrom worked for me.
 # When the above cdrom spec has file="", libvirt does a frightening null-pointer dereferencing, instead of interpreting this as an empty cdrom
 # On an occasion which I did not reproduce, <tt>virsh dumpxml dom</tt> reported a wrong vnc port. This made <tt>virt-viewer</tt> fail, while <tt>xl vncviewer</tt> worked fine.
 # Some consider this a Xen feature, but for me it is a bug: if for some reason qemu dies, the Xen domain may still live on, and libvirt does not report of any issue. That's usually bad of HVM guests - qemu was started for a reason (to emulate devices) and without it, the guest is not going to get very far along. I'd rather have a means to specify that I'd like such a VM to be shut down in this condition, or at least be told that it has lost its device emulation.
