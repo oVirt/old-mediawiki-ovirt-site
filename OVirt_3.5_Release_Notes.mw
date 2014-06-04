@@ -318,6 +318,9 @@ More information can be found in the [[Features/oVirt_Windows_Guest_Tools|oVirt 
 
 
 
+== oVirt ISO Uploader ==
+{{BZ|1100824}} - option insecure doesn't work<BR>
+
 == oVirt Log Collector ==
 {{BZ|1088172}} - [engine-log-collector] problem with sos3 on rhel7 as general.all_logs no longer exist<BR>
 
