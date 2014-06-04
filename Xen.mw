@@ -17,6 +17,7 @@ This page describes the hacked solution, and tracks the known gaps to its fruiti
 #: VDSM/checkVirtHardware=bool:False
 #: EOF
 # Log into your Engine's admin portal, and add your dom0 to your cluster. Define a VM and start it up.
+# To actually have something running inside the VM, I've copied a Fedora image onto the VM's disk volume. I suppose that importing a VM would work, too.
 
 == What's not Done ==
 The whole thing is a fragile hack, with plenty of stuff yet to be solved. The TO-DO list is split to Vdsm-side fixes, and libvirt-side fixes.
