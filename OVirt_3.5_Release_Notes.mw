@@ -323,6 +323,7 @@ More information can be found in the [[Features/oVirt_Windows_Guest_Tools|oVirt 
 
 == oVirt Log Collector ==
 {{BZ|1088172}} - [engine-log-collector] problem with sos3 on rhel7 as general.all_logs no longer exist<BR>
+{{BZ|1098029}} - "rhsc-log-collector" takes too long even to prompt for the REST API password before it actually start collecting information from selected servers<BR>
 
 == oVirt Hosted Engine Setup ==
 {{BZ|1043906}} - hosted engine deployment always try to add hosts to  cluster named "default". If the cluster name is different host won't be automatically added to RHEVM.<BR>
