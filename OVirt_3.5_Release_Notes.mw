@@ -123,6 +123,63 @@ More information can be found in the [[Features/oVirt_Windows_Guest_Tools|oVirt 
 = <span class="mw-customtoggle-1" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Click to Show/Hide]</span></span>Bugs Fixed = 
 <div  id="mw-customcollapsible-1" class="mw-collapsible mw-collapsed">
 ==oVirt Engine==
+'''Fixed in ovirt-engine-3.5.0_alpha2'''<BR>
+
+{{BZ|863074}} - UserRole permission on System/DC/Cluster doesn't work as expected<BR>
+{{BZ|902073}} - malformated guid's cause http 500<BR>
+{{BZ|955641}} - webadmin: we can create a V1 format posix domain when selecting "None" option in Data Center<BR>
+{{BZ|969026}} - [engine] Storage Domain that was destroyed from GUI did not get completely removed from DB<BR>
+{{BZ|1000934}} - [ja_JP][fr_FR][Admin Portal] Truncation string in the message of 'Tasks' pane.<BR>
+{{BZ|1006313}} - [rhevm] Webadmin - SearchBox "Template: childcount <1" doesn't work anymore<BR>
+{{BZ|1044598}} - [RHSC] Error message on failure to start remove-brick needs correction.<BR>
+{{BZ|1044847}} - [RHSC][RFE] Sort the host column in the Clusters Services tab, when 'Show All' is used.<BR>
+{{BZ|1055224}} - [engine-backend] Hotplug disk isn't blocked while VM is in illegal state for disk hotplug, when attaching a disk with active=true<BR>
+{{BZ|1056935}} - [RFE] A failure in a merge operation should fallback to a partial merge, not a broken snapshot<BR>
+{{BZ|1058737}} - [RFE] Restart HA VMs when power management reports host is in powered off state<BR>
+{{BZ|1063797}} - [webadmin] [network labels] missing Label information in In Network main tab ---> the 'Hosts sub-tab'<BR>
+{{BZ|1063876}} - OVIRT-CLI: async parameter counts any value except true as false when it should accept only true/false values<BR>
+{{BZ|1064712}} - [RHSC] - Skipped file count filed  should  be removed from the remove-brick status dialog as it is always going to be zero.<BR>
+{{BZ|1065227}} - [RHSC] - Rebalance icon in the activities column changes to unknown (?)<BR>
+{{BZ|1070674}} - Provide informations about fencing in RHEV-M<BR>
+{{BZ|1070873}} - [notifier] 'VM is down with error' event has mail subject 'VM $vmname is down. Exit message: $reason'<BR>
+{{BZ|1072527}} - bogus DB entry - VDS_INITIATED_RUN_VM_FAIL event_up_name<BR>
+{{BZ|1079964}} - Non operational host- audit log doesn't contain bond's name if there is also problematic nic<BR>
+{{BZ|1082110}} - Event ID 1200 (VM rename) does not record the initating User id<BR>
+{{BZ|1087042}} - Tool tip hovers permanently in the Virtual Machines - Disk Tab<BR>
+{{BZ|1087059}} - [RFE] NFS custom mountoptions<BR>
+{{BZ|1087498}} - Domain of group is not shown in general sub tab of users tab.<BR>
+{{BZ|1087917}} - [GUI/General sub-tab] Windows-based Template & Pool: Time Zone is blank when set to the global default<BR>
+{{BZ|1089381}} - Reboot button is not disabled for VM pools<BR>
+{{BZ|1091685}} - [TEXT] Attaching disk to vm in 'reboot in progress' state returns a confusing Operation failed message<BR>
+{{BZ|1092070}} - ;current should work for cdroms collection, not just for cdrom resources<BR>
+{{BZ|1093784}} - The Expect header is ignored<BR>
+{{BZ|1094023}} - [engine-backend] [iSCSI multipath] Internal engine error when vdsm fails to connect to storage server with IscsiNodeError<BR>
+{{BZ|1095114}} - misaligned arrow icon in footer bar<BR>
+{{BZ|1095223}} - Import VM fail on 3.3 "Cluster doesn't exist", though it does exist.<BR>
+{{BZ|1095240}} - [RFE] Support logging of commands parameters<BR>
+{{BZ|1095242}} - do not use com.google.gwt.user.client.Cookies in ReportModel<BR>
+{{BZ|1095374}} - iscsi storage dialog - alignment issues<BR>
+{{BZ|1095494}} - [RFE] Support single disk snapshot on preview snapshot action in REST-API<BR>
+{{BZ|1095635}} - Run once vm via REST with <pause>true</pause> parameter, save this parameter true also in next runs<BR>
+{{BZ|1096646}} - Cluster Compatibility Version should default to the latest version<BR>
+{{BZ|1096665}} - In webadmin, the newly introduced Console side tab in new/edit cluster dialog to configure a SPICE proxy for individual clusters is NOT required and should be removed<BR>
+{{BZ|1096845}} - GUI fields unaligned since Look&Feel patch<BR>
+{{BZ|1096884}} - [engine-backend] When committing a snapshot that contains disk and conf. of the 'Active VM', engine doesn't report about the result of the operation<BR>
+{{BZ|1097082}} - "CPU Architecture" should be removed from New/Edit Cluster dialog window<BR>
+{{BZ|1097754}} - [engine] [RO-disk] Disbale read-only VirtIO-SCIS LUN disks in the GUI<BR>
+{{BZ|1099083}} - Need warning message for moving sparse disk from file to block as it will become preallocated<BR>
+{{BZ|1099415}} - [Python/Java SDK]HostNICLabel.add and NetworkLabel.add methods lacks expect and correlation_id parameters<BR>
+{{BZ|1099903}} - After adding two power management agents to a host, impossible to remove/override second agent<BR>
+{{BZ|1101003}} - Creating vm from template Menu has options that are redundant<BR>
+{{BZ|1101541}} - [engine-backend] [external-provider] engine failure while createVolume task is running in vdsm (as part of importing an image from glance), leaves image in LOCKED state<BR>
+{{BZ|1101565}} - Cannot approve hosts using REST API<BR>
+{{BZ|1101737}} - [LOG] Ability to log org.ovirt.engine.core.common.businessentities.LUNs class<BR>
+{{BZ|1102050}} - Incorrect schema or REST API answer<BR>
+{{BZ|1103490}} - [REST API]: Missing VM statistics field.<BR>
+{{BZ|1103499}} - Performing Live Storage Migration when target domain equal to source domain will cause infinite loop of 'LiveMigrateDiskCommand'<BR>
+{{BZ|1104423}} - in the Sessions sub-tab of Virtual Machine press F5 to refresh the webpage failed(display  blank page)<BR>
+
+
 '''Fixed in ovirt-engine-3.5.0_alpha1.1'''<BR>
 {{BZ|891073}} - [rhevm-dwh] History DB - Change Fields "Network Name" to "Logical Network Name"<BR>
 {{BZ|1017030}} - [Admin Portal] User $user@$domain attach to VM <UNKNOWN> in VM Pool test was initiated by $user.<BR>
