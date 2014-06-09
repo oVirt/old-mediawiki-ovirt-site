@@ -115,6 +115,9 @@ A new oVirt Live ISO is available:
 {{BZ|1088218}} - spec: remove uneeded sed's<br>
 {{BZ|1065401}} - engine_page: Display correctly proto for Manage by<br>
 {{BZ|1081042}} - engine_page: Remove Retrieve Certificate button<br>
-{{BZ|1064206}} - engine_page: network is required to register tab
+{{BZ|1064206}} - engine_page: network is required to register tab<br>
+{{BZ|1104009}} - engine_page: add exception for ENETUNREACH<br>
+{{BZ|1079087}} - hooks: Adding hooks for ovirt-node-upgrade	<br>
+{{BZ|1102995}} - engine_page: remove dep. from ovirt_config_setup.engine<br>
 [[Category:Documentation]]
 [[Category:Releases]]
