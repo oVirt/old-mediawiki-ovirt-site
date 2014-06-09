@@ -15,11 +15,11 @@ Allow to simply and directly clone the VM.
 * Status: done
 
 == Background ==
-Up until now there were the following ways to create make a copy of the VM:
+Up until now there were the following ways to create a copy of the VM:
 * Make a template, make a new VM from this template
 * Make a snapshot and clone the snapshot
 
-It would be useful to provide a way to clone a VM directly. 
+It would be useful to provide a way to clone a VM directly.
 
 == Implementation ==
 All the logic is implemented in the CloneVmCommand class. Since it is very similar to cloning a VM from a snapshot, the common logic between the CloneVmCommand and AddVmFromSnapshotComman has been extracted to the common AddVmAndCloneImageCommand base class.
