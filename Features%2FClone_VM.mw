@@ -25,8 +25,18 @@ It would be useful to provide a way to clone a VM directly.
 All the logic is implemented in the CloneVmCommand class. Since it is very similar to cloning a VM from a snapshot, the common logic between the CloneVmCommand and AddVmFromSnapshotComman has been extracted to the common AddVmAndCloneImageCommand base class.
 
 == Frontend ==
+As shown in the following picture a new action button called "Clone VM" has been added to webadmin/userportal virtual machines tab:
+
+[[File:CloneVmHeader.png]]
+
+When clicked, a new window will be opened containing only the new name of the VM:
+
+[[File:CloneVmWindow.png‎]]
+
+After clicking OK the clone of the VM will be made.
 
 == REST API ==
+
 
 == Testing ==
 == Test Case 1 ==
