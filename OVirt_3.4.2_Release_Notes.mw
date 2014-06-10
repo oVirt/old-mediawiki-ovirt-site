@@ -97,6 +97,11 @@ A new oVirt Live ISO is available:
 {{BZ|1098258}} - A movement operation of raw sparse disk from file to block domain results in Raw preallocated disk, but reports its type wrongly in the webadmin<BR>
 {{BZ|1098962}} - Batch updates might create a database deadlock<BR>
 
+Bugs fixed between RC and GA:
+
+{{BZ|1095635}} - Run once vm via REST with <pause>true</pause> parameter, save this parameter true also in next runs<BR>
+{{BZ|1095370}} - Tracker: oVirt 3.4.2 release<BR>
+
 == oVirt Log Collector ==
 {{BZ|1088172}} - [engine-log-collector] problem with sos3 on rhel7 as general.all_logs no longer exist<BR>
 
