@@ -124,5 +124,12 @@ Bugs fixed between RC and GA:
 {{BZ|1104009}} - engine_page: add exception for ENETUNREACH<br>
 {{BZ|1079087}} - hooks: Adding hooks for ovirt-node-upgrade	<br>
 {{BZ|1102995}} - engine_page: remove dep. from ovirt_config_setup.engine<br>
+
+== oVirt ISO Uploader ==
+{{BZ|1102535}} - option insecure doesn't work<BR>
+
+== oVirt Image Uploader ==
+{{BZ|1104500}} - option insecure doesn't work<BR>
+
 [[Category:Documentation]]
 [[Category:Releases]]
