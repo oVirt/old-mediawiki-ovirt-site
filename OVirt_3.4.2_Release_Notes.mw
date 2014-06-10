@@ -107,6 +107,7 @@ Bugs fixed between RC and GA:
 
 == oVirt Hosted Engine HA ==
 {{BZ|1092075}} - Could not start ha-agent with exception AttributeError: 'dict' object has no attribute 'engine_status'<BR>
+{{BZ|1101299}} - Hosted engine upgrade from 3.3 to 3.4, ovirt-ha-agent die after three errors<BR>
 
 == oVirt Hosted Engine Setup ==
 {{BZ|1096838}} - hosted-engine setup logs the temporary VM password<BR>
