@@ -185,7 +185,7 @@ Following config values are used:
 | style="background-color: lightgreen" | Done, included in kexec-tools >= 2.0.0-274
 |-
 |Patches for RHEL 7.1
-| Merged, waiting for package creation
+| style="background-color: lightgreen" | Done, included in kexec-tools >= 2.0.4-33
 |-
 | colspan="3" | &nbsp;
 |-
