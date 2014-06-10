@@ -178,7 +178,7 @@ Following config values are used:
 |-
 | rowspan="4" | kexec-tools
 |-
-|Patches for Fedora
+|Patches for Fedora 20
 | style="background-color: lightgreen" | Done, included in kexec-tools >= 2.0.4-27
 |-
 |Patches for RHEL 6.6
