@@ -199,7 +199,7 @@ Following config values are used:
 | rowspan="2" | ovirt-host-deploy
 |-
 |Create plugin to configure fence_kdump during host deploy
-| Patch on review
+| style="background-color: lightgreen" | Done
 |-
 | colspan="3" | &nbsp;
 |-
@@ -223,8 +223,8 @@ Following config values are used:
 |Execute fence_kdump configuration during host deploy
 | Patch on review
 |-
-|Display warning when host kdump detection is enabled, but kdump not configured for host
-| Coding
+|Display error when host kdump detection is enabled, but kdump not configured for host
+| Patch on review
 |-
 | colspan="3" | &nbsp;
 |-
