@@ -52,7 +52,7 @@ http://localhost:8080/api/storagedomains/xxxxxxx-xxxx-xxxx-xxxxxx/vms/xxxxxxx-xx
 [[File:UnregisterVM1.png]]
 
 ==== UI ====
-===== Import VM/Template sub-tab =====
+===== Import VM/Template sub-tabs =====
 [[File:import_vm_template_subtab.png]]
 ===== Import VM/Template Dialog =====
 [[File:import_vm_template_dialog.png]]
