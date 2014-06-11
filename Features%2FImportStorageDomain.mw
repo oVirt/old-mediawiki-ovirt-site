@@ -42,9 +42,10 @@ On attach the user will be able to choose the VMs/Templates/Disks he desire to a
 
 ==== REST ====
 ===== Get list of unregistered VM/Template =====
-[[File:unregisterVM2]]
+[[File:UnregisterVM2.png]]
 ===== Register VM to a new cluster =====
-[[File:unregisterVM1]]
+[[File:UnregisterVM1.png]]
+
 ==== UI ====
 ===== Import VM/Template sub-tab =====
 [[File:import_vm_template_subtab.png]]
