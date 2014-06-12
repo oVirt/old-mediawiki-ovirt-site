@@ -50,7 +50,7 @@ Full VM backup can be implemented for example by using the following oVirt capab
    SERVER:PORT/api/vms/VM_ID/snapshots/ID
 
 * Navigate to the wanted disk snapshot by accessing: ([[Features/Backup-Restore_API_Integration#Get_disk_snapshot_data|Example]])<BR>
-SERVER:PORT/api/vms/GUID/snapshots/GUID/disks
+  SERVER:PORT/api/vms/GUID/snapshots/GUID/disks
 
 * Attach the disk snapshot to the vm using POST request with the disk id and the snapshot id:  ([[Features/Backup-Restore_API_Integration#Attach_disk_to_backup_VM|Example]])<BR>
    (with Content-Type:application/xml header)
