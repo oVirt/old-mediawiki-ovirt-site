@@ -67,7 +67,8 @@ Full VM backup can be implemented for example by using the following oVirt capab
 * After copying the data from the disk detach the disk snapshot from the VM using the REST with the following parameters  ([[Features/Backup-Restore_API_Integration#Detach_disk_from_backup_VM|Example]]):
   URL =   http://SERVER:PORT/api/vms/GUID/disks/GUID
   Method = DELETE
-  Body=<action><detach>true</detach></action>
+  Body=
+  <action><detach>true</detach></action>
 
 === Full VM restore === 
 #  Create disks for restore
