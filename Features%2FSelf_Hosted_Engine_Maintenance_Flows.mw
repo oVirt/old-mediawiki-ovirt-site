@@ -1,6 +1,7 @@
 <!-- {{autolang|base=yes}} -->
 
 == Hosted Engine Maintenance Flow Unification ==
+{{Feature|name=Hosted Engine Maintenance Flow Unification|modules=virt|version=3.4|status=Released}}
 
 === Summary ===
 Make maintenance operations easier on hosted engine clusters and their participating nodes by providing a method to initiate HA maintenance from the engine UI.
