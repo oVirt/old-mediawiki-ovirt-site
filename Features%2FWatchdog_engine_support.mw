@@ -1,5 +1,5 @@
 == Watchdog support in Engine ==
-
+{{Feature|name=Watchdog engine support|modules=SOA|version=oVirt 3.3|status=Released}}
 === Summary ===
 This feature adds [https://en.wikipedia.org/wiki/Watchdog_Card watchdog] support to engine. The feature will be available in server VM's and especially useful when used with high availability.
 
