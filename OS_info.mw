@@ -1,4 +1,4 @@
-
+{{Feature|name=OS_info|modules=oVirt|version=3.4|status=Released}}
 === Summary ===
 This feature enables ovirt to configure all its OS info in one place, out of the code, and in a way admins could extend it or easily configure it.<br />
 It aims to merge all configuration items from the Config (currently vdc_options table) and the VmOsType.java enum to one file-based repository.<br />
