@@ -1,7 +1,7 @@
 <!-- {{autolang|base=yes}} -->
 
 == Self Hosted Engine ==
-
+{{Feature|name=Self Hosted Engine|modules=virt,storage|version=3.4|status=Released}}
 === Summary ===
 The ability to run the Engine as a VM on the hosts that are managed by this Engine, in an HA configuration, when the Engine VM can start on any of the hosts. 
 
