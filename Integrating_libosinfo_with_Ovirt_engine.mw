@@ -1,5 +1,5 @@
 == integrating with libosinfo ==
-
+{{Feature|name=Integrating libosinfo with Ovirt engine|modules=virt|version=3.4|status=Released}}
 <big>'''NOTE: this has been superseded by a different approach described [[OS_info|here]]'''</big>
 
 === Summary ===
