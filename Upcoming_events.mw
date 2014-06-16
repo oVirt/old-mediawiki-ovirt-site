@@ -8,11 +8,12 @@
 
 {{Event|name=[//events.linuxfoundation.org/events/linuxcon-north-america LinuxCon North America]|date=August 20-22, 2014|location=Chicago, IL|lead=LinuxCon is the only event covering all matters Linux - offering collaboration and education for everyone in the ecosystem from developers and maintainers to sys admins and architects to business executives and community members.}}
 
-{{Event|name=[//events.linuxfoundation.org/events/kvm-forum KVM Forum]|date=October 14-16, 2014|location=Düsseldorf, Germany|lead=Once again, it's time to bring together the community of developers and users that define the KVM ecosystem for our annual technical conference. We will discuss the current state of affairs and plan for the future of KVM, its surrounding infrastructure, and management tools. }}
 
 <noinclude>
 <endfeed/>
 
+
+{{Event|name=[//events.linuxfoundation.org/events/kvm-forum KVM Forum]|date=October 14-16, 2014|location=Düsseldorf, Germany|lead=Once again, it's time to bring together the community of developers and users that define the KVM ecosystem for our annual technical conference. We will discuss the current state of affairs and plan for the future of KVM, its surrounding infrastructure, and management tools. }}
 
 
 [[Category:Events]]
