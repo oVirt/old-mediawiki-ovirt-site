@@ -1,4 +1,5 @@
 = Running JBoss on ports 80/443 using apache_mod_ssl Module =
+{{Feature|name=OvirtEnginePort80|modules=packaging|version=|status=Released}}
 This wiki describes how to enable oVirt to run on ports 80/443 instead of 8080/8443 using apache_mod_ssl module.
 This procedure is related to a server which runs ovirt-engine with JBoss 7. 
 
