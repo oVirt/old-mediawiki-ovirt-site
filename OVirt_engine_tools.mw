@@ -13,15 +13,15 @@ Engine tools are mainly standlone java programs wrapped-up by scripts and mostly
 ==engine-manage-domains==
 Using this tool it is possible to add new authentication domains to serve as resource for users authenticating to oVirt engine.
 
-How to get the tool:
+'''How to get the tool''':<BR>
 The tool is installed when engine is installed.
 
-How to configure the tool:
+'''How to configure the tool:'''<BR>
 You can edit the configuration located at /etc/ovirt-engine/engine-manage-domains/engine-manage-domains.conf
 
-How to run the tool;
-Running basic example:
-'engine-manage-domains add --domain=<MY_DOMAIN> --provider=<ad/ipa/oldap/itds/rhds> --user=<USERNAME>' 
+'''How to run the tool:'''<BR>
+Running basic example:<BR>
+'engine-manage-domains add --domain=<MY_DOMAIN> --provider=<ad/ipa/oldap/itds/rhds> --user=<USERNAME>'
 
 ==engine-config==
 Using this tool it is possible to alter engine's  configuration 
