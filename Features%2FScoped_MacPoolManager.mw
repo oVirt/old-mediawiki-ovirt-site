@@ -28,6 +28,24 @@ Definition of domains from which MAC addresses will be allocated for each data c
 * you can use same MACs on multiple data centers. Currently no checks are done to find out whether pool definition for multiple data centers overlap or not. So if you define your pools in that way, that MAC ranges overlaps, one MAC address can be used multiple times. I'd observe that as an user error, since it's easier to stick with one global pool with allowed duplicates.
 
 == User Experience ==
+=== GUI ===
+* 'private' pool are manipulated with from datacenter dialog, where also will be created new tab for pool.
+* shared pools are managed from app config, where will be added new tab for pools. Private pools can be viewed here also, but not changed. Here you can find out, in which places is shared pool used.
+
+Below is three screenshots. 'New/edit MAC pool pane' is shared component used both in new tabs of datacenter dialog and systemconfig, which are remaining two screenshots.
+
+[[File:newMacPoolPane.png]]
+
+shared component for editing pool properties
+
+[[File:existingPools_newSharedPool.png]]
+
+component for viewing all existing pools and for creating new shared ones.
+
+[[File:datacenterDialog.png]]
+
+component for specifying datacenter related pool or for linking data center to shared pool
+
 === REST API ===
 ==== New top level collection ====
 A new macpools top level collection will be added supporting the following operations:
@@ -117,27 +135,6 @@ there are few methods for getting dc related pool based on various data you have
 
 == Implementation details of DataCenterScope==
 === DataCenterScope comments ===
-
-
-=== Gui ===
-* 'private' pool are manipulated with from datacenter dialog, where also will be created new tab for pool.
-* shared pools are managed from app config, where will be added new tab for pools. Private pools can be viewed here also, but not changed. Here you can find out, in which places is shared pool used.
-
-Below is three screenshots. 'New/edit MAC pool pane' is shared component used both in new tabs of datacenter dialog and systemconfig, which are remaining two screenshots.
-
-[[File:newMacPoolPane.png]]
-
-shared component for editing pool properties
-
-[[File:existingPools_newSharedPool.png]]
-
-component for viewing all existing pools and for creating new shared ones.
-
-[[File:datacenterDialog.png]]
-
-component for specifying datacenter related pool or for linking data center to shared pool
-
-
 
 === sample flow ===
 Lets say, that we've got one data center. It's not configured yet to have its own MAC pool. So in system is only one, shared pool, created during install/upgrade. We create few VMs and it's NICs will obtain its MAC from this pool, marking them as used. Next we alter data center definition, so now it uses it's own MAC pool. In system from this point on exists two MAC pools, one shared pool and one related to this data center. As a last step in alteration of data center definition, which triggered new pool creation, all MAC which should be present in newly created pool are moved there from previously used pool. Now we realized, that we actually don't want that data center have its own MAC pool, so we alter it's definition removing MAC pool ranges definition, and selecting shared pool again. Pool related to this data center will be removed, because i'ts not used any more, and again, all MAC will be moved from pool to be removed back to shared one.
