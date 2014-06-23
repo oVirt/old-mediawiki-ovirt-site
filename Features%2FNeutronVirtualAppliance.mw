@@ -76,7 +76,8 @@ Verify 'connectivity test' passes (by clicking the 'Test' button).
 [[File:AddProviderAmqp.png]]
 
 ==== Install a Host with the network provider ====
-# Configure OpenStack repository on the host, i.e.: sudo yum install -y http://rdo.fedorapeople.org/rdo-release.rpm
+# Configure OpenStack repository on the host (for ovirt-3.5 use rdo-release-icehouse-3):
+## yum install -y http://repos.fedorapeople.org/repos/openstack/openstack-icehouse/rdo-release-icehouse-3.noarch.rpm
 # Install the host with external network provider by clicking the 'Network Provider' left tab
 # Select the newly configured 'neutron' network provider and set:
 ## bridge_mappings = vmnet:br-neutron
