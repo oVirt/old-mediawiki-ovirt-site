@@ -65,6 +65,7 @@ Experienced users can also compile from source, using the guides for the [[OVirt
 
 ===Europe===
 <ul>
+* [http://ftp.nluug.nl/os/Linux/virtual/ovirt/ NLUUG] ([http://ftp.nluug.nl/os/Linux/virtual/ovirt/ovirt-3.4/ oVirt 3.4] | [http://ftp.nluug.nl/os/Linux/virtual/ovirt/ovirt-3.4-snapshot oVirt 3.4 Nightly] | [http://ftp.nluug.nl/os/Linux/virtual/ovirt/ovirt-master-snapshot/ oVirt 3.5 Nightly])
 * [http://ftp.snt.utwente.nl/pub/software/ovirt/ SNT - University of Twente] ([http://ftp.snt.utwente.nl/pub/software/ovirt/ovirt-3.4/ oVirt 3.4] | [http://ftp.snt.utwente.nl/pub/software/ovirt/ovirt-3.4-snapshot oVirt 3.4 Nightly] | [http://ftp.snt.utwente.nl/pub/software/ovirt/ovirt-master-snapshot/ oVirt 3.5 Nightly])
 </ul>
 
