@@ -88,6 +88,16 @@ Verify 'connectivity test' passes (by clicking the 'Test' button).
 # Run the following on the host, to connect neutron integration bridge to neutron network:
 ## ovs-vsctl add-port br-neutron neutron
 
+From this point, the following use cases are supported:
+# Create external networks on the neutron server from ovirt-engine
+# Import networks from neutron server into ovirt-engine
+# Add subnets to the external networks
+# Configure security groups on the networks' profiles
+# Attach vms to the external networks
+
+'''Note: ''' It is highly recommended to install all of the hosts within the same cluster with the external network provider (or to configured the hosts manually).
+If a cluster contains a mixture of hosts, both installed with the external provider and without it, there are expected failures to schedule the vm, as external networks are considered as 'non-required' networks in ovirt-engine 3.5.
+
 === Creating the image ===
 Steps for creating the image and sealing it are described [https://github.com/masayag/ovirt-appliance#creating-the-image here].
 Once the image is created, follow the next steps:
