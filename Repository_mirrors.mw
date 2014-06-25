@@ -1,0 +1,64 @@
+=Mirroring oVirt repositories=
+
+We have a simple setup to allow mirroring of the oVirt repositories. Right now the mirroring is done through ssh with rsync. You'll find in '''resources.ovirt.org''' a user named '''mirror''', that's the user that the mirrors should use, you'll see that it has a lot of entries under ''~/.ssh/authorized_keys'', there each entry is restricted to run only a specific command that allows them to rsync the respo directory.
+
+=Adding a mirror=
+
+To add a mirror you just need to add it's public ssh key in  ''~mirror/.ssh/authorized_keys'', with the command restriction as the other entries. Then when the mirror is confirmed you can add it to the mirrorlist (''/var/www/html/pub/yum-repo/mirrorlist'') and to this wiki.
+
+After the key is added, you should be able to rsync from it using the command:
+
+  rsync -rltHvvzP mirror@linode01.ovirt.org:/var/www/html destination/dir
+
+=Current mirrors=
+
+{| class="wikitable" border="1"
+|-
+! Name
+! Location
+! URLs
+! Contact
+! Other
+|-
+| [http://www.nluug.nl NLUUG]
+| The Netherlands (Amsterdam)
+| [http://ftp.nluug.nl/os/Linux/virtual/ovirt/ http] [ftp://ftp.nluug.nl/pub/os/Linux/virtual/ovirt/ ftp]
+| ftpmirror-beheer_at_nluug.nl
+| Syncing on all odd hours,  bandwidth is currently 4 Gb/s and we do IPV4 and IPV6
+|-
+| [http://www.aarnet.edu.au/ AARNet Pty Ltd]
+| Australia
+|
+| alex.dodson_at_aarnet.edu.au
+|
+|-
+| [http://www.snt.utwente.nl/ Studenten Net Twente (SNT)]
+| The Netherlands
+| [http://ftp.snt.utwente.nl/pub/software/ovirt/ http] [ftp://ftp.snt.utwente.nl/pub/software/ovirt/ ftp]
+| ftpcom at snt.utwente.nl
+|
+|-
+| [http://www.gtlib.gatech.edu/ Georgia Tech Software Library (GTlib)]
+| United States (Georgia)
+| [http://www.gtlib.gatech.edu/pub/oVirt/pub/ http] [ftp://www.gtlib.gatech.edu/pub/oVirt/pub/ ftp]
+| neil.bright_at_oit.gatech.edu
+|
+|-
+| [http://www.ibiblio.org/ ibiblio]
+| United States (North Carolina)
+| [http://mirrors.ibiblio.org/ovirt/pub/ http] [ftp://mirrors.ibiblio.org/ovirt/pub/ ftp]
+| cmpalmer_at_ibiblio.org
+|
+|-
+| [http://www.rit.edu Rochester Institute of Technology]
+| United States (New York)
+| [http://mirrors.rit.edu/ovirt/pub/ http] [ftp://mirrors.rit.edu/ovirt/pub/ ftp]
+| pfmeec_at_rit.edu
+|
+|-
+| [http://duke.edu Duke University]
+| United States (North Carolina)
+| [http://mirror.linux.duke.edu/ovirt/pub/ http] [ftp://mirror.linux.duke.edu/ovirt/pub/ ftp]
+| drew.stinnett_at_duke.edu
+|
+|}
