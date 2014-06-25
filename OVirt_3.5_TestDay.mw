@@ -100,6 +100,7 @@ Following tests should be performed on all supported distributions.
   | 
   | 
   | 
+  | 
 |-
   | Network
   | Arbitrary VLAN-tagged network name
@@ -108,11 +109,13 @@ Following tests should be performed on all supported distributions.
   | 
   | 
   | 
+  | 
 |-
   | Network
   | Warning upon display network changes
   | yzaspits
   | Done
+  | 
   | 
   | 
   | 
