@@ -262,7 +262,7 @@ Make sure the http/s ports are accessible
 # service iptables restart
 </pre>
 
-For mk_livestatus to work, SELinux needs to be in permissive mode.
+For <code>mk_livestatus</code> to work, SELinux needs to be in permissive mode.
 
 Change this using:
 
@@ -279,6 +279,7 @@ Run configuration script to detect the nodes/volumes in the gluster trusted pool
 This will configure monitoring for gluster services on nodes in your cluster. A sample screenshot is below
 
 [[File:Gluster-Nagios-screenshot.png]]
+
 === Instegrating with oVirt ===
 
 Nagios integration is done via 2 options
