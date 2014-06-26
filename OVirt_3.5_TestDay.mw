@@ -82,7 +82,7 @@ Following tests should be performed on all supported distributions.
   |
   | http://www.ovirt.org/Features/NeutronVirtualAppliance 
   | 
-  | 
+  | 1078862
   | 
 |-
   | Network
@@ -91,6 +91,7 @@ Following tests should be performed on all supported distributions.
   | Done
   | http://www.ovirt.org/Features/Network_Custom_Properties
   | 
+  | 1080984, 1080987
   | 
 |-
   | Network
@@ -99,7 +100,7 @@ Following tests should be performed on all supported distributions.
   | Done
   | 
   | 
-  | 
+  | 1079719
   | 
 |-
   | Network
@@ -108,7 +109,7 @@ Following tests should be performed on all supported distributions.
   | Done
   | 
   | 
-  | 
+  | 1091863
   | 
 |-
   | Network
@@ -117,7 +118,7 @@ Following tests should be performed on all supported distributions.
   | Done
   | 
   | 
-  | 
+  | 1078836
   | 
 |-
   | Network
@@ -126,7 +127,7 @@ Following tests should be performed on all supported distributions.
   | Done
   | 
   | 
-  | 
+  | 1063064
   | 
 |-
 |}
