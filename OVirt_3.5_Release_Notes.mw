@@ -396,6 +396,13 @@ More information can be found in the [[Features/oVirt_Windows_Guest_Tools|oVirt 
 {{BZ|1079956}} - missing dependency<BR>
 
 == oVirt Hosted Engine HA ==
+Fixed in beta
+
+{{BZ|1094657}} - [RFE] Integrate hosted engine with vdsm using ISCSI storage doamain<BR>
+{{BZ|1099882}} - can't setup second host when using iscsi<BR>
+
+Fixed in  alpha
+
 {{BZ|1036683}} - Time shift on host may cause ha to stop responding<BR>
 {{BZ|1101299}} - Hosted engine upgrade from 3.3 to 3.4, ovirt-ha-agent die after three errors<BR>
 </div>
