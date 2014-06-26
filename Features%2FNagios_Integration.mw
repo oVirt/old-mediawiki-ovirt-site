@@ -4,11 +4,11 @@ oVirt provides a poll based mechanism that uses the existing Gluster CLI to iden
 We need to provide an efficient way for:
 
 * Monitoring of critical entities such as hosts, networking, volumes, clusters and services
-* Alerting when critical infrastructure components fail and  recover, providing administrators with notice of important events.   Notification for Alerts can be delivered via email,  SNMP.  Alerts can be either seen on Nagios UI or on oVirt UI
+* Alerting when critical infrastructure components fail and  recover, providing administrators with notice of important events.   Notification for Alerts can be delivered via email,  SNMP.  Alerts can be either seen on Nagios UI or on oVirt UI
 * Reports providing a historical record of service outages, events and notifications for later review, through Nagios UI interface.
 * Trending  graphs and reports
 
-Since most enterprises already have or are familiar with existing monitoring frameworks like Nagios, we plan to integrate our monitoring solution with these, so that adoption is easier and time to market is much lesser.
+Since most enterprises already have or are familiar with existing monitoring frameworks like Nagios, we plan to integrate our monitoring solution with these.
 
 ==Owner==
 * Feature owner: Nishanth Thomas <nthomas@redhat.com>
@@ -45,12 +45,13 @@ At a high-level, each functional block will have the following software componen
 * Pugins that implements the check logic.
 
 ''' oVirt '''
-* UI plugins for alert dashboard and trends
+* UI plugins for alert dashboard and trends. The Trends UI plugin is planned for the first phase.
+* The monitoring plugin [[Features/UIPlugins#oVirt_Monitoring_UI_Plugin]] can also be used to view the Nagios plugin data within oVirt
 
 == Dependencies / Related Features ==
 *Nagios Core
 *Nagios Addons - NRPE , NSCA, MK Livestatus, PNP4Nagios etc
-*Nagios pluggins
+*Nagios plugins
 *Ovirt UI Monitoring Plugin
 
 ==Packaging==
@@ -61,6 +62,9 @@ At a high-level, each functional block will have the following software componen
 == User Flows ==
 
 === External events from Nagios ===
+
+''' Status: Planned '''
+
 If oVirt is integrated with Nagios for monitoring, any alert/event detected by Nagios needs to be sent to oVirt.
 This can be done through notification methods.
 
@@ -102,11 +106,11 @@ Geo-replication – To geo-replicate volume across clusters
 
 === Nagios Dashboard and Trends ===
 
-Dashboard and trends tabs will be added to the oVirt-UI through ui-plugins approach.  All the alerts pushed from Nagios to oVirt will be shown in the dashboard. It will also show a summary of the entities currently being manged by oVirt like Hosts, Volumes and Bricks. Alerts will be shown for individual clusters as well.
+Dashboard and trends tabs will be added to the oVirt-UI through ui-plugins approach.  All the alerts pushed from Nagios to oVirt will be shown in the dashboard. It will also show a summary of the entities currently being manged by oVirt like Hosts, Volumes and Bricks. Alerts will be shown for individual clusters as well. This is planned for a subsequent release.
 
 [[File:Ovirt-dashboard.png]]
 
-Trends tab will show the graphs from pnp4nagios. The graphs will be displayed based on the user selection in System Tree.
+Trends tab will show the graphs from pnp4nagios. The graphs will be displayed based on the user selection in System Tree. Available from 3.5
 If user has selected a particular cluster, the volume utilization graph will be shown for all the volumes in the cluster. In the same way, when a volume is selected in the system tree, brick utilization graph for all the bricks part of that volume will be shown.
 
 The graphs by default will be shown for last 24 hours. The user select a custom time range for displaying the graph data. Graphs shown in the page can be either printed directly or can be saved as a report in PDF format.
@@ -156,16 +160,11 @@ The graphs by default will be shown for last 24 hours. The user select a custom 
 
 [[File:syslog.png]]
 
-*Nagios server initiates the check by invoking the NRPE client.
-*NRPE client passes the information to NRPE server running on the remote host, which in turn executes the check_logfiles plugin.
-*If there is any matching pattern :
-*#Configured action scripts get executed, which will send traps/alerts to the Nagios server
-*#Status will be returned back to Nagios server.
-*Nagios server will process the alerts/traps and invokes the event handler script to perform additional actions(SNMP traps, SMS, E-mail etc.).
-'''Alternatively check_logfiles plugin can be executed from an external program as a passive check''
+* rsyslog's omprog filter is used to send passive checks to Nagios server whenever logs of interest appear in syslog.
+* omprog allows for the execution of external scripts and this is used to send an NSCA check result
+* Currently implemented for quorum and quota logs
 
-
-=== Resources to be Monitored ===
+=== Resources/Entities Monitored in the cluster ===
 
 *List of Physical Resources that need to be monitored :
 *#Hosts (Servers)
@@ -183,17 +182,140 @@ The graphs by default will be shown for last 24 hours. The user select a custom 
 *#Operational Status
 *#Utilization
 
-=== Services/Operations to be monitored ===
-
 *Monitoring of Access Services such as:
 *#SMB 
 *#CTDB
+*# NFS
 
-*Monitoring of background operations such as:
+*Monitoring of gluster specific status such as:
 *#Self-Heal(Gluster specific)
 *#Geo-Replication(Gluster specific)
+*#Cluster Quorum 
 
-* Alerting mechanisms needed for spilt-brain
+* TODO: Alerting mechanisms needed for spilt-brain
+
+== HOW TO ==
+
+This installation has been currently tested on Fedora20 / RHEL6
+
+Requirements:
+* Fedora20/ RHEL 6 server to host Nagios server
+* Two or more nodes in a gluster trusted pool. (Note: In a pinch for resources, Nagios server can also be installed on one of the nodes)
+
+
+=== Installing Nagios plugins on the nodes ===
+
+Download the gluster-nagios-common and nagios-server-addons from download.gluster.org repository
+
+On Fedora 20
+<pre>
+# yum install gluster-nagios-common gluster-nagios-addons
+</pre>
+
+On RHEL6 
+
+RHEL users must add the EPEL yum repository to obtain the dependency packages
+
+<pre>
+# yum install http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+</pre>
+
+<pre>
+# yum install gluster-nagios-common gluster-nagios-addons
+</pre>
+
+Make sure that the node can receive nrpe requests from nagios server. You can do this by editing <code>/etc/nagios/nrpe.cfg</code> and adding the nagios server host ip/name to allowed_hosts
+
+<pre>
+# service nrpe restart
+</pre>
+
+
+=== Installing Nagios server addons for monitoring ===
+
+Download the gluster-nagios-common and nagios-server-addons from download.gluster.org repository
+
+On Fedora 20
+<pre>
+# yum install gluster-nagios-common nagios-server-addons
+</pre>
+
+This will install dependencies like nrpe, nsca, mk_livestatus if not already installed
+
+On RHEL6
+
+RHEL users must add the EPEL yum repository to obtain the dependency packages
+
+<pre>
+# yum install http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+</pre>
+
+<pre>
+# yum install gluster-nagios-common nagios-server-addons
+</pre>
+
+Make sure the http/s ports are accessible
+
+<pre>
+# iptables -I INPUT 4 -p tcp --dport 443 -m state --state NEW,ESTABLISHED -j ACCEPT
+# service iptables save
+# service iptables restart
+</pre>
+
+For mk_livestatus to work, SELinux needs to be in permissive mode.
+
+Change this using:
+
+<pre>
+# setenforce 0
+</pre>
+
+Run configuration script to detect the nodes/volumes in the gluster trusted pool and to create Nagios services for these
+
+<pre>
+# /usr/lib64/nagios/plugins/gluster/discovery.py -c <name for your cluster> -H <hostname/ip of any node in your cluster>
+</pre>
+ 
+This will configure monitoring for gluster services on nodes in your cluster. A sample screenshot is below
+
+[[File:Gluster-Nagios-screenshot.png]]
+=== Instegrating with oVirt ===
+
+Nagios integration is done via 2 options
+
+Option 1. Trends plugin
+Checkout the samples-ui-plugins project from gerrit.ovirt.org - [http://gerrit.ovirt.org/gitweb?p=samples-uiplugins.git;a=summary sample-ui-plugins]
+
+Create a symlink to gluster-nagios-monitoring/src and gluster-nagios-monitoring/gluster-nagios-monitoring.json under <code>/usr/share/ovirt-engine/ui-plugins</code>
+
+<pre>
+# ln -s <path to sample-ui-plugins>/gluster-nagios-monitoring/src gluster-nagios-monitoring
+# ln -s <path to sample-ui-plugins>/gluster-nagios-monitoring/gluster-nagios-monitoring.json gluster-nagios-monitoring.json
+</pre>
+
+Edit the  <code>/usr/share/ovirt-engine/ui-plugins/gluster-nagios-monitoring.json</code> as below:
+
+<pre>
+{
+    "name": "GlusterNagiosMonitoring",
+    "url": "plugin/GlusterNagiosMonitoring/start.html",
+    "resourcePath": "gluster-nagios-monitoring",
+    "config": {
+                    "showDashboard": "true",
+                    "messageOrigins":["http://ovirt-engine-hostname:80"], //path to ovirt-engine server
+                    "pnp4nagiosUrl" : "http://nagios-server" //path to nagios server
+                  }
+}
+</pre>
+
+You should now see a Trends tab and a Dashboard tab once logged into oVirt like below
+
+Option 2 : Using the Monitoring-UI plugin
+
+Install the monitoring ui plugin as per [Features/UIPlugins#oVirt_Monitoring_UI_Plugin]
+
+The Gluster services will be available in a sub-tab under the cluster as well as each host.
+
 
 == Detailed Design ==
 
