@@ -109,6 +109,6 @@ c. various of feature disable statement.
     socat -,raw,echo=0 UNIX-CONNECT:/path/to/usock
 
 ==== TODO ====
-* Integrate fakecharoot as wrapper to socat.
+* Integrate fakechroot as wrapper to socat.
 
 [[Category:Feature]]
