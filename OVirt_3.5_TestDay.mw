@@ -120,6 +120,15 @@ Following tests should be performed on all supported distributions.
   | 
   | 
 |-
+  | Network
+  | Allow big MAC pool ranges
+  | mmucha
+  | Done
+  | 
+  | 
+  | 
+  | 
+|-
 |}
 
 ==Regression testing==
