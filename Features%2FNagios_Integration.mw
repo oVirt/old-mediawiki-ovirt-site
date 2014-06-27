@@ -263,8 +263,6 @@ Make sure the http/s ports are accessible
 </pre>
 
 For <code>mk_livestatus</code> to work, SELinux needs to be in permissive mode.
-
-Change this using:
 Note: The below will not survive reboots
 <pre>
 # setenforce 0
