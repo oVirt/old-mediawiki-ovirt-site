@@ -126,7 +126,7 @@ Performs rpc to vdsm or read registry to acquire authorized keys at same format 
 * argv[1] - public key hash
 
 ==== Output ====
-* /var/log/vdsm-console/access.log - audit log
+* /var/log/vdsm-vmconsole/access.log - audit log
 * Syslog
 
 ==== Logic ====
