@@ -14,7 +14,7 @@ To read more about GlusterFS geo-replication, see http://gluster.org/community/d
 == Current Status ==
 
 * Status: In Progress
-* Last updated date: Thu Aug 14 2013
+* Last updated date: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}<!--This is markup for current date, do not change-->
 
 == Detailed Description ==
 GlusterFS Geo-replication uses a Source–Destination model, whereby replication and mirroring occurs between the following partners:
