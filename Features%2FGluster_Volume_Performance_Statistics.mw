@@ -92,7 +92,7 @@ File:TopClassDiagram.png
 * WRITE-PERF
 
 
-===== REST API =====
+==== REST API ====
 
 * GET: /api/clusters/<cluster-id>/glustervolumes/<volume-id>/top;type=<TopStatisticType>
 ** Other matrix parameters
