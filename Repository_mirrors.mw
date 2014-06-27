@@ -70,3 +70,6 @@ To add a mirror you just need to add it's public ssh key in  ''~mirror/.ssh/auth
 | drew.stinnett_at_duke.edu
 |
 |}
+
+
+[[Category:Infrastructure]]
