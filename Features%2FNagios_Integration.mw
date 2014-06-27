@@ -231,8 +231,7 @@ Make sure that the node can receive nrpe requests from nagios server. You can do
 </pre>
 
 === Installing Nagios server addons for monitoring ===
-
-Download the <code>gluster-nagios-common</code> and <code>nagios-server-addons</code> from [http://download.gluster.org/pub/gluster/glusterfs-nagios repository] 
+To install the <code>gluster-nagios-common</code> and <code>nagios-server-addons</code> packages, add the repo at [http://download.gluster.org/pub/gluster/glusterfs-nagios download.gluster.org repository] 
 
 On Fedora 20
 <pre>
