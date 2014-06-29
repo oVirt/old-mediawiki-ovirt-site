@@ -61,11 +61,11 @@ The oVirt platform consists of at least one oVirt Engine and one or more Nodes.
  
 {{Quote|'''Note:''' Before installing or upgrading any version of oVirt, it is important to read the [[//www.ovirt.org/Category:Releases release notes]] for that version to ensure you have connected to the correct repositories and packages. }}
 
-== Install oVirt Engine (Fedora) ==
+== Install oVirt Engine (Fedora / Red Hat Enterprise Linux / CentOS) ==
 
 oVirt Engine is the control center of the oVirt environment. It allows you to define hosts, configure data centers, add storage, define networks, create virtual machines, manage user permissions and use templates from one central location.
 
-1. Install Fedora 19 on a server. When prompted for the software packages to install, select the minimal install option. See the [http://docs.fedoraproject.org/en-US/Fedora/19/html/Installation_Guide/index.html Fedora Installation Guide] for more details.
+1. Install Fedora 19 (or Red Hat Enterprise Linux 6.5 or CentOS 6.5) on a server. When prompted for the software packages to install, select the minimal install option. See the [http://docs.fedoraproject.org/en-US/Fedora/19/html/Installation_Guide/index.html Fedora Installation Guide]  or [https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/index.html Red Hat Enterprise Linux 6 Installation Guide] for more details.
 
 2. After you have installed your server, update all the packages on it. Run:
 
