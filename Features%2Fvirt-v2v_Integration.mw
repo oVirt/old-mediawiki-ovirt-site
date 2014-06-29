@@ -1,0 +1,15 @@
+= virt-v2v integration =
+
+== Summary ==
+Use virt-v2v to import Virtual Machines into oVirt from external systems
+
+== Owner ==
+* Name: [[User:Arik| Arik Hadas]]
+* Email: <ahadas@redhat.com>
+
+== Current status ==
+* Status:  Design
+* Targete Release: TBD
+* Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}
+
+== Detailed Description ==
