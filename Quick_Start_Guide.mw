@@ -19,8 +19,9 @@ The following requirements are typical for small- to medium-sized installations.
 **[http://resources.ovirt.org/pub/yum-repo/ovirt-release34.rpm oVirt 3.4].
 * A client for connecting to oVirt Engine.
 
-{{Quote|'''Note:''' If installing on Fedora, Fedora 19 is the appropriate version on which to install oVirt 3.3.x.}}
-{{Quote|'''Note:''' If installing on CentOS/RH EL, 6.5 version is the appropriate one on which to install oVirt 3.4.x.}}
+{{Quote|'''Note:''' If installing on Fedora, Fedora 19 is the appropriate version on which to install oVirt 3.4.x.
+
+'''Note:''' If installing on CentOS/RH EL, version 6.5 is the appropriate one on which to install oVirt 3.4.x.}}
 
 === For each Host (oVirt Node, Fedora Host, CentOS Host) ===
 
