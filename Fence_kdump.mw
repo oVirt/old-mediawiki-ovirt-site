@@ -253,6 +253,15 @@ extra_bins /bin/sleep</pre>
   </ul>
 </li>
 <li>Progress of kdump flow on host can be seen on host's console with possible remote access using IPMI.</li>
+<li>If you want to simulate kernel crash dump, you have to:
+  <ul>
+    <li>Enable kernel SysRQ mechanism:<pre>
+sysctl -w kernel.sysrq=1</pre>
+</li>
+    <li>Initiate kernel crashdump:<pre>
+echo c > /proc/sysrq-trigger</pre>
+    </li>
+  </ul>
 </ol>
 
 ==Testing scenarios==
