@@ -498,9 +498,6 @@ Action Groups:
   ...
   </cluster>
 
-=== Packaging and Installation  ===
-* In Progress
-
 === External Scheduler ===
 
 See [[Features/oVirt External Scheduler|External Scheduler]]
