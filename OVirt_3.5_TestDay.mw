@@ -36,6 +36,7 @@ pkg will be provided from ovirt repo, but if it is not there, you can update fro
 or add the virt-preview repo:
  sudo yum-config-manager --enable fedora-virt-preview
 * DWH/Reports setup is currently broken.
+* You can't refresh iso file list after adding a host, see https://bugzilla.redhat.com/1114499 for a workaround.
 
 ==oVirt 3.5 New Features  - Test Status Table==
 Please report test results on the [http://etherpad.ovirt.org/p/3.4-testday-1 first test day report etherpad] or on the table below.
