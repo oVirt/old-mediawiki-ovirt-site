@@ -166,10 +166,10 @@ Following config values are used:
 | style="background-color: lightgreen" | Done, included in kexec-tools >= 2.0.4-27
 |-
 |Patches for RHEL 6.6
-| style="background-color: lightgreen" | Done, included in kexec-tools >= 2.0.0-274
+| style="background-color: lightgreen" | Done, included in kexec-tools >= 2.0.0-273.1
 |-
 |Patches for RHEL 7.1
-| style="background-color: lightgreen" | Done, included in kexec-tools >= 2.0.4-33
+| style="background-color: lightgreen" | Done, included in kexec-tools >= 2.0.4-32.1
 |-
 | colspan="3" | &nbsp;
 |-
