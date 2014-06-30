@@ -256,3 +256,12 @@ extra_bins /bin/sleep</pre>
 </ol>
 
 ==Testing scenarios==
+# Installation tests
+## Adding a host with ''Detect kdump flow'' set to on and without ''crashkernel'' command line parameter
+##* '''Result''': host installation is OK, but warning message is displayed in Events tab and Audit log
+## Adding a host with ''Detect kdump flow'' set to on, with ''crashkernel'' command line parameter, but without required version of ''kexec-tools'' package
+##* '''Result''': host installation is OK, but warning message is displayed in Events tab and Audit log
+## Adding a host with ''Detect kdump flow'' set to on, with ''crashkernel'' command line parameter and with required version of ''kexec-tools'' package
+##* '''Result''': host installation is OK, in ''General'' tab of host detail view you should see ''Kdump Status: Enabled''
+## Adding a oVirt node host with ''Detect kdump flow'' set to on, with ''crashkernel'' command line parameter and with required version of ''kexec-tools'' package
+##* '''Result''': host installation is OK, in ''General'' tab of host detail view you should see ''Kdump Status: Enabled''
