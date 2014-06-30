@@ -230,3 +230,5 @@ Following config values are used:
 | Include kexec-tools package with fence_kdump configuration support
 | style="background-color: red" | 
 |}
+
+=Testing=
