@@ -267,8 +267,13 @@ Make sure each of the configs can:
 
 ===SLA===
 
-====Affinity Groups====
+====Numa support====
 
+====Opta planner integration====
+
+====HE on iscsi====
+
+====Scheduling policies rest-api====
 
 ==Bug Reporting==
 * ovirt - https://bugzilla.redhat.com/enter_bug.cgi?product=oVirt
