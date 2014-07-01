@@ -7,7 +7,7 @@
 * Email: <msivak@redhat.com>
 
 === Current status ===
-* Initial design discussion
+* First alpha release - 0.1
 * Last updated: {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]] <!--This is markup for last revision, do not change-->
 * Tracking BZs: [https://bugzilla.redhat.com/show_bug.cgi?id=1093051 rhbz#1093051]
 
