@@ -58,4 +58,4 @@ For Windows VMs the drivers must be installed. The VirtIO drivers are available 
 
 ''(3) Supported in Kernel 2.6.35 and above''
 
-''(4) Install spice-vdagent''
+''(4) Install spice-vdagent, available in standard repositories''
