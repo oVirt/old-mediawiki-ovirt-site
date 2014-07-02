@@ -52,9 +52,6 @@ For Windows VMs the drivers must be installed. The VirtIO drivers are available 
 |-
 | Spice Agent||Yes(4)||-||-||Yes(4)
 |}
-''(1) XP Does not support VirtIO-SCSI[https://bugzilla.redhat.com/show_bug.cgi?id=1043198]''
-
-''(2) The spice drivers currently work with Windows 7 and below. ''
 
 ''(3) Supported in Kernel 2.6.35 and above''
 
