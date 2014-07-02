@@ -41,6 +41,9 @@ For Windows VMs the drivers must be installed. The VirtIO drivers are available 
 |-
 | Spice Drivers||[[How_to_create_a_Windows_XP_Virtual_Machine#Graphics|Yes]]||[[How_to_create_a_Windows_7_Virtual_Machine#Graphics|Yes]]||No(2)||[[How_to_create_a_Windows_2003_Virtual_Machine#Graphics|Yes]]||[[How_to_create_a_Windows_2008_Virtual_Machine#Graphics|Yes]]||No(2)
 |}
+''(1) XP Does not support VirtIO-SCSI[https://bugzilla.redhat.com/show_bug.cgi?id=1043198]''
+
+''(2) The spice drivers currently work with Windows 7 and below. ''
 
 == Linux Guests ==
 {| class="wikitable"
