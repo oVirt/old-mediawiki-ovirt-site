@@ -47,13 +47,13 @@ For Windows VMs the drivers must be installed. The VirtIO drivers are available 
 
 == Linux Guests ==
 {| class="wikitable"
-| ||[[How_to_create_a_Fedora_Virtual_Machine|Fedora]]||RHEL||CentOS||[[How_to_create_a_Ubuntu_Virtual_Machine|Ubuntu]]||Debian||openSuSE||SuSE Linux Enterprise
+| ||[[How_to_create_a_Fedora_Virtual_Machine|Fedora]] || RHEL || CentOS || [[How_to_create_a_Ubuntu_Virtual_Machine|Ubuntu]] || Debian || openSuSE || SuSE Linux Enterprise
 |-
-| oVirt Guest Agent||[[How_to_install_the_guest_agent_in_Fedora|Yes]]||Yes(5)||Yes(5)||[[How_to_install_the_guest_agent_in_Ubuntu|Yes]]||[[Feature/GuestAgentDebian|Yes]]||[[Feature/GuestAgentOpenSUSE|Yes]]||[[Feature/GuestAgentSLES|Yes]] 
+| oVirt Guest Agent || [[How_to_install_the_guest_agent_in_Fedora|Yes]] || Yes(5) || Yes(5) || [[How_to_install_the_guest_agent_in_Ubuntu|Yes]] || [[Feature/GuestAgentDebian|Yes]] || [[Feature/GuestAgentOpenSUSE|Yes]] || [[Feature/GuestAgentSLES|Yes]]
 |-
 | VirtIO Drivers||Built-in(3)||Built-in(3)||Built-in(3)||Built-in(3)||Built-in(3)||Built-in(3)||Built-in(3) 
 |-
-| Spice Agent||Yes(4)||-||-||Yes(4)||-||-||-
+| Spice Agent||Yes(4)||-||-||Yes(4)||-||-||- 
 |}
 
 ''(3) Supported in Kernel 2.6.35 and above''
