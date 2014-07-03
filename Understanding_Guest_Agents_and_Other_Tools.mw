@@ -53,7 +53,6 @@ For Windows VMs the drivers must be installed. The VirtIO drivers are available 
 | oVirt Guest Agent || [[How_to_install_the_guest_agent_in_Fedora|Yes]] || Yes(5) || Yes(5) || [[How_to_install_the_guest_agent_in_Ubuntu|Yes]] || [[Feature/GuestAgentDebian|Yes]] || [[Feature/GuestAgentOpenSUSE|Yes]] || [[Feature/GuestAgentSLES|Yes]]
 |-
 | VirtIO Drivers || Built-in(3) || Built-in(3) || Built-in(3) || Built-in(3) || Built-in(3) || Built-in(3) || Built-in(3) 
-
 |-
 | Spice Agent || Yes(4) || - || - || Yes(4) || - || - || - 
 |-
