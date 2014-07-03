@@ -1,13 +1,12 @@
 <!-- {{autolang|base=yes}} -->
 
-== Disk Hooks <!-- The name of your feature --> ==
+== Disk Hooks ==
+{{Feature|name=Disk Hooks|modules=storage|version=3.3|status=Released}}
 
 === Summary ===
-<!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
 Adding VDSM hooking points before and after disk's hot plug and hot unplug. <br/> These hooks enable the running of guest-level operations on the disks when they're plugged/unplugged.
 
 === Owner ===
-<!--This should link to your home wiki page so we know who you are-->
 * Name: [[User:vvolansk|Vered Volansky]]
 * Email: vered@redhat.com
 
@@ -17,7 +16,6 @@ Adding VDSM hooking points before and after disk's hot plug and hot unplug. <br/
 * Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}
 
 === Detailed Description ===
-<!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
 This feature adds four hooking points to vdsm, for before and after a disk's hot plug and unplug from a VM.<br/>
 These hooking points are named:<br/>
 1. before_disk_hotplug<br/>
