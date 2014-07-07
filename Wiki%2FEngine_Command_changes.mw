@@ -22,12 +22,16 @@ For example:<BR>
                setSnapshotName(parameters.getDescription());
        }
 
+
+
 2. From commands, instead of using getBackend().runInternalAction or Backend.getInstance().runInternalAction use
        runInternalAction       <BR> 
 This method was introduced at CommandBase, and is reposible for propagating the context.
 
 For example:
             VdcReturnValueBase returnValue = runInternalAction(VdcActionType.HotPlugDiskToVm, params);       
+
+
 
 3.  Invoke internal commands properly from classes that are not commands
 In case a command is using a helper  (a class that does not extend CommandBase, and usually holds some functionality that is shared for several commands who are not of the same inheritence sub tree)  , or another class which is not a command - the syntax of
@@ -51,6 +55,9 @@ The CTOR of the internal action is:
         //....
     }
 
+
+
+
 4. Handle command context propgation 
 
 In order to properly propagate context , the command context should be duplicated when calling command.
@@ -71,6 +78,12 @@ for example -
 will clone the context, , set on it the runVM execution context, and  reset both the lock and the compensation context.
 
 It is also possible to use the CommandBase.cloneContextAndDetachFromParent in order to perform context cloning and "detach" from all the detachable components of the context which are the lock , the execution context and the compensation context.
+
+In the case a command context should be duplicated and should have an execution context for tasks monitoring it is possible to use the method
+CommandBase.runInternalActionWithTasksContext
+
+
+
 
 5. Propgate engine context to queries
 
