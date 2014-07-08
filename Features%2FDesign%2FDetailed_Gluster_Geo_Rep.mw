@@ -26,7 +26,7 @@ Includes the following:
 
 ==== Entity Description ====
 <!-- New entities and changes in existing entities. -->
-
+[[File:Geo-rep-ClassDiagram.png]]
 
 ==== CRUD ====
 <!-- Describe the create/read/update/delete operations on the entities, and what each operation should do. -->
