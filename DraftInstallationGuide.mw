@@ -2186,7 +2186,7 @@ Choose one of the following:
 |Power management is controlled by the '''Cluster Policy''' of the host's '''cluster'''. If power management is enabled and the defined low utilization value is reached, the Manager will power down the host machine, and restart it again when load balancing requires or there are not enough free hosts in the cluster. Tick this check box to disable policy control.
 |}
 
-=== 3. SPM Priority Settings Explained ===
+=== SPM Priority Settings Explained ===
 
 The '''SPM''' settings table details the information required on the '''SPM''' tab of the '''New Host''' or '''Edit Host''' window.
 
