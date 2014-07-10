@@ -71,6 +71,8 @@ Install 3rd party packages:
     python-m2crypto python-psycopg2 python-cheetah python-daemon \
     jboss-as unzip</nowiki>
 
+Download PatternFly from [https://github.com/patternfly/patternfly/releases/tag/v1.0.5 PatternFly releases] and extract to /usr/share/patternfly1/resources
+
 Download jboss-as-7.1.1 from [http://www.jboss.org/jbossas/downloads/ jboss site] and extract to $HOME.
 
 Install ovirt packages:
