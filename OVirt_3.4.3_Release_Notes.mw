@@ -85,6 +85,9 @@ If you're going to test  oVirt 3.4.3 development version, please add yourself to
 {{BZ|1114877}} - CPU hot plug "tool tip", in VM edit dialogue, is not clear.<BR>
 {{BZ|1115389}} - API: Interface name is not set via cloud-init api<BR>
 
+== oVirt ISO Uploader ==
+{{BZ|1117370}} - option nossl does not work<BR>
+
 ==VDSM==
 
 ==ovirt-node-plugin-vdsm==
