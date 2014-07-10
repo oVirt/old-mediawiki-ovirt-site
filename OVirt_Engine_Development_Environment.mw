@@ -33,11 +33,15 @@ enabled=1
 gpgcheck=0
 priority=10</nowiki>
 
+
+====Setup PatternFly repository====
+Create <code>/etc/yum.repos.d/patternfly.repo</code> and copy/paste the contents of correct file for your distro from [https://copr.fedoraproject.org/coprs/patternfly/patternfly1 PatternFly Repos on copr].
+
 ==== Install 3rd party packages ====
 
  <nowiki># yum install git java-devel maven openssl postgresql-server \
     m2crypto python-psycopg2 python-cheetah python-daemon libxml2-python \
-    unzip</nowiki>
+    unzip patternfly1</nowiki>
 
 ===== Fedora =====
  <nowiki># yum install jboss-as</nowiki>
