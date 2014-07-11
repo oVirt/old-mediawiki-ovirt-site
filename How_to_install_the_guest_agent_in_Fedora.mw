@@ -25,7 +25,7 @@ Accept the prompt to install '''ovirt-guest-agent-common''' and any required dep
 # Click Fedora
 # Click the number that represents the version of Fedora that you are using, for example, Fedora 20
 # Click on noarch
-# Your path may look something like this:<pre>http://resources.ovirt.org/releases/3.4/fc20/noarch/</pre>
+# Your path may look something like this:<pre>http://resources.ovirt.org/releases/3.4/rpm/fc20/noarch/</pre>
 # From the list of files, right click the one that starts with '''ovirt-guest-agent-common''' and save it to a location on your computer. 
 # Copy the '''ovirt-guest-agent-common''' rpm file to the VM that requires the ovirt-guest-agent
 # Install it by using the command below, and accept the prompt to install the package.<pre>yum localinstall /path/to/ovirt-guest-agent-common.rpm</pre>
