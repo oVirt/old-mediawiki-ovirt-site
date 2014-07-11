@@ -2,8 +2,8 @@
 = oVirt 3.4.4 =
 == Timeline ==
 
-* General availability: '''2014-09-09'''
-* RC Build: '''2014-09-16'''
+* General availability: '''2014-09-16'''
+* RC Build: '''2014-09-09'''
 
 === Nightly Builds ===
 Nightly builds are available enabling the  oVirt 3.4 snapshots repositories
