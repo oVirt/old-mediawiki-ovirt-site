@@ -168,7 +168,7 @@ Our recommended method of installing oVirt is to use the pre-built packages for 
 </div>
 
 <ol>
-<li>Add the official oVirt repository for Fedora. <kbd><pre>sudo yum localinstall http://resources.ovirt.org/releases/ovirt-release.noarch.rpm</pre></kbd>
+<li>Add the official oVirt repository for Fedora. <kbd><pre>sudo yum localinstall http://resources.ovirt.org/pub/yum-repo/ovirt-release34.rpm</pre></kbd>
 <ul>
 <li> This will add repositories from ovirt.org to your host allowing you to get the latest and greatest oVirt rpms.
 <li> It will also enable the [http://fedoraproject.org/wiki/Virtualization_Preview_Repository virt-preview] repository on your machine giving you access to the latest versions of things like libvirt and KVM.
@@ -193,7 +193,7 @@ These instructions should work for both Red Hat Enterprise Linux and CentOS.  Th
 
 <!-- Normally, an <ol> isn't needed, but we're starting with 0 here, for fun. -->
 <ol>
-<li>Add the official oVirt repository for EL6. <kbd><pre>sudo yum localinstall http://resources.ovirt.org/releases/ovirt-release.noarch.rpm</pre></kbd>
+<li>Add the official oVirt repository for EL6. <kbd><pre>sudo yum localinstall http://resources.ovirt.org/pub/yum-repo/ovirt-release34.rpm</pre></kbd>
 <ul>
 <li> This will add repositories from ovirt.org to your host allowing you to get the latest and greatest oVirt rpms.
 <li> It will also enable the gluster repository for their 3.4.0 release, so you will get those updates correctly as well
