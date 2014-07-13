@@ -1,5 +1,9 @@
 Also known as SharedFS support
 
+== PosixFS Connection ==
+
+{{Feature|name=PosixFS Connection|modules=engine/vdsm|status=Released|version=3.3}}
+
 == Summary ==
 This feature will allow to define a DC of a customizable type.
 The storage domains in this DC will be mounted with custom properties and will support file system based storage domains which do not necessarily rely on NFS.
