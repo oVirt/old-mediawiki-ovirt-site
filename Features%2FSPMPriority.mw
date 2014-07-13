@@ -1,5 +1,6 @@
 = SPM Priority =
 ----
+{{Feature|name=SPM Priority|modules=engine|status=Released|version=3.1}}
 
 == Summary ==
 The SPM Priority feature allows the admin to define priorities between hosts regarding the SPM selection process. A host can be given priority -1 which
