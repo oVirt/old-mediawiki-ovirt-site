@@ -2,6 +2,8 @@
 
 == Disk Permissions ==
 
+{{Feature|name=Disk Permissions|modules=engine|status=Released|version=3.1}}
+
 === Summary ===
 The Disk Permissions feature is supplementary for Disk related features (Floating Disk, Shared Raw Disk, Direct LUN). It enables permissions management on a Disk.
 
