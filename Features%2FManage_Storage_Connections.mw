@@ -1,6 +1,6 @@
 == Manage storage connections ==
 
-{{Feature|name=Manage storage connections|modules=engine|status=Released|version=3.4.0}}
+{{Feature|name=Manage storage connections|modules=engine|status=Released|version=3.4}}
 
 === Summary ===
 This feature adds the ability to add, edit  and delete storage connections.
