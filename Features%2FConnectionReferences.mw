@@ -1,6 +1,10 @@
 Also known as New Connection Management API
 
-== Summery ==
+== Connection References ==
+
+{{Feature|name=Connection References|modules=vdsm|status=Released|version=3.2}}
+
+== Summary ==
 Allow accessing storage server connections indirectly and have VDSM manage actual connections
 
 == Current Status ==
