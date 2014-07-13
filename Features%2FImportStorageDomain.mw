@@ -1,6 +1,6 @@
 =Import Storage Domain =
 
-{{Feature|name=Import Storage Domain|modules=storage|version=|status=Design}}
+{{Feature|name=Import Storage Domain|modules=engine/vdsm|status=Released|version=3.5}}
 
 == Summary ==
 Today, oVirt is able to import ISO and Export Storage Domains, however, there is no support for importing an existing Data Storage Domain.<BR/>
