@@ -4,6 +4,8 @@
 
 == HotPlug / HotUnPlug Feature ==
 
+{{Feature|name=Disk Hot Plug|modules=engine|status=Released|version=3.1}}
+
 === Summary ===
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
 Allow to hot add and hot remove of a virtio-blk disks from or to running guest. 
