@@ -1,5 +1,7 @@
 == Multiple Storage Domains ==
 
+{{Feature|name=Manage storage connections|modules=engine|status=Released|version=3.0}}
+
 === Summary ===
 Allow a VM to spread its disks across several storage domains within the same Data Center.
 
