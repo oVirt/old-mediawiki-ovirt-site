@@ -1,5 +1,10 @@
+=== Advanced Nfs Options ===
+
+{{Feature|name=Advanced Nfs Options|modules=engine|status=Released|version=3.2}}
+
 == Summary ==
-Allows advanced users to override some of VDSM default nfs options 
+Allows advanced users to override some of VDSM default nfs options
+
 == Current Status ==
 To do:
 * [[Features/AdvancedNfsOptions#Changes_in_ovirt_engine|Make needed change in Ovirt-Engine]]
