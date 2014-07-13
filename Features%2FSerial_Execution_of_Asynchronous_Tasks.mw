@@ -2,6 +2,8 @@
 
 == Serial Execution of Asynchronous Tasks ==
 
+{{Feature|name=Serial Execution of Asynchronous Tasks|modules=engine|status=Released|version=3.2}}
+
 === Summary ===
 Currently, oVirt Engine has an abilitty to run an asynchronous task on the SPM. When the task completes, AsyncTaskManager re-creates the command and calls its EndAction(), which is pivoted to EndSuccessfully() or EndWithFailure(), depending on the result of the SPM task.
 This feature aims to extend this behaviour to allow an engine command to fire a series of aysnchronous SPM tasks in order to allow complex flows (e.g., Live Storage Migration, proper error handling in Move Disk) to be implemented.
