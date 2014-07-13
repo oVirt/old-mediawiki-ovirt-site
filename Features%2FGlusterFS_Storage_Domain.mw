@@ -1,6 +1,6 @@
 == Summary ==
 
-{{Feature|name=GlusterFS Storage Domain|modules=engine|status=Released|version=3.2}}
+{{Feature|name=GlusterFS Storage Domain|modules=engine/vdsm|status=Released|version=3.2}}
 
 This feature introduces a new storage domain of type GLUSTERFS_DOMAIN, which uses gluster as the storage backend.
     
