@@ -1,5 +1,7 @@
 == Manage storage connections ==
 
+{{Feature|name=Manage storage connections|modules=engine|status=Released|version=3.4.0}}
+
 === Summary ===
 This feature adds the ability to add, edit  and delete storage connections.
 This is required in order to support configuration changes including adding paths for multipathing, changes of hardware, and ease failover to remote sites, by quickly switching to work with another storage that holds a backup/sync of the contents of the current storage in case of primary storage failure.
