@@ -1,3 +1,7 @@
+== Direct LUN ==
+
+{{Feature|name=Direct LUN|modules=engine/vdsm|status=Released|version=3.1}}
+
 == Introduction ==
 
 Any block device can be used as local disk in the VM specifying it's GUID.
