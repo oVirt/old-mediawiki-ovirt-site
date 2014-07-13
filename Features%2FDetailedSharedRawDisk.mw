@@ -3,6 +3,8 @@
 <!-- The actual name of your feature page should look something like: Features/YourFeatureName.  This keeps all features in the same namespace -->
 = Shared Raw Disk =
 
+{{Feature|name=Shared Raw Disk|modules=engine|status=Released|version=3.1}}
+
 == Summary ==
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
 The shared raw disk feature enables to share disks between multiple VMs in the Data Center.
