@@ -1,3 +1,7 @@
+== Multiple Storage Domains ==
+
+{{Feature|name=Manage storage connections|modules=engine|status=Released|version=3.0}}
+
 = User Stories =
 * '''Add VM''' - As a RHEV-M user, when I create a VM using the [GUI | REST API], I want to be able to select different storage domains for each disk in the VM so that I can make efficient use of my storage. I know the feature works when I can create a VM with 3 disks each on different storage domains.
 * '''Import VM''' -  As a RHEV-M user, when I import a VM using the [GUI | REST API], I want to be able to select different storage domains for each disk in the VM so that I can make efficient use of my storage. I know the feature works when I can import a VM with 3 disks each on different storage domains.
@@ -7,6 +11,7 @@
 * '''Create VM from template''' - As a RHEV-M user, I want to be able to use the [GUI | REST API] to create a VM from a template and be able to specify on which storage domain each disk should be created.  I know the feature works when I can create a VM from a template that has 3 disks and I can put each disk on a separate storage domain.
 * '''Create Template from VM''' - As a RHEV-M user, I want  to be able to use the [GUI | REST API] to create a template from a VM and be able to specify which storage domain should hold its disks.  I know the feature works when I can create a template on a different storage domain than the one the VM resides on.
 * '''Clone Template''' - As a RHEV-M user, I want  to be able to use the [GUI | REST API] to clone a template and be able to specify which storage domain should hold its disks.  I know the feature works when I can clone a template on a different storage domain than the one the source template resides on.
+
 = Acceptance Tests =
 Will be based on the "I know the feature works..." in the user stories.
 
