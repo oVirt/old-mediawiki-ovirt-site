@@ -1,1 +1,59 @@
-[[Feature/VDSM VM Query API/Measurements]]
+<!-- {{autolang|base=yes}} -->
+= VDSM VM Data Query API=
+
+{{Feature|name=VDSM VM Data Query API|modules=vdsm, engine-backend|version=3.6|status=Proposed}}
+
+== Summary ==
+This feature proposes a new API verb for VDSM for querying the data fields of VMs via the RPC interface. The feature allows to get differences since the last request, asking for specific fields and/or excluding fields from the data retrieved.
+
+== Owner ==
+* Name: [[User:Evilissimo| Vinzenz Feenstra]]
+* Email: <evilissimo@redhat.com>
+
+
+== Current status ==
+<!-- * Link to feature page in a specific release. That release may complete the feature, or parts of it. The complete scope of this feature in this release will be described in the release feature page -->
+* Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]]
+<!--This is markup for the date on which the current page was last changed, do not change-->
+
+== Detailed Description ==
+'''new verb:''' ''Host.queryVms(vmIds=[], fields=[], exclude=[], changedSince=' ')''
+'''vmIds:''' queries the vms specified or all when the list is empty
+'''fields:''' queries only for the fields specified or all when empty
+'''exclude:''' excludes the fields specified or none if empty
+'''changedSince:''' queries only for the fields which changed since the given stamp. (fields and exclude parameters are respected, so only fields matching will be checked and returned)
+
+The call returns a structure like this:
+
+  {'dataList': [{
+    vmId: "<uuid>",
+    `fields queried for`...
+   }],
+   'queryStamp': 'a string value indicating the lastest changes and passed to changedSince in a follow up request'}
+''Boilerplate status/message omitted in the result for simplification reasons''
+
+== Benefit to oVirt ==
+<!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
+
+The proposed API verb can reduce the required volume of data sent over the management network to in a range of 75-90% '''without using compression'''.  Please see the [[Feature/VDSM VM Query API/Measurements|Measurements Page]] for the actual results of the tests performed using this API in comparison to the current way.
+This proposal introduces a more flexible way of changing the API by adding new fields or deprecating them by exclusion from the callers side. Additionally fields are only sent when they have been really changed since the last request.
+
+== Dependencies / Related Features ==
+<!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
+TODO
+
+
+== Documentation / External references ==
+<!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
+<!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
+TODO
+
+== Testing ==
+TODO
+<!-- Explain how this feature may be tested by a user or a quality engineer. List relevant use cases and expected results. -->
+
+== Comments and Discussion ==
+
+This below adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page
+
+* Refer to [[Talk:Feature/VDSM_VM_Query_API]]
