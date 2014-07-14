@@ -4,7 +4,7 @@ To prepare files the files necessary to PXE boot, you need to do the following :
 
 * Download the ISO file: 
 
-<pre>wget http://resources.ovirt.org/releases/3.2/iso/ovirt-node-iso-2.6.1-20120228.fc18.iso</pre>
+<pre>wget http://resources.ovirt.org/pub/ovirt-3.4/iso/ovirt-node-iso-3.4-20140508.2.el6.iso</pre>
 
 Check whether or not you have:<pre>/usr/bin/livecd-iso-to-pxeboot</pre>
 If so, skip steps 2 and 3.
@@ -16,12 +16,12 @@ Manually:
 <pre>mkdir iso</pre>
 
 * Mount the image : 
- <pre>mount -o loop ovirt-node-iso-2.6.1-20120228.fc18.iso iso</pre>
+ <pre>mount -o loop ovirt-node-iso-*.iso iso</pre>
 
 * Extract needed informations with provided script : 
-<pre>/iso/LiveOS/livecd-iso-to-pxeboot ovirt-node-iso-2.6.1-20120228.fc18.iso</pre>
+<pre>/iso/LiveOS/livecd-iso-to-pxeboot ovirt-node-iso-*.iso</pre>
 
-<pre>livecd-iso-to-pxeboot ovirt-node-iso-2.6.1-20120228.fc18.iso</pre>
+<pre>livecd-iso-to-pxeboot ovirt-node-iso-*.iso</pre>
 
 You now have a ./tftpboot folder.
 
