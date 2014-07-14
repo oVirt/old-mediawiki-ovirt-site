@@ -1,4 +1,4 @@
-= Introduction =
+= Introdcution =
 == Motivation ==
 The motivation for these tests,  is to show how much more flexible the new API verb is but also to uncover potential `gotchas`. The section about the fake stats shows pretty good, that by not properly measuring the requested data. e.g. by blindly always requesting all changes, the usage of the API can cause more traffic on the wire than expected.
 
@@ -83,7 +83,7 @@ Illustrative querying sequence:
 * 22. queryVms(fields='status', changedSince=lastChanged)
 * 23. ...
 
-'''Note:''' ''The test here might have been optimized to NOT use separate calls when querying for the statistics since the timing overlaps with the general query, however for the sake of simplicity and potential difference on the engine side for the implementation this has been left this way.''
+'''Note:''' ''The test here might have been optimized to NOT use separate calls when querying for the statistics since it overlaps with the general query, however for the sake of simplicity and potential difference on the engine side for the implementation this has been left this way.''
 
 = Results =
 == Idle VMs == 
@@ -91,7 +91,7 @@ Illustrative querying sequence:
 [[File:Vdsm-query-interface-measurements-6vms-idle.png]]
 {| class="wikitable"
 |-
-!  -  !! Total Body Size !! Total Body Size in KiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
+!  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-
 | queryVms statistics & status || 657336 || 0.63 || 80.30 || 2086.78 || 81.24
 |-
@@ -109,7 +109,7 @@ Illustrative querying sequence:
 [[File:Vdsm-query-interface-measurements-100vms-idle.png]]
 {| class="wikitable"                                                             
 |-                                                                               
-!  -  !! Total Body Size !! Total Body Size in KiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
+!  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-                                                                                 
 | queryVms statistics & status || 9143265 || 8.72 || 82.41 || 29026.24 || 83.25
 |-                                                                                 
@@ -127,7 +127,7 @@ Illustrative querying sequence:
 [[File:Vdsm-query-interface-measurements-1000vms-idle.png]]
 {| class="wikitable"                                                             
 |-                                                                              
-!  -  !! Total Body Size !! Total Body Size in KiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
+!  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-                                                                              
 | queryVms statistics & status || 97051742 || 92.56 || 81.20 || 308100.77 || 82.09        
 |-                                                                              
@@ -144,7 +144,7 @@ Illustrative querying sequence:
 === 6 VMs ===
 [[File:Vdsm-query-interface-measurements-6vms-fakestats.png]]
 {| class="wikitable"                                                            
-!  -  !! Total Body Size !! Total Body Size in KiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
+!  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-                                                                              
 | new status & stats || 824446 || 0.7862529755 || 76.79 || 2617.29 || 77.90     
 |-                                                                              
@@ -160,7 +160,7 @@ Illustrative querying sequence:
 === 100 VMs ===
 [[File:Vdsm-query-interface-measurements-100vms-fakestats.png]]
 {| class="wikitable"                                                            
-!  -  !! Total Body Size !! Total Body Size in KiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
+!  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-                                                                              
 | new status & stats || 11949463 || 11.3958959579 || 79.23 || 37934.80 || 80.22 
 |-                                                                              
@@ -176,7 +176,7 @@ Illustrative querying sequence:
 === 1000 VMs ===
 [[File:Vdsm-query-interface-measurements-1000vms-fakestats.png]]
 {| class="wikitable"                                                            
-!  -  !! Total Body Size !! Total Body Size in KiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
+!  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-                                                                              
 | new status & stats || 118286166 || 112.8064785004 || 79.29 || 375511.64 || 80.28
 |-                                                                              
@@ -193,7 +193,7 @@ Illustrative querying sequence:
 === 6 VMs ===
 [[File:Vdsm-query-interface-measurements-6vms-windows.png]]
 {| class="wikitable"                                                            
-!  -  !! Total Body Size !! Total Body Size in KiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
+!  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-                                                                              
 | queryVms statistics & status || 697203 || 0.66 || 88.87 || 2213.34 || 89.40             
 |-                                                                              
@@ -209,7 +209,7 @@ Illustrative querying sequence:
 === 100 VMs ===
 [[File:Vdsm-query-interface-measurements-100vms-windows.png]]
 {| class="wikitable"                                                            
-!  -  !! Total Body Size !! Total Body Size in KiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
+!  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-                                                                              
 | queryVms statistics & status || 9924124 || 9.46 || 90.74 || 31505.16 || 91.18           
 |-                                                                              
