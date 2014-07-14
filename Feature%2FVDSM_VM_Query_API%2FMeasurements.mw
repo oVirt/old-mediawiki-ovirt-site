@@ -26,6 +26,19 @@ The test has been performed by calling 300 times queryVms and remembering the 'q
 The first call did not have the queryStamp value therefore the full data set has been returned. This was done to simulate properly and fairly simulate the first 15 minutes of the engine querying the hosts.
 
 === New Status ===
+This test is using the proposed queryVms API call.
+
+This test has been implemented to simulate the current way of querying VDSM on top of the new proposed API.
+
+# queryVMs(changedSince=lastChanged)
+# queryVMs(fields='status', changedSince=lastChanged)
+# queryVMs(fields='status', changedSince=lastChanged)
+# queryVMs(fields='status', changedSince=lastChanged)
+# queryVMs(fields='status', changedSince=lastChanged)
+# queryVMs(changedSince=lastChanged)
+# queryVMs(fields='status', changedSince=lastChanged)
+# ...
+
 === New Stats ===
 === New Stats & Status ===
 
