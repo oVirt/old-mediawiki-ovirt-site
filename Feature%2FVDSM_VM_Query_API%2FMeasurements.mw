@@ -1,3 +1,4 @@
+= Introdcution =
 == Motivation ==
 The motivation for these tests,  is to show how much more flexible the new API verb is but also to uncover potential `gotchas`. The section about the fake stats shows pretty good, that by not properly measuring the requested data. e.g. by blindly always requesting all changes, the usage of the API can cause more traffic on the wire than expected.
 
@@ -6,7 +7,7 @@ The measurements performed here have been using the body sizes of the data trans
 This section of the document describes how the simulation of the engine was performed and which API calls have been measured.
 
 '''All tests performed here are simulating a time frame of 15 minutes.'''
-
+== Description ==
 === Current ===
 Current represents how we are currently polling VDSM for the data of Virtual Machines.
 VDSM is polled every 3 seconds where there is called the 'list' API call and then every 5. time getAllVmStats is called.
@@ -84,6 +85,7 @@ Illustrative querying sequence:
 
 '''Note:''' ''The test here might have been optimized to NOT use separate calls when querying for the statistics since it overlaps with the general query, however for the sake of simplicity and potential difference on the engine side for the implementation this has been left this way.''
 
+= Results =
 == Idle VMs == 
 === 6 VMs ===
 [[File:Vdsm-query-interface-measurements-6vms-idle.png]]
