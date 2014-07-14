@@ -92,7 +92,7 @@ A set of mixed (Windows/Linux) vms having no active users or any kind of service
 
 === 6 VMs ===
 [[File:Vdsm-query-interface-measurements-6vms-idle.png]]
-{| class="wikitable" style="text-align: right;"
+{| class="wikitable sortable" style="text-align: right;"
 |-
 !  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-
@@ -110,7 +110,7 @@ A set of mixed (Windows/Linux) vms having no active users or any kind of service
 === 100 VMs ===
 
 [[File:Vdsm-query-interface-measurements-100vms-idle.png]]
-{| class="wikitable" style="text-align: right;"                                                             
+{| class="wikitable sortable" style="text-align: right;"                                                             
 |-                                                                               
 !  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-                                                                                 
@@ -128,7 +128,7 @@ A set of mixed (Windows/Linux) vms having no active users or any kind of service
 === 1000 VMs ===
 
 [[File:Vdsm-query-interface-measurements-1000vms-idle.png]]
-{| class="wikitable" style="text-align: right;"                                                             
+{| class="wikitable sortable" style="text-align: right;"                                                             
 |-                                                                              
 !  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-                                                                              
@@ -151,7 +151,7 @@ This test simulates heavy workload VMs.
 
 === 6 VMs ===
 [[File:Vdsm-query-interface-measurements-6vms-fakestats.png]]
-{| class="wikitable" style="text-align: right;"                                                            
+{| class="wikitable sortable" style="text-align: right;"                                                            
 !  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-                                                                              
 | new status & stats || 824446 || 0.7862529755 || 76.79 || 2617.29 || 77.90     
@@ -167,7 +167,7 @@ This test simulates heavy workload VMs.
 
 === 100 VMs ===
 [[File:Vdsm-query-interface-measurements-100vms-fakestats.png]]
-{| class="wikitable" style="text-align: right;"                                                            
+{| class="wikitable sortable" style="text-align: right;"                                                            
 !  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-                                                                              
 | new status & stats || 11949463 || 11.3958959579 || 79.23 || 37934.80 || 80.22 
@@ -183,7 +183,7 @@ This test simulates heavy workload VMs.
 
 === 1000 VMs ===
 [[File:Vdsm-query-interface-measurements-1000vms-fakestats.png]]
-{| class="wikitable" style="text-align: right;"                                                            
+{| class="wikitable sortable" style="text-align: right;"                                                            
 !  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-                                                                              
 | new status & stats || 118286166 || 112.8064785004 || 79.29 || 375511.64 || 80.28
@@ -209,7 +209,7 @@ Just to give an idea about how significant this difference can be here a compari
 
 === 6 VMs ===
 [[File:Vdsm-query-interface-measurements-6vms-windows.png]]
-{| class="wikitable" style="text-align: right;"                                                            
+{| class="wikitable sortable" style="text-align: right;"                                                            
 !  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-                                                                              
 | queryVms statistics & status || 697203 || 0.66 || 88.87 || 2213.34 || 89.40             
@@ -225,7 +225,7 @@ Just to give an idea about how significant this difference can be here a compari
 
 === 100 VMs ===
 [[File:Vdsm-query-interface-measurements-100vms-windows.png]]
-{| class="wikitable" style="text-align: right;"                                                            
+{| class="wikitable sortable" style="text-align: right;"                                                            
 !  -  !! Total Body Size !! Total Body Size in MiB !! Total Savings % !! avg. Body Size !! avg Body Savings %
 |-                                                                              
 | queryVms statistics & status || 9924124 || 9.46 || 90.74 || 31505.16 || 91.18           
