@@ -144,6 +144,9 @@ A set of mixed (Windows/Linux) vms having no active users or any kind of service
 |}
 
 == Fake Stats ==
+
+A set of VMs where the statistics for 'disksUsage', 'memUsage', 'cpuSys', 'cpuUser', 'network' have been actively manipulated to be different on every request. (Basically what the fake vm stats hook does just made suitable for this test)
+
 === 6 VMs ===
 [[File:Vdsm-query-interface-measurements-6vms-fakestats.png]]
 {| class="wikitable"                                                            
@@ -190,7 +193,7 @@ A set of mixed (Windows/Linux) vms having no active users or any kind of service
 | queryVms || 725224600 || 691.628074646 || -26.96 || 2417415.33 || -26.96           
 |-                                                                              
 | list/getAllVMStats || 571238141 || 544.7751436234 || 0.00 || 1904127.14 || 0.00           
-|} 
+|}
 
 == Windows VMs ==
 === 6 VMs ===
