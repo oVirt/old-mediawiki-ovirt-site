@@ -86,7 +86,10 @@ Illustrative querying sequence:
 '''Note:''' ''The test here might have been optimized to NOT use separate calls when querying for the statistics since it overlaps with the general query, however for the sake of simplicity and potential difference on the engine side for the implementation this has been left this way.''
 
 = Results =
-== Idle VMs == 
+== Idle VMs ==
+
+A set of mixed (Windows/Linux) vms having no active users or any kind of services running. A third (33%) having of those VMs have guest agents.  
+
 === 6 VMs ===
 [[File:Vdsm-query-interface-measurements-6vms-idle.png]]
 {| class="wikitable"
@@ -138,7 +141,7 @@ Illustrative querying sequence:
 | queryVms || 204050147 || 194.60 || 60.47 || 680167.16 || 60.47                     
 |-                                                                              
 | list/getAllVMStats || 516132691 || 492.22 || 0.00 || 1720442.30 || 0.00                   
-|}                                                                              
+|}
 
 == Fake Stats ==
 === 6 VMs ===
