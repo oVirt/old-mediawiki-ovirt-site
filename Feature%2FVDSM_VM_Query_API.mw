@@ -97,7 +97,10 @@ The call returns a structure like this:
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
 
 The proposed API verb can reduce the required volume of data sent over the management network to in a range of 75-90% '''without using compression'''.  Please see the [[Feature/VDSM VM Query API/Measurements|Measurements Page]] for the actual results of the tests performed using this API in comparison to the current way.
+
 This proposal introduces a more flexible way of changing the API by adding new fields or deprecating them by exclusion from the callers side. Additionally fields are only sent when they have been really changed since the last request.
+
+Another big benefit to oVirt is that we can improve the responsiveness but still reduce the overall traffic and load for marshalling the data between engine and vdsm.
 
 == Dependencies / Related Features ==
 <!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
