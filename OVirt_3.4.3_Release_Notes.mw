@@ -104,6 +104,10 @@ Bugs fixed between RC and GA
 {{BZ|1111162}} - [RFE] [ovirt-hosted-engine-setup] add support for bonded interfaces<BR>
 {{BZ|1117634}} - [RFE] Hosted Engine deploy should support VLAN-tagged interfaces<BR>
 
+Bugs fixed between RC and GA
+
+{{BZ|1119145}} - hosted-engine --deploy does not check for NX flag<BR>
+
 ==VDSM==
 
 ==ovirt-node-plugin-vdsm==
