@@ -108,6 +108,15 @@ Bugs fixed between RC and GA
 
 {{BZ|1119145}} - hosted-engine --deploy does not check for NX flag<BR>
 
+== oVirt Hosted Engine HA ==
+Bugs fixed between RC and GA
+
+{{BZ|1093366}} - Migration of hosted-engine vm put target host score to zero<BR>
+{{BZ|1119699}} - ovirt-ha-agent dead but subsys locked<BR>
+{{BZ|1119702}} - After host restart, storage domain not mounted automatically<BR>
+{{BZ|1119705}} - If two hosts have engine status 'vm not running on this host' ha agent not start vm automatically<BR>
+{{BZ|1119763}} - Migration of hosted-engine vm put target host score to zero<BR>
+
 ==VDSM==
 
 ==ovirt-node-plugin-vdsm==
