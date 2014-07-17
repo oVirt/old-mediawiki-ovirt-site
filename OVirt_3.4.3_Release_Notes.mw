@@ -118,6 +118,12 @@ Bugs fixed between RC and GA
 {{BZ|1119763}} - Migration of hosted-engine vm put target host score to zero<BR>
 
 ==VDSM==
+{{BZ|1089393}} - vdsm returns a value of "None" for systemFamily<BR>
+{{BZ|1102147}} - [scale] VDSNetworkException and TimeoutException raised every 4-5 min - Host is state Connecting<BR>
+{{BZ|1104670}} - Incorrect migration progress reporting may lead to unwanted migration cancellation<BR>
+{{BZ|1111075}} - Can't login the hypervisor with correct password after upgrading the RHEV-H from "rhevh-6.5-20140603.2.el6ev.iso" to "rhevh-6.5-20140618.0.el6ev.iso"<BR>
+{{BZ|1111284}} - avoid XML-RPC integer overflows in balloon stats<BR>
+{{BZ|1117795}} - Thin provisioning disks broken on block storage when using pthreading 1.3<BR>
 
 ==ovirt-node-plugin-vdsm==
 
