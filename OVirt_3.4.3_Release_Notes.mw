@@ -84,6 +84,7 @@ If you're going to test  oVirt 3.4.3 development version, please add yourself to
 {{BZ|1115389}} - API: Interface name is not set via cloud-init api<BR>
 
 Bugs fixed between RC and GA:
+
 {{BZ|1103876}} - [RFE] remove log collector as mandatory dependency<BR>
 {{BZ|1107968}} - Tracker: oVirt 3.4.3 release<BR>
 {{BZ|1118187}} - Cannot run VMs on host while VM is migrating to it<BR>
