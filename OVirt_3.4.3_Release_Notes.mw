@@ -95,6 +95,11 @@ Bugs fixed between RC and GA:
 == oVirt Log Collector ==
 {{BZ|1101421}} - Backport of http://gerrit.ovirt.org/#/c/28053/ to improve performance of api after max is removed<BR>
 
+Bugs fixed between RC and GA
+
+{{BZ|1073944}} - Add log gathering for a new ovirt module (External scheduler)<BR>
+{{BZ|1119363}} - missing sosreport.html from postgresql-report-admin<BR>
+
 == oVirt Hosted Engine Setup ==
 {{BZ|1111162}} - [RFE] [ovirt-hosted-engine-setup] add support for bonded interfaces<BR>
 {{BZ|1117634}} - [RFE] Hosted Engine deploy should support VLAN-tagged interfaces<BR>
