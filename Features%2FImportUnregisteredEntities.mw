@@ -49,8 +49,8 @@ The user will be able to attach the missing Storage Domain at a later phase but 
 [4] Currently, copied disk is not supported in the OVF file, after we will insert this data in the OVF, registration of template should automatically add the copied disk to the Template
 
 
-==== REST ====
-===== Get list of unregistered VM/Template =====
+== REST ==
+=== Get list of unregistered VM/Template ===
 The use can get a list of all the unregistered VMs or unregistered Templates by adding the prefix ";unregistered" after the vms/Templates, in the Storage Domain.<BR>
 For example to get all the unregistered VMs in the Storage Domain 68ca2f73-9b15-4839-83c9-859244ad2cd3 the URL will be :
 http://localhost:8080/api/storagedomains/68ca2f73-9b15-4839-83c9-859244ad2cd3/vms;unregistered
@@ -60,8 +60,8 @@ If the user want to register a VM to the setup, then the URL should indicate reg
 http://localhost:8080/api/storagedomains/xxxxxxx-xxxx-xxxx-xxxxxx/vms/xxxxxxx-xxxx-xxxx-xxxxxx/register
 [[File:UnregisterVM1.png]]
 
-==== UI ====
-===== Import VM/Template sub-tabs =====
+== UI ==
+=== Import VM/Template sub-tabs ===
 [[File:import_vm_template_subtab.png]]
-===== Import VM/Template Dialog =====
+=== Import VM/Template Dialog ===
 [[File:import_vm_template_dialog.png]]
