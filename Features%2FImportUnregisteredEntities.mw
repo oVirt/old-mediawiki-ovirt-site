@@ -1,6 +1,6 @@
-=Detach and Attach Storage Domains containing entities =
+=Detach/Attach Storage Domains with entities =
 
-{{Feature|name=Detach and Attach Storage Domains containing|entities=engine/vdsm|status=Released|version=3.5}}
+{{Feature|name=Detach/Attach Storage Domains with entities|entities=engine/vdsm|status=Released|version=3.5}}
 
 == Summary ==
 Today the operation of moving entities, such as VMs or Templates, from one Data Center to another Data Center in the same setup must be done through a mediator called Export Storage Domain.<BR/>
