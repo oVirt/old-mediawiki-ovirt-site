@@ -40,7 +40,7 @@ Based on this information stored in the Storage Domain, we can relate the disks,
 * A Template with disk on multiple storage domain will be registered as one copy of the disk related to the source Storage Domain.(see [4])
 
 
-=== Implementation gaps ===
+==== Implementation gaps ====
 [1]  If a VM includes a shareable or direct lun disks, a warning will be prompted to the user, indicating the following 
   Attention, The following VMs contains shareable/direct lun disks which will not be part of the VM configuration after the detach will take place: {vmNames}.
 [2]: There is a gap that VMs/Templates with no disks do not exist in the Storage Domain's OVF, therefore those VMs will not be present in the setup on attach operation.<BR/>
