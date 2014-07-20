@@ -45,23 +45,6 @@ The usability of the feature might be useful for various use cases, the followin
 
 
 ===== GUI Perspective =====
-* The user flow for importing NFS Storage Domain, will be similar to importing Export/ISO domain.<BR/>
-The user will enter the path of the storage domain and will start the import process.<BR/>
-
-The following UI mockups contain guidelines for the different screens and wizards related for file Storage Domains:<BR/>
-An import screen for NFS Storage Domain :<BR/>
-<BR/>
-[[File:ImportNFS.jpeg|600px]]
-<BR/><BR/><BR/><BR/>
-An import screen for POSIX Storage Domain :<BR/>
-<BR/>
-[[File:ImportPosix.jpeg|600px]]
-<BR/><BR/><BR/><BR/>
-An import screen for Gluster Storage Domain :<BR/>
-<BR/>
-[[File:ImportGluster.jpeg|600px]]
-
-==== GUI Perspective =====
 ===== Work flow for Import block Storage Domain - UI flow =====
 On import a Block Device Storage Domain The user should do the following steps: <BR/>
 1. The user should press the "import Storage Domain" button.
@@ -91,6 +74,23 @@ On import a File Device Storage Domain The user should do the following steps: <
 8. When the "Import" button is pressed, a dialog should be opened, showing the list of all the entities the user chose to register.<BR/>
 The user should choose a cluster for each entity which should be compatible for it.<BR/>
 The user can also watch the entity properties (such as disks, networks) in the sub tab inside the dialog.
+
+* The user flow for importing NFS Storage Domain, will be similar to importing Export/ISO domain.<BR/>
+The user will enter the path of the storage domain and will start the import process.<BR/>
+
+The following UI mockups contain guidelines for the different screens and wizards related for file Storage Domains:<BR/>
+An import screen for NFS Storage Domain :<BR/>
+<BR/>
+[[File:ImportNFS.jpeg|600px]]
+<BR/><BR/><BR/><BR/>
+An import screen for POSIX Storage Domain :<BR/>
+<BR/>
+[[File:ImportPosix.jpeg|600px]]
+<BR/><BR/><BR/><BR/>
+An import screen for Gluster Storage Domain :<BR/>
+<BR/>
+[[File:ImportGluster.jpeg|600px]]
+
 
 The following UI mockups contain guidelines for the different screens and wizards related to the block domain:<BR/>
 An import screen for Fibre Channel Storage Domain :<BR/>
