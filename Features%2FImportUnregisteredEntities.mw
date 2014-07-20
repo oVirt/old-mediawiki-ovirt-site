@@ -6,7 +6,7 @@
 Today the operation of moving entities, such as VMs or Templates, from one Data Center to another Data Center in the same setup must be done through a mediator called Export Storage Domain.<BR/>
 This migration of those entities is being done by two copy operations, one is done to the mediator (Export Storage Domain) and another copy is from the Export Storage Domain to the target Storage Domain.<BR/>
 Needless to say those operations requires allocation of free space in the Export Storage domain, and takes a long time to be accomplished.<BR/>
-<BR/><BR/>
+<BR/>
 There is a requirement to add the ability of migrating entities from one Data Center to another without the use of a mediator, and by that, save the heavy operation of the copy operation.<BR/>
 Today we can detach a Storage Domain from the DC, only if it is empty, i.e. does not contain any disks or VMs/Templates<BR/>
 The new feature should add the ability for the  user to detach a Storage Domain containing VMs/Templates and Disks, and re-attach it again to another Data Center.<BR/>
