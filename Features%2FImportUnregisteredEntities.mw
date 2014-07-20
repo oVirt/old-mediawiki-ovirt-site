@@ -73,7 +73,6 @@ The user will be able to attach the missing Storage Domain at a later phase but 
 === Import VM/Template Dialog ===
 [[File:import_vm_template_dialog.png]]
 
-
 == REST ==
 === Get list of unregistered VM/Template ===
 The use can get a list of all the unregistered VMs or unregistered Templates by adding the prefix ";unregistered" after the vms/Templates, in the Storage Domain.<BR>
