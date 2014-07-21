@@ -119,8 +119,6 @@ An import screen for iSCSI Storage Domain :<BR/>
 
 === Permissions ===
 * No additional permissions will be added.
-* The role for importing a Storage Domain should be CREATE_STORAGE_DOMAIN
-Open issue: Could be also that CREATE_VM for creating VMs.
 
 === Future Work ===
 * Detach Stroage Domain with VMs/Templates and disks: The user will be able to detach a list of Storage Domains all at once instead detaching each Storage Domain one by one.
