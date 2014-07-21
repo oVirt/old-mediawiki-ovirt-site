@@ -19,7 +19,7 @@ The usability of the feature might be useful for various use cases, here are som
 * Email <mlipchuk@redhat.com>
 
 == Current status ==
-* Design
+* Implemented
 
 == General Functionality ==
 * The feature should be fully supported from oVirt 3.5.
