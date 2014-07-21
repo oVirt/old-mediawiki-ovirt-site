@@ -55,9 +55,8 @@ This is an example of how to recover if the user setup has encountered a disaste
 4. Once the Host is UP and running, add and activate a new empty Storage Domain to initialize the Data Center.
 5. If there were VMs/Templates which ran in the old setup on different compatible versions, or different CPU types, then those type of clusters should be created on the new Data Center.
 6. Follow the following instructions of importing Storage Domain, depended on the type of Storage Domain which the user wants to recover:
-#  For  Import block Storage Domain - 
-#  For  Import file Storage Domain - 
-
+#  For  Import block Storage Domain - http://www.ovirt.org/Features/ImportStorageDomain#Work_flow_for_Import_block_Storage_Domain_-_UI_flow
+#  For  Import file Storage Domain -
 
 == GUI Perspective ==
 
