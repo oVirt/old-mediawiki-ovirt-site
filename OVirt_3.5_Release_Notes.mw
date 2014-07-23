@@ -504,7 +504,7 @@ fixed in alpha
 
 == oVirt Log Collector ==
 
-fixed in second beta
+fixed in beta
 
 {{BZ|1061636}} - engine-log-collector help default logfile path does not make sense<BR>
 {{BZ|1115963}} - missing sosreport.html from postgresql-report-admin<BR>
