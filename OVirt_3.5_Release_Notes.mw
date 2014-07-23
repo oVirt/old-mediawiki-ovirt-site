@@ -494,6 +494,12 @@ More information can be found in the [[Features/oVirt_Windows_Guest_Tools|oVirt 
 {{BZ|1102226}} - option insecure doesn't work<BR>
 
 == oVirt ISO Uploader ==
+fixed in beta
+
+{{BZ|1100825}} - option nossl does not work<BR>
+
+fixed in alpha
+
 {{BZ|1100824}} - option insecure doesn't work<BR>
 
 == oVirt Log Collector ==
