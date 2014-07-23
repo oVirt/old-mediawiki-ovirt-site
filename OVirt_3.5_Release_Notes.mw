@@ -515,6 +515,11 @@ fixed in alpha
 {{BZ|1098029}} - "rhsc-log-collector" takes too long even to prompt for the REST API password before it actually start collecting information from selected servers<BR>
 
 == oVirt Hosted Engine Setup ==
+Fixed in second beta
+
+{{BZ|1103672}} - hosted-engine --deploy does not check for NX flag<BR>
+{{BZ|1109929}} - Failure to add initial host to Default cluster prevents the 'engine_api' variable from being set properly<BR>
+
 Fixed in beta
 
 {{BZ|1080402}} - OVIRT35 - [RFE] Allow setup of iSCSI based storage for hosted engine<BR>
