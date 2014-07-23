@@ -531,6 +531,12 @@ Fixed in alpha
 {{BZ|1079956}} - missing dependency<BR>
 
 == oVirt Hosted Engine HA ==
+Fixed in second beta
+
+{{BZ|1093366}} - Migration of hosted-engine vm put target host score to zero<BR>
+{{BZ|1093621}} - After host restart, storage domain not mounted automatically<BR>
+{{BZ|1093638}} - If two hosts have engine status 'vm not running on this host' ha agent not start vm automatically<BR>
+
 Fixed in beta
 
 {{BZ|1094657}} - [RFE] Integrate hosted engine with vdsm using ISCSI storage doamain<BR>
