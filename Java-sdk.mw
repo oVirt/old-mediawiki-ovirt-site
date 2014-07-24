@@ -16,16 +16,16 @@ __TOC__
 == IDE Examples ==
 
 
-=== Creating the proxy ===
+=== Creating the proxy: ===
 ----------------------------------------
 
 [[File:0-1jdk.jpg]]
 
-==== Authenticating using username and password ====
+==== Authenticating using user name and password: ====
 
 [[File:0-1-1jdk.jpg]]
 
-==== Authenticating using sessionid ====
+==== Authenticating using sessionid: ====
 
 [[File:0-1-2jdk.jpg]]
 
