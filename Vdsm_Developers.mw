@@ -24,9 +24,9 @@ Fedora and RHEL 6 users must verify the following packages are installed before 
   python-cpopen bridge-utils libguestfs-tools-c pyparted openssl libnl libtool gettext-devel python-ioprocess
 
 ==Getting the source==
-Our public git repo is located on [http://gerrit.ovirt.org/gitweb?p=vdsm.git oVirt.org]
+Our public git repository is located at: [http://gerrit.ovirt.org/gitweb?p=vdsm.git oVirt.org]
 
-you can clone it with
+You can clone this repository by running the following command:
  git clone http://gerrit.ovirt.org/p/vdsm.git
 
 ==Building a Vdsm RPM==
