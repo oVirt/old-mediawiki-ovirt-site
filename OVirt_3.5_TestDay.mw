@@ -113,7 +113,7 @@ Following tests should be performed on all supported distributions.
   | 
   | 
   | 1091863
-  | 
+  |  works (gshereme)
 |-
   | Network
   | Warning upon display network changes
