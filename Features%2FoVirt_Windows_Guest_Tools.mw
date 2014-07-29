@@ -2,7 +2,7 @@
 
 == oVirt Windows Guest Tools ISO  ==
 
-{{Feature|name=oVirt Windows Guest Tools ISO|modules=engine|status=Alpha|version=3.5.0}}
+{{Feature|name=oVirt Windows Guest Tools ISO|modules=engine|status=Released|version=3.5.0}}
 
 === Summary ===
 This feature will add an ISO image with required drivers and agents for Windows based VMs.
