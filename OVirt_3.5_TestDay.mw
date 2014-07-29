@@ -34,6 +34,7 @@
 * DWH/Reports setup is currently broken.
 * You can't refresh iso file list after adding a host, see https://bugzilla.redhat.com/1114499 for a workaround.
 * The beta RPM packages are not signed. Either use 'yum --nogpgcheck' or set 'gpgcheck=0' in the repo file.
+* CentOS hosts don't report RNG devices sources. Please uncheck '/dev/random' checkbox in Cluster Options for default cluster before adding any CentOS host to it.
 
 ==oVirt 3.5 New Features  - Test Status Table==
 Please report test results on the [http://etherpad.ovirt.org/p/3.5-testday-2 second test day report etherpad] (previous is [http://etherpad.ovirt.org/p/3.5-testday-1 first test day report etherpad]).or on the table below.
