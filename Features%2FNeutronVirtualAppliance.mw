@@ -28,7 +28,7 @@ The neutron appliance for ovirt-engine 3.5 is based on the [http://openstack.red
 === Add OpenStack network external provider using the Neutron appliance ===
 ==== Create a vm based on neutron-appliance image ====
 # Add new vm network (e.g. named 'neutron') in the relevant data-center.
-# Edit the 'neutron' vnic profile of the 'neutron' network to include custom properties "mac-spoof=true"
+# Edit the 'neutron' vnic profile of the 'neutron' network to include custom properties "ifacemacspoof=true"
 ## Instructions for adding the 'mac-spoof' property can be found [https://github.com/oVirt/vdsm/tree/master/vdsm_hooks/macspoof here].
 ## Enabling mac-spoofing is required for the appliance specifically for dhcp agent which is connected to the networks bridge by a port (one or more dhcp agent per network). In order for packets not to be blocked  by ebtable rules (introduced by [[Features/Design/Network/NetworkFiltering|nwfilter]]), mac-spoof should be enabled.
 
