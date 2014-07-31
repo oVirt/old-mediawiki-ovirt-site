@@ -42,9 +42,8 @@ A speration between authorization and authentication was introrduced at the code
 The session management mechanism at engine was changed to rely on engine session Id.
 In addition,  the authentication flows for  the web applications (REST-API and GUI)  were refactored using a set of servlet filters that can be reused for various web applications.
 
-==== Jsonrpc ====
-Jsonrpc over stomp was added to communication layer between the engine and vdsm. New protocol is design to be simple, do not require as much parsing as already implemented xmlrpc and it
-introduces asynchronous communication. Vdsm binds to single port and is able to detect which protocol is used when a connection is established and delegate connection handling to proper jsonrpc or xmlrpc layer.
+==== JSON Remote Procedure Call ====
+JSON remote procedure call over stomp was added to the communication layer between the engine and VDSM. This new protocol is designed to be simple, require less parsing than the currently implemented XML remote procedure calls, and introduces asynchronous communication. VDSM binds to a single port and can detect which protocol is used when a connection is established, delegating connection handling to the JSON remote procedure call or XML remote procedure call layer.
 
 ==== Advanced Foreman Integration ====
 Integration of Foreman with oVirt provides the ability to add hypervisor hosts managed by Foreman to oVirt engine (installed hosts and discovered hosts). The feature includes user interface changes for providing a list of discovered hosts in the addHost popup view, with information on hardware, host groups and compute resources. On the Foreman side, oVirt provides a new Foreman plug-in (https://github.com/theforeman/ovirt_provision_plugin) that automatically performs the deployment process after host is provisioned. For more information, see http://www.ovirt.org/Features/AdvancedForemanIntegration.
