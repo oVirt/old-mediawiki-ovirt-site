@@ -9,8 +9,8 @@ For a general overview of oVirt, read [[oVirt 3.0 Feature Guide | the oVirt 3.0 
 = oVirt 3.5.0 BETA Release Notes =
 
 == BETA RELEASE ==
-The oVirt Project is working on oVirt 3.5.0 Beta release. In order to install it you've to enable oVirt 3.5 pre release repository.
-See below section on Install / Upgrade for having detailed instructions.
+The oVirt Project is working on oVirt 3.5.0 Beta release. To install this release, you must enable the oVirt 3.5 pre-release repository.
+See the below section on Install / Upgrade for detailed instructions.
 
 == Known Issues ==
 * if you're using f19 host, you'll need  libvirt >= 1.0.1 to use cluster level 3.5
