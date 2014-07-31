@@ -83,7 +83,7 @@ Filters out host according to affinity enforce mode (hard).
 ** for positive affinity, in case a VM of the group is running on a certain host, give all other hosts a higher weight.
 ** for negative affinity, for each running VM in the group, give the VM's host higher weight.
 ===REST API===
-====clsuters====
+====Clusters====
 /GET  /api/clusters/{clsuter_id}/affinitygroups
 <affinity_groups>
   <affinity_group href="">
@@ -103,6 +103,7 @@ Filters out host according to affinity enforce mode (hard).
 /PUT  /api/clusters/{clsuter_id}/affinitygroups/{affinity_group_id}
 <affinity_group></affinity_group>
 /DELETE  /api/clusters/{clsuter_id}/affinitygroups/{affinity_group_id}
+
 ====vms====
 [not final]
 GET  .../vms
