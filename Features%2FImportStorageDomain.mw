@@ -46,7 +46,8 @@ The usability of the feature might be useful for various use cases, here are som
 [3] On attach of a Storage Domain, the user risks a data corruption if the Storage Domain is being used by another oVirt setup, in order to avoid data corruption. Before every attach operation of a Storage Domain with a meta data indicating it is related to another Data Center, the system will prompt the user a warning message that indicates it is already attached to a Data Center.<BR/>
 [4] Open Issue: We should have an indication of External LUN disk on the Lun<BR/>
 [5] When the user moved the Storage Domain to maintenance, all the entities related to the Storage Domain should be updated in the OVF_STORE disk.<BR/>
-[6] Currently, VDSM take a lock on the storage pool when performing a detach operation, this obstacle should be removed in a later version, once the storage pool will be removed completely in VDSM.
+[6] Currently, VDSM take a lock on the storage pool when performing a detach operation, this obstacle should be removed in a later version, once the storage pool will be removed completely in VDSM.<BR/>
+[7] Currently alias names of disks are not persisted in the Storage Domain, so registering disks, will not have alias names. The alias name should be persisted in the Description of the disk in the Storage Domain.<BR/>
 
 == Disaster Recovery flows ==
 This is an example of how to recover a setup if it encountered a disaster.<BR/>
