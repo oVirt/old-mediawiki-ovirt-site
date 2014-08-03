@@ -92,25 +92,25 @@ Using this resource, nic-less networks could be configured on host.
 
 == Current Host Networking API (up to ovirt-engine-3.5) ==
   /api/hosts/{host:id}/nics
-# '''GET''' - list of network interfaces (GetVdsInterfacesByVdsId)
-# '''POST''' - creates a bond (AddBond)
+* '''GET''' - list of network interfaces (GetVdsInterfacesByVdsId)
+* '''POST''' - creates a bond (AddBond)
 
   /api/hosts/{host:id}/nics/setupnetworks
-# '''POST''' - performs setup networks action (SetupNetworks)
+* '''POST''' - performs setup networks action (SetupNetworks)
 
   /api/hosts/{host:id}/nics/{nic:id}
-# '''GET''' - gets a specific network interface (GetVdsInterfacesByVdsId)
-# '''DELETE''' - removes a bond (RemoveBond)
-# '''PUT''' - updates a network which is attached to the specific network interface, aka mini-setup networks (UpdateNetworkToVdsInterface)
+* '''GET''' - gets a specific network interface (GetVdsInterfacesByVdsId)
+* '''DELETE''' - removes a bond (RemoveBond)
+* '''PUT''' - updates a network which is attached to the specific network interface, aka mini-setup networks (UpdateNetworkToVdsInterface)
 
   /api/hosts/{host:id}/nics/{nic:id}/attach
-# '''POST''' - adds a network to a nic (AttachNetworkToVdsInterface)
+* '''POST''' - adds a network to a nic (AttachNetworkToVdsInterface)
 
   /api/hosts/{host:id}/nics/{nic:id}/detach
-# '''POST''' - removes a network from a nic (DetachNetworkFromVdsInterface)
+* '''POST''' - removes a network from a nic (DetachNetworkFromVdsInterface)
 
   /api/hosts/{host:id}/nics/{nic:id}/statistics
-# '''GET''' - list the statistics of the specific network interface
+* '''GET''' - list the statistics of the specific network interface
 
 Network labels related actions are listed [[here|http://www.ovirt.org/Features/NetworkLabels#REST]].<br>
 
