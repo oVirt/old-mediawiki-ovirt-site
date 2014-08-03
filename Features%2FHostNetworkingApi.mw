@@ -108,7 +108,7 @@ The vlan devices will be hidden from the list of /api/hosts/{host:id}/nics and w
 
 
 
-Deprecated: /api/hosts/{host:id}/nics/setupnetworks
+* Deprecated: /api/hosts/{host:id}/nics/setupnetworks
   <host_nic>
      <network id="..."/>
   </host_nic>
