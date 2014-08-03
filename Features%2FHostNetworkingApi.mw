@@ -112,7 +112,7 @@ Using this resource, nic-less networks could be configured on host.
   /api/hosts/{host:id}/nics/{nic:id}/statistics
 * '''GET''' - list the statistics of the specific network interface
 
-Network labels related actions are listed [[here|http://www.ovirt.org/Features/NetworkLabels#REST]].<br>
+Network labels related actions are listed [[here|Features/NetworkLabels#REST]].<br>
 
 == What should be deprecated? ==
 * Replace ''network'' element in host_nic with ''networkconnections'':
