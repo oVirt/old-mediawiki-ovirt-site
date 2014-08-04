@@ -63,7 +63,7 @@ It'll be easier to install the ovirt-guest-agent on Ubuntu guests.
 * Shutdown/Reboot from within the Guest OS
 
 ==== Installation ====
-$REPOURL is any of the URLs listed in the [[Feature/GuestAgentDebian#Repository|Repository]] section
+$REPOURL is any of the URLs listed in the [[Feature/GuestAgentUbuntu#Repository|Repository]] section
 
  # echo 'deb  $REPOURL' >> /etc/apt/sources.list.d/ovirt-guest-agent.list
  # wget $REPOURL/Release.key
