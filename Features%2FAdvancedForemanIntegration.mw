@@ -46,7 +46,7 @@ Prerequisites:
  append initrd=<%= @initrd %> ks=<%= foreman_url('provision')%> root=live:/[filename].iso BOOTIF=link storage_init rhevm_admin_password=123 adminpw=123 management_server=[ip]:[port] rootfstype=auto ro liveimg check RD_NO_LVM rd_NO_MULTIPATH rootflags=ro crashkernel=128M elevator=deadline quiet max_loop=256 rhgb rd_NO_LUKS rd_NO_MD rd_NO_DM ONERROR LOCALBOOT 0 
 * oVirt needs proper permissions to view relevant bare-metal hosts, host groups, compute resources and execute provision request.
 * Set Foreman's compute resource that correlates to the required permissions (Availability to approve and add host by custom plugin. For more information about Foreman plugin see [3])
-* Define puppet class for installing oVirt-Engine public key to allow deploy oVirt on provisioned host
+* Define puppet class for installing oVirt-Engine public key to allow deploy oVirt on provisioned host (locate them under /usr/share/puppet/modules)
 - For example:
  class ovirt-pk {                                                                
         # create a directory                                                    
