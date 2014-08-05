@@ -163,6 +163,80 @@ More information can be found in the [[Features/oVirt_Windows_Guest_Tools|oVirt 
 = <span class="mw-customtoggle-1" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Click to Show/Hide]</span></span>Bugs Fixed = 
 <div  id="mw-customcollapsible-1" class="mw-collapsible mw-collapsed">
 ==oVirt Engine==
+''' Fixed in ovirt-engine-3.5.0_rc1'''<BR>
+{{BZ|1013737}} - No error when inserting a non-ISO image through the REST API<BR>
+{{BZ|1031382}} - When creating an "external provider network" in rhevm with vlan tag, the vlan tag disappears from GUI<BR>
+{{BZ|1035289}} - comment to "restart vm after enabling virtIO-SCSI" in GUI<BR>
+{{BZ|1054175}} - Missing storage allocation checks when running a stateless VM<BR>
+{{BZ|1057211}} - [Admin Portal] Blank template has 'RHEV' as origin<BR>
+{{BZ|1084940}} - VM's template information is inconsistent after upgrading to 3.4<BR>
+{{BZ|1087745}} - Recommended size of memory is too low for RHEL6 64bit systems<BR>
+{{BZ|1092752}} - Get rid of the fenceSpmStorage calls<BR>
+{{BZ|1094144}} - [engine-backend] [iSCSI multipath] No indication that updating an iSCSI multipath bond doesn't trigger any operation from vdsm side<BR>
+{{BZ|1094196}} - [engine-backend] [iSCSI multipath] It's possible to remove a network from the setup even though it participates in an iSCSI multipath bond<BR>
+{{BZ|1101068}} - [ALL_LANG][Admin Portal] the string "Remove external network(s) from the provider(s) as well." might need some adjustment<BR>
+{{BZ|1102542}} - [Neutron integration] It's impossible to remove a VNIC with Neutron network on it when the Neutron service is down<BR>
+{{BZ|1103058}} - Wrong vnic profiles on vm based on template from another cluster<BR>
+{{BZ|1109053}} - [Admin Portal] Missing tooltip help for 'Mount options' in New Domain/POSIX FS dialog<BR>
+{{BZ|1110575}} - [RFE] 3.5 translation - cycle 2<BR>
+{{BZ|1113160}} - Display of a NIC slave/bond reported as down on the event log with v sign instead of warning sign<BR>
+{{BZ|1113256}} - Command Executor should persist command before submitting to pool<BR>
+{{BZ|1113478}} - Host PM port is empty after disabling PM checkbox and save<BR>
+{{BZ|1113571}} - Fail to update VM with any field, on missing domain name.<BR>
+{{BZ|1114041}} - Cannot add AD group to a new VM from the user portal<BR>
+{{BZ|1114431}} - OVF_STORE disks shows wrong Error msg on remove<BR>
+{{BZ|1114977}} - Class cast exception when fence_apc_snmp fails<BR>
+{{BZ|1114985}} - Editing non-VLAN network shows VLAN 0<BR>
+{{BZ|1114991}} - Pencil on setup network> the pencil on the nic host is located down and right, not straight in the middle<BR>
+{{BZ|1114997}} - Migration progress bar not cleaned on VM crash<BR>
+{{BZ|1115044}} - Host stuck in "Unassinged" state when using jsonrpc and disconnection from pool failed<BR>
+{{BZ|1115062}} - Incorrect error message when creating network with incorrect MTU value<BR>
+{{BZ|1115326}} - [Admin Portal] Broken UI - Provide custom serial number policy<BR>
+{{BZ|1115788}} - Create new VM | Not all selected nics are created on the VM<BR>
+{{BZ|1115827}} - New network dialog | no field validated indication for tabs<BR>
+{{BZ|1116580}} - '-' and '+' signs for custom properties of the VNIC profile do not reside in the same line<BR>
+{{BZ|1116737}} - Unneeded scroll bar when editing VNIC profile or editing specific NIC in setupNetworks<BR>
+{{BZ|1117393}} - Keep validation/event message if there is an iso update to ovirt node host.<BR>
+{{BZ|1117502}} - [RFE][AAA] Display authz namespace at user/group add dialog<BR>
+{{BZ|1118191}} - unlock_entity.sh fails with "psql: fe_sendauth: no password supplied"<BR>
+{{BZ|1118249}} - command infrastructure should know when the "execute" phase finished<BR>
+{{BZ|1118360}} - engine-cleanup should refuse removing a different version<BR>
+{{BZ|1118847}} - ovirt-engine currently sets the disk device to "lun" for all virtio-scsi direct LUN connections and disables read-only for these devices<BR>
+{{BZ|1119022}} - Space validation for memory volumes is missing when creating a live snapshot<BR>
+{{BZ|1119214}} - PreDefinedNetworkCustomProperties differs between different versions of psql<BR>
+{{BZ|1119706}} - Jobs object that contain job with "Removing Snapshot..." doesn't finish<BR>
+{{BZ|1120195}} - [AAA] Present authz name and namespace within user and permissions tabs<BR>
+{{BZ|1120768}} - [python-sdk] Creating a new disk as first attached directly to vm's disk collection fails<BR>
+{{BZ|1121237}} - CommandExecutor should handle exception in CallBackMethods<BR>
+{{BZ|1121379}} - NPE and RTE occurs when cold moving vm's disks between different domains types<BR>
+{{BZ|1121388}} - Missing error message for CANNOT_FORCE_SELECT_SPM_VDS_ALREADY_SPM<BR>
+{{BZ|1121391}} - Rest API operations Fail on oVirt-engine's logs<BR>
+{{BZ|1121406}} - [AAA] Add datacenter\template permissions to user returns HTTP 500 in REST (null pointer)<BR>
+{{BZ|1121410}} - [AAA] Get users by domain returns partial list of users<BR>
+{{BZ|1121967}} - jsonrpc: Edit host restores default protocol<BR>
+{{BZ|1122427}} - GetRngDeviceQuery should be a user query<BR>
+{{BZ|1122473}} - Custom fencing settings are not saved in DB<BR>
+{{BZ|1122582}} - webadmin-reports SSO is broken<BR>
+{{BZ|1122591}} - Bad error message - no link<BR>
+{{BZ|1122691}} - Live Merge: Fix engine-side flows<BR>
+{{BZ|1122921}} - Backport RNG enum fix<BR>
+{{BZ|1123309}} - [es_ES][User Portal] - Wrong Indentation due to translated strings in New VM page<BR>
+{{BZ|1123545}} - AAA - the format of profile\user is not supported by REST-API anymore<BR>
+{{BZ|1123636}} - Add or remove network label with Rest API fails with "User is not logged in" error<BR>
+{{BZ|1123701}} - [fr_FR][Admin Portal] Misalignment in 'Import Pre-Configured Domain' dialog.<BR>
+{{BZ|1123702}} - [fr_FR][Admin Portal] Overlapped in 'Import Pre-Configured Domain' dialog.<BR>
+{{BZ|1123828}} - get rid of "Non interactive user" instead of "Unknown" once and for all<BR>
+{{BZ|1124141}} - StackOverflowError during fencing operation<BR>
+{{BZ|1124375}} - Can't search DCs according to compatibility version<BR>
+{{BZ|1124378}} - Can't sort DCs according to compatibility version<BR>
+{{BZ|1124404}} - [webadmin] Host Edit Network dialog - fix custom properties layout<BR>
+{{BZ|1124584}} - Same disk appears multiple times (30!) in the Disks tab<BR>
+{{BZ|1124593}} - Same cluster appears twice in the clusters table with different info<BR>
+{{BZ|1124879}} - Try to import a VM from configuration through REST will cause NPE<BR>
+{{BZ|1125196}} - Clone VM is blocked with ACTION_TYPE_FAILED_TEMPLATE_NOT_EXISTS_IN_CURRENT_DC<BR>
+{{BZ|1126319}} - Squash 3.2 upgrade scripts<BR>
+{{BZ|1126342}} - Admin UI rejects FQDNs ending in a digit when creating NFS storage domains<BR>
+
 '''Fixed in ovirt-engine-3.5.0_beta2'''<BR>
 {{BZ|894027}} - PRD35 - [RFE] [restapi] Display the current logged in user in API<BR>
 {{BZ|906788}} - Engine raises a warning that free space in /var/run/vdsm is less than 1G<BR>
