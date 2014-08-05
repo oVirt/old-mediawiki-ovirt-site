@@ -1,15 +1,15 @@
 {{DISPLAYTITLE:oVirt 3.5 Release Notes}}
 
-The oVirt development team is pleased to announce oVirt 3.5.0 Beta release availability as of Jun 30th 2014.
+The oVirt development team is pleased to announce oVirt 3.5.0 RC release availability as of Aug 5th 2014.
 oVirt is an open source alternative to VMware vSphere, and provides an excellent KVM management interface for multi-node virtualization.
 
 To find out more about features which were added in previous oVirt releases, check out the  [[oVirt 3.4.1 release notes]],  [[oVirt 3.3.5 release notes]], [[oVirt 3.2 release notes]] and [[oVirt 3.1 release notes]].
 For a general overview of oVirt, read [[oVirt 3.0 Feature Guide | the oVirt 3.0 feature guide]] and the [[about oVirt]] page.
 
-= oVirt 3.5.0 BETA Release Notes =
+= oVirt 3.5.0 RELEASE CANDIDATE Release Notes =
 
-== BETA RELEASE ==
-The oVirt Project is working on oVirt 3.5.0 Beta release. To install this release, you must enable the oVirt 3.5 pre-release repository.
+== RELEASE CANDIDATE ==
+The oVirt Project is working on oVirt 3.5.0 release candidate. To install this release, you must enable the oVirt 3.5 pre-release repository.
 See the below section on Install / Upgrade for detailed instructions.
 
 == Known Issues ==
@@ -106,8 +106,8 @@ The appliance reduces the need of a user to provide an installed and pre-configu
 
 = Install / Upgrade from previous versions=
 
-== BETA RELEASE ==
-The oVirt Project is working on oVirt 3.5.0 Beta release. In order to install it you've to enable oVirt 3.5 pre release repository.
+== RELEASE CANDIDATE ==
+The oVirt Project is working on oVirt 3.5.0 release candidate. In order to install it you've to enable oVirt 3.5 pre release repository.
 
 '''Please note that mirror may take a couple of days in order to be updated'''
 
@@ -149,7 +149,7 @@ A new oVirt Live ISO is available: (no update since the alpha, might be released
  http://resources.ovirt.org/pub/ovirt-3.5-pre/iso/ovirt-live-el6-3.5.0-alpha2.iso
 
 == oVirt Windows Guest Tools ==
-The first beta release of oVirt 3.5 WGT is available:
+The first candidate release of oVirt 3.5 WGT is available:
    http://resources.ovirt.org/pub/ovirt-3.5-pre/iso/ovirt-guest-tools/ovirt-guest-tools-3.5_5.iso
 It currently includes the installer for all VirtIO-Win drivers (Serial, Balloon, Net, Block and SCSI), Spice QXL and Agent as well as oVirt Guest Agent, as well as the binaries that went into the installer. 
 Support for Windows Server 2012 and 2012 R2 was added.
