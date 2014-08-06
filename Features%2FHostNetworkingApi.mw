@@ -115,7 +115,7 @@ Using this resource, nic-less networks could be configured on host.
 Network labels related actions are listed at [[Features/NetworkLabels#REST]].<br>
 
 == What should be deprecated? ==
-* Replace ''network'' element in host_nic with ''networkconnections'':
+* The ''network'' element in host_nic is replaced by ''networkconnections'' subcollection:
   /api/hosts/{host:id}/nics/{nic:id}:
   <host_nic>
     <network />
@@ -129,11 +129,13 @@ Network labels related actions are listed at [[Features/NetworkLabels#REST]].<br
 The vlan devices will be hidden from the list of /api/hosts/{host:id}/nics and will be represented as a ''networkconnection'' element of the underlying nic.
 
 * Deprecated: /api/hosts/{host:id}/nics/setupnetworks
-  <host_nic>
-     <network id="..."/>
-  </host_nic>
+  <host_nics>
+    <host_nic>
+      <network id="..."/>
+    </host_nic>
+  </host_nics>
 
-Replaced by: /api/hosts/{host:id}/nics/setupnics
+Is replaced by: /api/hosts/{host:id}/nics/setupnics
   <host_nics>
     <host_nic>
       <networkconnections>
@@ -151,7 +153,7 @@ Request should contain only nics or bonds (no vlans).
   /api/hosts/{host:id}/nics/{nic:id}/networkconnections
 and:
   /api/hosts/{host:id}/nics/{nic:id}/detach
-  is replaced by DELETE request on:
+  is replaced by DELETE request to:
   /api/hosts/{host:id}/nics/{nic:id}/networkconnections/{networkconnection:id}
 
 * Updating network interface
