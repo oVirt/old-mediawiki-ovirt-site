@@ -7,7 +7,7 @@ The host network configuration can be done by manipulating the network label:<br
 * Removing a label from the network will trigger the network removal from all hosts interfaces/bonds which are tagged with that label.
 
 === Owner ===
-* Name: [[User:Moti| Moti Asayag]]
+* Name: [[User:masayag| Moti Asayag]]
 * Email: masayag@redhat.com
 
 === Benefit to oVirt ===
