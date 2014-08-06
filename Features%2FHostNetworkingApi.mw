@@ -1,5 +1,3 @@
-= Host Networking API =
-
 {{Feature|name=Host Networking API|modules=Networking|version=oVirt 3.6|status=Design|}}
 
 === Owner ===
@@ -19,35 +17,7 @@ The current host networking api (up to ovirt-engine-3.6) suffers from various li
 ** Cannot support a dynamic (external) networks
 
 == Proposed Solution ==
-Introducing new sub-collections to reflect the host network configuration:
-
-=== Network connections sub-collection of the nic resource ===
-* A collection of network connections that are attached to a specific physical interface or a bond:
-  /api/hosts/{host:id}/nics/{nic:id}/networkconnections
-* Supported actions:
-**# '''GET''' returns a list of networks attached to the nic
-**# '''POST''' attaches a network to the nic
-
-==== Network resource ====
-  /api/hosts/{host:id}/nics/{nic:id}/networkconnections/{networkconnection:id}
-* Supported actions:
-**# '''GET''' returns a specific network which is attached to the nic
-**# '''DELETE''' detaches a network from the nic
-**# '''PUT''' updates the network on the nic
-
-==== Network statistics sub-collection ====
-  /api/hosts/{host:id}/nics/{nic:id}/networkconnections/{networkconnections:id}/statistics
-* Supported actions:
-**# '''GET''' returns a specific statistics for a network (if reported) which is attached to the nic
-
-==== Network connections sub-collection ====
-* A collection of network connections which represent how the network is provisioned on the host
-  /api/hosts/{host:id}/networkconnections
-* Supported actions:
-**# '''GET''' returns a list of networks configured on the host
-**# '''POST''' provision a network on the host
-
-The '''<networkconnection>''' element describes the how network is configured on the host:
+Introduce '''<networkconnection>''' element which describes how the network is configured on the host:
   <networkconnection>
     <network/>
     <host_nic/>
@@ -69,6 +39,25 @@ The '''<networkconnection>''' element describes the how network is configured on
 * qos - the network qos
 * override_configuration - sync network on host according to its logical network definition
 
+=== Network connections sub-collection of the nic resource ===
+* A collection of network connections that are attached to a specific physical interface or a bond:
+  /api/hosts/{host:id}/nics/{nic:id}/networkconnections
+* Supported actions:
+**# '''GET''' returns a list of networks attached to the nic
+**# '''POST''' attaches a network to the nic
+
+==== Network resource ====
+  /api/hosts/{host:id}/nics/{nic:id}/networkconnections/{networkconnection:id}
+* Supported actions:
+**# '''GET''' returns a specific network which is attached to the nic
+**# '''DELETE''' detaches a network from the nic
+**# '''PUT''' updates the network on the nic
+
+==== Network statistics sub-collection ====
+  /api/hosts/{host:id}/nics/{nic:id}/networkconnections/{networkconnections:id}/statistics
+* Supported actions:
+**# '''GET''' returns a specific statistics for a network (if reported) which is attached to the nic
+
 ==== Network connecton resource ====
   /api/hosts/{host:id}/networkconnections/{networkconnection:id}
 * Supported actions:
@@ -80,21 +69,6 @@ The '''<networkconnection>''' element describes the how network is configured on
   /api/hosts/{host:id}/networkconnections/{networkconnection:id}/statistics
 * Supported actions:
 **# '''GET''' returns a specific statistics for a network (if reported) which is attached to the host
-
-==== Host Network Label resource ====
-A collection designed to specify network labels on host level which aren't bounded to a specific nic.<br>
-Using this resource, nic-less networks could be configured on host.
-  /api/hosts/{host:id}/networklabels/
-* '''GET''' - list host network labels
-* '''POST''' - add a label to the host
-
-  /api/hosts/{host:id}/networklabels/{networklabel:id}
-* '''GET''' - returns a specific host network label
-* '''DELETE''' - removes a specific host network label
-
-'''pros''': Using host level network labels we can support nic-less networks auto-provision<br>
-'''cons''': The management of labels becomes more complex, cannot use same label for nics<br>
-
 
 == Current Host Networking API (up to ovirt-engine-3.5) ==
   /api/hosts/{host:id}/nics
