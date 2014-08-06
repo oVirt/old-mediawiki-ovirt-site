@@ -1,4 +1,5 @@
 == Using oVirt Networking API ==
+The following are request samples of the [[Features/HostNetworkingApi|host networking api]].
 
 === Add network to a network interface ===
 POST to /api/hosts/{host:id}/nics/{nic:id}/networkconnections
