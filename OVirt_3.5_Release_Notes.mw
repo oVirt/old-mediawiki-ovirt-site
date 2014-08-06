@@ -101,6 +101,8 @@ The appliance reduces the need of a user to provide an installed and pre-configu
 === UX Enhancements ===
 
 === Integration ===
+* It is now possible to setup the engine and [[Features/WebSocketProxy_on_a_separate_host|WebSocket-Proxy]], [[Features/Separate-DWH-Host|DWH]], [[Features/Separate-Reports-Host|Reports]] on separate hosts.
+
 ==== Hosted Engine ====
 * Added [[Features/Self_Hosted_Engine_iSCSI_Support|support for iSCSI storage]]
 * Added support for VLAN-tagged network interfaces
