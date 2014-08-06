@@ -1,4 +1,4 @@
-== Network Labels ==
+{{Feature|name=Network Labels|modules=Networking|version=oVirt 3.4|status=Released|}}
 
 === Summary ===
 '''Network labels''' feature provides the ability to label networks and to use that label on the host's interfaces, so the label abstracts the networks from the physical interface/bond (which can be labelled with one or more labels).<br>
@@ -9,11 +9,6 @@ The host network configuration can be done by manipulating the network label:<br
 === Owner ===
 * Name: Moti Asayag
 * Email: <masayag@redhat.com>
-
-=== Current status ===
-* Ready (without phase 2)
-* Planned for ovirt-engine-3.4
-* Last updated: {{CURRENTMONTHNAME}} {{CURRENTDAY}}, {{CURRENTYEAR}}
 
 === Benefit to oVirt ===
 '''Network labels''' designed to ease and to simplify the maintenance of a data-center, in respect to hosts network configuration.<br>
