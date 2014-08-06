@@ -762,6 +762,11 @@ Fixed in alpha
 {{BZ|1079956}} - missing dependency<BR>
 
 == oVirt Hosted Engine HA ==
+Fixed in first rc
+
+{{BZ|1109545}} - Hosted-engine --deploy failed with message "Hosted Engine HA services are already running on this system"<BR>
+{{BZ|1124624}} - No error logged when agent restarts (ovirt-hosted-engine-ha-1.2 branch only)<BR>
+
 Fixed in second beta
 
 {{BZ|1093366}} - Migration of hosted-engine vm put target host score to zero<BR>
