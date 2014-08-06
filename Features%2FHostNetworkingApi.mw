@@ -1,7 +1,13 @@
 = Host Networking API =
 
+{{Feature|name=Host Networking API|modules=Networking|version=oVirt 3.6|status=Design|}}
+
+=== Owner ===
+* Name: [[User:masayag| Moti Asayag]]
+* Email: masayag@redhat.com
+
 == Current Status ==
-The current host networking api suffers from various limitations:
+The current host networking api (up to ovirt-engine-3.6) suffers from various limitations:
 * A mix of the physical and the logical network configuration
 ** Exposing vlan device implementation to the user
 ** Using 'Sync Network' feature requires to find the specific interface which carries the network
@@ -206,3 +212,6 @@ By that the engine will have a better capability to report more cases of network
 '''SetupNicsCommand''' - performs multiple network connections changes on a host at once<br>
 ==== Updated commands ====
 '''SetupNetworksCommand''' - In case 'checkConnnectivity' is set, compensation for network connections should be triggered in case of a failure. If 'checkConnnectivity' is unset, no compensation is required for network connections.
+
+[[Category:Feature]]
+[[Category:Networking]]
