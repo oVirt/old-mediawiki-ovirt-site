@@ -40,13 +40,15 @@ By that the engine will have a better capability to report more cases of network
 
 === Detailed Design ===
 ==== New commands ====
-'''AddNetworkConnectionCommand''' - adds a network connection to a host<br>
-'''UpdateNetworkConnectionCommand''' - updates network connection on a host<br>
-'''RemoveNetworkConnectionCommand''' - removes a network connection from the host<br>
-'''GetNetworkConnectionByIdQuery''' - returns network connection by its id<br>
-'''GetNetworkConnectionsByNicIdQuery''' - returns all network connections which are configured on top of a given nic<br>
-'''GetNetworkConnectionsByHostIdQuery''' - returns all network connections which are configured on top of a given host<br>
-'''SetupNicsCommand''' - performs multiple network connections changes on a host at once<br>
+* '''AddNetworkConnectionCommand''' - adds a network connection to a host<br>
+* '''UpdateNetworkConnectionCommand''' - updates network connection on a host<br>
+* '''RemoveNetworkConnectionCommand''' - removes a network connection from the host<br>
+* '''GetNetworkConnectionByIdQuery''' - returns network connection by its id<br>
+* '''GetNetworkConnectionsByNicIdQuery''' - returns all network connections which are configured on top of a given nic<br>
+* '''GetNetworkConnectionsByHostIdQuery''' - returns all network connections which are configured on top of a given host<br>
+* '''SetupNicsCommand''' - performs multiple network connections changes on a host at once<br>
+** Network connection configured on a newly created bond:
+*** The bond entity should be saved be persisted prior to sending the request, so its ID can be maintained for the network connection entity.
 
 ==== Updated commands ====
 * '''SetupNetworksCommand''' - In case 'checkConnnectivity' is set, compensation for network connections should be triggered in case of a failure. If 'checkConnnectivity' is unset, no compensation is required for network connections.
