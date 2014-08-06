@@ -22,10 +22,7 @@ See the below section on Install / Upgrade for detailed instructions.
 * ovirt-optimizer has not been updated for EL6 due to dependencies issues
 * vdsm for EL7 is missing a couple of patches compared to other distro due to building issues
 
-==Feature #1==
-<description>
-
-==Other Enhancements==
+==Features==
 === Virt ===
 
 === Infra ===
@@ -103,7 +100,9 @@ The appliance reduces the need of a user to provide an installed and pre-configu
 
 === UX Enhancements ===
 
-=== Hosted Engine ===
+=== Integration ===
+==== Hosted Engine ====
+* Added [[Features/Self_Hosted_Engine_iSCSI_Support|support for iSCSI storage]]
 * Added support for VLAN-tagged network interfaces
 * Added support for bonded network interfaces
 * Added support for Red Hat Enterprise Linux 7 (or similar)
