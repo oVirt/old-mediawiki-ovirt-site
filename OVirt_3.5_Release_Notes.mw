@@ -729,6 +729,9 @@ fixed in alpha
 {{BZ|1100824}} - option insecure doesn't work<BR>
 
 == oVirt Log Collector ==
+fixed in first rc
+
+{{BZ|1123808}} - [log-collector] no engine.log in the final archive<BR>
 
 fixed in beta
 
