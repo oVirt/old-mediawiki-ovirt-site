@@ -741,6 +741,11 @@ fixed in alpha
 {{BZ|1098029}} - "rhsc-log-collector" takes too long even to prompt for the REST API password before it actually start collecting information from selected servers<BR>
 
 == oVirt Hosted Engine Setup ==
+Fixed in first rc
+
+{{BZ|1106561}} - don't ask if the engine installation is complete when setting the second host<BR>
+{{BZ|1116785}} - multicast mac address should be filtered by hosted-engine-setup<BR>
+
 Fixed in second beta
 
 {{BZ|1103672}} - hosted-engine --deploy does not check for NX flag<BR>
