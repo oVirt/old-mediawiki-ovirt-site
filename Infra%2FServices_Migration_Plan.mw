@@ -1,8 +1,9 @@
-== Infra team services migration plan ==
+= Infra team services migration plan =
 The Infra team is planning to migrate all services to a new data center lab placed in pheonix, US.
 This document will explain the phases for this migration and what and when each phase will include. 
 
-=== Phase I: Bringing the lab online  ===
+== Phase I: Bringing the lab online  ==
+
 == Estimated Date: 11/08/14 ==
 * Installing 2 nfs storage servers and setting up data mirroring using [http://www.drbd.org/ DRDB], and bonding between 
 * Setting up the firewall rules to allow maintainance and external access (managed by DC team at Red Hat)
