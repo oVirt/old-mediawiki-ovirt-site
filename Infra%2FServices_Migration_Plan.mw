@@ -34,7 +34,7 @@ The migration is lead by David Caro <dcaro@redhat.com> and Eyal Edri <eedri@redh
 * After verifying the new jenkins DC is capabale of running all our jenkins needs for the time being, remove all rackspace vms and stop the contract.
 
 === Phase IV: Start migration of production servers  to production DC ===
-=== Estimated finish date: TBD ===
+==== Estimated finish date: TBD ====
 * Migrate production vms from alterway (gradually) 
 * Migrate all services from resources.ovirt.org 
 * Migrate jenkins server from alterway02 baremetal into production VM.
