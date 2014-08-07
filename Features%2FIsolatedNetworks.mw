@@ -38,7 +38,7 @@ Where the networkconnection element will omit the host_nic element from the requ
 **# '''PUT''' update a network configured on the host
 **# '''DELETE''' removes a network from the host
 
-==== Network connecton statistics sub-collection ====
+==== Network connection statistics sub-collection ====
   /api/hosts/{host:id}/networkconnections/{networkconnection:id}/statistics
 * Supported actions:
 **# '''GET''' returns a specific statistics for a network (if reported) which is attached to the host
