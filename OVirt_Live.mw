@@ -18,7 +18,9 @@ can be used either as read only or with persistent storage
 
 [http://fedoraproject.org/wiki/How_to_create_and_use_Live_USB How to create and use Live USB]
 
-[https://fedorahosted.org/liveusb-creator liveusb-creator] 
+[https://fedorahosted.org/liveusb-creator liveusb-creator]
+
+Be aware that using these tools can lead to a kernel panic when the stick is booted. Using dd on linux and for example WinImage when on Windows seems to work better.
 
 === VM ===
 you can run this iso on a vm, using nested virtualization you can run nested vms within it.
