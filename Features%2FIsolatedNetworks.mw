@@ -20,7 +20,7 @@ Nicless networks will be represented on host level to reflect not being tied to 
 * When network connection entity on host level is ''not'' associated with any interface - it will be refereed to as a nicless network.
 
 === REST ===
-==== Network connections sub-collection ====
+==== Host Network connections sub-collection ====
 Introducing new sub-collections to reflect the host network configuration:
 
 * A collection of network connections which represent how the network is provisioned on the host
@@ -31,7 +31,7 @@ Introducing new sub-collections to reflect the host network configuration:
 
 Where the networkconnection element will omit the host_nic element from the request.<br>
 
-==== Network connecton resource ====
+==== Host Network connection resource ====
   /api/hosts/{host:id}/networkconnections/{networkconnection:id}
 * Supported actions:
 **# '''GET''' returns a specific network configured on the host
