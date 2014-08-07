@@ -4,7 +4,7 @@ This document will explain the phases for this migration and what and when each 
 
 == Phase I: Bringing the lab online  ==
 
-== Estimated Date: 11/08/14 ==
+=== Estimated Date: 11/08/14 ===
 * Installing 2 nfs storage servers and setting up data mirroring using [http://www.drbd.org/ DRDB], and bonding between 
 * Setting up the firewall rules to allow maintainance and external access (managed by DC team at Red Hat)
 * Installing all hypervisors running fedora 19 (to allow nested virtualization)
