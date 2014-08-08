@@ -51,7 +51,7 @@ This diagram is a bit out-dated. Please bear with the developers until they can 
 * Once a block job has completed, we need to correct the VDSM volume chain metadata on storage. Unfortunately the rules for updating the volume chain differ depending if the storage is on a BlockSD or a FileSD. For FileSD, we must update the chain from the HSM host that is running the virtual machine. For BlockSD, the SPM must perform the update since the chain is stored in the LVM metadata. So, when handling block job completions, we will always mark the volume illegal and we will also correct the storage metadata if allowed. The deletelVolumes verb is an SPM operation and it will delete the volume and also correct the volume chain metadata if dealing with block storage.
 
 === Benefit to oVirt ===
-This feature hides the complexity of the Live Merge flows behind a simple clickable "Delete" button in the UI.  This results in a symmetric create/delete snapshot operations regardless of whether the VM is running or not.  This feature has been actively requested by users.
+This feature hides the complexity of the Live Merge flow behind a simple "Delete" button in the user interface.  This results in symmetric create/delete snapshot operations regardless of whether the virtual machine is running or not. This feature has been actively requested by users.
 
 === Dependencies / Related Features ===
 
