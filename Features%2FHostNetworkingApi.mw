@@ -56,6 +56,10 @@ Introduce '''<networkconnection>''' element which describes how the network is c
 ==== Setupnics API of the network interfaces resource ====
 * A multi-nics configuration action to support complex network settings (i.e. cross nics actions: move network from one nic to another)
   /api/hosts/{host:id}/nics/setupnics
+* Request structure:
+  <host_nics />
+  <check_connectivity />
+  <connectivity_timeout />
 * Supported actions:
 **# '''POST''' - expects the destination topology to be configured on the host, via patch method principal.
 '''setupnics''' nics api expects a list of host_nics where the host_nic will describe the desired network connections for it.<br>
