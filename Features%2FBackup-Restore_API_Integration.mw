@@ -20,7 +20,7 @@ Backup & Restore API will can be driven by API while some functionallities would
 Backup/Restore software from ISV will drive these APIs.
  
 == VM Backup/Restore suggested flows ==
-=== General background === 
+=== General Background === 
 The oVirt snapshot feature provides the ability to capture the status of a virtual machine at a specific point in time.<BR>
 The snapshot contains the virtual machine configuration and its disks data in a static way<BR>
 The underlying operation is to create for each disk in the virtual machine a new volume that will be based on the previous volume using qcow2 format, the original volume will becomes R/O and the new volume will only indicate the differences from the original volume.
