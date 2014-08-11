@@ -1,7 +1,7 @@
 == Backup and Restore API for Independent Software Vendors ==  
 === Summary === 
-This feature provides the ability for ISVs to backup and restore VMs.<BR>
-New set of APIs will be introduced in oVirt to facilitate taking full VM backup, as well as full or file level restore of VMs.<BR>
+This feature provides the ability for ISVs to back up and restore virtual machines.<BR>
+A new set of APIs will be introduced in oVirt to facilitate taking full virtual machine backups, and full or file-level restoration of virtual machines.<BR>
 Backup and Restore will be REST API driven (and not GUI/User driven).
 
 === Owner === 
