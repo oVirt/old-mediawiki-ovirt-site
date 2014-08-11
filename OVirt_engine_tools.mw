@@ -76,7 +76,7 @@ Running basic example:<br>
 The engine-log-collector command gathers data from many different components (logs, databases, and environmental information) associated with an instance of a oVirt Enterprise Virtualization Engine Manager. The tool is intended to be run from the Linux system on which the is running as the root user.
 
 == Tools TODO ==
-#standardize all tools usage and make it consistent
-#create common infra both for java programs and for the wrapping scripts e.g functions to fulfill classpath dependencies etc.
-#use comon paths for all
+#Standardize the usage of all tools and make them consistent
+#Create common infrastructure both for Java programs and for the wrapping scripts e.g. functions to fulfill classpath dependencies, etc.
+#Use comon paths for all
 #Use a single logger library (apache-commons-logging)
