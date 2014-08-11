@@ -126,7 +126,7 @@ Restore - an abillity to restore the data to an ovirt disk should be introduced.
 === File-Level Backup and Restoration === 
 File level backup and restoration is essentially the same as the described virtual machine backup and restoration flows -  as soon as the data is accessible by the backup provider, the required files can be backed up or restored.
 
-=== LAN Free backup ===
+=== LAN Free Backup ===
 Support for LAN-Free backup: oVirt provides SAN access to the disk devices out of the box.
 
 === User interface === 
