@@ -109,7 +109,7 @@ The '''ip_configuration''' representation is:
 ==== Network statistics sub-collection (optional) ====
   /api/hosts/{host:id}/nics/{nic:id}/networkattachments/{networkattachments:id}/statistics
 * Supported actions:
-**# '''GET''' returns a specific statistics for a network (if reported) which is attached to the nic
+*# '''GET''' returns a specific statistics for a network (if reported) which is attached to the nic
 
 * We can implement a new API in this context to reflect the total rx/tx instead of a processed measurements.
 
