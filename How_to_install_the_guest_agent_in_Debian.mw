@@ -25,7 +25,8 @@ In the search, search for "ovirt", and ovirt-guest-agent should appear.
 
 == Starting the service ==
 From a terminal, enter the following commands to start the oVirt Guest Agent service
-<pre>sudo service ovirt-guest-agent enable && sudo service ovirt-guest-agent start</pre>
+<pre>#su -
+#service ovirt-guest-agent enable &&  service ovirt-guest-agent start</pre>
 The above command will enable the service to always start at boot, and start the service now so you do not need to reboot the VM.
 
 == Troubleshooting ==
