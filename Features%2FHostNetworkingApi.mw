@@ -55,7 +55,7 @@ The '''ip_configuration''' representation is:
         <gateway /> 
       <ipv4>
     </ipv4s>
-
+  
     <!-- When ipv6 support is added -->
     <ipv6s>
       <boot_protocol>DHCP</boot_protocol>
