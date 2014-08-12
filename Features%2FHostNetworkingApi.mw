@@ -102,9 +102,9 @@ The '''ip_configuration''' representation is:
 ==== Network attachment resource under nic ====
   /api/hosts/{host:id}/nics/{nic:id}/networkattachments/{networkattachment:id}
 * Supported actions:
-**# '''GET''' returns a specific network which is attached to the nic
-**# '''DELETE''' detaches a network from the nic
-**# '''PUT''' updates the network on the nic
+*# '''GET''' returns a specific network which is attached to the nic
+*# '''DELETE''' detaches a network from the nic
+*# '''PUT''' updates the network on the nic
 
 ==== Network statistics sub-collection (optional) ====
   /api/hosts/{host:id}/nics/{nic:id}/networkattachments/{networkattachments:id}/statistics
