@@ -74,8 +74,8 @@ The '''ip_configuration''' representation is:
 * A collection of network attachments that are attached to a specific physical interface or a bond:
   /api/hosts/{host:id}/nics/{nic:id}/networkattachments
 * Supported actions:
-**# '''GET''' returns a list of networks attached to the nic
-**# '''POST''' attaches a network to the nic
+*# '''GET''' returns a list of networks attached to the nic
+*# '''POST''' attaches a network to the nic
 
 ==== Setupnetworks API of the host resource ====
 * A multi-network configuration action to support complex network settings (i.e. cross nics actions: move network from one nic to another or create network on bond)
