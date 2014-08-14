@@ -54,7 +54,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1083769
 
 ==== Methods to persist/retrieve/delete command  ====
 
-The CommandCoordinator exposes new methods persistCommand and retrieveCommand. Persist command can be invoked on any command by calling command.persistCommand(VdcActionType parentCommand) or command.persistCommand(VdcActionType parentCommand,  enableCallback) to enable call backs from the command executor framework. This calls CommandCoordinator to persit the command into the database. 
+The CommandCoordinator exposes new methods persistCommand and retrieveCommand. Persist command can be invoked on any command by calling command.persistCommand(VdcActionType parentCommand) or command.persistCommand(VdcActionType parentCommand,  enableCallback) to enable call backs from the CommandExecutor framework. This calls CommandCoordinator to persit the command into the database. 
 
 Below are the list of methods from CommandCRUDOperations interface.
 
