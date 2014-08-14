@@ -95,6 +95,7 @@ All files are relative to /etc/pki/ovirt-engine.
 ! Component
 ! File
 ! Description
+! Notes
 |-
 | Engine internal CA
 | ca.pem
@@ -115,10 +116,12 @@ All files are relative to /etc/pki/ovirt-engine.
 |
 | keys/apache.key.nopass
 | Extracted from keys/apache.p12 used by mod_ssl
+| Can be replaced by 3rd party certificate by apache configuration, do not override this file.
 |-
 |
 | certs/apache.cer
 | Extracted from keys/apache.p12 used by mod_ssl
+| Can be replaced by 3rd party certificate by apache configuration, do not override this file.
 |-
 | Engine artifacts
 | keys/engine.p12
@@ -147,10 +150,12 @@ All files are relative to /etc/pki/ovirt-engine.
 | websocket-proxy artifacts
 | keys/websocket-proxy.key.nopass
 | Extracted from keys/websocket-proxy.p12 as python does not know how to work with PKCS#12.
+| Can be overridden by 3rd party certificate key by /etc/ovirt-engine/ovirt-websocket-proxy.conf.d/20-pki.conf::SSL_KEY.
 |-
 | websocket-proxy artifacts
 | certs/websocket-proxy.cer
 | Extracted from keys/websocket-proxy.p12 as python does not know how to work with PKCS#12.
+| Can be overridden by 3rd party certificate chain (end certificate first) by /etc/ovirt-engine/ovirt-websocket-proxy.conf.d/20-pki.conf::SSL_CERTIFICATE.
 |}
 
 === vdsm ===
