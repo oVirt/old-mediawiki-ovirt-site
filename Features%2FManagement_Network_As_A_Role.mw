@@ -5,11 +5,6 @@
 == Summary ==
 This feature is about attaching the management network role to an arbitrary network in a cluster.
 
-== Current status ==
-* Target Release: 3.6
-* Status: design
-* Last updated: {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]] <!--This is markup for the date on which the current page was last changed, do not change-->
-
 == Detailed Description ==
 
 === Motivation ===
