@@ -1,6 +1,6 @@
 {{DISPLAYTITLE:oVirt 3.6 Release Management}}
 
-== Timeline ==
+== Key Milestones  ==
 
 * Feature freeze: 60 Days before release
 * First Test Day: 45 days before release
@@ -15,7 +15,6 @@ Nightly builds are available from  oVirt snapshots repositories:
  http://resources.ovirt.org/pub/ovirt-master-snapshot/
 
 Please refer to [[Install nightly snapshot]] guide for enabling those repositories
-
 
 == Key Proposed Changes ==
 * [[Features/Management Network As A Role]]
