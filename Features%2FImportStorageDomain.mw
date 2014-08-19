@@ -96,7 +96,7 @@ The user should choose a cluster for each entity which should be compatible for 
 The user can also watch the entity properties (such as disks, networks) in the sub tab inside the dialog.<BR/><BR/>
 
 === Work flow for recovery of local Data Center - UI flow ===
-Video example: https://www.youtube.com/watch?v=T03ai6FrMI4<BR/>
+{{#ev:youtube|T03ai6FrMI4|300|right|}}
 On import a Local Storage Domain The user should do the following steps: <BR/>
 1. The user should first must initialize a Local Storage Domain.<BR/>
 2. The user should press the "import Storage Domain" button.<BR/>
@@ -108,7 +108,6 @@ On import a Local Storage Domain The user should do the following steps: <BR/>
 8. When the "Import" button is pressed, a dialog should be opened, showing the list of all the entities the user chose to register.<BR/>
 The user should choose a cluster for each entity which should be compatible for it.<BR/>
 The user can also watch the entity properties (such as disks, networks) in the sub tab inside the dialog.<BR/><BR/>
-
 
 === Mockups ===
 The following UI mockups contain guidelines for the different screens and wizards related for file Storage Domains:<BR/>
