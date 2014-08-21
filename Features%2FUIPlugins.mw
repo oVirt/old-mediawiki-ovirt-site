@@ -647,7 +647,7 @@ This plugin brings integration with [http://www.nagios.org/ Nagios] or [https://
 * Author: René Koch <r.koch@ovido.at>
 * Project web site: https://labs.ovido.at/monitoring/wiki/ovirt-monitoring-ui-plugin
 * Installation documentation: https://labs.ovido.at/monitoring/wiki/ovirt-monitoring-ui-plugin:install
-* UI plugin source code: https://labs.ovido.at/monitoring/wiki/ovirt-monitoring-ui-plugin:svn
+* UI plugin source code: https://github.com/monitoring-ui-plugin/monitoring-ui-plugin
 
 <br/>
 [[File:Ovirt-monitoring hosts graph.png|link=https://labs.ovido.at/monitoring/wiki/ovirt-monitoring-ui-plugin|Monitoring Details sub tab]]
