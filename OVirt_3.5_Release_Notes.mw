@@ -837,6 +837,8 @@ fixed in alpha
 == oVirt Hosted Engine Setup ==
 Fixed in first rc
 
+{{BZ|1105249}} - Need warning message, that appear when you run hosted-engine --deploy via ssh without terminal mode<BR>
+{{BZ|1125315}} - Hosted Engine on iSCSI setup doesn't allow LUN choice<BR>
 {{BZ|1106561}} - don't ask if the engine installation is complete when setting the second host<BR>
 {{BZ|1116785}} - multicast mac address should be filtered by hosted-engine-setup<BR>
 
