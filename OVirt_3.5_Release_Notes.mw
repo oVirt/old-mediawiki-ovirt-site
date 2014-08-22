@@ -804,6 +804,7 @@ A new oVirt Live ISO is available:
 
 == oVirt Image Uploader ==
 {{BZ|1102226}} - option insecure doesn't work<BR>
+{{BZ|1119798}} - uploading an ovf file to an export domain creates tmp folder with vm's full size<BR>
 
 == oVirt ISO Uploader ==
 fixed in beta
