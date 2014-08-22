@@ -821,7 +821,7 @@ fixed in alpha
 
 == oVirt Log Collector ==
 fixed in first rc
-
+{{BZ|1128738}} - /etc/rhevm is not collected<BR>
 {{BZ|1123808}} - [log-collector] no engine.log in the final archive<BR>
 
 fixed in beta
