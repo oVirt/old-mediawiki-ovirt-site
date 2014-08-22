@@ -170,6 +170,85 @@ A new oVirt Live ISO is available:
 = <span class="mw-customtoggle-1" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Click to Show/Hide]</span></span>Bugs Fixed = 
 <div  id="mw-customcollapsible-1" class="mw-collapsible mw-collapsed">
 ==oVirt Engine==
+''' Fixed in ovirt-engine-3.5.0_rc1 refresh'''<BR>
+{{BZ|1005805}} - [rhevm] Webadmin - Vms - SearchBox "Vms:uptime" doesn't work (Vms: uptime > [nor] Vms: uptime <)<BR>
+{{BZ|1029934}} - No error message displayed when trying to add an already existing (but unattached) SD in a DC<BR>
+{{BZ|1057108}} - Detaching vm disk doesn't lead to ovf update<BR>
+{{BZ|1070890}} - Run vm with odd number of cores drop libvirt error<BR>
+{{BZ|1090799}} - [RFE] engine networking went down, 90% of hosts were fenced causing a massive outage<BR>
+{{BZ|1094033}} - [engine-backend] [iscsi multipath] After networks replacement in an iSCSI multipath bond had failed, the bond's networks aren't being updated back<BR>
+{{BZ|1098191}} - [RHEVM-SETUP] - Upgrade instruction are provided at the end of clean install<BR>
+{{BZ|1101551}} - [Admin Portal] ERROR [org.ovirt.engine.ui.frontend.server.gwt.GenericApiGWTServiceImpl] (ajp-/127.0.0.1:8702-9) Retrieving non string value from session<BR>
+{{BZ|1107799}} - Following Link to Marketplace in FF (29) Opens Marketplace in a Protected Window<BR>
+{{BZ|1108062}} - [webadmin] shorten columns on Host subtab in Network Main Tab<BR>
+{{BZ|1108072}} - [webadmin] shorten column VLAN tag on Networks main Tab<BR>
+{{BZ|1113003}} - foreman-integration: sign host as foreman's<BR>
+{{BZ|1113087}} - NullPointerException when you delete several disks together<BR>
+{{BZ|1114085}} - [Monitoring] Network usage indicator<BR>
+{{BZ|1114863}} - Win7/IE9 - webadmin not usable<BR>
+{{BZ|1115109}} - [setup network] irrelevant message appear when attaching network to nic using label<BR>
+{{BZ|1115310}} - host -> network interfaces: split for name, bond, vlan, network is not right<BR>
+{{BZ|1115845}} - Enable sync of LUNs after storage domain activation for FC - duplicate LUNs<BR>
+{{BZ|1115918}} - GUI Reconnection after disconnection returns Error 500<BR>
+{{BZ|1119325}} - The task of importing an image (as template) from glance repository is never ended<BR>
+{{BZ|1120692}} - NPE when opening SPICE console<BR>
+{{BZ|1120712}} - On data domain creation rest-api should use format V3 by default<BR>
+{{BZ|1120829}} - [RFE] Do not fence hosts when more than X% of hosts are in a Non-Responding or Connecting state<BR>
+{{BZ|1120858}} - [RFE] Option to disable fencing for a cluster<BR>
+{{BZ|1121617}} - permissions logging<BR>
+{{BZ|1122382}} - [en_US][ALL LANG][Admin Portal] Truncated text box 'Custom serial number' in 'New Virtual Machine->System'.<BR>
+{{BZ|1122423}} - [en_US][ALL LANG][Admin Portal] Truncation in 'Random Generator' tab of 'Configure'->'Instance Types'->'New or Edit Instance Type' dialog or 'New VM' or 'New Pool' diglogs.<BR>
+{{BZ|1122589}} - Create user API fails in SDK & CLI - HTTP 400 Request syntactically incorrect<BR>
+{{BZ|1122639}} - Error complaining about missing images for exported VM<BR>
+{{BZ|1123324}} - [fr_FR][ja_JP][Admin Portal] Misalignment in 'New Host' dialog<BR>
+{{BZ|1123385}} - Adding hosts to RHEV-M results in error message<BR>
+{{BZ|1123614}} - UI paging: 'next' paging button is disabled when actually it should be enabled.<BR>
+{{BZ|1123780}} - [fr_FR][Admin Portal] Misalignment in 'Add Users and Groups' or 'Assign Users and Groups to Quota' or 'Add System Permission to User' dialogs.<BR>
+{{BZ|1124099}} - Live Merge: Limit merge operations based on hosts' capabilities<BR>
+{{BZ|1124254}} - instance types: does not remember advanced/basic settings from previously opened dialog<BR>
+{{BZ|1124321}} - NPE when live migrating a disk - using REST and SDK APIs.<BR>
+{{BZ|1124842}} - using "Use Foreman Hosts Providers" disables "Address" field in "New host" dialog<BR>
+{{BZ|1125206}} - Kdump not configured properly on host warning is displayed even when PM is turned off<BR>
+{{BZ|1125920}} - oVirt 3.4 installer does not store all answers in the file<BR>
+{{BZ|1126181}} - engine-config| cannot set mac range with only one mac<BR>
+{{BZ|1126185}} - [Cloud Init] Root password string should be changed with User password string<BR>
+{{BZ|1126195}} - [Cloud Init] Authentication and Custom Script configuration existing in DB is missing in GUI<BR>
+{{BZ|1126204}} - placeholders of child commands aren't cleared when failing during the execution<BR>
+{{BZ|1126215}} - The name box at cloning vm from snapshot menu is too big and not aligned with the text<BR>
+{{BZ|1126324}} - [Admin Portal] Add Permission to User - when a user is selected Enter does not execute 'OK' button<BR>
+{{BZ|1126432}} - "Enable optional reason" selection box in the "Edit Cluster" dialog<BR>
+{{BZ|1126556}} - [ovirt-branding] increment branding interface number<BR>
+{{BZ|1126782}} - failue on SetVolumeDescription shouldn't trigger spm failover<BR>
+{{BZ|1126797}} - Odd vCPU topology dropped by libvirt<BR>
+{{BZ|1126957}} - Transaction issues in CommandsCacheImpl updateStatus<BR>
+{{BZ|1127245}} - improperly calculated amount of available macs in system.<BR>
+{{BZ|1127464}} - Live Merge hangs<BR>
+{{BZ|1127623}} - [AAA] Create user API fails in REST & Java - class cast exception<BR>
+{{BZ|1127685}} - Host life cycle broken for jsonrpc<BR>
+{{BZ|1127687}} - Labels should be filtered by product (RHEV/Neutron)<BR>
+{{BZ|1127774}} - Persist Command at end of execution<BR>
+{{BZ|1128234}} - In Add Users and Groups dialog the namespace drop down is not aligned<BR>
+{{BZ|1128416}} - edit sound card while vm is running isn't saved<BR>
+{{BZ|1128430}} - NPE when attaching a non-existent disk to a VM<BR>
+{{BZ|1128446}} - Comment is missing from snapshots, import/export and edit running vm<BR>
+{{BZ|1128761}} - can't add host: NoSuchMethodError<BR>
+{{BZ|1128807}} - Second suspend of a vm doesn't work<BR>
+{{BZ|1128949}} - OvfUpdateIntervalInMinutes/OvfItemsCountPerUpdate fields should be exposed to engine-config tool<BR>
+{{BZ|1129010}} - all-in-one: align list of supported CPUs with the ovirt-engine list<BR>
+{{BZ|1129194}} - The layout of profiles instance type editor in vm dialog is broken<BR>
+{{BZ|1129258}} - ProcessOvfUpdate - vms/templates without ovf can lead to NPE<BR>
+{{BZ|1129568}} - engine-setup 3.5 with dwh/reports setup plugins 3.4 fails<BR>
+{{BZ|1129621}} - typo in power management health check warning<BR>
+{{BZ|1129671}} - engine-backup fails if bzip2 is not installed<BR>
+{{BZ|1129684}} - Could not import a VM from export domain with raw sparse disks to a block storage domain<BR>
+{{BZ|1129885}} - CoCo: execute flag should set when no exception occurs<BR>
+{{BZ|1130030}} - FreeSpaceCriticalLowInGB variable takes negative values<BR>
+{{BZ|1130065}} - GetAllDisksByVmId -  NPE when vm is being removed<BR>
+{{BZ|1130246}} - When importing a VM in ovirt 3.4 disks turn from thin provision to preallocated<BR>
+{{BZ|1130791}} - [REGRESSION] Power management TEST button fails always in 3.4 DC/Cluster<BR>
+{{BZ|1131226}} - Can't change a vm disk's storage domain from a file domain to a block domain when creating a template from a vm<BR>
+{{BZ|1132084}} - Cannot export VM. Disk configuration (COW Preallocated) is incompatible with the storage domain type.<BR>
+
 ''' Fixed in ovirt-engine-3.5.0_rc1'''<BR>
 {{BZ|1013737}} - No error when inserting a non-ISO image through the REST API<BR>
 {{BZ|1031382}} - When creating an "external provider network" in rhevm with vlan tag, the vlan tag disappears from GUI<BR>
