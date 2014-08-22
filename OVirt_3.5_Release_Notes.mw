@@ -807,6 +807,10 @@ A new oVirt Live ISO is available:
 {{BZ|1119798}} - uploading an ovf file to an export domain creates tmp folder with vm's full size<BR>
 
 == oVirt ISO Uploader ==
+fixed in rc
+
+{{BZ|1110756}} - 'NoneType' object is not iterable error when certificate validation fails<BR>
+
 fixed in beta
 
 {{BZ|1100825}} - option nossl does not work<BR>
