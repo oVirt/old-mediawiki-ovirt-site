@@ -54,7 +54,8 @@ git clone gerrit.ovirt.org:ovirt-engine
 
 For a read-only repo, this can also be done using:
  <nowiki>
-git clone git://gerrit.ovirt.org/ovirt-engine #Read-only
+#Read-only
+git clone git://gerrit.ovirt.org/ovirt-engine
  </nowiki>
 
 ==== Install the change-ID hook ====
