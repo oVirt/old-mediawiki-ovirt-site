@@ -52,10 +52,11 @@ if you get this, it is fine:
 git clone gerrit.ovirt.org:ovirt-engine
  </nowiki>
 
-This can also be done without registering to Gerrit, using:
+For a read-only repo, this can also be done using:
  <nowiki>
-git clone git://gerrit.ovirt.org/ovirt-engine
+git clone git://gerrit.ovirt.org/ovirt-engine #Read-only
  </nowiki>
+
 ==== Install the change-ID hook ====
 '''You must do this before you commit anything'''<BR>
 In order to easily track commit changes in Gerrit, each commit must have a change-ID. This change-ID is added automatically via a Git hook. In order to install this hook do the following:
