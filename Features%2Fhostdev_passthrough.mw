@@ -113,8 +113,9 @@ option, that would propagate the hostdevRelease call.
 
 ==== Adding host devices ====
 Host devices can be listed in New VM dialog as another tab on the left side (called probably host devices?). Clicking on
-this tab would bring table similar to one in hosts tab. User can select multiple devices (left to UI/UX - im not sure 
-of the best way to accomplish this - maybe moving them like NICs from host to VM similar to "Setup Host Networks"?).
+this tab would bring table similar to one in hosts tab but showing only unassigned devices. User can select multiple
+devices (left to UI/UX - im not sure of the best way to accomplish this - maybe moving them like NICs from
+host to VM similar to "Setup Host Networks"?).
 
 There are 2 kinds of additional information that can be helpful for UI: parent attribute of fetched devices allows
 for construction of a device tree. Another information is iommu_group mentioned in VDSM side: engine should
