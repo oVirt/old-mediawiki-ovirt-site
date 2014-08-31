@@ -15,7 +15,7 @@ OS the way of getting the device name using the passed serial is different, this
 operations from the user and provide that info without need to perform in-guest operations.
 
 === Owners===
-oVirt Guest-Agent:
+oVirt Guest Agent:
 * Name: [[User:vfeenstr| Vinzenz Feenstra]]
 * Email: <vfeenstr@redhat.com>
 
