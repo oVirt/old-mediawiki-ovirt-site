@@ -1,6 +1,6 @@
 == Report Guest Disks Logical Device Name ==
 
-{{Feature|nameReport Guest Disks Logical Device Name|modules=engine,vdsm,guest-agent|status=Design|version=3.5.0}}
+{{Feature|name=Report Guest Disks Logical Device Name|modules=engine,vdsm,guest-agent|status=Design|version=3.5.0}}
 
 
 === Summary ===
