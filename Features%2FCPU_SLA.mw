@@ -4,7 +4,7 @@
 
 === Summary ===
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
-The CPU SLA feature enable the user to limit the CPU usage of a VM.
+The CPU SLA feature enables users to limit the CPU usage of a virtual machine.
 
 === Owner ===
 <!--This should link to your home wiki page so we know who you are-->
