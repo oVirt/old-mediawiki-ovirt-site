@@ -3,7 +3,7 @@
 == Hot plug cpu==
 
 === Summary ===
-This feature will allow to hot plug cpus to a running VM from ovirt engine UI and REST api. 
+This feature allows you to hot plug CPUs to a running virtual machine from the oVirt engine user interface and REST API.
 
 === Owner ===
 * Name: [[User:MyUser| Roy Golan]]
