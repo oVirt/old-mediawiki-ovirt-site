@@ -13,8 +13,8 @@ postMessage function (webkit browsers, Firefox, IE > 10).
 * Security over TLS - DONE
 
 == Benefit to oVirt ==
-* enhancing the possibilities of connecting to the console in oVirt
-* there is no need for userns to have native VNC client installed when using noVNC
+* Enhanced options for connecting to virtual machine consoles in oVirt
+* There is no need for users to have a native VNC client installed when using noVNC
 
 == Details ==
 The noVNC client utilizes websockets for passing VNC data. However, VNC server
