@@ -38,32 +38,15 @@
 * pass test name as a hidden arg (sequence ID, maybe) to be loggeed in vdsm.log
 
 == Features ==
-* <strike>add hooks for network operations</strike> - We now have a before/after setupNetworks hook BUT it receives no parameters! It should receive the nets, bonds and options received by the setupNetworks call and (maybe) the running config before the setupNetworks: http://gerrit.ovirt.org/#/c/20330/
-
 * Support striping for disk images.
 
 * let Vdsm install and run on hosts with no iscsid (report that iscsi is missing to Engine?)
-
-* <strike>add hooks for device hotplug</strike> done.
-* <strike>add hooks for device update http://bugzilla.redhat.com/893576</strike> done.
-
-* <strike>Add configurable QoS controls on vnics http://libvirt.org/formatdomain.html#elementQoS</strike>
-
-* <strike>Use tmpfile.d when needed.</strike>
 
 * use <interface type='network'>. In the future, this would allow us to migrate a VM from a bridge-based network to funkier types of networks defined in http://libvirt.org/formatnetwork.html http://gerrit.ovirt.org/#/c/9441/
 
 * <strike>work in conjunction with Network Manager.</strike> works in F20.
 
-* report 'bootproto' and bonding_opts not via cfg. https://bugzilla.redhat.com/987813
-
-* a hook for getVdsCaps (to allow faking network reporting, etc).
-
-* On recovery, keep reporting VM until an explicit destroy().
-
 * report current bond master
-
-* Confirm: report MAC addresses of bond slaves in lowercase
 
 == refactoring ==
 * In vm.py, libvirtvm.py, clientIF.py  there is a mess of prepare*Path functions (end their respective teardowns), which is too complex to fathom. We have to convert all drive specifications (PDIV,GUID,path) into Drive object at the API entry.
