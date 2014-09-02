@@ -190,7 +190,9 @@ No need for changes in the DB
 
 == Documentation / External references ==
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
-[1] http://libguestfs.org/virt-v2v
+[1] [http://libguestfs.org/virt-v2v virt-v2v]
+
+[2] [http://libguestfs.org/virt-v2v.1.html virt-v2v documentation]
 
 == Testing ==
 
