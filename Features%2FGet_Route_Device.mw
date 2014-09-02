@@ -1,0 +1,33 @@
+= Get Route Device =
+{{Feature|name=Get Route Device|modules=engine, api|version=3.6|status=Proposed}}
+
+=== Summary ===
+New verb <code>getRoute</code> should return name of a device assigned to given IP address.
+
+== Owner ==
+
+* Name: [[User:phoracek| Petr Horacek]]
+
+* Email: <phoracek@redhat.com>
+
+== Detailed Description ==
+During deployment of a new host, Engine needs to know which of the host's interfaces is used to connect to Engine. Currently, this is exposed by the `lastClientIface` element of `getVdsCaps` verb. However, this approach is problematic, as we plant to remove the requirement of direct Engine-Vdsm TCP connection, without which, Vdsm cannot compute this element.
+
+Instead, it is suggested that Vdsm would expose the output of `ip route get <addr>`, so that Engine would be able to guess which on top of which host should it configure the management network. Note that this would only be a guess, as Vdsm may sit behind NAT with no route to Engine. In that case, automatic deployment of the management network would be skipped.
+
+== Engine ==
+During "Add Host" flow, Engine defines the management network on the added host. It decides which interface should be used for that network based on the <code>lastClientIface</code> element. <code>lastClientIface</code> is to deprecated, so Engine should use the new verb when for clusterLevel>3.6
+
+== VDSM ==
+To implement this new verb we could use <code>netinfo.getRouteDeviceTo(ip_address)</code> function, which uses <code>ipwrapper</code> to do route handling.
+
+== Documentation / External references ==
+
+* [https://bugzilla.redhat.com/show_bug.cgi?id=1117303 add a new getRoute() verb]
+
+== Comments and Discussion ==
+
+* Refer to [[Talk:Get Route Device]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
+
+[[Category:Feature]]
+[[Category:Networking]]
