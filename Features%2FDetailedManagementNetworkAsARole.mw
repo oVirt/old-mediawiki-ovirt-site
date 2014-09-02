@@ -1,36 +1,67 @@
-{{Feature|name=Management network as a role - Detailed|modules=Networking|version=oVirt 3.6|status=design|}}
+{{Feature|name=Management network as a role - Detailed|modules=Networking|version=oVirt 3.6|status=WIP|}}
 <!-- {{autolang|base=yes}} -->
 
 = Summary =
 This page describes the implementation details of the [[Features/Management_Network_As_A_Role|"Management network as a role" feature]].
 
-==== Entity Description ====
-<!-- New entities and changes in existing entities. -->
-New entities and changes in existing entities.
+== Entity Description ==
+* No new entities
+* ''Management'' boolean field will be added to NetworkCluster entity. ''True'' value will indicate that the network is the management one in the given cluster (similarly like it been done for display networks).
 
-==== CRUD ====
-<!-- Describe the create/read/update/delete operations on the entities, and what each operation should do. -->
-Describe the create/read/update/delete operations on the entities, and what each operation should do.
+= Installation/Upgrade =
+* During the upgrade the new field (''is_management'') will be added to ''NETWORK_CLUSTER'' table and will be populated by ''true'' value for ovirtmgmt networks and ''false'' for all other networks.
+* The following DB objects will be updated with the new field:
+** ''NETWORK_CLUSTER_VIEW''
+** Stored procedures:
+*** ''GetAllNetworkByClusterId''
+*** ''Insertnetwork_cluster''
+*** ''Updatenetwork_cluster''
+* New stored procedure ''set_network_exclusively_as_management'' will be created
 
-==== Installation/Upgrade ====
-<!-- Describe how the feature will effect new installation or existing one. -->
-Describe how the feature will effect new installation or existing one.
+= Planned code changes =
 
-==== Events ====
+== UI ==
+The UI layer will be updated according to the [[Features/Management_Network_As_A_Role|feature page]]. More details to come...
+
+== Backend ==
+=== NetworkUtils ===
+''isManagementNetwork'' methods will be moved to a new ''ManagementNetworkUtils'' class that will reside in ''bll'' project. 
+The new class will implement the following methods:
+* boolean isManagementNetwork(Guid networkId)
+* boolean isManagementNetwork(String networkName, Guid clusterId)
+* Network getManagementNetwork(Guid clusterId)
+
+=== DAO ===
+Optionally: a new ''getManagementNetwork'' method will be added to ''NetworkDao''
+
+=== Command classes ===
+The following classes will be affected by the feature:
+* org.ovirt.engine.core.bll.AddVdsGroupCommand
+* org.ovirt.engine.core.bll.InstallVdsInternalCommand
+* org.ovirt.engine.core.bll.UpdateVdsGroupCommand
+* org.ovirt.engine.core.bll.VdsDeploy
+* org.ovirt.engine.core.bll.network.NetworkConfigurator
+* org.ovirt.engine.core.bll.network.cluster.UpdateNetworkOnClusterCommand
+* org.ovirt.engine.core.bll.network.dc.UpdateNetworkCommand
+* org.ovirt.engine.core.bll.network.host.AttachNetworkToVdsInterfaceCommand
+* org.ovirt.engine.core.bll.network.host.UpdateNetworkToVdsInterfaceCommand
+* org.ovirt.engine.core.bll.network.host.SetupNetworksHelper
+* org.ovirt.engine.core.bll.network.RemoveNetworkParametersBuilder
+* org.ovirt.engine.core.bll.network.cluster.AttachNetworkToVdsGroupCommand
+* org.ovirt.engine.core.bll.network.cluster.UpdateNetworkOnClusterCommand
+* org.ovirt.engine.core.bll.network.host.AddBondCommand
+* org.ovirt.engine.core.bll.storage.UpdateStoragePoolCommand
+* org.ovirt.engine.core.bll.validator.NetworkValidator
+* org.ovirt.engine.core.vdsbroker.vdsbroker.CollectVdsNetworkDataVDSCommand
+* org.ovirt.engine.core.vdsbroker.vdsbroker.SetupNetworksVDSCommand
+
+= Events =
 <!-- What events should be reported when using this feature. -->
-What events should be reported when using this feature.
+TBD
 
-=== Dependencies / Related Features and Projects ===
-<!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? Add a link to the feature description for relevant features. -->
-
-What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature?
-
-Add a link to the feature description for relevant features.
-Does this feature effect other oVirt projects? Other projects?
-
-=== Open Issues ===
-<!-- Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly. -->
-Issues that we haven't decided how to take care of yet. These are issues that we need to resolve and change this document accordingly.
+= Open Issues =
+# ManagementNetworkUtils project - the right place for that kind of logic is ''bll''. However, the logic is needed by ''vdsbroker'', but  ''bll'' is dependent on the earlier apparently. 😠
+# UpdateVdsGroupCommand
 
 [[Category:DetailedFeature]]
 [[Category:Networking]]
