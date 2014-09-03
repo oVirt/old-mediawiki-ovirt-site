@@ -23,7 +23,8 @@ PUT to /api/hosts/{host:id}/nics/{nic:id}/networkattachments/{networkattachment:
     <ip_configuration>
       <ipv4s>
         <boot_protocol>static</boot_protocol>
-        <ipv4 primary="true">
+        <ipv4>
+          <primary>true</primary>
           <address>10.0.0.15</address>
           <netmask>255.255.255.0</netmask> 
           <gateway>10.0.0.254</gateway>
@@ -58,10 +59,20 @@ Where slaves can be identified either by id or by name (as long as they are nics
     <link_aggregation>
       <options>
         <!-- will be treated as the default bonding module-->
-        <option name="module" value="bonding">
+        <option>
+          <name>module</name>
+          <value>bonding</value>
+        </option>
         <!-- could be also, round-robin, load-balance and lacp -->
-        <option name="mode" value="1" type="Active-Backup"/>
-        <option name="miimon" value="100"/>
+        <option>
+          <name>mode</name>
+          <value>1</value>
+          <type>Active-Backup</type>
+        </option>
+        <option>
+          <name>miimon</name>
+          <value>100</value>
+        </option>
       </options>
       <slaves>
         <host_nic id="833ebaeb-0988-4bd5-b860-e00bcc3f576a"/>
@@ -80,7 +91,10 @@ PUT to /api/hosts/{host:id}/nics/{nic:id}
     <name>bond0</name>
     <bonding>
       <options>
-        <option name="mode" value="2"/>
+        <option>
+          <name>mode</name>
+          <value>2</value>
+        </option>
       </options>
       <slaves>
         <host_nic id="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"/>
@@ -123,8 +137,19 @@ POST to /api/hosts/{host:id}/setupnetworks
         <name>bond0<name>
         <link_aggregation>
           <options>
-            <option name="mode" value="1" type="Active-Backup"/>
-            <option name="miimon" value="100"/>
+            <option>
+              <name>module</name>
+              <value>bonding</value>
+            </option>
+            <option>
+              <name>mode</name>
+              <value>1</value>
+              <type>Active-Backup</type>
+            </option>
+            <option>
+              <name>miimon</name>
+              <value>100</value>
+            </option>
           </options>
           <slaves>
             <host_nic>
