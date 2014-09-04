@@ -127,8 +127,6 @@ Take into account that this custom script is not a shell script, but just a frag
 </action>
 </pre>
 
-
-
 === Where can I find network and IO statiscs for virtual machines? ===
 
 The statistics, in general, are avaialble in the <code>statistics</code> subresource of the corresponding object. For example, the statistics for the network interface of a virtual machine are available in <code>vms/{vm:id}/nics/{nic:id}/statitics</code>. Currently we have there the following statistics:
