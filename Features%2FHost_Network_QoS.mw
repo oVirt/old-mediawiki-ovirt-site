@@ -1,4 +1,5 @@
 = Host Network QoS =
+{{Feature|name=Host Network QoS|modules=engine,vdsm, api|version=3.6|status=Implementation}}
 
 === Summary ===
 This feature provides means by which to control the traffic of a specific network through a host's physical interface. It is a natural extension of the [[Features/Network_QoS|VM Network QoS]] feature, which provided the same functionality for a VM network through a VM's virtual interface.
@@ -9,11 +10,6 @@ You may also refer to the [[Features/Detailed_Host_Network_QoS|detailed feature 
 * Name: Lior Vernia (previously owned by Giuseppe Vallarelli)
 * E-mail: lvernia@redhat.com
 * IRC: lvernia at #ovirt (irc.oftc.net)
-
-=== Current Status ===
-* Target Release: oVirt 3.4
-* Status: design
-* Last updated: January 13th, 2014.
 
 === Detailed Description ===
 Generally speaking, network QoS (Quality of Service) in oVirt could be applied on a variety of different levels:
@@ -49,7 +45,7 @@ The following steps should be tested:
 # Move the host to a different cluster, whose compatibility version is smaller than 3.4; verify that it is no longer possible to override the QoS configuration on an interface via the Setup Networks dialog.
 
 === Comments and Discussion ===
-On the arch@ovirt.org and users@ovirt.org mailing lists.
+On the devel@ovirt.org and users@ovirt.org mailing lists.
 
 [[Category:Feature]]
 [[Category:Networking]]
