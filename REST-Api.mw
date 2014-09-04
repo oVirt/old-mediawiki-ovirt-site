@@ -81,6 +81,42 @@ provided by a service, the relationships between them, parameters that have to b
 overloads as parameters sets,  RSDL is intended to simplify the reuse of web services that are based on the HTTP architecture of the Web. It is platform and language independent and aims
 to promote reuse of applications beyond the basic use in a web browser by both humans and machines
 
+= FAQ =
+
+=== How can I use the RESTAPI from a simple shell script? ===
+
+You can use any tool that is capable of sending HTTP requests, like <code>curl</code>, <code>wget</code> or even <code>nc</code>. Most of the examples in this page use <code>curl</code>. To get the list of VMs, for example:
+
+<pre>
+url="https://ovirt.example.com/ovirt-engine/api"
+user="admin@internal"
+password="******"
+
+curl \
+--insecure \
+--header "Accept: application/xml" \
+--user "${user}:${password}" \
+"${url}/vms"
+</pre>
+
+=== Where can I find network and IO statiscs for virtual machines? ===
+
+The statistics, in general, are avaialble in the <code>statistics</code> subresource of the corresponding object. For example, the statistics for the network interface of a virtual machine are available in <code>vms/{vm:id}/nics/{nic:id}/statitics</code>. Currently we have there the following statistics:
+
+* <code>data.current.rx</code> - Receive data rate
+* <code>data.current.tx</code> - Transmit data rate
+* <code>errors.total.rx</code> - Total transmit errors
+* <code>errors.total.tx</code> - Total transmit errors
+
+For disk IO the statistics are located in the disk resource, either inside global disks collection <code>disks/{disk:id}/statistics</code> or inside the collection of disks of a specific VM <code>vms/{vm:id}/disks/{disk:id}/statistics</code>. Currently we have the following statistics for disks:
+
+* <code>data.current.read</code> - Read data rate
+* <code>data.current.write</code> - Write data rate
+* <code>disk.read.latency</code> - Read latency
+* <code>disk.write.latency</code> - Write latency
+* <code>disk.flush.latency</code> - Flush latency
+
+
 = Repository =
 
 * git://gerrit.ovirt.org/ovirt-engine (restapi is one of the engine modules located under ovirt/ovirt-engine/backend/manager/modules/restapi/)
