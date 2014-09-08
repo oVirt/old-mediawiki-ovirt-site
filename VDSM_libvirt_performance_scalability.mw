@@ -5,8 +5,7 @@ A rewrite of the VM startup code is also planned and described on a [[VDSM_VM_st
 
 ==== WARNING! ====
 
-This document is work in progress and requently updated, both for content and for style/consistency/readability
-
+This document is obsoleted by http://www.ovirt.org/Features/VDSM_scalability_sampling and http://www.ovirt.org/Features/VDSM_scalability_start_stop
 
 === Owner ===
 
