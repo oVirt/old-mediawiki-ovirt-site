@@ -43,3 +43,5 @@ has one Global Interpreter Lock (GIL). However, while this design decision is ob
 penalty in the concurrent I/O-bound tasks, as is the sampling. Nevertheless, oVirt needs some changes to improve its performances.
 
 The following graphs provide the baseline to measure the improvements.
+
+[[File:VDSM_35x_sampling_baseline_cpu_65.png]]
