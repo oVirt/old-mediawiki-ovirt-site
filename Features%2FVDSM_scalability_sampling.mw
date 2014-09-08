@@ -45,3 +45,6 @@ penalty in the concurrent I/O-bound tasks, as is the sampling. Nevertheless, oVi
 The following graphs provide the baseline to measure the improvements.
 
 [[File:VDSM_35x_sampling_baseline_cpu_65.png]]
+[[File:VDSM_35x_sampling_baseline_cpu_70.png]]
+[[File:VDSM_35x_sampling_baseline_mem_65.png]]
+[[File:VDSM_35x_sampling_baseline_mem_70.png]]
