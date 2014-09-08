@@ -1,5 +1,5 @@
-= Get Route Device =
-{{Feature|name=Get Route Device|modules=engine, api|version=3.6|status=Proposed}}
+= Get Route =
+{{Feature|name=Get Route|modules=engine, api|version=3.6|status=Proposed}}
 
 === Summary ===
 New verb <code>getRoute</code> should return name of a device assigned to given IP address.
@@ -29,7 +29,7 @@ To implement this new verb we could use <code>netinfo.getRouteDeviceTo(ip_addres
 
 == Comments and Discussion ==
 
-* Refer to [[Talk:Get Route Device]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
+* Refer to [[Talk:Get Route]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 
 [[Category:Feature]]
 [[Category:Networking]]
