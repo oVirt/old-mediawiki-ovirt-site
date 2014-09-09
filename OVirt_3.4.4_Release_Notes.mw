@@ -19,10 +19,6 @@
 ==oVirt Hosted Engine HA==
 {{BZ|1119705}} - If two hosts have engine status 'vm not running on this host' ha agent not start vm automatically
 
-==VDSM==
-
-
-
 
 [[Category:Documentation]]
 [[Category:Releases]]
