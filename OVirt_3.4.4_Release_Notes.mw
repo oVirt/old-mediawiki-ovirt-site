@@ -8,6 +8,33 @@
 
 =Bugs fixed=
 ==oVirt Engine==
+{{BZ|1064927}} - wrong boot order when trying to boot from CDROM while using cloud-init<BR>
+{{BZ|1070890}} - Run vm with odd number of cores drop libvirt error<BR>
+{{BZ|1105842}} - [Neutron integration] Custom device properties are not passed to vdsm<BR>
+{{BZ|1111551}} - [rhevm] unable to create template from Windows 2012 guest with SPICE videocard in RHEV 3.4<BR>
+{{BZ|1111655}} - Disks imported from Export Domain to Data Domain are converted to Preallocated after upgrade from oVirt 3.4.1 to 3.4.2<BR>
+{{BZ|1113571}} - Fail to update VM with any field, on missing domain name.<BR>
+{{BZ|1114041}} - Cannot add AD group to a new VM from the user portal<BR>
+{{BZ|1118920}} - engine serves only English docs when other locales are installed<BR>
+{{BZ|1121401}} - ovirt-engine should not store long term files in "/var/tmp/ovirt-engine/"<BR>
+{{BZ|1122446}} - Violating hard constraint positive Affinity rule can prevent fixing the violated rule forever<BR>
+{{BZ|1122945}} - [rhevm-cli]: update vm has no  --memory_policy-guaranteed option<BR>
+{{BZ|1125373}} - ovirt-engine currently sets the disk device to "lun" for all virtio-scsi direct LUN connections and disables read-only for these devices<BR>
+{{BZ|1126221}} - [engine-backend] [iSCSI multipath] It's possible to remove a network from the setup even though it participates in an iSCSI multipath bond<BR>
+{{BZ|1126428}} - [engine-backend] [iSCSI multipath] No indication that updating an iSCSI multipath bond doesn't trigger any operation from vdsm side<BR>
+{{BZ|1126797}} - Odd vCPU topology dropped by libvirt<BR>
+{{BZ|1127007}} - [engine-backend] [iscsi multipath] After networks replacement in an iSCSI multipath bond had failed, the bond's networks aren't being updated back<BR>
+{{BZ|1128461}} - No link to VMs sub-collections under affinitygroups<BR>
+{{BZ|1129671}} - engine-backup fails if bzip2 is not installed<BR>
+{{BZ|1130761}} - Could not import a VM from export domain with raw sparse disks to a block storage domain<BR>
+{{BZ|1131021}} - update supported PPC cpu to power8<BR>
+{{BZ|1131294}} - Can't change a vm disk's storage domain from a file domain to a block domain when creating a template from a vm<BR>
+{{BZ|1131856}} - Failed to remove host xxxxxxxx<BR>
+{{BZ|1132086}} - Cannot export VM. Disk configuration (COW Preallocated) is incompatible with the storage domain type.<BR>
+{{BZ|1132191}} - [Windows sysprep] Run Once: Special characters are not encoded in XML sysprep files for Windows 7, 8, 2008, 2012<BR>
+{{BZ|1133279}} - Adding networks to an Iscsi Bond will remove all the other existing networks in this IscsiBond and replace them with the new added network<BR>
+{{BZ|1133896}} - Fix operations of add,remove and list for StorageConnections in iSCSI Bond<BR>
+{{BZ|1136010}} - RHEVM Backend : VM can be removed while in other state than down, like migrating and powering off<BR>
 
 ==oVirt Log Collector==
 {{BZ|1129373}} - [log-collector] no engine.log in the final archive<BR>
