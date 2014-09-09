@@ -56,7 +56,7 @@ The following image demonstrates the neutron appliance topology:
 [[File:EditVmInitialization.png | 700px]]
 
 ==== Run the neutron server vm ====
-# Install the no-macspoof hook on the host the vm is scheduled to be run on:
+# Install the macspoof hook on the host the vm is scheduled to be run on:
 ## yum -y install vdsm-hook-macspoof
 # Run the neutron vm on that host (it takes cloud-init ~4 minutes since vm boot to finish)
 # VM IP address should be reported to ovirt-engine (due to ovirt-guest-agent installed on the vm)
