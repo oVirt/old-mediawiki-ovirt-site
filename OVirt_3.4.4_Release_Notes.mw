@@ -9,6 +9,16 @@
 =Bugs fixed=
 ==oVirt Engine==
 
+==oVirt Log Collector==
+{{BZ|1129373}} - [log-collector] no engine.log in the final archive<BR>
+{{BZ|1129698}} - /etc/rhevm is not collected<BR>
+
+==oVirt Image Uploader==
+{{BZ|1138558}} - rhevm-image-uploader ignores insecure option<BR>
+
+==oVirt Hosted Engine HA==
+{{BZ|1119705}} - If two hosts have engine status 'vm not running on this host' ha agent not start vm automatically
+
 ==VDSM==
 
 ==ovirt-node-plugin-vdsm==
