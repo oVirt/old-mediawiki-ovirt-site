@@ -837,6 +837,13 @@ fixed in alpha
 {{BZ|1098029}} - "rhsc-log-collector" takes too long even to prompt for the REST API password before it actually start collecting information from selected servers<BR>
 
 == oVirt Hosted Engine Setup ==
+Fixed in second rc
+
+{{BZ|1124207}} - [self-hosted-engine] Adjust engine management network settings when deployed over VLAN<BR>
+{{BZ|1134873}} - Report error as 'Hosted Engine HA service are already running on this system' when first configure hosted engine<BR>
+{{BZ|1136015}} - Installation of second host failed, if given incorrect FQDN of first host for answer file<BR>
+{{BZ|1136019}} - Deploy of second host with different network interface failed<BR>
+
 Fixed in first rc
 
 {{BZ|1105249}} - Need warning message, that appear when you run hosted-engine --deploy via ssh without terminal mode<BR>
