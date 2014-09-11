@@ -1,15 +1,15 @@
 {{DISPLAYTITLE:oVirt 3.5 Release Notes}}
 
-The oVirt development team is pleased to announce oVirt 3.5.0 RC release availability as of Aug 5th 2014.
+The oVirt development team is pleased to announce oVirt 3.5.0 second release candidate availability as of Sep 11th 2014.
 oVirt is an open source alternative to VMware vSphere, and provides an excellent KVM management interface for multi-node virtualization.
 
 To find out more about features which were added in previous oVirt releases, check out the  [[oVirt 3.4.1 release notes]],  [[oVirt 3.3.5 release notes]], [[oVirt 3.2 release notes]] and [[oVirt 3.1 release notes]].
 For a general overview of oVirt, read [[oVirt 3.0 Feature Guide | the oVirt 3.0 feature guide]] and the [[about oVirt]] page.
 
-= oVirt 3.5.0 RELEASE CANDIDATE Release Notes =
+= oVirt 3.5.0 SECOND RELEASE CANDIDATE Release Notes =
 
 == RELEASE CANDIDATE ==
-The oVirt Project is working on oVirt 3.5.0 release candidate. To install this release, you must enable the oVirt 3.5 pre-release repository.
+The oVirt Project is working on oVirt 3.5.0 second release candidate. To install this release, you must enable the oVirt 3.5 pre-release repository.
 See the below section on Install / Upgrade for detailed instructions.
 
 == Known Issues ==
@@ -127,12 +127,12 @@ More information can be found in the [[Features/oVirt_Windows_Guest_Tools|oVirt 
 
 = Install / Upgrade from previous versions=
 
-== RELEASE CANDIDATE ==
-The oVirt Project is working on oVirt 3.5.0 release candidate. In order to install it you've to enable oVirt 3.5 pre release repository.
+== SECOND RELEASE CANDIDATE ==
+The oVirt Project is working on oVirt 3.5.0 second release candidate. In order to install it you've to enable oVirt 3.5 pre release repository.
 
 '''Please note that mirror may take a couple of days in order to be updated'''
 
-You can disable mirrors and use ovirt repository by commenting the mirrorlist line and removing comment on baseurl line in '''/etc/yum.repos.d/ovirt-3.5.repo'''
+You can disable mirrors and use oVirt repository by commenting the mirrorlist line and removing comment on baseurl line in '''/etc/yum.repos.d/ovirt-3.5.repo'''
 
 == Fedora / CentOS / RHEL ==
 In order to install it on a clean system, you need to install 
@@ -159,14 +159,14 @@ On the vdsmd restart that happens when upgrading VDSM to the oVirt 3.5 release, 
 
 == oVirt Node ==
 
-a fresh oVirt Node build is also available now:
+an oVirt Node build is also available:
  http://resources.ovirt.org/pub/ovirt-3.5-pre/iso/ovirt-node-iso-3.5.0.ovirt35.20140630.el6.iso
 * To circumvent some SELinux issues, please append enforcing=0 to the kernel commandline when booting the ISO.
 * The ISO is missing the plugin for Hosted Engine, but we hope to deliver an iso which includes this plugin shortly.
 
 == oVirt Live ==
 
-A new oVirt Live ISO is available:
+An oVirt Live ISO is available:
  http://resources.ovirt.org/pub/ovirt-3.5-pre/iso/ovirt-live-el6-3.5.0_rc1.iso
 
 = <span class="mw-customtoggle-1" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Click to Show/Hide]</span></span>Bugs Fixed = 
