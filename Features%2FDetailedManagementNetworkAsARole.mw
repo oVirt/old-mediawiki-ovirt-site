@@ -52,7 +52,7 @@ The new class will implement the following methods:
 * Network getManagementNetwork(Guid clusterId)
 
 === DAO ===
-Optionally: a new ''getManagementNetwork'' method will be added to ''NetworkDao''
+Optionally: a new ''getManagementNetwork'' method will be added to ''NetworkClusterDao''
 
 === Command classes ===
 The following classes will be affected by the feature:
