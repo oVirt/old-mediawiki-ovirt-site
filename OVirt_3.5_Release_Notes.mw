@@ -872,6 +872,10 @@ Fixed in alpha
 {{BZ|1079956}} - missing dependency<BR>
 
 == oVirt Hosted Engine HA ==
+Fixed in second rc
+
+{{BZ|1129261}} - prepareImage api call fails with [Errno 2] No such file or directory<BR>
+
 Fixed in first rc
 
 {{BZ|1109545}} - Hosted-engine --deploy failed with message "Hosted Engine HA services are already running on this system"<BR>
