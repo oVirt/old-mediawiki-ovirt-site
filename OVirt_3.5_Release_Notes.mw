@@ -811,6 +811,7 @@ A new oVirt Live ISO is available:
 == oVirt ISO Uploader ==
 fixed in rc
 
+{{BZ|1129382}} - iso uploader's rpm should provide required user on install if missing<BR>
 {{BZ|1110756}} - 'NoneType' object is not iterable error when certificate validation fails<BR>
 
 fixed in beta
