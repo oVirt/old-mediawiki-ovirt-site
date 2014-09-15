@@ -32,8 +32,9 @@ When starting the vm the vnic will be directly connected to one of the availiabl
 
 ==== Affected Flows ====
 =====  add/edit network =====
-* passthrough property cannot be changed on edit network.
-* passthrough property cannot be changed on edit network.
+* <b>passthrough </b>
+**  new property that will be added to the network.
+** passthrough property cannot be changed on edit network.
 * If the network is passthrough, just passthrough supported properties can be edited in the network (open issue- what properties?).
 
 ===== add/edit profile =====
@@ -56,10 +57,13 @@ When starting the vm the vnic will be directly connected to one of the availiabl
 
 =====  network labeling =====
 
-* starting the vm
+===== starting the vm =====
 ** if a vnic has passthrough property 
 
 ===== setup networks =====
+* sr-iov enabled nic
+* configuring max vfs
+* attaching passthrough netywork to a nic
 
 ===== migration =====
 
