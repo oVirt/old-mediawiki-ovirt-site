@@ -32,8 +32,10 @@ When starting the vm the vnic will be directly connected to one of the availiabl
 
 ==== Affected Flows ====
 =====  add/edit network =====
-* If the network is passthrough, just passthrough supported properties can be edited in the network (open issue- what properties?).
 * passthrough property cannot be changed on edit network.
+* passthrough property cannot be changed on edit network.
+* If the network is passthrough, just passthrough supported properties can be edited in the network (open issue- what properties?).
+
 ===== add/edit profile =====
 * If the profiles network is passthrough, just passthrough supported properties can be edited in the profile (open issue- what properties?).
 ===== add/edit vNic =====
