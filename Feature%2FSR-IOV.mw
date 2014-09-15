@@ -62,6 +62,7 @@ A VM's vNic can be connected directly to a VF (1-1) instead of to virtual networ
 
 === Dependencies / Related Features ===
 * [http://www.ovirt.org/Features/hostdev_passthrough hostdev passthrough]
+*[http://www.ovirt.org/Features/UCS_Integration UCS integration]
 
 === Documentation / External references ===
 * [https://bugzilla.redhat.com/869804 BZ 869804]: [RFE] [HP RHEV FEAT]: SR-IOV enablement in RHEV
