@@ -4,19 +4,17 @@ The oVirt Project is made great by the users who advocate and help in the develo
 
 Companies and public institutions all over the world have found oVirt a great solution to manage internal and customer-facing servers. These organizations are using oVirt in production, as well as actively participating in the oVirt community.
 
+=== Asia ===
+
+[[File:Ctlogo.png|alt=Cloud Times|150px|link=http://www.cloud-times.com/]]
+
+[[//www.cloud-times.com/ Cloud Times]] is a startup invested by CBC and funded by Dr Edward Tian, known as the Father of Chinese Broadband. Cloud Times is devoted to being the leading solution provider of Cloud Client Equipment, Virtual Desktop Infrastructure,  and “Cloud plus Client” Management Platform, and to help Chinese enterprises in the transition to “Cloud plus Client” architecture. 
+
 === Europe ===
 
 [[File:Albalogo.png|alt=ALBA Software|150px|link=http://www.albasoft.com/web/#/home]]
 
 [//www.albasoft.com/web/#/home ALBA Software] has provided consulting, integration, and Internet development services since 1999.
-
-[[File:Intellij_idea.png|alt=Intellij_idea|150px|link=http://www.jetbrains.com/idea/features/index.html]]
-
-[http://www.jetbrains.com/idea/features/index.html IntelliJ IDEA] and [http://www.jetbrains.com/pycharm/ PyCharm] are two developer products with donated licenses from [http://www.jetbrains.com/ JetBrains].
-
-[[File:Jprofiler_large.png|alt=Jprofiler|150px|link=http://www.ej-technologies.com/products/jprofiler/overview.html]]
-
-[http://www.ej-technologies.com/products/jprofiler/overview.html jprofiler] from [http://www.ej-technologies.com/ ej-technologies GmBH] assists oVirt developers in finding performance bottlenecks, pin down memory leaks and understand threading issues.
 
 [[File:Netbulae.png|alt=Netbulae|150px|link=http://www.netbulae.eu/]]
 
@@ -42,6 +40,8 @@ The founders of [//www.netbulae.eu/ Netbulae] have experience in ICT, automation
 
 == Organizations Using oVirt ==
 
+=== Europe ===
+
 [[File:AlterWay.jpg|alt=AlterWay|150px|link=http://www.alterway.fr]]
 
 [//alterway.fr AlterWay] offers hosting services to the oVirt project for free, including oVirt-managed Virtual Machines and a dedicated server for Jenkins, for use in the oVirt project infrastructure. They launched an oVirt-based public cloud offering called [http://h2o.alterway.fr H2O] in October 2012.   '''[[Alter Way case study | Case Study]]'''
@@ -50,6 +50,10 @@ The founders of [//www.netbulae.eu/ Netbulae] have experience in ICT, automation
 
 Faced with an opportunity to take the approximately 150 virtual machines housed on 30 Solaris machines and manage them with another virtual datacenter management tool, the [//www.brusselsairport.be Brussels Airport Company] IT team went with oVirt running atop CentOS. '''[[Brussels_Airport_Case_Study | Case Study]]'''
 
+[[File:Intellij_idea.png|alt=Intellij_idea|150px|link=http://www.jetbrains.com/idea/features/index.html]]
+
+[http://www.jetbrains.com/idea/features/index.html IntelliJ IDEA] and [http://www.jetbrains.com/pycharm/ PyCharm] are two developer products with donated licenses from [http://www.jetbrains.com/ JetBrains].
+
 [[File:It-novum.jpg‎|alt=it-novum Logo|150px|link=http://www.it-novum.com/]]
 
 [//www.it-novum.com/ it-novum] is a company that's very focused on delivering open source, so when they decided to build a product and solution set for their customers' datacenter needs, it made sense that oVirt was included. '''[[IT_Novum_case_study|Case Study]]'''
@@ -57,6 +61,12 @@ Faced with an opportunity to take the approximately 150 virtual machines housed 
 [[File:Nwld_logo.png|alt=Nieuwland|150px|link=http://nieuwland.nl/]]
 
 Dutch software development company [//nieuwland.nl/  Nieuwland Geo-Informatie]  creates mobile applications that need to tap into a lot of geographic information in a reliable and fast manner. To do this, they needed a virtualization solution that would have high availability at a reasonable cost. '''[[Nieuwland case study |  Case Study]]'''
+
+[[File:Jprofiler_large.png|alt=Jprofiler|150px|link=http://www.ej-technologies.com/products/jprofiler/overview.html]]
+
+[http://www.ej-technologies.com/products/jprofiler/overview.html jprofiler] from [http://www.ej-technologies.com/ ej-technologies GmBH] assists oVirt developers in finding performance bottlenecks, pin down memory leaks and understand threading issues.
+
+=== North America ===
 
 [[File:Judici_Logo.jpg|alt=Judici|150px|link=http://www.judici.com]]
 
