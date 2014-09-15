@@ -96,7 +96,7 @@ There are certain configurations which aren't supported by the 'Setup Networks' 
 
 ==== User Experience ====
 
-[[File:LabelNetwork.png | thumb | right]] [[File:LabelNic.png | thumb | right]] [[File:LabelSetupNetworks.png | thumb | right]]
+[[File:LabelNetwork.png | thumb | right]] [[File:LabelNic.png | thumb | right]] [[File:LabelSetupNetworks.png | thumb | right]] [[File:LabelInterfaces.png | thumb | right]]
 
 For managing labels on host level:
 * In Network main tab ---> the 'Hosts sub-tab',  the 'Network Device' column will contain tag image if the network is attached to the host via label.
