@@ -59,12 +59,15 @@ When starting the vm the vnic will be directly connected to one of the availiabl
 
 ===== hot plug nic =====
 * <b>plugging</b>
+** hot plug of passthough vnic is possible if there is available VF on the PF. 
 * <b>unplugging</b>
+** if the vnic is pasthrough the VF will be released (deleted?)
 
 ===== vnic linking =====
 * <b>linking</b>
+** linking of passthough vnic is possible if there is available VF on the PF. 
 * <b>unlinking</b>
-
+** if the vnic is pasthrough the VF will be released (deleted?)
 
 ===== run vm =====
 * if there is no are no nics that support sr-iov on the host? if there are no available VFs? 
@@ -142,6 +145,7 @@ When starting the vm the vnic will be directly connected to one of the availiabl
 * there is an issue that the mac address of a VF is  re-generated after each host reboot.
 * are labels on sr-iov enabled nic supported?
 * is label on passthrough  network supported?
+* unplug/unlink passthrough vnic- should the VF be just released or should be deleted?
 
 [[Category:Feature]]
 [[Category:Networking]]
