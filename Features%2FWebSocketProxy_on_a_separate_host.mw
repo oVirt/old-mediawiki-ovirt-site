@@ -36,15 +36,17 @@ Under this assumptions it can works this way:
 *On the first node:
 *# Via yum, the user installs the required RPMs on the first machine (the engine one) 
 *# Then he can launch engine-setup
-*# engine-setup wil ask about engine configuration; the user should choose YES
+*# engine-setup wil ask about engine configuration; the user should choose YES to install the engine there.
 
 * On the second node:  
-*# Via yum user install the required RPM
+*# Via yum user install the required RPM (yum install  ovirt-engine-websocket-proxy)
 *# Then he can launch engine-setup
-*# engine-setup wil ask about engine configuration; the user should choose NO
+*# If the user also installed engine rpms, engine-setup will ask about engine configuration; the user should choose NO
 *# acknowledging that the engine is not being configured, engine-setup show instruction to configure a remote engine to talk with the websocket proxy on this host, in particular:
-*## it generates a CSR showing it to the user
-*## it waits for the signed cert to be copied back
+*## it shows a command to configure, on the engine host, the new websocket proxy location (via engine-config)
+*## it supports websocket proxy cert setup proposing the required commands; it can happen in two different way:
+*### inline: the engine setup generates and prints a CSR on the screen, the user should paste it on the engine host into a well know path, sign it, and than paste back the signed cert within engine-setup UI
+*### file-based: not that different from the previous one, CSR is not shown on the screen but is saved into a temp file, the user should copy it to the other host in order to sign it, than ha has to copy back the signed cert file
 *# if the user is going to use the internal CA, he should connect also to the engine host to sign the CSR according to the shown instruction
 
 === Benefit to oVirt ===
