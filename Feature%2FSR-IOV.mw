@@ -58,8 +58,13 @@ When starting the vm the vnic will be directly connected to one of the availiabl
 ** (open issue- maybe it is enough that the selected network on a vnic is passthrough and there is no need for passthrough property on the vnic).
 
 ===== hot plug nic =====
+* <b>plugging</b>
+* <b>unplugging</b>
 
 ===== vnic linking =====
+* <b>linking</b>
+* <b>unlinking</b>
+
 
 ===== run vm =====
 * if there is no are no nics that support sr-iov on the host? if there are no available VFs? 
@@ -98,9 +103,11 @@ When starting the vm the vnic will be directly connected to one of the availiabl
 ** if the vm has passthrough vnic, the physical nic to which the vnic's network is attached to is being checked
 *** if it has more than max_vfs running vms connected to its VFs the host is filtered out from the scheduling.
 ** if all the hosts were filtered out from the scheduling the running of the VM will fail and an appropriate error message will be displayed.
+* just on run vm the relevant VF will be created and configured with the network configuration values. (???)
 
 ===== migration =====
-
+* scheduling the host- same as run vm.
+* the network configuration values will be set on the VFs of the scheduled host before the migration takes place. (???)
 
 ==== User Experience ====
 
