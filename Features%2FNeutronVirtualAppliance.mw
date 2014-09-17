@@ -1,7 +1,7 @@
 <!-- {{autolang|base=yes}} -->
 
 == Neutron Virtual Appliance ==
-{{Feature|name=Neutron Virtual Appliance|modules=network|status=Development|version=3.5.0}}
+{{Feature|name=Neutron Virtual Appliance|modules=network|status=Completed|version=3.5.0}}
 
 === Summary ===
 oVirt engine has integrated the OpenStack Neutron service as a [[Features/OSN_Integration|network provider]]. The OpenStack network provider enables ovirt-engine to consume Neutron services.<br>
