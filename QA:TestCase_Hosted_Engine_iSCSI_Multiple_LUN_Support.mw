@@ -1,5 +1,5 @@
 == Description ==
-As part of [Features/Self_Hosted_Engine_iSCSI_Support Self Hosted Engine iSCSI Support Feature] this case is meant to test setup when multiple LUN are available on the iSCSI target
+As part of [[Features/Self_Hosted_Engine_iSCSI_Support | Self Hosted Engine iSCSI Support Feature]] this case is meant to test setup when multiple LUN are available on the iSCSI target
 
 == Setup ==
 You can follow https://fedoraproject.org/wiki/Scsi-target-utils_Quickstart_Guide for setting up tgtd, just repeat the step "Add a logical unit (LUN)" increasing the value passed to --lun for each lun you add. 
