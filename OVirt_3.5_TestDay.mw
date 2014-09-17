@@ -37,7 +37,7 @@
 * CentOS hosts don't report RNG devices sources. Please uncheck '/dev/random' checkbox in Cluster Options for default cluster before adding any CentOS host to it.
 
 ==oVirt 3.5 New Features  - Test Status Table==
-Please report test results on the [http://etherpad.ovirt.org/p/3.5-testday-2 second test day report etherpad] (previous is [http://etherpad.ovirt.org/p/3.5-testday-1 first test day report etherpad]).or on the table below.
+Please report test results on the [http://etherpad.ovirt.org/p/3.5-testday-3 third test day report etherpad] (previous is [http://etherpad.ovirt.org/p/3.5-testday-1 first test day report etherpad]; [http://etherpad.ovirt.org/p/3.5-testday-2 second test day report etherpad]).or on the table below.
 
 Following tests should be performed on all supported distributions.
 
