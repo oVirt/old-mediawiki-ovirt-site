@@ -119,7 +119,7 @@ params = {
                nic: nic name
                vlan: vlan id
                ..
-               <b>max_vfs</b>:<int> <---  number of vfs to be configured on the nic
+               max_vfs:<int> <---  new property- represents number of vfs to be configured on the nic
             }
  }
 </pre>
