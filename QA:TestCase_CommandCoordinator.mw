@@ -1,0 +1,18 @@
+== Description ==
+Starting with oVirt 3.5 non-storage related operations can be executed asynchronously using CommandCoordinator framework. 
+This test case will check that the feature is working as expected by invoking live merge.
+
+== Setup ==
+# Create a snapshot of a VM with disk
+
+==How to test==
+# Install ovirt-engine
+# Run engine-setup
+# Add host, storage domain and create a VM with disk
+# Create a snapshot of the VM
+# Start the VM and after the VM is up delete the snapshot.
+
+==Expected Results==
+* Live Merge should run and the snapshot should be deleted
+
+[[Category:TestCase]]
