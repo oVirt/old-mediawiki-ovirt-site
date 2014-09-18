@@ -110,13 +110,13 @@ When starting the vm the vnic will be directly connected to one of the availiabl
 *setupNetworks verb will be extended
 
 <pre>
-setupNetworks(Map networks,  Map bonding, Map options)
+setupNetworks(Map networks, Map bonding, Map options)
 </pre>
 
 <pre>
 params = {
      network_name {
-              nic: nic name
+               nic: nic name
                vlan: vlan id
                ..
                <b>max_vfs</b>:<int> <---  number of vfs to be configured on the nic
