@@ -2,8 +2,8 @@
 Feature prevents fencing of host which is currenlty dumping to preserve crashdump information. Without it host would be fenced and all crashdump informations would be lost.
 
 =Owner=
-# Name: Martin Perina
-# Email: mperina@redhat.com
+* Name: Martin Perina
+* Email: mperina@redhat.com
 
 =Current status=
 Feature completed and included in oVirt 3.5
