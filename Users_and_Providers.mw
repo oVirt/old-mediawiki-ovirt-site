@@ -25,13 +25,17 @@ Faced with an opportunity to take the approximately 150 virtual machines housed 
 
 [//www.it-novum.com/ it-novum] is a company that's very focused on delivering open source, so when they decided to build a product and solution set for their customers' datacenter needs, it made sense that oVirt was included. '''[[IT_Novum_case_study|Case Study]]'''
 
+[[File:Jprofiler_large.png|alt=Jprofiler|150px|link=http://www.ej-technologies.com/products/jprofiler/overview.html]]
+
+[http://www.ej-technologies.com/products/jprofiler/overview.html jprofiler] from [http://www.ej-technologies.com/ ej-technologies GmBH] assists oVirt developers in finding performance bottlenecks, pin down memory leaks and understand threading issues.
+
 [[File:Nwld_logo.png|alt=Nieuwland|150px|link=http://nieuwland.nl/]]
 
 Dutch software development company [//nieuwland.nl/  Nieuwland Geo-Informatie]  creates mobile applications that need to tap into a lot of geographic information in a reliable and fast manner. To do this, they needed a virtualization solution that would have high availability at a reasonable cost. '''[[Nieuwland case study |  Case Study]]'''
 
-[[File:Jprofiler_large.png|alt=Jprofiler|150px|link=http://www.ej-technologies.com/products/jprofiler/overview.html]]
+[[File:Nimbus logo.png|alt=Nimbus Concept|150px|link=http://www.nimbusconcept.com/index-en.html]]
 
-[http://www.ej-technologies.com/products/jprofiler/overview.html jprofiler] from [http://www.ej-technologies.com/ ej-technologies GmBH] assists oVirt developers in finding performance bottlenecks, pin down memory leaks and understand threading issues.
+[//www.nimbusconcept.com/index-en.html Nimbus Concept] has taken oVirt and other open source tools to deliver solutions to their customers, and now is offering something unique: OriginStack, an appliance that integrates hardware, virtualization (oVirt/KVM), private cloud (OpenStack), and support in one integrated package.  '''[[Nimbus_Concept_Case_Study| Case Study]]'''
 
 === North America ===
 
