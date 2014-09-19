@@ -56,7 +56,7 @@ The configuration files can be found at :
 
 === Networking ===
 ==== Fedora and EL7 hosts ====
-It is strongly recommended for the best networking experience to disable and mask network manager and replace firewalld with iptables:
+It is strongly recommended for the best networking experience to disable and mask network manager and replace firewalld with iptables due [https://bugzilla.redhat.com/show_bug.cgi?id=1143873 an selinux policy issues]:
     systemctl stop NetworkManager
     systemctl disable NetworkManager
     systemctl mask NetworkManager
@@ -65,7 +65,7 @@ It is strongly recommended for the best networking experience to disable and mas
     systemctl mask firewalld
     yum install iptables
     systemctl enable iptables.service
-   
+
 ==== Unified persistence ====
 Unified persistence is a way for oVirt-defined network configurations in hosts to be set in a format that is distribution agnostic and that closely matches the oVirt network setup API. When configuring an oVirt network on a host, it will now create a file for the network definition in:
 /var/run/vdsm/netconf/nets
