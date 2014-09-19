@@ -1,6 +1,7 @@
 
+Our community is growing every day, as individual users and organizations alike discover oVirt and start integrating it into their IT strategies. How they use oVirt varies: implementing it in their datacenters and even using oVirt as the basis of their own solutions for their customers. For Red Hat, which opened the oVirt codebase, oVirt is used as the upstream for the commercial Red Hat Enterprise Virtualization product. oVirt is also the upstream for Wind River's Open Virtualization product. 
 
-Our community is growing every day, as individual users and organizations alike discover oVirt and start integrating it into their IT strategies. How they use oVirt varies: implementing it in their datacenters and even using oVirt as the basis of their own solutions for their customers. This page is dedicated to the users, solution providers, and supporters of oVirt.
+This page highlights the users, solution providers, supporters, and downstream commercial products of oVirt.
 
 == Organizations Using oVirt ==
 
@@ -98,6 +99,14 @@ The founders of [//www.netbulae.eu/ Netbulae] have experience in ICT, automation
 [[File:Tllogo.jpg|alt=Internet Complete!, Inc.|150px|link=http://icnet.net/]]
 
 [//icnet.net/ Internet Complete] is dedicated to providing Oklahoma customers with the leading technologies (including oVirt-managed hosting) they need for fast, reliable Internet solutions.
+
+[[File:Red hat logo.jpg|alt=Red Hat, Inc.|150px|link=http://www.redhat.com/en]]
+
+[//www.redhat.com/en Red Hat] is the corporate member of the oVirt community responsible for opening oVirt's codebase. Besides providing support for oVirt's community, Red Hat uses oVirt as the codebase for its [//www.redhat.com/en/technologies/virtualization/enterprise-virtualization Red Hat Enterprise Virtualization] product.
+
+[[File:Windriver logo.png|alt=Wind River|150px|link=http://www.windriver.com/]]
+
+[//www.windriver.com/ Wind River] offers a comprehensive device development portfolio, including its [//www.windriver.com/products/open-virtualization-profile/ Open Virtualization] product, a real-time virtualization solution using KVM and oVirt technology.
 
 == Members of the oVirt Board ==
 
