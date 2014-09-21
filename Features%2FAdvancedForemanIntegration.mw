@@ -1,4 +1,8 @@
-=== Summary ===
+<!-- {{autolang|base=yes}} -->
+
+= Advanced Foreman Integration =
+
+== Summary ==
 [http://theforeman.org/ Foreman] [1] The Foreman is a complete lifecycle management tool for physical and virtual servers.
 Through deep integration with configuration management, DHCP, DNS, TFTP, and PXE-based unattended installations, Foreman manages every stage of the lifecycle of your physical or virtual servers. The Foreman provides comprehensive, auditable interaction facilities including a web frontend and robust, RESTful API. 
 [https://launchpad.net/cloud-init/ Cloud-init] [1] is a tool used to perform initial setup on cloud nodes, including networking, SSH keys, timezone, user data injection, and more.  It is a service that runs on the guest, and supports various Linux distributions including Fedora, RHEL, and Ubuntu.
@@ -8,19 +12,19 @@ Integrating Foreman with oVirt will help adding hypervisor hosts that are manage
 Today, there is basic Foreman integration, described in [2], which allows the administrator to see hosts installed in Foreman, and get their basic details.
 This feature aims to extend this integration to cover other aspects such as Bare-Metal provisioning, VM provisioning and Host configuration.
 
-=== Owners ===
-
+== Owner ==
 * Name: Yaniv Bronheim
 * Email: ybronhei@redhatdotcom
 * Name: Oved Ourfali
 * Email: ovedo@redhatdotcom
 
-=== Current Status ===
+== Current status ==
 * Integrated fully in oVirt-3.5 as tech preview feature. Currently tested.
 * In enhancements and bug fixes phase
 * Using Foreman 1.6
 
-=== Detailed Description ===
+== Benefit to oVirt ==
+== Detailed Description ==
 
 ==== Use Cases ====
 * The following use-cases assume you already have a Foreman provider in the system. For more information on adding Foreman providers have a look at [2].
@@ -173,17 +177,21 @@ To allow testing the feature in "allinone" configuration, which means running fo
 
 [1] you might need to stop foreman-tasks - service foreman-tasks stop - sometimes without stopping this service the installer will fail
 
-=== Dependencies / Related Features ===
+== Dependencies / Related Features ==
 
-=== Documentation / External References ===
+== Documentation / External references ==
 
 # Foreman homepage: http://theforeman.org/
 # Basic Foreman integration feature page : http://ovirt.org/Features/ForemanIntegration
 # Foreman plugin examples: http://projects.theforeman.org/projects/foreman/wiki/How_to_Create_a_Plugin
 
-=== Known issues for followup ===
-* http://projects.theforeman.org/issues/5781
+== Testing ==
 
-=== Comments and Discussion ===
+=== Known issues for followup ===
+
+== Comments and Discussion ==
 
 * Refer to [[Talk:Advanced Foreman Integration]]
+
+[[Category:Feature]]
+[[Category:Template]]
