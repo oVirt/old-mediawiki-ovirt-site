@@ -289,7 +289,7 @@ Menu Navigation Keys
 
 ::c. Select Apply and press Enter. A dialog displays, asking you to connect the hypervisor to the oVirt Engine and validate its certificate. Select Approve and press Enter. A message will display notifying you that the manager configuration has been successfully updated.
 
-::d. Accept all other default settings. For information on configuring security, logging, kdump and remote storage, refer to the [[oVirt Node Deployment Guide]].
+::d. Accept all other default settings. For information on configuring security, logging, kdump and remote storage, refer to the [[Vdsm-Node_Integration#Non-interactive_.28.22automatic.22.29_oVirt_installation|oVirt Node deployment instructions]].
 ::e. Finally, select the Status tab. Select Restart and press Enter to reboot the host and apply all changes.
 
 You have now successfully installed the oVirt Node. Repeat this procedure if you wish to use more hypervisors. The following sections will provide instructions on how to [[#Approve_oVirt_Node_Host | approve the hypervisors]] for use with the oVirt Engine.
