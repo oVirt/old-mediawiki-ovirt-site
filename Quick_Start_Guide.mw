@@ -664,7 +664,7 @@ Figure 6: Create new linux virtual machine
 
 8. Click OK.
 
-{{Quote|'''Note:''' By clicking “Additional Options” you can configure other details such as memory and CPU resources. You can change these after creating a VM as well.}}}
+{{Quote|'''Note:''' By clicking “Additional Options” you can configure other details such as memory and CPU resources. You can change these after creating a VM as well.}}
 
 9. A New Virtual Machine - Guide Me window opens. This allows you to add storage disks to the virtual machine. 
 
