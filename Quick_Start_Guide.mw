@@ -390,7 +390,7 @@ By default, oVirt creates a cluster at installation. To access it, navigate to t
 
 [[File:cluster-view.png|center|frame|Figure 3. Clusters Tab]]
 
-For this document, the oVirt Node and Fedora hosts will be attached to the Default host cluster. If you wish to create new clusters, or live migrate virtual machines between hosts in a cluster, see the [[oVirt Evaluation Guide]].
+For this document, the oVirt Node and Fedora hosts will be attached to the Default host cluster. If you wish to create new clusters, or live migrate virtual machines between hosts in a cluster, see the [[OVirt_Administration_Guide|oVirt Administration Guide]].
 
 == Configure Networks ==
 
