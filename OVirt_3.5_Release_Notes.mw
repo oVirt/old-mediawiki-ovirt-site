@@ -1038,6 +1038,7 @@ fixed in first rc
 == oVirt ISO Uploader ==
 fixed in rc
 
+{{BZ|1136768}} - --insecure options still requires a valid CA cert<BR>
 {{BZ|1129382}} - iso uploader's rpm should provide required user on install if missing<BR>
 {{BZ|1110756}} - 'NoneType' object is not iterable error when certificate validation fails<BR>
 
