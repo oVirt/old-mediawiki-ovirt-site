@@ -1,15 +1,15 @@
 {{DISPLAYTITLE:oVirt 3.5 Release Notes}}
 
-The oVirt development team is pleased to announce oVirt 3.5.0 second release candidate availability as of Sep 11th 2014.
+The oVirt development team is preparing oVirt 3.5.0 third release candidate.
 oVirt is an open source alternative to VMware vSphere, and provides an excellent KVM management interface for multi-node virtualization.
 
 To find out more about features which were added in previous oVirt releases, check out the  [[oVirt 3.4.1 release notes]],  [[oVirt 3.3.5 release notes]], [[oVirt 3.2 release notes]] and [[oVirt 3.1 release notes]].
 For a general overview of oVirt, read [[oVirt 3.0 Feature Guide | the oVirt 3.0 feature guide]] and the [[about oVirt]] page.
 
-= oVirt 3.5.0 SECOND RELEASE CANDIDATE Release Notes =
+= oVirt 3.5.0 THIRD RELEASE CANDIDATE Release Notes =
 
-== SECOND RELEASE CANDIDATE ==
-The oVirt Project is working on oVirt 3.5.0 second release candidate. To install this release, you must enable the oVirt 3.5 pre-release repository.
+== THIRD RELEASE CANDIDATE ==
+The oVirt Project is working on oVirt 3.5.0 third release candidate. To install this release, you must enable the oVirt 3.5 pre-release repository.
 See the below section on Install / Upgrade for detailed instructions.
 
 == Known Issues ==
@@ -22,6 +22,7 @@ See the below section on Install / Upgrade for detailed instructions.
 * engine-cleanup could refuse to remove the engine due to a bad handling of not definitive version numbers. For a quick and dirty workaround simply set RPM_VERSION = '3.5.0_master' in /usr/share/ovirt-engine/setup/ovirt_engine_setup/config.py just for the cleanup. See https://bugzilla.redhat.com/1118360
 * For proper network configuration, NetworkManager and firewalld have to be turned off (https://bugzilla.redhat.com/show_bug.cgi?id=1138731 https://bugzilla.redhat.com/show_bug.cgi?id=1136843 )
 * If you're updating vdsm package you'll need to remove vdsm-api before updating in order to avoid conflicts with vdsm-jsonrpc {{BZ|1140694}}
+* Hosted Engine iSCSI support works fine on EL 6.5 but seems to have issues on Fedora and EL7 {{BZ|1142709}}
 
 ==Features==
 === Virt ===
@@ -137,8 +138,8 @@ More information can be found in the [[Features/oVirt_Windows_Guest_Tools|oVirt 
 
 = Install / Upgrade from previous versions=
 
-== SECOND RELEASE CANDIDATE ==
-The oVirt Project is working on oVirt 3.5.0 second release candidate. In order to install it you've to enable oVirt 3.5 pre release repository.
+== THIRD RELEASE CANDIDATE ==
+The oVirt Project is working on oVirt 3.5.0 third release candidate. In order to install it you've to enable oVirt 3.5 pre release repository.
 
 '''Please note that mirror may take a couple of days in order to be updated'''
 
@@ -182,6 +183,55 @@ An oVirt Live ISO is available:
 = <span class="mw-customtoggle-1" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Click to Show/Hide]</span></span>Bugs Fixed = 
 <div  id="mw-customcollapsible-1" class="mw-collapsible mw-collapsed">
 ==oVirt Engine==
+''' Fixed in ovirt-engine-3.5.0_rc3'''<BR>
+{{BZ|985437}} - [TEXT] Ugly error when POSIX domain creation fails using cifs<BR>
+{{BZ|1053746}} - Faulty storage allocation checks when importing a VM<BR>
+{{BZ|1053747}} - Faulty storage allocation checks when exporting a VM<BR>
+{{BZ|1099417}} - nodeset of numatune is not calculated correctly<BR>
+{{BZ|1099814}} - Missing node index when creating vm numa node<BR>
+{{BZ|1100202}} - Missing vm numa node runtime pinning information<BR>
+{{BZ|1101387}} - Run vm failed if the configured host numa nodes were removed<BR>
+{{BZ|1102729}} - [engine-backend] concurrent host related operations causes to sql exceptions<BR>
+{{BZ|1105211}} - Executing multiple "template.delete" commands in parallel to "vm.delete" commands, creates a race condition which cause the Blank template to be removed from Data Center<BR>
+{{BZ|1110444}} - bookmark selection does not work on first try<BR>
+{{BZ|1113000}} - foreman-integration: declare errors for foreman return values<BR>
+{{BZ|1117228}} - the selection of data center list of storage domains cannot be changed<BR>
+{{BZ|1118328}} - [engine-setup] Reports CSR should be saved also on filesystem<BR>
+{{BZ|1127606}} - [foreman integration] Get generic error when adding discovered host without picking Host Group\Compute Resource<BR>
+{{BZ|1128444}} - Edit running VM do not fail for invalid memory value.<BR>
+{{BZ|1129542}} - [SLA] [Text] ${detailsMessage} in case there are no available hosts with enough cores to run a VM<BR>
+{{BZ|1129898}} - Live Merge: Engine-side recovery flow for vm restart during merge<BR>
+{{BZ|1130915}} - 2 Entries for every VM in Templated - VMs Tab<BR>
+{{BZ|1130976}} - [ImportDomain]Importing a destroyed storage domain(data) between different setups can cause a NullPointer failure<BR>
+{{BZ|1132422}} - Bond slaves' MAC addresses are reported in upper cases<BR>
+{{BZ|1132568}} - unregistered VM should be the latest one related to the Storage Domain<BR>
+{{BZ|1134009}} - [Network label] RHEV does not allow adding label for a network being used by VMs<BR>
+{{BZ|1134880}} - NUMA UI<BR>
+{{BZ|1135965}} - The text and buttons not aligned in Create VM dialog<BR>
+{{BZ|1138114}} - [ImportDomain] Engine should register existing OVF_STORE disks instead of creating new ones<BR>
+{{BZ|1138200}} - [engine-backend] [importDomain] removal of a template that was imported from a data domain and had additional disks from previous DC is blocked on CDA<BR>
+{{BZ|1138419}} - VMs pool disappeared after creating a Sub Template version<BR>
+{{BZ|1139016}} - Move all maven repositories references into top level pom.xml<BR>
+{{BZ|1139634}} - Can't drag any pop-up windows in GUI<BR>
+{{BZ|1139675}} - [engine-webadmin] 'Configure local storage' window doesn't function<BR>
+{{BZ|1139678}} - placeholders of child commands aren't cleared when failing during the CDA phase<BR>
+{{BZ|1139699}} - [Admin Portal] New Cluster - Fencing Policy - ui alignment is odd<BR>
+{{BZ|1140207}} - Active VM's snapshot Removal is available from rest-api,the result is a useless VM which cannot be activated and db exceptions<BR>
+{{BZ|1140560}} - [engine-backend] [importDomain] Importing a template, which has disks from another domains, from an imported domain fails with PSQLException<BR>
+{{BZ|1140584}} - [engine-webadmin] Failure to import a template from an imported domain is reported wrongly in the events tab<BR>
+{{BZ|1141514}} - Power Management proxy selection keep selecting the same proxy first even is it constantly fails<BR>
+{{BZ|1141702}} - RemoveDiskSnapshotTaskHandler.buildRemoveSnapshotSingleDiskParameters doesn't set the Wipe After Delete property<BR>
+{{BZ|1141784}} - Can't create unattached data storage domain when no DC configured in the setup<BR>
+{{BZ|1141985}} - Live Merge: Regression in DestroyImage step<BR>
+{{BZ|1142132}} - WARN message logged versus DEBUG or INFO message with rhevm-shell provided bogus search<BR>
+{{BZ|1142198}} - Log does not report storage domain correctly<BR>
+{{BZ|1142706}} - Json protocol not being used inspite of selecting the check box during host installation as a part of Guide-me<BR>
+{{BZ|1142945}} - [ovirt] [vdsm-jsonrpm] vdsm-json RPC doesn't provide advice about cluster compatibility level<BR>
+{{BZ|1143854}} - Marshaling issue in fencing flow using jsonrpc<BR>
+{{BZ|1143860}} - Marshaling issue in fencing policy using jsonrpc<BR>
+{{BZ|1144807}} - Foreman discovery code fixes around field validation<BR>
+{{BZ|1145076}} - enable host time drift validation by default<BR>
+
 ''' Fixed in ovirt-engine-3.5.0_rc2'''<BR>
 {{BZ|878962}} - [admin-portal] [UX] unable to see direct lun disk after create and attach since default disk view is set to images<BR>
 {{BZ|947965}} - RHEVM Backend : VM can be removed while in other state than down, like migrating and powering off<BR>
