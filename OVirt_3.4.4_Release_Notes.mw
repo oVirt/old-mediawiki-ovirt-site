@@ -7,10 +7,8 @@ To find out more about features which were added in previous oVirt releases, che
 For a general overview of oVirt, read [[oVirt 3.0 Feature Guide | the oVirt 3.0 feature guide]] and the [[about oVirt]] page.
 
 = Install / Upgrade from previous versions=
-<big>'''Please wait for official announcement'''</big>
 
 ==Fedora / CentOS / RHEL==
-<big>'''Please wait for official announcement'''</big>
 
 In order to install it on a clean system, you need to install
  # yum localinstall http://resources.ovirt.org/pub/yum-repo/ovirt-release34.rpm
