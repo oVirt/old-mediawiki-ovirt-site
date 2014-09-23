@@ -65,7 +65,7 @@ When starting the vm the vnic will be directly connected to one of the availiabl
 * <b>unlinking</b>
 ** if the vnic is pasthrough the VF will be released (and free for use).
 
-===== setup networks =====
+===== sr-iov host nic management =====
 * sr-iov configuration
 **<b>max vf</b>
 *** max_vfs is a new property that will be added to sr-iov capable host nic. 
@@ -161,7 +161,9 @@ params = {
 * [https://bugzilla.redhat.com/848200 BZ 848200]: [RFE] MAC Programming for virtio over macvtap - RHEV support
 
 === Open issues ===
-* Edit boot protocol and custom properties of sr-iov network attached to a nic?
+* max_vfs
+** can it be changed without reboot?
+** can it be changed if there are vms attached to some of the vfs?
 * name- sr-iov passthrough? sr-iov label/s?
 * display vf/pf in vm=>vnic table.
 * should the passthrough property mandatory or just a nice to have? (if there is no suitable host with sr-iov enabled nic- should running/migrating the vm fail?)
