@@ -110,7 +110,7 @@ The user should choose a cluster for each entity which should be compatible for 
 The user can also watch the entity properties (such as disks, networks) in the sub tab inside the dialog.<BR/><BR/>
 
 
-=== Work flow for recovery of GlusterFS Storage Domain - UI flow ===
+=== Work flow for importing GlusterFS Storage Domain - UI flow ===
 {{#ev:youtube|4YKXHp8wxvI|300|right|}}
 On import a GlusterFS Storage Domain The user should do the following steps: <BR/>
 1. The user should press the "import Storage Domain" button.<BR/>
