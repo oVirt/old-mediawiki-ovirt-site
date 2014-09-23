@@ -1067,6 +1067,12 @@ fixed in alpha
 {{BZ|1098029}} - "rhsc-log-collector" takes too long even to prompt for the REST API password before it actually start collecting information from selected servers<BR>
 
 == oVirt Hosted Engine Setup ==
+Fixed in third rc
+
+{{BZ|1139020}} - Failed to execute stage 'Environment setup': [Errno 2] No such file or directory: '/etc/pki/vdsm/certs/cacert.pem'<BR>
+{{BZ|1142696}} - hosted-engine --deploy fails due to missing vdsm certificates<BR>
+
+
 Fixed in second rc
 
 {{BZ|1124207}} - [self-hosted-engine] Adjust engine management network settings when deployed over VLAN<BR>
