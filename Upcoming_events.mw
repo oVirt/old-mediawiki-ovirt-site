@@ -3,15 +3,13 @@
 <noinclude>
 <startfeed/>
 </noinclude>
-
+{{Event|name='''[[KVM_Forum_Workshop_Oct_2014 | oVirt Workshop]]'''|date=October 16, 2014|location=Düsseldorf, Germany|lead=The oVirt community is pleased to announce a one-day workshop co-located with KVM Forum. An agenda is pending, but we are looking forward to seeing folks at this free event!}}
 {{Event|name=[//events.linuxfoundation.org/events/linuxcon-europe LinuxCon/CloudOpen Europe]|date=October 13-15, 2014|location=Düsseldorf, Germany|lead=The only event in Europe covering all matters Linux - offering collaboration and education for everyone in the ecosystem from developers and maintainers to sys admins and architects to business executives and community members. }}
 
 {{Event|name=[//events.linuxfoundation.org/events/kvm-forum KVM Forum]|date=October 14-16, 2014|location=Düsseldorf, Germany|lead=Once again, it's time to bring together the community of developers and users that define the KVM ecosystem for our annual technical conference. We will discuss the current state of affairs and plan for the future of KVM, its surrounding infrastructure, and management tools. }}
 
 <noinclude>
 <endfeed/>
-
-{{Event|name='''oVirt Workshop'''|date=October 16, 2014|location=Düsseldorf, Germany|lead=The oVirt community is pleased to announce a one-day workshop colocated with KVM Forum. An agenda is pending, but we are looking forward to seeing folks at this free event!}}
 
 {{Event|name=[//www.openworldforum.paris/en/ Open World Forum]|date=October 30-November 1, 2014|location=Paris, France|lead=Open World Forum's "CODE" track will helps attendees better understand and leverage your own projects by exposing the key subjects that are transforming the open source ecosystem: Web, mobile phones and tablets, Big Data, cloud infrastructure, software quality, emerging languages and platforms.}}
 
