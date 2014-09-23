@@ -17,7 +17,7 @@ For Phase I of this project, we will apply the new look and feel to the followin
 * Email: gshereme@redhat.com
 
 === Current status ===
-* Merged. http://gerrit.ovirt.org/#/c/24594/
+* Merged. http://gerrit.ovirt.org/#/c/24594/  Several follow-up patches. Officially included in oVirt 3.5.
 * Last updated: {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]] <!--This is markup for the date on which the current page was last changed, do not change-->
 
 === Detailed Description ===
