@@ -42,6 +42,9 @@ A new oVirt Live ISO is available:
 
 =Known issues=
 
+= CVE Fixed =
+[https://access.redhat.com/security/cve/CVE-2014-3573 CVE-2014-3573] oVirt Engine: XML eXternal Entity (XXE) flaw in backend module
+
 =Bugs fixed=
 ==oVirt Engine==
 {{BZ|1064927}} - wrong boot order when trying to boot from CDROM while using cloud-init<BR>
