@@ -1,5 +1,3 @@
-=== oVirt Appliance ===
-
 {{Feature|name=oVirt Appliance |modules=node|version=3.5|status=In Progress}}
 
 === Summary ===
@@ -16,21 +14,41 @@ The latter might be currently blocked by the missing functionality in the build 
 * Email: fabiand@redhat.com
 * Tracker https://bugzilla.redhat.com/show_bug.cgi?id=1053435
 * Gitweb: http://gerrit.ovirt.org/gitweb?p=ovirt-appliance.git
-** Pre-release development playground: https://github.com/fabiand/ovirt-appliance/
+* Builds: http://jenkins.ovirt.org/job/ovirt-appliance_master_merged/lastStableBuild/
 
 === Current status ===
 
-Daily builds are available here: http://jenkins.ovirt.org/view/All/job/ovirt-appliance_master_merged/
+Builds are stable, build daily and based on latest oVirt 3.5 packages.
+
+Availability: http://jenkins.ovirt.org/view/All/job/ovirt-appliance_master_merged/
 
 === Details ===
 
 * The appliance will be created using the [https://fedorahosted.org/lorax/ livemedia-creator] - later probably using [http://imgfac.org/ image-factory].
 ** Reasoning behind this is, that these tools are maintained and support different platforms.
 * The platform will be either Fedora or CentOS.
+** Fedora for now.
 * Configuration
-** Engine installed and preconfigured
-** Desktop environment including a webbrowser
-** Sysprep'ed to be consumable as an appliance
+** Engine installed and partially preconfigured
+
+Current limitations:
+* It's not built using livemedia-creator, sysprep'ed and sparsify'ed because libvirt is not working nicely on jenkins
+
+=== Use / Test ===
+
+Prerequisites:
+
+* FQDN which can be resolved on your local network
+
+To use the appliance proceed as follows:
+
+# Download the ova image
+# Either use the ova in combination with hosted-engine or extract the ova image
+# When the image is booted
+## When the assistant comes up, set a root password
+## Login as root
+## Start the Engine configuration using: <code>engine-setup --offline --config-append=ovirt-engine-answers</code>
+## Answer the remaining questions, '''take care to use a FQDN which is resolvable on your network'''
 
 [[Category:Feature]]
 [[Category:Node]]
