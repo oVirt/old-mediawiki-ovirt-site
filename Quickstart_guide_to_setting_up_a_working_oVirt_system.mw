@@ -1,3 +1,4 @@
+<big>'''WARNING: THIS PAGE REFERS TO OBSOLETE AND UNSUPPORTED VERSIONS OF OVIRT. IGNORE THIS PAGE IF YOU'RE INSTALLING A CURRENT RELEASE'''</big>
 {| class="wikitable" width="60%"
 |-
 ! DRAFT
@@ -6,6 +7,7 @@
 |}
 
 == Install FC16 x86_64 ==
+<big>'''WARNING: THIS PAGE REFERS TO OBSOLETE AND UNSUPPORTED VERSIONS OF OVIRT. IGNORE THIS PAGE IF YOU'RE INSTALLING A CURRENT RELEASE'''</big>
 http://download.fedoraproject.org/pub/fedora/linux/releases/16/Live/x86_64/Fedora-16-x86_64-Live-Desktop.iso
 
 == Install oVirt-engine ==
