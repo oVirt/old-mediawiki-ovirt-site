@@ -146,7 +146,7 @@ params = {
 === Dependencies / Related Features ===
 * [http://www.ovirt.org/Features/hostdev_passthrough hostdev passthrough]
 *[http://www.ovirt.org/Features/UCS_Integration UCS integration]
-* [http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=1789382a72a537447d65ea4131d8bcc1ad85ce7b PCI: SRIOV control and status via sysfs]
+*[http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=1789382a72a537447d65ea4131d8bcc1ad85ce7b PCI: SRIOV control and status via sysfs]
 
 === Documentation / External references ===
 * [https://bugzilla.redhat.com/869804 BZ 869804]: [RFE] [HP RHEV FEAT]: SR-IOV enablement in RHEV
