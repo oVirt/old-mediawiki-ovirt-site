@@ -32,3 +32,52 @@ Once this is implemented the user will be able to specify the use of Kerberos au
 </pre>
 
 For this to work the Kerberos client has to be correctly configured (the <code>/etc/krb5.conf</code> file has to exist) and the credentials cache has to be already populated (using the <code>kinit</code> command, for example).
+
+==== Java SDK ====
+The Kerberos support in the Java SDK will be implemented in one step, as the <code>httpcomponents</code> library that we currently use already supports Kerberos authentication. However, to simplify things for users, we will also introduce a new <code>ApiBuilder</code> class to make construction of the API object easier:
+
+* Introduce the new <code>ApiBuilder</code> class: http://gerrit.ovirt.org/33503
+* Add the Kerberos support: http://gerrit.ovirt.org/33504
+
+Once these two changes are done, the user will use the SDK as follows:
+
+<pre>
+ Api api = new ApiBuilder()
+  .url("https://ovirt.example.com/ovirt-engine/api")
+  .kerberos(true)
+  .build();
+</pre>
+
+For this to work the Kerberos of the Java virtual machine has to be configured correctly. This means that the <code>/etc/krb5.conf</code> file has to exist. This isn't usually a problem, as it is required by almost any Kerberos client. But it also means that a JAAS configuration file has to be created to configure the Java virtual machine. The location of this JAAS configuration file isn't important, it just has to be readable by the Java virtual machine. The content should be like this:
+
+<pre>
+com.sun.security.jgss.login {
+  com.sun.security.auth.module.Krb5LoginModule required client=true useTicketCache=true;
+};
+
+com.sun.security.jgss.initiate {
+  com.sun.security.auth.module.Krb5LoginModule required client=true useTicketCache=true;
+};
+
+com.sun.security.jgss.accept {
+  com.sun.security.auth.module.Krb5LoginModule required client=true useTicketCache=true;
+};
+</pre>
+
+In addition the following system properties need to be present, either adding command line options to the <code>java</code> command or using the <code>System.setProperty(...)</code> method:
+
+<pre>
+-Djava.security.auth.login.config=/etc/jaas.conf
+-Djava.security.krb5.conf=/etc/krb5.conf
+-Djavax.security.auth.useSubjectCredsOnly=false
+</pre>
+
+The Java SDK will not populate the credentials cache, it has to be populated before calling it, using the <code>kinit</code> command, for example.
+
+==== CLI ====
+
+As the CLI uses the Python SDK for all its network communication the only change required is a new <code>--kerberos</code> option that will be translated into the new <code>kerberos=True</code> parameter of the constructor of the API object:
+
+* Add the <code>--kerberos</code> option: http://gerrit.ovirt.org/33417
+
+After this modification the user will be able to use Kerberos authentication adding the <code>--kerberos</code> option to the <code>ovirt-shell</code> command or adding the <code>kerberos = True</option> to the <code>.ovirtshellrc</code> file.
