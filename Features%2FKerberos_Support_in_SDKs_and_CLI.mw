@@ -1,0 +1,34 @@
+== Kerberos support in the SDKs and the CLI ==
+
+=== Summary ===
+This page describes the Kerberos support that will be added to the Python SDK, the Java SDK and the CLI in version 3.6.
+
+=== Owner ===
+* Name: [[User:Jhernand|Juan Hernández]]
+** Email:<jhernand@redhat.com>
+
+=== Current status ===
+Status: implementation
+
+=== Benefit to oVirt ===
+* Support isntallations where Kerberos has been selected as the authentication mechanism for the engine.
+
+=== Description ===
+
+==== Python SDK ====
+The Kerberos support for the Python SDK will be implemented in two steps:
+
+* Replace the standard HTTP library with pycurl: http://gerrit.ovirt.org/33064
+* Add the Kerberos support: http://gerrit.ovirt.org/33221
+
+Once this is implemented the user will be able to specify the use of Kerberos authentication with a new <code>kerberos</code> parameter in the constructor of the <code>API</code> object:
+
+<pre>
+ api = ovirtsdk.api.API(
+  url="https://ovirt.example.com/ovirt-engine/api",
+  kerberos=True,
+  ...
+ )
+</pre>
+
+For this to work the Kerberos client has to be correctly configured (the <code>/etc/krb5.conf</code> file has to exist) and the credentials cache has to be already populated (using the <code>kinit</code> command, for example).
