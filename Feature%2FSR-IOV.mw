@@ -108,7 +108,7 @@ When starting the vm the vnic will be directly connected to one of the availiabl
 **** the network configuration values will be applied on the VFs of the scheduled host before the migration takes place.
 
 ==== VDSM API ====
-<pre> create </pre>
+<pre> create(Map createInfo) </pre>
 <pre>
 params = {
      (Network VM device struct should be extended)
