@@ -108,6 +108,7 @@ When starting the vm the vnic will be directly connected to one of the availiabl
 **** the network configuration values will be applied on the VFs of the scheduled host before the migration takes place.
 
 ==== VDSM API ====
+===== create =====
 <pre> create(Map createInfo) </pre>
 <pre>
 params = {
@@ -123,6 +124,7 @@ params = {
 
 * the selection of VFs should be done on the vdsm side, before the  libvirt hook.
 
+===== migrate =====
 <pre> migrate(Map<String, String> migrationInfo, Map<String, Object>> vnics) </pre>
 
 <pre>
@@ -137,6 +139,7 @@ vnics = {
 * For each vNic the <b>src host</b> should pass to the <b>dst host</d> the <b>PF</b> to which's VF the vNic should be connected (as passed on the <b>migrate</b> verb from the engine).
 * All the parameters (vlan, mtu, qos, etc) are copied from the src nic to the dst nic, so there is no need to also pass the vlan that was applied on the VF during create vm.
 
+===== updateSriovNumVfs =====
 <pre>
 updateSriovNumVfs(Map<String, Integer> devices)
 </pre>
@@ -152,8 +155,7 @@ params = {
 ** The update is done by first removing all the existing VFs by changing the current value to 0 and than changing it to the desired value.
 ** Since changes in the 'sriov_numvfs' are not persistent across reboots the value should be stored in the vdsm's db and re-applied after each reboot.
 
-* migrate vm
-
+===== getVdsCaps =====
 * vdsCaps should report for each host-nic:
 ** sriov_totalvfs-  contains the maximum number of VFs the device could support.
 ** sriov_numvfs- contains the number of VFs currently enabled on this device.
