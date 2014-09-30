@@ -22,12 +22,6 @@ This should link to your home wiki page so we know who you are
 Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved
 * Email: <my@email>
 
-
-=== Current status ===
-* Target Release: ...
-* Status: ...
-* Last updated: {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]] <!--This is markup for the date on which the current page was last changed, do not change-->
-
 === Detailed Description ===
 <!-- Provide the details of the feature. What is it going to include. See the sub-sections below. This section may contain more sub-sections, depends on the oVirt projects relevant for this feature. -->
 Provide the details of the feature. What is it going to include. See the sub-sections below.
