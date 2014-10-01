@@ -1,13 +1,15 @@
 <!-- {{autolang|base=yes}} -->
 
 = Engine NIC health check =
+{{Feature|name=Engine NIC health check|modules=engine,network|status=To be Released|version=3.6.0}}
 
 == Summary ==
 Fencing can occur on healthy hosts, just as a result of failing NIC of engine or other problem while communicating with hosts. Fencing should occur after most of these potential problems are checked and unconfirmed. This feature aims at engine nics health.
 
 == Owner ==
-* Name: Martin Mucha
-* Email: mmucha@redhat.com
+* Name: [[User:mmucha|Martin Mucha]]
+* Email: <mmucha@redhat.com>
+* IRC: mmucha at #ovirt (irc.oftc.net)
 
 == Benefit to oVirt ==
 Described situation is rather hypotetical, but in case of failing NIC of engine, QoS will be improved, since unhurt hosts will not be (improperly) fenced.
