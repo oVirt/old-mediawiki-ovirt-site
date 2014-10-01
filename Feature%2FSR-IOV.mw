@@ -102,14 +102,14 @@ TBD (add vf's section to nic)
 <pre> create(Map createInfo) </pre>
 <pre>
 params = {
-     (Network VM device struct should be extended)
-             {
-               type: INTERFACE
-               ..
-              pf_name: string  <---  new property- the name of the physical function the vnic should be connected to one of its VFs.
-               vf_vlan: int <---  new property- the vlan id that should be applied on the VF the vnic will be connected to.
-            }
+ (Network VM device struct should be extended)
+ {
+  type: INTERFACE
+  ..
+  pf_name: string  <---  new property- the name of the physical function the vnic should be connected to one of its VFs.
+  vf_vlan: int <---  new property- the vlan id that should be applied on the VF the vnic will be connected to.
  }
+}
 </pre>
 
 * the selection of VFs should be done on the vdsm side, before the  libvirt hook.
@@ -124,7 +124,6 @@ IFLA_VF_SPOOFCHK,       /* Spoof Checking on/off switch */
 IFLA_VF_LINK_STATE,     /* link state enable/disable/auto switch */
 IFLA_VF_RATE,           /* Min and Max TX Bandwidth Allocation */
 </pre>
-
 
 ===== migrate =====
 <pre> migrate(Map<String, String> migrationInfo, Map<String, Object>> vnics) </pre>
