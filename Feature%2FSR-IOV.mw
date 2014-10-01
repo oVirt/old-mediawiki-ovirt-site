@@ -167,7 +167,26 @@ params = {
 *** free VF considered as VF that a vm can be connected directly to it (no ip, no device [tap, bridge, etc]).
 
 ==== User Experience ====
-* TBD
+* Setup networks
+** SR-IOV capable nics
+*** should have sr-iov enabled icon next to the other roles icons.
+TBD- image here
+*** edit dialog should be expended to contain VFs managenet tab.
+TBD- images here
+[[File:Sriovvirtual.png|600px]]
+
+Edit PF labels
+[[File:Sriovphisical.png|600px]]
+
+Edit num of VFs
+[[File:Sriovnumsetting.png|600px]]
+
+Edit VFs networks and labels
+[[File:Sriovcustom network.png|600px]]
+
+** SR-IOV capable nics which are slaves of a bond should have the same edit dialog as regular SR-IOV capable nics just without the PF tab.
+* Edit nic dialog (via setup network) should be extended to have sr-iov configuration.
+* 
 
 ==== REST API ====
 * TBD
