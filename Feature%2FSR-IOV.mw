@@ -145,10 +145,10 @@ updateSriovNumVfs(Map<String, Integer> devices)
 </pre>
 <pre>
 params = {
-               device_name {
-                            num_vfs: int <---  the number of VFs that should be enabled on the device
+ device_name {
+                  num_vfs: int <---  the number of VFs that should be enabled on the device
                }
-            }
+ }
 </pre>
 
 * this verb updates 'sriov_numvfs' file in sysfs (/sys/class/net/'device name'/device/sriov_numvfs) which contains the number of VFs that are enabled on this PF.
