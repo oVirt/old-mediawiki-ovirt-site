@@ -167,12 +167,11 @@ params = {
 *** free VF considered as VF that a vm can be connected directly to it (no ip, no device [tap, bridge, etc]).
 
 ==== User Experience ====
-* Setup networks
-** SR-IOV capable nics
-*** should have sr-iov enabled icon next to the other roles icons.
+===== Setup networks =====
+* SR-IOV capable nics
+** should have sr-iov enabled icon next to the other roles icons. </br>
 [[File:Sriovenabled.png|600px]]
-*** edit dialog should be expended to contain VFs managenet tab.
-TBD- images here
+** edit dialog should be expended to contain VFs managenet tab. </br>
 [[File:Sriovvirtual.png|600px]]
 
 Edit PF labels<br/>
@@ -184,9 +183,12 @@ Edit num of VFs<br/>
 Edit VFs networks and labels<br/>
 [[File:Sriovcustom network.png|600px]]
 
-** SR-IOV capable nics which are slaves of a bond should have the same edit dialog as regular SR-IOV capable nics just without the PF tab.
-* Edit nic dialog (via setup network) should be extended to have sr-iov configuration.
-*
+* SR-IOV capable nics which are slaves of a bond should have the same edit dialog as regular SR-IOV capable nics just without the PF tab.
+
+===== Add/Edit vNic profile =====
+* Passthrough property is added to the dialog.
+* If passthrough is true port mirroring should be disabled. <br/>
+[[File:Sr-iov_enabled.jpg|600px]]
 
 ==== REST API ====
 * TBD
