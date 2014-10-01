@@ -146,8 +146,8 @@ updateSriovNumVfs(Map<String, Integer> devices)
 <pre>
 params = {
  device_name {
-                  num_vfs: int <---  the number of VFs that should be enabled on the device
-               }
+     num_vfs: int <---  the number of VFs that should be enabled on the device
+    }
  }
 </pre>
 
