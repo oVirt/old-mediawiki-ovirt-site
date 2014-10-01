@@ -169,19 +169,19 @@ params = {
 ==== User Experience ====
 ===== Setup networks =====
 * SR-IOV capable nics
-should have sr-iov enabled icon next to the other roles icons <br/>
+** should have sr-iov enabled icon next to the other roles icons <br/>
 [[File:Sriovenabled.png|600px]]
 
-edit dialog should be expended to contain VFs managenet tab <br/>
+** edit dialog should be expended to contain VFs managenet tab <br/>
 [[File:Sriovvirtual.png|600px]]
 
-Edit PF labels<br/>
+** Edit PF labels<br/>
 [[File:Sriovphisical.png|600px]]
 
-Edit num of VFs<br/>
+** Edit num of VFs<br/>
 [[File:Sriovnumsetting.png|600px]]
 
-Edit VFs networks and labels<br/>
+** Edit VFs networks and labels<br/>
 [[File:Sriovcustom network.png|600px]]
 
 * SR-IOV capable nics which are slaves of a bond should have the same edit dialog as regular SR-IOV capable nics just without the PF tab.
