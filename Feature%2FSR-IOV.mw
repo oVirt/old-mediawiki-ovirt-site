@@ -129,7 +129,7 @@ IFLA_VF_RATE,           /* Min and Max TX Bandwidth Allocation */
 <pre> migrate(Map<String, String> migrationInfo, Map<String, Object>> vnics) </pre>
 
 <pre>
-vnics = list of-
+vnics = {
   alias {
     pf_name: string  <---  the name of the PF the vnic should be connected to one of its VFs on the dst host.
  }
