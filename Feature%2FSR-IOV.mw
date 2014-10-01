@@ -169,13 +169,13 @@ params = {
 ==== User Experience ====
 ===== Setup networks =====
 * SR-IOV capable nics
-should have sr-iov enabled icon next to the other roles icons. 
+should have sr-iov enabled icon next to the other roles icons <br/>
 [[File:Sriovenabled.png|600px]]
 
-edit dialog should be expended to contain VFs managenet tab. 
+edit dialog should be expended to contain VFs managenet tab <br/>
 [[File:Sriovvirtual.png|600px]]
 
-Edit PF labels</br>
+Edit PF labels<br/>
 [[File:Sriovphisical.png|600px]]
 
 Edit num of VFs<br/>
