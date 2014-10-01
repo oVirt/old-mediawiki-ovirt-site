@@ -178,7 +178,7 @@ params = {
 *  Create a common in infrastracture for SR-IOV and VM-FEX.
 
 === Limitations ===
-* Configuring the MTU is donw via- <pre>ip link set eth<X> vf <VFN>  [parameters] </pre>
+Configuring the MTU is donw via- <pre>ip link set eth<X> vf <VFN>  [parameters] </pre>
 The parameters that are supported by kernel:
 <pre>
 IFLA_VF_MAC,            /* Hardware queue specific attributes */
