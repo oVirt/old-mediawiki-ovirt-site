@@ -189,7 +189,7 @@ params = {
 ===== Add/Edit vNic profile =====
 * Passthrough property is added to the dialog.
 * If passthrough is true port mirroring and QoS should be disabled. <br/>
-[[File:Vm_interface_profile.jpg|600px]]
+[[File:Vm_interface_profile.jpg|500px]]
 
 ==== REST API ====
 * TBD
