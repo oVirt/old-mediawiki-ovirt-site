@@ -94,9 +94,6 @@ When starting the vm the vnic will be directly connected to one of the availiabl
 * scheduling the host- same as in run vm.
 * the engine will pass to vdsm the pf the vnic should be connected to one of its vfs.
 
-==== Affected Entities ====
-TBD (add vf's section to nic)
-
 ==== VDSM API ====
 ===== create =====
 <pre> create(Map createInfo) </pre>
@@ -179,7 +176,7 @@ params = {
 ===== Add/Edit vNic profile =====
 * Passthrough property is added to the dialog.
 * If passthrough is true port mirroring and QoS should be disabled. <br/>
-[[File:Sr-iov_enabled.jpg|600px]]
+[[File:Vm_interface_profile.jpg|600px]]
 
 ==== REST API ====
 * TBD
