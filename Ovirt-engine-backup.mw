@@ -49,7 +49,7 @@ DWH/Reports support added in ovirt 3.4.1.
 == Howto ==
 
 === Backup ===
-Backup is strait-forward. See '--help' (also copied below) for details.
+Backup is straightforward. See '--help' (also copied below) for details.
 
 === Restore ===
 Restore usually requires a bit more work, because it never creates the user and/or database for you. That's the main point to understand when trying to solve restore issues.
