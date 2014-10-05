@@ -191,8 +191,9 @@ params = {
 * api/vnicprofiles/[profile_id]
 ** Adding 'passthrough' property.
 
-===== SR-IOV nic management ===== 
-* api/hosts/[host_id]/nics
+=====SR-IOV host nic management ===== 
+* api/hosts/[host_id]/nics/manageVfs
+TBD
 
 === Benefit to oVirt ===
 * Configuration of vNics in 'passthrough' mode directly from the gui/rest.
