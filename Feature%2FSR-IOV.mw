@@ -205,13 +205,14 @@ api/hosts/[host_id]/nics/manageVfs
                ...
          </networks>
          <labels>
-              <label id="lbl_id">
-              ...
+               <label id="lbl_id">
+               ...
          </labels>
       </vfs_configuration>
     </host_nic>
 </host_nics>
 </pre>
+
 ===== Get Nic =====
 <pre>
 api/hosts/[host_id]/nics/[nic_id]
