@@ -220,9 +220,9 @@ api/hosts/[host_id]/nics/[nic_id]
 <pre>
 <host_nic id="nic_id">
  <vfs_configuration>
-         <num_of_vfs>num</num_of_vfs>
+         <num_vfs>num</num_vfs>
          <supported_vfs>num</supported_vfs>
-        
+         <free_vfs>num</free_vfs>
          <networks>
                <network id="net_id">
                ...
