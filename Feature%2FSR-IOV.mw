@@ -189,7 +189,7 @@ params = {
 ==== REST API ====
 ===== Vnic profile =====
 * api/vnicprofiles/[profile_id]
-** Adding 'passthrough' property.
+** Adding 'passthrough' boolean property.
 
 =====SR-IOV host nic management ===== 
 <pre>
