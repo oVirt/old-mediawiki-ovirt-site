@@ -187,7 +187,12 @@ params = {
 [[File:Vm_interface_profile.jpg|500px]]
 
 ==== REST API ====
-* TBD
+===== Vnic profile =====
+* api/vnicprofiles/[profile_id]
+** Adding 'passthrough' property.
+
+===== SR-IOV nic management ===== 
+* api/hosts/[host_id]/nics
 
 === Benefit to oVirt ===
 * Configuration of vNics in 'passthrough' mode directly from the gui/rest.
