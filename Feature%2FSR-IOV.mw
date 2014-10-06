@@ -207,6 +207,7 @@ api/hosts/[host_id]/nics/manageVfs
 <num_of_vfs>num</num_of_vfs>
 </pre>
 
+<br>
 The <b>networks</b> on the VF configuration of a host-nic are represented as a sub-collection of the vfsConfig resource:<br>
 <pre>
  /api/hosts/{host:id}/nics/{nic:id}/vfsConfig/networks
