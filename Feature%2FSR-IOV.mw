@@ -229,7 +229,6 @@ The network <b>labels</b> on the VF configuration of a host-nic are represented 
 <pre>
  /api/hosts/{host:id}/nics/{nic:id}/vfsConfig/labels
 </pre>
-<br>
 *Supported actions:
 **<b>GET</b> returns the label's list of the VFs configuration.
 **<b>POST</b> adds a new label (and all the network managed by it) to the VFs configuration.
@@ -237,10 +236,10 @@ The network <b>labels</b> on the VF configuration of a host-nic are represented 
 <pre>
  /api/hosts/{host:id}/nics/{nic:id}/vfsConfig/labels/{label:id}
 </pre>
-<br>
 *Supported actions:
 **<b>GET</b> returns a specific label fn the vfs configuration.
 **<b>DELETE</v> removes a label (and all the networks managed by it) from the VFs configuration.
+<br>
 
 === Benefit to oVirt ===
 * Configuration of vNics in 'passthrough' mode directly from the gui/rest.
