@@ -203,10 +203,10 @@ api/hosts/[host_id]/nics/manageVfs
 *Supported actions:
 **<b>GET</b> return the VFs configuration of the nic (num of VFs, allowed networks and labels).
 **<b>PUT</b> updating the <b>num of vfs</b> enabled on the nic
-     <pre>
-     <num_of_vfs>num</num_of_vfs>
-     </pre>
-<br>
+<pre>
+<num_of_vfs>num</num_of_vfs>
+</pre>
+
 The <b>networks</b> on the VF configuration of a host-nic are represented as a sub-collection of the vfsConfig resource:<br>
 <pre>
  /api/hosts/{host:id}/nics/{nic:id}/vfsConfig/networks
