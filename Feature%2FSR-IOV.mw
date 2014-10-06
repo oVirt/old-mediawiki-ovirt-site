@@ -158,13 +158,14 @@ updateSriovNumVfs(String nicName, int numOfVf)
 ===== Setup networks =====
 <b>Option 1</b>
 * SR-IOV capable nics
-** should have sr-iov enabled icon [[File:Nic_sr_iov.png]]
-** edit nic dialog should be expended to contain VFs managenet tab <br/> [[File:Sriovvirtual.png|600px]]
-** Edit PF labels <br/> [[File:Sriovphisical.png|600px]]
-** Edit num of VFs <br/> [[File:Sriovnumsetting.png|600px]]
-** Edit VFs networks and labels <br/> [[File:Sriovcustom network.png|600px]]
-* SR-IOV capable nics which are slaves of a bond should have the same edit dialog as regular SR-IOV capable nics just without the PF tab.
-* Nic which don't support sr-iov shouldn't have tab at all (should look the same as they look now, before the feature).
+** Should have sr-iov enabled icon [[File:Nic_sr_iov.png]]
+** Edit nic dialog should be expended to contain VFs managenet tab and PF tab
+*** Edit PF labels <br/> [[File:Sriovphisical.png|600px]]
+*** VFs managenet tab <br/> [[File:Sriovvirtual.png|600px]]
+*** Edit num of VFs <br/> [[File:Sriovnumsetting.png|600px]]
+*** Edit VFs networks and labels <br/> [[File:Sriovcustom network.png|600px]]
+** SR-IOV capable nics which are slaves of a bond should have the same edit dialog as regular SR-IOV capable nics just without the PF tab.
+** Nic which don't support sr-iov shouldn't have tab at all (should look the same as they look now, before the feature).
 
 <b>Option 2</b>
 * Adding new 'sr-iov configuration' tab to setup network dialog.
