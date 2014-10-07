@@ -18,8 +18,6 @@ The requirement is to add a URL field per such provider for setting that URL and
 
 [[File:ExternalProviderDialog.png]]
 
-* Last updated date: OCT 7, 2014
-
 === Detailed Description ===
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
 In order to support multiple OpenStack external providers that use different Keystone URLs we should:
