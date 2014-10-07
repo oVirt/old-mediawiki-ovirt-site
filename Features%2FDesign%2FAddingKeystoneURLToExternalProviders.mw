@@ -1,0 +1,51 @@
+== Adding Keystone URL to OpenStack External Providers ==
+
+=== Summary ===
+<!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
+Enable to add keystone URL for OpenStack external provicers that requires authentication.
+
+=== Owner ===
+<!--This should link to your home wiki page so we know who you are-->
+* Name: [[User:MyUser| Eli Mesika]]
+<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
+* Email: emesika@redhat.com
+
+
+=== Current status ===
+<!--* Link to feature page in a specific release. That release may complete the feature, or parts of it. The complete scope of this feature in this release will be described in the release feature page -->
+Currently,  all OpenStack external providers like Neutron and Glance are using the same Keystone authentication URL stored in the KeystoneAuthUrl configuration value.
+The requirement is to add a URL field per such provider for setting that URL and enable diffrent OpenStack providers using diffrent Keystone authentication URLs
+
+* Last updated date: OCT 7, 2014
+
+=== Detailed Description ===
+<!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
+In order to support multiple OpenStack external providers that use different Keystone URLs we should:
+
+  Add a auth_url field to the providers table
+  Add a new Authentication URL field to the New/Edit External Provider dialog under the Requires Authentication checkbox, this field will be 
+     visible only for OpenStack providers.
+  Change code to take provider's Keystone URL from the auth_url column in he providers table rather than from the configuration 
+     KeystoneAuthUrl value
+  Provide upgrade script that populates auth_url for OpenStack external providers that have auth_required set to true from  the configuration
+     KeystoneAuthUrl value
+  Remove configuration KeystoneAuthUrl key from  vdc_options 
+  Remove KeystoneAuthUrl from engine-config
+
+=== Benefit to oVirt ===
+<!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
+Support multiple OpenStack external providers that use different Keystone URLs for authentication.
+
+=== Dependencies / Related Features ===
+<!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another 
+=== Documentation / External references ===
+<!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
+
+=== Comments and Discussion ===
+
+This below adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page
+
+* Refer to [[Talk:AddingKeystoneURLToExternalProviders]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
+
+[[Category:Feature]]
+[[Category:Template]]
