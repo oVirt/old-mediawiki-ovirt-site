@@ -56,8 +56,6 @@ Experienced users can also compile from source, using the guides for the [[OVirt
 <ul>
 * [http://resources.ovirt.org/pub/ovirt-3.4/ ovirt-3.4] '''Recommended'''
 * [http://resources.ovirt.org/pub/ovirt-3.3/ ovirt-3.3]
-* [http://resources.ovirt.org/pub/ovirt-3.4-rc ovirt-3.4 RC]
-* [http://resources.ovirt.org/pub/ovirt-3.4-snapshot ovirt-3.4 Nightly]
 * [http://resources.ovirt.org/pub/ovirt-master-snapshot ovirt-3.5 Nightly]
 </ul>
 
