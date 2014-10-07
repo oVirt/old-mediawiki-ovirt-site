@@ -23,6 +23,7 @@ Other entities will be moved after that
 
 ==== Implementing DAOs ====
 The DAO class  will be implemented the following way:
+ <nowiki>
 <code>
 @Entity
 @Table(name = "bookmarks")
@@ -37,6 +38,7 @@ public class Bookmark extends IVdcQueryable implements Serializable {
     @Column(name = "bookmark_name")
     private String name;
 </code>
+</nowiki>
 The Dao facades will need to be implemented in the following way:
 public class BookmarkDAODbFacadeImpl extends HibernateFacade<Bookmark, Guid> implements BookmarkDAO {
     @Override
