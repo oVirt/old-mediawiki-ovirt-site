@@ -2,7 +2,7 @@
 
 === Summary ===
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
-Enable to add keystone URL for OpenStack external provicers that requires authentication.
+Enable to add keystone URL for OpenStack external providers that require authentication.
 
 === Owner ===
 <!--This should link to your home wiki page so we know who you are-->
