@@ -183,6 +183,10 @@ An oVirt Live ISO is available:
 = <span class="mw-customtoggle-1" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Click to Show/Hide]</span></span>Bugs Fixed = 
 <div  id="mw-customcollapsible-1" class="mw-collapsible mw-collapsed">
 ==oVirt Engine==
+''' Fixed in ovirt-engine-3.5.0_rc5'''<BR>
+{{BZ|1075102}} - Duplicated CD device when creating VMs from the blank template<BR>
+{{BZ|1149637}} - Cannot start VM with attached ISO<BR>
+
 ''' Fixed in ovirt-engine-3.5.0_rc4'''<BR>
 {{BZ|1081533}} - SPICE ActiveX download fails if user performs upgrade from 3.3.0 to 3.3.1<BR>
 {{BZ|1088294}} - [RFE] VM list of export domain should be populated in alphabetical order<BR>
