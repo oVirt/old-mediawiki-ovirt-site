@@ -1155,10 +1155,11 @@ Fixed in alpha
 {{BZ|1079956}} - missing dependency<BR>
 
 == oVirt Hosted Engine HA ==
-Fixed in GA
+Fixed in 5th rc
 
 {{BZ|1130173}} - can't start hosted engine VM in cluster with 3+ hosts<BR>
 {{BZ|1140824}} - ovirt-ha-agent goes into D state when the RHEV-M VM is hosting the ISO domain and goes offline<BR>
+{{BZ|1150906}} - getting the storage path using vdsm fails on iscsi<BR>
 
 Fixed in 4th rc
 
