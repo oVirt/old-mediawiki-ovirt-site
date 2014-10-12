@@ -9,9 +9,11 @@ Red Hat Enterprise Linux 6 users must install a newer pep8 version than the one 
  <nowiki>yum install http://danken.fedorapeople.org/python-pep8-1.4.5-2.el6.noarch.rpm</nowiki>
 
 oVirt repo:
- <nowiki>yum install http://resources.ovirt.org/releases/ovirt-release/ovirt-release33.rpm</nowiki>
+  <nowiki>yum install http://resources.ovirt.org/releases/ovirt-release/ovirt-release35.rpm</nowiki>
+
+If you need a 3.4 or 3.3 installation use the corresponding repo instead:
+ <nowiki>yum install http://resources.ovirt.org/releases/ovirt-release/ovirt-release33.rpm</nowiki> 
  <nowiki>yum install http://resources.ovirt.org/releases/ovirt-release/ovirt-release34.rpm</nowiki>
- <nowiki>yum install http://resources.ovirt.org/releases/ovirt-release/ovirt-release35.rpm</nowiki>
 
 EL 6 and EL 7 users must add the glusterfs repository, providing newer glusterfs packages not available on Red Hat Enterprise Linux 6.  Optionally, install 'wget' if not already installed.
  rpm -q wget 2> /dev/null || yum install wget
