@@ -218,6 +218,25 @@ UI plugin infrastructure maintains a common lifecycle to control execution of in
 
 <code>*</code> Plugin invocation context starts when user logs into WebAdmin and ends when user logs out. Processing [[#Application_event_reference|event handler functions]] as well as [[#API_function_reference|plugin API]] calls is constrained by this context, i.e. plugins are in effect only while user stays authenticated in WebAdmin UI.
 
+== Plugin development tips ==
+=== Avoid mixed content issues ===
+If WebAdmin HTML page is served over HTTPS, WebAdmin and UI plugins should retrieve all content from remote servers through HTTPS in order not to compromise security of the whole application. When HTML page served over HTTPS includes content retrieved through cleartext HTTP, it's called mixed content page.
+
+There are generally two types of [https://developer.mozilla.org/en-US/docs/Security/MixedContent mixed content]:
+* mixed active content - content through which an attacker could gain access to all or parts of web page: <code>script</code> element, <code>iframe</code> element, <code>XMLHttpRequest</code> object, etc.
+* mixed passive content - content that cannot access or alter web page: <code>img</code> element, etc.
+
+Modern browsers typically block mixed active content and allow mixed passive content by default.
+
+When requesting content from remote servers, UI plugins should ensure that requests are made through HTTPS in case WebAdmin HTML page is served over HTTPS. In other words, UI plugins shouldn't compromise security of the whole application.
+
+For example, to load remote script using protocol of enclosing web page: <code><script type='text/javascript' src='//url.to/script.js'></code>
+
+=== Don't close shared REST API session ===
+Upon successful login, WebAdmin acquires oVirt Engine REST API session for use by all UI plugins. Refer to [[#REST_API_integration|REST API integration]] for details.
+
+To prevent closing the REST API session after processing given request, UI plugins should always include <code>Prefer: persistent-auth</code> header in all requests to REST API service.
+
 == Terms used in API reference ==
 === JavaScript interface object ===
 : Object implementing a contract (interface) by declaring corresponding functions. Unlike the traditional concept of interface abstract type in object-oriented languages, an interface object doesn't necessarily have to declare all functions of the given interface in order to "implement" such interface. In fact, an empty object can be used as a valid interface object. Missing functions will be treated as empty (no-op) functions with default return values, as defined by the contract of such functions. An interface object can "implement" multiple interfaces simply by declaring functions of those interfaces.
