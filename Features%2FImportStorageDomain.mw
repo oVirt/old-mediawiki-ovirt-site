@@ -178,6 +178,13 @@ An import screen for Fibre Channel Storage Domain :<BR/>
 An import screen for iSCSI Storage Domain :<BR/>
 <BR/>
 [[File:Iscsi.jpeg|600px]]
+<BR/><BR/>
+Import VM/Template sub-tabs <BR/>
+<BR/>
+[[File:import_vm_template_subtab.png]]<BR/>
+Import VM/Template Dialog<BR/>
+<BR/>
+[[File:import_vm_template_dialog.png]]
 
 == Permissions ==
 * No additional permissions will be added.
