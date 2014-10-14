@@ -113,8 +113,6 @@ Method: DELETE<BR>
 /api/datacenters/{datacenter_id}/iscsibonds/{iscsibond_id}/storageconnections/{storage_id}/<BR>
 HTTP/1.1<BR>
 
-Once a new iSCSI bond is configured, The Hosts in the Data Center connects to the iSCSI storage using the networks configured in the bond.
-
 === Comments and Discussion ===
 
 * Refer to [[Talk: iSCSIMultiPath ]] 
