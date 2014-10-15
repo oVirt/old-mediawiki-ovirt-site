@@ -1,7 +1,7 @@
 {{autolang|base=yes}}
 
 <!-- The actual name of your feature page should look something like: Features/YourFeatureName.  This keeps all features in the same namespace -->
-= Picketlink Integration =
+= Uniform SSO Support =
 
 == Summary ==
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
@@ -21,6 +21,8 @@ There were several key points in the motivation for this project:
 Currently, the engine uses LDAP domains, and internal admin domain in order to authenticate (when using the API, Webadmin, UP).
 When using jasperserver, a whole different infrastructure is used in order to authenticate, as it contains its own set of users.
 Nowadays, integration of the Webadmin and the reports server is under-way, thus introducing the need to be able to authenticate to Webadmin, and automatically be able to view reports, without the need to re-authenticate.
+
+== Picketlink Integration ==
 
 === Basic annotations ===
 * SAML - Stands for Security Assertion Markup Language is an XML-based open standard for exchanging authentication and authorization data between security domains, that is, between an identity provider (a producer of assertions) and a service provider (a consumer of assertions). A service provider relies on an identity provider to identify a principal. At the principal's request, the identity provider passes a SAML assertion to the service provider. On the basis of this assertion, the service provider makes an access control decision.
