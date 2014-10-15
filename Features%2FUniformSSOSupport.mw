@@ -32,7 +32,7 @@ Nowadays, integration of the Webadmin and the reports server is under-way, thus 
 
 [[File:Picketlink1.png]]
 
-== Solution Architecture ==
+=== Solution Architecture ===
 In our solution we have the following players:
 * IDP - web application, part of the engine EAR, which is responsible for authenticating and providing information on the logged-in principal, using SAML.
 * The engine login module - used to perform the authentication process using the existing engine infrastructure. The IDP uses this login module.
@@ -61,13 +61,14 @@ Now, the user would like to view a report:
 Picketlink supports "Global logout", i.e. logging out through the IDP, which basically means the user is no longer logged in, and access to any web application will result in requesting the user to login.
 
 For example, if the SP link is http://host.domain/sp then the global logout link is at http://host.domain/sp?GLO=true. This will go the the IDP, and call the logout method of the login module, clearing the session at the engine core side.
+
 == Current status ==
 * Target Release: 
 * Status: Design Stage
 * Last updated date: Wed November 10 2011
 
 
-== Technical details ==
+=== Technical details ===
 General configuration files:
 *standalone.xml - define the IDP and SP security domains, by adding them to the "security-domains" section:
  <nowiki>
@@ -198,11 +199,11 @@ Some notes:
 * In the files above you see the definition of an attribute manager. On the SP side, it converts IDP returned attributes and stores them under the user's HttpSession. On the IDP side it converts the given HttpSession attributes into SAML Response Attributes.
 * This attribute manager is defined twice, as each level can override it, and for some reason if defined only on the handler level (in picketlink-handlers.xml file) it doesn't work properly, so a global definition in picketlink-idfed.xml is needed.
 
-== Dependencies / Related Features and Projects ==
+=== Dependencies / Related Features and Projects ===
 
 Affected oVirt projects:
 
-== Documentation / External references ==
+=== Documentation / External references ===
 #Picketlink homepage - http://www.jboss.org/picketlink
 #PicketLink Federation - http://www.jboss.org/picketlink/Fed.html
 #User Guide (PDF) - http://community.jboss.org/servlet/JiveServlet/download/14645-5-7349/UserGuide.pdf
