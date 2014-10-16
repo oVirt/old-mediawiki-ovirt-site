@@ -95,14 +95,14 @@ IDP configuration files (all located in the IDP WAR WEB-INF directory):
  </nowiki>
 *picketlink-handlers.xml
  <nowiki>
- <Handlers xmlns="urn:picketlink:identity-federation:handler:config:2.1">
-     <Handler class="org.picketlink.identity.federation.web.handlers.saml2.SAML2IssuerTrustHandler" />
-     <Handler class="org.picketlink.identity.federation.web.handlers.saml2.SAML2LogOutHandler" />
-      <Handler class="org.ovirt.engine.core.idp.EngineAttributeHandler" >
-              <Option Key="ATTRIBUTE_ KEYS" Value="picketlink.roles"/>
-     </Handler>
-     <Handler class="org.picketlink.identity.federation.web.handlers.saml2.SAML2AuthenticationHandler" />
-     <Handler class="org.picketlink.identity.federation.web.handlers.saml2.RolesGenerationHandler" />
+<Handlers xmlns="urn:picketlink:identity-federation:handler:config:2.1">
+    <Handler class="org.picketlink.identity.federation.web.handlers.saml2.SAML2IssuerTrustHandler" />
+    <Handler class="org.picketlink.identity.federation.web.handlers.saml2.SAML2LogOutHandler" />
+    <Handler class="org.ovirt.engine.core.idp.EngineAttributeHandler" >
+          <Option Key="ATTRIBUTE_ KEYS" Value="picketlink.roles"/>
+    </Handler>
+    <Handler class="org.picketlink.identity.federation.web.handlers.saml2.SAML2AuthenticationHandler" />
+    <Handler class="org.picketlink.identity.federation.web.handlers.saml2.RolesGenerationHandler" />
 </Handlers>
  </nowiki>
 *picketlink-idfed.xml
