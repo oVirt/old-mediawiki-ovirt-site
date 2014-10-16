@@ -63,4 +63,5 @@ For Windows VMs the drivers must be installed. The VirtIO drivers are available 
 ''(4) Install spice-vdagent, available in standard repositories''
 
 ''(5) Available for RHEL/CentOS 5, 6 and 7 in [https://fedoraproject.org/wiki/EPEL EPEL]''
+
 ''(6) Bundled with desktop, no installation required''
