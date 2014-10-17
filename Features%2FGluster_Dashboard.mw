@@ -23,6 +23,8 @@ Following screen shot will give an idea about how the dashboard will look like.
 
 == Dashboard Items ==
 ===Capacity===
+  It will show the Total, Used and Available storage capacity in the system. Its calculated by aggregating data from all the clusters.
+
 ===Performance===
 ===Alerts and Events===
 ===Cluster===
