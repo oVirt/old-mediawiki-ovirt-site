@@ -240,6 +240,11 @@ Once oVirt is installed and running, you can proceed to install any number of su
 |
 |Yes
 |-
+|Red Hat Enterprise Linux 7	 
+|32-bit, 64-bit	 
+|
+|Yes
+|-
 |SUSE Linux Enterprise Server 10 (select Other Linux for the guest type in the user interface)	
 |32-bit, 64-bit	 
 |
