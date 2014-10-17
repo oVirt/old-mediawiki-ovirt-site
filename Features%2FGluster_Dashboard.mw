@@ -29,6 +29,8 @@ It will show the Total, Used and Available storage capacity in the system. Its c
 This will show the average usage percentage of CPU, Memory, Bandwidth. This will averaged across all the hosts in system.
 
 ===Alerts and Events===
+This will show the number of alerts and events in the system. It will have the link to navigate to Events tab.
+
 ===Cluster===
 ===Host===
 ===Volumes===
