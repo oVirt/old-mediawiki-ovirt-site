@@ -3,17 +3,18 @@
 <noinclude>
 <startfeed/>
 </noinclude>
-{{Event|name='''[[KVM_Forum_Workshop_Oct_2014 | oVirt Workshop]]'''|date=October 16, 2014|location=Düsseldorf, Germany|lead=The oVirt community is pleased to announce a one-day workshop co-located with KVM Forum. An agenda is pending, but we are looking forward to seeing folks at this free event!}}
-{{Event|name=[//events.linuxfoundation.org/events/linuxcon-europe LinuxCon/CloudOpen Europe]|date=October 13-15, 2014|location=Düsseldorf, Germany|lead=The only event in Europe covering all matters Linux - offering collaboration and education for everyone in the ecosystem from developers and maintainers to sys admins and architects to business executives and community members. }}
+{{Event|name=[//www.openworldforum.paris/en/ Open World Forum]|date=October 30-November 1, 2014|location=Paris, France|lead=Open World Forum's "CODE" track will helps attendees better understand and leverage your own projects by exposing the key subjects that are transforming the open source ecosystem: Web, mobile phones and tablets, Big Data, cloud infrastructure, software quality, emerging languages and platforms.}}
 
-{{Event|name=[//events.linuxfoundation.org/events/kvm-forum KVM Forum]|date=October 14-16, 2014|location=Düsseldorf, Germany|lead=Once again, it's time to bring together the community of developers and users that define the KVM ecosystem for our annual technical conference. We will discuss the current state of affairs and plan for the future of KVM, its surrounding infrastructure, and management tools. }}
+{{Event|name=[//www.openstack.org/summit/openstack-paris-summit-2014/ OpenStack Summit]|date=November 3-7, 2014|location=Paris, France|lead=The OpenStack Summit is a five-day conference for developers, users, and administrators of OpenStack Cloud Software.}}
+
+{{Event|name=[//www.usenix.org/conference/lisa14 LISA 14]|date=November 9-14, 2014|location=Seattle, Washington|lead=The LISA conference has long served as the annual vendor-neutral meeting place for the wider system administration community.}}
 
 <noinclude>
 <endfeed/>
 
-{{Event|name=[//www.openworldforum.paris/en/ Open World Forum]|date=October 30-November 1, 2014|location=Paris, France|lead=Open World Forum's "CODE" track will helps attendees better understand and leverage your own projects by exposing the key subjects that are transforming the open source ecosystem: Web, mobile phones and tablets, Big Data, cloud infrastructure, software quality, emerging languages and platforms.}}
+{{Event|name=[//fosdem.org/2015/ FOSDEM'15]|date=January 31-February 1, 2015|location=Brussels, Belgium|lead=FOSDEM is a free event that offers open source communities a place to meet, share ideas and collaborate.}}
 
-{{Event|name=[//www.openstack.org/summit/openstack-paris-summit-2014/ OpenStack Summit]|date=November 3-7, 2014|location=Paris, France|lead=The OpenStack Summit is a five-day conference for developers, users, and administrators of OpenStack Cloud Software.}}
+{{Event|name=[//www.socallinuxexpo.org/scale13x SCALE 13X]|date=February 19-22, 2015|location=Los Angeles, California|lead=As the first-of-the-year Linux and Free/Open Source Software (FOSS) expo in North America, SCALE 13x expects to host more than 100 exhibitors this year, along with nearly 130 sessions, tutorials, and special events.}}
 
 [[Category:Events]]
 </noinclude>
