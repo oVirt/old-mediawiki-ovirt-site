@@ -31,6 +31,7 @@ To try and improve 3.6 planning over the wiki approach in 3.3,  this google doc 
 * Add support for Ubuntu hosts
 
 == Tracker Bug ==
+* {{BZ|1155425}} - Tracker: oVirt 3.6 release
 
 == Release Criteria ==
 To be discussed after oVirt 3.5.0 release according to [[Release process]]
