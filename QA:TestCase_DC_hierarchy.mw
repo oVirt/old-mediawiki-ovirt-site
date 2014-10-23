@@ -1,0 +1,18 @@
+== Description ==
+Fully operational flow (define DC hierarchy so you can run vm) with GUI/CLI/Python-API/REST-API 
+
+== Setup ==
+
+==How to test==
+For each of the following methods: GUI/CLI/Python-API/REST-API 
+# Spin up latest release
+# Upgrade to RC
+# Define DC hierarchy so you can run vm
+
+==Expected Results==
+GUI/CLI/Python-API/REST-API must allow you to define a fully operational DC hierarchy.
+
+==Optional==
+
+
+[[Category:TestCase]]
