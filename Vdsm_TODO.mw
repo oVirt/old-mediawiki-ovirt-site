@@ -44,8 +44,6 @@
 
 * let Vdsm install and run on hosts with no iscsid (report that iscsi is missing to Engine?)
 
-* use <interface type='network'>. In the future, this would allow us to migrate a VM from a bridge-based network to funkier types of networks defined in http://libvirt.org/formatnetwork.html http://gerrit.ovirt.org/#/c/9441/
-
 * <strike>work in conjunction with Network Manager.</strike> works in F20.
 
 * report current bond master
