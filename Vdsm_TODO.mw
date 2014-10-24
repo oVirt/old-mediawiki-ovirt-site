@@ -29,8 +29,6 @@
 
 * test getVdsStats in network functional tests.
 
-* Test dhcp source routing
-
 * test that a dhcp-configured address is changes upon server request
 
 * make @permutations nestable
