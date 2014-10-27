@@ -19,7 +19,7 @@ To read more about Gluster volume snapshot feature, see https://forge.gluster.or
 == Current Status ==
 
 * Status: Inception
-* Last updated date: Thu Dec 26 2013
+* Last updated date: Mon Oct 27 2014
 
 == Detailed Description ==
 An on-line snapshot is a feature where the file-system and associated data continue to be available for the clients, while the snapshot is being taken. Here the onus lies on the application to periodically sync data, so that the snapshot created has the desired data consistent view.
