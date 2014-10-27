@@ -16,7 +16,7 @@ This feature allows the administrators to create, list, delete, start, stop and 
 == Current Status ==
 
 * Status: Inception
-* Last updated date: Thu Dec 26 2013
+* Last updated date: Mon Oct 24 2014
 
 == Design ==
 The snapshot feature is being designed to enable administrators to create and maintain individual volumes snapshots. It also provides mechanism to restore a volume to a point in time snapshot in a crash situation.
