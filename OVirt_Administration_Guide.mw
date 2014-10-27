@@ -2299,7 +2299,7 @@ When power management has been configured for a host, you can access a number of
 <ol>
 <li>Use the '''Hosts''' resource tab, tree mode, or the search function to find and select the host in the results list.</li>
 <li>Click the '''Power Management''' drop-down menu.</li>
-<li>Select one of the following options:</p>
+<li>Select one of the following options:</li>
 <ul>
 <li>'''Restart''': This option stops the host and waits until the host's status changes to <code>Down</code>. When the agent has verified that the host is down, the highly available virtual machines are restarted on another host in the cluster. The agent then restarts this host. When the host is ready for use its status displays as <code>Up</code>.</li>
 <li>'''Start''': This option starts the host and lets it join a cluster. When it is ready for use its status displays as <code>Up</code>.</li>
