@@ -37,6 +37,8 @@
 
 * pass test name as a hidden arg (sequence ID, maybe) to be loggeed in vdsm.log
 
+* add migration tests
+
 == Features ==
 * Support striping for disk images.
 
