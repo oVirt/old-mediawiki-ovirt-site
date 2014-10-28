@@ -67,23 +67,8 @@ This entity stores the details of a configuration parameter for volume related t
 |}
 
 === Entities changes ===
-* Change to store snapshot enabled flag for a volume
-** Add a field SnapshotEnabled of char type in gluster_volumes table to store a flag if snapshot is enabled for the said volume
-<big>gluster_volumes</big>
-{| class="wikitable" border="1"
-|-
-! Column
-! Type
-! Change
-! Description
-|-
-| SnapshotEnabled
-| char
-| Addition
-| stores the flag if the volume is enabled for snapshots
-|}
 
-Note: Related stored procedure changes would be done for the table gluster_volumes to store the values for additional field.
+None
 
 === Sync Jobs ===
 The Gluster volume snapshot details would be periodically fetched and updated into engine using the GlusterSyncJob's lightweight sync mechanism.
