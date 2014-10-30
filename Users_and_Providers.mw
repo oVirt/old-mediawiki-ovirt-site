@@ -3,6 +3,20 @@ Our community is growing every day, as individual users and organizations alike 
 
 This page highlights the users, solution providers, supporters, and downstream commercial products of oVirt.
 
+== Companies with Products Based on oVirt ==
+
+[[File:Red hat logo.jpg|alt=Red Hat, Inc.|150px|link=http://www.redhat.com/en]]
+
+[//www.redhat.com/en Red Hat] is the corporate member of the oVirt community responsible for opening oVirt's codebase. Besides providing support for oVirt's community, Red Hat uses oVirt as the codebase for its [//www.redhat.com/en/technologies/virtualization/enterprise-virtualization Red Hat Enterprise Virtualization] product.
+
+[[File:LogoUDSNav.png‎|alt=UDS Enterprise|150px|link=https://www.udsenterprise.com]]
+
+[//www.udsenterprise.com UDS Enterprise] is a VDI multiplatform connection broker based on open source for Windows and Linux virtual desktops. It is compatible, among others, with VMware vSphere, Citrix XenServer, Microsoft Hyper-V, Red Hat RHEV, and oVirt.
+
+[[File:Windriver logo.png|alt=Wind River|150px|link=http://www.windriver.com/]]
+
+[//www.windriver.com/ Wind River] offers a comprehensive device development portfolio, including its [//www.windriver.com/products/open-virtualization-profile/ Open Virtualization] product, a real-time virtualization solution using KVM and oVirt technology.
+
 == Organizations Using oVirt ==
 
 The oVirt Project is made great by the users who advocate and help in the development of [[Download | oVirt]], by using oVirt in a variety of production environments every day. When we find them, we are pleased to list them here.
@@ -66,7 +80,7 @@ Keele University has a small and dedicated IT staff handling all of the IT deman
 [//www.slu.cz/slu/en Silesian University in Opava], Opava, Czech Republic<br>
 The Silesian University in Opava, a member of European University Association, belongs among the top five universities created after 1989.  Immediately after its inception, the university began to provide students comprehensive education in the fields of humanities and economics.
 
-== Providers Implementing oVirt Commercial Offerings, Solutions, and Services ==
+== Providers of oVirt Solutions and Services ==
 
 Companies and public institutions all over the world have found oVirt a great solution to manage internal and customer-facing servers. These organizations are using oVirt in production, as well as actively participating in the oVirt community.
 
@@ -90,10 +104,6 @@ The founders of [//www.netbulae.eu/ Netbulae] have experience in ICT, automation
 
 [//r01.ru/ Registrar R01] - registrar of domain names, belongs to a group of companies Hosting Community. The company became the first accredited registrar in the national domain RU and today offers a wide range of professional services, being one of the leaders in the number of registered domains .RU, .SU and .RF.
 
-[[File:LogoUDSNav.png‎|alt=UDS Enterprise|150px|link=https://www.udsenterprise.com]]
-
-[//www.udsenterprise.com UDS Enterprise] is a VDI multiplatform connection broker based on open source for Windows and Linux virtual desktops. It is compatible, among others, with VMware vSphere, Citrix XenServer, Microsoft Hyper-V, Red Hat RHEV, and oVirt.
-
 === North America ===
 
 [[File:Cornerstonelogo.png|alt=Cornerstone Technical Solutions|150px|link=http://cornerstonets.net/home/managed-services.html]]
@@ -103,14 +113,6 @@ The founders of [//www.netbulae.eu/ Netbulae] have experience in ICT, automation
 [[File:Tllogo.jpg|alt=Internet Complete!, Inc.|150px|link=http://icnet.net/]]
 
 [//icnet.net/ Internet Complete] is dedicated to providing Oklahoma customers with the leading technologies (including oVirt-managed hosting) they need for fast, reliable Internet solutions.
-
-[[File:Red hat logo.jpg|alt=Red Hat, Inc.|150px|link=http://www.redhat.com/en]]
-
-[//www.redhat.com/en Red Hat] is the corporate member of the oVirt community responsible for opening oVirt's codebase. Besides providing support for oVirt's community, Red Hat uses oVirt as the codebase for its [//www.redhat.com/en/technologies/virtualization/enterprise-virtualization Red Hat Enterprise Virtualization] product.
-
-[[File:Windriver logo.png|alt=Wind River|150px|link=http://www.windriver.com/]]
-
-[//www.windriver.com/ Wind River] offers a comprehensive device development portfolio, including its [//www.windriver.com/products/open-virtualization-profile/ Open Virtualization] product, a real-time virtualization solution using KVM and oVirt technology.
 
 == Members of the oVirt Board ==
 
