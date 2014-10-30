@@ -88,7 +88,7 @@ Note: migration is supported only when exposing a virtualized (or VirtIO) vNic t
 ** in case all networks allowed is true this list is ignored.
 * configuring SR-IOV related data on nics that are slaves of a bond is permitted.
 
-=====run vm ====
+==== run vm ====
 *<b>scheduling host</b>
 ** if the VM has a passthrough vNic, the physical nics to which the vNic's network is attached to are being checked.
 *** if there are no available VFs on none of the nics, the host is filtered out from the scheduling.
