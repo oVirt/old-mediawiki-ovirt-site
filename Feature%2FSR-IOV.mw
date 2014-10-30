@@ -102,7 +102,7 @@ Note: migration is supported only when exposing a virtualized (or VirtIO) vNic t
 ** the network configuration that should be applied on the VF (vlan, mtu).
 
 ===== migration =====
-* supported only if there is no vNic of pci passthrough type.
+* supported only if there is no vNic of pci-passthrough type.
 * scheduling the host- same as in run vm.
 * the engine will pass to vdsm the PF the vNic should be connected to one of its VFs.
 
