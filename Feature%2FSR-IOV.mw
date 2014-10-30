@@ -1,17 +1,17 @@
 <!-- {{autolang|base=yes}} -->
 
-== SR-IOV ==
+= SR-IOV =
 {{Feature|name=SR_IOV|modules=engine,vdsm, api|version=3.6|status=Design}}
 
-=== Summary ===
+== Summary ==
 This feature adds SR-IOV support to oVirt management system (which is currently available via a vdsm-hook [http://www.ovirt.org/VDSM-Hooks/sriov] only). <br>
 You may also refer to [http://wiki.ovirt.org/Feature/DetailedSRIOV SR-IOV Detailed Design]
 
-=== Owner ===
+== Owner ==
 * Name: [[User:alkaplan| Alona Kaplan]]
 * Email: <alkaplan@redhat.com>
 
-=== Introduction ===
+== Introduction ==
 SR-IOV enables a Single Root Function (for example, a single Ethernet port), to appear as multiple, separate, physical devices.
 SR-IOV uses two PCI functions:
 * Physical Functions (PFs)-  Full PCIe device that includes the SR-IOV capabilities. 
@@ -20,7 +20,7 @@ VM's nic (vNic) can be connected directly to a VF (1-1) instead of to virtual ne
 [[File:Sr-iov.png|600px]]
 <BR>
 
-==== High Level Feature Description ====
+=== High Level Feature Description ===
 In order to connect a vNic directly to a VF of SR-IOV enabled nic the vNic's profile should be marked as a "passthrough" one.
 The properties that should be configured on the VF are taken from the vNic's profile/network (vlan tag, mtu, custom properties).
 Each SR-IOV enabled host-nic should have a definition of a set of networks that it is allowed to service.
@@ -31,19 +31,19 @@ But not all PFs are equivalent: the vNic is to be connected via a host-nic that 
 Note: migration is supported only when exposing a virtualized (or VirtIO) vNic to the guest, and not when exposing the PCI device to it.
 </b>
 
-==== Affected Flows ====
-===== add/edit profile =====
+=== Affected Flows ===
+==== add/edit profile ====
 * <b>passthrough</b>
 **  new property that will be added to the profile. 
 ** passthrough property cannot be changed on edit profile if the profile is attached to a vNic.
 ** port-mirroring is not enabled on passthrough profile.
 ** QoS is not enabled on passthrough profile.
 
-===== add/update network on cluster =====
+==== add/update network on cluster ====
 * management, display and migration properties are not relevant for the VFs configuration (e.g if a migration network is attached to nic1 via the PF configuration and also exists in the VFs configuration of nic2- the migration will take place on nic1 and NOT on the VF on nic2). 
 * Same for the required property. It doesn't relevant for the VFs configuration and related just to the regular network attachments.
 
-===== add/edit vNic =====
+==== add/edit vNic ====
 *<b> if the selected vNic profile is marked as passthrough</b>
 ** it means that the vNic will bypass the software network virtualization and will be connected  directly to the VF.
 ** vNic type 
@@ -53,19 +53,19 @@ Note: migration is supported only when exposing a virtualized (or VirtIO) vNic t
 **** migration is not supported.
 ** the vNic profile/network represents set of properties that will be applied on the VF.
 
-===== hot plug nic =====
+==== hot plug nic ====
 * <b>plugging</b>
 ** hot plug of passthough vNic is possible if there is an available VF on one of the PFs that the vNic's network has in its sr-iov configuration. 
 * <b>unplugging</b>
 ** if the vNic is passthrough the VF will be released (and free for use).
 
-===== vNic linking =====
+==== vNic linking ====
 * <b>linking</b>
 ** linking of passthough vNic is possible if there is available VF on the one of the PFs the vNic's network is in its sr-iov configuration. 
 * <b>unlinking</b>
 ** if the vNic is passthrough the VF will be released (and free for use).
  
-===== sr-iov host nic management =====
+==== sr-iov host nic management ====
 * new command that will be responsible for updating the SR-IOV related data on the nic.
 *<b>num of VFs</b>
 ** num of VFs is a new property that will be added to sr-iov capable host nic. 
@@ -88,7 +88,7 @@ Note: migration is supported only when exposing a virtualized (or VirtIO) vNic t
 ** in case all networks allowed is true this list is ignored.
 * configuring SR-IOV related data on nics that are slaves of a bond is permitted.
 
-=====run vm =====
+=====run vm ====
 *<b>scheduling host</b>
 ** if the VM has a passthrough vNic, the physical nics to which the vNic's network is attached to are being checked.
 *** if there are no available VFs on none of the nics, the host is filtered out from the scheduling.
@@ -97,13 +97,13 @@ Note: migration is supported only when exposing a virtualized (or VirtIO) vNic t
 ** the PF the vNic should be connected to one of its VFs.
 ** the network configuration that should be applied on the VF (vlan, mtu).
 
-===== migration =====
+==== migration ====
 * supported only if there is no vNic of pci-passthrough type.
 * scheduling the host- same as in run vm.
 * the engine will pass to vdsm the PF the vNic should be connected to one of its VFs.
 
-==== VDSM API ====
-===== create =====
+=== VDSM API ===
+==== create ====
 <pre> create(Map createInfo) </pre>
 <pre>
 params = {
@@ -121,7 +121,7 @@ params = {
 * the selection of VFs should be done on the vdsm side, before calling the libvirt module.
 * vf_vlan and vf_mtu  should be applied on the VF before starting the vm.
 
-===== migrate =====
+==== migrate ====
 <pre> migrate(Map<String, String> migrationInfo, Map<String, Object>> vnics) </pre>
 
 <pre>
@@ -135,7 +135,7 @@ vnics = {
 * For each vnic the <b>src host</b> should pass to the <b>dst host</b> the <b>PF</b> to which's VF the vnic should be connected (as passed on the <b>migrate</b> verb from the engine).
 * All the parameters (vlan, mtu, etc...) are copied from the src nic to the dst nic, so there is no need to also pass the vlan and the mtu that were applied on the VF during create vm.
 
-===== updateSriovNumVfs =====
+==== updateSriovNumVfs ====
 <pre>
 updateSriovNumVfs(String nicName, int numOfVf)
 </pre>
@@ -147,7 +147,7 @@ updateSriovNumVfs(String nicName, int numOfVf)
 ** one or more of the VFs on the nic are not free.
 ** the desired value is bigger than sriov_totalvfs.
 
-===== getVdsCaps =====
+==== getVdsCaps ====
 * vdsCaps should report for each host-nic that supports sr-iov:
 ** sriov_totalvfs - contains the maximum number of VFs the device could support.
 ** sriov_numvfs- contains the number of VFs currently enabled on this device.
@@ -155,8 +155,8 @@ updateSriovNumVfs(String nicName, int numOfVf)
 * today free VFs are reported by the vdsm on getVdsCaps. It should be avoided. Just PFs should be reported.
 ** free VF considered as VF that a vm can be connected directly to it (no ip, no device [tap, bridge, etc]).
 
-==== User Experience ====
-===== Setup networks =====
+=== User Experience ===
+==== Setup networks ====
 <b>Option 1</b>
 * SR-IOV capable nics
 ** Should have sr-iov enabled icon [[File:Nic_sr_iov.png]]
@@ -179,22 +179,22 @@ updateSriovNumVfs(String nicName, int numOfVf)
 ** Hosts with no SR-IOV enabled nic will have the regular display and won't have tabs.
 ** TBD: mock for option 2
 
-===== Add/Edit vNic profile =====
+==== Add/Edit vNic profile ====
 * Passthrough property is added to the dialog.
 * If passthrough is true, port mirroring and QoS should be disabled. <br/>
 [[File:Vm_interface_profile.jpg|500px]]
 
-===== Add/Edit vNic =====
+==== Add/Edit vNic ====
 * In case the selected profile is passthrough and the selected vNic type is pci-passthrough a waring message which indicates migration is not supported should be displayed.
 
-==== REST API ====
-===== Vnic profile =====
+=== REST API ===
+==== Vnic profile ====
 <pre>
 api/vnicprofiles/[profile_id]
 </pre>
 Adding 'passthrough' boolean property.
 
-=====SR-IOV host nic management ===== 
+==== SR-IOV host nic management ====
 The <b>VFs configuration</b> on a SR-IOV enabled nic is represented as a sub resource of a nic.<br>
 <pre>
 /api/hosts/[host_id]/nics/{nic:id}/vfsConfig
@@ -220,17 +220,17 @@ The <b>VFs configuration</b> on a SR-IOV enabled nic is represented as a sub res
 * passing empty networks/labels list (i.e </networks> or </labels>) will remove all the networks/labels from the VFs config.
 * doesn't passing the networks/labels list at all will remain the network/labels in the VFs config unchanged.
 
-=== Benefit to oVirt ===
+== Benefit to oVirt ==
 * Configuration of vNics in 'passthrough' mode directly from the gui/rest.
 * Configuring max-vfs on a sr-iov enabled host nic via setup networks.
 * migration of vms using sr-iov.
 
-=== Limitations ===
+== Limitations ==
 In order for migration to be supported the passthrough vNic should be of VirtIo type.
 That means the vNic is not connected in a PCI passthrough mode directly to the VF, but connected to a macVTap device which is connected to the VF. <br>
 TBD- adding a performance comparison between VF+macvtap vs VF+passthrough vs PF+bridge+tap.
 
-=== Future features ===
+== Future features ==
 * "Nice to have passthrough"
 ** Add a property to passthrough vNic (a vNic with passthrough profile) that indicates whether connecting the vNic  directly to VF is mandatory or the vNic can be connected to a regular network bridge in case there are no available VFs on any host. 
 * Displaying on passthrough vNic the VF to which it is connected, and the corresponding PF.
@@ -238,7 +238,7 @@ TBD- adding a performance comparison between VF+macvtap vs VF+passthrough vs PF+
 * Applying on VF the QoS configured on profile/network.
 * Support port mirroring on passthrough vNics.
 
-=== Dependencies / Related Features ===
+== Dependencies / Related Features ==
 * [http://www.ovirt.org/Features/hostdev_passthrough hostdev passthrough]
 *[http://www.ovirt.org/Features/UCS_Integration UCS integration]
 *[http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=1789382a72a537447d65ea4131d8bcc1ad85ce7b PCI: SRIOV control and status via sysfs]
@@ -246,13 +246,13 @@ TBD- adding a performance comparison between VF+macvtap vs VF+passthrough vs PF+
 ** [http://paste.fedoraproject.org/138021/41214685 rhel6]
 ** [http://paste.fedoraproject.org/138020/21468381 rhel7]
 
-=== Documentation / External references ===
+== Documentation / External references ==
 * [https://bugzilla.redhat.com/869804 BZ 869804]: [RFE] [HP RHEV FEAT]: SR-IOV enablement in RHEV
 * [https://bugzilla.redhat.com/984601 BZ 984601]: [RFE] [HP RHEV 3.4 FEAT]:Containment of error when an SR-IOV device encounters an error and VFs from the device are assigned to one or more guests (RHEV-M component)
 * [https://bugzilla.redhat.com/848202 BZ 848202]: [RFE] Virtio over macvtap with SRIOV - RHEV Support
 * [https://bugzilla.redhat.com/848200 BZ 848200]: [RFE] MAC Programming for virtio over macvtap - RHEV support
 
-=== Open issues ===
+== Open issues ==
 * sriov_numvfs
 ** how should the sriov_numvfs update be sent to the vdsm?
 *** on of the setupNetworks verb (by adding a nics dictionary to the setup networks parameters).
@@ -260,7 +260,7 @@ TBD- adding a performance comparison between VF+macvtap vs VF+passthrough vs PF+
 * Is applying MTU on VF supported by libvirt?
 * Setup networks gui- which option to choose 1 (editing sr-iov config of a nic on edit nic dialog) or 2 (tabed setup networks dialog)?
 
-=== Notes ===
+== Notes ==
 * setting properties on VF- <br> ip link set {DEVICE} vf {NUM} [ mac LLADDR ] [ vlan VLANID [ qos VLAN-QOS ] ] [ rate TXRATE ] [ spoofchk { on | off } ] [ state { auto | enable | disable} ]
 * Update num of VFs
 ** /sys/class/net/'device name'/device/sriov_totalvfs
