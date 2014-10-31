@@ -34,6 +34,7 @@ With this feature the user will be able to
 
 === User Experience ===
 The following section goes through the user flows associated with the feature.
+
 ==== Geo-Replication Sessions ====
 A new sub tab '''Geo-Replication''' will be added to the '''Volumes''' main tab in oVirt webadmin UI which will list all the geo-replication sessions for the selected volume.
 Geo-Replication Sessions subtab  also provides actions for 
@@ -88,6 +89,8 @@ Once the user, clicks on create -
 * Passwordless ssh session will be setup between the nodes of the destination volume and the slave volume.  The system will randomly pick one of the hosts of the source volume to generate the ssh key.
 * Geo-replication session will be created
 * If force option was checked in the UI,  the session create command is invoked with a force override.
+
+[[File:New.png]]
 
 ==== Start a new Geo-Replication Session ====
 A new action named '''Start''' will be shown in the '''Geo-Replication''' tab, which will  start the selected geo-replication session(s).
