@@ -78,7 +78,7 @@ The below dialog captures the details and creates the geo-replication session be
 *User can choose to provide a volume outside of this list. In this case "force" checkbox will be provided at the top of the dialog. This presents a list of unfiltered clusters and volumes.
 ** Once a user selects a cluster and a volume, a warning text of unmet criteria is displayed to the user.
 ** For instance, if a user selects a cluster with a different compatibility version and a destination volume with lesser capacity, then the text will read:
- <pre>Warning: The criteria for destination volume not met
+ <pre>Warning!  Recommendations for geo-replication not met
 1) Cluster is not compatible
 2) Volume has lesser capacity
 Do you wish to continue?
