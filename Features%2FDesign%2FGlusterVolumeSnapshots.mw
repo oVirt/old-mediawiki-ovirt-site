@@ -97,7 +97,7 @@ The Gluster volume snapshot details would be periodically fetched and updated in
 *** snapName
 *** [description]
 ** Output
-*** Success/Failure
+*** UUID of the created snapshot
 
 ==== VDSM verbs for restoring snaps ====
 * <big>glusterVolumeSnapshotRestore</big> - restores the given volume to the given snapshot
