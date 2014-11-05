@@ -75,7 +75,7 @@ this google doc http://goo.gl/4SuYdE has been created.
 * '''SHOULD''': (scheduling API first) VM affinity
 * '''SHOULD''': (scheduling API first) VM not getting minimum guaranteed memory
 
-== Alpha Release Criteria  (WIP) ==
+== Alpha Release Criteria  ==
 === General ===
 * All sources must be available on ovirt.org
 
