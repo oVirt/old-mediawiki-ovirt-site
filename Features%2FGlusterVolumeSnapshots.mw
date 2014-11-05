@@ -120,6 +120,9 @@ If a snapshot is already activated, the same can be de-activated by this action.
 
 [[File:DeactivateSnapshot.png]]
 
+==== Dashboard changes ====
+Dashboard would provide a consolidated view of the snapshots for a volume (activated and de-activated). There would be alerts available in case of soft limit breach for the no of snapshots and reaching the limit of maximum possible snapshots for a volume.
+
 === Limitations ===
 NA
 
