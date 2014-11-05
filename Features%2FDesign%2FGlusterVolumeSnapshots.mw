@@ -71,7 +71,7 @@ This entity stores the details of a configuration parameter for volume related t
 None
 
 === Sync Jobs ===
-The Gluster volume snapshot details would be periodically fetched and updated into engine using the GlusterSyncJob's lightweight sync mechanism.
+The Gluster volume snapshot details would be periodically fetched (frequency 5 minutes) and updated into engine using the GlusterSyncJob's heavy weight sync mechanism.
 
 === BLL commands ===
 * <big>AddGlusterVolumeSnapshot</big> - creates a volume snapshot
