@@ -37,9 +37,10 @@ In order to support multiple OpenStack external providers that use different Key
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
 Support multiple OpenStack external providers that use different Keystone URLs for authentication.
 
-=== Dependencies / Related Features ===
-<!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another 
 === Documentation / External references ===
+
+[https://bugzilla.redhat.com/show_bug.cgi?id=1157999 RFE]
+
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
 
 === Comments and Discussion ===
