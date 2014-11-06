@@ -258,6 +258,6 @@ Use REST API for:
 * Should we allow DHCPv6 and stateless autoconfiguration at same time?
 
 ==== Discussion ==== 
-On the arch@ovirt.org mailing list. 
+On the devel@ovirt.org mailing list. 
 
 [[Category:Feature]]
