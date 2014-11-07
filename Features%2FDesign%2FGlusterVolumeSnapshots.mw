@@ -45,11 +45,8 @@ This entity stores the snapshots created for gluster volumes. Different volumes 
 |}
 
 * GlusterVolumeSnapshotStatus
-** UNKNOWN
-** INIT
-** IN_USE
-** RESTORED
-** DECOMMISSIONED
+** STARTED
+** NOT_STARTED
 
 ==== GlusterVolumeSnapshotConfig ====
 This entity stores the details of a configuration parameter for volume related to snapshot feature. Volume specific values for the parameters would be maintained as part of this entity.
