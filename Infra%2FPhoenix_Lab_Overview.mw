@@ -1,0 +1,3 @@
+The Poenix Lab infrastructure is composed by (as of today) 10 nodes separated in two roles. The [[infra/Phoenix_Lab_storage|storage]] servers (2 hosts) and the [[infra/Phoenix_Lab_hosts|oVirt host]] servers (8 hosts).
+
+The access to the servers is restricted to the foreman and jenkins hosts. So you need to access them first and tunnel through to be able to access any of the machines.
