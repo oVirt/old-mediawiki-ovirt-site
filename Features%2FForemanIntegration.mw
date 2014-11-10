@@ -19,10 +19,7 @@ Since oVirt 3.5 and enhanced regarding RFEs (Feel welcome to open more)
 Tested with Satellite Version 6.0.4 (Setup details described in [http://www.ovirt.org/index.php?title=Features/ForemanIntegration&action=submit#Make_Foreman_Appliance])
 
 === Detailed Description ===
-
-==== Use Cases ====
-In order to use Foreman you need to add a Foreman provider:
-==== Adding Foreman provider ====
+Adding Foreman provider:
 * In the tree on the left, press the "External Providers" tree item, and then you'll see the Providers main tab on the right:
 [[File:Providers-tree.png]]
 * Press "Add", fill in the details:
@@ -32,9 +29,7 @@ In order to use Foreman you need to add a Foreman provider:
 * If the provider is secured (https), the certificates will be read from it, and you'll have an option to add them as trusted certificates.
 
 Using the Foreman provider:
-
 ==== Adding installed Foreman hosts as oVirt hosts ====
-
 When adding a new host to oVirt, the administrator has to know in advance different details about the host, such as the FQDN, root password, power management options and etc.
 In this feature we will add a checkbox saying whether to show "external" hosts in the host dialog (external hosts are Foreman hosts, but in the future we might support other providers as well), and if so the hosts will be loaded from Foreman, and displayed in the external hosts list box. Once a user selects a host, it will automatically set the address as the FQDN we got from Foreman (non-changeable), and also set the name of the host to the FQDN (as a suggestion, changeable).
 
@@ -56,7 +51,6 @@ Screenshot 4 - All the details that the host provider set, are updated automatic
 
 
 ''' Implementation Notes '''
-
 
 '''API Design'''
 No changes in the API. The external provider's hosts will be shown only in the UI.
