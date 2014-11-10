@@ -99,6 +99,7 @@ Home directory and all files are owned by root, to avoid modifications, readable
 
 systemd/sysvinit script for daemon.
 
+<pre>
  [Unit]
  Description=OpenSSH server for VM console proxy daemon
  After=syslog.target network.target auditd.service sshd.service
@@ -113,6 +114,7 @@ systemd/sysvinit script for daemon.
 
  [Install]
  WantedBy=multi-user.target
+</pre>
 
 ==== ssh configuration ====
 
