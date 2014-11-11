@@ -1,7 +1,7 @@
 ==How to use JavaScript profilers to debug Admin or User Portal performance issues==
 
 ===Audience===
-This post is intended for frontend developers working on oVirt. You should be familiar with GWT and building ovirt-engine. See [Developing GWT] for help with building ovirt-engine.
+This post is intended for frontend developers working on oVirt. You should be familiar with GWT and building ovirt-engine. See [[OVirt_Engine_Development_Environment]] for help with building ovirt-engine.
 
 ===Background===
 Chrome and Firefox have built-in JavaScript profilers that can help us easily debug browser performance issues. This post will walk you through using them to find the source of a "non-responsive script" dialog. We'll use a real example we encountered in oVirt.
