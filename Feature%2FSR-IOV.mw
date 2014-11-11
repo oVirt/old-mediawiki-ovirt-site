@@ -130,6 +130,15 @@ params = {
 ** the VF will be detached from the host and attached to the vm.
 ** the vnic's mac address should be applied on the VF before starting the vm.
 
+==== hot plug nic ====
+<pre>hotPlugNic(Map info)</pre>
+<pre>
+nic = {
+    ..
+    pf_name: string  <---  the name of the PF the vnic should be connected to one of its VFs on the dst host.
+}
+</pre>
+
 ==== migrate ====
 <pre> migrate(Map<String, String> migrationInfo, Map<String, Object>> vnics) </pre>
 
