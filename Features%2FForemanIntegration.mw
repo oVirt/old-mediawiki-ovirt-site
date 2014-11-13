@@ -107,10 +107,11 @@ The following system flow will occur:
 
 ==== Future Plans: VM provisioning  ====
 Two alternative:
-a. Add the VM through oVirt, and then add it to Foreman as bare-metal (add the oVirt compute resource) - only PXE installation, passing the MAC address to foreman
-b. Add the VM through foreman (using compute resource)
+* Add the VM through oVirt, and then add it to Foreman as bare-metal (add the oVirt compute resource) - only PXE installation, passing the MAC address to foreman
+* Add the VM through foreman (Using compute resource)
 (https://bugzilla.redhat.com/show_bug.cgi?id=1084001)
-I'd go with option "a", as it leaves the VM creation similar to what we have today. However, we don't really leverage oVirt templates with that approach.
+
+I'd go with the former option, as it leaves the VM creation similar to what we have today. However, we don't really leverage oVirt templates with that approach.
 
 === Setup Testing Environment ===
 To allow testing the feature in "allinone" configuration, which means running foreman on a VM and simulate new bare-metal hosts with new VMs, you should configure the following on your hypervisor:
