@@ -39,6 +39,8 @@
 
 * add migration tests
 
+* test cannonizeHostPort
+
 == Features ==
 * Support striping for disk images.
 
