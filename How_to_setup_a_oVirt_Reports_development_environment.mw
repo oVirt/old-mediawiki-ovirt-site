@@ -1,4 +1,5 @@
 * Clone the git repository 'ovirt-reports' project from the ovirt gerrit.
+ git clone http://gerrit.ovirt.org/p/ovirt-reports
 * Download and install the latest edition of JasperReports Server CE Edition. 
  The CE is available on this link: https://community.jaspersoft.com/project/jasperreports-server/releases
 It is preferred you use JBoss as your applications server and Postgres as your JasperReports Server configuration database. This can be done using the war installation. Please make sure to setup import and export scripts using the install guide provided by Jasper and install Jaspersoft Studio. Another option is installing via the JasperReports Server installer. Details on this are also provided by the installation guide.
