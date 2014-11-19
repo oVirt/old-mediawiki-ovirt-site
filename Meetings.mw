@@ -20,19 +20,19 @@ This is the usual agenda for the weekly sync meetings:
 === Meeting Time and Place ===
 
 * oVirt Weekly Sync
-** Wednesdays @ 16:00 CET
+** Wednesdays @ 16:00 CET - always at 10:00am US Eastern.
 ** To see in your timezone '''date -d 'WEDNESDAY 1600 CET' '''
 ** On IRC: #ovirt on irc.oftc.net
 * oVirt Node
 ** Tuesday @ 13:00 UTC  (may change during DST changes) - always at 9:00am US Eastern.
-** To see in your timezone '''date -d 'TUESDAY 0900 EDT' '''
+** To see in your timezone '''date -d 'TUESDAY 0900 EST' '''
 ** On IRC: #ovirt on irc.oftc.net
 * oVirt Infrastructure (Infra)
 ** Monday @ 14:00 UTC  (may change during DST changes) - always at 10:00am US Eastern.
-** To see in your timezone '''date -d 'Monday 1000 EDT' '''
+** To see in your timezone '''date -d 'Monday 1000 EST' '''
 ** On IRC: #ovirt on irc.oftc.net
 * oVirt Engine Core
-** Wednesday (bi-weekly) @ 14:00 UTC  (may change during DST changes) - always at 16:00 Israel.
+** Wednesday (bi-weekly) @ 14:00 UTC  (may change during DST changes) - always at 16:00 Israel Standard Time.
 ** To see in your timezone '''date --date='TZ="Asia/Jerusalem" 16:00 next Wed' '''
 ** To see if this is a week with a meeting, 
  wk=`date --date='TZ="Asia/Jerusalem" 16:30 next Wed' +"%W"`;
