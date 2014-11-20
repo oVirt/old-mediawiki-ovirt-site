@@ -30,7 +30,7 @@ The migration is lead by David Caro <dcaro@redhat.com> and Eyal Edri <eedri@redh
 * [DONE] Installing nested hosts running feodra/centos and testing automation on them (probably in a different cluster)
 
 === Phase III: Decommision RACKSPACE  ===
-==== Estimated finish date: TBD ====
+==== Estimated finish date: [DONE] ====
 * After verifying the new jenkins DC is capabale of running all our jenkins needs for the time being, remove all rackspace vms and stop the contract.
 
 === Phase IV: Start migration of production servers  to production DC ===
