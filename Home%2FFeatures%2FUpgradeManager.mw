@@ -1,0 +1,32 @@
+<!-- {{autolang|base=yes}} -->
+
+= Upgrade Manager =
+{{Feature|name=Upgrade Manager|modules=engine,infra|status=To be Released|version=3.6.0}}
+
+== Summary ==
+The process of upgrading cluster/hosts to a higher version is a manual process. When working with a small cluster of hosts that suffice. However, on large clusters it is very time-consuming to upgrade all the hosts manually. The purpose of this feature is to give administrators a set of tools to know when an upgrade is available (engine/hosts), upgrade separate hosts, and upgrade cluster as a whole, using rolling upgrade process.
+
+== Owner ==
+* Name: [[User:masayag|Moti Asayag]]
+* Email: <masayag@redhat.com>
+* IRC: masayag at #ovirt (irc.oftc.net)
+
+== Benefit to oVirt ==
+Upgrade is a big pain point on large oVirt deployments. The existence of tools to ease the upgrade process will make it easier to adopt oVirt.
+
+== Requirements ==
+The set of tools that are in the scope of this feature are:
+# Notify the user that an update for the engine is available
+# Make it ease to know whether a host has an available update, and what cluster levels this update supports
+# Allow the user to upgrade a specific host automatically
+# Allow the user to do a rolling cluster upgrade, either to a higher cluster level, or to a new version that supports the current one
+
+== User Experience ==
+=== Notify the user that an update for the engine is available ===
+=== Make it ease to know whether a host has an available update, and what cluster levels this update supports ===
+=== Allow the user to upgrade a specific host automatically ===
+=== Allow the user to do a rolling cluster upgrade, either to a higher cluster level, or to a new version that supports the current one ===
+
+== Implementation ==
+
+== Open Issues ==
