@@ -6,8 +6,7 @@ before you start.
 
 Checkout source:
  <nowiki>cd $HOME
-$ git clone http://gerrit.ovirt.org/p/ovirt-dwh</nowiki>
-
+$ git clone git://gerrit.ovirt.org/ovirt-dwh</nowiki>
 
 == Usage ==
 
