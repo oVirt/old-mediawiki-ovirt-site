@@ -13,7 +13,7 @@ $ git clone http://gerrit.ovirt.org/p/ovirt-dwh</nowiki>
 
 <font color=red><b>WARNING:</b> DO NOT RUN ENVIRONMENT UNDER ROOT ACCOUNT</font>
 
-Once prerequisites are in place, you are ready to build and use ovirt-engine.
+Once prerequisites are in place, you are ready to build and use ovirt-engine-dwh.
 
 Build product and install at <code>$HOME/ovirt-engine</code>, execute the following as unprivileged user while residing within source repository:
  <nowiki>$ make install-dev PREFIX=< Same as engine PREFIX ></nowiki>
