@@ -20,33 +20,22 @@ Once prerequisites are in place, you are ready to build and use ovirt-engine-rep
 Build product and install at <code>$HOME/ovirt-engine</code>, execute the following as unprivileged user while residing within source repository:
  <nowiki>$ make install-dev PREFIX=< Same as engine PREFIX ></nowiki>
 
-Setup product by executing the following command and replying to questions,  follow the steps required for the  ovirt_engine_history database creation :
- <nowiki>$ $HOME/ovirt-engine/bin/engine-setup</nowiki>
+Setup engine again
 
-If jboss is installed at alternate location, add the following while JBOSS_HOME contains the location: <code>--jboss-home="${JBOSS_HOME}"</code>
-
-When product is successfully set up, execute the ovirt-engine service:
+When product is successfully set up, Start the  services:
  <nowiki>$ $HOME/ovirt-engine/share/ovirt-engine/services/ovirt-engine/ovirt-engine.py start</nowiki>
 
  <nowiki>$ $HOME/ovirt-engine/share/ovirt-engine-dwh/services/ovirt-engine-dwhd/ovirt-engine-dwhd.py start</nowiki>
 
  <nowiki>$ $HOME/ovirt-engine/share/ovirt-engine-dwh/services/ovirt-engine-reportsd/ovirt-engine-reportsd.py start</nowiki>
 
-The services will not exit as long as engine is up, to stop press <Ctrl>C.
 
-Access your engine using:
-* http://localhost:8080
-* https://localhost:8443
-
-When performing code change which do not touch modify database, there is no need to re-execute the setup, just execute:
- <nowiki>$ make install-dev PREFIX=< Same as engine PREFIX ></nowiki>
-
-And start the services.
 * The server can now be run and accessed in the link:
- < host >:8080/jasperserver/
+localhost:8080/jasperserver/
 with the following credentials:
  User: admin
  password: admin1!
+
 * Open Jaspersoft Studio Designer.
 * Setup the JasperReports Server repository viewer to view the repository you imported the reports to. Details for doing this are provided in the Jaspersoft Studio guide by Jasper.
 * Reports can now be edited via Jaspersoft Studio .
