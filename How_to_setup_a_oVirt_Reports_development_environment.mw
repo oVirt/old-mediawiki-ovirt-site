@@ -6,12 +6,12 @@ as well as the dwh setup according to the steps  available at  [http://www.ovirt
 
 Checkout source:
  <nowiki>cd $HOME
-$ git clone http://gerrit.ovirt.org/p/ovirt-reports</nowiki>
+$ git clone git://gerrit.ovirt.org/ovirt-reports</nowiki>
 
-Install JasperReports Server: 
+Install dependencies:
  $ yum install jasperreports-server
 
-Download and install Jaspersoft Studio . 
+Download and install Jaspersoft Studio @ALON: why?. 
 * Available on this link: http://community.jaspersoft.com/project/jaspersoft-studio
 
 == Usage ==
