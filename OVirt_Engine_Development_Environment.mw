@@ -131,7 +131,8 @@ It basically logins into PostgreSQL database using privileged user, creates a us
 === Source ===
 
 Checkout source:
- <nowiki>cd $HOME
+ <nowiki>mkdir -p "$HOME/git"
+cd "$HOME/git"
 $ git clone git://gerrit.ovirt.org/ovirt-engine</nowiki>
 
 == Usage ==
