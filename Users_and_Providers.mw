@@ -4,6 +4,10 @@ This page highlights the users, solution providers, supporters, and downstream c
 
 == oVirt-Based Products ==
 
+[[File:Nimbus logo.png|alt=Nimbus Concept|150px|link=http://www.nimbusconcept.com/index-en.html]]
+
+[//www.nimbusconcept.com/index-en.html Nimbus Concept] has taken oVirt and other open source tools to deliver solutions to their customers, and now is offering something unique: OriginStack, an appliance that integrates hardware, virtualization (oVirt/KVM), private cloud (OpenStack), and support in one integrated package.  '''[[Nimbus_Concept_Case_Study| Case Study]]'''
+
 [[File:Red hat logo.jpg|alt=Red Hat, Inc.|150px|link=http://www.redhat.com/en]]
 
 [//www.redhat.com/en Red Hat] is the corporate member of the oVirt community responsible for opening oVirt's codebase. Besides providing support for oVirt's community, Red Hat uses oVirt as the codebase for its [//www.redhat.com/en/technologies/virtualization/enterprise-virtualization Red Hat Enterprise Virtualization] product.
@@ -15,7 +19,6 @@ This page highlights the users, solution providers, supporters, and downstream c
 [[File:Windriver logo.png|alt=Wind River|150px|link=http://www.windriver.com/]]
 
 [//www.windriver.com/ Wind River] offers a comprehensive device development portfolio, including its [//www.windriver.com/products/open-virtualization-profile/ Open Virtualization] product, a real-time virtualization solution using KVM and oVirt technology.
- 
 
 == oVirt Customer Stories ==
 
@@ -29,18 +32,6 @@ The oVirt Project is made great by the users who advocate and help in the develo
 
 Faced with an opportunity to take the approximately 150 virtual machines housed on 30 Solaris machines and manage them with another virtual datacenter management tool, the [//www.brusselsairport.be Brussels Airport Company] IT team went with oVirt running atop CentOS. '''[[Brussels_Airport_Case_Study | Case Study]]'''
 
-[[File:Intellij_idea.png|alt=Intellij_idea|150px|link=http://www.jetbrains.com/idea/features/index.html]]
-
-[http://www.jetbrains.com/idea/features/index.html IntelliJ IDEA] and [http://www.jetbrains.com/pycharm/ PyCharm] are two developer products with donated licenses from [http://www.jetbrains.com/ JetBrains].
-
-[[File:It-novum.jpg‎|alt=it-novum Logo|150px|link=http://www.it-novum.com/]]
-
-[//www.it-novum.com/ it-novum] is a company that's very focused on delivering open source, so when they decided to build a product and solution set for their customers' datacenter needs, it made sense that oVirt was included. '''[[IT_Novum_case_study|Case Study]]'''
-
-[[File:Jprofiler_large.png|alt=Jprofiler|150px|link=http://www.ej-technologies.com/products/jprofiler/overview.html]]
-
-[http://www.ej-technologies.com/products/jprofiler/overview.html jprofiler] from [http://www.ej-technologies.com/ ej-technologies GmBH] assists oVirt developers in finding performance bottlenecks, pin down memory leaks and understand threading issues.
-
 [[File:Judici_Logo.jpg|alt=Judici|150px|link=http://www.judici.com]]
 
 [//www.judici.com Judici] offers the public litigant information, criminal and civil court information, case minutes, and calendar data for hearings, and is rolling out the capability to e-file cases online for 68 of Illinois' 102 county courts. And it's making this happen with completely open source software, including oVirt. '''[[Judici_Case_Study| Case Study]]'''
@@ -48,11 +39,6 @@ Faced with an opportunity to take the approximately 150 virtual machines housed 
 [[File:Nwld_logo.png|alt=Nieuwland|150px|link=http://nieuwland.nl/]]
 
 Dutch software development company [//nieuwland.nl/  Nieuwland Geo-Informatie]  creates mobile applications that need to tap into a lot of geographic information in a reliable and fast manner. To do this, they needed a virtualization solution that would have high availability at a reasonable cost. '''[[Nieuwland case study |  Case Study]]'''
-
-[[File:Nimbus logo.png|alt=Nimbus Concept|150px|link=http://www.nimbusconcept.com/index-en.html]]
-
-[//www.nimbusconcept.com/index-en.html Nimbus Concept] has taken oVirt and other open source tools to deliver solutions to their customers, and now is offering something unique: OriginStack, an appliance that integrates hardware, virtualization (oVirt/KVM), private cloud (OpenStack), and support in one integrated package.  '''[[Nimbus_Concept_Case_Study| Case Study]]'''
-
 
 == oVirt Educational Stories ==
 
@@ -89,6 +75,10 @@ Companies and public institutions all over the world have found oVirt a great so
 
 [//icnet.net/ Internet Complete] is dedicated to providing Oklahoma customers with the leading technologies (including oVirt-managed hosting) they need for fast, reliable Internet solutions.
 
+[[File:It-novum.jpg‎|alt=it-novum Logo|150px|link=http://www.it-novum.com/]]
+
+[//www.it-novum.com/ it-novum] is a company that's very focused on delivering open source, so when they decided to build a product and solution set for their customers' datacenter needs, it made sense that oVirt was included. '''[[IT_Novum_case_study|Case Study]]'''
+
 [[File:Netbulae.png|alt=Netbulae|150px|link=http://www.netbulae.eu/]]
 
 The founders of [//www.netbulae.eu/ Netbulae] have experience in ICT, automation, graphics and multimedia sectors, and use those skills and the oVirt platform to deliver virtual datacenter management services to their customer base.
@@ -99,6 +89,10 @@ The founders of [//www.netbulae.eu/ Netbulae] have experience in ICT, automation
 
 == oVirt Cloud Providers ==
 
+[[File:AlterWay.jpg|alt=AlterWay|150px|link=http://www.alterway.fr]]
+
+[//alterway.fr AlterWay] offers hosting services to the oVirt project for free, including oVirt-managed Virtual Machines and a dedicated server for Jenkins, for use in the oVirt project infrastructure. They launched an oVirt-based public cloud offering called [http://h2o.alterway.fr H2O] in October 2012.   '''[[Alter Way case study | Case Study]]'''
+
 [[File:Ctlogo.png|alt=Cloud Times|150px|link=http://www.cloud-times.com/]]
 
 [//www.cloud-times.com/ Cloud Times] is a startup invested by CBC and funded by Dr Edward Tian, known as the Father of Chinese Broadband. Cloud Times is devoted to being the leading solution provider of Cloud Client Equipment, Virtual Desktop Infrastructure,  and “Cloud plus Client” Management Platform, and to help Chinese enterprises in the transition to “Cloud plus Client” architecture.
@@ -106,6 +100,18 @@ The founders of [//www.netbulae.eu/ Netbulae] have experience in ICT, automation
 [[File:Eayun.jpg|alt=Yi Yunjie|150px|link=http://www.eayun.cn]]
 
 [//www.eayun.cn Yi Yunjie Technology (Beijing) Ltd.] is a technology research company and provider of cloud computing products and operational service for medium to large enterprise customers, with independent development of the professional-oriented cloud computing solutions.
+
+== oVirt Supporters ==
+
+The following organizations are very helpful to the oVirt community by providing tools and services that are helpful to the development of oVirt.
+
+[[File:Intellij_idea.png|alt=Intellij_idea|150px|link=http://www.jetbrains.com/idea/features/index.html]]
+
+[http://www.jetbrains.com/idea/features/index.html IntelliJ IDEA] and [http://www.jetbrains.com/pycharm/ PyCharm] are two developer products with donated licenses from [http://www.jetbrains.com/ JetBrains].
+
+[[File:Jprofiler_large.png|alt=Jprofiler|150px|link=http://www.ej-technologies.com/products/jprofiler/overview.html]]
+
+[http://www.ej-technologies.com/products/jprofiler/overview.html jprofiler] from [http://www.ej-technologies.com/ ej-technologies GmBH] assists oVirt developers in finding performance bottlenecks, pin down memory leaks and understand threading issues.
 
 == oVirt Board Members ==
 
