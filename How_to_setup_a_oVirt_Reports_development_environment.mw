@@ -9,7 +9,7 @@ Checkout source:
 $ git clone http://gerrit.ovirt.org/p/ovirt-reports</nowiki>
 
 Install JasperReports Server: 
- $ Yum install jasperreports-server
+ $ yum install jasperreports-server
 
 Download and install Jaspersoft Studio . 
 * Available on this link: http://community.jaspersoft.com/project/jaspersoft-studio
