@@ -24,6 +24,7 @@ Build product and install at <code>$HOME/ovirt-engine</code>, execute the follow
  <nowiki>$ make install-dev PREFIX=< Same as engine PREFIX ></nowiki>
 
 Setup engine again
+If JasperReports Server is installed at alternate location, add the following while JASPER_HOME contains the location: <code>--jasper-home="${JASPER_HOME}"</code>
 
 When product is successfully set up, Start the  services:
  <nowiki>$ $HOME/ovirt-engine/share/ovirt-engine/services/ovirt-engine/ovirt-engine.py start</nowiki>
