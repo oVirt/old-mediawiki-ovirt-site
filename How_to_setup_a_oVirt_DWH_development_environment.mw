@@ -4,7 +4,7 @@ before you start.
 
 === Source ===
 Checkout source:
- <nowiki>cd $HOME
+ <nowiki>cd "$HOME/git"
 $ git clone git://gerrit.ovirt.org/ovirt-dwh</nowiki>
 
 == Usage ==
