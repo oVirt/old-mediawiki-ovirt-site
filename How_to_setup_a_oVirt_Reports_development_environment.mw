@@ -5,7 +5,7 @@ as well as the dwh setup according to the steps  available at  [http://www.ovirt
 == Source ==
 
 Checkout source:
- <nowiki>cd $HOME
+ <nowiki>cd "$HOME/git"
 $ git clone git://gerrit.ovirt.org/ovirt-reports</nowiki>
 
 Install dependencies:
