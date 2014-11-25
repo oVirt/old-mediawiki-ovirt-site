@@ -42,8 +42,7 @@ Build system supports standard RPM packaging out of source tarball.
 Create source tarball by executing:
  <nowiki>$ make dist</nowiki>
 
-Follow the standard oVirt guidelines for building RPM package
-* http://www.ovirt.org/Build_Binary_Package
+Follow the standard [http://www.ovirt.org/Build_Binary_Package oVirt guidelines] for building RPM package 
 
 [[Category:Documentation]]
 [[Category:DWH]]
