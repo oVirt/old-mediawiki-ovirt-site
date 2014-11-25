@@ -40,9 +40,9 @@ The services will not exit as long as engine is up, to stop press <Ctrl>C.
 For details on this refer to Talend's documentation.
 * You may now run the project and test it in the Talend DI.
 
-= Packaging =
+== Packaging ==
 
-== RPM packaging ==
+=== RPM packaging ===
 
 Build system supports standard RPM packaging out of source tarball.
 
