@@ -46,9 +46,9 @@ You can specify --otopi-environment="OVESETUP_REPORTS_CONFIG/jasperHome=str:<pat
 * Setup the JasperReports Server repository viewer to view the repository you imported the reports to. Details for doing this are provided in the Jaspersoft Studio guide by Jasper.
 * Reports can now be edited via Jaspersoft Studio .
 
-= Packaging =
+== Packaging ==
 
-== RPM packaging ==
+=== RPM packaging ===
 
 Build system supports standard RPM packaging out of source tarball.
 
