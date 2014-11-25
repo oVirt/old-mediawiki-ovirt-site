@@ -2,8 +2,15 @@
 = oVirt 3.5.1 =
 == Timeline ==
 ''' These are tentative planning dates and may change'''
-* General availability: '''2014-12-02'''
-* RC Build:  '''2014-11-25'''
+{| class="wikitable" border="1"
+|-
+|  <s>2014-11-25</s><br>'''2014-12-02'''
+| Release candidate
+|-
+|   <s>2014-12-02</s><br>'''2014-12-09'''
+| General availability
+|-
+|}
 
 === Nightly Builds ===
 Nightly builds are available enabling the  oVirt 3.5 snapshots repositories
