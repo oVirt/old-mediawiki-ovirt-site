@@ -26,3 +26,7 @@ The below steps includes  historical statistics database and a set of predefined
   # yum install ovirt-engine-reports
   # ovirt-engine-dwh-setup
   # ovirt-engine-reports-setup
+
+
+[[Category:Documentation]]
+[[Category:Reports]]
