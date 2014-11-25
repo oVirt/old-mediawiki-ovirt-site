@@ -1,5 +1,3 @@
-= oVirt DWH Development Environment =
-
 == Prerequisites ==
 <b>Please notice:</b> We assume you have set up a development environment according to the steps  available at  [http://www.ovirt.org/OVirt_Engine_Development_Environment OVirt_Engine_Development_Environment] or within source tree at [http://gerrit.ovirt.org/gitweb?p=ovirt-engine.git;a=blob;f=README.developer;hb=HEAD README.developer] ,
 before you start.
