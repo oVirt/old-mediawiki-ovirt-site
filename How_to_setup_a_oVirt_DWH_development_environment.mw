@@ -40,6 +40,18 @@ The services will not exit as long as engine is up, to stop press <Ctrl>C.
 For details on this refer to Talend's documentation.
 * You may now run the project and test it in the Talend DI.
 
+= Packaging =
+
+== RPM packaging ==
+
+Build system supports standard RPM packaging out of source tarball.
+
+Create source tarball by executing:
+ <nowiki>$ make dist</nowiki>
+
+Follow the standard oVirt guidelines for building RPM package
+* http://www.ovirt.org/Build_Binary_Package
+
 [[Category:Documentation]]
 [[Category:DWH]]
 [[Category:Reports]]
