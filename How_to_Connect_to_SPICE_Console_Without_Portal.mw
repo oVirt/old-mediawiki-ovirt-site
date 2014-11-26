@@ -122,7 +122,7 @@ find out ports where qemu is listening:
   root@HOST# '''ps -f ${QEMU_PID}'''
   qemu     ${QEMU_PID}     1  1 Jul17 ?        Sl   513:33 /usr/libexec/qemu-kvm ... -spice port='''5914''',tls-port='''5915''',... ...
 find out host subject and do the usual space-after-comma deletion:
-  root@HOST# '''grep Subject: /etc/pki/vdsm/libvirt-spice/server-cert.pem'''
+  root@HOST# '''openssl x509 -in /etc/pki/vdsm/libvirt-spice/server-cert.pem -noout -text | grep Subject:'''
           Subject: '''O=some organization, CN=common-name'''
 set the ticket. You have to set both password and its time validity:
   root@HOST# '''vdsClient -s 0 setVmTicket ${VM_UUID} ${PASS} ${VALIDITY}'''
