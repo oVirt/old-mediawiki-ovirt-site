@@ -1,0 +1,19 @@
+== Description ==
+Test the upgrade of oVirt Hosted Engine deployments
+
+== Setup ==
+# Deploy Hosted Engine on a clean system using a previous stable release ensuring to have the same oVirt version both on hosts and Hosted Engine VM. 
+
+==How to test==
+# Ensure Hosted Engine is working
+# Follow [[Hosted_Engine_Howto#Upgrade_Hosted_Engine | Upgrade Hosted Engine]] guide
+# Ensure Hosted Engine is still working after the upgrade
+
+==Expected Results==
+* The Hosted Engine upgrade is completed without errors
+* The Hosted Engine deployment is still working after the upgrade
+
+==Optional==
+* Perform other oVirt Hosted Engine / oVirt Engine test cases
+
+[[Category:TestCase]]
