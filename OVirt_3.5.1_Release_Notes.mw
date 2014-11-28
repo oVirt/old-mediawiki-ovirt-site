@@ -11,6 +11,9 @@
 
 ==VDSM==
 
+==ovirt-iso-uploader==
+{{BZ|1144836}} - ERROR: Problem connecting to the REST API.  Is the service available and does the CA certificate exist?<BR>
+
 ==ovirt-log-collector==
 {{BZ|1086942}} - [RHEV] rhevm-log-collector does not gather /etc/ovirt-engine-reports or /etc/ovirt-engine-dwh<BR>
 {{BZ|1133993}} - postgres data is not collected<BR>
