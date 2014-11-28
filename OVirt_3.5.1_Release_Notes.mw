@@ -11,6 +11,23 @@
 
 ==VDSM==
 
+==ovirt-hosted-engine-setup==
+{{BZ|1086032}} - If another network has the "required" flag a new host will fail and timeout<BR>
+{{BZ|1101285}} - First interaction with hosted-engine --deploy process happening before, that answer file loading<BR>
+{{BZ|1106556}} - Engine vm is not killed after that deployment process aborted<BR>
+{{BZ|1121057}} - answers.conf is replaced if configuration is not complete<BR>
+{{BZ|1133937}} - [TEXT] hosted-engine --deploy should provide better error message when iSCSI luns list is empty<BR>
+{{BZ|1142710}} - Volume creation failed while deploying Hosted Engine on iSCSI<BR>
+{{BZ|1151339}} - Lost all the configuration for hosted engine after reboot rhevh<BR>
+{{BZ|1155637}} - [hosted-engine][iscsi] [dirty storage] [ ERROR ] Failed to execute stage 'Misc configuration': Wrong Master domain or its version:<BR>
+{{BZ|1157238}} - [hosted-engine] [iSCSI support] The LUN used for engine VM disk is allowed to be picked for storage domain creation/extension<BR>
+{{BZ|1157239}} - [hosted-engine] [iSCSI support] Putting an iSCSI domain in maintenance while the hosted-engine is installed on a LUN from the same storage server causes the setup to become non operational<BR>
+{{BZ|1157243}} - [engine-backend] [importDomain] hosted-engine: import the hosted-engine's storage domain is allowed<BR>
+{{BZ|1159028}} - Installation of second host failed, when try to fetch answer file IOError: [Errno 2] No such file<BR>
+{{BZ|1163385}} - Error trying to add new hosted-engine host to upgraded Hosted Engine cluster<BR>
+{{BZ|1168267}} - [hosted-engine] Uncoherent 'Cannot add the host to cluster None' error message on SDK failure<BR>
+
+
 ==ovirt-image-uploader==
 {{BZ|1146070}} - ERROR: Problem connecting to the REST API.  Is the service available and does the CA certificate exist?<BR>
 {{BZ|1150922}} - 40% perf regression in image uploader<BR>
