@@ -11,8 +11,10 @@
 
 ==VDSM==
 
-==ovirt-node-plugin-vdsm==
-
+==ovirt-log-collector==
+{{BZ|1086942}} - [RHEV] rhevm-log-collector does not gather /etc/ovirt-engine-reports or /etc/ovirt-engine-dwh<BR>
+{{BZ|1133993}} - postgres data is not collected<BR>
+{{BZ|1162781}} - remove password leak from ovirt-engine setup answer file<BR>
 
 [[Category:Documentation]]
 [[Category:Releases]]
