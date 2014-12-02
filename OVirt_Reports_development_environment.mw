@@ -31,7 +31,7 @@ Setup engine again, select yes when prompted to use reports.
 When product is successfully set up, follow instruction within the ovirt-engine development environment and start the ovirt-engine service, and follow dwh instructions and start dwh service.
 
 Start the reports service by the following command:
- <nowiki>$ $HOME/ovirt-engine/share/ovirt-engine-dwh/services/ovirt-engine-reportsd/ovirt-engine-reportsd.py start</nowiki>
+ <nowiki>$ $HOME/ovirt-engine/share/ovirt-engine-reports/services/ovirt-engine-reportsd/ovirt-engine-reportsd.py start</nowiki>
 
 The server can now be run and accessed in the link:
 * http://localhost:8090/jasperserver/
