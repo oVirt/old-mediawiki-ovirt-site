@@ -35,7 +35,8 @@ Lowers the bar for getting a engine/node setup up and running with the least amo
 
 === Documentation / External references ===
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
-* Coming Soon
+[http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Virtualization/3.5-Beta/html-single/Installation_Guide/index.html#chap-The_Self-Hosted_Engine Hosted Engine documentation]
+[http://www.ovirt.org/Features/Self_Hosted_Engine Feature Page Hosted Engine]
 
 [[Category:Feature]]
 [[Category:Template]]
