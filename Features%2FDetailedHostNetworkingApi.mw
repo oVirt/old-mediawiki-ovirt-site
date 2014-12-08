@@ -105,3 +105,4 @@ The setupnetworks API exposed by VDSM remains the same:
 '''HostSetupNetworksParameters''' will be created by '''HostSetupNetworksCommand'''.
 [[Category:Networking]]
 [[Category:DetailedFeature]]
+[[Category:oVirt 3.6 Proposed Feature]]
