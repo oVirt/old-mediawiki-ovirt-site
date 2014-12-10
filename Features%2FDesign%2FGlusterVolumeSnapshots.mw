@@ -285,7 +285,9 @@ Input:
 Input:
 <pre>
 <action>
-    <cronexpr>{cron expression of the schedule}</cronexpr>
+    <volume_snapshot_schedule>
+        <cronexpr>{cron expression of the schedule}</cronexpr>
+    </volume_snapshot_schedule>
 </action>
 </pre>
 
