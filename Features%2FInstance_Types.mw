@@ -70,125 +70,125 @@ The specific values means:
 * '''Values for On Create''': ''User'' = user to fill it, ''Instance'' = copied from instance type,  ''Image'' = copied from image, ''empty'' = empty
  
 {| class="wikitable"
-!Field name !! Description !! colspan="2"|Template !!colspan="3"|Image !!colspan="3"|Instance Type !!colspan="7"|VM
+!Field name !! Description !! colspan="2"|Template !!colspan="3"|Instance Type !!colspan="7"|VM
 |-
-! !! !! Present !! Comm !! Present !! Perms !! Comm !! Present !! Perms !! Comm !! Present !! Perms !! Adv Only !! Basic User !! Marked !! On Create !! Comm
+! !! !! Present !! Comm !! Present !! Perms !! Comm !! Present !! Perms !! Adv Only !! Basic User !! Marked !! On Create !! Comm
 |-
-| vm_guid || Internal unique ID || N || || N || || || N || || || N || || || || || Generated || 
+| vm_guid || Internal unique ID || N || || N || || || N || || || || || Generated || 
 |-
-| vm_name || name set by user for vm and template || Y || || Y || || || Y || || || Y || || N || Y || N || User || 
+| vm_name || name set by user for vm and template || Y || || Y || || || Y || || N || Y || N || User || 
 |-
-| mem_size_mb || Memory Size || Y || || N || || || Y ||  || || Y || || Y || N || Y || Instance/Template/User || 
+| mem_size_mb || Memory Size || Y || || Y ||  || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| vmt_guid || Internal link to template object || N || || N || || || N || || || Y || || N || Y || N || User || 
+| vmt_guid || Internal link to template object || N || || N || || || Y || || N || Y || N || User || 
 |-
-| OS || Operating System Type || Y || || Y || || || N || || || Y || || N || Y || N || Image/Template/User || 
+| OS || Operating System Type || Y || || N || || || Y || || N || Y || N || Image/Template/User || 
 |-
-| description || description set by user for vm and template || Y || || Y || || || Y || ||  || Y || || N || Y || N || User ||
+| description || description set by user for vm and template || Y || || Y || ||  || Y || || N || Y || N || User ||
 |-
-| vds_group_id || vm cluster || Y || || Y || || || N || change cluster || || Y || || N || Y || N || User || 
+| vds_group_id || vm cluster || Y || || N || change cluster || || Y || || N || Y || N || User || 
 |-
-| domain || directory services domain || D || || D || || || D || || || || || || || || Part of VmInit field || 
+| domain || directory services domain || D || || D || || || || || || || || Part of VmInit field || 
 |-
-| creation_date || internal. creation date || N || || N || || || N || || || N || || || || || ||
+| creation_date || internal. creation date || N || || N || || || N || || || || || ||
 |-
-| num_of_monitors || number of monitors || Y || || N || || || Y || || || Y || || Y || N || N || User || 
+| num_of_monitors || number of monitors || Y || || Y || || || Y || || Y || N || N || User || 
 |-
-| is_initialized || internal. mark if vm was syspreped || N || || N || || || N || || || N || || || || || false || 
+| is_initialized || internal. mark if vm was syspreped || N || || N || || || N || || || || || false || 
 |-
-| is_auto_suspend || legacy from auto-suspend feature, not in use || D || || D || || || D || || || D || || || || || D || 
+| is_auto_suspend || legacy from auto-suspend feature, not in use || D || || D || || || D || || || || || D || 
 |-
-| num_of_sockets || umber of sockets || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
+| num_of_sockets || umber of sockets || Y || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| cpu_per_socket || cpu per socket || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
+| cpu_per_socket || cpu per socket || Y || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| usb_policy || usb policy || Y || || N || || || Y || || || Y || || Y || N || N || Instance/Template/User ||
+| usb_policy || usb policy || Y || || Y || || || Y || || Y || N || N || Instance/Template/User ||
 |-
-| time_zone || time zone || Y || || N || || || N || || || Y || || Y || Y || N || Template/User || 
+| time_zone || time zone || Y || || N || || || Y || || Y || Y || N || Template/User || 
 |-
-| is_stateless || stateless flag || Y || || N || || || N || || || Y || || N || Y || N || Template/User || Needs to be set on per disk level as well
+| is_stateless || stateless flag || Y || || N || || || Y || || N || Y || N || Template/User || Needs to be set on per disk level as well
 |-
-| fail_back || legacy from fail-back feature, not in use || D || || D || || || D || || || D || || || || || D || 
+| fail_back || legacy from fail-back feature, not in use || D || || D || || || D || || || || || D || 
 |-
-| dedicated_vm_for_vds || specific host for running vm || Y || || N || || || N || || || Y || || Y || N || N || Template/User || 
+| dedicated_vm_for_vds || specific host for running vm || Y || || N || || || Y || || Y || N || N || Template/User || 
 |-
-| auto_startup || HA || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
+| auto_startup || HA || Y || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| vm_type || vm type (server/desktop) || Y || || N || || || N || || || Y || || N || Y || N || Template/User || If the instance type is not custom, the vm_type becomes only a mark but does not change anything
+| vm_type || vm type (server/desktop) || Y || || N || || || Y || || N || Y || N || Template/User || If the instance type is not custom, the vm_type becomes only a mark but does not change anything
 |-
-| nice_level || vm nice level || D || || D || || || D || || || D || ||  ||  ||  ||  || 
+| nice_level || vm nice level || D || || D || || || D || ||  ||  ||  ||  || 
 |-
-| default_boot_sequence || boot sequence || Y || || N || || || Y || || || Y || || Y || Y || N || Instance/Template/User || 
+| default_boot_sequence || boot sequence || Y || || Y || || || Y || || Y || Y || N || Instance/Template/User || 
 |-
-| default_display_type || display type(SPICE, VNC)|| Y || || N || || || Y || || || Y || || Y || Y || N || Instance/Template/User ||
+| default_display_type || display type(SPICE, VNC)|| Y || || Y || || || Y || || Y || Y || N || Instance/Template/User ||
 |-
-| priority || priority || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
+| priority || priority || Y || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| iso_path || cd || Y || || Y || || || N || || || Y || || Y || Y || N || Image/User || 
+| iso_path || cd || Y || || N || || || Y || || Y || Y || N || Image/User || 
 |-
-| origin || internal. where the vm was created || N || || N || || || N || || || N || || || || || || 
+| origin || internal. where the vm was created || N || || N || || || N || || || || || || 
 |-
-| initrd_url || boot params || Y || || Y || || || N || || || Y || || Y || N || N || Image/User || 
+| initrd_url || boot params || Y || || N || || || Y || || Y || N || N || Image/User || 
 |-
-| kernel_url || boot params || Y || || Y || || || N || || || Y || || Y || N || N || Image/User || 
+| kernel_url || boot params || Y || || N || || || Y || || Y || N || N || Image/User || 
 |-
-| kernel_params || boot params || Y || || Y || || || N || || || Y || || Y || N || N || Image/User || Only visible when kernel url is specified in image. 
+| kernel_params || boot params || Y || || N || || || Y || || Y || N || N || Image/User || Only visible when kernel url is specified in image. 
 |-
-| migration_support || migration support options || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
+| migration_support || migration support options || Y || || Y || || || Y || || Y || N || Y || Instance/Template/User || 
 |-
-| userdefined_properties || custom properties || Y || || N || || || N || || || Y || || Y || N || N || Template/User || 
+| userdefined_properties || custom properties || Y || || N || || || Y || || Y || N || N || Template/User || 
 |-
-| predefined_properties || custom properties || Y || || N || || || N || || || Y || || Y || N || N || Template/User || 
+| predefined_properties || custom properties || Y || || N || || || Y || || Y || N || N || Template/User || 
 |-
-| min_allocated_mem || memory guaranteed || Y || || N || || || Y || || || Y || || Y || N || Y || Instance || 
+| min_allocated_mem || memory guaranteed || Y || || Y || || || Y || || Y || N || Y || Instance || 
 |-
-| child_count || internal. for template, not in use? || N || || N || || || N || || || N || || || || || || 
+| child_count || internal. for template, not in use? || N || || N || || || N || || || || || || 
 |-
-| quota_id || link to quota || Y || || Y || || || N || || || Y || || Y || Y || N || User || 
+| quota_id || link to quota || Y || || N || || || Y || || Y || Y || N || User || 
 |-
-| allow_console_reconnect || allow reconnect to console || Y || || N || || || N || || || Y || console reconnect || Y || N || N || Template/User || 
+| allow_console_reconnect || allow reconnect to console || Y || || N || || || Y || console reconnect || Y || N || N || Template/User || 
 |-
-| cpu_pinning || cpu pinning || N || || N || || || N || || || Y || || Y || N || N || User || 
+| cpu_pinning || cpu pinning || N || || N || || || Y || || Y || N || N || User || 
 |-
-| is_smartcard_enabled || smartcard enabled || Y || || N || || || Y || || || Y || || Y || N || N || Instance/Template/User || 
+| is_smartcard_enabled || smartcard enabled || Y || || Y || || || Y || || Y || N || N || Instance/Template/User || 
 |-
-| payload || payload (device, not in vm_static) || N || || N || || || N || || || Y || || || || || || Not in GUI, REST only
+| payload || payload (device, not in vm_static) || N || || N || || || Y || || || || || || Not in GUI, REST only
 |-
-| thin/clone || || N || || N || || || N || || || Y || || Y || N || N || User || 
+| thin/clone || || N || || N || || || Y || || Y || N || N || User || 
 |-
-| soundcard || payload (device, not in vm_static) || Y || || N || || || Y || || || Y || || Y || N || N || Instance/Template/User || 
+| soundcard || payload (device, not in vm_static) || Y || || Y || || || Y || || Y || N || N || Instance/Template/User || 
 |-
-| Balloon || payload (device, not in vm_static) || N || || N || || || Y || || || Y || || Y || N || Y || Instance/User || 
+| Balloon || payload (device, not in vm_static) || N || || Y || || || Y || || Y || N || Y || Instance/User || 
 |-
-| network interface || binding of NIC to logical network || N || || N || || || Y || || || Y || || N || Y || N || Instance/Template/User || 
+| network interface || binding of NIC to logical network || N || || Y || || || Y || || N || Y || N || Instance/Template/User || 
 |-
-| instance_type_id || internal. link to vm's instance type || N || || N || || || N || || || Y || || N || Y || N || User || 
+| instance_type_id || internal. link to vm's instance type || N || || N || || || Y || || N || Y || N || User || 
 |-
-| image_type_id || internal. link to vm's image type || N || || N || || || N || || || Y || || N || Y || N || User || 
+| image_type_id || internal. link to vm's image type || N || || N || || || Y || || N || Y || N || User || 
 |-
-| host_cpu_flags || use host cpu flags || Y || || N || || || N || || || Y || || Y || N || N || Template/User || 
+| host_cpu_flags || use host cpu flags || Y || || N || || || Y || || Y || N || N || Template/User || 
 |-
-| db_generation || internal || N || || N || || || N || || || N || || || || ||  || Not in GUI
+| db_generation || internal || N || || N || || || N || || || || ||  || Not in GUI
 |-
-| is_delete_protected || protection from accidental deletion || Y || || N || || || N || || || Y || || N || Y || N || Template/User ||
+| is_delete_protected || protection from accidental deletion || Y || || N || || || Y || || N || Y || N || Template/User ||
 |-
-| is_disabled || disabled-template (for templates only) || Y || || N || || || N || || || N || || || || || ||
+| is_disabled || disabled-template (for templates only) || Y || || N || || || N || || || || || ||
 |-
-| vncKeyboardLayout || VNC specific keyboard layout || Y || || N || || || N || || || Y || || Y || Y || N || Template/User ||
+| vncKeyboardLayout || VNC specific keyboard layout || Y || || N || || || Y || || Y || Y || N || Template/User ||
 |-
-| tunnelMigration || use libvirt-to-libvirt communication || N || || N || || || N || || || || || || ||  || || Not in GUI
+| tunnelMigration || use libvirt-to-libvirt communication || N || || N || || || || || || ||  || || Not in GUI
 |-
-| migrationDowntime || max downtime during migration || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User ||
+| migrationDowntime || max downtime during migration || Y || || Y || || || Y || || Y || N || Y || Instance/Template/User ||
 |-
-| watchdog || consists of model and action || Y || || N || || || Y || || || Y || || Y || N || Y || Instance/Template/User ||
+| watchdog || consists of model and action || Y || || Y || || || Y || || Y || N || Y || Instance/Template/User ||
 |-
-| sso method || none or guest agent || Y || || N || || || N || || || Y || || Y || N || N || Template/User ||
+| sso method || none or guest agent || Y || || N || || || Y || || Y || N || N || Template/User ||
 |-
-| cpu allocation || || N || || N || || || N || || || Y || || Y || N || N || User ||
+| cpu allocation || || N || || N || || || Y || || Y || N || N || User ||
 |-
-| virtio-scsi || || N || || N || || || Y || || || Y || || Y || N || N || Instance/User ||
+| virtio-scsi || || N || || Y || || || Y || || Y || N || N || Instance/User ||
 |-
-| vm init || cloud-init or sysprep|| N || || N || || || N || || || Y || || Y || Y || N || User ||
+| vm init || cloud-init or sysprep|| N || || N || || || Y || || Y || Y || N || User ||
 |-
 |}
 
