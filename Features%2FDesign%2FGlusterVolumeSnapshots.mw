@@ -29,19 +29,15 @@ This entity stores the snapshots created for gluster volumes. Different volumes 
 |+ GlusterVolumeSnapshots
 !Column name !! Type !! Description
 |-
-| SnapId || UUID || Id of the new snapshot
+| snapshot_id || UUID || Id of the new snapshot
 |-
-| SnapName || String || Name of the snapshot
+| volume_id || UUID || Id of the reference volume for which the snapshot is taken
 |-
-| ClusterId || UUID || Id of the reference cluster to which the volume belongs to
+| snapshot_name || String || Name of the snapshot
 |-
-| VolumeId || UUID || Id of the reference volume for which the snapshot is taken
+| description || String || Description
 |-
-| CreatedAt || Date || Creation time of the snapshot
-|-
-| Description || String || Description
-|-
-| Status || String || Current status of the snapshot
+| status || String || Current status of the snapshot
 |}
 
 * GlusterVolumeSnapshotStatus
