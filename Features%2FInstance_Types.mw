@@ -312,7 +312,7 @@ In the new/edit VM dialog a new part will be added containing the attach and cre
 
 [[File:InstanceImageNothingAdded.png]]
 
-[[File:instanceImageTwoAdded.png]]
+[[File:withTwo.png]]
 
 * VM:
 ** The new/edit VM dialog will be enriched to contain also the instance type and image lists.
