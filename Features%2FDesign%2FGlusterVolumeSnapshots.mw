@@ -50,13 +50,13 @@ This entity stores the details of a configuration parameter for volume related t
 |+ GlusterVolumeSnapshotConfig
 !Column name !! Type !! Description
 |-
-| ClusterId || UUID || Id of the reference cluster to which volume belongs to
+| cluster_id || UUID || Id of the reference cluster to which volume belongs to
 |-
-| VolumeId || UUID || Id of the reference volume
+| volume_id || UUID || Id of the reference volume
 |-
-| ParamName || String || Name of the configuration parameter
+| param_name || String || Name of the configuration parameter
 |-
-| ParamValue || String || Value of the configuration parameter
+| param_value || String || Value of the configuration parameter
 |}
 
 ==== GlusterVolumeSnapshotSchedule ====
