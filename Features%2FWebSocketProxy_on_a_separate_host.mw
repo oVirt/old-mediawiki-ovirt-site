@@ -354,4 +354,5 @@ Add a virtualization host, start a VM from the engine and pen the noVNC console.
 <!-- This below adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 * Refer to [[Talk:WebSocketProxy on a separate host]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 
-[[Category:Feature]]
+[[Category:Feature|WebSocketProxy on a separate host]]
+[[Category:oVirt 3.5 Feature | WebSocketProxy on a separate host]]
