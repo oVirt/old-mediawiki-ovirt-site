@@ -1,6 +1,6 @@
 ==Gluster Host Disk Management==
   
-{{Feature|name=Gluster Host Disk Management| modules=Engine |Target version=3.6 | status=Inception }}
+{{Feature|name=Gluster Host Disk Management| modules=Engine | Target version=3.6 | status=Inception }}
 
 == Summary ==
 Disk Management feature was the long time awaited feature for Gluster in Ovirt. This helps the admin to provision the storage directly from Ovirt Web admin portal  instead of going to the node and do all the stuffs manually. This feature enables to configure disk and storage devices in host. On Gluster cluster, this helps to identify bricks. The configuration includes
