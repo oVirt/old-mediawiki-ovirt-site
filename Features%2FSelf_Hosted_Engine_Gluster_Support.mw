@@ -32,6 +32,13 @@ Provisioning Gluster storage on the same host:
           Please provide a comma separated list of 3 bricks (host1:/path1,host2:/path2,host3:/path3): 192.168.1.5:/he,192.168.1.6:/he,192.168.1.7:/he
 
 ==== Config files changes ====
+
+According to http://www.ovirt.org/Features/GlusterFS_Storage_Domain#Important_Pre-requisites the only required change is to add
+  option rpc-auth-allow-insecure on
+to '''''/etc/glusterfs/glusterd.vol'''''
+
+and ensure glusterd service is enabled and started before proceeding.
+
 ==== VDSM commands involved ====
 
 == Benefit to oVirt ==
