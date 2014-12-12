@@ -154,4 +154,5 @@ It also helps oVirt truly work as a single pane of glass solution for creating, 
 
 == Open Issues ==
 
-[[Category:Feature]]
+[[Category:Feature|GlusterFS Storage Domain]]
+[[Category:oVirt 3.2 Feature|GlusterFS Storage Domain]]
