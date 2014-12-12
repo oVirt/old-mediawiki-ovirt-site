@@ -135,4 +135,5 @@ http://www.ovirt.org/Talk:Features/Gluster_Geo_Replication
 **  UUID of the source volume can retrieved from the gluster, but its not possible to determine which source cluster it belongs to.
 
 
-[[Category:Feature]]
+[[Category:Feature|Gluster Geo Replication]]
+[[Category:oVirt 3.6 Proposed Feature|Gluster Geo Replication]]
