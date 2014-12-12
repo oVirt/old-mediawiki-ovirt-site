@@ -1,0 +1,48 @@
+<!-- {{autolang|base=yes}} -->
+
+=Self Hosted Engine Gluster Support=
+
+{{Feature|name=Self Hosted Engine Gluster Support|modules=ovirt-hosted-engine-setup|status=POST|version=3.6.0}}
+
+== Summary ==
+This feature enable the user to use Gluster storage for Hosted Engine data domain. 
+
+== Owner ==
+* Name: [[User:SandroBonazzola| Sandro Bonazzola]]
+* Email: <sbonazzo@redhat.com>
+
+== Detailed Description ==
+==== UX changes ====
+==== Config files changes ====
+==== VDSM commands involved ====
+
+== Benefit to oVirt ==
+Users will be able to use Gluster storage as data domain for Hosted Engine.
+
+== Dependencies / Related Features ==
+* [[Features/Gluster_Support]]
+* [[Features/GlusterFS Storage Domain]]
+* GlusterFS 3.7 may have impact on this feature: [http://www.gluster.org/community/documentation/index.php/Planning37 2015-04-29]
+* A tracker bug has been created for tracking issues: {{BZ|1083025}}
+
+== Documentation / External references ==
+* [http://www.gluster.org/ Gluster Home Page]
+* [[Gluster Storage Domain Reference]]
+
+== Testing ==
+Test plan still to be created
+
+== Contingency Plan ==
+Currently all the changes required for this feature are in a single patch. If it won't be ready it won't be merged.
+
+== Release Notes ==
+ ==Self Hosted Engine Gluster Support==
+ Hosted Engine has now added support for [[Features/Self_Hosted_Engine_Gluster_Support|Gluster storage]]
+
+
+== Comments and Discussion ==
+
+* Refer to [[Talk:Self Hosted Engine Gluster Support]]
+
+[[Category:Feature|Self Hosted Engine Gluster Support]]
+[[Category:oVirt 3.6 Proposed Feature|Self Hosted Engine Gluster Support]]
