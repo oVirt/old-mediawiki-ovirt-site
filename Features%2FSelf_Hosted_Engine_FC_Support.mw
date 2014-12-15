@@ -1,0 +1,53 @@
+<!-- {{autolang|base=yes}} -->
+
+=Self Hosted Engine FC Support=
+
+{{Feature|name=Self Hosted Engine FC Support|modules=ovirt-hosted-engine-setup|status=design|version=3.6.0}}
+
+== Summary ==
+This feature enable the user to use FC storage for Hosted Engine data domain. 
+
+== Owner ==
+* Name: [[User:Stirabos| Simone Tiraboschi]]
+* Email: <stirabos@redhat.com>
+
+== Detailed Description ==
+==== UX changes ====
+Using an existing FC storage:
+
+tbd
+
+==== Config files changes ====
+
+tbd
+
+==== VDSM commands involved ====
+tbd
+
+The rest is quite similar to NFS storage.
+
+== Benefit to oVirt ==
+Users will be able to use FC storage as data domain for Hosted Engine.
+
+== Dependencies / Related Features ==
+* A tracker bug has been created for tracking issues: {{BZ|1153278}}
+
+== Documentation / External references ==
+
+== Testing ==
+Test plan still to be created
+
+== Contingency Plan ==
+Currently all the changes required for this feature are in a single patch. If it won't be ready it won't be merged.
+
+== Release Notes ==
+ ==Self Hosted Engine FC Support==
+ Hosted Engine has now added support for [[Features/Self_Hosted_Engine_FC_Support|FC storage]]
+
+
+== Comments and Discussion ==
+
+* Refer to [[Talk:Self Hosted Engine FC Support]]
+
+[[Category:Feature|Self Hosted Engine FC Support]]
+[[Category:oVirt 3.6 Proposed Feature|Self Hosted Engine FC Support]]
