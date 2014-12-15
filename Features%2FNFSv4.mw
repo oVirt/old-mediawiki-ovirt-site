@@ -36,4 +36,5 @@ The new connection specific argument is:
 == User work flows ==
 The user should be able to set a value after being aptly warned.
 
-[[Category:Feature]]
+[[Category:Feature|NFSv4]]
+[[Category:oVirt 3.3 Feature|NFSv4]]
