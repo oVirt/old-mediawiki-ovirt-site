@@ -3,11 +3,11 @@ This document describes the design for geo replication feature under gluster. Gl
 This feature allows the administrator to configure, start, stop and monitor geo-replication for Gluster volumes from oVirt engine. With this the administrator can view the status of geo-replication on Gluster volumes and also would be able to start/stop/configure geo-replication for a volume. GlusterFS geo-replication provides a continuous, asynchronous, and incremental replication service from one site to another over Local Area Networks (LANs), Wide Area Network (WANs), and across the Internet.
 
 ==Owner==
-*Feature owner: Shubhendu Tripathi <shtripat@redhat.com>
-**GUI Component owner: Kanagaraj Mayilsamy <kmayilsa@redhat.com>
-**Engine Component owner: Shubhendu Tripathi <shtripat@redhat.com>
-**VDSM Component owner: Balamurugan Arumugam <barumuga@redhat.com>
-**QA Owner: Sudhir Dharanendraiah <sdharane@redhat.com>
+*Feature owner: Sahina Bose <sabose@redhat.com>
+**GUI Component owner: Anmol Babu <anbabu@redhat.com>
+**Engine Component owner: Sahina Bose <sabose@redhat.com
+**VDSM Component owner: Darshan Narayana Murthy <dnarayan@redhat.com>
+**QA Owner: Kasturi Narra <knarra@redhat.com>
 
 == Current Status ==
 
