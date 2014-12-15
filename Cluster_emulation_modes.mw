@@ -102,7 +102,7 @@ Please see https://bugzilla.redhat.com/show_bug.cgi?id=927874
 
 This below adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page
 
-* Refer to [[Talk:Your feature name]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
+* Refer to [[Talk:Your feature name]]  
 
 [[Category:Feature]]
-[[Category:Template]]
+[[Category:oVirt 3.3 Feature]]
