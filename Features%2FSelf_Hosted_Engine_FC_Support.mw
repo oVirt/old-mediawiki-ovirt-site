@@ -24,7 +24,7 @@ tbd
 ==== VDSM commands involved ====
 tbd
 
-The rest is quite similar to NFS storage.
+It should be not that different from iSCSI storage.
 
 == Benefit to oVirt ==
 Users will be able to use FC storage as data domain for Hosted Engine.
