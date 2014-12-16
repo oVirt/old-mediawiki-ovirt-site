@@ -1,4 +1,5 @@
-= Host Disk Management =
+= Host Device Management =
+{{Feature|name=Host Device Management|modules=engine,gluster|version=3.6|status=In Progress}}
 == Summary ==
 This feature enables to configure disk and storage devices in host.  On Gluster cluster, this helps to identify bricks.  The configuration includes
 
