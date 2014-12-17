@@ -1,12 +1,20 @@
 = oVirt Serial Console  =
 
-== Mission ==
+=== Summary ===
+This feature will allow access to the virtual serial consoles of the VMs managed by an oVirt engine instance using a SSH proxy server.
 
-Enable secure access to VM serial by users via ssh.
+=== Owner ===
+* Name: [[User:Vitordelima| Vitor de Lima]]
+* Email: vdelima@redhat.com
+
+=== Current status ===
+In development.
 
 == Solution ==
 
-=== Outline ===
+[[File:serial_console.svg]]
+
+=== Detailed Outline ===
 
 * Access to console will be performed using SSH protocol.
 * Proxy based solution, authentication between user and proxy and authentication between proxy and host.
