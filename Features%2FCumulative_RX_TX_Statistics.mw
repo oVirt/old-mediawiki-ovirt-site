@@ -2,7 +2,7 @@
 
 = Cumulative Network Usage Statistics =
 
-{{Feature|name=Cumulative RX/TX Interface Statistics|modules=engine,vdsm|status=Design|version=3.6.0}}
+{{Feature|name=Cumulative Network Usage Statistics|modules=engine,vdsm|status=Design|version=3.6.0}}
 
 == Summary ==
 This feature will implement reporting of total received/transmitted bytes per network interface (both for hosts and for VMs), on top of the currently-reported receive/transmit rate.
