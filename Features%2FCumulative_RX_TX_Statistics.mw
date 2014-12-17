@@ -1,6 +1,6 @@
 <!-- {{autolang|base=yes}} -->
 
-= Cumulative RX/TX Interface Statistics =
+= Cumulative Network Usage Statistics =
 
 {{Feature|name=Cumulative RX/TX Interface Statistics|modules=engine,vdsm|status=Design|version=3.6.0}}
 
