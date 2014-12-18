@@ -27,8 +27,8 @@ If you're willing to participate, please add yourself to the table below:
 |-
 | [[User:SandroBonazzola|SandroBonazzola]]  || [[QA:TestCase Hosted Engine Upgrade]] from 3.4.4  || NFS  || basic || Host: Fedora 20<br> VM: Fedora 19 ||{{BZ|1168689}}<br>{{BZ|1168695}}<br>{{BZ|1168709}}
 |-
-| [[User:phurrelmann|Patrick Hurrelmann]]  || clean install, hosted-engine  || iSCSI  || basic || RHEL 7 ||
+| [[User:phurrelmann|Patrick Hurrelmann]]  || clean install, hosted-engine  || iSCSI  || basic || CentOS 7 ||
 |-
-| [[User:Didi|Didi]]  || engine on rhel7  || NFS  || basic || CentOS 7 ||
+| [[User:Didi|Didi]]  || engine on rhel7  || NFS  || basic || RHEL 7 ||
 |-
 |}
