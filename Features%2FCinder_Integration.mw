@@ -1,0 +1,64 @@
+= Cinder Integration =
+{{Feature|name=Cinder Integration|modules=engine|status=Desgin|version=3.6.0}}
+
+== Summary == 
+OpenStack Cinder(/ceph) Integration
+
+== Owner ==
+* [[User:DanielErez|Daniel Erez]] (<derez@redhat.com>)
+* [[User:MaorLipchuk|Maor Lipchuk]] (<mlipchuk@redhat.com>)
+
+== Detailed Description ==
+Managing OpenStack Cinder volumes provisioned by ceph storage through oVirt engine.
+For initial phase, the integration should ensure support for creating/deleting volumes
+from a Cinder storage domain, while monitoring relevant statuses using [[CommandCoordinator|CoCo]] mechanism.
+The engine/vdsm should allow running VMs with attached ceph volumes via librbd library using libvirt support ([http://ceph.com/docs/master/rbd/libvirt/ using libvirt with ceph rbd]).
+As for security, when required, running VMs can authenticate using [http://ceph.com/docs/v0.69/rados/operations/auth-intro/ CEPHX] protocol (secret management will be handled in engine/vdsm).
+
+== Dependencies / Related Features ==
+* [[https://github.com/woorea/openstack-java-sdk woorea]] openstack-java-sdk should be updated and expanded to include cinder-model/cinder-client modules (needed for having an interface to interact with cinder rest-api commands.
+
+== Documentation / External references ==
+* Ceph documentation: http://ceph.com/docs/master/
+* Ceph for Cinder: http://techs.enovance.com/6572/brace-yourself-devstack-ceph-is-here?utm_content=buffer6a1f3&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+* Libvirt with CEPH: http://ceph.com/docs/master/rbd/libvirt/
+* Cinder REST API: http://developer.openstack.org/api-ref-blockstorage-v2.html
+* OpenStack Java SDK: https://github.com/woorea/openstack-java-sdk
+* Introducing Ceph to OpenStack: http://www.sebastien-han.fr/blog/2012/06/10/introducing-ceph-to-openstack/
+
+== Phases ==
+* CRUD for OpenStack Volume (Cinder) provider.
+* CRUD for adding/deleting Cinder disks (including monitoring).
+* CRUD for snapshots with Cinder disks.
+* Running VMs with Cinder disks attached.
+* CEPHX integration for using volumes securely.
+* Support templates.
+* Move/Copy (cinder-to-cinder?/cinder-to-vdsm?/vdsm-to-cinder?).
+* Import/Export.
+
+== Implementation ==
+=== UI ===
+==== OpenStack Volume Providers ====
+[[File:cinder_providers.png]]
+
+==== OpenStack Volume Provider Dialog ====
+[[File:cinder_new_provider.png]]
+
+==== Cinder Storage Domains ====
+[[File:cinder_domains.png]]
+
+==== Cinder Disks List under Storage ====
+[[File:cinder_storage_disks.png]]
+
+==== Cinder Disk Dialog ====
+[[File:cinder_new_disk.png]]
+
+==== Cinder Disks attached to a VM ====
+[[File:cinder_vms_disks.png]]
+
+==== Cinder Disks List ====
+[[File:cinder_disks_storage.png]]
+
+[[Category:Features]]
+[[Category:Feature]]
+[[Category:oVirt 3.6 Proposed Feature]]
