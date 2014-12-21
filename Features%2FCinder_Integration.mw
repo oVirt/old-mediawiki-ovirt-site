@@ -50,8 +50,7 @@ As for security, when required, running VMs can authenticate using [http://ceph.
 
 == VDSM ==
 * Add [https://apps.fedoraproject.org/packages/librbd1 librbd1 package] as dependency to vdsm.spec file.
-* Refactor 'Dirve -> getXML ' to support multiple hosts
-
+* Refactor 'Dirve -> getXML()' to support multiple hosts (represents Ceph monitors) in disk's source element:
  <disk type='network' device='disk'>
         <source protocol='rbd' name='libvirt-pool/new-libvirt-image'>
                 <host name='{monitor-host}' port='6789'/>
