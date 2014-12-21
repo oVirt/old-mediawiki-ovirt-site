@@ -1,5 +1,5 @@
 = Cinder Integration =
-{{Feature|name=Cinder Integration|modules=engine|status=Desgin|version=3.6.0}}
+{{Feature|name=Cinder Integration|modules=engine|status=Design|version=3.6.0}}
 
 == Summary == 
 OpenStack Cinder(/ceph) Integration
@@ -7,6 +7,8 @@ OpenStack Cinder(/ceph) Integration
 == Owner ==
 * [[User:DanielErez|Daniel Erez]] (<derez@redhat.com>)
 * [[User:MaorLipchuk|Maor Lipchuk]] (<mlipchuk@redhat.com>)
+* [[User:NirSoffer|Nir Soffer]] (<nsoffer@redhat.com>)
+* [[User:FedericoSimoncelli|Federico Simoncelli]] (<fsimonce@redhat.com>)
 
 == Detailed Description ==
 Managing OpenStack Cinder volumes provisioned by ceph storage through oVirt engine.
@@ -36,7 +38,14 @@ As for security, when required, running VMs can authenticate using [http://ceph.
 * Move/Copy (cinder-to-cinder?/cinder-to-vdsm?/vdsm-to-cinder?).
 * Import/Export.
 
+== Patches == 
+[http://gerrit.ovirt.org/#/q/status:open+project:ovirt-engine+branch:master+topic:cinder,n,z Topic Branch: Cinder]
+
 == Implementation ==
+
+=== Flow Illustration ===
+[[File:cinder_flow_illustration.png]]
+
 === UI ===
 ==== OpenStack Volume Providers ====
 [[File:cinder_providers.png]]
