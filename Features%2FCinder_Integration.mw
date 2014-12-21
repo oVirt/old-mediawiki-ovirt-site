@@ -46,6 +46,20 @@ As for security, when required, running VMs can authenticate using [http://ceph.
 === Flow Illustration ===
 [[File:cinder_flow_illustration.png]]
 
+== Engine ==
+
+== VDSM ==
+* Add [https://apps.fedoraproject.org/packages/librbd1 librbd1 package] as dependency to vdsm.spec file.
+* Refactor 'Dirve -> getXML ' to support multiple hosts
+
+ <disk type='network' device='disk'>
+        <source protocol='rbd' name='libvirt-pool/new-libvirt-image'>
+                <host name='{monitor-host}' port='6789'/>
+                ...
+        </source>
+        <target dev='vda' bus='virtio'/>
+ </disk>
+
 === UI ===
 ==== OpenStack Volume Providers ====
 [[File:cinder_providers.png]]
