@@ -1,5 +1,5 @@
 = Cinder Integration =
-{{Feature|name=Cinder Integration|modules=engine|status=Design|version=3.6.0}}
+{{Feature|name=Cinder Integration|modules=engine/vdsm|status=Design|version=3.6.0}}
 
 == Summary == 
 OpenStack Cinder(/ceph) Integration
