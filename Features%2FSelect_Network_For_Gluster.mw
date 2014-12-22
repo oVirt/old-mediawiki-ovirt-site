@@ -1,0 +1,12 @@
+{{Feature|name=Select Network for Gluster traffic|modules=engine,gluster|version=3.6|status=Design}}
+
+== Summary ==
+
+== Feature Owner ==
+
+== Proposed User Flow ==
+
+== Implementation Details ==
+
+[[Category: Feature]]
+[[Category: Gluster]]
