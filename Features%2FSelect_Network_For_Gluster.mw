@@ -22,9 +22,7 @@ With existing feature set in Gluster, the proposed solution is to separate out t
 # Edit a host, and assign the above network to one of the host's interface.
 # In Create Volume/ Add Brick dialog, once the host is selected to add a brick, show the list of IP addresses/host names on the host which can be used to add brick. 
 * If the host has an interface with network role "Gluster network", this IP address is shown by default. Otherwise the host's address is used as default.
-
-<Place holder for mockup>
-
+[[File:AddBrickNetwork.png]]
 
 == Implementation Details ==
 === Change to GlusterBricks entity ===
