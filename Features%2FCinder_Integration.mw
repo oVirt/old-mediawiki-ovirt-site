@@ -37,6 +37,7 @@ As for security, when required, running VMs can authenticate using [http://ceph.
 * Support templates.
 * Move/Copy (cinder-to-cinder?/cinder-to-vdsm?/vdsm-to-cinder?).
 * Import/Export.
+* Upload to Image (glance).
 
 == Patches == 
 [http://gerrit.ovirt.org/#/q/status:open+project:ovirt-engine+branch:master+topic:cinder,n,z Topic Branch: Cinder]
