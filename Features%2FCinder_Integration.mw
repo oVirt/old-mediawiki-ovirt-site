@@ -77,7 +77,7 @@ As for security, when required, running VMs can authenticate using [http://ceph.
 ==== Cinder Disks List under Storage ====
 [[File:cinder_storage_disks.png]]
 
-=== Cinder Disk Dialog ====
+==== Cinder Disk Dialog ====
 [[File:cinder_new_disk.png]]
 
 ==== Cinder Disks attached to a VM ====
