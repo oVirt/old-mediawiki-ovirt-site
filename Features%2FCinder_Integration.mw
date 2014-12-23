@@ -50,9 +50,9 @@ As for security, when required, running VMs can authenticate using [http://ceph.
 === Flow Illustration ===
 [[File:cinder_flow_illustration.png]]
 
-== Engine ==
+=== Engine ===
 
-== VDSM ==
+=== VDSM ===
 * Add [https://apps.fedoraproject.org/packages/librbd1 librbd1 package] as dependency to vdsm.spec file.
 * Refactor 'Dirve -> getXML()' to support multiple hosts (represents Ceph monitors) in disk's source element:
  <disk type='network' device='disk'>
@@ -64,26 +64,26 @@ As for security, when required, running VMs can authenticate using [http://ceph.
  </disk>
 * [TBD] [http://ceph.com/docs/v0.69/rados/operations/auth-intro/ CEPHX] secret handling - [http://ceph.com/docs/master/rbd/libvirt/#configuring-the-vm Libvirt with CEPH (Configuring the VM section)].
 
-== UI ==
-=== OpenStack Volume Providers ===
+=== UI ===
+==== OpenStack Volume Providers ====
 [[File:cinder_providers.png]]
 
-=== OpenStack Volume Provider Dialog ===
+==== OpenStack Volume Provider Dialog ====
 [[File:cinder_new_provider.png]]
 
-=== Cinder Storage Domains ===
+==== Cinder Storage Domains ====
 [[File:cinder_domains.png]]
 
-=== Cinder Disks List under Storage ===
+==== Cinder Disks List under Storage ====
 [[File:cinder_storage_disks.png]]
 
-=== Cinder Disk Dialog ===
+=== Cinder Disk Dialog ====
 [[File:cinder_new_disk.png]]
 
-=== Cinder Disks attached to a VM ===
+==== Cinder Disks attached to a VM ====
 [[File:cinder_vms_disks.png]]
 
-=== Cinder Disks List ===
+==== Cinder Disks List ====
 [[File:cinder_disks_storage.png]]
 
 [[Category:Features]]
