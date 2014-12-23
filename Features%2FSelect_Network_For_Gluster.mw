@@ -27,7 +27,8 @@ With existing feature set in Gluster, the proposed solution is to separate out t
 # In Create Volume/ Add Brick dialog, once the host is selected to add a brick, the IP address from the interface in above step is used to add brick. 
 * If the host has no interface with network role "Storage network", the host's address is used.
 [[File:AddBrickNetwork.png]]
-# Ensure that network with storage network role cannot be removed from cluster if it is used
+
+* Ensure that network with storage network role cannot be removed from cluster if it is used
 
 === Change network used by brick ===
 # Provide an edit brick - where user can pick an IP address. This will call the "replace-brick commit force". '''Disruption in service may occur as the brick process will be restarted'''
