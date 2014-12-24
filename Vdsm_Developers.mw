@@ -138,8 +138,8 @@ or
 * Create the directory that will hold the rpm files (repo)
  <nowiki># mkdir /var/www/html/my-vdsm-changes</nowiki>
 * Copy the vdsm packages to repo
- <nowiki># cp /home/your-user/rpmbuild/RPMS/noarch/* /var/www/html/my-vdsm-changes</nowiki>
- <nowiki># cp /home/your-user/rpmbuild/RPMS/x86_64/* /var/www/html/my-vdsm-changes</nowiki>
+ <nowiki># cp ${HOME}/rpmbuild/RPMS/noarch/* /var/www/html/my-vdsm-changes</nowiki>
+ <nowiki># cp ${HOME}/rpmbuild/RPMS/x86_64/* /var/www/html/my-vdsm-changes</nowiki>
 * Create the repo inside the yum.repos.d
  <nowiki># vi /etc/yum.repos.d/my-vdsm-changes.repo
 [my-vdsm-changes]
