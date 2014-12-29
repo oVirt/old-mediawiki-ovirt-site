@@ -85,7 +85,7 @@
 
 * models: support multiple IPv4 and/or IPv6 addresses
 
-* use setupNetworks internally by addNetworks and delNetworks to unify flows.
+* <strike>use setupNetworks internally by addNetworks and delNetworks to unify flows.</strike>
 
 * allow adding DNS configuration on static IP
 
