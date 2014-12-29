@@ -87,8 +87,6 @@
 
 * use setupNetworks internally by addNetworks and delNetworks to unify flows.
 
-* edit bridges (allow editing of everything under the bridge) to allow editing a network without discoonecting inter-vm connectivity.
-
 * allow adding DNS configuration on static IP
 
 * stop reading ifcfg files in netinfo.py
