@@ -25,9 +25,19 @@ New upgrade scripts should be pushed into git with a higher version than the lat
  Indexes:
     "schema_version_primary_key" PRIMARY KEY, btree (id)
 
-'''NOTE : If you are testing upgrade, you must compile the origin and upgraded branch to the same PREFIX.
-If you connect existing database into new instance, you need to re-encrypt all passwords with the key of the new instance.
-'''
+'''NOTE : If you are testing upgrade, you must compile the origin and upgraded branch to the same PREFIX.'''
+
+In production, you should 
+  1. install ovirt-engine with remote database
+  2. reinstall machine
+  3. install ovirt-engine with database of (1)
+or:
+  1. install ovirt-engine
+  2. execute engine-cleanup without cleaning up database
+  3. install ovirt-engine reuse database
+
+
+
 
 ===     What is my database version? ===
   select version,script,current from schema_version order by id desc limit 1;
