@@ -50,6 +50,8 @@
 
 * start Vdsm only when it receives a request (integrate with systemd)
 
+* replace time.time() with monotonic_time() whenever possible.
+
 === Networking ===
 
 * <strike>work in conjunction with Network Manager.</strike> works in F20.
