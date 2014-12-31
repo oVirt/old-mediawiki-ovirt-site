@@ -39,6 +39,7 @@ Edit file '''/var/lib/pgsql/data/postgresql.conf'''
 Restart postgresql:
   service postgresql restart 
 
+
 On new DWH machine B:
 * yum install ovirt-engine-dwh
 * engine-setup - supply existing credentials
