@@ -90,9 +90,6 @@ Some installations might want to separate for security reasons, e.g. to give som
 
 === Documentation / External references ===
 
-https://bugzilla.redhat.com/1156009
-https://bugzilla.redhat.com/1156015
-
 An annotated [[Separate-Reports-Host#Example_setup|example setup]] on three machines
 
 === Testing ===
