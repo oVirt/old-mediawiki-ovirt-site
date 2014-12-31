@@ -71,6 +71,7 @@ On the new reports machine C:
  engine-setup
 * DWH credentials are located at '''/etc/ovirt-engine-dwh/ovirt-engine-dwhd.conf.d/10-setup-database.conf''' 
 
+
 On the engine machine A:
 * If the user wants to remove the other reports installation
 ** "Saved Reports" can be migrated to the new installation ,by following the steps of export and import saved reports, according to the documentations .
