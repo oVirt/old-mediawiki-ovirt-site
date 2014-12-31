@@ -2,7 +2,7 @@
 
 == Separate DWH Host ==
 
-{{Feature|name=Separate DWH Host|modules=engine|status=Design|version=3.5.0}}
+{{Feature|name=Migrating DWH and Reports|modules=engine|status=Design|version=3.5.0}}
 
 === Summary ===
 Allow ovirt-engine-dwh and ovirt-engine-reports to be migrated and configured by engine-setup on a separate machine, without requiring ovirt-engine to be on the same host.
