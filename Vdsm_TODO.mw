@@ -41,6 +41,8 @@
 
 * add migration tests
 
+* test tc add filter etc.
+
 * test cannonizeHostPort
 
 == Features ==
