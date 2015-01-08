@@ -3,18 +3,15 @@
 <noinclude>
 <startfeed/>
 </noinclude>
-{{Event|name=[//www.openworldforum.paris/en/ Open World Forum]|date=October 30-November 1, 2014|location=Paris, France|lead=Open World Forum's "CODE" track will helps attendees better understand and leverage your own projects by exposing the key subjects that are transforming the open source ecosystem: Web, mobile phones and tablets, Big Data, cloud infrastructure, software quality, emerging languages and platforms.}}
+{{Event|name=[//fosdem.org/2015/ FOSDEM'15]|date=January 31-February 1, 2015|location=Brussels, Belgium|lead=FOSDEM is a free event that offers open source communities a place to meet, share ideas and collaborate.}}
 
-{{Event|name=[//www.openstack.org/summit/openstack-paris-summit-2014/ OpenStack Summit]|date=November 3-7, 2014|location=Paris, France|lead=The OpenStack Summit is a five-day conference for developers, users, and administrators of OpenStack Cloud Software.}}
+{{Event|name=[//devconf.cz/ DevConf.cz]|date=February 6-8, 2015|location=Brno, Czech Republic|lead=DevConf.cz brings together around 1000 developers, quality engineers, administrators, and users from the Fedora, JBoss, and Red Hat communities.}}
 
-{{Event|name=[//www.usenix.org/conference/lisa14 LISA 14]|date=November 9-14, 2014|location=Seattle, Washington|lead=The LISA conference has long served as the annual vendor-neutral meeting place for the wider system administration community.}}
+{{Event|name=[//www.socallinuxexpo.org/scale13x SCALE 13X]|date=February 19-22, 2015|location=Los Angeles, California|lead=As the first-of-the-year Linux and Free/Open Source Software (FOSS) expo in North America, SCALE 13x expects to host more than 100 exhibitors this year, along with nearly 130 sessions, tutorials, and special events.}}
 
 <noinclude>
 <endfeed/>
 
-{{Event|name=[//fosdem.org/2015/ FOSDEM'15]|date=January 31-February 1, 2015|location=Brussels, Belgium|lead=FOSDEM is a free event that offers open source communities a place to meet, share ideas and collaborate.}}
-
-{{Event|name=[//www.socallinuxexpo.org/scale13x SCALE 13X]|date=February 19-22, 2015|location=Los Angeles, California|lead=As the first-of-the-year Linux and Free/Open Source Software (FOSS) expo in North America, SCALE 13x expects to host more than 100 exhibitors this year, along with nearly 130 sessions, tutorials, and special events.}}
 
 [[Category:Events]]
 </noinclude>
