@@ -46,7 +46,6 @@ As for security, when required, running VMs can authenticate using [http://ceph.
 * CRUD for volume types.
 * Import/Export (VMs/Templates).
 * Disk profiles.
-* Live merge.
 * Live snapshot.
 
 == Open Issues ==
