@@ -188,7 +188,7 @@ The specific values means:
 |-
 | virtio-scsi || || N || || Y || || || Y || || Y || N || N || Instance/User ||
 |-
-| vm init || cloud-init or sysprep|| N || || N || || || Y || || Y || Y || N || User ||
+| vm init || cloud-init or sysprep|| N || || N || || || Y || || Y || N || N || User ||
 |-
 |}
 
