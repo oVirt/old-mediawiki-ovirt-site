@@ -30,9 +30,8 @@ If an update is available it will appear there. Whether there is an update or no
 <br/>
 An event log notifying an engine upgrade is available will be logged. The admin could subscribe and be notified via one of the notification methods for this event.
 <br/>
-<br/> Open question here - do we need to support checking whether an update is available by demand?
 
-=== Make it ease to know whether a host has an available update, and what cluster levels this update supports ===
+=== Make it easier to know whether a host has an available update, and what cluster levels this update supports ===
 Currently, for oVirt-node, it already shows you that there is an upgrade available, by an alert on the bottom of the general sub-tab.<br/>
 We can add a similar alert also for regular hosts, showing more details on the cluster level as well.<br/>
 Once the host is moved to maintenance, the option to "upgrade" will be shown and enabled in the host context menu.<br/>
