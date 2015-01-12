@@ -22,7 +22,7 @@ Enhancing oVirt template model to allow for more flexible options in creating vi
  
 == Current status ==
 * Target Release: 3.5
-* Status: under design and discussion.
+* Status: instance types implemented, images on review
 
 == Background ==
 In oVirt 3.1 the template definition includes both the hardware configuration and the image
