@@ -53,7 +53,7 @@ oVirt can leverage Satellite/Katello capabilities to monitor and update the host
 Satellite/Katello should be registered and configured to the relevant repositories.
 Host should be registered to satellite/katello and properly configured (including katello-agent installed, subscribed to the relevant content view/environment).
 See the following figure for the topology:
-[[File:OVirt-Katello_integration.jpg|800px]]
+[[File:OVirt-Katello_integration.jpg|700px]]
 
 The satellite/katello should be registered as Foreman/Host provider in the system, as an external provider.<br>
 ==== Update Host Flow ====
