@@ -10,8 +10,6 @@ In the scope of this feature we expose specific host configuration file and allo
 == Owner ==
 * Name: Yaniv Bronheim
 * Email: ybronhei@redhat.com
-* Name: Oved Ourfali
-* Email: ovedo@redhat.com
 
 == Current Status ==
 * Planning design and specification details for the feature.
