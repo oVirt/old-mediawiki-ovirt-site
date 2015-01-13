@@ -43,7 +43,7 @@ The command parameters should have parameters that enables oVirt to generate an 
 === Benefit to oVirt ===
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
 
-Enabeling to see problems that were reported by external syatems in the entity main view at the point in time those problem occur 
+Enabeling to see problems that were reported by external systems in the entity main view at the point in time those problems occur
 
 === Dependencies / Related Features ===
 <!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
