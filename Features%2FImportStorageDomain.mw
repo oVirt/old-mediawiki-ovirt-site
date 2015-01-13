@@ -246,7 +246,6 @@ After the iscsilogin operation, the host is already connected to the targets in 
     <iscsi_target>iqn.name2.120.02</iscsi_target>
     <iscsi_target>iqn.name3.120.03</iscsi_target>
  </action>
-<BR/>
 The response which should returned as a list of Storage Domains, as
 follow:
  <action>
