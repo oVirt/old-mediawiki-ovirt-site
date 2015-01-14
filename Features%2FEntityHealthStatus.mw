@@ -4,11 +4,11 @@
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
 Provide a mechanism to set entity health status which will be displayed in the UI as follows
 
-OK (Green) 
-Info (Blue) 
-Warning (Yellow) 
-Critical (Orange) 
-Failure (Red) 
+OK (Green)<br/>
+ Info (Blue) <br/>
+Warning (Yellow) <br/>
+Critical (Orange) <br/>
+Failure (Red) <br/>
 
 The Health Status field will be returned as part of the retrieved entity when a call to display the entity is done using the RST API.
 
