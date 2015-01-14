@@ -2,6 +2,8 @@
 
 =VM Icons=
 
+{{Feature|name=VM Icons|status=Design|version=3.6.0}}
+
 ==Summary==
 
 It allows users to add icon to VMs and Templates in order to customize the appearance of these entities in userportal.
