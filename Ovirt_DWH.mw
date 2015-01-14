@@ -32,7 +32,7 @@ The below steps includes  historical statistics database.
 
 == oVirt  Engine Reports ==
 oVirt reports package provides a suite of pre-configured reports that enable you to monitor the system. The reports module is based on JasperReports and JasperServer.
-Please refer to   [[Features/Ovirt_Reports|Ovirt_Reports]] for details.
+Please refer to   [[Ovirt_Reports|Ovirt_Reports]] for details.
 
 [[Category:Documentation]]
 [[Category:DWH]]
