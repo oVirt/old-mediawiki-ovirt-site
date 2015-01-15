@@ -35,7 +35,7 @@ There's no change to the existing user interface for Add Brick.
 * Ensure that network with storage network role cannot be removed from cluster if it is used
 
 === Change network used by brick ===
-# Provide an edit brick - where user can pick an IP address. This will call the "replace-brick commit force". '''Disruption in service may occur as the brick process will be restarted'''
+# Provide an edit brick - where user can pick an IP address. This will call the "replace-brick commit force". '''Disruption in service may occur for distributed volumes as the brick process will be restarted. For replicated volumes, there might be a performance degradation.'''
 
 [[File:Edit brick.png]]
 
