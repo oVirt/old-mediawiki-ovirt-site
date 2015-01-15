@@ -49,7 +49,8 @@ As for security, when required, running VMs can authenticate using [http://ceph.
 * Quota (Cinder/Engine).
 * Import/Export (VMs/Templates).
 * Disk profiles.
-* Live snapshot.
+* Live snapshots.
+* Sync Cinder data with engine DB.
 
 == Open Issues ==
 * Verify limits/quota against Cinder on Disk creation.
