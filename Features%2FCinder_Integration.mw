@@ -34,10 +34,12 @@ As for security, when required, running VMs can authenticate using [http://ceph.
 * CRUD for snapshots with Cinder disks.
 * Fetching Volume Types - ceph/lvm/etc.
 * Running VMs with Cinder disks attached.
-* Support templates (clone volume/create volume from snapshot - use [http://blueprints.launchpad.net/cinder/+spec/add-cloning-support-to-cinder clone volume] and [https://blueprints.launchpad.net/cinder/+spec/add-flat-volume-api flat volume] (if available).
 * CEPHX integration for using volumes securely.
 * Import (from Cinder to engine DB).
 * Permissions (MLA).
+* Templates
+** Add template - clone volume/create volume from snapshot - use [http://blueprints.launchpad.net/cinder/+spec/add-cloning-support-to-cinder clone volume] and [https://blueprints.launchpad.net/cinder/+spec/add-flat-volume-api flat volume] (if available).
+** Add VM from template - create volume from source volume (thin).
 
 == Future Work? ==
 * Move VM disk/Copy Template disk (cinder-to-cinder?/cinder-to-vdsm?/vdsm-to-cinder?).
