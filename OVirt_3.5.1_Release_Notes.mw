@@ -39,7 +39,7 @@ For those who already upgraded from 3.4 to 3.5 a new guide is now available in t
 =Bugs fixed=
 
 ==oVirt Engine==
-'''Fixed in ovirt-engine-3.5.1_rc1'''<br>
+'''Fixed in oVirt 3.5.1 RC1'''<BR>
 {{BZ|974859}} - engine [TEXT]: unclear error message when extend storage domain fails<BR>
 {{BZ|996055}} - engine does not log osinfo file having already used id.value<BR>
 {{BZ|1003266}} - [engine-webadmin] uninformative error on UI when remove ISO domain with format fails due to VDSNetworkException<BR>
