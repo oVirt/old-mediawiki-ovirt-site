@@ -422,6 +422,7 @@ For those who already upgraded from 3.4 to 3.5 a new guide is now available in t
 {{BZ|1178535}} - migration to additional host fails before restarting HA agent<BR>
 
 ==ovirt-image-uploader==
+'''Fixed in oVirt 3.5.1 RC1'''<BR>
 {{BZ|1146070}} - ERROR: Problem connecting to the REST API.  Is the service available and does the CA certificate exist?<BR>
 {{BZ|1150922}} - 40% perf regression in image uploader<BR>
 {{BZ|1156107}} - non-ovf file is not reported properly<BR>
