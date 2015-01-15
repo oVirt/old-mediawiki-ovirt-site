@@ -395,6 +395,13 @@ For those who already upgraded from 3.4 to 3.5 a new guide is now available in t
 {{BZ|1177952}} - [engine-backend] [external-provider] Glance integration: UploadImage (Export disk) fails with java.lang.String<BR>
 {{BZ|1178499}} - [JSONRPC] Disk resize fails while vm is down<BR>
 
+==ovirt-hosted-engine-ha==
+'''Fixed in oVirt 3.5.1 RC1'''<BR>
+{{BZ|1151344}} - Can not launch rhevm as a monitored service as it says after shutdown engine vm<BR>
+{{BZ|1158925}} - agent crashes on wrong metadata<BR>
+{{BZ|1164557}} - Wrong calculation of host score in case of gateway or bridge problem<BR>
+{{BZ|1171452}} - Host that added to HE environment after upgrade from 3.4->3.5 failed to connect to storage<BR>
+
 ==ovirt-hosted-engine-setup==
 '''Fixed in oVirt 3.5.1 RC1'''<BR>
 {{BZ|1086032}} - If another network has the "required" flag a new host will fail and timeout<BR>
