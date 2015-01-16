@@ -1,54 +1,39 @@
-== Responsibilities: ==
-=== ovirt-engine-setup===
-Maintainers:
-* Ofer Schreiber <oschreib@redhat.com>
-* Sandro Bonazzola <sbonazzo@redhat.com>
+=Who's in Integration team?=
+The members of the Integration team are
+* [[User:Didi|Yedidyah Bar David]]
+* [[User:Doron|Doron Fediuck]]
+* [[User:SandroBonazzola|Sandro Bonazzola]]
+* [[User:Stirabos|Simone Tiraboschi]]
+* [[User:Lveyde|Lev Veyde]]
 
-Outstanding contributes:
-* Alex Lourie <alourie@redhat.com>
-* Alon Bar-Lev <alonbl@redhat.com>
-* Juan Antonio Hernandez Fernandez <jhernand@redhat.com>
-* Yedidyah Bar David <didi@redhat.com>
+Outstanding contributors
+* [[User:Alonbl|Alon Bar-Lev]]
+* [[User:APuimedo| Antoni Segura Puimedon]]
+* [[User:Dcaroest|David Caro]]
+* [[User:juan|Juan Hernandez]]
 
-===Tools===
-* log-collector
-* iso-uploader
-* image-uploader
+=What does Integration team do?=
+Leads the following projects:
+* oVirt Engine Setup
+* oVirt DWH Setup
+* oVirt Reports Setup
+* oVirt Hosted Engine Setup
+* oVirt Websoket Proxy Setup
+* oVirt Iso Uploader
+* oVirt Image Uploader
+* oVirt Log Collector
+* oVirt Release
+* [[oVirt Live]]
+* [[Features/oVirt Windows Guest Tools|oVirt Windows Guest Tools]]
+* [[oVirt Quality Assurance]]
 
-Maintainers:
-* Keith Robertson <kroberts@redhat.com>
-* Sandro Bonazzola <sbonazzo@redhat.com>
-* Kiril Nesenko <knesenko@redhat.com>
+Collaborates with other communities / projects:
+* [https://getfedora.org/ Fedora]
+* [http://centos.org/ CentOS]
+* [https://github.com/sosreport SOS]
+* [https://fedorahosted.org/sanlock/ Sanlock]
+* [[Vdsm|VDSM]]
+* [http://libvirt.org/ Libvirt]
+* [[Infra|oVirt Continuous Integration / Infra]]
 
-Outstanding contributes:
-* Alex Lourie <alourie@redhat.com>
-* Alon Bar Lev <alonbl@redhat.com>
-
-=== Hosted Engine ===
-* ovirt-hosted-engine-setup
-
-Maintainers:
-* Sandro Bonazzola <sbonazzo@redhat.com>
-
-Outstanding contributes:
-* Alex Lourie <alourie@redhat.com>
-* Yedidyah Bar David <didi@redhat.com>
-
-===oVirt-live===
-wiki:  [[OVirt_Live]]
-
-Maintainers:
-* Moran Goldboim <mgoldboi@redhat.com>
-
-Outstanding contributes:
-* Ohad Basan <obasan@redhat.com>
-
-==oVirt 3.3 features==
-{| class="wikitable"
-|-
-! Feature !! Status !! Date
-|-
-| [[Features/Otopi_Infra_Migration|Otopi_Infra_Migration]] || style="background-color: lightgreen;"| Done|| 19/7/2013
-|-
-|  [[Features/Self_Hosted_Engine|Hosted_Engine]] || style="background-color: orange;"|Work in progress|| 17/11/2013
-|}
+[[Category:Integration]]
