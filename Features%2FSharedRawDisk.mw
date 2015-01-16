@@ -49,4 +49,5 @@ Quota has to be taken in consideration, for every new feature that will involve 
 
 === Comments and Discussion ===
 * See [[Talk:Features/SharedRawDisk]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
-[[Category: Feature]]
+[[Category: Feature|SharedRawDisk]]
+[[Category:oVirt 3.1 Feature|SharedRawDisk]]
