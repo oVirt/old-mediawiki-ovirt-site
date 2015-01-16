@@ -7,3 +7,4 @@ sudo -u supybot supybot -d /var/lib/supybot/ovirtbot.conf
 </pre>
 
 [[Category:Infrastructure documentation]]
+[[Category:Infrastructure]]
