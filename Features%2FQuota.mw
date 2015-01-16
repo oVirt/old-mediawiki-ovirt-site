@@ -218,4 +218,5 @@ Enforcement of network usage and storage throughput using the Quota entity.
 * UP: User Portal
 
 [[Category:SLA]]
-[[Category: Feature]]
+[[Category: Feature|Quota]]
+[[Category:oVirt 3.1 Feature|Quota]]
