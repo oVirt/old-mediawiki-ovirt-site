@@ -23,9 +23,9 @@ If you're willing to participate, please add yourself to the table below:
 |-
 | [[User:Stirabos|Simone Tiraboschi]]  || hosted-engine from scratch || NFSv4 || basic || CentOS 6.6 for the hosts and for the engine VM ||
 |-
-| [[User:SandroBonazzola|SandroBonazzola]]  || [[QA:TestCase Hosted Engine Upgrade]] from 3.4.4  || NFS  || basic || CentOS 6.6 || {{BZ|1168689}}<br>{{BZ|1168695}}<br>{{BZ|1168709}}
+| [[User:SandroBonazzola|SandroBonazzola]]  || [[QA:TestCase Hosted Engine Upgrade]] from 3.4.4  || NFS  || basic || CentOS 6.6 ||<s> {{BZ|1168689}}<br>{{BZ|1168695}}<br>{{BZ|1168709}}</s>
 |-
-| [[User:SandroBonazzola|SandroBonazzola]]  || [[QA:TestCase Hosted Engine Upgrade]] from 3.4.4  || NFS  || basic || Host: Fedora 20<br> VM: Fedora 19 ||{{BZ|1168689}}<br>{{BZ|1168695}}<br>{{BZ|1168709}}
+| [[User:SandroBonazzola|SandroBonazzola]]  || [[QA:TestCase Hosted Engine Upgrade]] from 3.4.4  || NFS  || basic || Host: Fedora 20<br> VM: Fedora 19 ||<s>{{BZ|1168689}}<br>{{BZ|1168695}}<br>{{BZ|1168709}}</s>
 |-
 | [[User:phurrelmann|Patrick Hurrelmann]]  || clean install, hosted-engine  || iSCSI  || basic || CentOS 7 ||
 |-
