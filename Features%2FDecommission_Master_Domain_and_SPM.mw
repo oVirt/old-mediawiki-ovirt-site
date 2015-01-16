@@ -89,7 +89,7 @@ The old API commands that should be re-implemented are:
 |-
   | deleteImage || multiple deleteVolumeV2 + wipeVolume (to post-zero the volume)
 |-
-  | deleteVolume || deleteVolume
+  | deleteVolume || deleteVolumeV2
 |-
   | downloadImage || createVolumeV2 + copyVolume
 |-
