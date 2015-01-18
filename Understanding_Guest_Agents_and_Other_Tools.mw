@@ -50,9 +50,9 @@ For Windows VMs the drivers must be installed. The VirtIO drivers are available 
 |-
 | ||[[How_to_create_a_Fedora_Virtual_Machine|Fedora]] || RHEL || CentOS || [[How_to_create_a_Ubuntu_Virtual_Machine|Ubuntu]] || [[How_to_install_the_guest_agent_in_Debian|Debian]] || openSuSE || SuSE Linux Enterprise
 |-
-| oVirt Guest Agent || [[How_to_install_the_guest_agent_in_Fedora|Yes]] || Yes(6) || Yes(6) || [[Feature/GuestAgentUbuntu|Yes]] || [[How_to_install_the_guest_agent_in_Debian|Yes]] || [[Feature/GuestAgentOpenSUSE|Yes]] || [[Feature/GuestAgentSLES|Yes]]
+| oVirt Guest Agent || [[How_to_install_the_guest_agent_in_Fedora|Yes]] || Yes || Yes || [[Feature/GuestAgentUbuntu|Yes]] || [[How_to_install_the_guest_agent_in_Debian|Yes]] || [[Feature/GuestAgentOpenSUSE|Yes]] || [[Feature/GuestAgentSLES|Yes]]
 |-
-| VirtIO Drivers || Built-in(3) || Built-in(3) || Built-in(3) || Built-in(3) || Built-in(3) || Built-in(3) || Built-in(3) 
+| VirtIO Drivers || Built-in || Built-in || Built-in || Built-in || Built-in || Built-in || Built-in 
 |-
 | Spice Agent || [[How_to_install_the_spice_guest_agent|Yes]] || [[How_to_install_the_spice_guest_agent|Yes]]|| [[How_to_install_the_spice_guest_agent|Yes]] || [[How_to_install_the_spice_guest_agent|Yes]] || [[How_to_install_the_spice_guest_agent|Yes]] ||  - || - 
 |-
