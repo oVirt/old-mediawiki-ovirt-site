@@ -227,8 +227,8 @@ The <b>VFs configuration</b> on a SR-IOV enabled nic is represented as a sub res
 **<b>GET</b> return the VFs configuration of the nic (num of VFs, allowed networks and labels).
 **<b>PUT</b> updating the VFs configuration of the nic . (executes- UpdateHostNicVfsConfigCommand)
 <pre>
-          <num_of_vfs>num</num_of_vfs>
-          <all_networks_allowed>false</all_networks_allowed>
+  <num_of_vfs>num</num_of_vfs>
+  <all_networks_allowed>false</all_networks_allowed>
 </pre>
 
 <pre>
