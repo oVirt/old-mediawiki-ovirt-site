@@ -70,7 +70,7 @@ Proposed design requires following browser 'HTML5' features:
 
 Current minimal supported version of IE:
 * webadmin: 9
-* userportal 8
+* userportal: 8
 
 Hence the functionality can't be fully implemented for all supported browsers. Proposed solution:
 * Limit the icon size to 24kB. It should be ok for jpg, gif and 'iconic' graphic in png. It can sometimes cause problem for 'photographic' png. This restriction allows to '''display''' VM Icons on all supported browsers.
