@@ -16,12 +16,13 @@ Paste in the following source.
 <pre>deb http://download.opensuse.org/repositories/home:/evilissimo:/ubuntu:/12.04/xUbuntu_12.04/</pre>
 Press CTRL + O to save and CTRL + X to exit
 Then, continuing in the terminal session, type the following:
-# wget http://download.opensuse.org/repositories/home:/evilissimo:/ubuntu:/12.04/xUbuntu_12.04/Release.key
-# apt-key add - < Release.key  
-# apt-get update
-# apt-get install ovirt-guest-agent
-# service ovirt-guest-agent start</pre>
-The above will install ovirt-guest-agent. Accept the prompt to install '''ovirt-guest-agent''' and any required dependencies.
+<pre># wget http://download.opensuse.org/repositories/home:/evilissimo:/ubuntu:/12.04/xUbuntu_12.04/Release.key
+# sudo apt-key add - < Release.key  
+# sudo apt-get update
+# sudo apt-get install ovirt-guest-agent
+# sudo service ovirt-guest-agent start
+# sudo service ovirt-guest-agent enable</pre>
+The above will install ovirt-guest-agent, start it, and enable it at boot. Accept the prompt to install '''ovirt-guest-agent''' and any required dependencies.
 
 For Ubuntu 13.10
 # From a terminal session, type the following 
@@ -44,7 +45,10 @@ For Ubuntu 14.04
 The above will install ovirt-guest-agent. Accept the prompt to install '''ovirt-guest-agent''' and any required dependencies.
 
 == Starting the service ==
-Ubuntu automatically starts the ovirt-guest-agent service. 
+You can start the Ubuntu ovirt-guest-agent service by using the following command: 
+<pre>sudo service ovirt-guest-agent start</pre>
+You can have the service start at boot by using the following command:
+<pre>sudo service ovirt-guest-agent enable>
 
 == Troubleshooting ==
 The web admin interface may take some time to start displaying the memory usage and other types of information. If you find that after some time this information has not been populated, restart the VM by performing a shut down or power off, power on, and verify that the service is started by running. A reboot of the virtual machine did not seem to resolve the issue.
