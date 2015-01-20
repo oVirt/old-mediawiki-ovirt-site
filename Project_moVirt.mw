@@ -14,8 +14,8 @@ moVirt is a mobile (Android) client for the oVirt engine. It uses the oVirt REST
 * Email: [mailto:sphoorti.joglekar@gmail.com sphoorti.joglekar@gmail.com]
 
 == Status ==
-* Demo release done 
-* Under heavy development
+* All basic flows implemented including triggers and bVNC integration
+* Fixing some small bugs
 
 == External Sources ==
 * Project Page: https://github.com/matobet/moVirt
