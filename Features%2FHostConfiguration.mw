@@ -1,4 +1,4 @@
-= Host Configuration =
+= Host Configuration Management =
 
 == Summary ==
 oVirt 3.6 provides to admin users to set the host configuration through the UI and API. Vdsm component is the initial interface to the host, configuring the file /etc/vdsm/vdsm.conf allows to manage variance variables and attributes regarding storage, network and virt life cycle operations such as communication details, hardware usage, kernel variables and more. Each attribute is part of specific use-case and some of them are not exposed to modification by any engine API verbs. 
