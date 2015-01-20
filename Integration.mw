@@ -35,6 +35,7 @@ Collaborates with other communities / projects:
 * [[Vdsm|VDSM]]
 * [http://libvirt.org/ Libvirt]
 * [[Infra|oVirt Continuous Integration / Infra]]
+* [http://www.gluster.org/ Gluster]
 
 ==How may I help?==
 * Fixing one of the [https://bugzilla.redhat.com/buglist.cgi?quicksearch=product%3Aovirt%20whiteboard%3Aintegration%20status%3Anew open bugs] we have
