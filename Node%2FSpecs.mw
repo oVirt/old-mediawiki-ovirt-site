@@ -98,7 +98,7 @@ The following table compares how three different technologies could implement th
 | (plain) Image or Image on Livecd in RPM, or for packages through update channels
 
 |-
-| '''Installation and Upgrade'''
+| '''Installation/Upgrade'''
 
 |-
 | ''Installer''
