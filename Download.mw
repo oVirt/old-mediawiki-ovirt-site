@@ -34,7 +34,7 @@ Experienced users can also compile from source, using the guides for the [[OVirt
 ; Supported Hosts:
 :* Fedora 20
 :* CentOS 6.6
-:* CentOS 7.0 (Host)
+:* CentOS 7.0
 :* Red Hat Enterprise Linux 6.6
 :* Red Hat Enterprise Linux 7.0 (Host)
 :* Scientific Linux 6.6
