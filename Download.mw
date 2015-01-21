@@ -33,11 +33,9 @@ Experienced users can also compile from source, using the guides for the [[OVirt
 <div class="span6">
 ; Supported Hosts:
 :* Fedora 20
-:* CentOS 6.6
-:* CentOS 7.0
-:* Red Hat Enterprise Linux 6.6
-:* Red Hat Enterprise Linux 7.0
-:* Scientific Linux 6.6
+:* CentOS 6.6, 7.0
+:* Red Hat Enterprise Linux 6.6, 7.0
+:* Scientific Linux 6.6, 7.0
 </div>
 
 <!-- span -->
