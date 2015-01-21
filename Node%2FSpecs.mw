@@ -73,7 +73,7 @@ The following table compares how three different technologies could implement th
 |-
 | ''Build tool''
 | koji / livecd-tools
-| [http://www.projectatomic.io/blog/2014/04/build-your-own-atomic-host-on-fedora-20/ ostree-builder]
+| [http://www.projectatomic.io/blog/2014/04/build-your-own-atomic-host-on-fedora-20/ ostree-builder], koji
 | koji / lorax (livemedia-creator) or imgfac
 
 |-
@@ -87,45 +87,49 @@ The following table compares how three different technologies could implement th
 
 |-
 | ''Installation Media''
-| LiveCD
-| boot.iso + embedded kickstart (LiveCD+ks)
-| LiveCD
+| CD, USB, CF, PXE
+| Inheriting from anaconda (at least CD, USB, PXE)
+| Inheriting from anaconda (at least CD, USB, PXE)
 
 |-
 | ''Upgrade delivery''
-| LiveCD in RPM
-| ostree in RPM or with "Atomic Manager"
-| LiveCD in RPM or yum
+| Image on LiveCD in RPM
+| ostree with "Atomic Manager" or offline-tree
+| (plain) Image or Image on Livecd in RPM, or for packages through update channels
 
 |-
 | '''Installation and Upgrade'''
 
 |-
 | ''Installer''
-| custom (ovirt-node-installer)
+| ovirt-node-installer
 | anaconda
 | anaconda
-
-Notes: Needs some improvements. ([https://bugzilla.redhat.com/show_bug.cgi?id=1099222 liveimg support in textmode] and [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=anaconda "raw" payload installation])
+'Notes: Could be improved ([https://bugzilla.redhat.com/show_bug.cgi?id=1099222 liveimg support in textmode] and [https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&component=anaconda "raw" payload installation])'
 
 |-
-| ''Setup TUI''
-| custom (ovirt-node-setup)
-| custom (ovirt-node-setup)
-| custom (ovirt-node-setup)
+| ''Driver disks''
+| N/A
+| 'Unclear'
+| Yes
+
+|-
+| ''Host-Configuration TUI''
+| ovirt-node-setup
+| ovirt-node-setup
+| ovirt-node-setup
 
 |-
 | ''Upgrade''
-| Image based / One main, one fallback LV
+| Partition based, one active, one backup/for upgrades
 | Tree based/ Many (os)trees on a rootfs
-| Image or package based / Many images in a VG or yum update
+| Image or package based / Many images in a VG or for packages with yum update
 
 |-
 | ''Rollback''
-| Boot into other LV
+| Boot into other partition
 | Boot into specific tree
 | Boot into specific LV
-
 
 |-
 | '''Plugins'''
@@ -139,15 +143,15 @@ Notes: Needs some improvements. ([https://bugzilla.redhat.com/show_bug.cgi?id=10
 |-
 | ''Runtime plugin installation''
 | N/A
-| N/A (currently)
-| Using a package manager
+| [https://github.com/cgwalters/atomic-pkglayer POC for rpm installation]
+| Using a package manager (rpm, yum) or a cfg mgmt system
 '''Limitation: bootloader should be prevented to be upgraded'''
 
 |-
 | ''Offline plugin installation''
 | Using edit-node, deploy new iso
 | Add package to (os)tree, build on server side, deploy new tree
-| Using new libguestfs (or wrapper around it)
+| Using libguestfs (or wrapper around it) or a different compose process
 
 
 |-
@@ -155,29 +159,29 @@ Notes: Needs some improvements. ([https://bugzilla.redhat.com/show_bug.cgi?id=10
 
 |-
 | ''Data storage (for big files)''
-| /data is mounted to a Data LV
-| Writeable /var, mounted to another LV
-| Basically the whole fs, but /var should also be mounted to a separate LV
+| On a separate storage (/data is on another LV)
+| On a separate storage (/var is on another LV)
+| On a separate storage (another LV), could also be /
 
 |-
 | ''Persistence (for individual/random files) between boots''
-| Using writeable Config LV and bind-mounts into target
+| Persisted paths are kept on a separate LV (/config) and are bind-mounted into place at boot by a service
+'''Limitation: I.e. the boot process can not be changed and kernel modules can not be persisted'''
 
-'''Limitation: I.e. kernel modules can not be persisted'''
-| Writeable /etc
+| Changes can be made to files in /etc
+'''Limitation: I.e. the boot process can not be changed and kernel modules can not be persisted'''
 
-'''Limitation: I.e. kernel modules can not be persisted'''
-| Writeable filesystem and/or Config LV
+| Like any normal system, as the filesystem is writable
 
 |-
 | ''Persistence (for individual/random files) between upgrades''
-| Using writeable Config LV and bind-mounts
-
+| (same as above) This effectively means that persisted files are "copied" or "kept as is" between upgrades. Additional logic can take place in the upgrade logic.
 '''Limitation: I.e. kernel modules can not be persisted'''
-| Copying /etc from N to N+1 and upgrade tree could be modified
 
+| Effectively a [http://www.projectatomic.io/docs/os-updates/ "rebase" or three-way merge]. The changes done to the previous config, are identified and applied to the new configuration
 '''Limitation: I.e. kernel modules can only be persisted in modified tree'''
-| Copying whitelisted/new/glob/* / files from N to N+1 (hook based mechanism)
+
+| Unclear for now, but several possible: [http://dummdida.tumblr.com/post/104188116490/ways-to-persist-a-reminder Keeping, copying, three-way merge, or individual handling] (i.e by a service which is responsible to [http://0pointer.net/blog/projects/stateless.html migrate a config file on upgrade (see ConditionNeedsUpdate)]
 
 |-
 | ''' '''
