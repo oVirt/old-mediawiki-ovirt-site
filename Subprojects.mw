@@ -299,6 +299,14 @@ use mom
 | Board
 | Src
 |- 
+| Kimchi
+| Ryan Barry
+| [http://lists.ovirt.org/mailman/listinfo/kimchi-devel devel] [http://lists.ovirt.org/pipermail/kimchi-devel archive]
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla]<br />
+use kimchi
+| N/A
+| [https://github.com/kimchi-project/kimchi GitHub]
+|- 
 | Nomad
 | Isaac Christoffersen<br />
 Ken Spokas
