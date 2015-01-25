@@ -115,10 +115,10 @@ As for security, when required, running VMs can authenticate using [http://ceph.
 ==== Cinder Disks List ====
 [[File:cinder_disks_storage.png]]
 
-==== Cinder Disks List under Storage ====
+==== Cinder Disks List (under Storage)  ====
 [[File:cinder_storage_disks.png]]
 
-==== Cinder Register Disks List under Storage ====
+==== Register Cinder Disks (under Storage) ====
 [[File:cinder_storage_register_disks.png]]
 
 [[Category:Feature|Cinder_Integration]]
