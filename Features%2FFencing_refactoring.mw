@@ -1,0 +1,21 @@
+<!-- {{autolang|base=yes}} -->
+
+= Fencing refactoring =
+
+{{Feature|name=Fencing refactoring|modules=engine|status=In Progress|version=3.6.0}}
+
+== Summary ==
+???
+
+== Owner ==
+* Ori Liel <oliel@redhat.com>
+* Martin Peřina <mperina@redhat.com>
+
+== Detailed Description ==
+???
+
+== Testing ==
+???
+
+[[Category:Feature]]
+[[Category:oVirt 3.6 Proposed Feature]]
