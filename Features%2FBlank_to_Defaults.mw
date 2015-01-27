@@ -25,6 +25,7 @@ The idea here is to rename the Blank to Default, decouple it completely from a c
 *** Emulated Machine override
 *** CPU Model override
 *** Attach CD
+*** CPU Profiles
 ** The operating system will be set to "Other OS" since the rest of them depend on the CPU architecture which depend on cluster
 
 == External Resources ==
