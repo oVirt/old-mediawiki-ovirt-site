@@ -4,6 +4,7 @@
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
 Provide a mechanism to set entity health status which will be displayed in the UI as follows
 
+ OK
  Info
  Warning
  Critical
