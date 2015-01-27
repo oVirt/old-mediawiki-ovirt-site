@@ -1,5 +1,5 @@
 = Fencing refactoring =
-{{Feature|name=Fencing refactoring|modules=engine|status=In Progress|version=3.6.0}}
+{{Feature|name=Fencing refactoring|modules=engine|status=Design|version=3.6.0}}
 
 == Summary ==
 The goal of this fencing refactoring is to clean up the code and provide those features:
