@@ -50,7 +50,7 @@ To hold information about Non Responding Treatment steps table <tt>fence_sequenc
 | N
 | 
 |}
-Each host will own one record in this table, which will be created during 1st host deploy or during oVirt upgrade. Also during oVirt upgrade value of existing column <tt>vds_static.pm_detect_kdump</tt> will converted into <tt>KDUMP<tt> step in <tt>fence_sequence_steps</tt> table.
+Each host will own one record in this table, which will be created during 1st host deploy or during oVirt upgrade. Also during oVirt upgrade value of existing column <tt>vds_static.pm_detect_kdump</tt> will converted into <tt>KDUMP</tt> step in <tt>fence_sequence_steps</tt> table.
 
 === Webadmin UI ===
 New '''Fence Sequence''' tab will be added into '''Host detail''' dialog. This tab will contain check boxes for all steps to enabled/disable each step for the specific host.
