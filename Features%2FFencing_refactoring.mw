@@ -1,4 +1,3 @@
-= Fencing refactoring =
 {{Feature|name=Fencing refactoring|modules=engine|status=Design|version=3.6.0}}
 
 == Summary ==
@@ -15,12 +14,12 @@ Non Responding Treatment will be refactored in 3.6:
 * It will be executed for any host when host status is changed to '''NonResponsive''' (in oVirt <= 3.5 SSH Soft Fencing  execution is enabled for all hosts and Non Responding Treatment execution is enabled only for hosts with '''Virt''' capabilities, in oVirt 3.6 only SSH Soft Fencing step will be executed for '''Gluster''' only hosts).
 * The delay between host status '''Up''' is changed to '''NonResponsive''' is defined on page [[Automatic_Fencing#Automatic_Fencing|Automatic Fencing]].
 * Non Responding Treatment will contain by default 3 steps (they can be enabled/disabled per host):
-*# SSH Soft Fencing
-*# Kdump Detection
-*# Host restart using Power Management agents
+*# '''SSH Soft Fencing'''
+*# '''Kdump Detection'''
+*# '''Power Management Restart'''
 
 === Database structure ===
-To hold information about Non Responding Treatment steps '''nrt_flow_steps''' with those fields:
+To hold information about Non Responding Treatment steps <tt>fencing_flow_steps</tt> with those fields:
 {| class="wikitable"
 ! style="text-align:left;"| Name
 ! style="text-align:left;"|Type
@@ -32,7 +31,7 @@ To hold information about Non Responding Treatment steps '''nrt_flow_steps''' wi
 | VARCHAR(25)
 | N
 | Y
-| One of ''SSH'', ''KDUMP'', ''PM''
+| One of <tt>SSH</tt>, <tt>KDUMP</tt>, <tt>PM</tt>
 |-
 | vds_id
 | UUID
@@ -52,23 +51,24 @@ To hold information about Non Responding Treatment steps '''nrt_flow_steps''' wi
 | N
 | 
 |}
-Each host will own one record in this table, which will be created during 1st host deploy or during oVirt upgrade. Also during oVirt upgrade value of existing column ''vds_static.pm_detect_kdump'' will converted into ''KDUMP'' step in ''nrt_flow_steps''.
+Each host will own one record in this table, which will be created during 1st host deploy or during oVirt upgrade. Also during oVirt upgrade value of existing column <tt>vds_static.pm_detect_kdump</tt> will converted into <tt>KDUMP<tt> step in <tt>fencing_flow_steps</tt> table.
 
 === Webadmin UI ===
-New '''Non Responding Treatment''' tab will be added into '''Host detail''' dialog. This tab will contain checkboxes for all steps to enabled/disable each step for the specific host.
+New '''Fencing flow''' tab will be added into '''Host detail''' dialog. This tab will contain checkboxes for all steps to enabled/disable each step for the specific host.
 
 === REST API ===
-Existing Non Responding Flow Steps for a host can be listed using URL <tt>/api/hosts/{id}/nrt-flow-steps</tt>:
+Existing Fencing Flow Steps for a host can be listed using URL <tt>/api/hosts/{id}/fencing-flow-steps</tt>:
 <pre>
-<nrt-flow-steps>
-  <nrt-flow-step>
+<fencing-flow-steps>
+  <fencing-flow-step>
     <name>Name</name>
     <host>Host ID</host>
     <step-order>1</step-order>
     <step-enabled>1</step-enabled>
-  <nrt-flow-step>
-</nrt-flow-steps>
+  <fencing-flow-step>
+</fencing-flow-steps>
 </pre>
+To enable or disable Fencing Flow Step <tt>PUT</tt> operation using URL <tt>/api/hosts/{id}/fencing-flow-steps/{name}</tt> with parameter <tt>step-enabled</tt> can be executed. Other operation like creating and removing step is not currenlty supported.
 
 == Testing ==
 TBD
