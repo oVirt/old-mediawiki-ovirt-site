@@ -19,7 +19,7 @@ Non Responding Treatment will be refactored in 3.6:
 *# '''Power Management Restart'''
 
 === Database structure ===
-To hold information about Non Responding Treatment steps <tt>fencing_flow_steps</tt> with those fields:
+To hold information about Fencing Flowsteps <tt>fencing_flow_steps</tt> with those fields:
 {| class="wikitable"
 ! style="text-align:left;"| Name
 ! style="text-align:left;"|Type
