@@ -57,7 +57,8 @@ Each host will own one record in this table, which will be created during 1st ho
 New '''Fencing flow''' tab will be added into '''Host detail''' dialog. This tab will contain checkboxes for all steps to enabled/disable each step for the specific host.
 
 === REST API ===
-Existing Fencing Flow Steps for a host can be listed using URL <tt>/api/hosts/{id}/fencing-flow-steps</tt>:
+<ul>
+<li>Existing Fencing Flow Steps for a host can be listed using URL <tt>/api/hosts/{id}/fencing-flow-steps</tt>:
 <pre>
 <fencing-flow-steps>
   <fencing-flow-step>
@@ -68,7 +69,10 @@ Existing Fencing Flow Steps for a host can be listed using URL <tt>/api/hosts/{i
   <fencing-flow-step>
 </fencing-flow-steps>
 </pre>
-To enable or disable Fencing Flow Step <tt>PUT</tt> operation using URL <tt>/api/hosts/{id}/fencing-flow-steps/{name}</tt> with parameter <tt>step-enabled</tt> can be executed. Other operation like creating and removing step is not currently supported.
+</li>
+<li>To enable or disable Fencing Flow Step <tt>PUT</tt> operation using URL <tt>/api/hosts/{id}/fencing-flow-steps/{name}</tt> with parameter <tt>step-enabled</tt> can be executed.</li>
+<li>Other operation like creating and removing step is not currently supported.</li>
+</ul>
 
 == Testing ==
 TBD
