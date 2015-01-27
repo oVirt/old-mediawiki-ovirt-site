@@ -18,7 +18,7 @@ The goal of this fencing refactoring is to clean up the code and provide those f
 *# '''Power Management Restart'''
 
 === Database structure ===
-To hold information about Non Responding Treatment steps table<tt>fence_sequence_steps</tt> will be created:
+To hold information about Non Responding Treatment steps table <tt>fence_sequence_steps</tt> will be created:
 {| class="wikitable"
 ! style="text-align:left;"| Name
 ! style="text-align:left;"|Type
