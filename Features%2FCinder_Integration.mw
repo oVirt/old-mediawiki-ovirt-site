@@ -55,6 +55,7 @@ As for security, when required, running VMs can authenticate using [http://ceph.
 * Cinder storage domain monitoring.
 
 == Relevant Flows ==
+* Add/Remove/Edit OpenStack volume provider
 * Add/Remove/Update/Extend Cinder Disk
 * Remove VM
 * Add Template
