@@ -17,7 +17,7 @@ Non Responding Treatment in oVirt <= 3.5 is described [[Media:Current-whole-proc
 *# '''SSH Soft Fencing'''
 *# '''Kdump Detection'''
 *# '''Power Management Restart'''
-So in oVirt 3.6 whole Non Responding Treatment will be [[Media:New-whole-process.png| here]] using configurable [[Media:Fence-sequence-definition.png| steps]].
+So in oVirt 3.6 whole Non Responding Treatment will be [[Media:New-whole-process.png| simplified]] using configurable [[Media:Fence-sequence-definition.png| steps]].
 === Database structure ===
 To hold information about Non Responding Treatment steps table <tt>fence_sequence_steps</tt> will be created:
 {| class="wikitable"
