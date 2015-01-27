@@ -63,6 +63,7 @@ To hold information about Non Responding Treatment steps '''nrt_flow_steps''' wi
 Each host will own one record in this table, which will be created during 1st host deploy or during oVirt upgrade. Also during oVirt upgrade value of existing column ''vds_static.pm_detect_kdump'' will converted into ''KDUMP'' step in ''nrt_flow_steps''.
 
 ==== Webadmin UI ====
+New '''Non Responding Treatment''' tab will be added into '''Host detail''' dialog. This tab will contain checkboxes for all steps to enabled/disable each step for the specific host.
 
 ==== REST API ====
 
