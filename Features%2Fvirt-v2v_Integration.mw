@@ -185,8 +185,25 @@ No need for changes in the DB
 
 === UI Screenshots ===
 [[File:First dialog.png]]
+
+First, given a URI and credentials for connecting to the external system, a list of virtual machines that exist in the external system is presented. The user can then select a subset of these VMs to import.
+
 [[File:Networks.png]]
+
+The next dialog shows a list of the selected VMs from the previous dialog with general settings such as default storage-domain and CPU profile along with a configuration per-VM (this dialog is similar to the one which is used when importing from an export-domain).
+
+In the screenshot above the tab of network interfaces is shown. It was extended such that user can map networks from external system to networks in oVirt.
+TBD: editing of mac-addresses
+
 [[File:Disks.png]]
+
+This screenshot shows the sub-tab for disks.
+The alias is the full-names of disks in the external system (including the name of the storage).
+
+Notes:
+* We might disable the option to set different target storage domain to different disks.
+* TBD: Changing the name of the VM in case a VM with the same name already exists in oVirt directly from this dialog instead of having the clone-VM dialogs
+* TBD: allow the user to specify the operating system and use it instead of getting it from virt-v2v
 
 == Dependencies / Related Features ==
 <!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
