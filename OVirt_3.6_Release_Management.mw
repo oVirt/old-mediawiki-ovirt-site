@@ -72,7 +72,7 @@ The following list is a subset of the [http://www.ovirt.org/Category:OVirt_3.6_P
 * [[Features/IsolatedNetworks]]
 * [[Features/Cluster parameters override]]
 * Drop support for Fedora 19 End of Life
-* [[Features/Fedora 21 Support | Add support for Fedora 21]]
+* [[Features/Fedora 22 Support | Add support for Fedora 22]]
 * Add support for Ubuntu hosts
 
 == Tracker Bug ==
