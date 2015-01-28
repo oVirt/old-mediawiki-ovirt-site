@@ -57,7 +57,9 @@ From RHEV-H prospective, there is no need for additional persistence manipulatio
 * Introduce SetHostConfigurationCommand(content) which by ssh commands replace vdsm.conf content, restart VDSM service. Engine will log the operation in audit log. The command runs only when host in maintenance.
 
 === UX ===
-* Introducing new tab called "Advanced Host Configuration" in EditHost form - The content of current vdsm.conf file on host  will be exposed there in editable text area field. The content will be blocked if host not on maintenance mode.
+* Introducing new tab called "Advanced Host Configuration" in Host options - The content of current vdsm.conf file on host  will be exposed there in editable text area field. The content will be blocked if host not on maintenance mode.
+
+[[File:configure_host.png]]
 
 === API ===
 RestAPI will allow to modify configuration files on host. In scope of this RFE we will introduce the following APIs:
