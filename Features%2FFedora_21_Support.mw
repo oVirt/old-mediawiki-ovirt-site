@@ -1,5 +1,5 @@
 = Fedora 21 Support =
-{{Feature|name=Fedora 21 Support|modules=all|status=POST|version=3.6.0}}
+{{Feature|name=Fedora 21 Support|modules=all|status=WONTFIX|version=---}}
 
 == Summary ==
 Add support for Fedora 21
@@ -7,6 +7,7 @@ Add support for Fedora 21
 == Owner ==
 * Name: [[User:SandroBonazzola| Sandro Bonazzola]]
 * Email: <sbonazzo@redhat.com>
+* Status: WONTFIX - dropped in favor of [Features/Fedora 22 Support]
 
 == Detailed Description ==
 * Support building on Fedora 21
