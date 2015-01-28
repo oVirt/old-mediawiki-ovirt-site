@@ -1,0 +1,43 @@
+= Fedora 22 Support =
+{{Feature|name=Fedora 22 Support|modules=all|status=NEW|version=3.6.0}}
+
+== Summary ==
+Add support for Fedora 22
+
+== Owner ==
+* Name: [[User:SandroBonazzola| Sandro Bonazzola]]
+* Email: <sbonazzo@redhat.com>
+
+== Detailed Description ==
+* Support building on Fedora 22
+* Create Jenkins jobs for automated build and testing on Fedora 22
+* Create Fedora 22 Jenkins slaves
+* Verify that all the components have no regressions only due to Fedora 22
+
+== Benefit to oVirt ==
+* oVirt will be able to run on Fedora 22 
+
+== Dependencies / Related Features ==
+* All subprojects must support Fedora 22
+* A tracker bug has been created for tracking issues: {{BZ|1186650}}
+
+== Documentation / External references ==
+https://fedoraproject.org/wiki/Releases/22/Schedule
+
+== Testing ==
+The whole [http://www.ovirt.org/Category:TestCase Test Case] collection must work on Fedora 22.
+
+== Contingency Plan ==
+The feature is self contained: if support for Fedora 22 won't be ready for 3.6.0 we won't deliver Fedora 22 RPMs.
+
+== Release Notes ==
+
+ == Fedora 22 Support ==
+ Support for running oVirt on Fedora 22 (or similar) has been added providing custom packaging of JBoss Application Server 7.
+
+== Comments and Discussion ==
+* Refer to [[Talk:Fedora 22 Support]]  
+
+[[Category:Feature]]
+[[Category:oVirt 3.6 Proposed Feature]]
+[[Category:Integration]]
