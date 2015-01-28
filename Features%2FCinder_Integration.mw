@@ -109,20 +109,21 @@ As for security, when required, running VMs can authenticate using [http://ceph.
 ==== Cinder Storage Domains ====
 [[File:cinder_domains.png]]
 
+==== Cinder Disk Dialog ====
+[[File:cinder_new_disk.png]]
+
+==== Cinder Disks attached to a VM ====
+[[File:cinder_vms_disks.png]]
+
 ==== Cinder Disks List (under Storage)  ====
 [[File:cinder_storage_disks.png]]
 
 ==== Register Cinder Disks (under Storage) ====
 [[File:cinder_storage_register_disks.png]]
 
-==== Cinder Disk Dialog ====
-[[File:cinder_new_disk.png]]
-
 ==== Cinder Disks List ====
 [[File:cinder_disks_storage.png]]
 
-==== Cinder Disks attached to a VM ====
-[[File:cinder_vms_disks.png]]
 
 [[Category:Feature|Cinder_Integration]]
 [[Category:oVirt 3.6 Proposed Feature|Cinder_Integration]]
