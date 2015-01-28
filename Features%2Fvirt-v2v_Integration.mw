@@ -205,6 +205,8 @@ Notes:
 * TBD: Changing the name of the VM in case a VM with the same name already exists in oVirt directly from this dialog instead of having the clone-VM dialogs
 * TBD: allow the user to specify the operating system and use it instead of getting it from virt-v2v
 
+[[File:Proxy2.jpg]]
+
 == Dependencies / Related Features ==
 <!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
 
