@@ -53,6 +53,7 @@ As for security, when required, running VMs can authenticate using [http://ceph.
 * Live storage migration.
 * Sync Cinder data with engine DB.
 * Cinder storage domain monitoring.
+* Support multiple backends (lvm/etc).
 
 == Relevant Flows ==
 * Add/Remove/Edit OpenStack volume provider
