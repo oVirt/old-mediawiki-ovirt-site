@@ -75,6 +75,9 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 =Bugs fixed=
 
 ==oVirt Engine==
+'''Fixed in oVirt 3.5.1.1 async release'''<BR>
+{{BZ|1185615}} - NPE in AddDiskCommand during ovf volume creation.<BR>
+
 '''Fixed in oVirt 3.5.1 RC1'''<BR>
 {{BZ|974859}} - engine [TEXT]: unclear error message when extend storage domain fails<BR>
 {{BZ|996055}} - engine does not log osinfo file having already used id.value<BR>
