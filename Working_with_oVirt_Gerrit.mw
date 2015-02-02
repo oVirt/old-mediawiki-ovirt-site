@@ -85,6 +85,13 @@ cd ovirt-engine
 git config commit.template config/engine-commit-template.txt
  </nowiki>
 
+==== Configure git commit spell check, syntax highlighting and maxwidth ====
+ <nowiki>
+syntax on
+plugin indenting on
+autocmd Filetype gitcommit spell textwidth=72
+ </nowiki>
+
 ==== Rebase ====
  <nowiki>
 git fetch -v
