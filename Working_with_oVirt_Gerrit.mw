@@ -87,7 +87,7 @@ git config commit.template config/engine-commit-template.txt
 
 ==== Configure git commit spell check, syntax highlighting and maxwidth ====
  <nowiki>
-~/.vimrc
+# edit ~/.vimrc
 syntax on
 plugin indenting on
 autocmd Filetype gitcommit spell textwidth=72
