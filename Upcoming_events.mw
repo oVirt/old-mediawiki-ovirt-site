@@ -4,13 +4,13 @@
 <startfeed/>
 </noinclude>
 
+{{Event|name=[//www.ovirt.org/Asia_Workshop_Mar_2015 oVirt Asia Workshop]|date=March 14, 2015|location=Singapore|lead=The oVirt Asia Workshop will highlight the new and exciting features of oVirt and walk users through the best use cases of virtual datacenter management.}}
+
 {{Event|name=[//devconf.cz/ DevConf.cz]|date=February 6-8, 2015|location=Brno, Czech Republic|lead=DevConf.cz brings together around 1000 developers, quality engineers, administrators, and users from the Fedora, JBoss, and Red Hat communities.}}
 
 {{Event|name=[//events.linuxfoundation.org/events/collaboration-summit Linux Collaboration Summit]|date=February 18-20, 2015|location=Santa Rosa, CA|lead=The Linux Foundation Collaboration Summit is an invitation-only developer focussed event, which aims to encourage and facilitate collaboration between different open source projects.}}
 
 {{Event|name=[//www.socallinuxexpo.org/scale13x SCALE 13X]|date=February 19-22, 2015|location=Los Angeles, California|lead=As the first-of-the-year Linux and Free/Open Source Software (FOSS) expo in North America, SCALE 13x expects to host more than 100 exhibitors this year, along with nearly 130 sessions, tutorials, and special events.}}
-
-{{Event|name=[//www.ovirt.org/Asia_Workshop_Mar_2015 oVirt Asia Workshop]|date=March 14, 2015|location=Singapore|lead=The oVirt Asia Workshop will highlight the new and exciting features of oVirt and walk users through the best use cases of virtual datacenter management.}}
 
 <noinclude>
 <endfeed/>
