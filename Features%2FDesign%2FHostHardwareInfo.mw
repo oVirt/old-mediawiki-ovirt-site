@@ -249,4 +249,5 @@ Type Detail - [None, None, None, None, None, None, 'Synchronous', None, None, No
 Speed - 1333 MHz (0.8ns)<BR>
 Size - 4096 MB<BR>
 
-[[Category:Feature]]
+[[Category:Feature|HostHardwareInfo]]
+[[Category:oVirt 3.2 Feature|HostHardwareInfo]]
