@@ -58,7 +58,7 @@ Users will be able to use Gluster Hyper Converged storage as data domain for Hos
 * [[Features/GlusterFS Storage Domain]]
 * [[Features/Self Hosted Engine Gluster Support]]
 * GlusterFS 3.7 may have impact on this feature: [http://www.gluster.org/community/documentation/index.php/Planning37 2015-04-29]
-* A tracker bug has been created for tracking issues: {{BZ|1173669}}
+* A tracker bug has been created for tracking issues: {{BZ|1175354}}
 
 == Documentation / External references ==
 * [http://www.gluster.org/ Gluster Home Page]
