@@ -80,3 +80,7 @@ In this phase internal broker will be pulled out (if we are not already using  s
 
 == Attachments ==
 * [[File:schemas.tgz | schema ]] ([https://wiki.gnome.org/Apps/Dia/ dia] file containing the schema sources)
+
+
+[[Category:Feature|JsonRpc]]
+[[Category:oVirt 3.5 Feature|JsonRpc]]
