@@ -30,8 +30,8 @@ moVirt is a mobile (Android) client for the oVirt engine. It uses the oVirt REST
 * bVNC(VNC client used from moVirt): https://play.google.com/store/apps/details?id=com.iiordanov.freebVNC&hl=en
 
 == Details ==
-[[File:ReallyMainScreen.png|200px ]]
-[[File:DetailScreen.png|200px ]]
+[[File:MovirtMain.png|200px]]
+[[File:MovirtDetails.png|200px ]]
 [[File:EditTrigger.png|200px ]]
 
 moVirt consists of the following sections
