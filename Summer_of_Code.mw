@@ -1,6 +1,6 @@
 __FORCETOC__
 
-For more information about Google Summer of Code (GSoC), please refer to the [https://developers.google.com/open-source/soc/ official page].
+For more information about Google Summer of Code (GSoC), please refer to the [https://www.google-melange.com/gsoc/homepage/google/gsoc2015 official page].
 
 
 == Google Summer of Code (2014) Video Introduction ==
@@ -43,6 +43,17 @@ When students approach you about the idea you listed:
 * If you are redirecting students from your idea, please add [No longer taking applicants] to its title in the list below.
 * Don't hesitate to reach out to the oVirt GSoC admins if you need help redirecting students.
 </ul>
+
+== oVirt Ideas for Google Summer of Code 2015 ==
+
+=== '''Idea:''' New 2015 Idea Here ===
+'''Description:''' 
+
+'''Expected results:''' 
+
+'''Knowledge Prerequisite:'''
+
+'''Mentor:''' 
 
 == oVirt Ideas for Google Summer of Code 2014 ==
 
@@ -103,6 +114,5 @@ I'd like to see a semi-automatic configuration flow, where upon request, and exi
 
 == oVirt GSoC Admins ==
 <ul>
-* [mailto:doronf.public@gmail.com Doron Fediuck]
-* [mailto:fsimonce@redhat.com Federico Simoncelli]
+* [mailto:bkp@redhat.com Brian Proffitt]
 </ul>
