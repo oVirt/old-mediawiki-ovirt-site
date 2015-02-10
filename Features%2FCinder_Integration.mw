@@ -118,12 +118,12 @@ As for security, when required, running VMs can authenticate using [http://ceph.
  </openstack_volume_types>
 
 ==== Get Unregistered Disks: GET /api/storagedomains/{storage_domain_id}/disks;unregistered ====
-<disks>
-...
-</disks>
+ <disks>
+ ...
+ </disks>
 
 ==== Register Disk: POST /api/storagedomains/{storage_domain_id}/disks;unregistered ====
-<disk id="{disk_id}"></disk>
+ <disk id="{disk_id}"></disk>
 
 === VDSM ===
 * Add [https://apps.fedoraproject.org/packages/librbd1 librbd1 package] as dependency to vdsm.spec file.
