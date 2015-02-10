@@ -93,7 +93,9 @@ As for security, when required, running VMs can authenticate using [http://ceph.
  <openstack_volume_provider>
   <name></name>
   <url><fqdn>:8776</url>
- <data_center><id|name></id|name></data_center>
+  <data_center>
+    <id|name></id|name>
+  </data_center>
   <requires_authentication>true|false</requires_authentication>
   <username></username>
   <password></password>
