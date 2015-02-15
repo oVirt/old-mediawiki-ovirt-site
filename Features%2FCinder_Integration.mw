@@ -125,6 +125,12 @@ As for security, when required, running VMs can authenticate using [http://ceph.
 ==== Register Disk: POST /api/storagedomains/{storage_domain_id}/disks;unregistered ====
  <disk id="{disk_id}"></disk>
 
+==== Delete Entity (DIsk/VM/Template)  ====
+Cinder disks are deleted asynchronously, hence ';async' flag could be passed as part of the URL for getting 202-Accepted return status.
+ E.g. 
+ DELETE /api/disks/{disk_id}/disks;async
+ <action></action>
+
 === VDSM ===
 * Add [https://apps.fedoraproject.org/packages/librbd1 librbd1 package] as dependency to vdsm.spec file.
 * Refactor 'Dirve -> getXML()' to support multiple hosts (represents Ceph monitors) in disk's source element:
