@@ -307,6 +307,16 @@ use kimchi
 | N/A
 | [https://github.com/kimchi-project/kimchi GitHub]
 |- 
+| moVirt
+| Marten Betak<br />
+Tomas Jelinek<br />
+Sphoorti Joglekar
+| [http://lists.ovirt.org/mailman/listinfo/movirt moVirt] [http://lists.ovirt.org/pipermail/movirt/ archive]
+| [https://bugzilla.redhat.com/enter_bug.cgi?product=ovirt Bugzilla]<br />
+use movirt
+| N/A
+| [https://github.com/matobet/movirt GitHub]
+|- 
 | Nomad
 | Isaac Christoffersen<br />
 Ken Spokas
