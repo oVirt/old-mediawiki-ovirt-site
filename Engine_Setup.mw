@@ -21,8 +21,7 @@ All of these tools generate upon completion an answer file, named '/var/lib/ovir
 The expected way to use these answer files is:
 
 # Have a system A in some state S0
-# Run one of the tools interactively, answer its questions as needed,
- let it create an answer file Ans1.
+# Run one of the tools interactively, answer its questions as needed, let it create an answer file Ans1.
 # System A is now in state S1.
 # Have some other system B in state S0, that you want to bring to state S1.
 # Run there the same tool with --config-append=Ans1
