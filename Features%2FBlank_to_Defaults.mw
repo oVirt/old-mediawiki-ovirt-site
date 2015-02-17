@@ -26,6 +26,7 @@ The idea here is to rename the Blank to Default, decouple it completely from a c
 *** CPU Model override
 *** Attach CD
 *** CPU Profiles
+** OS Type since there are different OS types for different architectures
 
 == External Resources ==
 * BZ: https://bugzilla.redhat.com/show_bug.cgi?id=1130174
