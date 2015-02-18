@@ -6,7 +6,7 @@
 
 === Summary ===
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
-This feature adds the cockipt server (http://cockpit-project.org/) to the oVirt node installation.
+This feature adds the cockipt server (http://cockpit-project.org/) to the oVirt node installation.<br />
 It will replace the TUI interface used to control the oVirt node.
 
 This is a place holder for cockpit feature page and still being written
