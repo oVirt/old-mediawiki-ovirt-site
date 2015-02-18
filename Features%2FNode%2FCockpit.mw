@@ -39,6 +39,7 @@ TBD
 === Documentation / External references ===
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
 http://cockpit-project.org/
+https://bugzilla.redhat.com/show_bug.cgi?id=1190758
 
 === Comments and Discussion ===
 
