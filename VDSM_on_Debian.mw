@@ -46,7 +46,7 @@ git://anonscm.debian.org/collab-maint/m2crypto
 
 In order to apply the second patch from Debian source it's also necessary to download 
 https://raw.githubusercontent.com/M2Crypto/M2Crypto/master/SWIG/_lib.h
-witch is not in Debian sources.
+witch is not in Debian sources (???).
 
 Applying the two patches seams to be enough to pass most of SSL unit tests.
 Still an open issue on sslTests.VerifyingTransportTests
