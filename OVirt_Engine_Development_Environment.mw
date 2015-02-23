@@ -113,6 +113,8 @@ host    all             all             127.0.0.1/32            password
 # IPv6 local connections:
 host    all             all             ::1/128                 password</nowiki>
 
+Configure PostgreSQL to support at least 150 concurrent connections - find <code>postgresql.conf</code> file, usually in the same location of <code>pg_hba.conf</code>, locate 'max_connections' and set it to 150.
+
 Restart PostgreSQL service for definitions to take effect:
 
 {| class="wikitable"
