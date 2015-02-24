@@ -1,17 +1,134 @@
 {{DISPLAYTITLE:oVirt 3.5.2 Release Notes}}
+The oVirt Project is pleased to announce the availability of oVirt 3.5.2 release candidate as of <date>, 2015.
+
+<big>'''Please wait for official announcement on mailing list before trying to install 3.5.2 RC'''</big>
+
+oVirt is an open source alternative to VMware vSphere, and provides an awesome KVM management interface for multi-node virtualization. This release is available now for Fedora 20, Red Hat Enterprise Linux 6.6, CentOS 6.6, (or similar) and Red Hat Enterprise Linux 7, CentOS 7 (or similar).
+
+To find out more about features which were added in previous oVirt releases, check out the [http://www.ovirt.org/Category:Releases previous versions release notes].
+For a general overview of oVirt, read [[Quick_Start_Guide | the Quick Start Guide]] and the [[about oVirt]] page.
 
 = Install / Upgrade from previous versions=
+==Fedora / CentOS / RHEL==
+== CANDIDATE RELEASE ==
+
+oVirt 3.5.2 candidate release is available since 2015-<date>. In order to install it you've to enable oVirt 3.5 release candidate repository.
+
+<big>'''Please wait for official announcement on mailing list before trying to install 3.5.2 RC'''</big>
+
+In order to install it on a clean system, you need to install
+ # yum localinstall http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm
+
+And then manually add the release candidate repository for your distribution to '''/etc/yum.repos.d/ovirt-3.5.repo'''
+
+'''For CentOS / RHEL:'''
+ [ovirt-3.5-pre]
+ name=Latest oVirt 3.5 pre release
+ baseurl=http://resources.ovirt.org/pub/ovirt-3.5-pre/rpm/el$releasever
+ enabled=1
+ skip_if_unavailable=1
+ gpgcheck=1
+
+'''For Fedora:'''
+ [ovirt-3.5-pre]
+ name=Latest oVirt 3.5 pre release
+ baseurl=http://resources.ovirt.org/pub/ovirt-3.5-pre/rpm/fc$releasever
+ enabled=1
+ skip_if_unavailable=1
+ gpgcheck=1
+
+
+If you are upgrading from a previous version, you may have the ovirt-release34 package already installed on your system.
+You can then install ovirt-release35.rpm as in a clean install side-by-side.
+
+Once ovirt-release35 package is installed,  you will have the ovirt-3.5-stable repository and any other repository needed for satisfying dependencies enabled by default.
+
+If you're installing oVirt 3.5.1 on a clean host, you should read our [[Quick Start Guide]].
+
+If you are upgrading from oVirt  < 3.4.1, you must first upgrade to oVirt 3.4.1 or later.
+Please see [[oVirt 3.4.1 release notes]] for upgrade instructions.
+
+For upgrading now you just need to execute:
+ # yum update "ovirt-engine-setup*"
+ # engine-setup
+
+== oVirt Hosted Engine ==
+
+If you're going to install oVirt as Hosted Engine on a clean system please follow [[Hosted_Engine_Howto#Fresh_Install]] guide.
+
+If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engine_Howto#Upgrade_Hosted_Engine]] guide.
 
 = What's New in 3.5.2? =
 
 =Known issues=
+* NFS startup on EL7 / Fedora20: due to other bugs ({{BZ|1144440}}  or {{BZ|1066959}} ), NFS service is not always able to start at first attempt (it doesn't wait the kernel module to be ready); if it happens oVirt engine setup detects it and aborts with
+ [ INFO  ] Restarting nfs services
+ [ ERROR ] Failed to execute stage 'Closing up': Command '/bin/systemctl' failed to execute
+Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the kernel module it's always ready on further attempts. Manually starting NFS service (/bin/systemctl restart nfs-server.service) before running engine setup it's enough to avoid it at all.
+
+= CVE Fixed =
+
 
 =Bugs fixed=
+
 ==oVirt Engine==
+'''Fixed in oVirt 3.5.2 RC1'''<BR>
+{{BZ|1121556}} - Data Center downgrade should not be allowed if it implies downgrading the storage format<BR>
+{{BZ|1135771}} - [engine-backend] Moving a shared disk to a gluster domain is not blocked<BR>
+{{BZ|1138556}} - Overlap of "Enable Virt Service" and "Enable Gluster Service" radio buttons<BR>
+{{BZ|1166755}} - [RFE] Add default-options to iDrac7 Fencing agent in RHEVM<BR>
+{{BZ|1173196}} - [restapi] Add support to search disk by name parameter<BR>
+{{BZ|1177147}} - Null disk size on a newly created disk is interpreted 0. Leave as null and revise usage.<BR>
+{{BZ|1177890}} - External Keystone Connection Fails to Juno-based OpenStack<BR>
+{{BZ|1178010}} - RHEV: Faulty storage allocation checks when merging a snapshot<BR>
+{{BZ|1180038}} - if next run configuration exists the edit VM may load forever<BR>
+{{BZ|1180105}} - Instance type: missing VM fields while using InstanceCreator user role.<BR>
+{{BZ|1181586}} - engine-setup unconditionally enables the engine if ran on dwh on separate host<BR>
+{{BZ|1182012}} - [engine-backend] Null disk size on a newly created disk is interpreted 0. Leave as null and revise usage.<BR>
+{{BZ|1182756}} - [external providers] invalid certificate fingerprint is printed on confirmation dialog<BR>
+{{BZ|1182779}} - [engine-backend] [iSCSI multipath] Cannot edit iSCSI multipath bond while iSCSI SD is in maintenance<BR>
+{{BZ|1183886}} - [extapi] add default constructos<BR>
+{{BZ|1184454}} - [engine-backend] requests doesn't reach vdsm<BR>
+{{BZ|1184535}} - When an ISO domain is connected to multiple data centers in different statuses the image list is not fetched<BR>
+{{BZ|1184768}} - Fencing test failed during adding single rhev-h host, but message says otherwise<BR>
+{{BZ|1184781}} - Power management test with non approved host<BR>
+{{BZ|1184807}} - Storage thresholds should not be inclusive<BR>
+{{BZ|1184895}} - [AAA] [extmgr] escape extension name in ENGINE_EXTENSION_ENABLED_ configuration<BR>
+{{BZ|1185050}} - failure of master migration on deactivation will leave domain locked<BR>
+{{BZ|1185430}} - override SSL protocol to TLSv1<BR>
+{{BZ|1185613}} - Bad error when adding vm to pool with low space on storage domain<BR>
+{{BZ|1185666}} - Change message when importing a data domain to an unsupported version<BR>
+{{BZ|1186196}} - Upgrade message in general tab is missing<BR>
+{{BZ|1186371}} - Import of non data Storage Domains (specifically export domain) should not call engine query for web warning<BR>
+{{BZ|1186372}} - Failure for calling internal query GetExistingStorageDomainList will cause an NPE<BR>
+{{BZ|1186375}} - [RFE][engine-backend][HC] - add the possibility to import existing Gluster and POSIXFS export domains<BR>
+{{BZ|1186410}} - [JSON] Force extend block domain, in JSONRPC, using a "dirty" LUN, fails<BR>
+{{BZ|1186687}} - domain state is stuck on "Preparing For Maintenance" when having active gluster service cluster<BR>
+{{BZ|1186722}} - [backend] [NPE] Adding permission to an object fails if DEBUG level is set<BR>
+{{BZ|1188971}} - ENGINE_HEAP_MAX default value as 1G must be changed<BR>
+{{BZ|1189570}} - Locked snapshot prevents VM's basic operations, after it's disk was removed<BR>
+{{BZ|1191142}} - [Engine] Engine runs out of memory - java.lang.OutOfMemoryError: Java heap space<BR>
+{{BZ|1191466}} - Using "iSCSI Bond", host does not disconnect from iSCSI targets<BR>
+{{BZ|1192014}} - RHEV-M managed firewall blocks NFS rpc.statd notifications<BR>
+{{BZ|1192495}} - Sysprep problem after upgrade  from oVirt Engine 3.5.0.1-1 to 3.5.1.1-1.el6<BR>
+{{BZ|1192791}} - [AAA] Always set principal in Authz.FetchPrincipalRecord<BR>
+{{BZ|1192954}} - Can not restore backup file to rhevm with non-default lc_messages<BR>
+{{BZ|1194185}} - Document All-Content header in RSDL and add it to SDKs<BR>
+{{BZ|1194262}} - [AAA] Sorting by 'authorization provider' in 'users' tab don't sort<BR>
 
-==VDSM==
+==ovirt-hosted-engine-setup==
+'''Fixed in oVirt 3.5.2 RC1'''<BR>
+{{BZ|1181585}} - [hosted-engine] Bad check of iso image permission<BR>
+{{BZ|1190207}} - vdsClient/vdscli SSLError timeout error<BR>
+{{BZ|1192462}} - [RFE][HC] make override of iptables configurable when using hosted-engine<BR>
 
-==ovirt-node-plugin-vdsm==
+==ovirt-iso-uploader==
+'''Fixed in oVirt 3.5.2 RC1'''<BR>
+{{BZ|1188326}} - [engine-iso-uploader] engine-iso-uploader does not work with Local ISO domain<BR>
+
+==ovirt-log-collector==
+'''Fixed in oVirt 3.5.2 RC1'''<BR>
+{{BZ|1175137}} - [RHEL7] Missing some info from host's archive<BR>
 
 
 [[Category:Documentation]]
