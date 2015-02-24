@@ -56,10 +56,9 @@ which of course doesn't exists prior of VDSM installation.
 Creating that file with the right content seams to be enough to pass that tests.
 
 == Current results ==
-VDSM building process is running 877 unit tests skipping 20 of them and getting errors on 8.
+VDSM building process is running 915 unit tests skipping 20 of them and getting errors on 1.
 Here a build log with the open errors:
 http://fpaste.org/189250/
-
 
 == TODO ==
 * Successfully pass each unit test on Debian
