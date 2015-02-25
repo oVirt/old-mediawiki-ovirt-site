@@ -99,7 +99,7 @@ property cib-bootstrap-options: \
     last-lrm-refresh=1404978312</pre>
 === NetworkConfiguration ===
 
-The network is configured to use bonding on all interfaces using 802.3ad bonding protocol (requires special configuration on the swithes).
+The network is configured to use bonding on all interfaces using 802.3ad bonding protocol (requires special configuration on the switches).
 
 Here's the current configuration files:
 
@@ -130,3 +130,6 @@ GATEWAY=66.187.230.62
 USERCTL=no
 BOOTPROTO=none
 ONBOOT=yes</pre>
+
+
+[[Category:Infrastructure]]
