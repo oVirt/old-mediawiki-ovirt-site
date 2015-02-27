@@ -111,10 +111,14 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 {{BZ|1191466}} - Using "iSCSI Bond", host does not disconnect from iSCSI targets<BR>
 {{BZ|1192014}} - RHEV-M managed firewall blocks NFS rpc.statd notifications<BR>
 {{BZ|1192495}} - Sysprep problem after upgrade  from oVirt Engine 3.5.0.1-1 to 3.5.1.1-1.el6<BR>
+{{BZ|1192596}} - High availability Virtual Machines are not restarted on another host during fencing.<BR>
 {{BZ|1192791}} - [AAA] Always set principal in Authz.FetchPrincipalRecord<BR>
 {{BZ|1192954}} - Can not restore backup file to rhevm with non-default lc_messages<BR>
 {{BZ|1194185}} - Document All-Content header in RSDL and add it to SDKs<BR>
 {{BZ|1194262}} - [AAA] Sorting by 'authorization provider' in 'users' tab don't sort<BR>
+{{BZ|1194394}} - Unable to authenticate if user is using http://indeed-id.com/index.html solution for authentication.<BR>
+{{BZ|1195672}} - [host-deploy] missing -t parameter to mktemp<BR>
+{{BZ|1196136}} - Engine-setup should support cleaning of zombie commands before upgrade<BR>
 
 ==ovirt-hosted-engine-setup==
 '''Fixed in oVirt 3.5.2 RC1'''<BR>
