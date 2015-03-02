@@ -49,7 +49,7 @@ Add yourself as a mentor and ideas you are willing to mentor in this section. Pl
 '''Contact Info:''' mail: danken@redhat.com, irc: danken in #vdsm@irc.freenode.net and #ovirt@irc.oftc.net <br>
 '''Ideas:'''
 * Add [http://fedoraproject.org/wiki/Features/TeamDriver teaming] support to Vdsm. You would add a new network configurator named ifcfg.team which is just like the ifcfg configurator, but implements a "bond" with a team device.
-* Add a before_ifcfg_write hook point, to let hook writers modify ifcfg files before it is written.
+* Add a before_ifcfg_write hook point, to let hook writers modify ifcfg files before it is written. Stop passing random kwargs to ifcfg files, and drop the silly "force" argument from the API.
 
 === Your name here ===
 '''Name:'''<br>
