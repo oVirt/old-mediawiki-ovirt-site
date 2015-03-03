@@ -1,0 +1,39 @@
+== oVirt Node subpackages <!-- The name of your feature --> ==
+
+{{Feature|name=subpackages |modules=node|version=3.6|status=In Progress}}
+[[Category:Feature]]
+[[Category:Node]]
+
+=== Summary ===
+<!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
+This feature split all sources of oVirt Node into subpackages instead one big rpm. 
+
+=== Owner ===
+<!--This should link to your home wiki page so we know who you are-->
+* Name: [[User:dougsland| Douglas Schilling Landgraf]]
+
+<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
+* Email: dougsland AT redhat DOT com
+* IRC:  dougsland
+
+=== Detailed Description ===
+<!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
+The goal is install only packages needed to integrate oVirt Node with others project like Cockpit (for example).</br>
+
+=== Benefit to oVirt ===
+<!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
+As all source will be splitted by RPM, we could drop the current TUI code and add the dependecy to cockpit as default interface to users.
+
+=== Dependencies / Related Features ===
+<!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
+ [[Features/Node/Cockpit | Cockpit]].
+
+=== Testing ===
+Build ovirt node project and it should generate the following rpms:  ovirt-node-plugin-snmp-logic, ovirt-node-plugin-cim-logic, ovirt-node-lib, ovirt-node-lib-config, ovirt-node- cli-tools, ovirt-node-tui-installer, ovirt-node-tui-setup, ovirt-node-lib-legacy. In the end, you could install the 'core' of ovirt-node, like: ovirt-node-lib and ovirt-node-lib-config without the tui subpackages.
+
+=== Documentation / External references ===
+https://gerrit.ovirt.org/#/c/38295/7
+https://bugzilla.redhat.com/show_bug.cgi?id=1191419
+
+=== Comments and Discussion ===
+Comments and discussion can be posted on mailinglist or the referenced bug.
