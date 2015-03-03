@@ -1,6 +1,6 @@
 == oVirt Node subpackages <!-- The name of your feature --> ==
 
-{{Feature|name=subpackages |modules=node|version=3.6|status=In Progress}}
+{{Feature|name=subpackages |modules=node|version=3.6|status=Patch Pending Review}}
 [[Category:Feature]]
 [[Category:Node]]
 
