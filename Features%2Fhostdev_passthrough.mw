@@ -28,19 +28,6 @@ Unlike virtual devices, host passthrough uses real host hardware, making the num
 The passthrough capability itself requires hardware that supports intel VT-d  or AMD-vi. This capability can be reported
 through reading /sys/class/iommu and looking for 'dmar' file. Iommu also needs to be allowed on the host, which can 
 unreliably be detected  by parsing /proc/cmdline for intel_iommu=on or iommu=on.
-SR-IOV capability can be found via /sys/bus/pci/devices/`device_name`/sriov_numvfs and sriov_totalvfs, that indicate the
-device SHOULD be capable of spawning multiple virtual functions. It is possible that the bus device is connected to doesn't have
-enough bandwidth for these virtual functions.
-
-<pre>
-echo 7 > sriov_numvfs                                                                                                                                                                    
--bash: echo: write error: Cannot allocate memory
-</pre>
-
-<pre>
-dmesg | tail -n 1
-[ 9952.612558] igb 0000:07:00.0: SR-IOV: bus number out of range
-</pre>
 
 In order to report state of these devices, new verb is introduced:  hostdevListByCaps. The verb takes list as an argument
 where each element of the list is a string identifying the class of devices caller wants to display (pci, usb_device, usb...).
@@ -134,6 +121,20 @@ The call takes care of reattaching the device back to host (meaning unbinding fr
 and removing udev rule file for given iommu group.
 
 === SR-IOV ===
+SR-IOV capability can be found via /sys/bus/pci/devices/`device_name`/sriov_numvfs and sriov_totalvfs, that indicate the
+device SHOULD be capable of spawning multiple virtual functions. It is possible that the bus device is connected to doesn't have
+enough bandwidth for these virtual functions.
+
+<pre>
+echo 7 > sriov_numvfs                                                                                                                                                                    
+-bash: echo: write error: Cannot allocate memory
+</pre>
+
+<pre>
+dmesg | tail -n 1
+[ 9952.612558] igb 0000:07:00.0: SR-IOV: bus number out of range
+</pre>
+
 VFs can be spawned by hostdevChangeNumvfs(device_name, number) call, which spawns number VFs for device_name PF. This call might fail
 for many reasons, resulting in failure to spawn the VFs. Reasons for failure include not enough bandwidth on the bus to handle multiple devices.
 
