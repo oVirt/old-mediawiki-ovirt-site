@@ -129,7 +129,7 @@ and removing udev rule file for given iommu group.
 # and it's permissions are modified by generated udev rule,
 # XML is constructed and VM is started.
 
-==== VM removal ===
+==== VM removal ====
 # VM is destroyed as ussual,
 # cleanup routine takes care of reattaching the device back to host
 # related udev rules are cleaned up
