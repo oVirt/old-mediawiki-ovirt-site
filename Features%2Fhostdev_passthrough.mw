@@ -8,7 +8,7 @@ This feature will allow passthrough of  host devices to guest
 * Email: [mailto:mpolednik@redhat.com mpolednik@redhat.com]
 
 === Current status ===
-* Last updated date: Thu Aug 28 2014
+* Last updated date: Wed Mar 4 2015
 
 === Terminology ===
 * SR-IOV - Single Root I/O Virtualization - technology that allows single device to expose multiple endpoints that can be passed to VMs
