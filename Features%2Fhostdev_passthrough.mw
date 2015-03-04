@@ -129,6 +129,11 @@ and removing udev rule file for given iommu group.
 # and it's permissions are modified by generated udev rule,
 # XML is constructed and VM is started.
 
+The expected outcome is
+* Guest is running,
+* /dev/vfio/X (where X is iommu group of the device) exists and has qemu:qemu 0600 permissions,
+* /etc/udev/rules.d/99-vdsm-iommu_group_X.rules file exists.
+
 ==== VM removal ====
 # VM is destroyed as ussual,
 # cleanup routine takes care of reattaching the device back to host
