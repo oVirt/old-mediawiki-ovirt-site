@@ -155,6 +155,9 @@ routine should be handled by user, engine or VDSM is to be decided.
 Migration of network devices IS possible using bonding but that is out of scope for the hostdev support.
 [[Category:Feature]]
 
+=== Related bugs ===
+[https://bugzilla.redhat.com/show_bug.cgi?id=1196185 Bug 1196185 - libvirt doesn't set permissions for VFIO endpoint]
+
 === Troubleshooting ===
 <pre>
 qemu-kvm: -device vfio-pci,host=NN:NN.N,id=hostdevN,bus=pci.N,addr=0xN: vfio: error opening /dev/vfio/X: Permission denied
