@@ -34,8 +34,31 @@ Additionally, moving towards Dbus means less logical separation when we start us
 Having a usable Dbus backend makes integration with [[Features/Node/Cockpit | Cockpit]] much better.
 
 === Testing ===
-Classes from ovirt.node.config.defaults should be visible on the Dbus Session Bus
-Activation of methods with dbus-send or python-dbus (example Python to follow later) will work, and trigger the appropriate backend classes.
+Classes from ovirt.node.config.defaults should be visible on the Dbus System Bus
+Activation of methods with dbus-send or python-dbus will work, and trigger the appropriate backend classes.
+
+Install the ovirt-node-dbus-backend RPM (can be built by cloning the git repo followed by "./autogen.sh && make rpm") on a target system which has ovirt-node installed. Or ovirt-node-lib-config, after packages are broken out.
+
+<pre>yum -y localinstall /path/to/ovirt-node-dbus-backend*.rpm && service node-dbus start</pre>
+
+Check the journal to see that it's started properly. It'll loop over ovirt.node.config.defaults and export methods as /org/ovirt/node/${class}, with methods available at "org.ovirt.node.${method}". These are printed out in the journal.
+
+If you want, you can start the service in the foreground instead of with systemd.
+<pre>python /usr/lib/python2.?/site-packages/ovirt/node/dbus/service.py -d --debug</pre>
+
+These can be tested trivially from python. For example:
+<pre>bus = dbus.SystemBus()
+obj = bus.get_object(BUS_NAME, "/org/ovirt/node/NFSv4")
+service = dbus.Interface(obj, "org.ovirt.node")
+print service.configure_domain("some.tld")</pre>
+
+Or from the console:
+<pre>dbus-send --system --print-reply --type=method_call --dest=org.ovirt.node /org/ovirt/node/NFSv4 org.ovirt.node.configure_domain string:"some.tld"</pre>
+
+Append "--test" if you want to use test classes, which can be directly tested with:
+<pre>python /usr/lib/python2.?/site-packages/ovirt/node/dbus/service.py -c --test</pre>
+
+The test package approximates both a bare class of a style which doesn't currently exist, and a wrapped class which requires Node transactions to be run.
 
 === Documentation / External references ===
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
