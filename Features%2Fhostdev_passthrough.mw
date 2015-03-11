@@ -186,7 +186,6 @@ usb_usb1 for usb devices or scsi_0_0_0_0.
 
 <code>
 device_params
-
 {'params': {'address': {'bus': '5',
                                         'domain': '0',
                                         'function': '0',
