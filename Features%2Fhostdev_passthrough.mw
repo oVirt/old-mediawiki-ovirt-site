@@ -176,6 +176,8 @@ for many reasons, resulting in failure to spawn the VFs. Reasons for failure inc
 Passthrough of VF is similar to generic passthrough.
 
 == API ==
+The API of hostdev feature is defined in vdsm/hostdev.py.
+
 === Structures ===
 <code>
 device_name
