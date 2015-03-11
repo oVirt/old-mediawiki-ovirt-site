@@ -225,16 +225,10 @@ reattaching it and removing udev files managing ownership.
 Where Int ≤ device_params['totalvfs'].
 
 === External ===
-<code>
-hostdevListByCaps -> [String] -> [vmDevice]
-</code>
-
+* <code>hostdevListByCaps -> [String] -> [vmDevice]</code>
 Where [String] is list of strings of device classes. See "known device classes".
 
-<code>
-hostdevChangeNumvfs -> device_name -> Int -> status
-</code>
-
+* <code>hostdevChangeNumvfs -> device_name -> Int -> status</code>
 Where Int ≤ device_params['totalvfs'].
 
 == Cluster ==
