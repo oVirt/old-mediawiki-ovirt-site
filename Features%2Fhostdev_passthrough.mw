@@ -175,7 +175,7 @@ for many reasons, resulting in failure to spawn the VFs. Reasons for failure inc
 
 Passthrough of VF is similar to generic passthrough.
 
-== Api ==
+== API ==
 === Structures ===
 <code>
 device_name
@@ -209,6 +209,8 @@ Dictionary containing all relevant information about the device as returned by l
 pci_address_to_name -> domain -> bus -> slot -> function -> device_name
 </code>
 
+Converts domain, bus, slot and function fields of device_params to device_name.
+
 <code>
 list_by_caps -> vmContainer -> [String] -> {device_name: device_params}
 </code>
@@ -239,12 +241,16 @@ change_numvfs -> device_name -> numvfs -> ()
 
 === External ===
 <code>
-hostdevListByCaps -> [device_caps] -> [vmDevice]
+hostdevListByCaps -> [String] -> [vmDevice]
 </code>
+
+Where [String] is list of strings of device classes. See "known device classes".
 
 <code>
 hostdevChangeNumvfs -> device_name -> Int -> status
 </code>
+
+Where Int <= device_params['totalvfs'].
 
 == Cluster ==
 Host device structure has 2 fields that are meant to be used as possible implementation of cluster support - 
