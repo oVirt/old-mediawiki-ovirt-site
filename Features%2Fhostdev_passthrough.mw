@@ -227,6 +227,10 @@ reattaching it and removing udev files managing ownership.
 Where Int ≤ device_params['totalvfs'].
 
 === External ===
+* Create VM device definition (minimal):
+<code>{'type': 'hostdev', 'device': device_name}</code>
+
+
 * <code>hostdevListByCaps -> [String] -> [vmDevice]</code>
 Where [String] is list of strings of device classes. See "known device classes".
 
