@@ -47,29 +47,7 @@ Two flows here behind the scenes:<br/>
 2. Higher cluster level - same as #1, but upgrading the cluster levels once all hosts were upgraded.<br/>
 
 == Implementation ==
-=== Upgrade using Satellite/Katello ===
-[https://access.redhat.com/products/red-hat-satellite Satellite]/[http://www.katello.org/ Katello] are content and life-cycle host managers.<br>
-oVirt can leverage Satellite/Katello capabilities to monitor and update the hosts.<br> 
-Satellite/Katello should be registered and configured to the relevant repositories.
-Host should be registered to satellite/katello and properly configured (including katello-agent installed, subscribed to the relevant content view/environment).<br>
-See the following figure for the topology:
-[[File:OVirt-Katello_integration.jpg|700px]]
-
-The satellite/katello should be registered as Foreman/Host provider in the system, as an external provider.<br>
-==== Update Host Flow ====
-# Add host
-# Associate the host with its Content Provider (satellite/katello)
-# Identify the host within the provider as content host and store its uuid (the id serves as the consumer identifier within pulp) OR resolve host within satellite/katello by its hostname using content host search api.
-# Verify via the provider that ‘katello-agent’ is installed on host (to enable packages/errata installation). Without proper katello-agent, the host will not be able to report its errata, nor packages and the Satellite/katello won't be able to issue package/errata installation.
-# Select the host which is registered to satellite/katello 
-# Move host to maintenance
-# Select ‘errata’/'content' tab of the host → show list of available errata and their description by querying errata information for the specific host from the content provider.
-# Select specific or several errata to install on the host
-# Send request to satellite/katello and store the task-id for monitoring the installation progress.
-# Poll satellite/katello foreman-tasks until task ends.
-# Activate the host
-
-When installing host in the system, the katello-agent required port should accept incoming calls (amqp/amqps).
+=== Upgrade Host Flow ===
 
 == Open Issues/Questions ==
 * Support a cluster upgrade when cluster contains both RHEL and RHEV-H hosts.
