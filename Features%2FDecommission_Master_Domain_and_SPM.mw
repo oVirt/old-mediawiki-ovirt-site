@@ -355,47 +355,47 @@ At the moment this API assumes that the destination container should be already 
   ! Engine Command !! VDSM API || Engine Flow Status
 |-
   | AddImageFromScratchCommand
-  | createVolumeV2
+  | createVolumeContainer
   | -
 |-
   | HibernateVmCommand
-  | createVolumeV2
+  | createVolumeContainer
   | -
 |-
   | LiveSnapshotMemoryImageBuilder
-  | createVolumeV2
+  | createVolumeContainer
   | -
 |-
   | DestroyImageCommand
-  | deleteVolumeV2
+  | removeVolume
   | -
 |-
   | RestoreFromSnapshotCommand
-  | deleteVolumeV2
+  | removeVolume
   | -
 |-
   | CopyImageGroupCommand
-  | copyVolume
+  | copyVolumeData
   | -
 |-
   | CreateCloneOfTemplateCommand
-  | copyVolume
+  | copyVolumeData
   | -
 |-
   | CreateImageTemplateCommand
-  | copyVolume
+  | copyVolumeData
   | -
 |-
   | ImportRepoImageCopyTaskHandler
-  | copyVolume
+  | copyVolumeData
   | -
 |-
   | ExportRepoImageCommand
-  | copyVolume
+  | copyVolumeData
   | -
 |-
   | CreateSnapshotCommand
-  | createVolumeV2
+  | createVolumeContainer
   | -
 |-
   | RemoveSnapshotSingleDiskCommand
@@ -411,31 +411,31 @@ At the moment this API assumes that the destination container should be already 
   | -
 |-
   | RemoveImageCommand
-  | deleteVolumeV2
+  | removeVolume
   | -
 |-
   | RemoveTemplateSnapshotCommand
-  | deleteVolumeV2
+  | removeVolume
   | -
 |-
   | VmCommand (removeMemoryVolumes)
-  | deleteVolumeV2
+  | removeVolume
   | -
 |-
   | CreateImagePlaceholderTaskHandler
-  | createVolumeV2, deleteVolumeV2
+  | createVolumeContainer, removeVolume
   | -
 |-
   | VmReplicateDiskFinishTaskHandler
-  | deleteVolumeV2
+  | removeVolume
   | -
 |-
   | MemoryImageRemover
-  | deleteVolumeV2
+  | removeVolume
   | -
 |-
   | VmReplicateDiskStartTaskHandler
-  | copyVolume
+  | copyVolumeData
   | -
 |-
   | ExtendImageSizeCommand
