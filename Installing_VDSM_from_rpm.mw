@@ -68,12 +68,12 @@ ssl = false</nowiki>
 
 Restart the vdsmd service by executing:
  <nowiki>
-service vdsmd restart</nowiki>
+systemctl restart vdsmd</nowiki>
 
 If Vdsm was started earlier with ssl=true, it would refuse to start and you may need to use the undocumented verb
  <nowiki>
-service vdsmd reconfigure
-service vdsmd start</nowiki>
+vdsm-tool configure --force
+systemctl start vdsmd</nowiki>
 which edits '''/etc/libvirt/qemu.conf''' and changes '''spice_tls=1''' to '''spice_tls=0'''.
 
 [[Category:Vdsm]]
