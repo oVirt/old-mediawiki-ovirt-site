@@ -7,7 +7,7 @@
 [http://www.katello.org/ Katello] is content and life-cycle host manager.<br>
 oVirt can leverage Katello capabilities to report errata information for the hosts or for the ovirt-engine server.<br>
 [[Features/ForemanIntegration|Integration with Foreman]] was introduced in 3.5. Integrating with Katello (which is based on Foreman) extends it to support also the content management of the physical or virtual host.
-http://www.ovirt.org/index.php?title=Home/Features/KatelloIntegration&action=edit
+
 == Owner ==
 * Name: [[User:Moti Asayag| Moti Asayag]]
 * Email: <masayag@redhat.com>
