@@ -86,5 +86,6 @@ New API:
 
 The network to be updated for brick, is passed as a parameter in the GlusterBrickEntity
 
-[[Category: Feature]]
+[[Category: Feature|GlusterHostDiskManagement]]
 [[Category: Gluster]]
+[[Category:oVirt 3.6 Proposed Feature|GlusterHostDiskManagement]]
