@@ -45,6 +45,8 @@ The administrator can ignore this warning but it will not be deleted from the au
 === Benefit to oVirt ===
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
 
+The benefit to oVirt is a clear indication in case of luck of backups and a minimal engine downtime in case of corruption
+
 === Assumptions ===
 
 === Dependencies / Related Features ===
