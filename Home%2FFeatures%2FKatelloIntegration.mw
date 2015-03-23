@@ -15,6 +15,7 @@ oVirt can leverage Katello capabilities to report errata information for the hos
 == Detailed Description ==
 The Katello integration support presenting available errata to the user, for both hosts or for the ovirt-engine server.<br>
 See the following figure for the topology:
+
 [[File:OVirt-Katello_integration.jpg|700px]]
 
 Errata information is not stored on the engine server, rather being queried from the Katello server each time it is request by the administrator.<br>
