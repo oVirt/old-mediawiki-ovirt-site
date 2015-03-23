@@ -29,7 +29,7 @@ The administrator can ignore this warning but it will not be deleted from the au
   db_name varchar
   done_at datetime with time stamp 
   passed boolean 
-  error_message text
+  output_message text
 
 2)Adding Entity, DAO and tests for engine_backup_history the DAO should implement only 'get' since all insertions are done via engine-backup
 
