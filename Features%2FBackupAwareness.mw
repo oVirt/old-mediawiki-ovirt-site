@@ -19,8 +19,8 @@ In case of an accident, this may lead to long engine downtime and lots of effort
 
 === Use Case ===
 <!--* Link to feature page in a specific release. That release may complete the feature, or parts of it. The complete scope of this feature in this release will be described in the release feature page -->
-In case that no backup exists or that only a old backup is available, the administrator will see a warning events that informs him that the application data is in risk in case of corruption and encourages him to use engine-backup to backup hi data.
-The administrator can ignore this warning but it will not be deleted from the audit log until a successful backup is available or the user disables this feature on his own risk (The feature is enabled by default)
+In case that no backup exists or that only an old backup is available, the system will generate warning events informing the admin that the application data is at risk in case of corruption. The event will encourage the administrator to use perform a backup of the data using his own tools or using engine-backup.
+The administrator can ignore this warning but it will not be deleted from the audit log until a successful backup is available or the user disables this feature on his own risk (The feature is enabled by default).
 
 === Detailed Description ===
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
