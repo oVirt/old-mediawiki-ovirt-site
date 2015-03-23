@@ -34,9 +34,8 @@ The administrator can ignore this warning but it will not be deleted from the au
 2)Adding Entity, DAO and tests for engine_backup_history the DAO should implement only 'get' since all insertions are done via engine-backup
 
 3)Adding two configuration variable  (available from engine-config)
-  BackupPeriodInHours the period on which we expect a backup to occur - default : 24, set to -1 to disable this feature 
-  BackupExclude a comma-separated list table names that should be excluded from the backup - default: All Task, Job, Compensation tables 
-     This requires adding support in engine-backup for the exclude option in pg_dump utility   (-T)
+  BackupCheckPeriodInHours the period on which we check for a fresh backup - default : 24, set to -1 to disable this feature 
+  BackupAlertPeriodInDays the max number of days allowed without a fresh backup 
 
 4)Adding a quartz job that will awake every BackupPeriodInHours and check for the last backup available, according to that it will set/clear the appropriate warning 
 
