@@ -18,8 +18,8 @@ See the following figure for the topology:
 
 [[File:OVirt-Katello_integration.jpg|700px]]
 
-Errata information is not stored on the engine server, rather being queried from the Katello server each time it is request by the administrator.<br>
-Erratum includes the following information:
+Errata information is not stored on the engine server, rather being queried from the Katello server each time it is requested by the administrator.<br>
+'''Erratum''' includes the following details:
 * Id
 * Title
 * Description
