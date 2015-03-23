@@ -37,9 +37,7 @@ The administrator can ignore this warning but it will not be deleted from the au
   BackupCheckPeriodInHours the period on which we check for a fresh backup - default : 24, set to -1 to disable this feature 
   BackupAlertPeriodInDays the max number of days allowed without a fresh backup 
 
-4)Adding a quartz job that will awake every BackupPeriodInHours and check for the last backup available, according to that it will set/clear the appropriate warning 
-
-[optional] Adding a cleanup mechanism for the table in the same manner audit_log is cleaned, may be implemented with the same quartz job
+4)Adding a quartz job that will awake every BackupPeriodInHours and check for the last backup available, according to that it will set/clear the appropriate warning
 
 === Benefit to oVirt ===
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
