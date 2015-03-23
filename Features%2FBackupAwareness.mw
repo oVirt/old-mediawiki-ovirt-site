@@ -31,7 +31,7 @@ The administrator can ignore this warning but it will not be deleted from the au
   passed boolean 
   error_message text
 
-2)Adding DAO and tests for engine_backup_history the DAO should implement only 'get' since all insertions are done via engine-backup
+2)Adding Entity, DAO and tests for engine_backup_history the DAO should implement only 'get' since all insertions are done via engine-backup
 
 3)Adding two configuration variable  (available from engine-config)
   BackupPeriodInHours the period on which we expect a backup to occur - default : 24, set to -1 to disable this feature 
