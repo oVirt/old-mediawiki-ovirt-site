@@ -52,7 +52,20 @@ engine-backup should  support in engine-backup for the exclude option in pg_dump
 engine-backup will send audit log message when starting, succeeding and failing the backup
 
 === Dependencies / Related Features ===
-Bug ID: 1188144 1188136 1188119 1188143 1188140 1188132 1188152 1188127 1188161 1188121 1188124 1188156 1188130
+Bug ID: 
+* {{BZ|1188144}}
+* {{BZ|1188136}}
+* {{BZ|1188119}}
+* {{BZ|1188143}}
+* {{BZ|1188140}}
+* {{BZ|1188132}}
+* {{BZ|1188152}}
+* {{BZ|1188127}}
+* {{BZ|1188161}}
+* {{BZ|1188121}}
+* {{BZ|1188124}}
+* {{BZ|1188156}}
+* {{BZ|1188130}}
 
 === Documentation / External references ===
 <!-- Is there upstream documentation on this feature, or notes you have written yourself?  Link to that material here so other interested developers can get involved. Links to RFEs. -->
