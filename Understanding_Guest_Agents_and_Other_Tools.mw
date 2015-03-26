@@ -54,6 +54,8 @@ For Windows VMs the drivers must be installed. The VirtIO drivers are available 
 |-
 | VirtIO Drivers || Built-in || Built-in || Built-in || Built-in || Built-in || Built-in || Built-in 
 |-
-| Spice Agent || [[How_to_install_the_spice_guest_agent|Yes]] || [[How_to_install_the_spice_guest_agent|Yes]]|| [[How_to_install_the_spice_guest_agent|Yes]] || [[How_to_install_the_spice_guest_agent|Yes]] || [[How_to_install_the_spice_guest_agent|Yes]] ||  - || - 
+| Spice Agent || [[How_to_install_the_spice_guest_agent|Yes]] || [[How_to_install_the_spice_guest_agent|Yes]]|| [[How_to_install_the_spice_guest_agent|Yes(3)]] || [[How_to_install_the_spice_guest_agent|Yes]] || [[How_to_install_the_spice_guest_agent|Yes]] ||  - || - 
 |-
 |}
+
+''(3) Built-in with release 6.6 (possibly earlier)''
