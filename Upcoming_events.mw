@@ -4,16 +4,14 @@
 <startfeed/>
 </noinclude>
 
-{{Event|name=[//chemnitzer.linux-tage.de/2015/en/ Chemnitzer Linux-Tage]|date=March 21-22, 2015|location=Chemnitz, Germany|lead=Attend this popular community event and learn more about all things Linux and free software!}}
-
 {{Event|name=[//posscon.org/ POSSCON]|date=April 14-15, 2015|location=Columbia,SC|lead=A technical conference exploring open teach and the open web.}}
 
 {{Event|name=[//www.oss2015.org/ OSS 2015]|date=May 16-17, 2015|location=Florence, Italy|lead=The 11th International Conference on Open Source Systems (OSS 2015) will celebrate a decade of advances in the use of free and open source software by emphasizing areas and topics that will drive future use over the next decade.}}
 
+{{Event|name=[//www.redhat.com/summit/ Red Hat Summit]|date=June 23-26, 2015|location=Boston, MA|lead=The Red Hat Summit is the premier open source technology event to showcase the latest and greatest in cloud computing, platform, virtualization, middleware, storage, and systems management technologies.}}
+
 <noinclude>
 <endfeed/>
-
-{{Event|name=[//www.redhat.com/summit/ Red Hat Summit]|date=June 23-26, 2015|location=Boston, MA|lead=The Red Hat Summit is the premier open source technology event to showcase the latest and greatest in cloud computing, platform, virtualization, middleware, storage, and systems management technologies.}}
 
 {{Event|name=[//www.oscon.com/open-source-2015 OSCON]|date=July 20-24, 2015|location=Portland, OR|lead=OSCON celebrates, defines, and demonstrates the power of open source in the world today. From small businesses to the enterprise, open source is the first choice of IT everywhere.}}
 
