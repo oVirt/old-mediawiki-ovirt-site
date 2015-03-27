@@ -24,8 +24,8 @@ More information:
 * Email: [mailto:laravot@redhat.com laravot@redhat.com]
 * Name: [[User:Aglitke|Adam Litke]]
 * Email: [mailto:alitke@redhat.com alitke@redhat.com]
-* PM Requirements : [[User:ACathrow|Andrew Cathrow]]
-* Email: [mailto:acathrow@redhat.com acathrow@redhat.com]
+* PM Requirements : Scott Herold
+* Email: [mailto:sherold@redhat.com sherold@redhat.com]
 
 == Current status ==
 * Target Release: 3.6
@@ -442,3 +442,6 @@ At the moment this API assumes that the destination container should be already 
   | extendVolumeSize
   | -
 |}
+
+[[Category:Feature|Decommission_Master_Domain_and_SPM]]
+[[Category:oVirt 3.6 Proposed Feature|Decommission_Master_Domain_and_SPM]]
