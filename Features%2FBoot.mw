@@ -58,11 +58,10 @@ To test or use this feature:
 # Set a root password while the installation is running
 # After the installation completes, the host will reboot
 # Login using ''root'' and the password you set during the installation
-# '''For Engine'''
+# '''For Engine''' - to complete the Engine setup
 ## Run <code>engine-setup --config-append=ovirt-engine-answers</code> to setup engine
 ## Log into the web ui using ''admin'' and the password you've set during the <code>engine-setup</code>
 ## Add the Node appliance using the ''Add host'' menu item on the ''Hosts'' tab. Use ''root'' and the password set during the Node appliance installation
-
 
 == Contingency Plan ==
 None
