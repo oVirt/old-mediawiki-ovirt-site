@@ -27,12 +27,12 @@ Email: <tsaban@redhat.com>
 | CPU-Level
 | Filter
 | Working
-| Filters hosts by Cpu level(manufacturer, model, etc).
+| Filters hosts by CPU level(manufacturer, model, etc).
 |-
 | CPU                                                     
 | Filter
 | Working
-| Filters hosts by cpu cores(Number of vCpus).
+| Filters hosts by CPU cores(Number of Virtual CPUs).
 |-
 | VmAffinityGroups
 | Filter
@@ -57,17 +57,17 @@ Email: <tsaban@redhat.com>
 | None
 | Weight
 | Using even distribution policy instead.
-| Hosts recieves score based on even distribution weight policy.
+| Hosts receives score based on even distribution weight policy.
 |-
 | OptimalForEvenGuestDistribution
 | Weight
 | Working
-| Sets host scores based on the number of vms on each host.
+| Sets host scores based on the number of VMs on each host.
 |-
 | OptimalForEvenDistribution
 | Weight
 | Working
-| Sets hosts scores so that there will be even cpu usage distribution.
+| Sets hosts scores so that there will be even CPU usage distribution.
 |-
 | VmAffinityGroups                                 
 | Weight
@@ -87,7 +87,7 @@ Email: <tsaban@redhat.com>
 | HA
 | Weight
 | Working
-| Weight are being set by the number of HA vms on the host and a scale down parameter. Has influence only when used with hosted engine.
+| Weight are being set by the number of HA VMs on the host and a scale down parameter. Has influence only when used with hosted engine.
 |-
 | HA
 | Filter
@@ -96,7 +96,7 @@ Email: <tsaban@redhat.com>
 |-
 | Memory                                                
 | Filter
-| Not working.
+| Not working
 | Filters hosts based on memory usage.
 |}
 
