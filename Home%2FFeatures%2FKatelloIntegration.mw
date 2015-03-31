@@ -40,7 +40,9 @@ The hosts are being identified at the Katello engine by their '''host name'''. H
 ==== Katello errata for hosts ====
 * Associate a host with the 'Foreman' external provider
 ** By provisioning a host via 'Foreman' external provider
-** By updating the host via 'Edit'
+** By updating the host via 'Edit', see:
+[[File:EditHost.png|600px]]
+
 * UI: Go to "Hosts" ---> "General" sub-tab ---> "Errata":
 [[File:System_host_errata.jpg]]
 * UI: Go to "Hosts" ---> "General" sub-tab ---> "Errata" --> Specific severity:
