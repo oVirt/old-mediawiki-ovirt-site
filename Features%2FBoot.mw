@@ -6,7 +6,7 @@
 {{Feature|name=Boot oVirt.org|modules=appliance|status=WIP|version=3.6.0}}
 
 == Summary ==
-This feature will provide an [[http://jenkins.ovirt.org/fabiand_boo_build_testing/ ISO]] to install an stable oVirt Engine Appliance or oVirt Node Appliance to a host.
+This feature will provide an [http://jenkins.ovirt.org/fabiand_boo_build_testing/ ISO] to install an stable oVirt Engine Appliance or oVirt Node Appliance to a host.
 The appliances are fetched over the internet from Jenkins.
 
 [[File:Ipxe-iso-screenshot.png]]
