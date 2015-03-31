@@ -49,7 +49,7 @@ Link to the Jenkins job: http://jenkins.ovirt.org/fabiand_boo_build_testing/
 
 To test or use this feature:
 
-# Download the ''ovirt-ipxe.iso'' or ''ovirt-ipxe.usb''
+# Download the [http://jenkins.ovirt.org/user/fabiand/my-views/view/Node/job/fabiand_boo_build_testing/lastSuccessfulBuild/artifact/ovirt-ipxe.iso ''ovirt-ipxe.iso''] or [http://jenkins.ovirt.org/user/fabiand/my-views/view/Node/job/fabiand_boo_build_testing/lastSuccessfulBuild/artifact/ovirt-ipxe.usb ''ovirt-ipxe.usb'']]
 # Write the ISO or USB media image to an CD-ROM or a USB media or use it in a VM
 # Boot the host or VM from the ISO or USB media
 # Select ''Engine / Interactive Installation'' or ''Node / Interactive Installation''
