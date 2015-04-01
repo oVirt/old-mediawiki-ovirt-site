@@ -157,6 +157,19 @@ Following exception prevents host monitoring but affected host stays in status '
 {{BZ|1181969}} - link to jquery is 'http://'<BR>
 
 ==VDSM==
+'''Fixed in oVirt 3.5.2 RC3'''<BR>
+{{BZ|1154399}} - VDSM script reset network configuration on every reboot when based on predefined bond<BR>
+{{BZ|1189229}} - vdsm failing to start due to KeyError at vdsm-restore-net-config<BR>
+{{BZ|1190207}} - vdsClient/vdscli SSLError timeout error<BR>
+{{BZ|1196049}} - [Rhel7.1] After live storage migration on block storage vdsm extends migrated drive using all free space in the vg<BR>
+{{BZ|1196327}} - [performance] bad getVMList output creates unnecessary calls from Engine<BR>
+{{BZ|1196735}} - [performance] bad getVMList output creates unnecessary calls from Engine<BR>
+{{BZ|1197668}} - After failure to setupNetworks: restore-nets with unified persistence does not restore pre-vdsm ifcfg<BR>
+{{BZ|1198512}} - Live-deleting a snapshot of preallocated disk results in a block domain using up all available space<BR>
+{{BZ|1199141}} - [SCALE] snapshot deletion -> heavy swapping on SPM<BR>
+{{BZ|1199815}} - Failed to auto shrink qcow block volumes on merge<BR>
+{{BZ|1204782}} - [RHEL  7.0 + 7.1] Host configure with DHCP is losing connectivity after some time - dhclient is not running<BR>
+
 '''Fixed in oVirt 3.5.2 RC1'''<BR>
 {{BZ|1124450}} - Wrong default multipath configuration for EL6<BR>
 {{BZ|1131460}} - vdsm package causes logrotate to trigger selinux AVC alerts<BR>
