@@ -41,5 +41,12 @@ If you're willing to participate, please add yourself to the table below:
 | [[User:Stirabos|Simone Tiraboschi]]  || Update from 3.5.1.1 || NFS  || basic || Fedora 20 ||
 |}
 
-
+== Third Release Candidate ==
+{|border="1"
+! Name !! part tested !!Storage !! Networking !! Distribution !! Bugs
+|-
+| [[User:SandroBonazzola|SandroBonazzola]]  || AIO clean install  || NFS  || basic || CentOS 7.1 ||
+|-
+| [[User:Stirabos|Simone Tiraboschi]]  || AIO clean install  || NFS  || basic || Fedora 20 ||
+|}
 [[Category:Integration]]
