@@ -74,6 +74,8 @@ Following exception prevents host monitoring but affected host stays in status '
 =Bugs fixed=
 
 ==oVirt Engine==
+'''Fixed in oVirt 3.5.2 RC3'''<BR>
+{{BZ|1206440}} - Typos in CDA message when importing a "dirty" SD to an uninitialized DC<BR>
 
 '''Fixed in oVirt 3.5.2 RC2'''<BR>
 {{BZ|1179558}} - NPE when adding a VM to a VM pool when there's not enough storage<BR>
