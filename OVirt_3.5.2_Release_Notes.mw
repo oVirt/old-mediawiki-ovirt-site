@@ -134,6 +134,9 @@ Following exception prevents host monitoring but affected host stays in status '
 {{BZ|1196136}} - Engine-setup should support cleaning of zombie commands before upgrade<BR>
 
 ==ovirt-hosted-engine-setup==
+'''Fixed in oVirt 3.5.2 RC3'''<BR>
+{{BZ|1190636}} - [hosted-engine] [iSCSI support] connectStoragePools fails with "SSLError: The read operation timed out" while adding a new host to the setup<BR>
+
 '''Fixed in oVirt 3.5.2 RC1'''<BR>
 {{BZ|1181585}} - [hosted-engine] Bad check of iso image permission<BR>
 {{BZ|1190207}} - vdsClient/vdscli SSLError timeout error<BR>
