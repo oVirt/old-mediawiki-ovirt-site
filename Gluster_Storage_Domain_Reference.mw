@@ -1,7 +1,7 @@
 ==Suggested Gluster Volume Configuration for Storage Domain==
 In order to use a gluster volume as an oVirt Storage Domain we suggest to:
 
-* use the gluster replica 3 (three copies)
+* use the gluster replica 3 (three copies). See [https://access.redhat.com/documentation/en-US/Red_Hat_Storage/2.1/html/Administration_Guide/sect-User_Guide-Setting_Volumes-Replicated.html Creating Replicated Volumes] guide
 * set the network.ping-timeout to 10 seconds
 * set the cluster.quorum-type to auto
 
