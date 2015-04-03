@@ -15,4 +15,4 @@ This test case will check that the feature is working as expected by invoking li
 ==Expected Results==
 * Live Merge should run and the snapshot should be deleted
 
-[[Category:TestCase]]
+[[Category:TestCase|CommandCoordinator]]
