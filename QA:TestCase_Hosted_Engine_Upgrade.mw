@@ -16,5 +16,5 @@ Test the upgrade of oVirt Hosted Engine deployments
 ==Optional==
 * Perform other oVirt Hosted Engine / oVirt Engine test cases
 
-[[Category:TestCase]]
+[[Category:TestCase|Hosted_Engine_Upgrade]]
 [[Category:Integration]]
