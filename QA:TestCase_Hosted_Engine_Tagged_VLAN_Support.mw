@@ -20,4 +20,4 @@ This test case will check that the feature is working as expected
 ==Optional==
 * Perform other oVirt Engine test cases related to tagged VLAN interfaces
 
-[[Category:TestCase]]
+[[Category:TestCase|Hosted_Engine_Tagged_VLAN_Support]]
