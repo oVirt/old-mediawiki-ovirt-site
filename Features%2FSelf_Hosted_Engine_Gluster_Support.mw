@@ -2,7 +2,7 @@
 
 =Self Hosted Engine Gluster Support=
 
-{{Feature|name=Self Hosted Engine Gluster Support|modules=ovirt-hosted-engine-setup|status=POST|version=3.6.0}}
+{{Feature|name=Self Hosted Engine Gluster Support|modules=ovirt-hosted-engine-setup|status=ON_QA|version=3.6.0}}
 
 == Summary ==
 This feature enable the user to use Gluster storage for Hosted Engine data domain. 
@@ -57,7 +57,7 @@ Requirements:
 * [[Gluster Storage Domain Reference]]
 
 == Testing ==
-Test plan still to be created
+* [[QA:TestCase Hosted Engine External Gluster Support]]
 
 == Contingency Plan ==
 Currently all the changes required for this feature are in a single patch: http://gerrit.ovirt.org/36264. If it won't be ready it won't be merged.
