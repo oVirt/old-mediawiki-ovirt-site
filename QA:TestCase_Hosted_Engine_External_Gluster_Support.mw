@@ -1,0 +1,31 @@
+== Description ==
+Starting with oVirt 3.6.0 Hosted Engine can be deployed on a existing GlusterFS Replica 3 storage.
+This test case will check that the feature is working as expected.
+
+== Setup ==
+* Prepare a Gluster Replica 3 storage to be used. You can follow  [https://access.redhat.com/documentation/en-US/Red_Hat_Storage/2.1/html/Administration_Guide/sect-User_Guide-Setting_Volumes-Replicated.html Creating Replicated Volumes] guide
+* Configure Gluster servers ensuring '''''/etc/glusterfs/glusterd.vol''''' setting
+    option rpc-auth-allow-insecure on
+* Configure the volume to be used as following:
+   gluster volume set <volume> cluster.quorum-type auto
+   gluster volume set <volume> network.ping-timeout 10
+   gluster volume set <volume> auth.allow \*
+   gluster volume set <volume> group virt
+   gluster volume set <volume> storage.owner-uid 36
+   gluster volume set <volume> storage.owner-gid 36
+   gluster volume set <volume> server.allow-insecure on
+
+==How to test==
+# Install ovirt-hosted-engine-setup
+# Run hosted-engine --deploy
+# When asked about ''Please specify the storage you would like to use'' select glusterfs
+# Specify the volume prepared for the test
+# Complete the Hosted Engine deployment
+
+==Expected Results==
+* The Hosted Engine deployment is completed without errors
+
+==Optional==
+* Deploy additional hosts for Hosted Engine
+
+[[Category:TestCase|Hosted_Engine_External_Gluster_Support]]
