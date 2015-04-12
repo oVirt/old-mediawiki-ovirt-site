@@ -43,6 +43,19 @@ The administrator can ignore this warning but it will not be deleted from the au
 
 5) Adding events of BACKUP_STARTED and BACKUP_ENDED to be used by engine-backup to record backup activity
 
+== Interface to engine-backup ==
+engine-backup should call the following procedure upon start/complete/fail 
+  RecordEngineBackupHistoryEvent(db_name, done_at , status,  output_message )
+  db_name is 6the database name
+  done_at is the current time
+  status is -1 for failure , 0 for started and 1 for completed 
+  put_message includes the error message raised in case that the operation failed 
+
+== Events Raised ==
+  ENGINE_BACKUP_FAILED - backup operation failed 
+  ENGINE_BACKUP_STARTED - backup operation had started 
+  ENGINE_BACKUP_COMPLETED - backup operation completed
+
 == Benefit to oVirt ==
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
 
