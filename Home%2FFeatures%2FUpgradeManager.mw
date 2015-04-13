@@ -28,6 +28,7 @@ Currently, for oVirt-node, it already shows you that there is an upgrade availab
 We can add a similar alert also for regular hosts:<br/>
 * A notification will be added at the bottom of the 'General' sub-tab of the host, saying 'Upgrade is available'.
 * Once an update is available, the option to "Updade" button will be enabled, both on the menu bar and in the host context menu.<br/>
+* For consistency, a support will be added for updates available property for '''rhev-h'''
 
 [[File:System_host_update.jpg | 800px]]
 
