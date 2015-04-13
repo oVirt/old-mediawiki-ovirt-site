@@ -67,7 +67,7 @@
 
 * Fine-grained control on network-specific routes.
 
-* Allow multiple setting IPv4 and IPv6 addresses per network device. (API changes is needed; we report multiple ipv6 addresses).
+* Allow multiple setting IPv4 and IPv6 addresses per network device. (API change is needed; we report multiple ipv6 addresses).
 
 ** models: support multiple IPv4 and/or IPv6 addresses
 
@@ -86,7 +86,7 @@
 
 * support IPv6 in source routing
 
-* use ElementTree instead of minidon in libvirt.py
+* use ElementTree instead of minidom in libvirt.py
 
 * allow adding DNS configuration on static IP
 
@@ -98,7 +98,7 @@
 
 * Make tests match the new package structure.
 
-* Add configureIp to the configurators API so that Layer 3 can be configured  in parallel after Layer 2 (and it gives much better modelling). Obviously,  this isn't really possible in ifcfg without doing a two step write which  is an ugly hack.
+* Add configureIp to the configurators API so that Layer 3 can be configured  in parallel after Layer 2 (and it gives much better modelling). Obviously,  this isn't really possible in ifcfg without doing a two step write which is an ugly hack.
 
 * extnet hook - pass portgroup http://www.ovirt.org/VDSM-Hooks/network-nat
 
