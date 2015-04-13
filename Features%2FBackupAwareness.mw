@@ -27,13 +27,13 @@ The administrator can ignore this warning but it will not be deleted from the au
 == Detailed Description ==
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
 
-1)Adding a new table engine_backup_history with the following columns   
+1)Adding a new table engine_backup_log with the following columns   
   db_name varchar
   done_at datetime with time stamp 
-  passed boolean 
+  is_passed boolean 
   output_message text
 
-2)Adding Entity, DAO and tests for engine_backup_history the DAO should implement only 'get' since all insertions are done via engine-backup
+2)Adding Entity, DAO and tests for engine_backup_log the DAO should implement only 'get' since all insertions are done via engine-backup
 
 3)Adding two configuration variable  (available from engine-config)
   BackupCheckPeriodInHours the period on which we check for a fresh backup - default : 6, set to -1 to disable this feature 
@@ -41,7 +41,7 @@ The administrator can ignore this warning but it will not be deleted from the au
 
 4)Adding a quartz job that will awake every BackupPeriodInHours and check for the last backup available, according to that it will set/clear the appropriate warning
 
-5) Adding events of BACKUP_STARTED and BACKUP_ENDED to be used by engine-backup to record backup activity
+5) Adding events of BACKUP_STARTED and BACKUP_COMPLETED and BACKUP_FAILED  to be used by engine-backup to record backup activity
 
 == Interface to engine-backup ==
 engine-backup should call the following procedure upon start/complete/fail 
