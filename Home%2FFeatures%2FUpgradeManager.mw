@@ -37,6 +37,7 @@ We can add a similar alert also for regular hosts:<br/>
 *** Enable "Upgrade" button on menu-bar and in the host context menu.
 
 === Allow the user to do a rolling cluster upgrade, either to a higher cluster level, or to a new version that supports the current one ===
+''Not planned for 3.6'':<br>
 For a cluster we should add the option to "check for available upgrade". This should go on all the operational hosts, and check whether there is a new version available, and what cluster levels it supports. If there is one, the minimal and maximal supported cluster level will be shown as well.
 Now, the user can upgrade to a higher cluster level, or to a higher version in the current one.<br/><br/>
 Two flows here behind the scenes:<br/>
