@@ -6,10 +6,13 @@
 <!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
 The CPU SLA feature enables users to limit the CPU usage of a virtual machine.
 
-=== Owner ===
+=== Owners ===
 <!--This should link to your home wiki page so we know who you are-->
-* Name: [[User:kianku|Kobi Ianko]],   Email: kobi@redhat.com
-
+==== initial design and implementation ====
+* Name: [[User:kianku|Kobi Ianko]],   Email: <s>kobi@redhat.com</s>
+==== Maintainers ====
+* Name: [[User:rgolan|Roy Golan]],   Email: rgolan@redhat.com 
+* Name: [[User:msivak|Martin Sivak]],   Email: msivak@redhat.com
 
 === Current status ===
 * Target Release: 3.5
