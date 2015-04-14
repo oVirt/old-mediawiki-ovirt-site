@@ -9,11 +9,11 @@ The CPU SLA feature enables users to limit the CPU usage of a virtual machine.
 === Owners ===
 <!--This should link to your home wiki page so we know who you are-->
 ==== Initial design and implementation ====
-* Name: [[User:kianku|Kobi Ianko]],   Email: <s>kobi@redhat.com</s>
+* Name: [[User:kianku|Kobi Ianko]]  <s>kobi@redhat.com</s>
 
 ==== Maintainers ====
-* Name: [[User:rgolan|Roy Golan]],   Email: rgolan@redhat.com 
-* Name: [[User:msivak|Martin Sivak]],   Email: msivak@redhat.com
+* Name: [[User:rgolan|Roy Golan]] rgolan@redhat.com 
+* Name: [[User:msivak|Martin Sivak]]  msivak@redhat.com
 
 === Current status ===
 * Target Release: 3.5
