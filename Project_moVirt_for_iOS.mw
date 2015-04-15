@@ -1,0 +1,8 @@
+= moVirt for iOS  =
+
+== Summary ==
+moVirt for iOS is iOS version of previously Android only mobile client for oVirt. This project is aimed at delivering similar functionality in native Swift for iOS platform, with UI and controls respecting platform guidelines.
+
+== Owner ==
+* Name: [[User:Martin Polednik| Martin Polednik]]
+* Email: [mailto:mpolednik@redhat.com mpolednik@redhat.com]
