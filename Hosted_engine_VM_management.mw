@@ -8,9 +8,9 @@
 
 # Allow editing the Hosted engine VM, storage domain, disks, networks etc - new feature
 # Have a shared configuration for the hosted engine VM - new feature 
-# Have a backup for the hosted engine VM - new feature 
-
-the 1st feature by-products are the 2nd and 3rd. 
+# Have a backup for the hosted engine VM configuration - new feature 
+<br>
+the 1st feature by-products are the 2nd and 3rd.
 
 == Owner ==
 <!--This should link to your home wiki page so we know who you are-->
