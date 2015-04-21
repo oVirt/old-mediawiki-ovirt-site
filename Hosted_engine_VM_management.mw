@@ -46,7 +46,7 @@ OVF_STORE under the preconfigured hosted engine storage domain.
 
 === High level flow ===
 
-[[File:High Level Design - Edit HE VM(2).png|600px|thumb|left|alt text]]
+[[File:High Level Design - Edit HE VM(2).png|600px|thumb|left]]
 
 # installation creates and upload the OVF {VM guid}.ovf to a pre-created OVF_DISK
 # HA Agent read’s OVF from OVF_STORE
@@ -56,9 +56,7 @@ OVF_STORE under the preconfigured hosted engine storage domain.
 # Changes made to the engine VM are persisted back to the OVF_STORE under the OVF file
 # Regular API usage apply to the engine VM - should we prevent the engine VM deletion or one of its disks? (for sure make it delete protected at first)
 
-<p>
-
-<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 ===User Experience ===
 
 ==== CRUD ====
