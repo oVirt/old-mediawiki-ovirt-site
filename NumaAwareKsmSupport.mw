@@ -119,39 +119,35 @@ Set cluster with with NUMA aware KSM policy = KSM share NUMA nodes (the default)
 ==== Test 1 – system test ====
 # Using oVirt engine, activate 1 host
 # When host is up<br />
-:Indented line
-Verify: On host file /sys/kernel/mm/ksm/merge_across_nodes contains 1  .
+#:Verify: On host file /sys/kernel/mm/ksm/merge_across_nodes contains 1  .
 # Take host 1 on maintenance
-:Indented line
-When host is on maintenance
-# Update cluster with with NUMA aware KSM policy = KSM per each NUMA nodes.
+# When host is on maintenance
+#:Update cluster with with NUMA aware KSM policy = KSM per each NUMA nodes.
 # Using oVirt engine, activate 1 host
-:Indented line
-When host is up
-Verify: On host file /sys/kernel/mm/ksm/merge_across_nodes contains 0  .
-Verify: received info event from host about  NUMA aware KSM policy change.
-Take host 1 on maintenance
-When host is on maintenance
-Update cluster with with NUMA aware KSM policy = KSM share NUMA nodes.
-Using oVirt engine, activate 1 host
-When host is up
-Verify: On host file /sys/kernel/mm/ksm/merge_across_nodes contains 1  .
-Verify: received info event from host about  NUMA aware KSM policy change.
-Update cluster with NUMA aware KSM policy using REST
-Initial set up:
-Set cluster with with NUMA aware KSM policy = KSM share NUMA nodes (the default).
+#When host is up
+#: Verify: On host file /sys/kernel/mm/ksm/merge_across_nodes contains 0  .
+#: Verify: received info event from host about  NUMA aware KSM policy change.
+# Take host 1 on maintenance
+#When host is on maintenance
+#: Update cluster with with NUMA aware KSM policy = KSM share NUMA nodes.
+# Using oVirt engine, activate 1 host
+# When host is up
+#: Verify: On host file /sys/kernel/mm/ksm/merge_across_nodes contains 1  .
+#: Verify: received info event from host about  NUMA aware KSM policy change.
+=== Update cluster with NUMA aware KSM policy using REST===
+Initial set up:<br />
+Set cluster with with NUMA aware KSM policy = KSM share NUMA nodes (the default).<br />
 Take all hosts in clusters up.
-Test 1 – system test
-Update cluster with KSM disabled and  NUMA aware KSM policy = KSM per each NUMA nodes
-Wait for 20 secs
-Verify: received from each host info event about  NUMA aware KSM policy change.
-Verify: on each host /sys/kernel/mm/ksm/merge_across_nodes contains 0  .
-Test 2 – system test
-Update cluster with KSM disabled and  NUMA aware KSM policy = KSM share NUMA nodes
-Wait for 20 secs
-Verify: received from each host info event about  NUMA aware KSM policy change.
-Verify: on each host /sys/kernel/mm/ksm/merge_across_nodes contains 1  
-
+==== Test 1 – system test ====
+# Update cluster with KSM disabled and  NUMA aware KSM policy = KSM per each NUMA nodes
+#: Wait for 20 secs
+# Verify: received from each host info event about  NUMA aware KSM policy change.
+# Verify: on each host /sys/kernel/mm/ksm/merge_across_nodes contains 0  .
+==== Test 2 – system test ====
+# Update cluster with KSM disabled and  NUMA aware KSM policy = KSM share NUMA nodes
+#: Wait for 20 secs
+# Verify: received from each host info event about  NUMA aware KSM policy change.
+# Verify: on each host /sys/kernel/mm/ksm/merge_across_nodes contains 1
 
 == Comments and Discussion ==
 
