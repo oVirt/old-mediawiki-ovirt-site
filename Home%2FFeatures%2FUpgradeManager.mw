@@ -62,6 +62,7 @@ Two flows here behind the scenes:<br/>
 === Upgrade Host Flow ===
 The upgrade process will reuse the existing re-install flow which updates the required packages (vdsm, vdsm-cli).<br>
 The host upgrade sequence is:
+* If VMs are running on the host - popup a warning confirmation dialog: "There are running VMs on the host. Would you like to continue ?"
 * If there are updates available for the host
 ** Move host to 'Maintenance'.
 *** Migrate VMs if there are any running on the host.
@@ -76,7 +77,6 @@ Selecting several hosts to be updated in the UI (multiple action runner) should 
 
 '''VDSM''' maintains a cache for the available updates for the host, refreshed by a cron job on a daily basis. <br>
 During installation of a new VDSM version, this file is removed, so future calls to ''getUpdatesAvailable()'' api to determine if there are additional updates for the engine will return no response.
-
 
 == Open Issues/Questions ==
 * Support a cluster upgrade when cluster contains both RHEL and RHEV-H hosts.
