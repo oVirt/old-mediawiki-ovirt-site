@@ -46,6 +46,23 @@ Since RHEL 6.5 there is a kernel flag that controls KSM's NUMA awareness. The fl
 The initial life-cycle of KSM service with NUMA awareness is  presented in the pic bellow:<br />
 [[File:ksm-merge-nodes-statechart.png]]<br />
 The skilled hypervisor/host administrator may control merge_across_nodes life-cycle using scripts. Outside oVirt control.<br />
+=== oVirt feature design ===
+Add cluster level property to store and manage the NUMA aware KSM policy. <br />
+This requires adding new boolean column to vds_group table. <br />
+Updating the corresponding insert and update stored procedure. <br />
+Refactoring the DAO command and refactoring VDSGroup class.<br />
+
+Refactor all usage scenarios to guarantee that change to above cluster property will percolate at runtime to all active hosts. And NUMA aware KSM policy will be effective on every host activation. Using GUI and REST api.<br />
+
+Eventually achieving NUMA aware KSM policy conformance on all hosts in cluster.
+The initial default to all hosts in data center is merge_across_nodes = 1 (NUMA performance loss) this is RHEL default initial state.
+==== A) Activate host with NUMA aware KSM policy ====
+* Refactor engine class InitVdsOnUpCommand to send VDSM the current NUMA aware KSM policy value.<br />
+* Refactor VDSM command SetMOMPolicyParameters to accept NUMA aware KSM policy. And make the kernel modification to the host. Preserving host performance. <br />
+* Update cluster with NUMA aware KSM policy using REST api<br />
+* Refactor engine class UpdateVdsGroupCommand. At execution: concurrently distributed the NUMA aware KSM policy values to each active host (calling VDSM command SetMOMPolicyParameters as in section A above).<br />
+* On VDSM side update setMoMPolicy command with new parameter.<br />
+* On MoM update KSM controller and collector to identify new parameter. Also update the KSM policy to reflect the KSM with '''ksm_across_nodes''' flage lifecycle logic.<br />
 
 == Benefit to oVirt ==
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
