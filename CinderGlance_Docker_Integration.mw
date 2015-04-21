@@ -161,5 +161,6 @@ This below adds a link to the "discussion" tab associated with your page.  This 
 
 * Refer to [[Talk:CinderGlance_Docker_Integration]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 
-[[Category:Feature]]
-[[Category:Template]]
+[[Category:Feature|CinderGlance Docker Integration]]
+[[Category:oVirt 3.6 Proposed Feature|CinderGlance Docker Integration]]
+[[Category:Integration|CinderGlance Docker Integration]]
