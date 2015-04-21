@@ -1,0 +1,18 @@
+<!-- {{autolang|base=yes}} -->
+
+== Event processing built on top of JSON-RPC ==
+
+{{Feature|name=Event mechanism to send events from the host to the engine|modules=vdsm, engine|status=In Development|version=3.6.0}}
+
+=== Summary ===
+
+
+=== Owner ===
+
+* Name: [[User:Pkliczewski| Piotr Kliczewski]]
+* Email: <pkliczew@redhat.com>
+
+=== Current status ===
+* Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]] <!--This is markup for the date on which the current page was last changed, do not change-->
+
+=== Overview ===
