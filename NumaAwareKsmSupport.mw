@@ -21,10 +21,8 @@ We want to introduce a new feature to oVirt that will allow host administrator t
 
 == General Description ==
 The information flow is presented in the diagram bellow:
-<gallery>
-File:Example.jpg|Caption1
-File:Example.jpg|Caption2
-</gallery>
+
+[[File:Ksm-merge_across-node-data-flow.png]]
 The implementation flow is as following:
 Update Database and entities with new attribute.
 Update REST api and its translation system with new attribute
