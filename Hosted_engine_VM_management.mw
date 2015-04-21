@@ -56,7 +56,8 @@ OVF_STORE under the preconfigured hosted engine storage domain.
 # Changes made to the engine VM are persisted back to the OVF_STORE under the OVF file
 # Regular API usage apply to the engine VM - should we prevent the engine VM deletion or one of its disks? (for sure make it delete protected at first)
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+
 ===User Experience ===
 
 ==== CRUD ====
