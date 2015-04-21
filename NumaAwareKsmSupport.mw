@@ -58,11 +58,20 @@ Eventually achieving NUMA aware KSM policy conformance on all hosts in cluster.
 The initial default to all hosts in data center is merge_across_nodes = 1 (NUMA performance loss) this is RHEL default initial state.
 ==== A) Activate host with NUMA aware KSM policy ====
 # Refactor engine class InitVdsOnUpCommand to send VDSM the current NUMA aware KSM policy value.<br />
-# Refactor VDSM command SetMOMPolicyParameters to accept NUMA aware KSM policy. And make the kernel modification to the host. Preserving host performance. <br />
-# Update cluster with NUMA aware KSM policy using REST api<br />
+# Refactor VDSM command SetMOMPolicyParameters to accept NUMA aware KSM policy. And make the VDSM side modification to receive the command. Preserving host performance. <br />
+# On MoM update KSM controller and collector to identify new parameter. Also update the KSM policy to reflect the KSM with '''ksm_across_nodes''' flag life-cycle logic.<br />
+==== B) Update cluster with NUMA aware KSM policy using REST api ====
 # Refactor engine class UpdateVdsGroupCommand. At execution: concurrently distributed the NUMA aware KSM policy values to each active host (calling VDSM command SetMOMPolicyParameters as in section A above).<br />
-# On VDSM side update setMoMPolicy command with new parameter.<br />
-# On MoM update KSM controller and collector to identify new parameter. Also update the KSM policy to reflect the KSM with '''ksm_across_nodes''' flage lifecycle logic.<br />
+# Update REST api.xsd rsdl file and mapping classes<br />
+# On VDSM and MoM side use the design from section A above.
+==== C) Update cluster with NUMA aware KSM policy using GUI ====
+In addition to the design from section B) above. Add radio buttons to engine GUI  ClusterPopup at the bottom enabled by KSM checkbox.<br />
+As in the picture bellow:<br />
+[[File:KSM-Policy-for-Numa-GUI.png]]<br />
+==== D) Adding new cluster with NUMA aware KSM policy using REST api ====
+Refactor engine class AddVdsGroupCommand. Add validation to NUMA aware KSM policy value. 
+==== E) Adding new cluster with NUMA aware KSM policy using GUI ====
+Apply the GUI changes in section C above. And the design in section D above.
 
 == Benefit to oVirt ==
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
