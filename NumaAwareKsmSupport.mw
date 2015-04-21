@@ -22,17 +22,17 @@ We want to introduce a new feature to oVirt that will allow host administrator t
 == General Description ==
 The information flow is presented in the diagram bellow:
 
-[[File:Ksm-merge_across-node-data-flow.png]]
-The implementation flow is as following:
-Update Database and entities with new attribute.
-Update REST api and its translation system with new attribute
-Update GUI with new widget 
-Test GUI and REST api
-Update oVirt-engine business logic to transmit KSM changes to host
-Test oVirt-engine
-Update MoM subsystem with new attribute
-Test MoM subsystem to track new attribute, and update KSM policy
-Update VDSM agent to update new MoM policy with new attribute
+[[File:Ksm-merge_across-node-data-flow.png]]<br />
+The implementation activities are the following:<br />
+# Update Database and entities with new attribute.
+# Update REST api and its translation system with new attribute
+# Update GUI with new widget 
+# Test GUI and REST api
+# Update oVirt-engine business logic to transmit KSM changes to host
+# Test oVirt-engine
+# Update MoM subsystem with new attribute
+# Test MoM subsystem to track new attribute, and update KSM policy
+# Update VDSM agent to update new MoM policy with new attribute
 
 == Detailed Description ==
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
