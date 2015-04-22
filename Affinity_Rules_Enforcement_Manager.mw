@@ -38,7 +38,7 @@ Affinity Group conflicts are an NP-Complete problem which is not possible to sol
 ==== Conflict resolution process ====
 The service will run each period of time(5 minute or so) and will work as follows:
 If ConflictGroup list is empty:
-*Exit.
+*Exit
 Else,
 *Choose a random ConflictGroup from the list and choose a random vm from the conflict group.
 *Add VM to the ConflictGroup.migratedVms Set.
