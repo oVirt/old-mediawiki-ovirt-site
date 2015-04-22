@@ -1,0 +1,45 @@
+<!-- {{autolang|base=yes}} -->
+
+= Memory based cluster auto balancing =
+
+{{Feature|name=Pending Resource Manager|modules=engine|status=Draft|version=3.6.0}}
+
+== Summary ==
+
+== Owner ==
+* Name: [[User:Msivak| Martin Sivak]]
+* Email: <msivak@redhat.com>
+
+
+== Detailed Description ==
+
+== Benefit to oVirt ==
+
+
+== Dependencies / Related Features ==
+
+This feature has no external dependencies and does not modify any code outside of the engine's scheduling mechanisms.
+
+== Documentation / External references ==
+
+TBD
+
+== Testing ==
+
+* Unit tests are provided for the basic cases
+* Manual testing with multiple hosts and VMs is required to see the live behaviour
+
+== Contingency Plan ==
+
+No memory based scheduling will be available. There is no danger to the existing functionality if this is not accepted.
+
+== Release Notes ==
+
+TBD
+
+== Comments and Discussion ==
+
+* Refer to [[Talk:PendingResourceManager]] 
+
+[[Category:Feature]]
+[[Category:Sla]]
