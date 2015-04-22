@@ -16,3 +16,4 @@ Engine to vdsm communication was always initiated by an engine. Even when we exe
 * Last updated on {{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}} by [[User:{{urlencode:{{REVISIONUSER}} | WIKI}}]] <!--This is markup for the date on which the current page was last changed, do not change-->
 
 === Overview ===
+In 3.5 release we introduced [[Features/Design/JsonRpc3.5]]
