@@ -39,7 +39,7 @@ Affinity Group conflicts are an NP-Complete problem which is not possible to sol
 The service will run each period of time(5 minute or so) and will work as follows:
 If ConflictGroup list is empty:
 *Exit
-Else,
+Else:
 *Choose a random ConflictGroup from the list and choose a random vm from the conflict group.
 *Add VM to the ConflictGroup.migratedVms Set.
 *If the affinity group is positive try to migrate the vm to one of the hypervisors that has at least 1 vm from the same affinity group. Else, if the affinity group is negative try to migrate the vm to one of the hypervisors the has no vms from the same affinity group. (Migration using the VmMigrateCommand).
