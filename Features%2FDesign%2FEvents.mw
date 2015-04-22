@@ -77,7 +77,7 @@ vdsClient and migration used to use 'jms.topic.vdsm_requests' as destination and
 * broker mode
 Above modes let jsonrpc code to process messages and vdsm generates the response. This mode is used when request destinations are different than queue/topic names used for other mode. Vdsm acts as regular stomp broker supporting most of the spec.
 
-==== Broker based =====
+==== Broker based ====
 
 [[File:Local_broker.png]]   [[File:Central_broker.png]]
 
