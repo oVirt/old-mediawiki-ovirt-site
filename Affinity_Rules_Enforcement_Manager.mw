@@ -2,7 +2,7 @@
 
 = Affinity Rules Enforcement Service =
 
-{{Feature|name=Affinity_Rules_Enforcement_Service|modules=engine|status=In Development|version=3.6.0}}
+{{Feature|name=Affinity Rules Enforcement Service|modules=engine|status=In Development|version=3.6.0}}
 
 == Summary ==
 A new service that will automatically enforce affinity rules. The service will query a list of VMs that break affinity rules, and will try to resolve the conflicts by migrating VMs. Each cluster will have a separate task in the service.
