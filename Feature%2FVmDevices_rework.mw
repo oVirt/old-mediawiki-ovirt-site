@@ -36,6 +36,7 @@ def _run():
     dev_map = devMapFromConf()
     ...
     self._devices = devObjectsFromDevMap(dev_map)
+</pre>
 
 === Phase 1.2 ===
 Legacy configuration had lower number of devices than current conf has. There exists a code that, given legacy conf, returns correct specification list. These devices are Drive, NetworkInterfaceController, Sound, Video, Graphics and Controller. These methods called getConf${device} are currently in VM class. One possible destination for these methods are
