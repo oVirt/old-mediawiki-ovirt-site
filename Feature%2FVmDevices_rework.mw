@@ -1,0 +1,38 @@
+= VmDevices rework =
+
+== Summary ==
+This feature will track the refactoring and reworking of VmDevices inside VDSM.
+
+== Owner ==
+* Name: [[User:Martin Polednik| Martin Polednik]]
+* Email: [mailto:mpolednik@redhat.com mpolednik@redhat.com]
+
+== Current status ==
+* Last updated date: Thu Apr 23 2015
+
+== Current state of devices ==
+Currently, there are multiple representations of a device in it's lifetime inside VDSM. In order to work with them,
+it makes sense to formalize the naming of representations:
+
+* <code>{'device': '...', 'type': '...', 'deviceId', ...}</code> is the format in which the device is specified in configuration sent from engine. We will call this a <i>device specification</i> <code>dev_spec</code>.
+* <code>[device_spec]</code> denotes a list of device specifications. Generally, we want to avoid extra long names and will therefore call it <i>specification list<i> <code>spec_list</code>.
+* <code>{device_type: [device_spec]}</code> is an internal format of VM's conf['devices'], that we will call <i>device mapping</i> <code>dev_map</code>.
+* Legacy VM conf section will be called <i>legacy conf</i>.
+* And current VM conf section <i>conf</i>
+* <code><Sound object at...></code> is python object representing the device, <i>device object</i> <code>dev_object</code> and plural <i>device objects</i> <code>dev_objects</code>
+
+== Phase 1 ==
+Using the names defined above, the first phase of devices rework will consist of removing device-specific code in vm.py and moving it to vmdevices/${device}.py, using consistent naming
+conventions. One of the first thing is isolating device object creation from _run method of VM class. This will allow us to work with multiple device objects in unit tests, possibly leading
+to better tests.
+
+=== Phase 1.1 ===
+VM class's _run method contains a code that, given a device mapping, generates device objects and stores them in VM._devices attribute. The first step is simply moving this code to a new method
+and naming it correctly: <code>devObjectsFromDevMap</code> (lowerCamelCase for the sake of consistency). This is also opportunity to rename <code>buildConfDevices</code> to something
+a bit more descriptive and accurate: <code>devMapFromConf</code>. The flow inside VDSM will therefore be
+<pre>
+def _run():
+    ...
+    dev_map = devMapFromConf()
+    ...
+    self._devices = devObjectsFromDevMap(dev_map)
