@@ -22,6 +22,9 @@ it makes sense to formalize the naming of representations:
 * <code>{device_type: [device_object]}</code> is an internal format of VM's _devices, that we will call <i>device mapping</i> <code>dev_map</code>.
 * <code>{device_type: [device_spec]}</code> is a format used for transition from device specification list to device mapping - <i>device specification map</i> <code>dev_spec_map</code>.
 
+* Type of the device is <code>dev_type</code>
+* Class of the device is <code>dev_class</code>
+
 The <code>dev_</code> prefix can be omitted if for each occurrence of function/method call there exists a *device* word in one of the namespaces accessed.
 
 == Phase 1 ==
