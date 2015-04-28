@@ -77,7 +77,10 @@ Selecting several hosts to be updated in the UI (multiple action runner) should 
 <br>
 '''The ovirt-engine''' will schedule a daily quartz job for querying vdsm for any available updates for the host.<br>
 
-The packages availability check/upgrade action will be performed using the ovirt-host-deploy component.
+The packages availability check/upgrade action will be performed using the ovirt-host-deploy component.<br>
+
+'''Install/Reinstall Host Flow changes:'''
+* When host installation/re-installation fails, the available updates notification will be disabled.
 
 == Open Issues/Questions ==
 * Support a cluster upgrade when cluster contains both RHEL and RHEV-H hosts.
