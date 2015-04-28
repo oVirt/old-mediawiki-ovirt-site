@@ -1,5 +1,5 @@
 {{DISPLAYTITLE:oVirt 3.5.2 Release Notes}}
-The oVirt Project is pleased to announce the availability of oVirt 3.5.2 fourth release candidate as of  April 14th, 2015.
+The oVirt Project is pleased to announce the availability of oVirt 3.5.2 release as of  April 28th, 2015.
 
 oVirt is an open source alternative to VMware vSphere, and provides an awesome KVM management interface for multi-node virtualization. This release is available now for Fedora 20, Red Hat Enterprise Linux 6.6, CentOS 6.6, (or similar) and Red Hat Enterprise Linux 7.1, CentOS 7.1 (or similar).
 
@@ -8,38 +8,17 @@ For a general overview of oVirt, read [[Quick_Start_Guide | the Quick Start Guid
 
 = Install / Upgrade from previous versions=
 ==Fedora / CentOS / RHEL==
-== CANDIDATE RELEASE ==
-
-oVirt 3.5.2 fourth candidate release is available since 2015-04-14. In order to install it you've to enable oVirt 3.5 release candidate repository.
+oVirt 3.5.2 release is available since 2015-04-28. In order to install it you've to enable oVirt 3.5 release candidate repository.
 
 In order to install it on a clean system, you need to install
  # yum localinstall http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm
-
-And then manually add the release candidate repository for your distribution to '''/etc/yum.repos.d/ovirt-3.5.repo'''
-
-'''For CentOS / RHEL:'''
- [ovirt-3.5-pre]
- name=Latest oVirt 3.5 pre release
- baseurl=http://resources.ovirt.org/pub/ovirt-3.5-pre/rpm/el$releasever
- enabled=1
- skip_if_unavailable=1
- gpgcheck=1
-
-'''For Fedora:'''
- [ovirt-3.5-pre]
- name=Latest oVirt 3.5 pre release
- baseurl=http://resources.ovirt.org/pub/ovirt-3.5-pre/rpm/fc$releasever
- enabled=1
- skip_if_unavailable=1
- gpgcheck=1
-
 
 If you are upgrading from a previous version, you may have the ovirt-release34 package already installed on your system.
 You can then install ovirt-release35.rpm as in a clean install side-by-side.
 
 Once ovirt-release35 package is installed,  you will have the ovirt-3.5-stable repository and any other repository needed for satisfying dependencies enabled by default.
 
-If you're installing oVirt 3.5.1 on a clean host, you should read our [[Quick Start Guide]].
+If you're installing oVirt 3.5.2 on a clean host, you should read our [[Quick Start Guide]].
 
 If you are upgrading from oVirt  < 3.4.1, you must first upgrade to oVirt 3.4.1 or later.
 Please see [[oVirt 3.4.1 release notes]] for upgrade instructions.
@@ -78,7 +57,7 @@ Following exception prevents host monitoring but affected host stays in status '
 =Bugs fixed=
 
 ==oVirt Engine==
-'''Fixed in oVirt 3.5.2 RC4'''<BR>
+'''Fixed in oVirt 3.5.2 RC4 / Final release'''<BR>
 {{BZ|1197616}} - Template creation stuck after upgrade<BR>
 {{BZ|1206908}} - "Authentication Required" login screen that references RESTAPI<BR>
 
@@ -142,30 +121,30 @@ Following exception prevents host monitoring but affected host stays in status '
 {{BZ|1196136}} - Engine-setup should support cleaning of zombie commands before upgrade<BR>
 
 ==ovirt-hosted-engine-setup==
-'''Fixed in oVirt 3.5.2 RC3'''<BR>
+'''Fixed in oVirt 3.5.2 RC3 / Final release'''<BR>
 {{BZ|1190636}} - [hosted-engine] [iSCSI support] connectStoragePools fails with "SSLError: The read operation timed out" while adding a new host to the setup<BR>
 
-'''Fixed in oVirt 3.5.2 RC1'''<BR>
+'''Fixed in oVirt 3.5.2 RC1 / Final release'''<BR>
 {{BZ|1181585}} - [hosted-engine] Bad check of iso image permission<BR>
 {{BZ|1190207}} - vdsClient/vdscli SSLError timeout error<BR>
 {{BZ|1192462}} - [RFE][HC] make override of iptables configurable when using hosted-engine<BR>
 
 ==ovirt-iso-uploader==
-'''Fixed in oVirt 3.5.2 RC1'''<BR>
+'''Fixed in oVirt 3.5.2 RC1 / Final release'''<BR>
 {{BZ|1188326}} - [engine-iso-uploader] engine-iso-uploader does not work with Local ISO domain<BR>
 
 ==ovirt-log-collector==
-'''Fixed in oVirt 3.5.2 RC1'''<BR>
+'''Fixed in oVirt 3.5.2 RC1 / Final release'''<BR>
 {{BZ|1175137}} - [RHEL7] Missing some info from host's archive<BR>
 
 ==ovirt-optimizer==
-'''Fixed in oVirt 3.5.2 RC2'''<BR>
+'''Fixed in oVirt 3.5.2 RC2 / Final release'''<BR>
 {{BZ|1162955}} - font and tab case don't match<BR>
 {{BZ|1163356}} - [EL7] ovirt-optimizer is missing dependencies<BR>
 {{BZ|1181969}} - link to jquery is 'http://'<BR>
 
 ==VDSM==
-'''Fixed in oVirt 3.5.2 RC4'''<BR>
+'''Fixed in oVirt 3.5.2 RC4 / Final release'''<BR>
 {{BZ|1177220}} - RHEV: Failed to Delete First snapshot with live merge<BR>
 {{BZ|1205583}} - [RHEL7.0] oVirt fails to create glusterfs domain<BR>
 {{BZ|1207150}} - [New] - Host status does not move to non-operational  when glusterd is down.<BR>
