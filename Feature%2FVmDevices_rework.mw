@@ -9,6 +9,7 @@ This feature will track the refactoring and reworking of VmDevices inside VDSM.
 
 == Current status ==
 * Last updated date: Thu Apr 28 2015
+* [https://gerrit.ovirt.org/#/q/status:open+project:vdsm+branch:master+topic:device_isolation gerrit topic branch]
 
 == What is wrong with current state ==
 * Information duplication - the data is kept in device objects AND self.conf['devices'] dictionary
