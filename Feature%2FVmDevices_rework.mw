@@ -47,9 +47,9 @@ a bit more descriptive and accurate: <code>devSpecMapFromConf</code>. The flow i
 <pre>
 def _run():
     ...
-    dev_tree = devSpecMapFromConf()
+    dev_spec = devSpecMapFromConf()
     ...
-    self._devices = devMapFromDevSpecMap(dev_tree)
+    self._devices = devMapFromDevSpecMap(dev_spec)
 </pre>
 
 === Phase 1.2 ===
