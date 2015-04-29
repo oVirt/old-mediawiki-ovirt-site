@@ -28,7 +28,7 @@ The administrator can ignore this warning but it will not be deleted from the au
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
 
 1)Adding a new table engine_backup_log with the following columns   
- scope varchar
+  scope varchar
   done_at datetime with time stamp 
   is_passed boolean 
   output_message text
