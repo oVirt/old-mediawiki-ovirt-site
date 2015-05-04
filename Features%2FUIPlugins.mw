@@ -526,6 +526,26 @@ api.setDialogContentUrl('custom-dialog',
 <pre>
 api.closeDialog('custom-dialog');
 </pre>
+|-
+| colspan="3" |
+=== Navigation ===
+|-
+| <code>revealPlace</code>
+| <code><span style="color:blue">string</span> historyToken</code>
+| Reveals the given application place, e.g. standard or plugin-contributed main tab. The <code>historyToken</code> denotes a logical place of the web application, represented as <code>#historyToken</code> in application's URL.
+<pre>
+api.revealPlace('hosts');
+</pre>
+|-
+| colspan="3" |
+=== Search ===
+|-
+| <code>setSearchString</code>
+| <code><span style="color:blue">string</span> searchString</code>
+| Applies the given search string. The <code>searchString</code> is the text to apply into WebAdmin's search panel.
+<pre>
+api.setSearchString('Hosts: name = abc');
+</pre>
 |}
 
 == API option reference ==
