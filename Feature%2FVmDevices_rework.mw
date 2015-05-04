@@ -31,8 +31,8 @@ it makes sense to formalize the naming of representations:
 * <code>{device_type: [device_spec]}</code> is a format used for transition from device specification list to device mapping - <i>device specification map</i> <code>dev_spec_map</code>.
 * When initializing an empty structure, prefix with <code>empty</code>.
 
-* Type of the device is <code>dev_type</code>.
-* Class of the device is <code>dev_class</code>.
+* Type of the device is <code>dev_type</code>. Examples: sound device, disk devices, host devices, ...
+* Class of the device is <code>dev_class</code>. Examples: <code>Drive</code>, <code>NetworkInterfaceDevice</code>, <code>GraphicsDevice</code>, ...
 
 The <code>dev_</code> prefix can be omitted if for each occurrence of function/method call there exists a *device* word in one of the namespaces accessed.
 
