@@ -99,7 +99,6 @@ The following list is a subset of the [http://www.ovirt.org/Category:OVirt_3.6_P
 === Alpha Release Criteria ===
 # MUST: All sources must be available on ovirt.org
 # MUST: All packages listed by subprojects must be available in the repository
-# MUST: All accepted features must be substantially complete and in a testable state and enabled by default -- if so specified by the change
 
 === Beta Release Criteria ===
 # MUST: Release Notes have feature-specific information
