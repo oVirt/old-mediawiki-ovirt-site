@@ -9,6 +9,64 @@
 
 ==New Features  - Test Status Table==
 
+{| class="wikitable" border="1"
+|-
+  ! Feature
+  ! Test page
+  ! Tested By/ Distro
+  ! BZs
+  ! remarks
+|-
+ | [[Features/BackupAwareness]]
+ |
+ |
+ |
+ |
+|-
+ | [[CinderGlance Docker Integration]]
+ |
+ |
+ |
+ |
+|-
+ | [[Features/Debian support for hosts]]
+ |
+ |
+ |
+ |
+|-
+ | [[Features/Fedora 22 Support]]
+ |
+ |
+ |
+ |
+|-
+ | [[Features/oVirt Live Rebase on CentOS 7]]
+ |
+ |
+ |
+ |
+|-
+ | [[Features/Self Hosted Engine FC Support]]
+ |
+ |
+ |
+ |
+|-
+ | [[Features/Self Hosted Engine Gluster Support]]
+ |
+ |
+ |
+ |
+|-
+ |  [[Features/Self Hosted Engine Hyper Converged Gluster Support]]
+ |
+ |
+ |
+ |
+|-
+|}
+
 ==Bug Reporting==
 * oVirt - https://bugzilla.redhat.com/enter_bug.cgi?product=oVirt
 * Spice - https://bugs.freedesktop.org/ under Spice product
