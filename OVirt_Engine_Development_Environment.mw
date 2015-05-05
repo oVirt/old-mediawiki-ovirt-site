@@ -41,7 +41,7 @@ Create <code>/etc/yum.repos.d/patternfly.repo</code> and copy/paste the contents
 
  <nowiki># yum install git java-devel maven openssl postgresql-server \
     m2crypto python-psycopg2 python-cheetah python-daemon libxml2-python \
-    unzip patternfly1 pyflakes python-pep8</nowiki>
+    unzip patternfly1 pyflakes python-pep8 python-docker-py</nowiki>
 
 ===== Fedora =====
  <nowiki># yum install jboss-as</nowiki>
