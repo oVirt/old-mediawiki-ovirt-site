@@ -58,6 +58,7 @@ Links to other significant project schedules, useful for seeing how oVirt aligns
 * GlusterFS 4.0: [http://www.gluster.org/community/documentation/index.php/Planning40 No date yet]
 * OpenStack Kilo: [https://wiki.openstack.org/wiki/Kilo_Release_Schedule 2015-04-30]
 * QEMU 2.3.0: [http://wiki.qemu.org/Planning/2.3 2015-04-21]
+* Tiny Core 6.2: [http://forum.tinycorelinux.net/index.php/topic,18359.msg111886.html#msg111886 2015-05-03]
 
 == Nightly Builds ==
 Nightly builds are available from  oVirt snapshots repositories:
