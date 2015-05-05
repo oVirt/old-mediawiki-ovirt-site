@@ -104,7 +104,7 @@ The following list is a subset of the [http://www.ovirt.org/Category:OVirt_3.6_P
 # MUST: Release Notes have feature-specific information
 # MUST: Alpha Release Criteria are met
 # MUST: Supported localizations must be at least at 70% of completeness for being included in the release
-
+# MUST: All accepted features must be substantially complete and in a testable state and enabled by default -- if so specified by the change
 
 === Candidate Release Criteria ===
 # MUST: Beta Release Criteria are met
