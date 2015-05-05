@@ -64,5 +64,9 @@ The oVirt Project is working on oVirt 3.6.0 Alpha release.
 {{BZ|1077235}} - [RFE] add progress bar to image uploader<BR>
 {{BZ|1097789}} - [engine-iso-uploader] engine-iso-uploader does not work with Local ISO domain<BR>
 
+== oVirt Live ==
+{{BZ|1161219}} - [RFE] Enable the configuration of the SANWipeAfterDelete property in the setup<BR>
+{{BZ|1189842}} - [RFE] Rebase oVirt Live on CentOS 7.z<BR>
+
 [[Category:Documentation]]
 [[Category:Releases]]
