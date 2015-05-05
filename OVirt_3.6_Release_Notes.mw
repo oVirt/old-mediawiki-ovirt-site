@@ -23,6 +23,18 @@ The oVirt Project is working on oVirt 3.6.0 Alpha release.
 ==oVirt Engine==
 
 
+== oVirt Log Collector ==
+{{BZ|1127777}} - [RFE] Log collector does not collect hosted engine information<BR>
+{{BZ|1168660}} - log-collector tar files change "." permissions when extracted<BR>
+{{BZ|1173766}} - [RFE] log collector should collect engine-config settings and domain information<BR>
+{{BZ|1210261}} - split rhevm-log-collector moving sos plugins to subpackage<BR>
+
+== oVirt Image Uploader ==
+{{BZ|1077235}} - [RFE] add progress bar to image uploader<BR>
+
+== oVirt ISO Uploader ==
+{{BZ|1077235}} - [RFE] add progress bar to image uploader<BR>
+{{BZ|1097789}} - [engine-iso-uploader] engine-iso-uploader does not work with Local ISO domain<BR>
 
 [[Category:Documentation]]
 [[Category:Releases]]
