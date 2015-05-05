@@ -14,9 +14,11 @@ Test Days are an opportunity to exercise a completed, or in-development, Feature
 * Please remember we expect to see some issues, and anything you come up with will save you when you'll install final release.
 * Remember to try daily tasks you'd usually do in the engine, to see there are no regressions.
 * Accomplish the goals set in objective section ,  run the tests,  update the test matrix.
-* Running into any issues?
-**  [[Community | Try to get help from the community ]] on #ovirt IRC channel or
-**  [https://bugzilla.redhat.com/enter_bug.cgi?product=oVirt open a bugzilla] ticket
+
+==Bug Reporting==
+Running into any issues? [[Community | Try to get help from the community ]] on #ovirt IRC channel or file a bug:
+* oVirt - https://bugzilla.redhat.com/enter_bug.cgi?product=oVirt
+* Spice - https://bugs.freedesktop.org/ under Spice product
 
 ==New Features  - Test Status Table==
 
@@ -77,7 +79,3 @@ Test Days are an opportunity to exercise a completed, or in-development, Feature
  |
 |-
 |}
-
-==Bug Reporting==
-* oVirt - https://bugzilla.redhat.com/enter_bug.cgi?product=oVirt
-* Spice - https://bugs.freedesktop.org/ under Spice product
