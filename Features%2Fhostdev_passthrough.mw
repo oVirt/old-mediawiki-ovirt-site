@@ -261,7 +261,7 @@ routine of hotunplug, migrate and hotplug. It might be possible to allow engine 
 by vendor_id and product_id and identified by name) that would be used as a required device for better UI/UX
 support.
 
-== Migration ==
+== Migration  (not implemented, possible ideas) ==
 Migration should be disabled for any VM with hostdev device. This means that in order to migrate the VM,
 host devices need to be hotunplugged before migration and hotplugged after migration. Whether this
 routine should be handled by user, engine or VDSM is to be decided.
