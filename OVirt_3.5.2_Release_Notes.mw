@@ -8,7 +8,7 @@ For a general overview of oVirt, read [[Quick_Start_Guide | the Quick Start Guid
 
 = Install / Upgrade from previous versions=
 ==Fedora / CentOS / RHEL==
-oVirt 3.5.2 release is available since 2015-04-28. In order to install it you've to enable oVirt 3.5 release candidate repository.
+oVirt 3.5.2 release is available since 2015-04-28.
 
 In order to install it on a clean system, you need to install
  # yum localinstall http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm
