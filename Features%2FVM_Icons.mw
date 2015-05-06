@@ -71,6 +71,9 @@ User can only upload the large version of custom icon, the small one is computed
 ===Database===
 [[File:vm_icons_db.png|Database schema]]
 
+===REST API===
+<code>/api/icons</code>
+
 ===Compatibility issues===
 
 Proposed design requires following browser 'HTML5' features:
