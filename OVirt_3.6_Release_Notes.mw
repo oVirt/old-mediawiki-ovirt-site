@@ -13,6 +13,9 @@ The oVirt Project is working on oVirt 3.6.0 Alpha release
 == Docker Integration ==
 oVirt Engine setup now provides [[CinderGlance Docker Integration| Cinder and Glance]] automated deployment using Docker
 
+ ==Self Hosted Engine FC Support==
+ Hosted Engine has now added support for [[Features/Self_Hosted_Engine_FC_Support|FC storage]]
+
 ==Self Hosted Engine Gluster Support==
 * Hosted Engine has now added support for [[Features/Self_Hosted_Engine_Gluster_Support|Gluster storage]]
 * Hosted Engine has now added support for [[Features/Self_Hosted_Engine_Hyper_Converged_Gluster_Support|Hyper Converged Gluster storage]]
