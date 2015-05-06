@@ -1,5 +1,5 @@
 {{DISPLAYTITLE:oVirt 3.6 Alpha Release Notes}}
-
+= oVirt 3.6.0 ALPHA Release Notes =
 DRAFT DRAFT DRAFT
 
 The oVirt development team is pleased to announce oVirt 3.6.0 Alpha release availability as of May 6th 2015.
@@ -9,8 +9,6 @@ This release is available now for Fedora 20, Red Hat Enterprise Linux 6.6, CentO
 
 To find out more about features which were added in previous oVirt releases, check out the [http://www.ovirt.org/Category:Releases previous versions release notes].
 For a general overview of oVirt, read [[Quick_Start_Guide | the Quick Start Guide]] and the [[about oVirt]] page.
-
-= oVirt 3.6.0 ALPHA Release Notes =
 
 == Docker Integration ==
 oVirt Engine setup now provides [[CinderGlance Docker Integration| Cinder and Glance]] automated deployment using Docker
