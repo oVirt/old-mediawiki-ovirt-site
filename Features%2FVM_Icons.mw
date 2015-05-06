@@ -2,7 +2,7 @@
 
 =VM Icons=
 
-{{Feature|name=VM Icons|modules=engine|status=Design|version=3.6.0}}
+{{Feature|name=VM Icons|modules=engine|status=Implementation|version=3.6.0}}
 
 ==Summary==
 
@@ -12,12 +12,6 @@ It allows users to add icon to VMs and Templates in order to customize the appea
 
 * Name: [[User:jniederm|Jakub Niedermertl]]
 * Email: [mailto:jniederm@redhat.com jniederm@redhat.com]
-
-==Status==
-
-* Implementation
-* Last updated on 2015-4-21 by [[User:jniederm|Jakub Niedermertl]]
-* Target release: 3.6
 
 ==Description==
 
