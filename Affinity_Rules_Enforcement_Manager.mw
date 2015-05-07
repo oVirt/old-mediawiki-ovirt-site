@@ -67,7 +67,7 @@ http://www.ovirt.org/User:Tsaban
 === Choose next vm to migrate(cluster) ===
 * Get all affinity groups
 * Get unified affinity groups().
-* [6]Sort all groups by first VM UUID.
+* [6]Sort all groups first by size and then by first VM UUID.
 * Loop over all unified affinity groups:
 ** [7]candidate_host = choose_candidate_host_for_migration(Unified Affinity Group).
 ** loop all VMs in group:
