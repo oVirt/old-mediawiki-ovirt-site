@@ -1,8 +1,8 @@
 <!-- {{autolang|base=yes}} -->
 
-= Memory based cluster auto balancing =
+= CPU and Memory based cluster auto balancing =
 
-{{Feature|name=Memory based cluster autobalancing|modules=engine|status=Draft|version=3.6.0}}
+{{Feature|name=CPU and Memory based cluster auto balancing|modules=engine|status=Draft|version=3.6.0}}
 
 == Summary ==
 The auto balancing cluster policies we have today use only CPU load to compute whether the cluster is reasonably balanced. This is not ideal in situations where the prevalent load is memory based and CPU load is low. The goal of this feature is to add support for memory based balancing rules.
