@@ -39,7 +39,7 @@ GET /hosts/{host:id}/
      <updates_available>true</updates_available>
   <host>
 
-'''What is being checked for updates ?'''
+==== Which packages are checked for updates ? ====
 There is a system configuration value named 'PackageNamesForCheckUpdate' which contains the system required packages for upgrade (specifically 'vdsm').
 <br>
 A user may provide additional packages he wishes to monitor for updates by using 'UserPackageNamesForCheckUpdate' config value, which is a merge-able and supports wildcards.
@@ -57,6 +57,11 @@ which will result in:
 [[File:Upgrade_host_button.png | 800px]]
 
 * For consistency, a support will be added for '''oVirt-node''' upgrade in UP status.
+==== Which packages are updated ? ====
+The system packages which are being updated are configured by the already mentioned 'PackageNamesForCheckUpdate' config valure.
+<br>
+A user may provide additional packages he wishes to monitor for updates by using 'UserPackageNamesForUpdate' config value, which is a merge-able and supports wildcards.
+<br>
 
 '''API:'''
 POST /hosts/{host:id}/upgrade|rel=upgrade
