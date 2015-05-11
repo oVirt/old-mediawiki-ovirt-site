@@ -27,22 +27,22 @@ This list will be updated with new values as new versions and distributions beco
 == Tests ==
 
 There are two different tests/test sets that will be run on different events:
-* pushing the patch to gerrit will trigger <code>check_patch.sh</code>
-* merging the patch will trigger <code>check_merged.sh</code>
+* pushing the patch to gerrit will trigger <code>check-patch.sh</code>
+* merging the patch will trigger <code>check-merged.sh</code>
 
-=== check_patch.sh ===
+=== check-patch.sh ===
 
 This script should:
 * Usually only run static code analysis tools and unit tests
 * no long-running tests
 * focus is on giving quick feedback to the developer while working on a patchset
 
-=== check_merged.sh ===
+=== check-merged.sh ===
 
 This script is meant to be the merge gate when merging changes to the main branch, so it should:
-* run all the tests that you find required for any change to get merged, e.g. it could simply run all the tests in <code>check_patch.sh</code>
+* run all the tests that you find required for any change to get merged, e.g. it could simply run all the tests in <code>check-patch.sh</code>
 * have also some functional/other tests that require more time/resources
-* It will be run less often than <code>check_patch.sh</code>
+* It will be run less often than <code>check-patch.sh</code>
 
 === Dependencies ===
 
@@ -52,7 +52,7 @@ As with the <code>build-artifacts.sh</code> script, if you need any packages for
 
 In the future we might support having more than one of the above scripts, possibly in the form:
 
-<code>check_patch.testN.sh</code>
+<code>check-patch.testN.sh</code>
 
 To allow running them in parallel, for starters we only support a unique script, if you want/&amp;need any parallel execution you should handle it yourself for now.
 
