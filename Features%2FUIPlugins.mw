@@ -232,10 +232,28 @@ When requesting content from remote servers, UI plugins should ensure that reque
 
 For example, to load remote script using protocol of enclosing web page: <code><script type='text/javascript' src='//url.to/script.js'></code>
 
-=== Prevent closing shared REST API session ===
+=== Working with REST API session ===
 Upon successful login, WebAdmin acquires oVirt Engine REST API session for use by all UI plugins. Refer to [[#REST_API_integration|REST API integration]] for details.
 
 To prevent closing the REST API session after processing given request, UI plugins should always include <code>Prefer: persistent-auth</code> header in all requests to REST API service.
+
+The REST API session acquired by WebAdmin is marked as [http://en.wikipedia.org/wiki/Cross-site_request_forgery CSRF] protected, which means all requests associated with this session must include a CSRF token (in addition to <code>JSESSIONID</code> cookie that is automatically sent by the browser). Otherwise, REST API will reject the request, which may trigger unexpected follow-up behavior such as "Authentication Required" browser popup.
+
+The CSRF token is represented as <code>JSESSIONID</code> header with value obtained from <code>RestApiSessionAcquired</code> event handler function.
+
+Following code snippet illustrates above mentioned practices using <code>XMLHttpRequest</code> object:
+
+<pre>
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() { /* process response when done */ };
+xhr.open('GET', 'http://example-host/ovirt-engine/api', true);
+xhr.withCredentials = true; // for cross-site requests, ensure that auth information and cookies are included
+xhr.setRequestHeader('Accept', 'application/json'); // control response format
+xhr.setRequestHeader('Filter', 'false'); // control whether to filter results based on (WebAdmin) user's permissions
+xhr.setRequestHeader('Prefer', 'persistent-auth'); // prevent closing REST API session after processing request
+xhr.setRequestHeader('JSESSIONID', sessionId); // include CSRF token
+xhr.send(null);
+</pre>
 
 == Terms used in API reference ==
 === JavaScript interface object ===
