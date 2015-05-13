@@ -8,7 +8,8 @@ This feature will add the possibility of hot plugging virtual memory modules int
 * Email: vdelima@redhat.com
 
 === Current status ===
-In planning.
+Implementation:
+https://gerrit.ovirt.org/#/q/status:open+branch:master+topic:hotPlugMem
 
 === Detailed Description ===
 Dynamically resizing the amount of memory dedicated to a guest is an important feature, it allows server upgrades without restarting the VM.
