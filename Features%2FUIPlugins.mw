@@ -394,6 +394,7 @@ var userId = api.loginUserId();
 | <code><span style="color:blue">string</span> label</code> <br/> <code><span style="color:blue">string</span> historyToken</code> <br/> <code><span style="color:blue">string</span> contentUrl</code> <br/> <code><span style="color:green">object</span> options</code>
 | Adds new main tab with content provided from given URL. All arguments are required except for <code>options</code>. The <code>label</code> is the text displayed on tab header. The <code>historyToken</code> serves as unique identifier of the tab, with its value reflected in tab header URL. Recommended <code>historyToken</code> format is <code>letters-with-dashes</code>. The <code>contentUrl</code> is passed to <code>src</code> attribute of the <code>iframe</code> element which renders tab content. The <code>options</code> can be undefined, null or object containing additional tab options:
 * <code>alignRight</code> - controls horizontal tab header alignment, default value is <code>false</code>
+* <code>priority</code> - controls tab's relative priority within the tab panel, default value is <code>Number.MAX_VALUE</code>
 <pre>
 api.addMainTab('Custom Tab One', 'custom-tab-one',
     'plugin/ExamplePlugin/one.html'
@@ -401,7 +402,8 @@ api.addMainTab('Custom Tab One', 'custom-tab-one',
 api.addMainTab('Custom Tab Two', 'custom-tab-two',
     'plugin/ExamplePlugin/two.html',
     {
-        alignRight: true
+        alignRight: true,
+        priority: -1
     }
 );
 </pre>
@@ -416,7 +418,8 @@ api.addSubTab('Host', 'Custom Host Tab One', 'custom-host-tab-one',
 api.addSubTab('Host', 'Custom Host Tab Two, 'custom-host-tab-two',
     'plugin/ExamplePlugin/host-two.html',
     {
-        alignRight: true
+        alignRight: true,
+        priority: -1
     }
 );
 </pre>
