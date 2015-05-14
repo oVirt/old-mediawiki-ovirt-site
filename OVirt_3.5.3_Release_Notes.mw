@@ -96,6 +96,27 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 
 ==VDSM==
 
+== oVirt Reports ==
+{{BZ|1213784}} - Errors during installation and config when openjdk is NOT default in an environment.<BR>
+
+== oVirt Data Warehouse ==
+{{BZ|1202661}} - Aggregation of disks usage is running slow<BR>
+
+== OTOPI ==
+{{BZ|1214724}} - [core] executePipe call callback only if available<BR>
+
+== oVirt Hosted Engine HA ==
+{{BZ|1220119}} - Log entries should explain why HE agent try to start vms on both hosts<BR>
+
+== oVirt Hosted Engine Setup ==
+{{BZ|1150073}} - Running hosted-engine --vm-status, when ovirt-ha-broker service stopped, drop exception<BR>
+{{BZ|1208485}} - [TEXT ONLY] - Hosted Engine - Instructions for handling Invalid Storage Domain error<BR>
+{{BZ|1221290}} - [self-hosted] Can't add 2nd host into self-hosted env: The VDSM host was found in a failed state... Unable to add slot-5b to the manager<BR>
+
+== oVirt Log Collector ==
+{{BZ|1171179}} - log-collector tar files change "." permissions when extracted<BR>
+{{BZ|1208113}} - [RFE] Log collector does not collect hosted engine information<BR>
+{{BZ|1210644}} - split rhevm-log-collector moving sos plugins to subpackage<BR>
 
 [[Category:Documentation]]
 [[Category:Releases]]
