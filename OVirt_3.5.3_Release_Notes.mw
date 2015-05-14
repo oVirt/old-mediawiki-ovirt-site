@@ -135,6 +135,14 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 {{BZ|1220282}} - NPE when cloning a VM from snapshot WITHOUT "VirtIO-SCSI Enabled"<BR>
 
 ==VDSM==
+{{BZ|1158108}} - VDSM leaks small mount of memory (~300KiB/h)<BR>
+{{BZ|1202399}} - [engine-backend] When reconstruct master is marked as finished, the problematic domain is reported as active, while the new master is inactive<BR>
+{{BZ|1213438}} - [vdsm] errors: value of 'vcpu_period' is out of range [1000, 1000000]<BR>
+{{BZ|1216900}} - Long filename support for Windows VM payload<BR>
+{{BZ|1219754}} - [HC] vdsm checks for qemu-kvm-rhev missing qemu-kvm-ev<BR>
+{{BZ|1219875}} - Unit tests do not expect the new 'esp' flag on the partitions<BR>
+{{BZ|1219932}} - testGetBondingOptions fails, missing defaults<BR>
+{{BZ|1220113}} - vdsm NUMA code not effective, slowing down statistics retrieval<BR>
 
 == oVirt Reports ==
 {{BZ|1213784}} - Errors during installation and config when openjdk is NOT default in an environment.<BR>
