@@ -166,5 +166,8 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 {{BZ|1208113}} - [RFE] Log collector does not collect hosted engine information<BR>
 {{BZ|1210644}} - split rhevm-log-collector moving sos plugins to subpackage<BR>
 
+== oVirt Optimizer ==
+{{BZ|1173551}} - Optimizer should not propose steps if solution is not doable<BR>
+
 [[Category:Documentation]]
 [[Category:Releases]]
