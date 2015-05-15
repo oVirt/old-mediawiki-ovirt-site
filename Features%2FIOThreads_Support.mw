@@ -1,0 +1,24 @@
+<!-- {{autolang|base=yes}} -->
+ 
+= Support IO Threads =
+ 
+== Summary ==
+Allow to configure the quemu's IO Threads from oVirt.
+
+== Owner ==
+* Name: [[User:TJelinek|Tomas Jelinek]]
+* Email: [mailto:TJelinek@redhat.com TJelinek@redhat.com]
+ 
+ 
+== Current status ==
+* Target Release: 3.6
+* Status: under review
+
+== Background ==
+qemu added a support for IO Threads which brings higher performance.
+
+== Implementation ==
+
+== Frontend ==
+
+== REST API ==
