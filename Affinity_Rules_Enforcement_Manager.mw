@@ -16,6 +16,7 @@ http://www.ovirt.org/User:Tsaban
 
 == Procedure ==
 [1][2][3]
+[[File:ARES_Life_Cycle.png]]
 === Trigger each time a cluster is created(Or for the default cluster at startup) ===
 * Create new AffinityRulesEnforcementServicePerCluster:
 ** Set service interval to “regular interval”.
