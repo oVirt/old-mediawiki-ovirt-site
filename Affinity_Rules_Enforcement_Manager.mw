@@ -13,7 +13,6 @@ The following picture, explains AR (Affinity Rules), before enforcement and afte
 http://www.ovirt.org/User:Tsaban
 
 * Name: [[User:Tsaban| Tomer Saban]]
-
 * Email: <tsaban@redhat.com>
 
 == Procedure ==
@@ -21,11 +20,12 @@ http://www.ovirt.org/User:Tsaban
 [[File:ARES_Life_Cycle.png]]
 <br />
 ''' Trigger each time a cluster is created(Or for the default cluster at startup) '''
-# Create new AffinityRulesEnforcementServicePerCluster:
-## Set service interval to “regular interval”.
+# Create new AffinityRulesEnforcementPerCluster and add to perClusterList.
+# Set service interval to “regular interval”.
+# AreClusterIterator = perClusterList.iterator().
 <br />
 ''' Trigger each time a cluster is deleted '''
-# In AffintiyRulesEnforcementService, find the service associated with the cluster and delete it.
+# In AffintiyRulesEnforcementService, find the instance associated with the cluster and delete it.
 <br />
 ''' Trigger before service shutdown '''
 # Write AuditLog message: “Affinity Rules Enforcement Service finished. all Affinity rules are enforced.”
@@ -33,7 +33,6 @@ http://www.ovirt.org/User:Tsaban
 ''' Trigger each time a Create/Update/Delete action occur on affinity group and on engine startup '''
 # lastMigrations = new List<MigrationEntryDS>{}.
 # migrationTries = 0.
-# Wakeup ARES (Affinity Rules Enforcement Service) for associated cluster.
 <br />
 ''' Service wakes up '''
 # migrationTries = 0.
@@ -51,7 +50,7 @@ http://www.ovirt.org/User:Tsaban
 ## if lastMigrations tail exists(not null):
 ### if lastMigrations tail.getMigrationStatus() is failure:
 #### migrationTries++
-#### lastMigrations tail. setMigrationReturnValue to null.
+#### lastMigrations tail.setMigrationReturnValue to null.
 # if migrationTries == MAXIMUM_MIGRATION_TRIES:
 ## currentInterval = long interval
 ## migrationTries = 0.
@@ -59,7 +58,15 @@ http://www.ovirt.org/User:Tsaban
 # Else if currentInterval == Long interval:
 ## currentInterval = regular interval.
 ## migrationTries = 0.
-# vm = Choose next vm to migrate(cluster).
+# if AreClusterIterator.empty():
+## AreClusterIterator = perClusterList.iterator();
+
+# do
+## cluster = AreClusterIterator.getNext();
+## vm = Choose next vm to migrate(cluster).
+# while vm is null and not AreClusterIterator.empty().
+# if vm is null: (AreClusterIterator is empty)
+## return. (All clusters are enforced. Returning).
 # [4]if vm is not null:
 ## lastMigrations tail.setMigrationReturnValue = [5]Call scheduler to migrate vm.
 ## currentInterval = regular interval
@@ -168,7 +175,7 @@ http://www.ovirt.org/User:Tsaban
 # vdcReturnValue migrationReturnValue.
 # VDS targetHost
 
-''' AffinityRulesEnforcementPerClusterService '''
+''' AffinityRulesEnforcementPerCluster '''
 # List<MigrationEntryDS> lastMigrations.
 # Integer currentInterval, migrationTries.
 
@@ -176,31 +183,32 @@ http://www.ovirt.org/User:Tsaban
 # SHORT_INTERVAL = 1.
 # LONG_INTERVAL = 15.
 # MAXIMUM_MIGRATION_TRIES = 5.
-# List<AffinityRulesEnforcemenetPerClusterService> perClusterService.
+# List<AffinityRulesEnforcemenetPerCluster> perClusterList.
+# Iterator<AffinityRulesEnforcemenetPerCluster> AreClusterIterator;
 
 <br />
 == Testing ==
 # Service creation when cluster is created:
 ## Service creation on startup.
 ### Start engine
-### Check log to see that ARES was created for the default cluster.
+### Check log to see that ARES has created PerCluster object for the default cluster.
 ## Service creation on new cluster.
 ### Create new cluster
-### Check log to see that ARES was created for the new cluster.
+### Check log to see that ARES has created PerCluster object for the new cluster.
 ## Service deletion of deleted cluster(pre-condition = test 1b):
 ### Delete cluster
-### Check log to see that ARES was deleted for the deleted cluster.
+### Check log to see that ARES has deleted PerCluster object for the deleted cluster.
 # Service interval check:
 ## Check regular interval:
 ### Create new cluster. 
-### Check log to see that ARES was created for cluster. (Make sure cluster has affinity rules).
+### Check log to see that ARES has created PerCluster object for cluster. (Make sure cluster has affinity rules).
 ### Add 2 VMs on the same host
 ### Add negative affinity rule for the 2 VMs.
 ### wait for “regular interval”
 ### check that ARES interval reached.
 ## Check long interval: (Preconditions = one datacenter is up, affinity rules enforced).
 ### Create new cluster. 
-### Check log to see that ARES was created for cluster. (Make sure cluster has no affinity rules).
+### Check log to see that ARES has created PerCluster object for cluster. (Make sure cluster has no affinity rules).
 ### Wait for long interval
 ### Check logs to see that long interval reached.
 # Service Affinity Rules enforcement:
