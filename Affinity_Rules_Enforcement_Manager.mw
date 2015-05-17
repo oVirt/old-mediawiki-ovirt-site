@@ -1,8 +1,8 @@
 <!-- {{autolang|base=yes}} -->
 
-= Affinity Rules Enforcement Service =
+= Affinity Rules Enforcement Manager =
 
-{{Feature|name=Affinity Rules Enforcement Service|modules=engine|status=In Development|version=3.6.0}}
+{{Feature|name=Affinity Rules Enforcement Manager|modules=engine|status=In Development|version=3.6.0}}
 
 == Summary ==
 A new engine internal service that will enforce affinity rules. The service will periodically query a list of VMs that break affinity rules, and will try to resolve the conflicts by migrating problematic VMs. One VM each period. Each cluster will have a separate service.<br />
@@ -25,24 +25,24 @@ http://www.ovirt.org/User:Tsaban
 # AreClusterIterator = perClusterList.iterator().
 <br />
 ''' Trigger each time a cluster is deleted '''
-# In AffintiyRulesEnforcementService, find the instance associated with the cluster and delete it.
+# In AffintiyRulesEnforcementManager, find the instance associated with the cluster and delete it.
 <br />
 ''' Trigger before service shutdown '''
-# Write AuditLog message: “Affinity Rules Enforcement Service finished. all Affinity rules are enforced.”
+# Write AuditLog message: “Affinity Rules Enforcement Manager finished. all Affinity rules are enforced.”
 <br />
 ''' Trigger each time a Create/Update/Delete action occur on affinity group and on engine startup '''
 # lastMigrations = new List<MigrationEntryDS>{}.
 # migrationTries = 0.
 <br />
-''' Service wakes up '''
+''' Manager wakes up '''
 # migrationTries = 0.
 # lastMigrations = new List<MigrationEntryDS>{}.
 # Change interval to “regular interval” minute. Call the “Enforce affinity rule using migration”.
-# Write AuditLog message: “Affinity Rules Enforcement Service started”
+# Write AuditLog message: “Affinity Rules Enforcement Manager started”
 <br />
 [The following method identify broken affinity rule,  designate vm that breaks the rule and migrates the vm.]
 <br />
-''' Service interval reached: Enforce affinity rules using migration '''
+''' Manager interval reached: Enforce affinity rules using migration '''
 # if lastMigrations tail is currently migrating(Using PendingResourceManager):
 ## currentInterval = regular interval
 ## return.
@@ -179,7 +179,7 @@ http://www.ovirt.org/User:Tsaban
 # List<MigrationEntryDS> lastMigrations.
 # Integer currentInterval, migrationTries.
 
-''' AffinityRulesEnforcementService '''
+''' AffinityRulesEnforcementManager '''
 # SHORT_INTERVAL = 1.
 # LONG_INTERVAL = 15.
 # MAXIMUM_MIGRATION_TRIES = 5.
@@ -188,17 +188,17 @@ http://www.ovirt.org/User:Tsaban
 
 <br />
 == Testing ==
-# Service creation when cluster is created:
-## Service creation on startup.
+# Manager creation when cluster is created:
+## Manager creation on startup.
 ### Start engine
 ### Check log to see that ARES has created PerCluster object for the default cluster.
-## Service creation on new cluster.
+## Manager creation on new cluster.
 ### Create new cluster
 ### Check log to see that ARES has created PerCluster object for the new cluster.
-## Service deletion of deleted cluster(pre-condition = test 1b):
+## Manager deletion of deleted cluster(pre-condition = test 1b):
 ### Delete cluster
 ### Check log to see that ARES has deleted PerCluster object for the deleted cluster.
-# Service interval check:
+# Manager interval check:
 ## Check regular interval:
 ### Create new cluster. 
 ### Check log to see that ARES has created PerCluster object for cluster. (Make sure cluster has affinity rules).
@@ -211,7 +211,7 @@ http://www.ovirt.org/User:Tsaban
 ### Check log to see that ARES has created PerCluster object for cluster. (Make sure cluster has no affinity rules).
 ### Wait for long interval
 ### Check logs to see that long interval reached.
-# Service Affinity Rules enforcement:
+# Manager Affinity Rules enforcement:
 ## Enforcement for positive affinity rule: (Precondition load balancer if off, All vms can run together on the same hypervisor)
 ### Start engine
 ### Add 2 hosts.
@@ -276,23 +276,23 @@ This feature is a service that checks if any affinity rules are broken and migra
 <br />
 This service includes:
 # Triggers for creation of the service on Cluster Creation/Deletion.
-# Services wakes up on Affinity group Creation/Deletion/Update and engine startup.
-# Service Sleeps long interval when too many migration tries fail.
-# Service shutsdown when migration loop is detected or if the same migration happens more than once on the last 5 migrations.
-# Service avoid multiple migrations on the same cluster by sleeping when migration in progress(Using pending resource manager).
-# Service uses scheduler's automatic migration command to comply with filter and weight policies.
-# Service will sleep for 15 minutes instead of 5 if all affinity rules are enforced when interval is reached.
-# Service will automatically sort and create "Unified Affinity Rules" based on the defined affinity rules and will detect contradictions between rules.
-# Service will enforce affinity rules one by one in order to reduce the number of broken affinity rules as soon as possible.
-# Service will try to resolve a specific affinity rule break by migrating VMs from hosts with less VMs from a than affinity group to the one with the maximum VMs.
+# Managers wakes up on Affinity group Creation/Deletion/Update and engine startup.
+# Manager Sleeps long interval when too many migration tries fail.
+# Manager shutsdown when migration loop is detected or if the same migration happens more than once on the last 5 migrations.
+# Manager avoid multiple migrations on the same cluster by sleeping when migration in progress(Using pending resource manager).
+# Manager uses scheduler's automatic migration command to comply with filter and weight policies.
+# Manager will sleep for 15 minutes instead of 5 if all affinity rules are enforced when interval is reached.
+# Manager will automatically sort and create "Unified Affinity Rules" based on the defined affinity rules and will detect contradictions between rules.
+# Manager will enforce affinity rules one by one in order to reduce the number of broken affinity rules as soon as possible.
+# Manager will try to resolve a specific affinity rule break by migrating VMs from hosts with less VMs from a than affinity group to the one with the maximum VMs.
 
 == Comments and Discussion ==
 For more information see the following BugZilla link:
 <br />
 https://bugzilla.redhat.com/show_bug.cgi?id=1112332
 
-* Refer to [[Talk:Affinity_Group_Enforcement_Service]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
+* Refer to [[Talk:Affinity_Group_Enforcement_Manager]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 
-[[Category:Feature|Affinity Group Enforcement Service]]
-[[Category:oVirt 3.6 Proposed Feature|Affinity Group Enforcement Service]]
+[[Category:Feature|Affinity Group Enforcement Manager]]
+[[Category:oVirt 3.6 Proposed Feature|Affinity Group Enforcement Manager]]
 [[Category:SLA]]
