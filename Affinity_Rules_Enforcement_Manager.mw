@@ -16,14 +16,13 @@ http://www.ovirt.org/User:Tsaban
 
 == Procedure ==
 [1][2][3]
-=== Trigger each time a cluster is deleted ===
-* In AffintiyRulesEnforcementService, find the service associated with the cluster and delete it.
-<br />
 === Trigger each time a cluster is created(Or for the default cluster at startup) ===
 * Create new AffinityRulesEnforcementServicePerCluster:
 ** Set service interval to “regular interval”.
 <br />
-=== Trigger before service shutdown ===
+=== Trigger each time a cluster is deleted ===
+* In AffintiyRulesEnforcementService, find the service associated with the cluster and delete it.
+<br />=== Trigger before service shutdown ===
 * Write AuditLog message: “Affinity Rules Enforcement Service finished. all Affinity rules are enforced.”
 
 === Trigger each time a Create/Update/Delete action occur on affinity group and on engine startup ===
