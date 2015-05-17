@@ -3,7 +3,7 @@
 <noinclude>
 <startfeed/>
 </noinclude>
-{{Event|name=[//www.oss2015.org/ OSS 2015]|date=May 16-17, 2015|location=Florence, Italy|lead=The 11th International Conference on Open Source Systems (OSS 2015) will celebrate a decade of advances in the use of free and open source software by emphasizing areas and topics that will drive future use over the next decade. [[File:Introduction_to_oVirt_2015.odp Slides]] are available}}
+{{Event|name=[//www.oss2015.org/ OSS 2015]|date=May 16-17, 2015|location=Florence, Italy|lead=The 11th International Conference on Open Source Systems (OSS 2015) will celebrate a decade of advances in the use of free and open source software by emphasizing areas and topics that will drive future use over the next decade.  Slides are available: [[File:Introduction_to_oVirt_2015.odp]] }}
 
 
 {{Event|name=[//http://python.ie/pycon/2014/abouy/ Python Ireland]|date=October 12, 2014|location=Ballsbridge Hotel, Dublin, Ireland|lead=Dan Kenigsberg presented the [https://danken.fedorapeople.org/pthreading.html pthreading module].}}
