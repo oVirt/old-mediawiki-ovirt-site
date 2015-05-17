@@ -15,7 +15,7 @@ http://www.ovirt.org/User:Tsaban
 * Email: <tsaban@redhat.com>
 
 == Procedure ==
-[1][2][3]
+[1][2][3]<br />
 [[File:ARES_Life_Cycle.png]]
 === Trigger each time a cluster is created(Or for the default cluster at startup) ===
 * Create new AffinityRulesEnforcementServicePerCluster:
