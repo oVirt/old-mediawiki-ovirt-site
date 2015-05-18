@@ -126,7 +126,7 @@ http://www.ovirt.org/User:Tsaban
 ##### throw exception “Affinity group contradiction detected” (With associated groups).
 
 ''' MigrationEntryDS.opposite_migration(entry) '''
-# [11]migration_entry_ds = MigrationEntryDS(entry.getCurrentVm, entry.getMigrationStatus().getVds())
+# [11]migration_entry_ds = MigrationEntryDS(entry.getCurrentVm, entry.getTargetHost())
 #migration_entry_ds.setTargetHost(entry.getSourceHost())
 
 ''' MigrationEntryDS constructor(vm, sourceHost) '''
@@ -137,12 +137,17 @@ http://www.ovirt.org/User:Tsaban
 # this.migrationReturnValue = returnValue.
 
 ''' MigrationEntryDS getMigrationStatus() '''
-# if this.targetHost not null:
-##return this.targetHost
-# else if this.migrationReturnValue not null:
+# if this.migrationReturnValue not null:
 ## return this.migrationReturnValue.status
 # else:
 ## return null
+
+''' MigrationEntryDS getTargetHost() '''
+# if this.targetHost not null:
+##return this.targetHost
+# else:
+## return null
+
 
 == Footnotes ==
 [1]Methods are written in the section “related methods”.
