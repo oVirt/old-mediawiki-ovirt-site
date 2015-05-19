@@ -35,8 +35,10 @@ http://www.ovirt.org/User:Tsaban
 # migrationTries = 0.
 <br />
 ''' Manager wakes up '''
-# migrationTries = 0.
-# lastMigrations = new List<MigrationEntryDS>{}.
+# check that AffinityRulesEnforcementPerCluster exist in perClusterList for each cluster in the engine.
+# For each cluster in perClusterList:
+## migrationTries = 0.
+## lastMigrations = new List<MigrationEntryDS>{}.
 # Change interval to “regular interval” minute. Call the “Enforce affinity rule using migration”.
 # Write AuditLog message: “Affinity Rules Enforcement Manager started”
 <br />
@@ -182,7 +184,8 @@ http://www.ovirt.org/User:Tsaban
 
 ''' AffinityRulesEnforcementPerCluster '''
 # List<MigrationEntryDS> lastMigrations.
-# Integer currentInterval, migrationTries.
+# Integer migrationTries.
+
 
 ''' AffinityRulesEnforcementManager '''
 # SHORT_INTERVAL = 1.
