@@ -77,6 +77,7 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 = <span class="mw-customtoggle-1" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Click to Show/Hide]</span></span>Bugs Fixed = 
 <div  id="mw-customcollapsible-1" class="mw-collapsible mw-collapsed">
 ==oVirt Engine==
+'''oVirt 3.6.0 Alpha'''<BR>
 {{BZ|737335}} - [BACKEND] VM dynamic table contains unused columns that should be removed.<BR>
 {{BZ|803251}} - [RFE] improve the resource usage graph for VM cpu/memory/network<BR>
 {{BZ|838487}} - [RFE] Allow setting of machine type per VM rather than cluster level<BR>
@@ -114,6 +115,7 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1062351}} - [RFE] Search mechanism doesn't handle particular special characters well<BR>
 {{BZ|1064231}} - exception when selecting 'Subnets' sub tab for network imported from neutron<BR>
 {{BZ|1064474}} - [RFE] Option to populate LUN description with LUN ID #<BR>
+{{BZ|1064503}} - [RFE] 'engine-backup --mode=restore' should allow provisioning<BR>
 {{BZ|1065989}} - AddStorageDomainCommand CDA wrongly allows export storage on block devices<BR>
 {{BZ|1067318}} - [RFE][ToolTips] convert tool-tips in the GUI to PatternFly tooltips<BR>
 {{BZ|1067605}} - Floppy is available on ppc64<BR>
@@ -129,16 +131,19 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1080029}} - [RFE] Need a way to determine how many days a user has been attached to a pooled VM<BR>
 {{BZ|1080074}} - [Neutron integration][webadmin] improve CIDR validation when creating network with subnet on Neutron<BR>
 {{BZ|1080364}} - hotplug cpu - event message text is not clear<BR>
+{{BZ|1081028}} - [RFE] Provide UI plugin API to control the search string<BR>
 {{BZ|1081577}} - Pointless warning when adding first storage domain<BR>
-{{BZ|1083195}} - ovirt-engine should refresh documentation-mapping cache on login, not first access<BR>
+{{BZ|1083523}} - [RFE] use MIME launch as the default console mode<BR>
 {{BZ|1084103}} - Shareable and bootable disk shouldn't be allowed<BR>
 {{BZ|1084117}} - [RFE] Disable VM suspend through granular permissions in User Portal<BR>
 {{BZ|1085012}} - "re-initialize DC" should not be available when DC is up<BR>
 {{BZ|1086768}} - Remove unused SysPrep*Path parameters from vdc_options<BR>
 {{BZ|1086808}} - [ToolTips] GUI: VM type tooltip doesn't dissappear after opening Edit VM dialog with doubleclick<BR>
+{{BZ|1087936}} - [GUI] Run Once & Sysprep: entered user password is not masked<BR>
 {{BZ|1089239}} - useless parameter in osinfo<BR>
 {{BZ|1093397}} - [engine-backend] [iSCSI multipath] Cannot edit iSCSI multipath bond while iSCSI SD is in maintenance<BR>
 {{BZ|1096215}} - [RFE] Get rid of the setStoragePoolDescription calls<BR>
+{{BZ|1098603}} - [RFE][webadmin] - GuideMe can't activate hosts<BR>
 {{BZ|1099068}} - [scale] monitoring: separate VDS and VM monitoring<BR>
 {{BZ|1099098}} - [TEXT] rename 'Cluster Policy' to 'Scheduling Policy'<BR>
 {{BZ|1099412}} - [RFE] Edit ISO/Export domain connection details<BR>
@@ -168,6 +173,7 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1117484}} - [RFE] Create new VM directly from Template List<BR>
 {{BZ|1118699}} - rx/tx reported over 100% when adding/removing ethtools_opts<BR>
 {{BZ|1119038}} - [ToolTips] Running VM delta info balloon do not disappear.<BR>
+{{BZ|1119225}} - [engine-setup] 'Execution of setup failed' message is odd if only nfs start failed<BR>
 {{BZ|1119285}} - [Admin Portal] Error while executing action: The notification event VDS_ACTIVATE_MANUAL_HA is unsupported.<BR>
 {{BZ|1119309}} - sorting columns and paging<BR>
 {{BZ|1120232}} - Taking snapshot of vm in suspend state doesn't work<BR>
@@ -180,6 +186,7 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1124432}} - Complex info icon tooltip message in "Edit/New Virtual Machine" windows, under the "Host" tab, right before the "Start Running On" section<BR>
 {{BZ|1125845}} - [RFE] Support management of gluster geo-replication session from oVirt<BR>
 {{BZ|1126198}} - [Cloud Init] Adding new network with Cloud Init shouldn't provide any value for new network interface<BR>
+{{BZ|1126547}} - webadmin [TEXT]: misleading error message when attempting IDE hotplug<BR>
 {{BZ|1127592}} - [RFE] add API for Cluster Fencing Policy<BR>
 {{BZ|1128426}} - [RFE][RHEV-M webadmin] improve German translation.<BR>
 {{BZ|1128453}} - [REST API]: VM next_run do not have all fields updated.<BR>
@@ -188,6 +195,7 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1130116}} - [RFE] While adding new disk from RHEV admin portal: move the "Allocation Policy" list box below the Storage Domain List box.<BR>
 {{BZ|1130174}} - [RFE] turn Blank template into some kind of global defaults facility<BR>
 {{BZ|1131147}} - When unselecting a row item such as a Datacenter or domain and then re-select, the result is throbber never completes<BR>
+{{BZ|1132066}} - [RFE] Allow creation of new disks as copy of any existing disk<BR>
 {{BZ|1132247}} - [GUI over REST API gaps] missing GetNumberOfActiveVmsInVdsGroupByVdsGroupId<BR>
 {{BZ|1132249}} - [GUI over REST API gaps] missing GetVmTemplateCount<BR>
 {{BZ|1132259}} - [GUI over REST API gaps] missing External Providers<BR>
@@ -210,6 +218,7 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1139160}} - Adding a Storage domain (ISO, Export, NFS) lists Datacenter and Host as <UNKNOWN> under Tasks<BR>
 {{BZ|1139551}} - [webadmin] "double" separator in New Logical Network (Cluster)<BR>
 {{BZ|1139741}} - When resizing: mouse-cursor is too asymmetric<BR>
+{{BZ|1140158}} - [RFE][ToolTips] Tooltips across clickable buttons in the application provide exact same text as the button text itself<BR>
 {{BZ|1140237}} - Initial row is automatically selected even after it in all screens where initial row selection is made<BR>
 {{BZ|1140249}} - The Details pane sizing information isn't maintained<BR>
 {{BZ|1140491}} - its possible to add label to external network via rest<BR>
@@ -248,6 +257,9 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1156103}} - [userportal] When vm list is empty, then waiting animation never disappear<BR>
 {{BZ|1157229}} - [RestApi] Adding Vm to an un-initialized dc, creates an unusable, unremovable VM entitiy<BR>
 {{BZ|1157300}} - the "Show Report" menu of Data Center is covered by the sub-tab titles<BR>
+{{BZ|1157368}} - [RFE] add notification when host update is available<BR>
+{{BZ|1157377}} - [RFE] Showing engine/host/VM ERRATA information from Satellite/Foreman<BR>
+{{BZ|1157773}} - No password change url on login failure when password expires<BR>
 {{BZ|1157999}} - [RFE] Add keystone URL for OpenStack external providers that require authentication.<BR>
 {{BZ|1158357}} - [GUI over REST API gaps] No way to check if a VM is in "run once" mode<BR>
 {{BZ|1159420}} - Prevent migration of VMs using scsi reservation on virtio-scsi LUNs<BR>
@@ -258,6 +270,7 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1162532}} - [engine-webadmin] Removing a template from export domain while there are depended VMs on it should raise a warning message<BR>
 {{BZ|1162824}} - Replace any instances of "event log" or "events log" to "Events Pane" (if text is GUI-only) or "Events" (if text can appear in REST-API-based interface as well).<BR>
 {{BZ|1163002}} - Should add "Windows 2012R2 x64" as vm operating system options<BR>
+{{BZ|1163105}} - [RFE] Supporting search in User-Level API<BR>
 {{BZ|1163142}} - Pending resources are not cleared when network exception occurs.<BR>
 {{BZ|1163400}} - [F21] ovirt-engine fails testing searchbackend.SyntaxCheckerTest<BR>
 {{BZ|1163728}} - Prestarted vms in vm pool get useless event "VM <vm name> was restarted on Host <UNKNOWN>"<BR>
@@ -277,6 +290,9 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1167374}} - Un-suspended diskless VM - RunVm failed. Reasons:VAR__ACTION__RUN,VAR__TYPE__VM,VM_CANNOT_RUN_FROM_DISK_WITHOUT_DISK<BR>
 {{BZ|1167641}} - [GUI]>[SetupNetworks]> Can't display two networks with the same name but different cases unless they have the same label<BR>
 {{BZ|1167773}} - [Text] Minor text inconsistencies in letter casing "Error while executing action: Cannot deactivate Data Domain while there are running tasks on this data domain." (Data Domain vs. data domain)<BR>
+{{BZ|1168315}} - Wrong validation error message when entering invalid number in a number input<BR>
+{{BZ|1168334}} - [RFE] Provide UI plugin API to reveal given main tab<BR>
+{{BZ|1168629}} - update through ovirt-setup should list all the packages which will be updated before confirmation<BR>
 {{BZ|1168686}} - [engine-backend] updating a storage connection of a Gluster domain does not make any effect.<BR>
 {{BZ|1169105}} - [RFE] Collect data for VMs "vm_disk_actual_size_mb" including snapshots and change currect column name<BR>
 {{BZ|1169373}} - Templates tab in userportal doesn't allow to differentiate among template versions<BR>
@@ -298,7 +314,6 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1176430}} - Importing an existing domain fails with SQL constraint violation exception on wipe_after_delete not null constraint<BR>
 {{BZ|1176457}} - Can not restore backup file to rhevm with non-default lc_messages<BR>
 {{BZ|1177119}} - When adding a host, the ip filed is not ignoring spaces.<BR>
-{{BZ|1177154}} - Engine not show host numa nodes until I run "Refresh Capabilities"<BR>
 {{BZ|1177231}} - Better resolution of graphics conflicts between template and vm<BR>
 {{BZ|1177595}} - ActivateDeactivateSingleAsyncOperationFactory relies on concrete return type<BR>
 {{BZ|1177624}} - RHEV-M managed firewall blocks NFS rpc.statd notifications<BR>
@@ -316,9 +331,9 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1179145}} - Can't clone from snapshot - VM ID taken<BR>
 {{BZ|1179171}} - REST_API | NPE when query events with empty query<BR>
 {{BZ|1179246}} - Add rest API to support warning for attached Storage Domains on attach or import of Storage Domain<BR>
-{{BZ|1179689}} - UX: addHost form leaves json checkbox locked when switching between clusters<BR>
 {{BZ|1179886}} - Manage domains does not add permissions for user<BR>
 {{BZ|1179899}} - [ImportDomain] An operation of Importing NFS domain from rest, ends with a domain which is not attached nor detached to dc<BR>
+{{BZ|1180071}} - Start vm that have memory and guaranteed memory above host free memory, failed with libvirtd error<BR>
 {{BZ|1180112}} - Deformed, too narrow icons in Userportal Basic sidebar<BR>
 {{BZ|1180199}} - [RFE] make the list of events loaded by user using REST ordered by ID<BR>
 {{BZ|1180522}} - testJson*Disk* failures on F21 build<BR>
@@ -330,12 +345,10 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1181431}} - [GUI] Host QoS > Block user from entering letters and special characters in 'rate limit' and 'committed rate' fields<BR>
 {{BZ|1181530}} - [RFE] Add CORS support to the RESTAPI<BR>
 {{BZ|1181711}} - XSD schema validation error: macPool object missing 'allow_duplicates' element<BR>
-{{BZ|1182000}} - [RFE] Bundle GWT symbol maps in GWT application's rpm package<BR>
 {{BZ|1182130}} - [GUI] > Host QoS , 'Unlimited' outbound for committed limit should changed to  'N/A' or something else<BR>
 {{BZ|1183537}} - [engine-webadmin] [importDomain] Importing an iSCSI domain while the storage server is not accessible fails with an ugly message<BR>
 {{BZ|1183801}} - [RFE] Ability to Search Storage Domains According to the Wipe After Delete Option<BR>
 {{BZ|1183972}} - [RFE][oVirt] allow renaming of the imported glance image and template<BR>
-{{BZ|1183977}} - [engine-backend] When reconstruct master is marked as finished, the problematic domain is reported as active, while the new master is inactive<BR>
 {{BZ|1184164}} - HTML5 Spice Proxy (Tech Preview) Not Able to be Configured<BR>
 {{BZ|1184370}} - [New] - Removing brick with out migrating data from the bricks fails.<BR>
 {{BZ|1184384}} - [New] - Remove the options Enable to set vm maintenance reason,/dev/random/ source and /dev/hwrng/source from new cluster dialog box in gluster only mode<BR>
@@ -344,11 +357,13 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1184927}} - failure of master migration on deactivation will leave domain locked<BR>
 {{BZ|1184983}} - submenu within context menu not rendering in a convenient location, causing ux issues.<BR>
 {{BZ|1185411}} - ENGINE_HEAP_MAX default value as 1G must be changed<BR>
+{{BZ|1185839}} - [RFE] configurable thresholds for storage space per domain<BR>
 {{BZ|1185865}} - [JSON] Force extend block domain, in JSONRPC, using a "dirty" LUN, fail<BR>
 {{BZ|1186598}} - [New] - Title is not present for Optimize virt store dialog box.<BR>
 {{BZ|1186737}} - [scale] cluster tab generate slow query<BR>
 {{BZ|1186763}} - [scale] GetStorageConnectionsByStorageTypeAndStatus generate slow query<BR>
 {{BZ|1187693}} - [search] Users: role = * returns nothing / ERROR: column vdc_users.mla_role does not exist<BR>
+{{BZ|1187703}} - [search] Templates: Users.usrname = causes PSQLException: ERROR: missing FROM-clause entry for table "vms"<BR>
 {{BZ|1187986}} - unable to rename existing cluster<BR>
 {{BZ|1188127}} - [RFE] - The engine should check when last backup was performed<BR>
 {{BZ|1188130}} - [RFE] - Engine-backup should not restore async tasks.<BR>
@@ -374,17 +389,18 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1193060}} - [events] No VDS_ACTIVATE_FAILURE caught<BR>
 {{BZ|1193079}} - rest-api: templates -> disks collection - incorrect storage domains list<BR>
 {{BZ|1193220}} - Typo - Topology is spelled topologhy in the UI<BR>
-{{BZ|1195127}} - [RFE] create a docker image with glance and setup it as a provider for ovirt-engine<BR>
-{{BZ|1195131}} - [RFE] create a docker image with cinder and ceph driver and setup it as a provider for ovirt-engine<BR>
+{{BZ|1195127}} - [RFE] download a docker image with glance and setup it as a provider for ovirt-engine<BR>
+{{BZ|1195131}} - [RFE] download a docker image with cinder and ceph driver and setup it as a provider for ovirt-engine<BR>
 {{BZ|1195152}} - Cloning the existing VM throws server error 500<BR>
 {{BZ|1195167}} - vmpool collection lacks most vm properties<BR>
 {{BZ|1195200}} - [events] odd message - ETL Service (Stopped|Started) vs History Service (stopped|started)<BR>
 {{BZ|1195334}} - Gluster and POSIX edit domain - VFS type and mount options text boxes are not aligned with its labels.<BR>
-{{BZ|1195724}} - Import a storage domain is missing properties (vs. edit/new)<BR>
+{{BZ|1195699}} - [New] - Geo-replication status is shown  as 'UNKNOWN' in the UI.<BR>
+{{BZ|1196169}} - Add storage domain thresholds range validations in related CDA's<BR>
+{{BZ|1196235}} - Run vm with one cpu and two numa nodes failed<BR>
 {{BZ|1196251}} - Detach of Storage Domain leaves leftover of vm_interface_statistics and cause an sql exception when importing the VM again<BR>
 {{BZ|1197788}} - Refresh host capabilities missing from Python-SDK<BR>
 {{BZ|1198214}} - [PPC] Enable balloon device for PPC<BR>
-{{BZ|1198506}} - RHEV-M admin portal pagination issue: disappeared list of VMs after sort it and select next page<BR>
 {{BZ|1198609}} - Configure new user role dialog: faulty rendering due to javascript exception (missing "ActionGroup___DISK_LIVE_STORAGE_MIGRATION")<BR>
 {{BZ|1199208}} - remove unused POWER drivers<BR>
 {{BZ|1200300}} - "Custom Script" questions-mark under "New Virtual Machine" points to ovirt.org docs<BR>
@@ -393,57 +409,88 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1200687}} - get_management_network() returns None value instead of actual MGMT network for the Cluster object<BR>
 {{BZ|1200779}} - [REST API] Add network to Cluster fails with Internal Server Error<BR>
 {{BZ|1201327}} - RHEV needs to support 4TB of Memory<BR>
-{{BZ|1201385}} - Missing space in audit log space threshold message, missing points in end of sentence.<BR>
 {{BZ|1201403}} - Search engine does not support tags hierarchy<BR>
 {{BZ|1201683}} - [New] - Delete All Button under Snapshots sub tab is enabled by default.<BR>
 {{BZ|1202129}} - VM Pool is created with 0 VMs if error occured when creating VM<BR>
 {{BZ|1202339}} - Cannot add open stack image external provider vie RESTAPI; reason: keystone authentication url is missing<BR>
 {{BZ|1202363}} - After activating iscsi domain, can't add a new disk due to lack of space though there should be space.<BR>
+{{BZ|1202391}} - [New] - Do not list the clusters in the Volume Snapshot - Cluster options dialog which does not have hosts attached to it.<BR>
 {{BZ|1202768}} - [RFE][HC] Open 100 ports for gluster bricks with base port 49217 when the host provide gluster support<BR>
-{{BZ|1203262}} - [Quota] Disk extension allows to bypass quota restrictions<BR>
 {{BZ|1203454}} - [New] - Message in the Restore Popup is not correct when volume is online and snapshot is deactivatedt<BR>
-{{BZ|1203725}} - [services] ipv6 is disabled within ovirt-engine service<BR>
 {{BZ|1203735}} - [events] ...was started by null@N/A<BR>
-{{BZ|1204434}} - Context Sensitive Help: GUI needs to use different mapping files for different locales.<BR>
 {{BZ|1204493}} - [webadmin] Hosts main tab: no hosts display<BR>
+{{BZ|1204673}} - engine-setup should unlock all entities<BR>
 {{BZ|1205107}} - [New] - Do not display Disperse and redundancy count if the volume is not of type disperse.<BR>
-{{BZ|1205584}} - NullPointerException when testing configuration of fence agent for the new host<BR>
-{{BZ|1205589}} - Host status is not restored if power management start/stop action failed<BR>
+{{BZ|1205813}} - sub-versions of Blank(Default) templates should be blocked<BR>
 {{BZ|1206068}} - Mismatch between engine version and full version all APIs<BR>
 {{BZ|1206130}} - No correlation-id parameter under methods of AffinityGroup<BR>
 {{BZ|1208089}} - [New] - Add brick dialog does not show all the bricks available in the host.<BR>
 {{BZ|1208125}} - [New] - Create Brick should be blocked if the device is already been used.<BR>
 {{BZ|1208139}} - Import storage domain function is not setup to handle local disk hypervisors which has the same path<BR>
 {{BZ|1208525}} - Host in Connecting state once SetupNetworks is called<BR>
+{{BZ|1209038}} - RunOnce boot sequence is persisted after removing & adding network<BR>
 {{BZ|1209281}} - [pki] pki-pkcs12-extract.sh fails with /dev/fd is not mounted<BR>
 {{BZ|1209426}} - [New] - Display unit for stripe size in create brick dialog.<BR>
 {{BZ|1209443}} - [New] - Cannot create volume using the bricks created from RHSC.<BR>
 {{BZ|1209879}} - Instance type can't be renamed<BR>
 {{BZ|1209882}} - New instance type dialog  does not validate name for special characters<BR>
-{{BZ|1210486}} - [PKI] CA certificate notBefore should confirm to rfc2459<BR>
-{{BZ|1210633}} - [RHEVM3.5] import vm fails. Error while executing action: Cannot import VM. Invalid time zone for given OS type.<BR>
+{{BZ|1210379}} - SPICE port is sent as 65535 to spice_html5<BR>
+{{BZ|1210382}} - display property change is not saved when VM is running<BR>
 {{BZ|1211050}} - XSD schema validation error: value object missing child elements<BR>
-{{BZ|1211153}} - Missing details about GlusterFS domain's connection in RESTAPI<BR>
+{{BZ|1211171}} - Network tool tip on the Edit network window in the SetupNetworks is stuck and concealing the IP/Netmask/Gateway fields, both on Chrome and Mozila<BR>
 {{BZ|1211231}} - [RFE] enable SPICE/QXL support for Windows 8/2012 even without the QXL drivers<BR>
 {{BZ|1211246}} - Adding a Gluster storage domain does not display the description properly in the tasks panel<BR>
 {{BZ|1211275}} - When connecting host to a storage server the task description show "UNKNOWN" instead of the host name in the tasks panel<BR>
 {{BZ|1211314}} - CLI auto complete option description is missing for add disk<BR>
-{{BZ|1211330}} - Storage migration removes snapshot preview from the storage<BR>
+{{BZ|1211512}} - POOL vm tasks doesn't ends<BR>
 {{BZ|1211588}} - CLI auto complete options async and grace_period-expiry are missing for preview_snapshot<BR>
 {{BZ|1211649}} - management bridge called ovirtmgmt instead of rhevm<BR>
 {{BZ|1211976}} - [New] - Creating a brick with out providing the brick names gives "Internal Engine error"<BR>
 {{BZ|1212290}} - [New] - Brick status is not marked down in UI when the brick goes down.<BR>
+{{BZ|1212302}} - [New] - Do not display Disperse and Distribute Dispersed volume types in the create New volume Dialog box.<BR>
+{{BZ|1212526}} - [engine-backup] silently ignores db credentials options when not passing --change-*credentials<BR>
 {{BZ|1212752}} - [engine-backup] restore fails if using change-{,dwh}-db-credentials and previous user exists<BR>
+{{BZ|1212936}} - [New] - Snapshot creation from UI succeeds even when the bricks are not thinly provisioned.<BR>
 {{BZ|1213133}} - Removing a Storage Domain lists DataCenter as <UNKNOWN> under Tasks<BR>
+{{BZ|1213238}} - [New] - Snapshot creation succeeds from UI when some of the bricks in the volume are down.<BR>
 {{BZ|1213257}} - Failed to create VM with multiple disks with ‘Disk vm_Disk1 in VM vm is already marked as boot’<BR>
 {{BZ|1213302}} - Missing vms link under /api/.../storagedomains/{storagedomain:id}/<BR>
 {{BZ|1213388}} - There is no Data Center version indication in the engine logs.<BR>
 {{BZ|1213745}} - [engine-webadmin] [importDomain] Error message syntax of an unsuccessful import domain operation has to be changed<BR>
 {{BZ|1213969}} - [CodeChange] Wrong check for domain's type in ExtendStorageDomainCommand<BR>
 {{BZ|1214408}} - Importing storage domains into an uninitialized datacenter leads to duplicate OVF_STORE disks being created, and can cause catastrophic loss of VM configuration data<BR>
-{{BZ|1214860}} - [PKI] renew important certificate when about to expire during engine-setup<BR>
+{{BZ|1214624}} - [RFE] UI Plugin - Control custom tab's position within the tab panel<BR>
+{{BZ|1215389}} - Virt-IO-SCSI option is not available, although Virt-IO-SCSI flag is enabled in the resource allocation tab<BR>
+{{BZ|1215613}} - [New] - Send alerts to the user when ever snap hard and soft limit are reached.<BR>
+{{BZ|1215845}} - NPE when cloning a VM from snapshot WITHOUT "VirtIO-SCSI Enabled"<BR>
+{{BZ|1215876}} - [New] - Proper error message should be displayed when user tries to delete a volume which has snapshots.<BR>
+{{BZ|1215878}} - [New] - user should not be allowed to take snapshot when rebalance / remove-brick is running.<BR>
+{{BZ|1215881}} - [New] - cannot sync snapshots created in CLI to UI when host is added in xml rpc mode.<BR>
+{{BZ|1215884}} - [New] - Restoring snapshot cannot be performed while rebalance/remove-brick is running.<BR>
+{{BZ|1215887}} - [New] - Display an error message when user tries to schedule a snapshot with out having a snap name.<BR>
+{{BZ|1215928}} - [New] - Message shown while updating the snapshot configurations is misleading<BR>
+{{BZ|1215974}} - Entering empty value or illegal value in size field, under 'Disks' tab does not generate an error<BR>
+{{BZ|1216116}} - RetrieveImageDataVDSCommand log level entry should change to DEBUG instead of INFO<BR>
+{{BZ|1216315}} - [New] - Snapshot creation is successful even after the snap-max-hard-limit is reached.<BR>
+{{BZ|1217402}} - [engine-backup] unable to restore if backup contains read only user for DWH DB access<BR>
+{{BZ|1217456}} - add fcp api option to 'unregisteredstoragedomainsdiscover' at oVirt's api rsdl<BR>
 {{BZ|1218151}} - Creation of template disk does not set the disk description with json formatting<BR>
-
+{{BZ|1218316}} - [REST API] when calling GET with all-content header on vms entity some initialization tag is missing parameters<BR>
+{{BZ|1218606}} - [New] - snapshot end by date error is shown even after user sets the correct date.<BR>
+{{BZ|1218874}} - [New] - Editing a snapshot schedule gives Operation Cancelled and the edit snapshot schedule hangs<BR>
+{{BZ|1218935}} - [REST-API] missing details in rsdl for Glance image import<BR>
+{{BZ|1218973}} - [SAP] Adding a custom property to a running vm causes all previously defined properties to be removed<BR>
+{{BZ|1218991}} - [New] - Cannot create new snapshot when host is added using xml rpc<BR>
+{{BZ|1219151}} - [New] - When user tries to schedule a snapshot with the current date and time it says operational cancelled<BR>
+{{BZ|1219827}} - [New] - snapshot scheduling icon should be removed from the info column once the scheduled date and time are expired<BR>
+{{BZ|1220263}} - [New] - UI fails to remove the brick when of the host UUID is zero and does not check further to update any new bricks.<BR>
+{{BZ|1220824}} - [REST] Adding a disk to a vm fails with NullPointerException if not disk.storage_domains is provided (even for direct lun disks)<BR>
+{{BZ|1221012}} - Remove UserRefreshRate from engine-config<BR>
+{{BZ|1221052}} - Typos in gluster geo-replication messages<BR>
+{{BZ|1221055}} - Grammar mistake in network cluster message<BR>
+{{BZ|1221058}} - Typo in VM reboot message<BR>
+{{BZ|1222553}} - [ovirt] [engine-backup] Engine backup fails with scope "db" on postgres 8<BR>
+{{BZ|1222554}} - [ovirt] [engine-backup] pg_dump failure description not logged<BR>
 
 == oVirt Hosted Engine Setup ==
 '''oVirt 3.6.0 Alpha 1'''<BR>
