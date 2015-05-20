@@ -446,15 +446,16 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 
 
 == oVirt Hosted Engine Setup ==
+'''oVirt 3.6.0 Alpha 1'''
 {{BZ|1002454}} - [RFE] Possibility to install host into engine VM without running through the whole installation process again.<BR>
 {{BZ|1036731}} - [RFE] Hosted Engine on FC<BR>
+{{BZ|1077850}} - [RFE] Hosted Engine - Support easier deployment flow out of the box with the Virtual Appliance image<BR>
 {{BZ|1080823}} - [RFE][HC] make override of iptables configurable when using hosted-engine<BR>
 {{BZ|1101553}} - [HE-setup] Use vdsm api instead of vdsClient<BR>
 {{BZ|1108341}} - [RFE] Prompt again for admin password during hosted-engine --deploy<BR>
+{{BZ|1120780}} - [RFE] Wait for user input to shutdown vm in the end of hosted-engine deployment process<BR>
 {{BZ|1142098}} - hosted engine setup doesn't detect volume creation failures<BR>
 {{BZ|1144334}} - [RFE] refactor VM startup code using VDSM API and don't try to set ticket until VM is up<BR>
-{{BZ|1150073}} - Running hosted-engine --vm-status, when ovirt-ha-broker service stopped, drop exception<BR>
-{{BZ|1153278}} - [RFE] Hosted Engine on FC<BR>
 {{BZ|1169290}} - [hosted-engine] [iSCSI support] connectStoragePools fails with "SSLError: The read operation timed out" while adding a new host to the setup<BR>
 {{BZ|1169792}} - [hosted-engine] Bad check of iso image permission<BR>
 {{BZ|1173638}} - vdsClient/vdscli SSLError timeout error<BR>
@@ -467,6 +468,8 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1201196}} - [TEXT ONLY] - Hosted Engine - Instructions for handling Invalid Storage Domain error<BR>
 {{BZ|1205663}} - [RFE] Let the user customize rhevm appliance memory size from deployment scripts<BR>
 {{BZ|1213307}} - [HC] hosted-engine --deploy fails on additional host with external glusterfs<BR>
+{{BZ|1216172}} - [self-hosted] Can't add 2nd host into self-hosted env: The VDSM host was found in a failed state... Unable to add slot-5b to the manager<BR>
+{{BZ|1220137}} - [hosted-engine-setup] [FC support] In case there are no LUNs exposed to the host,  fc_get_lun_list is called Infinitely<BR>
 
 == oVirt Hosted Engine HA ==
 {{BZ|1150087}} - Log entries should explain why HE agent try to start vms on both hosts<BR>
