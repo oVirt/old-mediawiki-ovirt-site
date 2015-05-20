@@ -57,7 +57,10 @@ oVirt uses [http://gerrit.ovirt.org Gerrit] to manage code submissions.
 * To get started, follow the instructions for [[working with oVirt Gerrit]]
 * When reviewing a patch, if you are unsure whether the code meets project standards, do not score the patch "-1" or "+1".
 * In comments please be considerate toward the work which the patch submitter has done to submit the patch.
-*  For patch submitters: Please familiarise yourself with project coding conventions before submitting a patch. Coding conventions for [[Vdsm Developers#Code Style | VDSM]] are in the wiki, and are included in [[Building oVirt Engine/IDE | the Maven build process]] for oVirt Engine.
+*  For patch submitters: Please familiarise yourself with project coding conventions before submitting a patch.   Here are the [[Backend Coding Standards]] for all the project parts.
+
+
+Coding conventions for [[Vdsm Developers#Code Style | VDSM]] are in the wiki, and are included in [[Building oVirt Engine/IDE | the Maven build process]] for oVirt Engine.
 
 <!--
 == Guideline Violations - 3 Strikes Method ==
