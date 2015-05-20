@@ -525,6 +525,7 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1164226}} - bogus line during installer boot<BR>
 
 == oVirt Log Collector ==
+'''oVirt 3.6.0 Alpha'''
 {{BZ|1127777}} - [RFE] Log collector does not collect hosted engine information<BR>
 {{BZ|1168660}} - log-collector tar files change "." permissions when extracted<BR>
 {{BZ|1173766}} - [RFE] log collector should collect engine-config settings and domain information<BR>
