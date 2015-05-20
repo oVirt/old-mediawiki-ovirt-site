@@ -536,6 +536,7 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1077235}} - [RFE] add progress bar to image uploader<BR>
 
 == oVirt ISO Uploader ==
+'''oVirt 3.6.0 Alpha'''<BR>
 {{BZ|1077235}} - [RFE] add progress bar to image uploader<BR>
 {{BZ|1097789}} - [engine-iso-uploader] engine-iso-uploader does not work with Local ISO domain<BR>
 
