@@ -446,7 +446,7 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 
 
 == oVirt Hosted Engine Setup ==
-'''oVirt 3.6.0 Alpha 1'''
+'''oVirt 3.6.0 Alpha 1'''<BR>
 {{BZ|1002454}} - [RFE] Possibility to install host into engine VM without running through the whole installation process again.<BR>
 {{BZ|1036731}} - [RFE] Hosted Engine on FC<BR>
 {{BZ|1077850}} - [RFE] Hosted Engine - Support easier deployment flow out of the box with the Virtual Appliance image<BR>
