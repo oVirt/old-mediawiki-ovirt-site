@@ -20,7 +20,7 @@ Pay particular attention to standard  [http://www.oracle.com/technetwork/java/ja
 
 ===Vdsm coding guidelines===
 
-http://www.ovirt.org/Vdsm_Coding_Guidelines
+[[Vdsm Coding Guidelines]]
 
 ===RowMapper singletons===
 
