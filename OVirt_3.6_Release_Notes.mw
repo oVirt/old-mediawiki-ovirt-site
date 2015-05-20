@@ -519,8 +519,8 @@ If you're upgrading an existing Hosted Engine setup, please follow [[Hosted_Engi
 {{BZ|1220137}} - [hosted-engine-setup] [FC support] In case there are no LUNs exposed to the host,  fc_get_lun_list is called Infinitely<BR>
 
 == oVirt Hosted Engine HA ==
+'''oVirt 3.6.0 Alpha'''<BR>
 {{BZ|1150087}} - Log entries should explain why HE agent try to start vms on both hosts<BR>
-{{BZ|1150600}} - Unexpected Migration of HostedEngine<BR>
 {{BZ|1156596}} - ovirt-hosted-engine-ha rpm should depend on otopi<BR>
 {{BZ|1164226}} - bogus line during installer boot<BR>
 
