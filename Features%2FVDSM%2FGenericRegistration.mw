@@ -79,7 +79,7 @@ For more options:
   Example of use:
   vdsm-tool --engine-fqdn engine.mydomain
 
-=== '''Logging''' ===
+=== '''Logs''' ===
 * Autoinstall log:
   /var/log/ovirt-node.log
 * vdsm-tool register log:
