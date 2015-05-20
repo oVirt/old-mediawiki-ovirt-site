@@ -25,9 +25,9 @@ The oVirt project uses gerrit in order to review patches. For more on Gerrit and
 #Consensus formed, ACK or NAK agreed
 
 
-=== engine (java) Development ===
-* adhere to standard  [http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-135099.html#367 Java naming convention]
-* format the code using config/engine-code-format.xml - [[Building_oVirt_Engine/IDE#Setting_up_oVirt_engine_development_environment_in_Eclipse|import in eclipse code formatter UI or Intellij's ]]
+=== Coding standards ===
+* all coding standards for the project can be found at [[Backend Coding Standards]]
+
 ==== who's my reviewer? ====
 if you don't know who is should review your patch you can either -
 * ping the engine-devel@ovirt.org mailing list with the link to gerrits request
