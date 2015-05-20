@@ -1,6 +1,6 @@
 == Generic Registration <!-- The name of your feature --> ==
 
-{{Feature|name=GenericRegistration |modules=vdsm, ovirt-node|version=3.6|status=Pending review/Merge}}
+{{Feature|name=GenericRegistration |modules=vdsm, ovirt-node|version=3.6|status=Merged}}
 [[Category:Feature]]
 [[Category:VDSM]]
 
