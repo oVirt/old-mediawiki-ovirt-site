@@ -2,16 +2,25 @@
 
 This page is a collection of coding standards in the ovirt engine backend. Not all of these standards are properly maintained, they are more like 'guidelines'
 
-=== Java code conventions ===
+===Infra Bash Script coding guidelines===
+ 
+http://www.ovirt.org/Infra_Bash_style_guide
+
+===Java code conventions===
 
 Java code style conventions and best practices should be applied in the project.
 
 http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html
 
-=== Vdsm coding guidelines ===
+===oVirt Engine/IDE=== 
+ 
+ http://www.ovirt.org/Building_oVirt_Engine/IDE --> see section about engine and Checkstyle
+
+===Vdsm coding guidelines===
+
 http://www.ovirt.org/Vdsm_Coding_Guidelines
 
-=== RowMapper singletons ===
+===RowMapper singletons===
 
 RowMappers should have a single instance e.g.
 
