@@ -7,7 +7,7 @@ Provide a mechanism to set entity health status which will be displayed in the U
  OK
  Info  [[File:ExternalStatusInfo.png]]
  Warning [[File:ExternalStatusFailure.png]]
- Critical [[File:ExternalStatusWarning.png]]
+ Error  [[File:ExternalStatusWarning.png]]
  Failure  [[File:ExternalStatusError.png]]
 
 
