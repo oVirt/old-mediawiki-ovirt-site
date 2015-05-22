@@ -107,10 +107,8 @@ https://gerrit.ovirt.org/#/c/40966/
 engine_page: vdsm-tool register verb integration<br>
 https://gerrit.ovirt.org/#/c/41081/
 
-autoreg: vdsm-tool register verb<br>
-https://gerrit.ovirt.org/#/c/41082/
-
-autoinstall: Use systemd service
+autoinstall: Use systemd service<br>
 https://gerrit.ovirt.org/#/c/41303/
+
 === '''Comments and Discussion''' ===
 Comments and discussion can be posted on mailinglist
