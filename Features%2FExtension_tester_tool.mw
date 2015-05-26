@@ -20,5 +20,5 @@ This example log message with text 'test' at level 'INFO' using logger name 'tes
 <pre>ovirt-engine-extensions-tool logger log-record --extension-name=ovirt-logger --message=test --logger-name=test-logger --level=INFO
 </pre>
 
-
+Author: --[[User:Omachace|Ondra Machacek]] ([[User talk:Omachace|talk]])
 [[Category:Feature]]
