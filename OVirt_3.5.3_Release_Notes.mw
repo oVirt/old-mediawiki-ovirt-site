@@ -1,5 +1,5 @@
 {{DISPLAYTITLE:oVirt 3.5.3 Release Notes}}
-The oVirt Project is pleased to announce the availability of oVirt 3.5.3 first release candidate as of  May 14th, 2015.
+The oVirt Project is pleased to announce the availability of oVirt 3.5.3 second release candidate as of  May 27th, 2015.
 
 oVirt is an open source alternative to VMware vSphere, and provides an awesome KVM management interface for multi-node virtualization. This release is available now for Fedora 20, Red Hat Enterprise Linux 6.6, CentOS 6.6, (or similar) and Red Hat Enterprise Linux 7.1, CentOS 7.1 (or similar).
 
@@ -9,7 +9,7 @@ For a general overview of oVirt, read [[Quick_Start_Guide | the Quick Start Guid
 ==Fedora / CentOS / RHEL==
 == CANDIDATE RELEASE ==
 
-oVirt 3.5.3 first candidate release is available since 2015-05-14. In order to install it you've to enable oVirt 3.5 release candidate repository.
+oVirt 3.5.3 second candidate release is available since 2015-05-27. In order to install it you've to enable oVirt 3.5 release candidate repository.
 
 In order to install it on a clean system, you need to install
  # yum localinstall http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm
@@ -73,7 +73,7 @@ Due to certificate incompatibility issue with rfc2459[https://bugzilla.redhat.co
 The renew process should introduce no downtime for the engine and hosts communications, however users' browsers may require acceptance of the new CA certificate. The new CA certificate which is located at /etc/pki/ovirt-engine/ca.pem should be distributed to all remote components that require PKI trust.
 
 == Upgrade issues ==
-* Engine and host upgrade ordering due to bug {{BZ|1196327}}. When upgrading your deployment to 3.5.2 please your upgrade engine first and next your hosts. When following order is not preserved you will see following error every 3 seconds (by default):
+* Engine and host upgrade ordering due to bug {{BZ|1196327}}. When upgrading your deployment to 3.5.3 please your upgrade engine first and next your hosts. When following order is not preserved you will see following error every 3 seconds (by default):
 
  ERROR [org.ovirt.engine.core.vdsbroker.vdsbroker.ListVDSCommand] (DefaultQuartzScheduler_Worker-28) [] Command 'ListVDSCommand(HostName = kenji, HostId = 9f569269-d267-4bf9-96c5-e1749b4c8dda, vds=Host[kenji,9f569269-d267-4bf9-96c5-e1749b4c8dda])' execution failed: java.util.LinkedHashMap cannot be cast to java.lang.String
 
@@ -98,6 +98,11 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 
 =Bugs fixed=
 ==oVirt Engine==
+'''oVirt 3.5.3 RC2'''<BR>
+{{BZ|1198142}} - Tracker: oVirt 3.5.3 release<BR>
+{{BZ|1224656}} - rhevm-setup - update - pki: Enroll certs on upgrade if not exist<BR>
+
+'''oVirt 3.5.3 RC1'''<BR>
 {{BZ|1083195}} - ovirt-engine should refresh documentation-mapping cache on login, not first access<BR>
 {{BZ|1177154}} - Engine not show host numa nodes until I run "Refresh Capabilities"<BR>
 {{BZ|1182000}} - [RFE] Bundle GWT symbol maps in GWT application's rpm package<BR>
@@ -140,6 +145,16 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 {{BZ|1220282}} - NPE when cloning a VM from snapshot WITHOUT "VirtIO-SCSI Enabled"<BR>
 
 ==VDSM==
+'''VDSM 4.16.17'''<BR>
+{{BZ|1220039}} - Passwords exposed in vdsm log when using jsonrpc transport<BR>
+{{BZ|1220333}} - RHEV [RHEL7.1] - Require qemu fix for "Cannot start VMs that have more than 23 snapshots"<BR>
+{{BZ|1221192}} - [vdsm] Template creation on XtremeIO with pre-allocated disks on block storage fails with "CopyImageError: low level Image copy failed"<BR>
+{{BZ|1221597}} - Host fails to flip to maintenance mode due to failed live migrations.<BR>
+{{BZ|1222154}} - el6: libvirtd configurator configures upstart but does not disable libvirtd's sysv job<BR>
+{{BZ|1223457}} - unable to add new VLAN when using net_persistence=ifcfg<BR>
+{{BZ|1224632}} - vdsm fails to read dhclient lease config "expire never"<BR>
+
+'''VDSM 4.16.16'''<BR>
 {{BZ|1158108}} - VDSM leaks small mount of memory (~300KiB/h)<BR>
 {{BZ|1202399}} - [engine-backend] When reconstruct master is marked as finished, the problematic domain is reported as active, while the new master is inactive<BR>
 {{BZ|1213438}} - [vdsm] errors: value of 'vcpu_period' is out of range [1000, 1000000]<BR>
@@ -159,9 +174,11 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 {{BZ|1214724}} - [core] executePipe call callback only if available<BR>
 
 == oVirt Hosted Engine HA ==
+{{BZ|1150600}} - Unexpected Migration of HostedEngine<BR>
 {{BZ|1220119}} - Log entries should explain why HE agent try to start vms on both hosts<BR>
 
 == oVirt Hosted Engine Setup ==
+{{BZ|1222421}} - Failed to deploy additional host due to unconfigured iptables<BR>
 {{BZ|1150073}} - Running hosted-engine --vm-status, when ovirt-ha-broker service stopped, drop exception<BR>
 {{BZ|1208485}} - [TEXT ONLY] - Hosted Engine - Instructions for handling Invalid Storage Domain error<BR>
 {{BZ|1221290}} - [self-hosted] Can't add 2nd host into self-hosted env: The VDSM host was found in a failed state... Unable to add slot-5b to the manager<BR>
