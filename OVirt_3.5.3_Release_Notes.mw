@@ -145,6 +145,9 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 {{BZ|1220282}} - NPE when cloning a VM from snapshot WITHOUT "VirtIO-SCSI Enabled"<BR>
 
 ==VDSM==
+'''VDSM 4.16.18'''<BR>
+{{BZ|1225202}} - vdsmd fails to start<BR>
+
 '''VDSM 4.16.17'''<BR>
 {{BZ|1220039}} - Passwords exposed in vdsm log when using jsonrpc transport<BR>
 {{BZ|1220333}} - RHEV [RHEL7.1] - Require qemu fix for "Cannot start VMs that have more than 23 snapshots"<BR>
