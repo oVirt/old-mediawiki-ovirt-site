@@ -86,24 +86,25 @@ see [[Ovirt-engine-backup]] and [[Features/BackupAwareness]].
 # Click on the link for the extra information on backup options. 
 # '''Expected Results 2''': The extra-information page is opened in a new browser tab/window. 
 # Close web-admin 
-# Change BackupCheckPeriodInHours to "-1" 
+# Change BackupCheckPeriodInHours to "-1", restart engine / reload configuration (if this configuration value is re-loadable - see [[Features/ReloadableConfiguration]])
 # Log into web-admin 
 # '''Expected Results 3''': The "Configure" dialog should not be displayed.  
 # Go to the "Configure" dialog -> "Backup Status" section.  
 # '''Expected Results 4''': Dialog should display same information as in "Expected Results 1". 
 # Close web-admin 
-# Change BackupCheckPeriodInHours to a value other than "-1". 
-# Perform a files backup
+# Change BackupCheckPeriodInHours to a value other than "-1", restart engine / reload configuration (if this configuration value is re-loadable)
+# Perform a files backup using the 'engine-backup' tool
 # Log into web-admin 
 # '''Expected Results 5''': The "Configure" dialog should be automatically displayed with information about the recent files backup as well as the missing db backup.  
-# Perform a db backup
+# Perform a db backup using the 'engine-backup' tool
 # Close/re-open the "Configure" dialog -> "Backup Status" section
 # '''Expected Results 6''': Dialog should display information about the recent files backup as well as the recent db backup. 
-# Ensure that the existing backups are not up-to-date (by waiting for BackupAlertPeriodInDays days or manipulating the backup dates somehow in the db, etc. )
-# Close/re-open the "Configure" dialog -> "Backup Status" section
-# '''Expected Results 7''': Dialog should display information about the outdated backup. 
 # Close web-admin 
-# Change the BackupAlertPeriodInDays configuration value to 12. 
+# Ensure that the existing backups are not up-to-date (by waiting for BackupAlertPeriodInDays days or manipulating the backup dates somehow in the db, etc. )
+# Log into web-admin 
+# '''Expected Results 7''': The "Configure" dialog should be automatically displayed with information about the outdated backup. 
+# Close web-admin 
+# Change the BackupAlertPeriodInDays configuration value to a large number (e.g. 100). 
 # Open web-admin
 # '''Expected Results 8''': The "Configure" dialog should not be displayed.  
 # Open the "Configure" dialog -> "Backup Status" section
@@ -117,13 +118,12 @@ TBD
 
 TBD
 
- == Your feature heading ==
+== Your feature heading ==
+
  A backup status screen will be automatically displayed in the web-admin upon login in case there are missing and/or outdated files/db backups. 
 This screen will contain the overall backup status of the system, individual status per backup type and a link leading to extra information about the engine backup options. 
 
 == Comments and Discussion ==
-
-This below adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page
 
 * Refer to [[Talk:Backup Awareness UI]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
 
