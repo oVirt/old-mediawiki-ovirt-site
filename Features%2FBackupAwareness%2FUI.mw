@@ -21,8 +21,12 @@ This screen will contain the overall backup status of the system, individual sta
 
 == Detailed Description ==
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
-[[File:Example.jpg]]
-A "Backup Status" side section will be added to the "Configure" dialog
+[[File:BackupStatus-Proposal.png]]
+A "Backup Status" side tab will be added to the "Configure" dialog [0]. 
+The "Backup Status" section contain will include information about the db and files backup of the engine, as well as some extra information and reference about the backup options. 
+- The overall status of the engine backup [1]: can be:
+-- Green (OK) - "Backup is up to date" - in case both db and files backups exist and are up to date. 
+-- Orange (Warning) - "Backup is missing and/or outdated" - otherwise (i.e. db backup is missing or outdated or files backup is missing or outdated). 
 
 
 
