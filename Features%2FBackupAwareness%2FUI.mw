@@ -75,7 +75,9 @@ This feature requires that we will have the following data retrievable from the 
 '''(**) Note''': The client should not determine whether a backup is up-to-date or not, since the client machine time-setting may be different from the engine's time-setting. So the indication whether a backup is up-to-date or not should arrive from the backend. Another option is for the engine to provide a query that will return its current date/time, so that the client will be able to perform a correct time-delta calculation. 
 
 == Documentation / External references ==
-see [[Ovirt-engine-backup]] and [[Features/BackupAwareness]]. 
+* [[Ovirt-engine-backup]]
+* [[Features/BackupAwareness]]
+* [https://bugzilla.redhat.com/show_bug.cgi?id=1188136 BZ 1188136]
 
 == Testing ==
 
