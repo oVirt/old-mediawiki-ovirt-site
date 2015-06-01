@@ -19,7 +19,7 @@ In order to add/edit a message in oVirt, please follow '''all''' instructions be
 * For VDSM errors, every message must be declared as a key/value pair in ''OVIRT_ENGINE/backend/manager/modules/dal/src/main/resources/bundles/VdsmErrors.properties''.
  * A corresponding key should be added to VdcBllErrors enum
 <br />
-*Keys that are added to the backend should also be added to the frontend!
+*Keys that are added to the backend should also be added to the frontend(See frontend section for more details).
 
 == Frontend ==
 For every key/value pair that was added to Backend's ''AppErrors'' and ''VdsmErrors'', the following changes '''must''' be done for the ''WebAdmin'' and ''UserPortal'' projects:
