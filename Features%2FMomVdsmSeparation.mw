@@ -33,7 +33,7 @@ Running the two processes separately makes it easier to profile and to evaluate 
 
 == Dependencies / Related Features ==
 
-
+The separation requires MOM >= TBD and VDSM >= 4.17.0. Older version are not compatible with this feature.
 
 == Documentation / External references ==
 
