@@ -88,13 +88,13 @@ This feature requires that we will have the following data retrievable from the 
 # Click on the link for the extra information on backup options. 
 # '''Expected Results 2''': The detailed backup options page is opened in a new browser tab/window. 
 # Close web-admin 
-# Change <code>BackupCheckPeriodInHours</code> to "-1", restart engine / reload configuration (if this configuration value is re-loadable - see [[Features/ReloadableConfiguration]])
+# Change <code>BackupCheckPeriodInHours</code> to "-1", restart engine. 
 # Log into web-admin 
 # '''Expected Results 3''': The "Configure" dialog should not be displayed.  
 # Go to the "Configure" dialog -> "Backup Status" section.  
 # '''Expected Results 4''': Dialog should display same information as in "Expected Results 1". 
 # Close web-admin 
-# Change <code>BackupCheckPeriodInHours</code> to a value other than "-1", restart engine / reload configuration (if this configuration value is re-loadable)
+# Change <code>BackupCheckPeriodInHours</code> to a value other than "-1", restart engine. 
 # Perform a files backup using the 'engine-backup' tool
 # Log into web-admin 
 # '''Expected Results 5''': The "Configure" dialog should be automatically displayed with information about the recent files backup as well as the missing engine data-base backup.  
@@ -106,11 +106,11 @@ This feature requires that we will have the following data retrievable from the 
 # Log into web-admin 
 # '''Expected Results 7''': The "Configure" dialog should be automatically displayed with information about the outdated backup. 
 # Close web-admin 
-# Change the <code>BackupAlertPeriodInDays</code> configuration value to a large number (e.g. 100). 
+# Change the <code>BackupAlertPeriodInDays</code> configuration value to a large number (e.g. 100), restart engine. 
 # Open web-admin
 # '''Expected Results 8''': The "Configure" dialog should not be displayed.  
 # Open the "Configure" dialog -> "Backup Status" section
-# '''Expected Results 9''': Dialog should display an OK backup status with information about the latest files backup as well as the latest engine data-base backup. 
+# '''Expected Results 9''': Dialog should display an OK backup status with information about the latest files backup as well as the latest engine data-base backup.
 
 == Contingency Plan ==
 
