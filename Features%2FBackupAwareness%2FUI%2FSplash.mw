@@ -22,7 +22,7 @@ This screen will contain a general recommendation to consider backing up the eng
 <!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
 
 We will add:
-* An engine backup splash page. 
+* An backup awareness splash page. 
 * A boolean <code>DisplayBackupSplashPageOnLogin</code> configuration value (explanation below). Default value: <code>true</code>
 * A string <code>EngineBackupOptionsInfoURL</code> configuration value (explanation below). Default value: The URL of [[Ovirt-engine-backup|this]] page. 
 
@@ -30,15 +30,15 @@ We will add:
 
 [^^^ Figure 1]
 
-The newly added engine backup splash page (dialog [0]) will automatically be displayed immediately upon successful login to the admin portal if:
-* ''(Condition #1):'' If the engine backup status is not "green" (see the [[Features/BackupAwareness/UI|Backup Awareness UI]] page for the definition of a "green" backup status), '''and:'''
+The newly added backup awareness splash page (dialog [0]) will automatically be displayed immediately upon successful login to the admin portal if:
+* ''(Condition #1):'' The engine backup status is not "green" (see the [[Features/BackupAwareness/UI|Backup Awareness UI]] page for the definition of a "green" backup status), '''and:'''
 * ''(Condition #2):'' The engine is configured to display this page upon login to the administration portal (i.e. the newly-added <code>DisplayBackupSplashPageOnLogin</code> configuration value is "true"). 
 
 The engine backup splash page will include the following content (all content is '''static''', except the link URL in [1] which will be fetched from the engine configuration):
 
 * "Please consider backup options" title [1] with a link to the detailed backup options. The link URL will be fetched from a newly-added <code>EngineBackupOptionsInfoURL</code> engine configuration setting. 
 * A note explaining why backup is good for the engine [2]. 
-* A note (accompanied by a warning icon) why no backup is bad for the engine [3]. 
+* A note (accompanied by a warning icon) explaining why no backup is bad for the engine [3]. 
 * A note explaining when this splash page will be displayed and how to change this setting [4]. 
 
 See Figure 2 below for a mock-up without the "tagging":
@@ -48,7 +48,7 @@ See Figure 2 below for a mock-up without the "tagging":
 
 == Benefit to oVirt ==
 <!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
-The idea is to make sure that the user is aware of the backup options for oVirt in general, so he will be able to act accordingly on time, make sure that his backup is always up to date, and consequently minimize downtime in case data recovery is needed. 
+The idea is to make sure that the user is aware of the backup options for oVirt in general, so he will be able to act accordingly on time - make sure that backup is performed, and regularly kept up to date - consequently minimizing downtime in case data recovery is needed. 
 
 == Dependencies / Related Features ==
 <!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
