@@ -1,0 +1,110 @@
+<!-- {{autolang|base=yes}} -->
+<!-- The actual name of your feature page should look something like: "Your feature name". Use natural language to name the pages. -->
+= Backup Awareness UI - Splash Screen  <!-- The name of your feature --> =
+
+{{Feature|name=Backup Awareness UI - Splash Screen|modules=engine|status=Planning|version=3.6.0}}
+
+== Summary ==
+<!-- A sentence or two summarizing what this feature is and what it will do.  This information is used for the overall feature summary page for each release. -->
+The [[Features/BackupAwareness|Backup Awareness]] feature will include several [[Features/BackupAwareness/UI|UI]] components. 
+
+One of these components would be a splash screen which will be automatically displayed in the web-admin upon login in case there are missing and/or outdated files/db backups (see [[Ovirt-engine-backup]]). 
+
+This screen will contain a general recommendation to consider backing up the engine, with reference to a page containing detailed information about the engine backup options. 
+
+== Owner ==
+<!--This should link to your home wiki page so we know who you are-->
+* Name: [[User:Awels| Alexander Wels]]
+<!-- Include you email address that you can be reached should people want to contact you about helping with your feature, status is requested, or  technical issues need to be resolved-->
+* Email: awels@redhat.com
+
+== Detailed Description ==
+<!-- Expand on the summary, if appropriate.  A couple sentences suffices to explain the goal, but the more details you can provide the better. -->
+
+We will add:
+* An engine backup splash page. 
+* A boolean <code>DisplayBackupSplashPageOnLogin</code> configuration value (explanation below). Default value: <code>true</code>
+* A string <code>EngineBackupOptionsInfoURL</code> configuration value (explanation below). Default value: The URL of [[Ovirt-engine-backup|this]] page. 
+
+[[File:BackupSplash-tagged.png]]
+
+[^^^ Figure 1]
+
+The newly added engine backup splash page (dialog [0]) will automatically be displayed immediately upon successful login to the admin portal if:
+* ''(Condition #1):'' If the engine backup status is not "green" (see the [[Features/BackupAwareness/UI|Backup Awareness UI]] page for the definition of a "green" backup status), '''and:'''
+* ''(Condition #2):'' The engine is configured to display this page upon login to the administration portal (i.e. the newly-added <code>DisplayBackupSplashPageOnLogin</code> configuration value is "true"). 
+
+The engine backup splash page will include the following content (all content is '''static''', except the link URL in [1] which will be fetched from the engine configuration):
+
+* "Please consider backup options" title [1] with a link to the detailed backup options. The link URL will be fetched from a newly-added <code>EngineBackupOptionsInfoURL</code> engine configuration setting. 
+* A note explaining why backup is good for the engine [2]. 
+* A note (accompanied by a warning icon) why no backup is bad for the engine [3]. 
+* A note explaining when this splash page will be displayed and how to change this setting [4]. 
+
+See Figure 2 below for a mock-up without the "tagging":
+[[File:BackupSplash.png]]
+
+[^^^ Figure 2]
+
+== Benefit to oVirt ==
+<!-- What is the benefit to the oVirt project?  If this is a major capability update, what has changed?  If this is a new feature, what capabilities does it bring? Why will oVirt become a better distribution or project because of this feature?-->
+The idea is to make sure that the user is aware of the backup options for oVirt in general, so he will be able to act accordingly on time, make sure that his backup is always up to date, and consequently minimize downtime in case data recovery is needed. 
+
+== Dependencies / Related Features ==
+<!-- What other packages depend on this package?  Are there changes outside the developers' control on which completion of this feature depends?  In other words, completion of another feature owned by someone else and might cause you to not be able to finish on time or that you would need to coordinate? Other Features that might get affected by this feature? -->
+This feature depends on [[Ovirt-engine-backup]] and [[Features/BackupAwareness]]. 
+
+This feature requires that we will have the following data retrievable from the engine (via a backend query/queries): 
+* An indication whether any successful files-backup exist, and whether the latest backup is considered up-to-date or not (based on the last backup date and the <code>BackupAlertPeriodInDays</code> configuration value)'''(**)'''. 
+* Same as ^^^, for db-backup. 
+
+'''(**) Note''': The client should not determine whether a backup is up-to-date or not, since the client machine time-setting may be different from the engine's time-setting. So the indication whether a backup is up-to-date or not should arrive from the backend. Another option is for the engine to provide a query that will return its current date/time as well as the backup date/time, so that the client will be able to perform a correct time-delta calculation. 
+
+== Documentation / External references ==
+* [[Ovirt-engine-backup]]
+* [[Features/BackupAwareness]]
+* [https://bugzilla.redhat.com/show_bug.cgi?id=1188136 BZ 1188136]
+
+== Testing ==
+
+# Install oVirt 
+# Do not perform any backups 
+# Log into web-admin 
+# '''Expected Results 1''': Condition #1 and Condition #2 are fulfilled -> The splash page should be displayed. 
+# Click on the link for the extra information on backup options. 
+# '''Expected Results 2''': The detailed backup options ([[Ovirt-engine-backup|this]]) page is opened in a new browser tab/window. 
+# Close web-admin
+# Change <code>DisplayBackupSplashPageOnLogin</code> to <code>false</code>, restart engine. 
+# Log into web-admin
+# '''Expected Results 3''': Condition #2 is not fulfilled -> The splash page should '''not''' be displayed. 
+# Close web-admin 
+# Change <code>DisplayBackupSplashPageOnLogin</code> back to the <code>true</code>, restart engine. 
+# Perform a files backup using the 'engine-backup' tool
+# Log into web-admin
+# '''Expected Results 4''': Condition #1 and Condition #2 are fulfilled -> The splash page should be displayed. 
+# Perform a db backup using the 'engine-backup' tool
+# Close/re-open the web-admin. 
+# '''Expected Results 5''': Condition #1 is not fulfilled ->The splash page should '''not''' be displayed. 
+# Ensure that either the db backup or the files backup is '''not''' up-to-date (by waiting for <code>BackupAlertPeriodInDays</code> days or manipulating the backup dates somehow in the db, etc.)
+# Close/re-open the web-admin. 
+# '''Expected Results 6''': Condition #1 and Condition #2 are fulfilled -> The splash page should be displayed. 
+
+== Contingency Plan ==
+
+TBD
+
+== Release Notes ==
+
+TBD
+
+== Your feature heading ==
+
+A backup awareness splash screen will be automatically displayed by default (can be changed via the engine-config tool) in the web-admin upon login in case there are missing and/or outdated files/db backups. 
+This screen will contain a general recommendation to regularly back-up the engine, as well as a reference to a (configurable) detailed engine backup options page. 
+
+== Comments and Discussion ==
+
+* Refer to [[Talk:Backup Awareness UI - Splash Screen]]  <!-- This adds a link to the "discussion" tab associated with your page.  This provides the ability to have ongoing comments or conversation without bogging down the main feature page -->
+
+[[Category:Feature]]
+[[Category:Template]]
