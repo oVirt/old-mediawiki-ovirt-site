@@ -2,7 +2,7 @@
 
 = Image Upload =
 
-{{Feature|name=Image Upload|modules=engine,storage,vdsm|status=Planning|version=3.6.0}}
+{{Feature|name=Image Upload|modules=engine,storage,vdsm|status=Implementation|version=3.6.0}}
 
 == Summary ==
 Placing an ISO on an ISO domain today involves use of the command line, either via the ISO Uploader tool or manual copying of the ISO image.  Similarly, importing a VM disk image to a data domain requires an import from existing storage, virt-v2v operation, or other manual method.
