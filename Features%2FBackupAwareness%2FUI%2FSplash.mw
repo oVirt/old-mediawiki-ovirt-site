@@ -23,7 +23,7 @@ This screen will contain a general recommendation to consider backing up the eng
 
 We will add:
 * An backup awareness splash page. 
-* A boolean <code>DisplayBackupSplashPageOnLogin</code> configuration value (explanation below). Default value: <code>true</code>
+* A boolean <code>AdminPortalLoginBackupAlert</code> configuration value (explanation below). Default value: <code>true</code>
 * A string <code>EngineBackupOptionsInfoURL</code> configuration value (explanation below). Default value: The URL of [[Ovirt-engine-backup|this]] page. 
 
 [[File:BackupSplash-tagged.png]]
@@ -32,7 +32,7 @@ We will add:
 
 The newly added backup awareness splash page (dialog [0]) will automatically be displayed immediately upon successful login to the admin portal if:
 * ''(Condition #1):'' The engine backup status is not "green" (see the [[Features/BackupAwareness/UI|Backup Awareness UI]] page for the definition of a "green" backup status), '''and:'''
-* ''(Condition #2):'' The engine is configured to display this page upon login to the administration portal (i.e. the newly-added <code>DisplayBackupSplashPageOnLogin</code> configuration value is "true"). 
+* ''(Condition #2):'' The engine is configured to display this page upon login to the administration portal (i.e. the newly-added <code>AdminPortalLoginBackupAlert</code> configuration value is "true"). 
 
 The engine backup splash page will include the following content (all content is '''static''', except the link URL in [1] which will be fetched from the engine configuration):
 
@@ -74,11 +74,11 @@ This feature requires that we will have the following data retrievable from the 
 # Click on the link for the extra information on backup options. 
 # '''Expected Results 2''': The detailed backup options page with the <code>EngineBackupOptionsInfoURL</code> configuration-value URL is opened in a new browser tab/window. 
 # Close web-admin
-# Change <code>DisplayBackupSplashPageOnLogin</code> to <code>false</code>, restart engine. 
+# Change <code>AdminPortalLoginBackupAlert</code> to <code>false</code>, restart engine. 
 # Log into web-admin
 # '''Expected Results 3''': Condition #2 is not fulfilled -> The splash page should '''not''' be displayed. 
 # Close web-admin 
-# Change <code>DisplayBackupSplashPageOnLogin</code> back to <code>true</code>, restart engine. 
+# Change <code>AdminPortalLoginBackupAlert</code> back to <code>true</code>, restart engine. 
 # Perform a files backup using the 'engine-backup' tool. 
 # Log into web-admin
 # '''Expected Results 4''': Condition #1 and Condition #2 are fulfilled -> The splash page should be displayed. 
