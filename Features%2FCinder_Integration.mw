@@ -215,7 +215,7 @@ Cinder disks are deleted asynchronously, hence ';async' flag could be passed as 
 ==== Cinder Authentication Keys ====
 [[File:cinder_auth_keys.png]]
 
-==== Create Authentication Key ====
+==== Authentication Key Dialog ====
 [[File:cinder_new_auth_key.png]]
 
 
