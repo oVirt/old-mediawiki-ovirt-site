@@ -153,6 +153,12 @@ Dropped the following bugs:<BR>
 {{BZ|1220282}} - NPE when cloning a VM from snapshot WITHOUT "VirtIO-SCSI Enabled"<BR>
 
 ==VDSM==
+'''VDSM 4.16.20'''<BR>
+{{BZ|1225202}} - vdsmd fails to start<BR>
+
+'''VDSM 4.16.19'''<BR>
+{{BZ|1225202}} - vdsmd fails to start<BR>
+
 '''VDSM 4.16.18'''<BR>
 {{BZ|1225202}} - vdsmd fails to start<BR>
 
