@@ -1,5 +1,5 @@
 {{DISPLAYTITLE:oVirt 3.5.3 Release Notes}}
-The oVirt Project is pleased to announce the availability of oVirt 3.5.3 second release candidate as of  May 28th, 2015.
+The oVirt Project is pleased to announce the availability of oVirt 3.5.3 third release candidate as of  June 5th, 2015.
 
 oVirt is an open source alternative to VMware vSphere, and provides an awesome KVM management interface for multi-node virtualization. This release is available now for Fedora 20, Red Hat Enterprise Linux 6.6, CentOS 6.6, (or similar) and Red Hat Enterprise Linux 7.1, CentOS 7.1 (or similar).
 
@@ -9,7 +9,7 @@ For a general overview of oVirt, read [[Quick_Start_Guide | the Quick Start Guid
 ==Fedora / CentOS / RHEL==
 == CANDIDATE RELEASE ==
 
-oVirt 3.5.3 second candidate release is available since 2015-05-28. In order to install it you've to enable oVirt 3.5 release candidate repository.
+oVirt 3.5.3 second candidate release is available since 2015-06-05. In order to install it you've to enable oVirt 3.5 release candidate repository.
 
 In order to install it on a clean system, you need to install
  # yum localinstall http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm
@@ -98,28 +98,36 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 
 =Bugs fixed=
 ==oVirt Engine==
+'''oVirt 3.5.3 RC3'''<BR>
+Dropped the following bugs:<BR>
+{{BZ|1220127}} - Missing details in engine log for "add VM Disk Profile doesn't match provided Storage Domain" failure<BR>
+{{BZ|1209754}} - UX: addHost form leaves json checkbox locked when switching between clusters<BR>
+{{BZ|1224656}} - rhevm-setup - update - pki: Enroll certs on upgrade if not exist<BR>
+{{BZ|1214860}} - [RFE][PKI] renew important certificate when about to expire during engine-setup<BR>
+{{BZ|1210486}} - [PKI] CA certificate notBefore should confirm to rfc2459<BR>
+
 '''oVirt 3.5.3 RC2'''<BR>
 {{BZ|1198142}} - Tracker: oVirt 3.5.3 release<BR>
 {{BZ|1224656}} - rhevm-setup - update - pki: Enroll certs on upgrade if not exist<BR>
 
 '''oVirt 3.5.3 RC1'''<BR>
 {{BZ|1083195}} - ovirt-engine should refresh documentation-mapping cache on login, not first access<BR>
-{{BZ|1177154}} - Engine not show host numa nodes until I run "Refresh Capabilities"<BR>
+{{BZ|1220126}} - Engine not show host numa nodes until I run "Refresh Capabilities"<BR>
 {{BZ|1182000}} - [RFE] Bundle GWT symbol maps in GWT application's rpm package<BR>
-{{BZ|1183977}} - [engine-backend] When reconstruct master is marked as finished, the problematic domain is reported as active, while the new master is inactive<BR>
+{{BZ|1202399}} - [engine-backend] When reconstruct master is marked as finished, the problematic domain is reported as active, while the new master is inactive<BR>
 {{BZ|1195032}} - [engine-webadmin] [importDomain] Importing an iSCSI domain while the storage server is not accessible fails with an ugly message<BR>
 {{BZ|1195724}} - Import a storage domain is missing properties (vs. edit/new)<BR>
 {{BZ|1197348}} - Detach of Storage Domain leaves leftover of vm_interface_statistics and cause an sql exception when importing the VM again<BR>
 {{BZ|1197444}} - [engine-backend] [importDomain] Virt-IO-SCSI flag is disabled once the VM gets registered<BR>
 {{BZ|1197474}} - Start vm that have memory and guaranteed memory above host free memory, failed with libvirtd error<BR>
-{{BZ|1198506}} - RHEV-M admin portal pagination issue: disappeared list of VMs after sort it and select next page<BR>
+{{BZ|1223770}} - RHEV-M admin portal pagination issue: disappeared list of VMs after sort it and select next page<BR>
 {{BZ|1200294}} - Async tasks should not be allowed in 3.3 compatible cluster in RHEV 3.4<BR>
 {{BZ|1201158}} - [ImportDomain,REST-API] Allow oVirt to discover FCP domains via 'unregisteredstoragedomainsdiscover'<BR>
 {{BZ|1201385}} - Missing space in audit log space threshold message, missing points in end of sentence.<BR>
 {{BZ|1203262}} - [Quota] Disk extension allows to bypass quota restrictions<BR>
 {{BZ|1203307}} - Root template cannot be removed after removing root template - sub templates.<BR>
 {{BZ|1203725}} - [services] ipv6 is disabled within ovirt-engine service<BR>
-{{BZ|1204434}} - Context Sensitive Help: GUI needs to use different mapping files for different locales.<BR>
+{{BZ|1206903}} - Context Sensitive Help: GUI needs to use different mapping files for different locales.<BR>
 {{BZ|1205584}} - NullPointerException when testing configuration of fence agent for the new host<BR>
 {{BZ|1205589}} - Host status is not restored if power management start/stop action failed<BR>
 {{BZ|1206903}} - Context Sensitive Help: GUI needs to use different mapping files for different locales.<BR>
@@ -127,10 +135,10 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 {{BZ|1209745}} - Space Used column header text isn't fully displayed<BR>
 {{BZ|1209754}} - UX: addHost form leaves json checkbox locked when switching between clusters<BR>
 {{BZ|1210486}} - [PKI] CA certificate notBefore should confirm to rfc2459<BR>
-{{BZ|1210633}} - [RHEVM3.5] import vm fails. Error while executing action: Cannot import VM. Invalid time zone for given OS type.<BR>
+{{BZ|1218669}} - [RHEVM3.5] import vm fails. Error while executing action: Cannot import VM. Invalid time zone for given OS type.<BR>
 {{BZ|1211057}} - After activating iscsi domain, can't add a new disk due to lack of space though there should be space.<BR>
 {{BZ|1211153}} - Missing details about GlusterFS domain's connection in RESTAPI<BR>
-{{BZ|1211330}} - Storage migration removes snapshot preview from the storage<BR>
+{{BZ|1217947}} - Storage migration removes snapshot preview from the storage<BR>
 {{BZ|1212397}} - Import storage domain function is not setup to handle local disk hypervisors which has the same path<BR>
 {{BZ|1213288}} - [pki] pki-pkcs12-extract.sh fails with /dev/fd is not mounted<BR>
 {{BZ|1213810}} - Missing vms link under /api/.../storagedomains/{storagedomain:id}/<BR>
