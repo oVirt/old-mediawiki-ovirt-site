@@ -96,7 +96,7 @@ engine_admin_password.
 
 === '''Logs''' ===
 * Autoinstall log:
-  /var/log/ovirt-node.log
+  journal -xr or systemctl status ovirt-node-plugin-vdsm
 * vdsm-tool register log:
   /var/log/vdsm/register.log
 
