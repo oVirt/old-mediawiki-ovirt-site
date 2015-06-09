@@ -113,8 +113,17 @@ or, assuming you remote repo is origin you could also
 git push origin HEAD:refs/drafts/master
  </nowiki>
 
-==== Track patch review process ====
-The review process is comprised of:
+=== Track patch review process ===
+The patch life cycle process comprises:
+# patch checked
+#* draft patch for early reviews
+#* verification (Verified+1)
+#* maintainer review approval (Code-Review+2)
+#* publishing [triggers CI]
+# CI tests passing (Continuous-Integration+1)
+# merged by maintainer
+
+==== In Higher Detail ====
 * Anyone can send a patch
 ** Initially a patch should be sent as draft
 * Code-Review - human code review:
@@ -148,6 +157,7 @@ The review process is comprised of:
 * NACK-ed (-1/-2) patches should not be submitted<BR>
 * A submitted patch is automatically merged to the git repository<BR>
 * When uploading a new patch set, the contributor should also add a review comment of the changes from previous version, to help reviewers track and review the changes (unless gerrit itself added a comment that a rebase is needed, and in that case no new comment is needed).
+
 
 [[Category:Documentation]]
 [[Category:Development environment]]
