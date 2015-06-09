@@ -100,15 +100,18 @@ git rebase origin/master
  </nowiki>
 
 ==== Push your patch for review ====
- <nowiki>
-git push gerrit.ovirt.org:ovirt-engine HEAD:refs/for/master
- </nowiki>
 
-Assuming you remote repo is origin you could also
+===== push the patch as a DRAFT =====
 
- <nowiki>
-git push origin HEAD:refs/for/master
- </nowiki>
+<nowiki>
+git push gerrit.ovirt.org:ovirt-engine HEAD:refs/drafts/master
+</nowiki>
+
+or, assuming you remote repo is origin you could also
+
+<nowiki>
+git push origin HEAD:refs/drafts/master
+</nowiki>
 
 ==== Track patch review process ====
 The review process is comprised of:
