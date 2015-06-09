@@ -101,7 +101,7 @@ git rebase origin/master
 
 ==== Push your patch for review ====
 
-===== push the patch as a DRAFT =====
+==== push/update the patch as a DRAFT ====
 
  <nowiki>
 git push gerrit.ovirt.org:ovirt-engine HEAD:refs/drafts/master
@@ -111,6 +111,31 @@ or, assuming you remote repo is origin you could also
 
  <nowiki>
 git push origin HEAD:refs/drafts/master
+ </nowiki>
+
+==== push the patch after it is published ====
+
+ <nowiki>
+git push gerrit.ovirt.org:ovirt-engine HEAD:refs/for/master
+ </nowiki>
+
+or, assuming you remote repo is origin you could also
+
+ <nowiki>
+git push origin HEAD:refs/for/master
+ </nowiki>
+
+==== the same using git review plugin ====
+pushing/updating a draft:
+
+ <nowiki>
+git review -D -r origin master
+ </nowiki>
+
+pushing/updating a published patch:
+
+ <nowiki>
+git review -r origin master
  </nowiki>
 
 === Track patch review process ===
