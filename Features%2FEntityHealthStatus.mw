@@ -76,7 +76,7 @@ For example
    </host>
   </event>
 
-Another example for storage domains and when the external status and the event severity is different :
+Another example for storage domains and when the external status and the event severity is different <br>
 NOTE : to set the external status on a storage domain you must pass also the data center id.
 
 <event>
