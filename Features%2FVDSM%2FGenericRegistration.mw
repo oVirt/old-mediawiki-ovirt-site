@@ -91,8 +91,11 @@ engine_admin_password.
 '''BOOTIF''': Network interface to be configured as ovirtmgmt network interface
 '''firstboot''': Firstboot of node
 
-  Example for PXE or Grub for autoinstall of ovirt-node:
+Example for PXE or Grub for autoinstall of ovirt-node with '''dhcp''':
     firstboot storage_init=/dev/sda adminpw=RHhwCLrQXB8zE management_server=engine.localdomain BOOTIF=ens3 hostname=node.localdomain
+
+Example for PXE or Grub for autoinstall of ovirt-node with '''static ip address''':
+    firstboot storage_init=/dev/sda adminpw=RHhwCLrQXB8zE management_server=engine.localdomain BOOTIF=ens3 hostname=node.localdomain ip=192.168.122.125 netmask=255.255.255.0 gateway=192.168.122.1
 
 === '''Logs''' ===
 * Autoinstall log:
