@@ -93,6 +93,7 @@ This feature needs two additional ports to be opened on firewalls.
  Kernel 3.13.5-101.fc19.x86_64 on an x86_64 (ttyS0)
  localhost login:
 
+<!--
 === Manager Side ===
 
 ==== User record ====
@@ -242,6 +243,7 @@ systemd/sysvinit script for daemon.
  log access: vm
  exec():
     socat -,raw,echo=0 UNIX-CONNECT:/path/to/usock/of/vm
+-->
 
 == Manual Configuration ==
 
