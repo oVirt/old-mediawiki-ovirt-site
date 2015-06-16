@@ -52,15 +52,16 @@
 == External Project Schedules ==
 Links to other significant project schedules, useful for seeing how oVirt aligns with them. 
 * Debian Jessie: [https://lists.debian.org/debian-devel-announce/2015/03/msg00016.html 2015-04-25]
+* Fedora 23: [https://fedoraproject.org/wiki/Releases/23/Schedule  2015-10-27]
 * Fedora 22: [https://fedoraproject.org/wiki/Releases/22/Schedule  2015-05-26]
 * Fedora 20 End Of Life:[https://fedoraproject.org/wiki/Releases/22/Schedule  2015-06-26 (1 month after Fedora 22 release)]
-* Foreman 1.8.1: [http://projects.theforeman.org/rb/releases/foreman 2015-05-12]
+* Foreman 1.8.3: [http://projects.theforeman.org/rb/releases/foreman 2015-07-15]
 * Foreman 1.9.0: [http://projects.theforeman.org/rb/releases/foreman 2015-08-01]
+* Foreman 1.10.0: [http://projects.theforeman.org/rb/releases/foreman 2015-11-01]
 * GlusterFS 3.7: [http://www.gluster.org/community/documentation/index.php/Planning37 2015-05-06]
-* GlusterFS 3.8: [http://www.gluster.org/community/documentation/index.php/Planning38 No date yet]
 * GlusterFS 4.0: [http://www.gluster.org/community/documentation/index.php/Planning40 No date yet]
 * OpenStack Kilo: [https://wiki.openstack.org/wiki/Kilo_Release_Schedule 2015-04-30]
-* QEMU 2.3.0: [http://wiki.qemu.org/Planning/2.3 2015-04-24]
+* QEMU 2.4.0: [http://wiki.qemu.org/Planning/2.4 2015-08-04]
 * Tiny Core 6.2: [http://forum.tinycorelinux.net/index.php/topic,18359.msg111886.html#msg111886 2015-05-03]
 
 == Nightly Builds ==
