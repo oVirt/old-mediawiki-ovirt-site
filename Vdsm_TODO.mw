@@ -57,6 +57,9 @@
 
 * replace time.time() with monotonic_time() whenever possible.
 
+=== Infra ===
+verify input/output args for their type. issue a log ERROR on mismatch.
+
 === Networking ===
 
 * <strike>work in conjunction with Network Manager.</strike> works in F20.
