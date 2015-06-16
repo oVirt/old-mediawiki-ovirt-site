@@ -63,7 +63,7 @@ Run:
 
 On the engine machine A:
  yum remove ovirt-engine-dwh
- rm -rf /etc/ovirt-engine-dwh
+ rm -rf /etc/ovirt-engine-dwh /var/lib/ovirt-engine-dwh
 
 
 If you want to migrate the  dwh database from the engine machine A,
@@ -87,7 +87,7 @@ On the engine machine A:
 * Only after that run on machine A:
  service ovirt-engine-reportsd stop
  yum remove ovirt-engine-reports
- rm -rf /etc/ovirt-engine-reports
+ rm -rf /etc/ovirt-engine-reports /var/lib/ovirt-engine-reports
 
 There may be more than one reports instance. And they will all show the reports.
 But, The engine will direct to and have SSO with only the last reports instance that it was configured to work with.
