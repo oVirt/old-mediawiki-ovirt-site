@@ -55,7 +55,7 @@ In case it didn't :
 'yum install ovirt-image-uploader'
 
 In developer environment when not installing the engine via rpm, the uploader's rpm can be downloaded and installed from here (latest stable):
- http://resources.ovirt.org/pub/ovirt-3.4/rpm/
+ http://resources.ovirt.org/pub/ovirt-3.5/rpm/
 <br>
 
 '''How to configure the uploader:'''<br>
