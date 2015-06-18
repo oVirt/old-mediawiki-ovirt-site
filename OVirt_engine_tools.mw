@@ -66,9 +66,9 @@ Those parameters should be configured in:<br>
 '/etc/ovirt-engine/isouploader.conf'
 
 '''How to run the uploader:'''<br>
-Running basic example:<br>
-List ISO domains: 'engine-iso-uploader list'<br/>
-Upload ISO or VFD image to the ISO domain: 'engine-iso-uploader  -i <ISODomainName> --name  upload <ISO/VFD file name>'<br/>
+Basic running examples:<br>
+List available ISO domains: 'engine-iso-uploader list'<br/>
+Upload ISO or VFD image to the ISO domain: 'engine-iso-uploader  -i <ISO Domain Name>  upload <ISO/VFD file name>'<br/>
 
 ==engine-image-uploader==
 Using  the  engine-image-uploader  command,  you  can  list  export storage domains and upload virtual machines in Open Virtualization Format (OVF) to a oVirt Engine. The tool only supports OVF (ova)  files created by oVirt.
