@@ -61,13 +61,14 @@
 * engine backup exists
 
 ==== Restore procedure====
-* on all the hosts:
+* on all the hosts (if they are still available):
 ** # service ovirt-ha-broker stop
 ** # service ovirt-ha-agent stop
 ** # chkconfig --del ovirt-ha-broker
 ** # chkconfig --del ovirt-ha-agent
 
 * on first host:
+** if the original host is not available anymore, provision a new host from scratch and proceed on this new host
 ** # hosted-engine --deploy
 *** use same fqdn you had previously in the HE VM.
 *** point to the new shared storage
