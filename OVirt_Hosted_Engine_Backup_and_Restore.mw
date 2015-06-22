@@ -45,7 +45,7 @@
 
 
 == Application backup / restore ==
-=== Backup: ===
+=== Backup ===
 
 * # hosted-engine --set-maintenance --mode=global
 * within the HE vm:
