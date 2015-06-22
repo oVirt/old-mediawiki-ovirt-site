@@ -54,7 +54,7 @@
 ** # service ovirt-engine start
 * # hosted-engine --set-maintenance --mode=none
 
-=== Restore: ===
+=== Restore ===
 ==== Preconditions ====
 * the vm is not available anymore due to storage corruption
 * an empty shared storage is available
