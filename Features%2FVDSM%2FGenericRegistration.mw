@@ -103,7 +103,7 @@ Example for PXE or Grub for autoinstall specifying ovirt engine port ('''Use for
 * Autoinstall log:
   journal -xr or systemctl status ovirt-node-plugin-vdsm
 * vdsm-tool register log:
-  /var/log/vdsm/register.log
+  /var/log/ovirt-register.log
 
 === '''Documentation / External references''' ===
 vdsm-tool: Add register verb<br>
