@@ -1,0 +1,35 @@
+
+The following SQL formatting  rules apply to code written as views/SP/upgrade scripts under the dbscripts folder:
+
+== Indentation ==
+All indentations should use 4 spaces  
+
+== Capitalization ==
+Keyword: UPPER<br>
+Data type: lower<br>
+Table name : lower<br>
+Column name : lower<br>
+Function name : InitCap<br>
+Column alias: lower<br>
+Variable : lower, starts with v_<br>
+Constraint: lower
+
+== Comma option == 
+Always after item
+
+== AND/OR ==
+Always in the end of line 
+
+== Select Query ==
+Column list in a new line <br>
+column list style : stacked <br>
+INTO clause : in a new line <br>
+FROM clause :  in a new line <br>
+FROM clause table list style : stacked<br>
+FROM clause join : join table in a new line , ON keyword on a new line <br>
+WHERE clause : condition in a new line <br>
+WHERE clause : AND/OR at end of line <br>
+GROUP BY clause :  Column list in a new line <br>
+GROUP BY column list style : stacked <br>
+ORDER BY clause :  Column list in a new line <br>
+ORDER BY column list style : stacked <br>
