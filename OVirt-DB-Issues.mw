@@ -4,6 +4,7 @@ This document will be a container document with links to diffrent aspects of oVi
 
 The following issues will be covered <br>
 
+[http://www.ovirt.org/wiki/OVirt-DB-Issues/formatting  SQL Formatting Rules] <br>
 [http://www.ovirt.org/wiki/OVirt-DB-Issues/Postgres  Postgres] <br>
 [http://www.ovirt.org/wiki/OVirt-DB-Issues/psql  psql and pgadmin3] <br>
 [http://www.ovirt.org/wiki/OVirt-DB-Issues/dbstructure  DB Structure] <br>
