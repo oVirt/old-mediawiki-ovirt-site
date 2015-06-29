@@ -7,6 +7,10 @@
 
 * ''Note that the logs are in lzma2 format, which is not-quite-standard but very efficient for log files.'' (use less/xzless and xzgrep to access the log)
 
+= Libvirt logs =
+
+== Libvirt debug logs ==
+If you need to enable libvirt debug logs, please refer to the [http://wiki.libvirt.org/page/DebugLogs official libvirt documentation]
 = Reading the log =
 == Line structure ==
 * Log lines have the following format:
