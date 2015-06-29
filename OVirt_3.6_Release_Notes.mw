@@ -530,6 +530,9 @@ A new oVirt Live ISO is available:
 {{BZ|1164226}} - bogus line during installer boot<BR>
 
 == oVirt Log Collector ==
+'''oVirt 3.6.0 Second Alpha'''<BR>
+{{BZ|1218526}} - [RHEL6.7][log-collector] Missing some info from engine's collected logs<BR>
+
 '''oVirt 3.6.0 Alpha'''<BR>
 {{BZ|1127777}} - [RFE] Log collector does not collect hosted engine information<BR>
 {{BZ|1168660}} - log-collector tar files change "." permissions when extracted<BR>
