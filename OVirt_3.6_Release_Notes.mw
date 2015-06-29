@@ -44,7 +44,6 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 oVirt 3.6.0 Alpha release is available since 2015-06-29. In order to install it you've to enable oVirt 3.6 pre release repository.
 
 In order to install it on a clean system, you need to run (see also [[#Known_Issues|Known Issues]] above):
- # yum install java-1.7.0-openjdk
  # yum install http://resources.ovirt.org/pub/yum-repo/ovirt-release36.rpm
 
 If you are upgrading from a previous version, you may have the ovirt-release35 package already installed on your system.
