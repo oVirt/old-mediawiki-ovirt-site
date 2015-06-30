@@ -10,7 +10,7 @@ The following sections documents fresh install of oVirt 3.6.x. For upgrading fro
 === Automatic Setup ===
 
 # make sure you have all the required package installed. Alongside ovirt-engine and ovirt-engine setup, you must make sure you have the ''ovirt-vmconsole-proxy'' package installed in the same host on which ovirt-engine runs.
-# to make ovirt-vmconsole-proxy host accessible, make sure the port "2223" is open. The setup procedure will setup "firewalld" accordingly.
+# to make ovirt-vmconsole-proxy host accessible, make sure the port "2222" is open. The setup procedure will setup "firewalld" accordingly.
 # run engine-setup and follow instructions provided interactively. Please note that the vmconsole proxy setup is disabled if the ''ovirt-vmconsole-proxy'' package is NOT detected when the setup runs.
 # once the setup succesfully run, and once ovirt-engine is running, you can log in and register a SSH key. (TODO: add picture)
 # when you install an hypervisor host, the deploy procedure will automatically install and setup the "ovirt-vmconsole-host" package.
