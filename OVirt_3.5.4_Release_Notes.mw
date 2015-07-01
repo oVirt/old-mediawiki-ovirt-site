@@ -12,6 +12,28 @@
 
 =Bugs fixed=
 ==oVirt Engine==
+{{BZ|1142779}} - unable to add additional hosts on gluster service enabled cluster<BR>
+{{BZ|1157773}} - No password change url on login failure when password expires<BR>
+{{BZ|1176581}} - Storage Tab -> import Domain -> help button is missing<BR>
+{{BZ|1176583}} - Storage tab-> ISO Domain -> Data Center -> Attach -> help button is missing<BR>
+{{BZ|1215882}} - Spelling Mistake under Host General Tab "Live Snapsnot Support" should be Snapshot<BR>
+{{BZ|1217456}} - add fcp api option to 'unregisteredstoragedomainsdiscover' at oVirt's api rsdl<BR>
+{{BZ|1217947}} - Storage migration removes snapshot preview from the storage<BR>
+{{BZ|1220110}} - [TEXT] Error/warning message for out of the range values doesn't provides expected value range for CPU QoS<BR>
+{{BZ|1220285}} - [engine-backend] NullPointerException during RunVmCommand for multiple VMs creation<BR>
+{{BZ|1220791}} - [engine-backup] unable to restore if backup contains read only user for DWH DB access<BR>
+{{BZ|1222283}} - SDK and REST ignore template's disk attributes<BR>
+{{BZ|1223529}} - CSH doesn't work unless helptag is identical to model hashname<BR>
+{{BZ|1223770}} - RHEV-M admin portal pagination issue: disappeared list of VMs after sort it and select next page<BR>
+{{BZ|1223836}} - RHEV 3.5.0 - User Portal no longer works Internet Explorer 8<BR>
+{{BZ|1225082}} - After upgrading RHEV-M to 3.5.1 and RHEV-H to 7.1, fencing with ilo4 no longer works<BR>
+{{BZ|1227310}} - Unstable unittest in engine<BR>
+{{BZ|1232419}} - User doesn't get the UserVmManager permission on a VM<BR>
+{{BZ|1233132}} - [engine-backend] Hosted-engine- setup:  HE deployment over RHEV-H failed due to an exception in engine for org.ovirt.engine.api.restapi.resource.AbstractBackendResource: javax.ejb.EJBException: JBAS014580: Unexpected Error<BR>
+{{BZ|1234005}} - improve Korean translations<BR>
+{{BZ|1234937}} - The "isattached" action doesn't return an action object<BR>
+{{BZ|1236381}} - AddVmFromScratchCommand fails when adding external VMs<BR>
+{{BZ|1236608}} - Source VM is deleted after failed cloning attempt<BR>
 
 ==VDSM==
 
