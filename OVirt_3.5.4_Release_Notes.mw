@@ -46,6 +46,15 @@
 {{BZ|1229859}} - vdsm hangup 100% CPU<BR>
 {{BZ|1236489}} - Keep the upstart libvirtd file to enable relaunching libvirt in case it goes down<BR>
 
+== oVirt Log Collector ==
+{{BZ|1225117}} - [RHEL6.7][log-collector] Missing some info from engine's collected logs<BR>
+
+== oVirt Hosted Engine Setup ==
+{{BZ|1225011}} - [TEXT ONLY] - Hosted Engine - Instructions for handling Invalid Storage Domain error<BR>
+{{BZ|1234289}} - HE deployment with exist VM, failed if used NFS storage path with trailing slash<BR>
+
+== oVirt engine CLI ==
+{{BZ|1234382}} - rhevm-shell opening spice-console does not work<BR>
 
 [[Category:Documentation]]
 [[Category:Releases]]
