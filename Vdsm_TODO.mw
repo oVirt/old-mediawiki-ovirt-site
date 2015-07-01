@@ -91,7 +91,7 @@
 
 * support IPv6 in source routing
 
-* use ElementTree instead of minidom in libvirt.py
+* report DNSs in getVdsCaps: start in https://gerrit.ovirt.org/#/c/39460/4/lib/vdsm/netinfo.py
 
 * allow adding DNS configuration on static IP
 
