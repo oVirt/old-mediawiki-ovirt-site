@@ -134,5 +134,12 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 == oVirt engine CLI ==
 {{BZ|1234382}} - rhevm-shell opening spice-console does not work<BR>
 
+== oVirt Java SDK ==
+{{BZ|1223186}} - sdk-java Encoding Problem<BR>
+
+== Other packages updated == 
+* qemu-kvm-ev
+* ovirt-engine-sdk-python
+
 [[Category:Documentation]]
 [[Category:Releases]]
