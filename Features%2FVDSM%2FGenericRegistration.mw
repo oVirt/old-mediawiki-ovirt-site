@@ -108,7 +108,7 @@ Example for PXE or Grub for autoinstall specifying ovirt engine port ('''Use for
   See logging session here: https://github.com/dougsland/ovirt-register
 
 === '''Documentation / External references''' ===
-Generic registration
+Generic registration<br>
 https://github.com/dougsland/ovirt-register
 
 engine_page: vdsm-tool register verb integration<br>
