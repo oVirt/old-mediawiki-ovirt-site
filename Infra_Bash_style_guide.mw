@@ -139,18 +139,19 @@ Even if empty or inheriting from the env, declare all the globals for better vis
 
 MY_VAR1=&quot;${ENV_VAR:-default value1}&quot;
 MY_VAR2='default value2'</pre>
-== Use dotted names in libraries ==
+== Use dotted/prefixeb names in libraries ==
 
 That way it's a lot easier to debug and maintain all the scripts.
 
 <pre>#### mylib.sh ####
 #/usr/bin/env bash -e
 
-mylib.MYVAR1=&quot;&quot;
+mylib_MYVAR1=&quot;&quot;
 
 mylib.func1() {
     ...
 }</pre>
+
 == Use caps and underscores for globals ==
 
 Also if it could collide with a [http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap08.html#tag_08 reserved var], add a prefix like <code>MY_</code>:
