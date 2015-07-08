@@ -4,17 +4,15 @@
 <startfeed/>
 </noinclude>
 
-{{Event|name=[//www.redhat.com/summit/ Red Hat Summit]|date=June 23-26, 2015|location=Boston, MA|lead=The Red Hat Summit is the premier open source technology event to showcase the latest and greatest in cloud computing, platform, virtualization, middleware, storage, and systems management technologies.}}
-
 {{Event|name=[//www.meetup.com/Aurangabad-Ovirt-Meetup/ Aurangabad Community Meetup]|date=July 11, 2015|location=Aurangabad (MS) India|lead=A local meetup to learn more about the leading open source virtual datacenter management platform, to be hosted at Unnati Computers, Aurangabad (MS) India .}}
 
 {{Event|name=[//www.oscon.com/open-source-2015 OSCON]|date=July 20-24, 2015|location=Portland, OR|lead=OSCON celebrates, defines, and demonstrates the power of open source in the world today. From small businesses to the enterprise, open source is the first choice of IT everywhere.}}
 
+{{Event|name=[//events.linuxfoundation.org/events/kvm-forum KVM Forum]|date=August 19-21, 2015|location=Vienna, Austria|lead=KVM Forum brings together the community of developers and users that define the KVM ecosystem for an annual technical conference, including an all-new oVirt Workshop track! }}
+
 <noinclude>
 <endfeed/>
 
-
-{{Event|name=[//events.linuxfoundation.org/events/kvm-forum KVM Forum]|date=August 19-21, 2015|location=Vienna, Austria|lead=KVM Forum brings together the community of developers and users that define the KVM ecosystem for an annual technical conference, including an all-new oVirt Workshop track! }}
 
 {{Event|name=[//vhpc.org/ 10th Workshop on Virtualization in High-Performance Cloud Computing]|date=August 25, 2015|location=Vienna, Austria|lead=VHPC aims to bring together researchers and industrial practitioners facing the challenges posed by virtualization. }}
 
