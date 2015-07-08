@@ -35,13 +35,8 @@ Always after item
 
 == AND/OR ==
 Always in the end of line
-
-  wrong:
-   a > 1 
-   and b < 10
-  right: 
-   a > 1 and
-   b < 10
+<p style="color: red"> a>1<br>and b<10</p>
+<p style="color: blue"> a>1 and <br>b<10</p>
 
 == Operators ==
 Always surround operators with one space
