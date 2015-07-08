@@ -8,13 +8,22 @@ All indentations should use 4 spaces no TABs are allowed
 
 == Capitalization ==
 Keyword: UPPER<br>
+  SELECT
 Data type: lower<br>
+  varchar(32)
 Table name : lower<br>
+  users
 Column name : lower<br>
+  user_name
 Function name : InitCap for SP, lower for general functions that also must start with fn_db_<br>
+  InsertAuditLog
+  fn_db_add_column
 Column alias: lower<br>
+  dept AS department
 Variable : lower, starts with v_<br>
+  v_user
 Constraint: lower
+  fk_user_user_sessions
 
 == Comma option == 
 Always after item
