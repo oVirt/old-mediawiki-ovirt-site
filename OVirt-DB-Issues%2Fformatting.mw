@@ -27,19 +27,8 @@ Constraint: lower
 
 == Comma option == 
 Always after item
-
-  wrong:
-    select 
-    a
-    ,b
-    ,c 
-    from T;
-  right:
-    select 
-      a,
-      b,
-      c
-    from T;
+<p style="color: red">  select a<br>,b<br>,c<br> from T;</p>
+<p style="color: blue">  select <br>a,<br>b,<br>c<br> from T;</p>
 
 == AND/OR ==
 Always in the end of line
