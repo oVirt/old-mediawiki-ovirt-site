@@ -3,8 +3,8 @@ The following SQL formatting  rules apply to code written as views/SP/upgrade sc
 
 Please note that each example demonstrates ONLY the specific rule and not the entire formatting for simplicity.
 
-<p style="color: red">Example that appears with red  are wrong</p>
-<p style="color: blue">Example that appears with blue  are right</p>
+<p style="color: red">Examples that appear with red  are wrong</p>
+<p style="color: blue">Examples that appear with blue  are right</p>
 
 == Indentation ==
 All indentations should use 4 spaces no TABs are allowed
