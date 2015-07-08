@@ -4,7 +4,7 @@ The following SQL formatting  rules apply to code written as views/SP/upgrade sc
 Please note that each example demonstrates ONLY teh specific rule and not the entire formatting for simplicity.
 
 == Indentation ==
-All indentations should use 4 spaces  
+All indentations should use 4 spaces no TABs are allowed
 
 == Capitalization ==
 Keyword: UPPER<br>
