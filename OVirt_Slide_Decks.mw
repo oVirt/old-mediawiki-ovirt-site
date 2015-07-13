@@ -5,10 +5,7 @@ These template presentations are provided to build new slides for oVirt presenta
 * 2015 template (with thanks to Eidan Hildesheim): [http://www.ovirt.org/images/7/7b/OVirt_2015_Template.odp oVirt_2015_Template.odp]
 * 2014 template: [http://www.ovirt.org/images/9/96/OVirt_2014_Template.odp oVirt_2014_Template.odp]
 
-== Introduction to oVirt Deck == 
 
-73-slide presentation, updated Oct. 2014: [http://www.ovirt.org/images/a/ad/Introduction_to_oVirt.odp Introduction_to_oVirt.odp] (ODP) <br>
-This is a large presentation, with notes. It can be used as is, or cut to fit a shorter presentation, such as for a meetup or user-group meeting.
 
 == Grazer Linuxtage 2015 ==
 * Open Source Virtualization with oVirt (45 minutes introduction, oVirt 3.5, planned features for 3.6 and interaction with OpenStack): [http://www.ovirt.org/images/3/39/Open_Source_Virtualization_with_oVirt_GLT_2015.odp Open_Source_Virtualization_with_oVirt_GLT_2015.odp] (ODP)
@@ -22,6 +19,10 @@ This is a large presentation, with notes. It can be used as is, or cut to fit a 
 == brno 2015 ==
 * oVirt Node Architecture:[http://www.ovirt.org/images/3/34/Ovirt_Node_Architecture.odp oVirt Node Architecture.odp] (ODP)
 * Build process of ovirt node and the plugins:[http://www.ovirt.org/images/1/1d/Build_process_of_ovirt-node_and_the_plugins.odp Build process of ovirt node and the plugins.odp] (ODP)
+
+== Introduction to oVirt Deck == 
+73-slide presentation, updated Oct. 2014: [http://www.ovirt.org/images/a/ad/Introduction_to_oVirt.odp Introduction_to_oVirt.odp] (ODP) <br>
+This is a large presentation, with notes. It can be used as is, or cut to fit a shorter presentation, such as for a meetup or user-group meeting.
 
 == datacom 2014 ==
 * oVirt Overview:[http://www.ovirt.org/images/e/eb/Ovirt-overview-latinoware2014.odp oVirt Overview.odp] (ODP)
