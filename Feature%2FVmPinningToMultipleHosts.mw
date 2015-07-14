@@ -22,13 +22,13 @@ We name hosts group within a cluster, hosts bundle, or just bundle.
 The hosts bundle introduction, provides a fine grained migration domain internal to a specific cluster. Limiting specified vm migration (one or more vms) to the hosts bundle.
 
 :::<big>Following the rational in the general description above:</big>
-# User may define many bounding bundles, and assign multiple hosts to bounding bundle.
-# Hosts can join more than one bounding bundle.
-# User defining a prefered starting host need to chose from the following:
+# User may define many bounding bundles, and assign multiple hosts (in same cluster) to bounding bundle.
+# Hosts can be member in more than one bounding bundle.
+# User defining a preferred starting host need to chose from the following:
 ## All hosts in cluster
-### Prefered hosts (one or more) in the cluster (all hosts  in cluster selection list)
+### Preferred hosts (one or more) in the cluster (all hosts  in cluster selection list)
 ## A bounding bundle in the cluster
-### Prefered hosts (one or more) in the bounding bundle (shorter selection list)
+### Preferred hosts (one or more) in the bounding bundle (shorter selection list)
 
 # The migration policy will bound the VM to the selected bounding bundle.
 # For backward compatibility, user may pin a single host in the bounding bundle.
@@ -39,7 +39,6 @@ The hosts bundle introduction, provides a fine grained migration domain internal
 # Provide vm pinning to multiple host functionality with GUI
 # Provide management of bounding bundles, and vm bounding to bundle with REST-api
 # Provide management of bounding bundles, and vm bounding to bundle with GUI
-
 
 == Detailed Description ==
 Functionality level 1. Requires extensive refactoring to in data access layer and business logic. Due to large dependency tree.
