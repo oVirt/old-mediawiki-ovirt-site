@@ -93,7 +93,6 @@ The business argument for multiple hosts pinning is the following:
 # oVirt admin wants to provide high availability for host with pinned vm.
 # Prevent vm migration outside of the hosts group (see benefit 2 in previous paragraph).
 
-
 == Dependencies / Related Features ==
 Depends on the following oVirt-engine subsystems: Database, entities, bll, GUI, REST-api
 
