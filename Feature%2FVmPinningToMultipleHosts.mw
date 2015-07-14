@@ -12,12 +12,10 @@ The pinning functionality provides the following benefits:
 oVirt users, favor host pinning feature. And wish to extend the single host pinning, to multiple hosts pinning. See this [https://bugzilla.redhat.com/1107512 RFE].
 
 == Owner ==
-<!--This should link to your home wiki page so we know who you are-->
-This should link to your home wiki page so we know who you are
-
 * Name: Dudi Maroshi
 
 * Email: <maroshi-at-redhat.com>
+
 == General Description ==
 === Functional requirements ===
 We name hosts group within a cluster, hosts bundle, or just bundle. 
