@@ -14,11 +14,13 @@ Some good code layout helps you to read your own code after a while. And of cour
 
 That is why we allow and encourage bashisms, if that improves the robustness or the readablity of the script.
 
-= Indenting =
+= Indenting and line breaks =
 
 == Use 4 spaces per indent ==
 
 To indent, use 4 spaces per indentation level, similar to python indentation.
+
+Whenever possible use the 79 chars max line.
 
 Avoid hard-tabs when possible. I can imagine only one case where they're useful: Indenting here-documents.
 
@@ -34,8 +36,7 @@ my_func2() {
 my_func() {
     echo 'bla'
 }</pre>
-
-== One command option per line, with extra indent ==
+== If you have to split a command, use one option per line, with extra indent ==
 
 <pre>my_command \
     --opt1 opt1_arg1 \
@@ -56,6 +57,47 @@ my_func() {
 == Compound commands: basic layout ==
 
 <pre>HEAD_KEYWORD parameters; BODY_BEGIN
+    BODY_COMMANDS
+BODY_END</pre>
+=== Long predicates ===
+
+Avoid long predicates as much as possible, but if you have to:
+
+<pre>HEAD_KEYWORD command1 \
+OPERATOR command2 \
+OPERATOR commandN \
+BODY_BEGIN
+    BODY_COMMANDS
+BODY_END</pre>
+Or if you have one command with long options:
+
+<pre>HEAD_KEYWORD command1 \
+    --myoption \
+    param1 \
+    param2 \
+BODY_BEGIN
+    BODY_COMMANDS
+BODY_END</pre>
+But try to use a function or storing the return code if able:
+
+<pre>test_something() {
+    command1 \
+    OPERATOR command2 \
+    OPERATOR command3
+    return $?
+}
+
+HEAD_KEYWORD test_something; BODY_BEGIN
+    BODY_COMMANDS
+BODY_END
+
+command1 \
+    --myoption \
+    param1 \
+    param2
+command1_res=$?
+
+HEAD_KEYWORD [[ &quot;$command1_res&quot; == 0 ]]; BODY_BEGIN
     BODY_COMMANDS
 BODY_END</pre>
 === if/then/elif/else ===
@@ -139,7 +181,7 @@ Even if empty or inheriting from the env, declare all the globals for better vis
 
 MY_VAR1=&quot;${ENV_VAR:-default value1}&quot;
 MY_VAR2='default value2'</pre>
-== Use dotted/prefixeb names in libraries ==
+== Use dotted/prefixed names in libraries ==
 
 That way it's a lot easier to debug and maintain all the scripts.
 
@@ -151,7 +193,6 @@ mylib_MYVAR1=&quot;&quot;
 mylib.func1() {
     ...
 }</pre>
-
 == Use caps and underscores for globals ==
 
 Also if it could collide with a [http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap08.html#tag_08 reserved var], add a prefix like <code>MY_</code>:
@@ -213,18 +254,22 @@ my_var=`echo `ls``
 my_var=&quot;$(echo &quot;$(ls)&quot;)&quot;</pre>
 == Quote all command expansions <code>&quot;$()&quot;</code> ==
 
-Mainly because the result of the command expansion will undergo word splitting and path expansion, and that's usually not wanted.
+Mainly because the result of the command expansion will undergo word splitting and path expansion, and that's usually not wanted. In some cases, like defining a var it will not, but as that's not generic, the safest is to quote it always.
 
 <pre># No
-# result is dir contents
+# Will work, but just in this case
 my_asterisc=$(echo '*')
+# Now it will be expanded to all the current dir contents
+ls $(echo '*')
 
 # Yes
-# result is an asterisk
-my_asterisc=&quot;$(echo '*')&quot;</pre>
+# result is the same as without quotes
+my_asterisc=&quot;$(echo '*')&quot;
+# but now it will only show a file/dir named '*'
+ls &quot;$(echo '*')&quot;</pre>
 == If eval is the answer, surely you are asking the wrong question ==
 
-Avoid if, unless absolutely neccesary, it's usually unnecessary, and it's really easy to break things. Use only if you really have to and you know what you are doing.
+Avoid if, unless absolutely neccesary, it's usually unnecessary, and it's really easy to break things. Use only if you really have to and you know what you are doing (add a comment too, so future you will remember).
 
 == Output: <code>normal &gt; stdout</code>, <code>error + debug &gt; stderr</code> ==
 
@@ -364,5 +409,8 @@ my_var=&quot;bla&quot;</pre>
 = Note on portability =
 
 If you can imagine a reason where you script is going to be executed on a machine where bash is not available (most common linux distributions and gnu based systems have bash as default shell, and can be easily installed on many others), you should use the POSIX standard.
+
+[[Category:Infrastructure]]
+
 
 [[Category:Infrastructure]]
