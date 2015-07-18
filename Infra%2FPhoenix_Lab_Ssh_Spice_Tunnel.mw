@@ -5,6 +5,13 @@ Heres a ''hacky'' way to setup the tunnel for spice to be used when clicking the
 You'll need the following extra packages:
 
 <pre>$ sudo yum install -y tsocks ssh remote-viewer</pre>
+
+''tsocks currently segfaults any application which requires encryption (ssh, ssl). You can also use proxychains''
+
+<pre>git clone https://github.com/rofl0r/proxychains-ng
+cd proxychains-ng
+./configure && make && sudo make install && sudo make install-config</pre>
+
 == Tunnel Configuration ==
 
 Then you must setup the stunnel configuration like this:
@@ -12,6 +19,10 @@ Then you must setup the stunnel configuration like this:
 <pre>$ cat /etc/tsocks.conf
 server = 127.0.0.1
 server_port = 8181</pre>
+
+Or, if using proxychains, edit /usr/local/etc/proxychains.conf and make sure the following stanza is set
+<pre>[ProxyList]
+socks4 127.0.0.1 8181</pre>
 == Getting the Engine Certificate ==
 
 Download the engine ssl certificate:
@@ -21,7 +32,7 @@ Download the engine ssl certificate:
   | openssl x509 &gt; engine.cert</pre>
 == Replace the remote-viewer ==
 
-Now replace the remote-viewer binary by the following custom script:
+Now replace the remote-viewer binary by the following custom script, substituting "proxychains4" for tsocks if you're using proxychains:
 
 <pre>$ remote_viewer_path=&quot;$(which remote-viewer)&quot;
 $ mv &quot;${remote_viewer_path}&quot;{,.orig}
