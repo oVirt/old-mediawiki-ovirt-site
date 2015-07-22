@@ -245,7 +245,7 @@ systemd/sysvinit script for daemon.
 
 == Manual Configuration ==
 
-TODO
+Please see [[Serial_Console_Setup#Manual_Setup|how to setup manually the ovirt-vmconsole integration]]
 
 == Comments and Discussion ==
 
