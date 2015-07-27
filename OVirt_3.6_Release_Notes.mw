@@ -16,7 +16,6 @@ Hosted Engine has now added support for [[Features/Self_Hosted_Engine_FC_Support
 
 ==Self Hosted Engine Gluster Support==
 * Hosted Engine has now added support for [[Features/Self_Hosted_Engine_Gluster_Support|Gluster storage]]
-* Hosted Engine has now added support for [[Features/Self_Hosted_Engine_Hyper_Converged_Gluster_Support|Hyper Converged Gluster storage]]
 
 == oVirt Live ==
 oVirt Live has been rebased on CentOS 7 allowing to run oVirt in 3.6 compatibility mode
