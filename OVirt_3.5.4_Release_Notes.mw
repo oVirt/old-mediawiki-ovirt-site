@@ -134,6 +134,8 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 == oVirt Hosted Engine Setup ==
 {{BZ|1225011}} - [TEXT ONLY] - Hosted Engine - Instructions for handling Invalid Storage Domain error<BR>
 {{BZ|1234289}} - HE deployment with exist VM, failed if used NFS storage path with trailing slash<BR>
+{{BZ|1235591}} - HE deployment fails due to libvirtError: internal error client socket is closed<BR>
+{{BZ|1238691}} - Failed to pass stage of storage domain name<BR>
 
 == oVirt engine CLI ==
 {{BZ|1234382}} - rhevm-shell opening spice-console does not work<BR>
