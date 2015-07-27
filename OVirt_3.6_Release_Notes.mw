@@ -633,6 +633,15 @@ A new oVirt Live ISO is available:
 {{BZ|1222554}} - [ovirt] [engine-backup] pg_dump failure description not logged<BR>
 
 == oVirt Hosted Engine Setup ==
+'''oVirt 3.6.0 Third Alpha'''<BR>
+{{BZ|1032069}} - hosted-engine setup using cdrom image doesn't check if file is really image file<BR>
+{{BZ|1210763}} - [ovirt-hosted-engine-setup]  script doesn't validate user input for username for iscsi storage domain > 50 characters.<BR>
+{{BZ|1228576}} - [hosted-engine][help] --help for command is cryptic<BR>
+{{BZ|1235591}} - HE deployment fails due to libvirtError: internal error client socket is closed<BR>
+{{BZ|1236464}} - reduce dependencies for HC support in Hosted Engine<BR>
+{{BZ|1242344}} - [hosted-engine-setup] [GlusterFS support] Deployment fails with: " Fault: <Fault 1: '<type \'exceptions.Exception\'>:method "glusterVolumesList" is not supported'> "<BR>
+{{BZ|1242448}} - [hosted-engine-setup] Deployment fails due to a sanlock exception creating temporary Posix storage domain on a loopback device<BR>
+
 '''oVirt 3.6.0 Second Alpha'''<BR>
 {{BZ|1139793}} - [RFE] Keep hosted engine VM configuration in the shared storage<BR>
 {{BZ|1188663}} - [RFE] allow to retry adding the host if a failure occurs<BR>
