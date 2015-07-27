@@ -125,7 +125,8 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 {{BZ|1226709}} - [VMFEX_Hook] Migration fail with 'HookError' when using vmfex profile and vdsm-hook-vmfex-dev hook in rhev-M<BR>
 {{BZ|1229177}} - Vdsm for EL7 should not allow engine version lower than 3.5<BR>
 {{BZ|1229859}} - vdsm hangup 100% CPU<BR>
-{{BZ|1236489}} - Keep the upstart libvirtd file to enable relaunching libvirt in case it goes down<BR>
+{{BZ|1232669}} - Ballooning is working on VM without Guest Agent<BR>
+{{BZ|1237032}} - [RHEL 7] - Bridge appears in brctl and /sys/class/net after the network was changed to be non-VM network<BR>
 
 == oVirt Log Collector ==
 {{BZ|1225117}} - [RHEL6.7][log-collector] Missing some info from engine's collected logs<BR>
