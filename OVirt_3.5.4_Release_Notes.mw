@@ -114,6 +114,7 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 {{BZ|1234937}} - The "isattached" action doesn't return an action object<BR>
 {{BZ|1236381}} - AddVmFromScratchCommand fails when adding external VMs<BR>
 {{BZ|1236608}} - Source VM is deleted after failed cloning attempt<BR>
+{{BZ|1246643}} - Korean translation update<BR>
 
 ==VDSM==
 {{BZ|1203422}} - vdsm should restore networks much earlier, to let net-dependent services start<BR>
