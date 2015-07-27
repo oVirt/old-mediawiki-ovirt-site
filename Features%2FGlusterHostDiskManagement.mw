@@ -1,5 +1,5 @@
 = Host Device Management =
-{{Feature|name=Host Device Management|modules=engine,gluster|version=3.6|status=In Progress}}
+{{Feature|name=Host Device Management|modules=engine,gluster|version=3.6|status=Done}}
 == Summary ==
 This feature enables to configure disk and storage devices in host.  On Gluster cluster, this helps to identify bricks.  The configuration includes
 
@@ -20,7 +20,7 @@ This feature is available for newly added hosts or newly added disk and storage 
 
 ==  Current Status ==
 * Status: Done
-* Last Updated Date: 
+* Last Updated Date:
 
 = Design =
 == Listing the Storage Devices ==
