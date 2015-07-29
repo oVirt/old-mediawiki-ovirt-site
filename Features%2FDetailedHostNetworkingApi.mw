@@ -1,8 +1,8 @@
 {{Feature|name=Host Networking API|modules=Networking|version=oVirt 3.6|status=Design|}}
 
 === Owner ===
-* Name: [[User:masayag| Moti Asayag]]
-* Email: masayag@redhat.com
+* Name: [[User:mmucha| Martin Mucha]]
+* Email: mmucha@redhat.com
 
 === Detailed Description ===
 The suggest api implementation should maintain existing api for the sake of backward compatibility, hence until 4.0 all former apis will be maintained.
@@ -26,13 +26,13 @@ A new table '''network_attachments''' will be added :
 |-
 |boot_protocol ||String ||null ||The network boot protocol
 |-
-|ip_address ||String ||null ||The desired network ip address
+|address ||String ||null ||The desired network ip address
 |-
 |netmask ||String ||null ||The desired network netmask
 |-
 |gateway ||String ||null ||The desired network gateway
 |-
-|properties ||Text ||null ||The desired network properties
+|custom_properties ||Text ||null ||The desired network properties
 |-
 |}
 
@@ -47,22 +47,21 @@ By that the engine will have a better capability to report more cases of network
 * '''GetNetworkAttachmentByIdQuery''' - returns network attachment by its id<br>
 * '''GetNetworkAttachmentsByNicIdQuery''' - returns all network attachments which are configured on top of a given nic<br>
 * '''GetNetworkAttachmentsByHostIdQuery''' - returns all network attachments which are configured on top of a given host<br>
-* '''SetupNetworksCommand''' - performs multiple network attachments changes on a host at once<br>
-** The old '''SetupNetworksCommand''' will be renamed to '''SetupNicsCommand'''
+* '''HostSetupNetworksCommand''' - performs multiple network attachments changes on a host at once<br>
 
 ==== Updated commands ====
-* '''SetupNetworksCommand''' - In case of a failure, if 'checkConnnectivity' is set, compensation for network attachments should be triggered. If 'checkConnnectivity' is unset, no compensation is required for the network attachments.
+* '''HostSetupNetworksCommand''' - In case of a failure, if 'checkConnnectivity' is set, compensation for network attachments should be triggered. If 'checkConnnectivity' is unset, no compensation is required for the network attachments.
 
 * Host network capabilities update (CollectVdsNetworkData) should be updated to consider the network attachment entity management:
 ** Network attachment should be preserved if its nic was reported
 ** Network attachment should be removed if its nic was not reported
 <br>
-The '''SetupNetworksCommand''' will use the '''SetupNetworksVDSCommand''' (vdsm api) directly to provision networks on the host.<br>
-The other commands which uses setup networks will continue to use '''SetupNicsCommand''':
+The '''HostSetupNetworksCommand''' will use the '''SetupNetworksVDSCommand''' (vdsm api) directly to provision networks on the host.<br>
+The other commands which uses SetupNetworksCommand will now use '''HostSetupNetworksCommand''':
 
   AddNetworkAttachmentCommand -------|
   UpdateNetworkAttachmentCommand ----|
-                                     +------- SetupNetworksCommand ------ SetupNetworksVDSCommand
+                                     +------- HostSetupNetworksCommand ------ SetupNetworksVDSCommand
   RemoveNetworkAttachmentCommand ----|
   SetupNicsCommand ------------------|
 
@@ -102,7 +101,6 @@ The setupnetworks API exposed by VDSM remains the same:
   connectivityTimeout
 
 '''HostSetupNetworksParameters''' will hold the relevant information to be sent to '''HostSetupNetworksVDSCommand'''.<br>
-'''HostSetupNetworksParameters''' will be created by '''HostSetupNetworksCommand'''.
 [[Category:Networking]]
 [[Category:DetailedFeature]]
 [[Category:oVirt 3.6 Proposed Feature|HostNetworkingApi]]
