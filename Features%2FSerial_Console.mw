@@ -26,7 +26,8 @@ Depends on the new ovirt-vmconsole package.
 
 
 == Documentation / External references ==
-N/A
+
+ovirt 3.6 deep dive: guest serial console [[File:Ovirt36_deep_dive-guest_serial_console.pdf|slides]] and [https://www.youtube.com/watch?v=2FltqwrDDtA video]
 
 == Testing ==
 
