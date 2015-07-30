@@ -3,16 +3,23 @@
 <noinclude>
 <startfeed/>
 </noinclude>
-{{Event|name=[//www.oscon.com/open-source-2015 OSCON]|date=July 20-24, 2015|location=Portland, OR|lead=OSCON celebrates, defines, and demonstrates the power of open source in the world today. From small businesses to the enterprise, open source is the first choice of IT everywhere.}}
+{{Event|name=[//events.linuxfoundation.org/events/linuxcon-north-america LinuxCon North America]|date=August 17-19, 2015|location=Seattle, WA|lead=There's simply no other event in North America where developers, sys admins, architects and all levels of technical talent gather together under one roof for education, collaboration and problem-solving to further the Linux platform. }}
 
-{{Event|name=[//events.linuxfoundation.org/events/kvm-forum KVM Forum]|date=August 19-21, 2015|location=Vienna, Austria|lead=KVM Forum brings together the community of developers and users that define the KVM ecosystem for an annual technical conference, including an all-new oVirt Workshop track! }}
+{{Event|name=[//events.linuxfoundation.org/events/kvm-forum KVM Forum]|date=August 19-21, 2015|location=Seattle, WA|lead=KVM Forum brings together the community of developers and users that define the KVM ecosystem for an annual technical conference, including an all-new oVirt Workshop track! }}
 
 {{Event|name=[//vhpc.org/ 10th Workshop on Virtualization in High-Performance Cloud Computing]|date=August 25, 2015|location=Vienna, Austria|lead=VHPC aims to bring together researchers and industrial practitioners facing the challenges posed by virtualization. }}
 
 <noinclude>
 <endfeed/>
 
+{{Event|name=[//events.linuxfoundation.org/events/linuxcon-europe LinuxCon Europe 2015]|date=Oct 5-7, 2015|location=Dublin, Ireland|lead=The event in Europe where developers, sys admins, architects and all levels of technical talent gather together under one roof for education, collaboration and problem-solving to further the Linux platform. }}
 
+{{Event|name=[//2015.latinoware.org/ Latinoware]|date=Oct 14-16, 2015|location=Foz do Iguaçu, Brasil|lead=The premier free and open source software event in South America. }}
+
+{{Event|name=[http://allthingsopen.org/ All Things Open]|date=Oct 19-20, 2015|location=Raleigh, NC|lead=A conference exploring open source, open tech, and the open web in the enterprise.
+ }}
+
+{{Event|name=[//www.openstack.org/summit/tokyo-2015/ OpenStack Summit]|date=Oct 27-30, 2015|location=Tokyo, Japan|lead=A four-day conference for developers, users, and administrators of OpenStack Cloud Software. It’s a great place to get started and keep connected with OpenStack. }}
 
 
 
