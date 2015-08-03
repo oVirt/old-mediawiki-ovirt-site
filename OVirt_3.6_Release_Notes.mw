@@ -727,6 +727,9 @@ A new oVirt Live ISO is available:
 {{BZ|1222554}} - [ovirt] [engine-backup] pg_dump failure description not logged<BR>
 
 == oVirt Hosted Engine Setup ==
+'''oVirt 3.6.0 First Beta'''<BR>
+{{BZ|1131918}} - "hosted-engine --deploy" allows selection of unusable NICs<BR>
+
 '''oVirt 3.6.0 Third Alpha'''<BR>
 {{BZ|1032069}} - hosted-engine setup using cdrom image doesn't check if file is really image file<BR>
 {{BZ|1210763}} - [ovirt-hosted-engine-setup]  script doesn't validate user input for username for iscsi storage domain > 50 characters.<BR>
