@@ -792,6 +792,9 @@ A new oVirt Live ISO is available:
 {{BZ|1210261}} - split rhevm-log-collector moving sos plugins to subpackage<BR>
 
 == oVirt Image Uploader ==
+'''oVirt 3.6.0 Beta'''<BR>
+{{BZ|1182344}} - [RFE] Provide more informative error messages for iso-uploader failures<BR>
+
 '''oVirt 3.6.0 Alpha'''<BR>
 {{BZ|1077235}} - [RFE] add progress bar to image uploader<BR>
 
