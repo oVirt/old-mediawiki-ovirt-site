@@ -1,9 +1,9 @@
-{{DISPLAYTITLE:oVirt 3.6 Alpha Release Notes}}
-= oVirt 3.6.0 ALPHA Release Notes =
-The oVirt Project is pleased to announce the availability of  oVirt 3.6.0 Third Alpha release as of July 28th, 2015. 
+{{DISPLAYTITLE:oVirt 3.6 Beta Release Notes}}
+= oVirt 3.6.0 BETA Release Notes =
+The oVirt Project is pleased to announce the availability of  oVirt 3.6.0 First Beta release as of August 3rd, 2015. 
 
 oVirt is an open source alternative to VMware vSphere, and provides an awesome KVM management interface for multi-node virtualization. 
-This release is available now for Fedora 20, Red Hat Enterprise Linux 6.6, CentOS Linux 6.6, (or similar) and Red Hat Enterprise Linux 7.1, CentOS Linux 7.1 (or similar).
+This release is available now for Fedora 22, Red Hat Enterprise Linux 6.7, CentOS Linux 6.6, (or similar) and Red Hat Enterprise Linux 7.1, CentOS Linux 7.1 (or similar).
 
 To find out more about features which were added in previous oVirt releases, check out the [http://www.ovirt.org/Category:Releases previous versions release notes].
 For a general overview of oVirt, read [[Quick_Start_Guide | the Quick Start Guide]] and the [[about oVirt]] page.
@@ -23,6 +23,9 @@ oVirt Live has been rebased on CentOS 7 allowing to run oVirt in 3.6 compatibili
 == Experimental Debian Support for Hosts ==
 Experimental support for running oVirt Hosts on Debian (or similar) has been added providing custom packaging of needed dependencies.
 
+== Fedora 22 Support ==
+Support for running oVirt on Fedora 22 (or similar) has been added providing custom packaging of Wildfly 8.2.0.
+
 == Known Issues ==
 * Use SELinux Permissive mode in order to avoid denials using VDSM and Gluster
 
@@ -39,8 +42,8 @@ Retrying (engine-cleanup, engine-setup again) it's enough to avoid it cause the 
 
 = Install / Upgrade from previous versions=
 
-== ALPHA RELEASE ==
-oVirt 3.6.0 Third Alpha release is available since 2015-07-28. In order to install it you've to enable oVirt 3.6 pre release repository.
+== BETA RELEASE ==
+oVirt 3.6.0 First Beta release is available since 2015-08-03. In order to install it you've to enable oVirt 3.6 pre release repository.
 
 ==Fedora / CentOS / RHEL==
 In order to install it on a clean system, you need to run (see also [[#Known_Issues|Known Issues]] above):
@@ -51,7 +54,7 @@ You can then install ovirt-release36.rpm as in a clean install side-by-side.
 
 Once ovirt-release36 package is installed,  you will have the ovirt-3.6-pre repository and any other repository needed for satisfying dependencies enabled by default.
 
-If you're installing oVirt 3.6.0 Alpha on a clean host, you should read our [[Quick Start Guide]].
+If you're installing oVirt 3.6.0 Beta on a clean host, you should read our [[Quick Start Guide]].
 
 If you are upgrading from oVirt  < 3.5.0, you must first upgrade to oVirt 3.5.0 or later.
 Please see [[oVirt 3.5.3 Release Notes]] for upgrade instructions.
@@ -82,6 +85,24 @@ A new oVirt Live ISO is available:
 = <span class="mw-customtoggle-1" style="font-size:small; display:inline-block; float:right;"><span class="mw-customtoggletext">[Click to Show/Hide]</span></span>Bugs Fixed = 
 <div  id="mw-customcollapsible-1" class="mw-collapsible mw-collapsed">
 ==oVirt Engine==
+'''oVirt 3.6.0 First Beta'''<BR>
+{{BZ|1166053}} - pool VM -  fields should not be editable<BR>
+{{BZ|1168708}} - [engine-backend] Wrong space validation when moving a disk<BR>
+{{BZ|1181133}} - Redundant Storage allocation check when running VM as stateless<BR>
+{{BZ|1191484}} - [Admin Portal] Version|Family is always empty in hosts' Hardware Information<BR>
+{{BZ|1206891}} - Cluster without DC, displays all other networks from all clusters under Cluster>'Manage Networks' window<BR>
+{{BZ|1209185}} - In RHEV Manager, viewing Templates then virtual machines doesn't show virtual machine name field<BR>
+{{BZ|1240231}} - Ovirt should update current_scheduler  file, once gluster shared storage is disabled and enabled (meta volume deleted and created back again)<BR>
+{{BZ|1240660}} - VM "Memory Balloon Device Enabled" can be changed in the UI while the VM is on, but has no effect<BR>
+{{BZ|1241587}} - Edit dialogs for Instance Type and Template are filled with default values instead of current ones for "USB Support", "Smartcard enabled" and "Monitors"<BR>
+{{BZ|1241746}} - userportal doesn't fill value for jsessionid key in [ovirt] section of vv file<BR>
+{{BZ|1242500}} - VM appears as external although engine reports vm removed<BR>
+{{BZ|1243125}} - Upgrade of oVirt 3.5 to 3.6-master fails<BR>
+{{BZ|1243889}} - New SD: local option is missing for Export domain in a local DC.<BR>
+{{BZ|1245066}} - Impossible to add affinity group via REST<BR>
+{{BZ|1245088}} - failed DI causes NPE, due to VdcCommands invoked without ResourceManager<BR>
+{{BZ|1247144}} - Can't update storage domain via REST API in case that the storage domain's 'containsUnregisteredEntities' property is true<BR>
+
 '''oVirt 3.6.0 Third Alpha'''<BR>
 {{BZ|970073}} - DC/Cluster "Guide Me" -> Select Host: please add a check-box to the column title (for check/uncheck all)<BR>
 {{BZ|1046407}} - vmpool from template from server type, creates VMs with desktop icon<BR>
