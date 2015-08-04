@@ -13,10 +13,10 @@ oVirt can leverage Katello capabilities to report errata information for hosts, 
 * Email: <masayag@redhat.com>
 
 == Detailed Description ==
-The Katello integration support presenting available errata to the user, for both hosts or for the ovirt-engine server.<br>
+The Katello integration supports presenting available errata to the user, for both hosts or for the ovirt-engine server.<br>
 See the following figure for the topology:
 
-[[File:OVirt-Katello_integration.jpg|700px]]
+[[File:OVirt-Katello_integration.png|700px]]
 
 Errata information is not stored on the engine server, rather being queried from the Katello server each time it is requested by the administrator.<br>
 '''Erratum''' includes the following details:
