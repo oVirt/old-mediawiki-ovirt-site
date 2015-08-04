@@ -31,6 +31,8 @@ Support for running oVirt on Fedora 22 (or similar) has been added providing cus
  dnf install yum
 reintroducing yum package manager in order to use the host, being dnf not yet supported by otopi.
 
+* VM and VM pool creation from template doesn't work ({{BZ|1249631}}) but you can create new VMs from scratch.
+
 * Use SELinux Permissive mode in order to avoid denials using VDSM and Gluster
 
 * NFS startup on EL7 / Fedora20: due to other bugs ({{BZ|1144440}}  or {{BZ|1066959}} ), NFS service is not always able to start at first attempt (it doesn't wait the kernel module to be ready); if it happens oVirt engine setup detects it and aborts with
