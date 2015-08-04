@@ -13,6 +13,7 @@ ovirt-engine-extensions-tool
 </pre>
 
 == AAA module ==
+This modules provides basic functionality to test your  aaa extensions. You can search within your extension, login test sequence and other.
 
 === Command-line interface ===
 <pre>
@@ -96,13 +97,13 @@ aaa
 </pre>
 
 ===Examples ===
-<pre>
 Search example:
-  bin/ovirt-engine-extensions-tool aaa search --extension-name=my_ldap --user-name=user
-</pre>
 <pre>
+  ovirt-engine-extensions-tool aaa search --extension-name=my_ldap --user-name=user
+</pre>
 Login example:
-  bin/ovirt-engine-extensions-tool aaa login-user --profile=my_ldap --user-name=user
+<pre>
+  ovirt-engine-extensions-tool aaa login-user --profile=my_ldap --user-name=user
 </pre>
 
 == Logger module ==
@@ -125,6 +126,7 @@ This example log message with text 'test' at level 'INFO' using logger name 'tes
 </pre>
 
 == Info module ==
+This module provides basic command to check your extensions configuration.
 
 === Command-line interface ===
 <pre>
