@@ -34,5 +34,7 @@ We should expose this parameters to cluster level
 *** If the migration progresses, leave the downtime algorithm as is. If it starts stalling, than set the min_downtime = data_remaining / bandwidth_available_for_the_vm. If the data_remaining / bandwidth_available_for_the_vm > max_downtime than the current_downtime == max_downtime. The base ** current_step will than give more time for the migration to progress.
 
 == UI Changes ==
-The cluster dialog will contain the 
+The cluster dialog will contain the Migration Policy part which.
 [[File:ClusterDialogMigrationPolicy.png]]
+
+The edit VM dialog will be able to override the following parameters:
