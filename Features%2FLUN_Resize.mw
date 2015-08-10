@@ -33,8 +33,8 @@ The user can choose to select the button on the LUN he wants to refresh and then
 The following verbs will be added:<br />
 * Resize PV
 : input :  a single LUN GUID
-: output : size of LUN
-: action : call pvresize and return the size of the LUN
+: output : size of PV
+: action : call pvresize and return the size of the PV
 
 The following verb will be updated:<br />
 * Get Device List 
@@ -45,6 +45,7 @@ The following verb will be updated:<br />
 
 * Connect Storage server
 - Rescan and resize of devices will be added
+
 ==== Engine ====
 A new command will be added:
 * RefreshLunSize
