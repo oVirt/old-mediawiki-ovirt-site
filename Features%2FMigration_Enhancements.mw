@@ -18,5 +18,5 @@ The idea is to remove all the policies handling migrations from VDSM and move th
 ** '''stallingLimit''': if the migration will be stalling for this amount of time, VDSM will send an event to which the engine will listen to
 
 == Engine Changes ==
-Engine will be listening to the the evnts set from VDSM if the VM is stalling. 
-Specific policies TBD when the VDSM side will be decided.
+Engine will be listening to the the evnts sent from VDSM if the VM is stalling. 
+Specific policies TBD when the VDSM side will be discussed/finalized.
