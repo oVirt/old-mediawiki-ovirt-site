@@ -1,0 +1,14 @@
+This is a copy of the old oVirt web site.
+
+Please do not use it, other than for finding old stuff.
+
+The current website is maintained in https://github.com/oVirt/ovirt-site .
+
+The old website was based on mediawiki. This copy was done using
+git-remote-mediawiki.
+
+The last user-facing version of it can be seen on the Wayback Machine:
+
+https://web.archive.org/web/20160121230412/http://www.ovirt.org/Home
+
+https://web.archive.org/web/20120306193613/http://www.ovirt.org/wiki/Special:AllPages
